@@ -2555,12 +2555,12 @@ main.touch .main-wrap {
    }
 
    .about-awwwards .single-image .overlay:nth-child(1) {
-      background: url("../img/DSC07079.jpg") center center no-repeat;
+      background: url("../img/Frame 427319044.png") center center no-repeat;
       background-size: cover;
-      top: -8%;
-      height: 110%;
-      width: 150%;
-      left: -50%;
+      top: -3%;
+      height: 106%;
+      width: 140%;
+      left: -40%;
    }
 }
 
