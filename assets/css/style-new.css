@@ -2539,14 +2539,15 @@ main.touch .main-wrap {
    }
 
    .about-awwwards .flex-col:nth-child(1) {
-      width: 50%;
-      padding-right: calc(var(--container-padding) / 2);
+      width: 100%;
+      padding-right: 0;
    }
 
    .about-awwwards .flex-col:nth-child(2) {
-      width: 50%;
-      padding-left: calc(var(--container-padding) / 2);
-      padding-bottom: 0;
+      width: 100%;
+      padding-left: 0;
+      padding-bottom: calc(var(--section-padding) / 2);
+      order: 1;
    }
 
    .about-awwwards .single-image::before {
@@ -2554,12 +2555,12 @@ main.touch .main-wrap {
    }
 
    .about-awwwards .single-image .overlay:nth-child(1) {
-      background: url("../img/Frame 427319044.png") center center no-repeat;
+      background: url("../img/DSC07079.jpg") center center no-repeat;
       background-size: cover;
-      top: -3%;
-      height: 106%;
-      width: 140%;
-      left: -40%;
+      top: -8%;
+      height: 110%;
+      width: 150%;
+      left: -50%;
    }
 }
 
