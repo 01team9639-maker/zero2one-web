@@ -75,7 +75,7 @@ function initLoaderHome() {
   tl.to(".loading-words .home-active", {
     duration: .01,
     opacity: 1,
-    stagger: .15,
+    stagger: .35,
     ease: "none",
     onStart: homeActive
   }, "=-.4");
@@ -84,16 +84,16 @@ function initLoaderHome() {
     gsap.to(".loading-words .home-active", {
       duration: .01,
       opacity: 0,
-      stagger: .15,
+      stagger: .35,
       ease: "none",
-      delay: .15
+      delay: .35
     });
   }
 
   tl.to(".loading-words .home-active-last", {
     duration: .01,
     opacity: 1,
-    delay: .15
+    delay: .35
   });
 
   tl.to(".loading-screen", {
@@ -445,7 +445,9 @@ function initPageTransitions() {
 
     scroll = new LocomotiveScroll({
       el: container.querySelector('[data-scroll-container]'),
-      smooth: true,
+      smooth: !window.matchMedia('(pointer: coarse)').matches,
+      tablet: { smooth: false, breakpoint: 1024 },
+      smartphone: { smooth: false },
     });
 
     window.onresize = () => {
@@ -514,9 +516,11 @@ function initScript() {
   initCheckTouchDevice();
   initHamburgerNav();
   initMagneticButtons();
+  initCardTilt();
   initStickyCursorWithDelay();
   initVisualFilter();
   initScrolltriggerNav();
+  initHamburgerTheme();
   initScrollLetters();
   initTricksWords();
   initContactForm();
@@ -606,6 +610,25 @@ function initHamburgerNav() {
         scroll.start();
       }
     }
+  });
+
+  // Smooth-scroll nav + side-menu links to the page sections
+  $('.nav-bar .links-wrap a[href^="#"], .fixed-nav .links-wrap a[href^="#"]').on('click', function (e) {
+    e.preventDefault();
+    var hash = $(this).attr('href');
+    // close the side menu if it is open
+    $(".btn-hamburger, .btn-menu").removeClass('active');
+    $("main").removeClass('nav-active');
+    scroll.start();
+    setTimeout(function () {
+      var opts = { offset: 0, duration: 900, easing: [0.7, 0, 0.35, 1] };
+      if (hash === '#home') {
+        scroll.scrollTo('top', opts);
+      } else {
+        var target = document.querySelector(hash);
+        if (target) scroll.scrollTo(target, opts);
+      }
+    }, 100);
   });
 
 }
@@ -698,6 +721,38 @@ function initMagneticButtons() {
       });
     }
     $(this.parentNode).removeClass('not-active');
+  });
+}
+
+/*
+* 3D Tilt Cards (react to cursor position)
+*/
+function initCardTilt() {
+  if (window.innerWidth <= 768) return;
+  var cards = document.querySelectorAll('.service-card, .testi-card');
+  cards.forEach(function (card) {
+    card.addEventListener('mousemove', function (e) {
+      var r = card.getBoundingClientRect();
+      var px = (e.clientX - r.left) / r.width - 0.5;
+      var py = (e.clientY - r.top) / r.height - 0.5;
+      var max = 9;
+      gsap.to(card, {
+        duration: .5,
+        rotationY: px * max,
+        rotationX: -py * max,
+        transformPerspective: 900,
+        transformOrigin: 'center',
+        ease: 'power2.out'
+      });
+    });
+    card.addEventListener('mouseleave', function () {
+      gsap.to(card, {
+        duration: 1,
+        rotationY: 0,
+        rotationX: 0,
+        ease: 'elastic.out(1, 0.5)'
+      });
+    });
   });
 }
 
@@ -975,6 +1030,28 @@ function initScrolltriggerNav() {
 
 }
 
+/**
+* Hamburger button colour adapts to the section behind it
+* (orange sections -> cream hover, light sections -> orange hover)
+*/
+function initHamburgerTheme() {
+  var burger = document.querySelector('.btn-hamburger');
+  if (!burger) return;
+
+  ['.our-services', '.footer-wrap'].forEach(function (sel) {
+    var el = document.querySelector(sel);
+    if (!el) return;
+    ScrollTrigger.create({
+      trigger: el,
+      start: 'top 7%',
+      end: 'bottom 7%',
+      onToggle: function (self) {
+        burger.classList.toggle('on-orange', self.isActive);
+      }
+    });
+  });
+}
+
 
 /**
 * Scrolltrigger Scroll Letters Home
@@ -1142,7 +1219,7 @@ function initTimeZone() {
     const timeSpan = document.querySelector("#timeSpan");
 
     const optionsTime = {
-      timeZone: 'Asia/Damascus',
+      timeZone: 'Asia/Riyadh',
       timeZoneName: 'short',
       // year: 'numeric',
       // month: 'numeric',
@@ -1180,11 +1257,11 @@ function initScrollRefresh() {
 */
 function initEmailLinks() {
   const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  const emailLinks = document.querySelectorAll('a[href^="mailto:mhmdshlash135@gmail.com"]');
+  const emailLinks = document.querySelectorAll('a[href^="mailto:info@zero2one.sa"]');
 
   emailLinks.forEach(link => {
     if (!isMobile) {
-      link.setAttribute('href', 'https://mail.google.com/mail/?view=cm&fs=1&to=mhmdshlash135@gmail.com');
+      link.setAttribute('href', 'https://mail.google.com/mail/?view=cm&fs=1&to=info@zero2one.sa');
       link.setAttribute('target', '_blank');
     }
   });
@@ -1236,6 +1313,24 @@ function initPlayVideoInview() {
 * Scrolltrigger Animations Desktop + Mobile
 */
 function initScrolltriggerAnimations() {
+
+  // Scrolltrigger Animation : Case detail image (zoom-out parallax)
+  if (document.querySelector(".case-image-photo")) {
+    $(".case-image-photo").each(function () {
+      gsap.fromTo($(this),
+        { scale: 1.2 },
+        {
+          scale: 1,
+          ease: "none",
+          scrollTrigger: {
+            trigger: $(this).closest(".single-image"),
+            start: "0% 100%",
+            end: "100% 0%",
+            scrub: 0.6
+          }
+        });
+    });
+  }
 
   if (document.querySelector(".footer-wrap")) {
     // Scrolltrigger Animation : Footer + hamburger
@@ -1307,6 +1402,52 @@ function initScrolltriggerAnimations() {
           delay: 0
         });
       }
+    });
+  }
+
+  // Scrolltrigger Animation : Stats count-up + reveal
+  if (document.querySelector(".stats.animate")) {
+    $(".stats.animate").each(function (index) {
+      let triggerElement = $(this);
+      let statItems = $(this).find(".stat");
+
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: triggerElement,
+          toggleActions: 'play none none reset',
+          start: "0% 100%",
+          end: "100% 0%"
+        }
+      });
+
+      // reveal each stat with a stagger
+      tl.from(statItems, {
+        y: "1.5em",
+        opacity: 0,
+        stagger: .12,
+        ease: "power3.out",
+        duration: 1
+      });
+
+      // count each number up from zero (keeps any + / prefix or suffix)
+      $(this).find(".stat-number").each(function () {
+        let el = this;
+        let match = el.textContent.match(/(\D*)(\d+)(\D*)/);
+        if (!match) return;
+        let prefix = match[1];
+        let target = parseInt(match[2], 10);
+        let suffix = match[3];
+        let counter = { val: 0 };
+
+        tl.to(counter, {
+          val: target,
+          duration: 1.4,
+          ease: "power2.out",
+          onUpdate: function () {
+            el.textContent = prefix + Math.round(counter.val) + suffix;
+          }
+        }, 0);
+      });
     });
   }
 
@@ -1428,29 +1569,6 @@ function initScrolltriggerAnimations() {
       }
 
 
-      if (document.querySelector(".about-services")) {
-        // Scrolltrigger Animation : About Services BG
-        $(".about-services").each(function (index) {
-          let triggerElement = $(this);
-          let targetElement = $(".about-header, .line-globe, .about-image, .about-services");
-
-          let tl = gsap.timeline({
-            scrollTrigger: {
-              trigger: triggerElement,
-              start: "-25% 100%",
-              end: "100% 100%",
-              scrub: 0,
-            }
-          });
-          tl.set(targetElement, {
-            backgroundColor: "#FFFFFF",
-          })
-          tl.to(targetElement, {
-            backgroundColor: "#E9EAEB",
-            ease: "none",
-          });
-        });
-      }
 
       if (document.querySelector(".digital-ball .globe")) {
         // Scrolltrigger Animation : Globe

@@ -1,6 +1,35 @@
-user-agent: *
-disallow: /kirby/
-disallow: /site/
-disallow: /cdn-cgi/
-allow: /media/
-sitemap: https://dennissnellenberg.com/sitemap.xml
+# robots.txt — ZERO 2 ONE
+# Standard search crawlers: full access
+User-agent: *
+Allow: /
+
+# Generative / AI engines — explicitly welcomed so we can be surfaced and cited
+# in AI answers (ChatGPT, Claude, Perplexity, Gemini, Google AI Overviews, etc.)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://zero2one.sa/sitemap.xml

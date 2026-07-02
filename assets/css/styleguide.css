@@ -63,6 +63,7 @@
     --color-blue-dark: #450063;
     --color-gray: #999D9E;
     --color-lightgray: #E9EAEB;
+    --color-lightergray: #F8F9FA;
     --color-white: #FFFFFF;
 
     --color-border: rgba(28, 29, 32, 0.175);
@@ -149,13 +150,13 @@ body {
 
 /* Selection */
 ::selection {
-    background-color: var(--color-blue);
+    background-color: #F9460E;
     color: var(--color-white);
     text-shadow: none;
 }
 
 ::-moz-selection {
-    background-color: var(--color-blue);
+    background-color: #F9460E;
     color: var(--color-white);
     text-shadow: none;
 }
@@ -799,6 +800,44 @@ video.overlay {
     }
 }
 
+/* --- Button Logo (Top Left) --- */
+
+.btn-link.btn-left-top.btn-logo .brand-mark {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-link.btn-left-top.btn-logo .brand-mark img {
+    display: block;
+    height: 4em;
+    width: auto;
+    transition: var(--animation-primary);
+}
+
+.btn-link.btn-left-top.btn-logo .brand-label {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    white-space: nowrap;
+    font-weight: 900;
+    letter-spacing: .02em;
+    opacity: 0;
+    transform: translateY(-50%) translateX(.4em);
+    transition: var(--animation-primary);
+    pointer-events: none;
+}
+
+.btn-link.btn-left-top.btn-logo:hover .brand-mark img {
+    opacity: 0;
+    transform: translateX(-.4em);
+}
+
+.btn-link.btn-left-top.btn-logo:hover .brand-label {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+}
+
 /* --- Button Hamburger --- */
 
 .btn-hamburger {
@@ -834,8 +873,19 @@ video.overlay {
     box-shadow: inset 0px 0px 0px 1px transparent !important;
 }
 
+/* hover fill: orange over light sections, cream over orange sections */
 .btn-hamburger .btn-fill {
-    background-color: var(--color-blue);
+    background-color: #F9460E;
+}
+
+.btn-hamburger.on-orange .btn-fill {
+    background-color: #FFFDED;
+}
+
+/* keep the burger bars visible on the cream hover fill */
+.btn-hamburger.on-orange .btn-click:hover .btn-bars::before,
+.btn-hamburger.on-orange .btn-click:hover .btn-bars::after {
+    background: #F9460E;
 }
 
 .btn-hamburger .btn-text-inner {
@@ -882,8 +932,27 @@ video.overlay {
     transform: translate(-50%, -50%) rotate(-45deg);
 }
 
+/* Close button (menu open): cream, orange on hover */
 .btn-hamburger.active .btn-click {
-    background-color: var(--color-blue);
+    background-color: #FFFDED;
+}
+
+.btn-hamburger.active .btn-click:hover {
+    background-color: #F9460E;
+}
+
+.btn-hamburger.active .btn-fill {
+    display: none;
+}
+
+.btn-hamburger.active .btn-bars::before,
+.btn-hamburger.active .btn-bars::after {
+    background: #F9460E;
+}
+
+.btn-hamburger.active .btn-click:hover .btn-bars::before,
+.btn-hamburger.active .btn-click:hover .btn-bars::after {
+    background: #FFFDED;
 }
 
 .btn-hamburger.active .btn-bars::after {
