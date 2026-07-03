@@ -822,7 +822,7 @@ main.touch .main-wrap {
    height: 1.1em;
    width: .78em;
    border-radius: .18em;
-   background-image: url("../images/p1.png");
+   background-image: url("../images/p1.webp");
    transform: translateY(.14em);
 }
 

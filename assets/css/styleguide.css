@@ -7,7 +7,7 @@
     src: url('../fonts/NeueMontreal-Light.otf') format('opentype');
     font-weight: 300;
     font-style: normal;
-    font-display: auto;
+    font-display: swap;
 }
 
 @font-face {
@@ -15,7 +15,7 @@
     src: url('../fonts/NeueMontreal-LightItalic.otf') format('opentype');
     font-weight: 300;
     font-style: italic;
-    font-display: auto;
+    font-display: swap;
 }
 
 @font-face {
@@ -23,7 +23,7 @@
     src: url('../fonts/NeueMontreal-Regular.otf') format('opentype');
     font-weight: 450;
     font-style: normal;
-    font-display: auto;
+    font-display: swap;
 }
 
 @font-face {
@@ -31,7 +31,7 @@
     src: url('../fonts/NeueMontreal-Italic.otf') format('opentype');
     font-weight: 450;
     font-style: italic;
-    font-display: auto;
+    font-display: swap;
 }
 
 @font-face {
@@ -39,7 +39,7 @@
     src: url('../fonts/NeueMontreal-Bold.otf') format('opentype');
     font-weight: 800;
     font-style: normal;
-    font-display: auto;
+    font-display: swap;
 }
 
 @font-face {
@@ -47,7 +47,7 @@
     src: url('../fonts/NeueMontreal-BoldItalic.otf') format('opentype');
     font-weight: 800;
     font-style: italic;
-    font-display: auto;
+    font-display: swap;
 }
 
 
