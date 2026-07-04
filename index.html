@@ -224,6 +224,14 @@
 
     <link rel="preload" as="font" href="assets/fonts/NeueMontreal-Regular.otf" type="font/otf" crossorigin="anonymous">
 
+    <!-- Preload the LCP hero image so it starts downloading immediately -->
+    <link rel="preload" as="image" href="assets/images/hero-frame-46.webp" type="image/webp" fetchpriority="high">
+
+    <!-- Warm up DNS for the script CDNs loaded at the end of the page -->
+    <link rel="dns-prefetch" href="https://code.jquery.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
@@ -411,7 +419,7 @@
             <header class="section home-header theme-dark" data-scroll-section>
                 <div class="overlay personal-image no-select once-in" data-scroll data-scroll-speed="-3"
                     data-scroll-position="top">
-                    <img src="assets/images/hero-frame-46.webp" alt="" />
+                    <img decoding="async" fetchpriority="high" src="assets/images/hero-frame-46.webp" alt="" />
                 </div>
                 <div class="nav-bar">
                     <div class="credits-top">
@@ -556,7 +564,7 @@
                             </div>
                         </div>
                         <div class="flex-col about-us-media">
-                            <img src="assets/images/about-us-zero2one.webp" alt="ZERO 2 ONE" data-scroll
+                            <img decoding="async" fetchpriority="low" src="assets/images/about-us-zero2one.webp" alt="ZERO 2 ONE" data-scroll
                                 data-scroll-speed="2" data-scroll-position="top" />
                         </div>
                     </div>
@@ -583,7 +591,7 @@
                     <div class="services-cards">
                         <article class="service-card">
                             <div class="service-card-media">
-                                <img src="assets/images/service-1.webp" alt="Website Design & Development" />
+                                <img decoding="async" fetchpriority="low" src="assets/images/service-1.webp" alt="Website Design & Development" />
                                 <span class="service-card-tint"></span>
                             </div>
                             <div class="service-card-body">
@@ -606,7 +614,7 @@
                         </article>
                         <article class="service-card">
                             <div class="service-card-media">
-                                <img src="assets/images/service-2.webp" alt="Search Engine Optimization" />
+                                <img decoding="async" fetchpriority="low" src="assets/images/service-2.webp" alt="Search Engine Optimization" />
                                 <span class="service-card-tint"></span>
                             </div>
                             <div class="service-card-body">
@@ -629,7 +637,7 @@
                         </article>
                         <article class="service-card">
                             <div class="service-card-media">
-                                <img src="assets/images/service-3.webp" alt="Advertising Campaign Management" />
+                                <img decoding="async" fetchpriority="low" src="assets/images/service-3.webp" alt="Advertising Campaign Management" />
                                 <span class="service-card-tint"></span>
                             </div>
                             <div class="service-card-body">
@@ -652,7 +660,7 @@
                         </article>
                         <article class="service-card">
                             <div class="service-card-media">
-                                <img src="assets/images/service-4.webp" alt="Brand Identity Development" />
+                                <img decoding="async" fetchpriority="low" src="assets/images/service-4.webp" alt="Brand Identity Development" />
                                 <span class="service-card-tint"></span>
                             </div>
                             <div class="service-card-body">
@@ -675,7 +683,7 @@
                         </article>
                         <article class="service-card">
                             <div class="service-card-media">
-                                <img src="assets/images/service-5.webp" alt="Social Media Management & Content Creation" />
+                                <img decoding="async" fetchpriority="low" src="assets/images/service-5.webp" alt="Social Media Management & Content Creation" />
                                 <span class="service-card-tint"></span>
                             </div>
                             <div class="service-card-body">
@@ -698,7 +706,7 @@
                         </article>
                         <article class="service-card">
                             <div class="service-card-media">
-                                <img src="assets/images/service-6.webp" alt="E-commerce & Custom Systems Development" />
+                                <img decoding="async" fetchpriority="low" src="assets/images/service-6.webp" alt="E-commerce & Custom Systems Development" />
                                 <span class="service-card-tint"></span>
                             </div>
                             <div class="service-card-body">
@@ -735,7 +743,7 @@
                     </div>
                 </div>
                 <div class="services-cityband" aria-hidden="true">
-                    <img src="assets/images/old-city.webp" alt="" />
+                    <img decoding="async" fetchpriority="low" src="assets/images/old-city.webp" alt="" />
                 </div>
                 <div class="services-bottomwave" aria-hidden="true">
                     <svg viewBox="0 0 1440 243.604" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
@@ -750,7 +758,7 @@
                 <div class="container">
                     <div class="testi-top">
                         <div class="testi-deco" aria-hidden="true">
-                            <img src="assets/images/testimonials-deco.webp" alt="" />
+                            <img decoding="async" fetchpriority="low" src="assets/images/testimonials-deco.webp" alt="" />
                         </div>
                         <div class="testi-head fade-in animate">
                             <h2 class="testi-title">Testimonials</h2>
@@ -761,7 +769,7 @@
                     <div class="testi-cards">
                         <article class="testi-card">
                             <div class="testi-card-media">
-                                <img src="assets/images/person-1.webp" alt="Omar Al-Azizi" />
+                                <img decoding="async" fetchpriority="low" src="assets/images/person-1.webp" alt="Omar Al-Azizi" />
                             </div>
                             <div class="testi-card-body">
                                 <p class="testi-quote">"We were just a name with no personality. They built our whole
@@ -774,7 +782,7 @@
                         </article>
                         <article class="testi-card">
                             <div class="testi-card-media">
-                                <img src="assets/images/person-2.webp" alt="Sarah Al-Otaibi" />
+                                <img decoding="async" fetchpriority="low" src="assets/images/person-2.webp" alt="Sarah Al-Otaibi" />
                             </div>
                             <div class="testi-card-body">
                                 <p class="testi-quote">"Our old site was slow and brought zero leads. They rebuilt it
@@ -787,7 +795,7 @@
                         </article>
                         <article class="testi-card">
                             <div class="testi-card-media">
-                                <img src="assets/images/person-3.webp" alt="Fahad Al-Mutairi" />
+                                <img decoding="async" fetchpriority="low" src="assets/images/person-3.webp" alt="Fahad Al-Mutairi" />
                             </div>
                             <div class="testi-card-body">
                                 <p class="testi-quote">"We'd wasted budget on ads before with no results. zero2one knew
@@ -846,7 +854,7 @@
                         <div class="row footer-hero-row">
                             <div class="flex-col footer-hero-media">
                                 <div class="footer-bigimg">
-                                    <img src="assets/images/p1.webp" alt="" />
+                                    <img decoding="async" fetchpriority="low" src="assets/images/p1.webp" alt="" />
                                 </div>
                             </div>
                             <div class="flex-col footer-hero-text fade-in animate">
