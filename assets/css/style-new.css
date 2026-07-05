@@ -4326,16 +4326,53 @@ main.touch .case-intro-image .btn-wrap {
    opacity: .25;
 }
 
-/* next-service text on the left, CTA button on the right (replaces the image) */
+/* next-service text stacked above the CTA button (replaces the image) */
 .footer-case-wrap .next-case-btn {
-   align-items: center;
-   justify-content: space-between;
-   gap: 1.25em 2em;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 1.5em;
 }
 
+/* self-contained CTA pill: cream on the orange footer, orange label + arrow */
 .footer-case-wrap .next-case-cta {
    flex: 0 0 auto;
-   margin: 0;
+}
+
+.footer-case-wrap .next-case-cta .btn-click {
+   display: inline-flex;
+   align-items: center;
+   gap: .55em;
+   padding: .85em 1.6em;
+   border-radius: 100px;
+   background: #FFFDED;
+}
+
+.footer-case-wrap .next-case-cta .btn-text {
+   display: inline-flex;
+   align-items: center;
+   gap: .5em;
+}
+
+.footer-case-wrap .next-case-cta .btn-text-inner {
+   color: #F9460E !important;
+   font-weight: 700;
+   white-space: nowrap;
+}
+
+.footer-case-wrap .next-case-cta .next-case-cta-arrow {
+   width: 20px;
+   height: 20px;
+   flex: none;
+   fill: none;
+   stroke: #F9460E;
+   stroke-width: 4;
+   stroke-linecap: round;
+   stroke-linejoin: round;
+}
+
+/* flip the diagonal arrow for Arabic (RTL) */
+body.lang-ar .footer-case-wrap .next-case-cta .next-case-cta-arrow {
+   transform: scaleX(-1);
 }
 
 .footer-case-wrap .tile-image-wrap {
