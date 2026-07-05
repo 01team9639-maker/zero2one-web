@@ -4272,7 +4272,8 @@ main.touch .case-intro-image .btn-wrap {
 }
 
 .footer-case-wrap .container.medium .row:nth-child(1) {
-   padding-bottom: calc(var(--section-padding) / 1.25);
+   /* was large to make room for the (now removed) next-service image */
+   padding-bottom: calc(var(--section-padding) / 3);
 }
 
 .footer-case-wrap .bottom-footer {
@@ -4323,6 +4324,18 @@ main.touch .case-intro-image .btn-wrap {
 
 .footer-case-wrap .next-case-btn:hover h2 {
    opacity: .25;
+}
+
+/* next-service text on the left, CTA button on the right (replaces the image) */
+.footer-case-wrap .next-case-btn {
+   align-items: center;
+   justify-content: space-between;
+   gap: 1.25em 2em;
+}
+
+.footer-case-wrap .next-case-cta {
+   flex: 0 0 auto;
+   margin: 0;
 }
 
 .footer-case-wrap .tile-image-wrap {
@@ -4379,8 +4392,8 @@ main.touch .case-intro-image .btn-wrap {
    }
 
    .footer-case-wrap .container.medium .row:nth-child(1) {
-      padding-bottom: calc(var(--section-padding) / .5);
-      padding-bottom: 13em;
+      /* image removed — no longer reserving 13em of space below the link */
+      padding-bottom: 2.5em;
    }
 
    .footer-case-wrap .tile-image-wrap {
