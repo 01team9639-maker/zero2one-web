@@ -51,6 +51,15 @@
     "Youtube": "يوتيوب",
     "LinkedIn": "لينكدإن",
 
+    /* ---- loading-screen animated words (home) ---- */
+    "Web": "ويب",
+    "SEO": "سيو",
+    "Ads": "إعلانات",
+    "Branding": "علامة",
+    "Content": "محتوى",
+    "Commerce": "متاجر",
+    "Social Media": "التواصل",
+
     /* ---- hero stats ---- */
     "Years of Experience": "سنوات الخبرة",
     "Happy Clients": "عملاء سعداء",
@@ -479,6 +488,17 @@
     document.querySelectorAll('.loading-brand-name').forEach(function (el) {
       var k = norm(el.textContent);
       if (Object.prototype.hasOwnProperty.call(NT, k)) el.textContent = NT[k];
+    });
+
+    // loading-screen animated words live outside <main> (the walker skips them);
+    // translate each word's own text node while keeping its trailing dot element
+    document.querySelectorAll('.loading-words h2').forEach(function (h2) {
+      Array.prototype.forEach.call(h2.childNodes, function (n) {
+        if (n.nodeType === 3 && n.nodeValue.trim()) {
+          var k = norm(n.nodeValue);
+          if (Object.prototype.hasOwnProperty.call(NT, k)) n.nodeValue = NT[k];
+        }
+      });
     });
   }
 

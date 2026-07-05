@@ -5831,6 +5831,24 @@ body.lang-ar #timeSpan {
    display: inline-block;
 }
 
+/* The Arabic brand "من الصفر إلى الواحد" is much longer than "ZERO 2 ONE", so
+   scale it more fluidly (smaller floor + viewport-based) to fit every screen. */
+body.lang-ar .home-header .big-name h1 {
+   font-size: clamp(3em, 12vw, 8em);
+}
+
+body.lang-ar .loading-container .loading-brand {
+   font-size: clamp(2em, 7.5vw, 6em);
+   white-space: normal;
+   max-width: 92vw;
+   line-height: 1.08;
+   text-align: center;
+}
+
+body.lang-ar .loading-container.loading-service .loading-brand {
+   font-size: clamp(1.6em, 6vw, 4.5em);
+}
+
 /* "Our Process" bullet list flips to the right side */
 body.lang-ar .process-list li {
    padding-left: 0;
