@@ -4272,8 +4272,8 @@ main.touch .case-intro-image .btn-wrap {
 }
 
 .footer-case-wrap .container.medium .row:nth-child(1) {
-   /* was large to make room for the (now removed) next-service image */
-   padding-bottom: calc(var(--section-padding) / 3);
+   /* room for the absolutely-positioned next-service image (large screens) */
+   padding-bottom: calc(var(--section-padding) / 1.25);
 }
 
 .footer-case-wrap .bottom-footer {
@@ -4326,48 +4326,10 @@ main.touch .case-intro-image .btn-wrap {
    opacity: .25;
 }
 
-/* next-service text stacked above the CTA button (replaces the image) */
-.footer-case-wrap .next-case-btn {
-   flex-direction: column;
-   align-items: flex-start;
-   gap: 1.5em;
-}
-
-/* self-contained CTA pill: cream on the orange footer, orange label + arrow */
+/* Large screens: the whole card is the link and shows the next-service
+   image. The CTA button is only used on small screens (media query below). */
 .footer-case-wrap .next-case-cta {
-   flex: 0 0 auto;
-}
-
-.footer-case-wrap .next-case-cta .btn-click {
-   display: inline-flex;
-   align-items: center;
-   gap: .55em;
-   padding: .85em 1.6em;
-   border-radius: 100px;
-   background: #FFFDED;
-}
-
-.footer-case-wrap .next-case-cta .btn-text {
-   display: inline-flex;
-   align-items: center;
-   gap: .5em;
-}
-
-.footer-case-wrap .next-case-cta .btn-text-inner {
-   color: #F9460E !important;
-   font-weight: 700;
-   white-space: nowrap;
-}
-
-.footer-case-wrap .next-case-cta .next-case-cta-arrow {
-   width: 20px;
-   height: 20px;
-   flex: none;
-   fill: none;
-   stroke: #F9460E;
-   stroke-width: 4;
-   stroke-linecap: round;
-   stroke-linejoin: round;
+   display: none;
 }
 
 /* flip the diagonal arrow for Arabic (RTL) */
@@ -4413,12 +4375,55 @@ body.lang-ar .footer-case-wrap .next-case-cta .next-case-cta-arrow {
 
 @media screen and (max-width: 1000px) {
 
+   /* Mobile & small screens: hide the image, show a centered CTA button
+      below the "Next service" text (whole card stays the link). */
    .footer-case-wrap .tile-image-wrap {
-      width: 40vw;
+      display: none;
    }
 
-   .footer-case-wrap .tile-image-wrap .tile-image {
-      transform: translateY(20%);
+   .footer-case-wrap .next-case-btn {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1.5em;
+   }
+
+   .footer-case-wrap .container.medium .row:nth-child(1) {
+      padding-bottom: 2.5em;
+   }
+
+   .footer-case-wrap .next-case-cta {
+      /* .flex-col (the text) has order: 2, so push the button after it */
+      order: 3;
+      display: inline-flex;
+      align-items: center;
+      gap: .55em;
+      padding: .85em 1.6em;
+      border-radius: 100px;
+      background: #FFFDED;
+   }
+
+   .footer-case-wrap .next-case-cta .btn-text {
+      display: inline-flex;
+      align-items: center;
+      gap: .5em;
+   }
+
+   .footer-case-wrap .next-case-cta .btn-text-inner {
+      color: #F9460E !important;
+      font-weight: 700;
+      white-space: nowrap;
+   }
+
+   .footer-case-wrap .next-case-cta .next-case-cta-arrow {
+      width: 20px;
+      height: 20px;
+      flex: none;
+      fill: none;
+      stroke: #F9460E;
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
    }
 }
 
