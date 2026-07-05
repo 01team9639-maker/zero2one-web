@@ -132,7 +132,7 @@
     "Where is ZERO 2 ONE located?": "أين يقع مقرّ ZERO 2 ONE؟",
     "We are based in Al Olaya, Riyadh, Saudi Arabia (7th Floor, Computer Complex), and work with brands across Saudi Arabia and the wider GCC.": "مقرّنا في العليا، الرياض، المملكة العربية السعودية (الدور السابع، مجمع الكمبيوترات)، ونعمل مع العلامات التجارية في جميع أنحاء السعودية ومنطقة الخليج.",
     "How can I contact ZERO 2 ONE?": "كيف يمكنني التواصل مع ZERO 2 ONE؟",
-    "Call or message us on WhatsApp at +966 53 030 7054, or email info@zero2one.sa. We usually reply the same business day.": "اتصل بنا أو راسلنا عبر واتساب على الرقم +966 53 030 7054، أو عبر البريد info@zero2one.sa. نردّ عادةً في نفس يوم العمل.",
+    "Call or message us on WhatsApp at +966 53 030 7054, or email info@zero2one.sa. We usually reply the same business day.": "اتصل بنا أو راسلنا عبر واتساب على الرقم (+966 53 030 7054)، أو عبر البريد info@zero2one.sa. نردّ عادةً في نفس يوم العمل.",
     "Does ZERO 2 ONE work with businesses outside Riyadh?": "هل تعمل ZERO 2 ONE مع شركات خارج الرياض؟",
     "Yes. We serve clients across Saudi Arabia and the GCC, working both remotely and on-site depending on the project.": "نعم. نخدم عملاء في جميع أنحاء السعودية ومنطقة الخليج، عن بُعد أو في الموقع بحسب المشروع.",
     "How do you approach a new project?": "كيف تبدؤون مشروعاً جديداً؟",
@@ -418,17 +418,17 @@
       .trim();
   }
 
-  // Western digits -> Eastern-Arabic numerals (٠-٩). Each whole number (a phone,
-  // year, etc. — including a leading + and internal spaces/separators) is wrapped
-  // in a left-to-right isolate (U+2066…U+2069) so it always reads left-to-right
-  // inside the RTL page. A digit run touching a letter is part of a word/identifier
-  // (e.g. the "2" in info@zero2one.sa) and is left completely untouched.
-  function toArabicDigits(s) {
-    var isLetter = /[A-Za-z؀-ۿ]/;
-    return s.replace(/\+?\d[\d\s./+()-]*\d|\+?\d/g, function (tok, offset, str) {
+  // Numbers stay in Western digits (0-9) in both languages. Each whole number
+  // (a phone, year, … — including a leading + and any wrapping parentheses) is
+  // wrapped in a left-to-right isolate (U+2066…U+2069) so it reads the same
+  // left-to-right way in RTL Arabic as it does in LTR English. A digit run
+  // touching a Latin letter is part of a word/identifier (e.g. the "2" in
+  // info@zero2one.sa) and is left completely untouched.
+  function isolateNumbers(s) {
+    var isLetter = /[A-Za-z]/;
+    return s.replace(/\(?\+?\d[\d\s.\/+-]*\d\)?|\+?\d/g, function (tok, offset, str) {
       if (isLetter.test(str.charAt(offset - 1)) || isLetter.test(str.charAt(offset + tok.length))) return tok;
-      var ar = tok.replace(/[0-9]/g, function (d) { return '٠١٢٣٤٥٦٧٨٩'.charAt(+d); });
-      return '⁦' + ar + '⁩';
+      return '⁦' + tok + '⁩';
     });
   }
 
@@ -465,7 +465,7 @@
         // (the footer clock and the animated hero stat counters)
         var p = n.parentNode;
         var isLive = p && p.closest && p.closest('#timeSpan, .stat-number');
-        if (!isLive) v = toArabicDigits(v);
+        if (!isLive) v = isolateNumbers(v);
         if (v !== n.nodeValue) n.nodeValue = v;
       });
     }

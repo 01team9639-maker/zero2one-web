@@ -1230,18 +1230,13 @@ function initTimeZone() {
       // second: 'numeric',
     };
 
-    // In Arabic use the ar-SA locale so the clock shows Arabic-Indic digits
-    // (٠-٩) and Arabic AM/PM + timezone. Rebuild only when the language changes.
-    let cachedLoc = null, formatter = null;
+    // Keep the clock in Western digits / English format in both languages;
+    // the RTL footer forces it left-to-right via CSS (#timeSpan).
+    const formatter = new Intl.DateTimeFormat([], optionsTime);
     updateTime();
     setInterval(updateTime, 1000);
 
     function updateTime() {
-      const loc = document.body.classList.contains('lang-ar') ? 'ar-SA' : 'en';
-      if (loc !== cachedLoc) {
-        cachedLoc = loc;
-        formatter = new Intl.DateTimeFormat(loc === 'ar-SA' ? 'ar-SA' : [], optionsTime);
-      }
       timeSpan.innerText = formatter.format(new Date());
     }
   }
@@ -1450,14 +1445,10 @@ function initScrolltriggerAnimations() {
           duration: 1.4,
           ease: "power2.out",
           onUpdate: function () {
-            let num = String(Math.round(counter.val));
-            // Arabic-Indic numerals + a left-to-right isolate so it reads correctly in RTL
-            if (document.body.classList.contains('lang-ar')) {
-              num = num.replace(/[0-9]/g, function (d) { return '٠١٢٣٤٥٦٧٨٩'.charAt(+d); });
-              el.textContent = '⁦' + prefix + num + suffix + '⁩';
-            } else {
-              el.textContent = prefix + num + suffix;
-            }
+            let text = prefix + Math.round(counter.val) + suffix;
+            // keep Western digits; in RTL wrap in a left-to-right isolate so the
+            // sign/number reads the same way as in English
+            el.textContent = document.body.classList.contains('lang-ar') ? '⁦' + text + '⁩' : text;
           }
         }, 0);
       });
