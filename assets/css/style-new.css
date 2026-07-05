@@ -229,16 +229,22 @@ main.touch .main-wrap {
 
 @media screen and (max-width: 540px) {
 
-   /* .loading-container .loading-words h2 {
+   /* Loading words + the service name injected during page transitions:
+      let long titles wrap and stay inside the screen instead of being
+      clipped at the sides (they were white-space: nowrap on one line). */
+   .loading-container .loading-words h2 {
+      font-size: clamp(1.5rem, 6.5vw, 2.3rem);
+      white-space: normal;
+      max-width: 88vw;
+      text-align: center;
+      line-height: 1.14;
       padding-left: 0;
-   } */
+      padding-right: 0;
+   }
 
-   /* .loading-container .dot {
-      display: none;
-   } */
-
+   /* decorative trailing dot doesn't sit well on wrapped multi-line text */
    .loading-container .dot {
-      top: 42%;
+      display: none;
    }
 }
 
