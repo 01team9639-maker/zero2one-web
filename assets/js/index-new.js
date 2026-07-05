@@ -1451,11 +1451,13 @@ function initScrolltriggerAnimations() {
           ease: "power2.out",
           onUpdate: function () {
             let num = String(Math.round(counter.val));
-            // Arabic-Indic numerals when the site is in Arabic
+            // Arabic-Indic numerals + a left-to-right isolate so it reads correctly in RTL
             if (document.body.classList.contains('lang-ar')) {
               num = num.replace(/[0-9]/g, function (d) { return '٠١٢٣٤٥٦٧٨٩'.charAt(+d); });
+              el.textContent = '⁦' + prefix + num + suffix + '⁩';
+            } else {
+              el.textContent = prefix + num + suffix;
             }
-            el.textContent = prefix + num + suffix;
           }
         }, 0);
       });

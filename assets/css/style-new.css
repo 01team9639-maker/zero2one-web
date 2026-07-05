@@ -5824,6 +5824,13 @@ body.lang-ar .socials .social-icon {
    margin-left: .5em;
 }
 
+/* the live clock is JS-written, so force it to read left-to-right in the RTL footer */
+body.lang-ar #timeSpan {
+   direction: ltr;
+   unicode-bidi: isolate;
+   display: inline-block;
+}
+
 /* "Our Process" bullet list flips to the right side */
 body.lang-ar .process-list li {
    padding-left: 0;

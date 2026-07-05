@@ -118,7 +118,7 @@
     "Get in touch": "تواصل معنا",
     "7th Floor, Computer Complex, Al Olaya, Riyadh": "الرياض - العليا العام - مجمع الكمبيوترات الدور السابع",
     "Version": "الإصدار",
-    "2026 © Edition": "٢٠٢٦ © إصدار",
+    "2026 © Edition": "2026 © إصدار",
     "zero2one. All rights reserved.": "zero2one. جميع الحقوق محفوظة.",
     "Local time": "التوقيت المحلي",
 
@@ -418,14 +418,17 @@
       .trim();
   }
 
-  // Western digits -> Eastern-Arabic numerals (٠-٩), but only for real numbers:
-  // a digit run touching a letter is part of a word/identifier (e.g. the "2" in
-  // an email like info@zero2one.sa) and is left untouched.
+  // Western digits -> Eastern-Arabic numerals (٠-٩). Each whole number (a phone,
+  // year, etc. — including a leading + and internal spaces/separators) is wrapped
+  // in a left-to-right isolate (U+2066…U+2069) so it always reads left-to-right
+  // inside the RTL page. A digit run touching a letter is part of a word/identifier
+  // (e.g. the "2" in info@zero2one.sa) and is left completely untouched.
   function toArabicDigits(s) {
     var isLetter = /[A-Za-z؀-ۿ]/;
-    return s.replace(/\d+/g, function (num, offset, str) {
-      if (isLetter.test(str.charAt(offset - 1)) || isLetter.test(str.charAt(offset + num.length))) return num;
-      return num.replace(/[0-9]/g, function (d) { return '٠١٢٣٤٥٦٧٨٩'.charAt(+d); });
+    return s.replace(/\+?\d[\d\s./+()-]*\d|\+?\d/g, function (tok, offset, str) {
+      if (isLetter.test(str.charAt(offset - 1)) || isLetter.test(str.charAt(offset + tok.length))) return tok;
+      var ar = tok.replace(/[0-9]/g, function (d) { return '٠١٢٣٤٥٦٧٨٩'.charAt(+d); });
+      return '⁦' + ar + '⁩';
     });
   }
 
