@@ -43,6 +43,13 @@
     "View": "عرض",
     "Next case": "الخدمة التالية",
     "Next service": "الخدمة التالية",
+    "View service": "عرض الخدمة",
+    "WhatsApp": "واتساب",
+    "Instagram": "إنستغرام",
+    "Tiktok": "تيك توك",
+    "Facebook": "فيسبوك",
+    "Youtube": "يوتيوب",
+    "LinkedIn": "لينكدإن",
 
     /* ---- hero stats ---- */
     "Years of Experience": "سنوات الخبرة",
@@ -111,6 +118,7 @@
     "Get in touch": "تواصل معنا",
     "7th Floor, Computer Complex, Al Olaya, Riyadh": "الرياض - العليا العام - مجمع الكمبيوترات الدور السابع",
     "Version": "الإصدار",
+    "2026 © Edition": "٢٠٢٦ © إصدار",
     "zero2one. All rights reserved.": "zero2one. جميع الحقوق محفوظة.",
     "Local time": "التوقيت المحلي",
 
@@ -394,7 +402,10 @@
     /* logo hover label (every page) -> "Zero to One" in Arabic */
     { sel: '.brand-mark .brand-label', html: 'من الصفر إلى الواحد' },
     /* hero rolling marquee "ZERO 2 ONE —" (GSAP clones it, so translate every copy) */
-    { sel: '.big-name .name-wrap h1', html: 'من الصفر <span style="color:#F9460E;font-weight:900">إلى</span> الواحد<span class="spacer">—</span>' }
+    { sel: '.big-name .name-wrap h1', html: 'من الصفر <span style="color:#F9460E;font-weight:900">إلى</span> الواحد<span class="spacer">—</span>' },
+    /* loading-screen brand (home = plain text, service pages = stacked site + name) */
+    { sel: '.loading-brand:not(.loading-brand-stack)', html: 'من الصفر إلى الواحد' },
+    { sel: '.loading-brand-site', html: 'من الصفر إلى الواحد' }
   ];
 
   // normalize curly quotes -> straight, and collapse whitespace, so matching
@@ -405,6 +416,17 @@
       .replace(/[“”]/g, '"')
       .replace(/\s+/g, ' ')
       .trim();
+  }
+
+  // Western digits -> Eastern-Arabic numerals (٠-٩), but only for real numbers:
+  // a digit run touching a letter is part of a word/identifier (e.g. the "2" in
+  // an email like info@zero2one.sa) and is left untouched.
+  function toArabicDigits(s) {
+    var isLetter = /[A-Za-z؀-ۿ]/;
+    return s.replace(/\d+/g, function (num, offset, str) {
+      if (isLetter.test(str.charAt(offset - 1)) || isLetter.test(str.charAt(offset + num.length))) return num;
+      return num.replace(/[0-9]/g, function (d) { return '٠١٢٣٤٥٦٧٨٩'.charAt(+d); });
+    });
   }
 
   // pre-build a dictionary keyed by the normalized English
@@ -433,13 +455,27 @@
       while (walker.nextNode()) nodes.push(walker.currentNode);
       nodes.forEach(function (n) {
         var key = norm(n.nodeValue);
-        if (Object.prototype.hasOwnProperty.call(NT, key)) n.nodeValue = NT[key];
+        var v = Object.prototype.hasOwnProperty.call(NT, key) ? NT[key] : n.nodeValue;
+        // unify the brand name everywhere in Arabic (never inside the email address)
+        v = v.replace(/(?<!@)zero\s?(?:2|to)\s?one/gi, '«من الصفر إلى الواحد»');
+        // Eastern-Arabic numerals — but skip figures rewritten live by JS
+        // (the footer clock and the animated hero stat counters)
+        var p = n.parentNode;
+        var isLive = p && p.closest && p.closest('#timeSpan, .stat-number');
+        if (!isLive) v = toArabicDigits(v);
+        if (v !== n.nodeValue) n.nodeValue = v;
       });
     }
 
     SPECIAL.forEach(function (s) {
       // querySelectorAll so GSAP-cloned copies (e.g. the hero marquee) get translated too
       document.querySelectorAll(s.sel).forEach(function (el) { el.innerHTML = s.html; });
+    });
+
+    // service-page loading screen shows the service name under the brand — translate it
+    document.querySelectorAll('.loading-brand-name').forEach(function (el) {
+      var k = norm(el.textContent);
+      if (Object.prototype.hasOwnProperty.call(NT, k)) el.textContent = NT[k];
     });
   }
 

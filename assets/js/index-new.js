@@ -1230,13 +1230,19 @@ function initTimeZone() {
       // second: 'numeric',
     };
 
-    const formatter = new Intl.DateTimeFormat([], optionsTime);
+    // In Arabic use the ar-SA locale so the clock shows Arabic-Indic digits
+    // (٠-٩) and Arabic AM/PM + timezone. Rebuild only when the language changes.
+    let cachedLoc = null, formatter = null;
     updateTime();
     setInterval(updateTime, 1000);
 
     function updateTime() {
-      const dateTime = new Date();
-      timeSpan.innerText = formatter.format(dateTime);
+      const loc = document.body.classList.contains('lang-ar') ? 'ar-SA' : 'en';
+      if (loc !== cachedLoc) {
+        cachedLoc = loc;
+        formatter = new Intl.DateTimeFormat(loc === 'ar-SA' ? 'ar-SA' : [], optionsTime);
+      }
+      timeSpan.innerText = formatter.format(new Date());
     }
   }
 
@@ -1444,7 +1450,12 @@ function initScrolltriggerAnimations() {
           duration: 1.4,
           ease: "power2.out",
           onUpdate: function () {
-            el.textContent = prefix + Math.round(counter.val) + suffix;
+            let num = String(Math.round(counter.val));
+            // Arabic-Indic numerals when the site is in Arabic
+            if (document.body.classList.contains('lang-ar')) {
+              num = num.replace(/[0-9]/g, function (d) { return '٠١٢٣٤٥٦٧٨٩'.charAt(+d); });
+            }
+            el.textContent = prefix + num + suffix;
           }
         }, 0);
       });
