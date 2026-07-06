@@ -356,7 +356,7 @@ main.touch .main-wrap {
 .fixed-nav .nav-row .btn-text-inner {
    font-size: 3.5em;
    line-height: 1.4;
-   font-size: calc(clamp(3.25em, 5vw, 4em) * .875);
+   font-size: calc(clamp(3.25em, 5vw, 4em) * .625);
 }
 
 .fixed-nav .nav-row .btn-link .btn-click::after {
@@ -432,7 +432,7 @@ main.touch .main-wrap {
 
 @media screen and (max-height: 680px) {
    .fixed-nav .nav-row .btn-text-inner {
-      font-size: 3em;
+      font-size: 2.1em;
       line-height: 1.25;
    }
 }
@@ -3954,7 +3954,7 @@ main.touch .main-wrap {
 }
 
 .case-header h1 {
-   font-size: calc(clamp(3.25em, 7vw, 8em) * 1);
+   font-size: calc(clamp(3.25em, 7vw, 8em) * .7);
 }
 
 .case-header p {
