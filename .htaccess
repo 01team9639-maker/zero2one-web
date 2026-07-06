@@ -4,6 +4,17 @@
 # ================================================================
 
 # ----------------------------------------------------------------
+#  0) Canonical URL: /index.html -> /  (matches rel=canonical, fixes
+#     the Lighthouse SEO "valid rel=canonical" flag when the page is
+#     opened as /index.html)
+# ----------------------------------------------------------------
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{THE_REQUEST} \s/+index\.html[\s?]
+    RewriteRule ^index\.html$ / [R=301,L]
+</IfModule>
+
+# ----------------------------------------------------------------
 #  1) GZIP / DEFLATE compression  (shrinks CSS, JS, HTML, SVG, fonts)
 # ----------------------------------------------------------------
 <IfModule mod_deflate.c>

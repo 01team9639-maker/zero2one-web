@@ -874,6 +874,28 @@ main.touch .main-wrap {
    margin-bottom: 1em;
 }
 
+/* Footer section labels — small uppercase caption look, but kept as
+   real headings (h3) so heading order stays valid (h2 -> h3). */
+.ui-label {
+   font-family: 'Dennis Sans', sans-serif;
+   font-weight: 450;
+   font-size: .6em;
+   line-height: 1.065;
+   margin-bottom: 1em;
+   text-transform: uppercase;
+   letter-spacing: .05em;
+   opacity: .5;
+}
+
+.bottom-footer .ui-label {
+   margin-bottom: 1.5em;
+}
+
+.socials .ui-label {
+   padding-left: calc(var(--gap-padding) * .5);
+   margin-bottom: 1em;
+}
+
 .bottom-footer #timeSpan {
    text-transform: uppercase;
 }
