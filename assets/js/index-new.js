@@ -14,6 +14,11 @@ function initLoaderHome() {
 
   var tl = gsap.timeline();
 
+  // On phones, play the whole intro ~3x faster so the content (LCP)
+  // is revealed quickly on slow connections; desktop keeps the full intro.
+  var loaderSpeed = $(window).width() <= 540 ? 3 : 1;
+  tl.timeScale(loaderSpeed);
+
   tl.set(".loading-screen", {
     top: "0",
   });
@@ -81,12 +86,13 @@ function initLoaderHome() {
   }, "=-.4");
 
   function homeActive() {
+    // this tween lives outside the timeline, so scale it manually
     gsap.to(".loading-words .home-active", {
       duration: .01,
       opacity: 0,
-      stagger: .35,
+      stagger: .35 / loaderSpeed,
       ease: "none",
-      delay: .35
+      delay: .35 / loaderSpeed
     });
   }
 
@@ -146,6 +152,9 @@ function initLoaderHome() {
 function initLoader() {
 
   var tl = gsap.timeline();
+
+  // Phones: slightly faster intro on service pages too (still readable)
+  tl.timeScale($(window).width() <= 540 ? 1.75 : 1);
 
   tl.set(".loading-screen", {
     top: "0",
