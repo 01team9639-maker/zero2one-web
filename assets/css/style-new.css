@@ -338,11 +338,23 @@ main.touch .main-wrap {
    margin-bottom: 3em;
 }
 
+/* let the links column grow and spread its buttons over the full
+   available height of the menu */
+.fixed-nav .nav-row {
+   display: flex;
+   flex-direction: column;
+   flex: 1 1 auto;
+   min-height: 0;
+}
+
 .fixed-nav .nav-row ul {
    display: flex;
    flex-direction: column;
    align-items: flex-start;
+   justify-content: space-between;
+   flex: 1 1 auto;
    padding-top: 5vh;
+   padding-bottom: 4vh;
 }
 
 .fixed-nav .nav-row .btn-link .btn-click {
