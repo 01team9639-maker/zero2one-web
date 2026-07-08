@@ -788,6 +788,15 @@ main.touch .main-wrap {
    font-weight: 800;
 }
 
+/* round CTA buttons now hold a full sentence — shrink so it wraps inside
+   the circle instead of overflowing (button stays a circle) */
+.btn-contact-round .btn-text-inner,
+.footer .btn-round .btn-text-inner {
+   font-size: .68em;
+   font-weight: 700;
+   line-height: 1.3;
+}
+
 .footer .btn-round .btn-click:hover .btn-text-inner {
    color: #FFFDED;
 }
@@ -1671,13 +1680,17 @@ main.touch .main-wrap {
 
 .service-card-btn .btn-text {
    gap: 8px;
-   padding: 9px 30px;
+   padding: 11px 24px;
+   text-align: center;
 }
 
 .service-card-btn .btn-text-inner {
    font-family: 'Inter', sans-serif;
    font-weight: 500;
-   font-size: 20px;
+   /* smaller + wraps: the button now carries a CTA sentence, not "Details" */
+   font-size: 15px;
+   line-height: 1.3;
+   white-space: normal;
    color: #F9460E;
    transition: color .35s ease;
 }

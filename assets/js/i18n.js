@@ -104,6 +104,17 @@
     "Details": "التفاصيل",
     "Let's bring your idea to life": "لنحوّل فكرتك إلى واقع",
 
+    /* ---- CTA buttons (home) ---- */
+    "Book Your Free Marketing Consultation Now!": "احجز استشارتك التسويقية مجاناً الآن!",
+    "Let's Build Your Path from Zero to One": "لنبنِ لك الطريق من الصفر إلى الواحد",
+    "Turn Your Website into a Client Magnet": "حوّل موقعك إلى واجهة احترافية تجذب العملاء",
+    "Be Found When Clients Search": "حينما يبحث العميل عنك!",
+    "Let's Launch Smarter Campaigns": "بانتظار تواصلك.. لنطلق حملات أذكى!",
+    "Build a Brand They Remember": "ابنِ هوية تبقى في ذهن عملائك",
+    "Let's Shape Your Digital Presence": "لنصنع حضورك الرقمي",
+    "Deliver a Better Customer Experience": "قدّم أفضل تجربة لعملائك",
+    "Let's Build Greatness from Zero to One": "تواصل معنا اليوم، لنصنع العظمة معاً من الصفر إلى الواحد!",
+
     /* ---- testimonials ---- */
     "Real words from people who trusted us with their vision.":
       "كلمات حقيقية من أشخاص ائتمنونا على رؤيتهم.",
