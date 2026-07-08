@@ -368,7 +368,7 @@ main.touch .main-wrap {
 .fixed-nav .nav-row .btn-text-inner {
    font-size: 3.5em;
    line-height: 1.4;
-   font-size: calc(clamp(3.25em, 5vw, 4em) * .625);
+   font-size: calc(clamp(3.25em, 5vw, 4em) * .5);
 }
 
 .fixed-nav .nav-row .btn-link .btn-click::after {
@@ -444,7 +444,7 @@ main.touch .main-wrap {
 
 @media screen and (max-height: 680px) {
    .fixed-nav .nav-row .btn-text-inner {
-      font-size: 2.1em;
+      font-size: 1.7em;
       line-height: 1.25;
    }
 }

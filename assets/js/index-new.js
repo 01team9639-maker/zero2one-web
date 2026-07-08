@@ -625,6 +625,11 @@ function initHamburgerNav() {
   $('.nav-bar .links-wrap a[href^="#"], .fixed-nav .links-wrap a[href^="#"]').on('click', function (e) {
     e.preventDefault();
     var hash = $(this).attr('href');
+    // move the visual "active" state onto the tapped link in both menus
+    // (needed on touch, where there is no :hover to signal the current item)
+    var $lists = $('.nav-bar .links-wrap, .fixed-nav .links-wrap');
+    $lists.find('.btn-link').removeClass('active');
+    $lists.find('.btn-link > a[href="' + hash + '"]').parent().addClass('active');
     // close the side menu if it is open
     $(".btn-hamburger, .btn-menu").removeClass('active');
     $("main").removeClass('nav-active');
