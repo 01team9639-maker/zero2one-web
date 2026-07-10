@@ -1,5 +1,7 @@
 #!/bin/sh
 # Rebuild the minified CSS bundle + JS after editing any source file.
+# NOTE: after changing a built file, bump the ?v=N stamp in the HTML
+#       (index.html + pages/projects/*.html) so caches fetch it instantly.
 # Usage:  sh tools/build.sh
 cd "$(dirname "$0")/.." || exit 1
 
