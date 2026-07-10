@@ -113,7 +113,7 @@
     "Build a Brand They Remember": "ابنِ هوية تبقى في ذهن عملائك",
     "Let's Shape Your Digital Presence": "لنصنع حضورك الرقمي",
     "Deliver a Better Customer Experience": "قدّم أفضل تجربة لعملائك",
-    "Let's Build Greatness from Zero to One": "تواصل معنا اليوم، لنصنع العظمة معاً من الصفر إلى الواحد!",
+    "Let's Build Success from Zero to One": "تواصل معنا اليوم، لنصنع النجاح معاً من الصفر إلى الواحد!",
 
     /* ---- testimonials ---- */
     "Real words from people who trusted us with their vision.":
