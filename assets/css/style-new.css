@@ -4341,6 +4341,14 @@ main.touch .case-intro-image .btn-wrap {
    color: #FFFDED;
 }
 
+/* the round contact button now carries a full CTA sentence — shrink it so
+   the text wraps inside the circle instead of overflowing */
+.case-overview-contact .btn-round .btn-text-inner {
+   font-size: .6em;
+   font-weight: 700;
+   line-height: 1.32;
+}
+
 /* circle on the cream content area -> fills orange on hover */
 .case-intro-image .btn-round .btn-fill,
 .case-overview .btn-round .btn-fill {
