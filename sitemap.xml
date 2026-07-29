@@ -1,45 +1,184 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://zero2one.sa/</loc>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zero2one.sa/ar/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zero2one.sa/" />
   </url>
   <url>
-    <loc>https://zero2one.sa/pages/projects/advertising.html</loc>
-    <lastmod>2026-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://zero2one.sa/ar/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zero2one.sa/ar/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zero2one.sa/" />
   </url>
   <url>
-    <loc>https://zero2one.sa/pages/projects/brand-identity.html</loc>
-    <lastmod>2026-07-01</lastmod>
+    <loc>https://zero2one.sa/about/</loc>
+    <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/about/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zero2one.sa/ar/about/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zero2one.sa/about/" />
   </url>
   <url>
-    <loc>https://zero2one.sa/pages/projects/ecommerce.html</loc>
-    <lastmod>2026-07-01</lastmod>
+    <loc>https://zero2one.sa/ar/about/</loc>
+    <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/about/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zero2one.sa/ar/about/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zero2one.sa/about/" />
   </url>
   <url>
-    <loc>https://zero2one.sa/pages/projects/seo.html</loc>
-    <lastmod>2026-07-01</lastmod>
+    <loc>https://zero2one.sa/contact/</loc>
+    <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/contact/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zero2one.sa/ar/contact/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zero2one.sa/contact/" />
   </url>
   <url>
-    <loc>https://zero2one.sa/pages/projects/social-media.html</loc>
-    <lastmod>2026-07-01</lastmod>
+    <loc>https://zero2one.sa/ar/contact/</loc>
+    <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/contact/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zero2one.sa/ar/contact/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zero2one.sa/contact/" />
   </url>
   <url>
-    <loc>https://zero2one.sa/pages/projects/website-design.html</loc>
-    <lastmod>2026-07-01</lastmod>
+    <loc>https://zero2one.sa/services/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/services/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zero2one.sa/ar/services/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zero2one.sa/services/" />
+  </url>
+  <url>
+    <loc>https://zero2one.sa/ar/services/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/services/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zero2one.sa/ar/services/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zero2one.sa/services/" />
+  </url>
+  <url>
+    <loc>https://zero2one.sa/services/brand-identity/</loc>
+    <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/services/brand-identity/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zero2one.sa/ar/services/brand-identity/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zero2one.sa/services/brand-identity/" />
+  </url>
+  <url>
+    <loc>https://zero2one.sa/ar/services/brand-identity/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/services/brand-identity/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zero2one.sa/ar/services/brand-identity/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zero2one.sa/services/brand-identity/" />
+  </url>
+  <url>
+    <loc>https://zero2one.sa/services/digital-advertising/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/services/digital-advertising/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zero2one.sa/ar/services/digital-advertising/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zero2one.sa/services/digital-advertising/" />
+  </url>
+  <url>
+    <loc>https://zero2one.sa/ar/services/digital-advertising/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/services/digital-advertising/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zero2one.sa/ar/services/digital-advertising/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zero2one.sa/services/digital-advertising/" />
+  </url>
+  <url>
+    <loc>https://zero2one.sa/services/ecommerce-development/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/services/ecommerce-development/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zero2one.sa/ar/services/ecommerce-development/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zero2one.sa/services/ecommerce-development/" />
+  </url>
+  <url>
+    <loc>https://zero2one.sa/ar/services/ecommerce-development/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/services/ecommerce-development/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zero2one.sa/ar/services/ecommerce-development/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zero2one.sa/services/ecommerce-development/" />
+  </url>
+  <url>
+    <loc>https://zero2one.sa/services/seo-riyadh/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/services/seo-riyadh/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zero2one.sa/ar/services/seo-riyadh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zero2one.sa/services/seo-riyadh/" />
+  </url>
+  <url>
+    <loc>https://zero2one.sa/ar/services/seo-riyadh/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/services/seo-riyadh/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zero2one.sa/ar/services/seo-riyadh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zero2one.sa/services/seo-riyadh/" />
+  </url>
+  <url>
+    <loc>https://zero2one.sa/services/social-media-management/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/services/social-media-management/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zero2one.sa/ar/services/social-media-management/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zero2one.sa/services/social-media-management/" />
+  </url>
+  <url>
+    <loc>https://zero2one.sa/ar/services/social-media-management/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/services/social-media-management/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zero2one.sa/ar/services/social-media-management/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zero2one.sa/services/social-media-management/" />
+  </url>
+  <url>
+    <loc>https://zero2one.sa/services/web-design-riyadh/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/services/web-design-riyadh/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zero2one.sa/ar/services/web-design-riyadh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zero2one.sa/services/web-design-riyadh/" />
+  </url>
+  <url>
+    <loc>https://zero2one.sa/ar/services/web-design-riyadh/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/services/web-design-riyadh/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zero2one.sa/ar/services/web-design-riyadh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zero2one.sa/services/web-design-riyadh/" />
   </url>
 </urlset>

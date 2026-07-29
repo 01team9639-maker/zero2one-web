@@ -167,9 +167,17 @@ main.touch .main-wrap {
    line-height: 1.05;
 }
 
-.loading-container .loading-words h2 {
+/* Animated intro words. Plain divs, not headings — they sit outside <main> and
+   would otherwise inject "Hello / Bonjour / Ciao …" into the document's heading
+   outline ahead of the real page heading. Typography below is what the <h2>
+   element style used to supply, so the animation renders identically. */
+.loading-container .loading-words .loading-word {
    margin: 0;
    padding: 0;
+   font-family: 'Dennis Sans', sans-serif;
+   font-weight: 450;
+   font-size: calc(clamp(3.25em, 5vw, 4.5em) * .75);
+   line-height: 1.065;
    color: var(--color-white);
    position: absolute;
    top: 0;
@@ -182,7 +190,7 @@ main.touch .main-wrap {
    will-change: opacity;
 }
 
-.loading-container .loading-words h2.jap {
+.loading-container .loading-words .loading-word.jap {
    font-size: calc(clamp(3.25em, 5vw, 4.5em) * .65);
    transform: translate(-50%, 10%);
 }
@@ -200,7 +208,7 @@ main.touch .main-wrap {
    transform: translate(0, 0) scale(1);
 }
 
-.loading-container .loading-words h2.active {
+.loading-container .loading-words .loading-word.active {
    display: block;
 }
 
@@ -232,7 +240,7 @@ main.touch .main-wrap {
    /* Loading words + the service name injected during page transitions:
       let long titles wrap and stay inside the screen instead of being
       clipped at the sides (they were white-space: nowrap on one line). */
-   .loading-container .loading-words h2 {
+   .loading-container .loading-words .loading-word {
       font-size: clamp(1.5rem, 6.5vw, 2.3rem);
       white-space: normal;
       max-width: 88vw;
@@ -1111,10 +1119,14 @@ main.touch .main-wrap {
    padding: 0 3vw;
 }
 
-.home-header .big-name h1 {
+/* Decorative brand wordmark in the hero. Not a heading — the page's <h1> is the
+   descriptive "Digital Marketing Agency in Riyadh" line above it, so search
+   engines read the service, not just the brand name. */
+.home-header .big-name .brand-wordmark {
    position: relative;
    display: flex;
    align-items: center;
+   font-family: 'Dennis Sans', sans-serif;
    color: var(--color-white);
    font-weight: 900;
    line-height: 1;
@@ -1148,14 +1160,19 @@ main.touch .main-wrap {
    width: clamp(1.1em, 1.3vw, 1.25em);
 }
 
-.home-header .row .flex-col h4 {
+/* The hero <h1>. Keeps the stacked look of the old <h4> line; the clamp is a
+   little smaller because the copy is longer ("Digital Marketing / Agency in
+   Riyadh" instead of "Marketing / Agency") so the block keeps the same optical
+   weight and never overflows on phones. */
+.home-header .row .flex-col .home-header-title {
+   font-family: 'Dennis Sans', sans-serif;
    line-height: 1.4;
    margin-bottom: 0;
    font-weight: 900;
-   font-size: clamp(2.4em, 4.5vw, 4.5em);
+   font-size: clamp(1.9em, 3.6vw, 3.8em);
 }
 
-.home-header .row .flex-col h4 span {
+.home-header .row .flex-col .home-header-title span {
    display: block;
 }
 
@@ -4255,17 +4272,20 @@ main.touch .main-wrap {
    pointer-events: none;
 }
 
-/* case pages: cream page background */
-main#work-single {
+/* inner pages (service detail, services hub, about, contact): cream background */
+main#work-single,
+main.inner-page {
    background: #FFFDED;
 }
 
-/* case pages: the moving "Next case" cursor circle -> cream */
-main#work-single .mouse-pos-list-btn {
+/* inner pages: the moving cursor circle -> cream */
+main#work-single .mouse-pos-list-btn,
+main.inner-page .mouse-pos-list-btn {
    background: #FFFDED;
 }
 
-main#work-single .mouse-pos-list-span {
+main#work-single .mouse-pos-list-span,
+main.inner-page .mouse-pos-list-span {
    color: #090909;
 }
 
@@ -5860,6 +5880,302 @@ body.lang-ar .footer-case-wrap .next-case-cta .next-case-cta-arrow {
 }
 
 /* ==========================================================================
+   Language switch (nav bar + side menu)
+   ========================================================================== */
+
+/* On an English page the label is Arabic, so it needs the Arabic face. */
+.btn-lang .btn-text-inner {
+   font-family: 'Cairo', sans-serif;
+   font-weight: 700;
+}
+
+/* On an Arabic page the label is "English" — override the blanket Cairo rule. */
+body.lang-ar .btn-lang .btn-text-inner {
+   font-family: 'Dennis Sans', sans-serif !important;
+   font-weight: 500;
+   letter-spacing: .04em;
+}
+
+/* ==========================================================================
+   Contact page — enquiry form, details panel, opening hours, map
+   ========================================================================== */
+
+.contact-layout {
+   display: grid;
+   grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+   gap: clamp(2.5em, 5vw, 5.5em);
+   align-items: start;
+}
+
+.contact-form-col,
+.contact-details-col {
+   min-width: 0;
+}
+
+.contact-form .form-grid {
+   display: grid;
+   grid-template-columns: repeat(2, minmax(0, 1fr));
+   gap: 1.7em 2.2em;
+}
+
+.contact-form .field-wrap-full {
+   grid-column: 1 / -1;
+}
+
+.contact-form .field-label {
+   display: block;
+   font-family: 'Dennis Sans', sans-serif;
+   font-size: .6em;
+   line-height: 1.065;
+   text-transform: uppercase;
+   letter-spacing: .05em;
+   opacity: .5;
+   color: var(--color-dark);
+   margin-bottom: .8em;
+}
+
+.contact-form .field {
+   -webkit-appearance: none;
+   appearance: none;
+   width: 100%;
+   box-sizing: border-box;
+   font-family: inherit;
+   font-weight: 450;
+   font-size: clamp(1em, 1.2vw, 1.1em);
+   line-height: 1.5;
+   color: var(--color-dark);
+   background: transparent;
+   border: 0;
+   border-bottom: 1px solid var(--color-border-solid);
+   border-radius: 0;
+   padding: .5em 0;
+   transition: border-color .3s cubic-bezier(.7, 0, .3, 1);
+}
+
+.contact-form .field::placeholder {
+   color: rgba(9, 9, 9, 0.32);
+}
+
+.contact-form .field:focus {
+   outline: 0;
+   border-bottom-color: #F9460E;
+}
+
+.contact-form select.field {
+   /* keep the native picker but draw our own chevron */
+   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%231C1D20' stroke-width='1.4' stroke-linecap='round'/%3E%3C/svg%3E");
+   background-repeat: no-repeat;
+   background-position: right .1em center;
+   background-size: .75em auto;
+   padding-right: 1.6em;
+   cursor: pointer;
+}
+
+.contact-form textarea.field {
+   min-height: 7em;
+   resize: vertical;
+}
+
+.contact-form .form-actions {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   gap: 1.2em 2.2em;
+   margin-top: 2.8em;
+}
+
+/* The submit control is the site's standard outlined pill button, so it needs
+   nothing beyond neutralising the native <button> chrome. */
+.contact-form .form-btn {
+   -webkit-appearance: none;
+   appearance: none;
+   background: transparent;
+   font: inherit;
+   color: inherit;
+}
+
+.contact-form .form-btn[disabled] {
+   cursor: progress;
+}
+
+.contact-form .form-note {
+   flex: 1 1 14em;
+   margin: 0;
+   font-size: .85em;
+   line-height: 1.6;
+   color: rgba(9, 9, 9, 0.42);
+}
+
+.contact-form .form-note a {
+   color: #F9460E;
+   text-decoration: underline;
+   text-underline-offset: .2em;
+}
+
+/* ---- details panel ---- */
+
+.contact-details {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+
+.contact-details > div {
+   padding: 1.1em 0;
+   border-bottom: 1px solid var(--color-border);
+}
+
+.contact-details > div:first-child {
+   padding-top: 0;
+}
+
+.contact-details dt {
+   font-family: 'Dennis Sans', sans-serif;
+   font-size: .6em;
+   line-height: 1.065;
+   text-transform: uppercase;
+   letter-spacing: .05em;
+   opacity: .5;
+   color: var(--color-dark);
+   margin-bottom: .7em;
+}
+
+.contact-details dd {
+   margin: 0;
+   font-weight: 500;
+   line-height: 1.5;
+   color: var(--color-dark);
+}
+
+.contact-details dd a {
+   color: var(--color-dark);
+   text-decoration: none;
+   border-bottom: 1px solid var(--color-border);
+   transition: var(--animation-fast);
+}
+
+.contact-details dd a:hover {
+   color: #F9460E;
+   border-bottom-color: #F9460E;
+}
+
+.contact-details .contact-hours-note {
+   display: block;
+   margin-top: .35em;
+   font-weight: 450;
+   font-size: .85em;
+   color: rgba(9, 9, 9, 0.42);
+}
+
+/* ---- map ---- */
+
+.contact-map {
+   position: relative;
+   margin-top: 2.2em;
+   border-radius: 1.25em;
+   overflow: hidden;
+   background: var(--color-lightgray);
+}
+
+.contact-map::before {
+   content: "";
+   display: block;
+   padding-top: 66%;
+}
+
+.contact-map iframe {
+   position: absolute;
+   inset: 0;
+   width: 100%;
+   height: 100%;
+   border: 0;
+   /* the embed is a bright default-styled map — soften it into the page */
+   filter: grayscale(.35) contrast(1.02);
+}
+
+@media screen and (max-width: 900px) {
+   .contact-layout {
+      grid-template-columns: minmax(0, 1fr);
+      gap: clamp(3em, 8vw, 4.5em);
+   }
+}
+
+@media screen and (max-width: 620px) {
+   .contact-form .form-grid {
+      grid-template-columns: minmax(0, 1fr);
+   }
+}
+
+/* ==========================================================================
+   Services hub / About — small shared helpers
+   ========================================================================== */
+
+/* a service card grid that is not inside the orange home section */
+.inner-page .services-cards {
+   margin-top: 2.6em;
+}
+
+/* "which service do you need" pairs: question above, service below */
+.case-include-item .case-include-link {
+   display: inline-block;
+   margin-top: .5em;
+   font-weight: 700;
+   font-size: clamp(.95em, 1.15vw, 1.05em);
+   color: #F9460E;
+   text-decoration: none;
+   border-bottom: 1px solid rgba(249, 70, 14, .35);
+   transition: var(--animation-fast);
+}
+
+.case-include-item .case-include-link:hover {
+   border-bottom-color: #F9460E;
+}
+
+/* inline links inside body copy keep the orange accent */
+.case-overview-body a,
+.case-outcome a {
+   color: #F9460E;
+   text-decoration: underline;
+   text-underline-offset: .2em;
+}
+
+/* Stats row on the About page. The home-page stats are scoped to .home-intro,
+   so this is its own block sitting on the cream inner-page background. */
+.about-stats {
+   display: grid;
+   grid-template-columns: repeat(3, minmax(0, 1fr));
+   gap: var(--gap-padding);
+   margin: 0 0 2.6em;
+}
+
+.about-stats .stat-number {
+   font-family: 'Cairo', sans-serif;
+   font-weight: 900;
+   font-size: clamp(2rem, 4.5vw, 56px);
+   line-height: 1;
+   color: #F9460E;
+}
+
+.about-stats .stat-description {
+   margin-top: .6em;
+   max-width: 12em;
+   font-size: clamp(.9em, 1.1vw, 1em);
+   line-height: 1.5;
+   color: rgba(9, 9, 9, 0.42);
+}
+
+@media screen and (max-width: 620px) {
+   .about-stats {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: calc(var(--gap-padding) * .8);
+   }
+
+   .about-stats .stat-description {
+      max-width: 100%;
+   }
+}
+
+/* ==========================================================================
    Arabic / RTL  (applied when the device language is Arabic — body.lang-ar + <html dir="rtl">)
    ========================================================================== */
 
@@ -5888,7 +6204,7 @@ body.lang-ar #timeSpan {
 
 /* The Arabic brand "من الصفر إلى الواحد" is much longer than "ZERO 2 ONE", so
    scale it more fluidly (smaller floor + viewport-based) to fit every screen. */
-body.lang-ar .home-header .big-name h1 {
+body.lang-ar .home-header .big-name .brand-wordmark {
    font-size: clamp(3em, 12vw, 8em);
 }
 
@@ -5963,4 +6279,32 @@ body.lang-ar .footer-contacts {
    body.lang-ar .testimonials .testi-card-body {
       direction: ltr;
    }
+}
+
+/* ---- Arabic RTL: new inner pages (contact form, details, hub cards) ---- */
+
+/* the <select> chevron moves to the other side */
+body.lang-ar .contact-form select.field {
+   background-position: left .1em center;
+   padding-right: 0;
+   padding-left: 1.6em;
+}
+
+/* phone numbers and email addresses always read left-to-right, even in RTL */
+body.lang-ar .contact-value-ltr {
+   direction: ltr;
+   unicode-bidi: isolate;
+   display: inline-block;
+}
+
+/* underlined inline links keep their offset on the other side */
+body.lang-ar .contact-form .form-note,
+body.lang-ar .contact-details dd {
+   text-align: right;
+}
+
+/* "which service do you need" arrow-free links need no mirroring, but the
+   orange accent link should not inherit the Cairo !important weight bump */
+body.lang-ar .case-include-item .case-include-link {
+   font-weight: 700;
 }

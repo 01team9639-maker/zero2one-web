@@ -51,7 +51,7 @@ class GeoParser(HTMLParser):
         self.jsonld_raw = []
         self.metas = {}
         self.h1 = 0
-        self.questions = []          # heading text ending in "?"
+        self.questions = []          # heading text ending in "?" / "؟" (Arabic)
         self.words = 0
         self._in_ld = False
         self._ld_buf = []
@@ -81,7 +81,8 @@ class GeoParser(HTMLParser):
             self._skip -= 1
         if tag in ("h1", "h2", "h3", "h4") and self._cap_h:
             t = " ".join("".join(self._hbuf).split())
-            if t.endswith("?"):
+            # Arabic pages end questions with U+061F ARABIC QUESTION MARK
+            if t.endswith("?") or t.endswith("\u061f"):
                 self.questions.append(t)
             self._cap_h = False
 
@@ -116,10 +117,10 @@ class GeoParser(HTMLParser):
 
 def discover_pages():
     pages = []
-    for pat in ("*.html", "pages/**/*.html"):
+    for pat in ("*.html", "**/*.html"):
         for p in glob.glob(os.path.join(ROOT, pat), recursive=True):
             rel = os.path.relpath(p, ROOT)
-            if rel.split(os.sep)[0] == "_archive":
+            if rel.split(os.sep)[0] in ("_archive", "node_modules"):
                 continue
             pages.append(rel)
     return sorted(set(pages))
@@ -176,7 +177,8 @@ def audit():
         parsed[page] = p
         types = [t for t, _ in p.ld_types()]
         all_types[page] = types
-        is_home = page == "index.html"
+        # each language tree has its own home page: / and /ar/
+        is_home = page in ("index.html", "ar/index.html")
 
         # structured data present
         if "__invalid__" in types:

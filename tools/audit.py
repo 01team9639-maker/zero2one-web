@@ -143,10 +143,10 @@ class PageParser(HTMLParser):
 
 def discover_pages():
     pages = []
-    for pat in ("*.html", "pages/**/*.html"):
+    for pat in ("*.html", "**/*.html"):
         for p in glob.glob(os.path.join(ROOT, pat), recursive=True):
             rel = os.path.relpath(p, ROOT)
-            if rel.split(os.sep)[0] == "_archive":
+            if rel.split(os.sep)[0] in ("_archive", "node_modules"):
                 continue
             pages.append(rel)
     return sorted(set(pages))
@@ -160,8 +160,17 @@ def resolve_internal(page_rel, value):
     v = v.split("#", 1)[0].split("?", 1)[0]
     if not v:
         return (False, None)
-    base_dir = os.path.dirname(os.path.join(ROOT, page_rel))
-    return (True, os.path.normpath(os.path.join(base_dir, v)))
+    # Links are root-absolute across the site ("/assets/…", "/services/seo-riyadh/"),
+    # so a leading slash resolves against the project root, and a directory URL
+    # resolves to the index.html inside it.
+    if v.startswith("/"):
+        target = os.path.normpath(os.path.join(ROOT, v.lstrip("/")))
+    else:
+        base_dir = os.path.dirname(os.path.join(ROOT, page_rel))
+        target = os.path.normpath(os.path.join(base_dir, v))
+    if os.path.isdir(target) and os.path.isfile(os.path.join(target, "index.html")):
+        target = os.path.join(target, "index.html")
+    return (True, target)
 
 
 def audit():

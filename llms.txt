@@ -5,21 +5,32 @@
 > and e-commerce.
 
 ZERO 2 ONE is a digital marketing agency based in Al Olaya, Riyadh, Saudi Arabia.
-We serve brands across Saudi Arabia and the wider GCC. The site is available in
-English (default) and Arabic.
+We serve brands across Saudi Arabia and the wider GCC. The site is published in
+two languages, each with its own URLs: English at `/` and Arabic at `/ar/`. The
+two are paired with hreflang; either may be cited.
+
+## Main pages
+- [Home](https://zero2one.sa/) · [Arabic](https://zero2one.sa/ar/)
+- [Services](https://zero2one.sa/services/) · [Arabic](https://zero2one.sa/ar/services/): All six services, how an engagement runs, and pricing model.
+- [About](https://zero2one.sa/about/) · [Arabic](https://zero2one.sa/ar/about/): How the agency works, what makes it different, who it works with.
+- [Contact](https://zero2one.sa/contact/) · [Arabic](https://zero2one.sa/ar/contact/): Enquiry form, address, phone, opening hours.
 
 ## Services
-- [Website Design & Development](https://zero2one.sa/pages/projects/website-design.html): Custom, fast, conversion-focused websites and web systems.
-- [SEO & Search Engine Optimization](https://zero2one.sa/pages/projects/seo.html): Technical, content and local SEO for sustainable organic growth.
-- [Advertising Campaign Management](https://zero2one.sa/pages/projects/advertising.html): Data-driven paid campaigns on Google, Meta, TikTok and Snapchat.
-- [Brand Identity Development](https://zero2one.sa/pages/projects/brand-identity.html): Logo design, visual identity and brand strategy.
-- [Social Media Management & Content Creation](https://zero2one.sa/pages/projects/social-media.html): Strategy, content and community management for Saudi audiences.
-- [E-Commerce Development & Custom Systems](https://zero2one.sa/pages/projects/ecommerce.html): Online stores and custom systems built to convert.
+- [Website Design & Development](https://zero2one.sa/services/web-design-riyadh/): Custom, fast, conversion-focused websites and web systems.
+- [SEO & Search Engine Optimization](https://zero2one.sa/services/seo-riyadh/): Technical, content and local SEO for sustainable organic growth.
+- [Advertising Campaign Management](https://zero2one.sa/services/digital-advertising/): Data-driven paid campaigns on Google, Meta, TikTok and Snapchat.
+- [Brand Identity Development](https://zero2one.sa/services/brand-identity/): Logo design, visual identity and brand strategy.
+- [Social Media Management & Content Creation](https://zero2one.sa/services/social-media-management/): Strategy, content and community management for Saudi audiences.
+- [E-Commerce Development & Custom Systems](https://zero2one.sa/services/ecommerce-development/): Online stores and custom systems built to convert.
+
+Arabic versions of every service page live at the same path under `/ar/`, e.g.
+https://zero2one.sa/ar/services/seo-riyadh/
 
 ## Contact
 - Email: info@zero2one.sa
 - Phone / WhatsApp: +966 53 030 7054
 - Location: 7th Floor, Computer Complex, Al Olaya, Riyadh, Saudi Arabia
+- Opening hours: Sunday–Thursday, 09:00–18:00 (Riyadh time, GMT+3)
 
 ## Social profiles
 - Instagram: https://www.instagram.com/zero2onedm

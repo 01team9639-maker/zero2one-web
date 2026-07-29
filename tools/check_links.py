@@ -59,13 +59,32 @@ class LinkParser(HTMLParser):
 
 def discover_pages():
     pages = []
-    for pat in ("*.html", "pages/**/*.html"):
+    for pat in ("*.html", "**/*.html"):
         for p in glob.glob(os.path.join(ROOT, pat), recursive=True):
             rel = os.path.relpath(p, ROOT)
-            if rel.split(os.sep)[0] == "_archive":
+            if rel.split(os.sep)[0] in ("_archive", "node_modules"):
                 continue
             pages.append(rel)
     return sorted(set(pages))
+
+
+def resolve(page, path):
+    """Map a link to a file on disk.
+
+    Links are root-absolute across the site ("/assets/…", "/services/seo-riyadh/"),
+    so a leading slash resolves against the project root, not the page's folder.
+    A directory URL resolves to its index.html.
+    """
+    if path.startswith("/"):
+        abspath = os.path.normpath(os.path.join(ROOT, path.lstrip("/")))
+    else:
+        abspath = os.path.normpath(
+            os.path.join(os.path.dirname(os.path.join(ROOT, page)), path))
+    if os.path.isdir(abspath):
+        index = os.path.join(abspath, "index.html")
+        if os.path.isfile(index):
+            return index
+    return abspath
 
 
 def classify(value):
@@ -153,8 +172,7 @@ def main():
                 path = target.split("#", 1)[0].split("?", 1)[0]
                 if not path:
                     continue
-                abspath = os.path.normpath(os.path.join(os.path.dirname(
-                    os.path.join(ROOT, page)), path))
+                abspath = resolve(page, path)
                 ok = os.path.isfile(abspath) or os.path.isdir(abspath)
                 status = "OK" if ok else "BROKEN"
                 if not ok:

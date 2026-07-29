@@ -4,14 +4,38 @@
 # ================================================================
 
 # ----------------------------------------------------------------
-#  0) Canonical URL: /index.html -> /  (matches rel=canonical, fixes
-#     the Lighthouse SEO "valid rel=canonical" flag when the page is
-#     opened as /index.html)
+#  0) Canonical URLs
+#     a) /index.html            -> /            (any directory)
+#     b) /pages/projects/x.html -> /services/…/ (July 2026 URL move)
+#
+#     The 301s in (b) are what carries the indexing and any existing
+#     backlinks over to the new service URLs — they must stay in place
+#     permanently, not just until Search Console catches up.
 # ----------------------------------------------------------------
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteCond %{THE_REQUEST} \s/+index\.html[\s?]
-    RewriteRule ^index\.html$ / [R=301,L]
+
+    # a) drop a trailing index.html from any directory URL
+    RewriteCond %{THE_REQUEST} \s/+(?:[^\s?]*/)?index\.html[\s?]
+    RewriteRule ^(.*/)?index\.html$ /$1 [R=301,L]
+
+    # b) old service pages -> new clean service URLs
+    RewriteRule ^pages/projects/website-design\.html$ /services/web-design-riyadh/          [R=301,L]
+    RewriteRule ^pages/projects/seo\.html$            /services/seo-riyadh/                 [R=301,L]
+    RewriteRule ^pages/projects/advertising\.html$    /services/digital-advertising/        [R=301,L]
+    RewriteRule ^pages/projects/brand-identity\.html$ /services/brand-identity/             [R=301,L]
+    RewriteRule ^pages/projects/social-media\.html$   /services/social-media-management/    [R=301,L]
+    RewriteRule ^pages/projects/ecommerce\.html$      /services/ecommerce-development/      [R=301,L]
+
+    # anything else that used to live under /pages/ goes to the services hub
+    RewriteRule ^pages/projects/?$                    /services/                            [R=301,L]
+    RewriteRule ^pages/?$                             /services/                            [R=301,L]
+
+    # c) add the missing trailing slash on real directories, so /services/seo-riyadh
+    #    and /services/seo-riyadh/ do not become two indexable URLs
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteCond %{REQUEST_URI} !/$
+    RewriteRule ^(.*)$ /$1/ [R=301,L]
 </IfModule>
 
 # ----------------------------------------------------------------

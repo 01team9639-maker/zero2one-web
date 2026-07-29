@@ -533,6 +533,7 @@ function initScript() {
   initScrollLetters();
   initTricksWords();
   initContactForm();
+  initLeadTracking();
   initTimeZone();
   initLazyLoad();
   initPlayVideoInview();
@@ -1159,17 +1160,38 @@ function initContactForm() {
     }).focusout();
   });
 
-  // Professional AJAX Submission
+  // AJAX submission — posts to Formspree, no backend needed on the host.
   const contactForm = document.getElementById('contact-form');
-  if (contactForm) {
+  if (contactForm && !contactForm.dataset.bound) {
+    contactForm.dataset.bound = '1';
+
+    // Copy for both language trees (/ = English, /ar/ = Arabic)
+    const ar = (document.documentElement.getAttribute('lang') || 'en').indexOf('ar') === 0;
+    const COPY = ar ? {
+      sending: 'جارٍ الإرسال…',
+      sent: 'تم الإرسال ✓',
+      error: 'خطأ!',
+      ok: 'شكراً لتواصلك مع ZERO 2 ONE. وصلتنا رسالتك وسنعاود الاتصال بك في نفس يوم العمل.',
+      fail: 'تعذّر إرسال الرسالة. جرّب مرة أخرى أو راسلنا على واتساب: +966 53 030 7054'
+    } : {
+      sending: 'Sending…',
+      sent: 'Sent ✓',
+      error: 'Error!',
+      ok: 'Thanks for reaching out to ZERO 2 ONE. We have your message and will get back to you the same business day.',
+      fail: 'We could not send your message. Please try again, or reach us on WhatsApp: +966 53 030 7054'
+    };
+
     contactForm.addEventListener('submit', async function (e) {
       e.preventDefault();
 
       const submitBtn = contactForm.querySelector('.form-btn');
-      const originalBtnValue = submitBtn.value;
+      // The submit control is the site's standard round-pill button, so the
+      // visible label lives in .btn-text-inner rather than on the element.
+      const label = submitBtn.querySelector('.btn-text-inner') || submitBtn;
+      const originalLabel = label.textContent;
 
       // Visual Feedback
-      submitBtn.value = 'Sending...';
+      label.textContent = COPY.sending;
       submitBtn.style.opacity = '0.5';
       submitBtn.disabled = true;
 
@@ -1177,9 +1199,7 @@ function initContactForm() {
       const data = Object.fromEntries(formData.entries());
 
       try {
-        // We use Formspree (Free & Reliable)
-        // Activated with Mohammad's Form ID: xqedjevn
-        const response = await fetch('https://formspree.io/f/xqedjevn', {
+        const response = await fetch(contactForm.getAttribute('action') || 'https://formspree.io/f/xqedjevn', {
           method: 'POST',
           body: JSON.stringify(data),
           headers: {
@@ -1189,34 +1209,73 @@ function initContactForm() {
         });
 
         if (response.ok) {
-          submitBtn.value = 'Sent! ✓';
-          submitBtn.style.color = '#4CAF50';
+          label.textContent = COPY.sent;
+          label.style.color = '#4CAF50';
           contactForm.reset();
           $('.field').parent().removeClass('not-empty');
+          trackLead('form', { service: data.service || '' });
 
-          // Optional: Beautiful feedback
           setTimeout(() => {
-            alert('Thank you Mohammad! Your message has been sent successfully. I will get back to you soon.');
+            alert(COPY.ok);
           }, 500);
 
         } else {
           throw new Error('Submission failed');
         }
       } catch (error) {
-        submitBtn.value = 'Error!';
-        submitBtn.style.color = '#f44336';
-        alert('Oops! There was a problem. Please try again or contact me via WhatsApp.');
+        label.textContent = COPY.error;
+        label.style.color = '#f44336';
+        alert(COPY.fail);
       } finally {
         setTimeout(() => {
-          submitBtn.value = originalBtnValue;
+          label.textContent = originalLabel;
+          label.style.color = '';
           submitBtn.style.opacity = '1';
-          submitBtn.style.color = '';
           submitBtn.disabled = false;
         }, 4000);
       }
     });
   }
 
+}
+
+/**
+* Lead tracking
+* -------------
+* Every contact action on the site is a conversion: WhatsApp, phone, email and
+* the contact form. Each one sends a GA4 `generate_lead` event carrying the
+* channel in `method`, so GA4 → Admin → Events can mark it as a key event and
+* Google Ads can optimise against it. Bound once on `document`, because
+* initScript() re-runs after every barba page transition.
+*/
+function trackLead(method, extra) {
+  if (typeof gtag !== 'function') return;
+  gtag('event', method === 'directions' ? 'view_directions' : 'generate_lead', Object.assign({
+    method: method,
+    page_path: window.location.pathname,
+    page_language: document.documentElement.getAttribute('lang') || 'en'
+  }, extra || {}));
+}
+
+function initLeadTracking() {
+  if (document.documentElement.dataset.leadTracking) return;
+  document.documentElement.dataset.leadTracking = '1';
+
+  document.addEventListener('click', function (e) {
+    const link = e.target.closest ? e.target.closest('a[href]') : null;
+    if (!link) return;
+    const href = link.getAttribute('href') || '';
+    let method = null;
+
+    if (/^https?:\/\/(api\.|web\.)?wa(\.me|tsapp)/i.test(href)) method = 'whatsapp';
+    else if (/^tel:/i.test(href)) method = 'phone';
+    // initEmailLinks() rewrites mailto: to the Gmail compose URL on desktop,
+    // so both shapes have to count as the same channel.
+    else if (/^mailto:/i.test(href) || /mail\.google\.com\/mail\/\?view=cm/i.test(href)) method = 'email';
+    else if (/(maps\.google\.|google\.[a-z.]+\/maps)/i.test(href)) method = 'directions';
+
+    if (method) trackLead(method);
+  }, true);
 }
 
 /**
