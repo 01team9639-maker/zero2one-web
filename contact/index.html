@@ -2,18 +2,11 @@
 <html lang="en">
 
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-TVKP5KSX');</script>
-    <!-- End Google Tag Manager -->
    <meta charset="utf-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <title>Contact ZERO 2 ONE — Digital Marketing Agency in Riyadh</title>
-   <link rel="icon" type="image/svg+xml" href="/assets/icons/logo-z2o.svg">
-   <link rel="apple-touch-icon" href="/assets/icons/logo-z2o.svg">
+   <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48.png">
+   <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
    <meta name="theme-color" content="#F9460E">
    <meta name="description" content="Contact ZERO 2 ONE in Al Olaya, Riyadh. Call +966 53 030 7054, message us on WhatsApp, or send an enquiry — we reply the same business day." />
    <meta name="keywords" content="contact ZERO 2 ONE, digital marketing agency Riyadh contact, marketing agency Al Olaya Riyadh, marketing agency phone Saudi Arabia" />
@@ -58,14 +51,42 @@
 
    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
    <link href="/assets/css/bundle.min.css?v=190070a9" rel="stylesheet">
-   <!-- Google tag (gtag.js) -->
-   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7XN1NZY47"></script>
+   <!-- Analytics — deferred.
+        dataLayer and gtag() exist immediately, so nothing that fires early is
+        lost: events queue and are replayed when the tag scripts arrive. The
+        scripts themselves (GA4 + GTM + whatever GTM injects, ~460 KB and the
+        bulk of the main-thread work) are fetched only once the page is
+        interactive — on idle after load, or on the first user interaction,
+        whichever happens first. -->
    <script>
-     window.dataLayer = window.dataLayer || [];
-     function gtag(){dataLayer.push(arguments);}
-     gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-Z7XN1NZY47');
+      dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
 
-     gtag('config', 'G-Z7XN1NZY47');
+      (function () {
+         var EVENTS = ['pointerdown', 'keydown', 'touchstart', 'scroll'];
+         var loaded = false;
+         function load() {
+            if (loaded) return;
+            loaded = true;
+            EVENTS.forEach(function (e) { window.removeEventListener(e, load); });
+            ['https://www.googletagmanager.com/gtag/js?id=G-Z7XN1NZY47',
+             'https://www.googletagmanager.com/gtm.js?id=GTM-TVKP5KSX'].forEach(function (src) {
+               var s = document.createElement('script');
+               s.async = true;
+               s.src = src;
+               document.head.appendChild(s);
+            });
+         }
+         EVENTS.forEach(function (e) { window.addEventListener(e, load, { passive: true, once: true }); });
+         function idle() {
+            (window.requestIdleCallback || function (f) { setTimeout(f, 1500); })(load, { timeout: 4000 });
+         }
+         if (document.readyState === 'complete') idle();
+         else window.addEventListener('load', idle);
+      })();
    </script>
 
 </head>
@@ -270,7 +291,7 @@
                             <a href="/" class="btn-click magnetic" data-strength="20" data-strength-text="10">
                                 <span class="btn-text">
                                     <span class="brand-mark">
-                                        <img src="/assets/icons/logo-z2o.svg" width="167" height="77" alt="" />
+                                        <img src="/assets/icons/logo-z2o.webp" width="167" height="77" alt="" loading="lazy" />
                                         <span class="brand-label">ZERO 2 ONE</span>
                                     </span>
                                 </span>
@@ -481,7 +502,7 @@
                             <div class="flex-col footer-hero-media">
                                 <div class="footer-bigimg">
                                     <img decoding="async" fetchpriority="low" src="/assets/images/p1.webp" width="520"
-                                        height="780" alt="" />
+                                        height="780" alt="" loading="lazy" />
                                 </div>
                             </div>
                             <div class="flex-col footer-hero-text fade-in animate">
@@ -660,9 +681,9 @@
             </div>
         </div>
     </main>
-    <script defer src="/assets/js/vendor.min.js?v=f3c4d96b"></script>
+    <script defer src="/assets/js/vendor.min.js?v=f76d9f4f"></script>
     <script defer src="/assets/js/i18n.min.js?v=54304f96"></script>
-    <script defer src="/assets/js/index-new.min.js?v=42865731"></script>
+    <script defer src="/assets/js/index-new.min.js?v=fdafa6b5"></script>
 </body>
 
 </html>

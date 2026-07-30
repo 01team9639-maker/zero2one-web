@@ -535,7 +535,6 @@ function initScript() {
   initContactForm();
   initLeadTracking();
   initTimeZone();
-  initLazyLoad();
   initPlayVideoInview();
   initScrolltriggerAnimations();
   initEmailLinks();
@@ -1402,23 +1401,6 @@ function initEmailLinks() {
       link.setAttribute('target', '_blank');
     }
   });
-}
-
-/**
-* Lazy Load
-*/
-function initLazyLoad() {
-  // https://github.com/locomotivemtl/locomotive-scroll/issues/225
-  // https://github.com/verlok/vanilla-lazyload
-  var lazyLoadInstance = new LazyLoad({
-    elements_selector: ".lazy",
-    callback_loaded: function (el) {
-      if (scroll) {
-        scroll.update();
-      }
-    }
-  });
-
 }
 
 /**

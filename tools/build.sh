@@ -24,7 +24,6 @@ npx --yes esbuild assets/js/index-new.js --minify --charset=utf8 --outfile=asset
   cat assets/js/vendor/gsap-3.9.1.min.js;          printf '\n;\n'
   cat assets/js/vendor/ScrollTrigger-3.9.1.min.js; printf '\n;\n'
   cat assets/js/vendor/barba-2.10.3.min.js;        printf '\n;\n'
-  cat assets/js/vendor/lazyload-17.6.1.min.js;     printf '\n;\n'
   cat assets/js/vendor/locomotive-scroll.min.js;   printf '\n'
 } > assets/js/vendor.min.js
 
