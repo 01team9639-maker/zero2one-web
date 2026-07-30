@@ -19,17 +19,19 @@
     RewriteCond %{THE_REQUEST} \s/+(?:[^\s?]*/)?index\.html[\s?]
     RewriteRule ^(.*/)?index\.html$ /$1 [R=301,L]
 
-    # b) old service pages -> new clean service URLs
-    RewriteRule ^pages/projects/website-design\.html$ /services/web-design-riyadh/          [R=301,L]
-    RewriteRule ^pages/projects/seo\.html$            /services/seo-riyadh/                 [R=301,L]
-    RewriteRule ^pages/projects/advertising\.html$    /services/digital-advertising/        [R=301,L]
-    RewriteRule ^pages/projects/brand-identity\.html$ /services/brand-identity/             [R=301,L]
-    RewriteRule ^pages/projects/social-media\.html$   /services/social-media-management/    [R=301,L]
-    RewriteRule ^pages/projects/ecommerce\.html$      /services/ecommerce-development/      [R=301,L]
-
-    # anything else that used to live under /pages/ goes to the services hub
-    RewriteRule ^pages/projects/?$                    /services/                            [R=301,L]
-    RewriteRule ^pages/?$                             /services/                            [R=301,L]
+    # b) retired URLs -> their replacements
+    # >>> BEGIN generated redirects — tools/build_redirects.py (do not edit by hand)
+    # Source: tools/redirects.json — regenerate with tools/build_redirects.py
+    # These are permanent. Each one carries the ranking of a retired URL.
+    RewriteRule ^pages/projects/website-design\.html$   /services/web-design-riyadh/           [R=301,L]
+    RewriteRule ^pages/projects/seo\.html$              /services/seo-riyadh/                  [R=301,L]
+    RewriteRule ^pages/projects/advertising\.html$      /services/digital-advertising/         [R=301,L]
+    RewriteRule ^pages/projects/brand-identity\.html$   /services/brand-identity/              [R=301,L]
+    RewriteRule ^pages/projects/social-media\.html$     /services/social-media-management/     [R=301,L]
+    RewriteRule ^pages/projects/ecommerce\.html$        /services/ecommerce-development/       [R=301,L]
+    RewriteRule ^pages/projects/$                       /services/                             [R=301,L]
+    RewriteRule ^pages/$                                /services/                             [R=301,L]
+    # <<< END generated redirects
 
     # c) add the missing trailing slash on real directories, so /services/seo-riyadh
     #    and /services/seo-riyadh/ do not become two indexable URLs

@@ -1,0 +1,30 @@
+{
+  "_comment": [
+    "THE redirect map for the site — one source of truth.",
+    "",
+    "Add a line here and run `python3 tools/build_redirects.py`. That regenerates",
+    "all three layers at once, so they can never drift apart:",
+    "",
+    "  1. the block inside .htaccess          (Apache / LiteSpeed / Hostinger)",
+    "  2. _redirects                          (Netlify / Cloudflare Pages)",
+    "  3. a fallback stub HTML page at each   (works on ANY host, even with no",
+    "     old path                             server config at all)",
+    "",
+    "Never hand-edit the generated block in .htaccess, the _redirects file, or",
+    "anything under the old paths — the next build overwrites them.",
+    "",
+    "These are permanent. Removing one throws away the search ranking and any",
+    "backlinks that the old URL still carries."
+  ],
+  "base": "https://zero2one.sa",
+  "redirects": [
+    { "from": "/pages/projects/website-design.html", "to": "/services/web-design-riyadh/",       "since": "2026-07-30" },
+    { "from": "/pages/projects/seo.html",            "to": "/services/seo-riyadh/",              "since": "2026-07-30" },
+    { "from": "/pages/projects/advertising.html",    "to": "/services/digital-advertising/",     "since": "2026-07-30" },
+    { "from": "/pages/projects/brand-identity.html", "to": "/services/brand-identity/",          "since": "2026-07-30" },
+    { "from": "/pages/projects/social-media.html",   "to": "/services/social-media-management/", "since": "2026-07-30" },
+    { "from": "/pages/projects/ecommerce.html",      "to": "/services/ecommerce-development/",   "since": "2026-07-30" },
+    { "from": "/pages/projects/",                    "to": "/services/",                         "since": "2026-07-30" },
+    { "from": "/pages/",                             "to": "/services/",                         "since": "2026-07-30" }
+  ]
+}

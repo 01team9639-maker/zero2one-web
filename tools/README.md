@@ -15,18 +15,41 @@ python3 tools/generate_sitemap.py
 python3 tools/optimize_images.py --png
 ```
 
+**Audit — read only**
+
 | Script | Purpose |
 |--------|---------|
 | [`audit.py`](audit.py) | Classic on-page SEO / code health (titles, meta, alt, headings, internal links, duplicate content) |
 | [`geo_audit.py`](geo_audit.py) | **GEO / AEO / AIO** — structured data, FAQ, entity/NAP, AI-crawler access, llms.txt |
 | [`check_links.py`](check_links.py) | Internal + external link checker (404 / redirect / blocked) |
 | [`check_robots.py`](check_robots.py) | robots.txt mistakes that hurt SEO |
-| [`generate_sitemap.py`](generate_sitemap.py) | (Re)build + validate `sitemap.xml` |
+| [`verify_deploy.py`](verify_deploy.py) | **Run after every upload.** Checks the *live* site: are the retired URLs still 301ing, did `.htaccess` actually upload, is every sitemap URL reachable with a self-referencing canonical |
+
+**Build — these write files**
+
+| Script | Writes |
+|--------|--------|
+| [`build_ar.py`](build_ar.py) | The whole `/ar/` tree, from the English pages + [`ar-dictionary.json`](ar-dictionary.json) |
+| [`build_redirects.py`](build_redirects.py) | The `.htaccess` redirect block, `_redirects`, and the fallback stubs under `pages/` — all from [`redirects.json`](redirects.json) |
+| [`generate_sitemap.py`](generate_sitemap.py) | `sitemap.xml` (English + Arabic, with hreflang alternates) |
 | [`optimize_images.py`](optimize_images.py) | WebP generation + PNG optimization (CDN prep) |
+| [`build.sh`](build.sh) | The minified CSS/JS bundles |
+| [`deploy.sh`](deploy.sh) | Nothing locally — uploads the site (dotfiles included) and then runs `verify_deploy.py` |
 
 Every script exits non-zero when it finds real problems, so they double as CI
-gates. Nothing writes to the site except `generate_sitemap.py` (writes
-`sitemap.xml`) and `optimize_images.py` (writes `.webp` / re-saves PNGs).
+gates. `build_ar.py --check`, `build_redirects.py --check` and
+`generate_sitemap.py --check` validate without writing.
+
+### Order of operations after a content change
+
+```bash
+# 1. edit the English page
+python3 tools/build_ar.py             # mirror it into /ar/
+python3 tools/generate_sitemap.py     # refresh the sitemap
+sh      tools/build.sh                # rebuild the CSS/JS bundles (if those changed)
+python3 tools/audit.py                # 0 errors expected
+sh      tools/deploy.sh --live        # upload + verify
+```
 
 ---
 

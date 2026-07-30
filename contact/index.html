@@ -342,8 +342,12 @@
                            <div class="contact-form-col">
                               <h2 class="case-overview-label">Send an Enquiry</h2>
                               <div class="stripe"></div>
-                              <form id="contact-form" class="contact-form" action="https://formspree.io/f/xqedjevn"
-                                 method="POST">
+                              <!-- Where the enquiry goes. Empty data-endpoint = compose it into a
+                                   WhatsApp message (no third-party account, nothing to expire).
+                                   To use a form service or a serverless function instead, put its
+                                   URL here and re-run tools/build_ar.py. -->
+                              <form id="contact-form" class="contact-form" data-endpoint=""
+                                 method="POST" novalidate>
                                  <div class="form-grid">
                                     <div class="field-wrap">
                                        <label class="field-label" for="cf-name">Full name</label>

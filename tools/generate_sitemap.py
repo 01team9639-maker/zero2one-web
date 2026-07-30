@@ -58,7 +58,7 @@ def discover():
     paths = []
     for f in glob.glob(os.path.join(ROOT, "**", "index.html"), recursive=True):
         rel = os.path.relpath(f, ROOT).replace(os.sep, "/")
-        if rel.split("/")[0] in ("_archive", "ar", "node_modules"):
+        if rel.split("/")[0] in ("_archive", "ar", "node_modules", "pages"):
             continue
         paths.append("/" if rel == "index.html" else "/" + rel[: -len("index.html")])
     return sorted(set(paths), key=lambda p: (p.count("/"), p))

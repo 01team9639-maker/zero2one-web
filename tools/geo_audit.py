@@ -120,7 +120,7 @@ def discover_pages():
     for pat in ("*.html", "**/*.html"):
         for p in glob.glob(os.path.join(ROOT, pat), recursive=True):
             rel = os.path.relpath(p, ROOT)
-            if rel.split(os.sep)[0] in ("_archive", "node_modules"):
+            if rel.split(os.sep)[0] in ("_archive", "node_modules", "pages"):
                 continue
             pages.append(rel)
     return sorted(set(pages))

@@ -1160,7 +1160,6 @@ function initContactForm() {
     }).focusout();
   });
 
-  // AJAX submission — posts to Formspree, no backend needed on the host.
   const contactForm = document.getElementById('contact-form');
   if (contactForm && !contactForm.dataset.bound) {
     contactForm.dataset.bound = '1';
@@ -1170,16 +1169,44 @@ function initContactForm() {
     const COPY = ar ? {
       sending: 'جارٍ الإرسال…',
       sent: 'تم الإرسال ✓',
+      opened: 'افتح واتساب ✓',
       error: 'خطأ!',
+      head: 'طلب جديد من الموقع',
       ok: 'شكراً لتواصلك مع ZERO 2 ONE. وصلتنا رسالتك وسنعاود الاتصال بك في نفس يوم العمل.',
-      fail: 'تعذّر إرسال الرسالة. جرّب مرة أخرى أو راسلنا على واتساب: +966 53 030 7054'
+      fail: 'تعذّر إرسال الرسالة. جرّب مرة أخرى أو راسلنا على واتساب.',
+      labels: {
+        name: 'الاسم', company: 'الشركة', email: 'البريد الإلكتروني',
+        phone: 'الجوال', service: 'الخدمة', message: 'التفاصيل'
+      }
     } : {
       sending: 'Sending…',
       sent: 'Sent ✓',
+      opened: 'Opening WhatsApp ✓',
       error: 'Error!',
+      head: 'New enquiry from the website',
       ok: 'Thanks for reaching out to ZERO 2 ONE. We have your message and will get back to you the same business day.',
-      fail: 'We could not send your message. Please try again, or reach us on WhatsApp: +966 53 030 7054'
+      fail: 'We could not send your message. Please try again, or reach us on WhatsApp.',
+      labels: {
+        name: 'Name', company: 'Company', email: 'Email',
+        phone: 'Phone', service: 'Service', message: 'Details'
+      }
     };
+
+    // Read the agency's WhatsApp number off the page rather than hard-coding it
+    // a second time — the footer and contact panel already carry it.
+    function whatsappNumber() {
+      var link = document.querySelector('a[href*="wa.me/"]');
+      var m = link && (link.getAttribute('href') || '').match(/wa\.me\/(\d+)/);
+      return m ? m[1] : '';
+    }
+
+    function asMessage(data) {
+      var lines = [COPY.head, ''];
+      Object.keys(COPY.labels).forEach(function (k) {
+        if (data[k]) lines.push(COPY.labels[k] + ': ' + data[k]);
+      });
+      return lines.join('\n');
+    }
 
     contactForm.addEventListener('submit', async function (e) {
       e.preventDefault();
@@ -1190,16 +1217,48 @@ function initContactForm() {
       const label = submitBtn.querySelector('.btn-text-inner') || submitBtn;
       const originalLabel = label.textContent;
 
+      const formData = new FormData(contactForm);
+      const data = Object.fromEntries(formData.entries());
+
+      // Where the enquiry goes. Configured once, on the <form> in
+      // contact/index.html (then re-run tools/build_ar.py so /ar/ matches):
+      //
+      //   data-endpoint=""          the enquiry is composed into a WhatsApp
+      //                             message and opened in WhatsApp. This is the
+      //                             default: it needs no third-party account,
+      //                             no backend, and nothing can silently break.
+      //   data-endpoint="https://…" posted as JSON instead. Anything that takes
+      //                             a JSON POST and answers 2xx works — a form
+      //                             service on the agency's own account, or a
+      //                             serverless function.
+      const endpoint = (contactForm.getAttribute('data-endpoint') || '').trim();
+
+      if (!endpoint) {
+        const number = whatsappNumber();
+        if (!number) return;
+        // Synchronous: opening the window straight out of the submit gesture
+        // keeps it clear of popup blockers.
+        window.open('https://wa.me/' + number + '?text=' + encodeURIComponent(asMessage(data)),
+          '_blank', 'noopener');
+        label.textContent = COPY.opened;
+        label.style.color = '#4CAF50';
+        contactForm.reset();
+        $('.field').parent().removeClass('not-empty');
+        trackLead('form', { service: data.service || '' });
+        setTimeout(function () {
+          label.textContent = originalLabel;
+          label.style.color = '';
+        }, 4000);
+        return;
+      }
+
       // Visual Feedback
       label.textContent = COPY.sending;
       submitBtn.style.opacity = '0.5';
       submitBtn.disabled = true;
 
-      const formData = new FormData(contactForm);
-      const data = Object.fromEntries(formData.entries());
-
       try {
-        const response = await fetch(contactForm.getAttribute('action') || 'https://formspree.io/f/xqedjevn', {
+        const response = await fetch(endpoint, {
           method: 'POST',
           body: JSON.stringify(data),
           headers: {
