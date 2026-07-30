@@ -116,6 +116,59 @@ anything under `pages/` — the next build overwrites them.
 
 ---
 
+## Contact form
+
+`/contact/` (and `/ar/contact/`) posts to **[`send.php`](send.php)** — plain PHP
+`mail()`, no third-party service, no account that can expire or belong to
+someone else. That is what Hostinger gives us, and it is the same approach we
+already run in production on `datarecovery-sa`.
+
+The form's `action` is the single place the destination is configured, and it
+doubles as the native no-JS target: `send.php` answers a plain form navigation
+with an HTML page and a `fetch()` with JSON. Clear the `action` and the form
+falls back to composing a WhatsApp message instead — no backend at all.
+
+What the handler enforces:
+
+| Guard | Detail |
+|---|---|
+| Field validation | name 2–100, company ≤100, email required + RFC-valid, message 10–5000 |
+| Phone | optional; Saudi mobile normalised to `+9665XXXXXXXX`, other international numbers accepted (the agency works across the GCC) |
+| `<select>` whitelist | a forged option value is **rejected**, not merely checked for emptiness — in both languages |
+| Header injection | CR/LF and control characters stripped from every header value |
+| Honeypot | off-screen `website` field; a filled value gets a fake success and sends nothing |
+| CSRF | `Origin` allow-list + `Sec-Fetch-Site` check |
+| Rate limiting | 30 s per IP, plus 5/min · 30/hour · 100/day on the mailbox. State is atomic (`flock` + atomic rename), lives **outside** the document root at `0600`, stores only HMAC'd IP fingerprints, and **fails closed** |
+| Encoding | RFC 2047 subjects, RFC 5322 display names, base64 UTF-8 body — Arabic round-trips intact |
+
+### Keeping the whitelist honest
+
+The whitelist has to match the form's `<option value>`s or valid enquiries get
+rejected. It is generated, not maintained by hand:
+
+```bash
+python3 tools/build_form.py           # sync send.php's whitelist from both contact pages
+python3 tools/build_form.py --check   # fail if they have drifted (runs in the deploy pre-flight)
+```
+
+### Testing it
+
+```bash
+sh tools/test_send.sh     # 22 cases; uses local php, or Docker if there is none
+```
+
+`mail()` is pointed at a capture script, so the suite asserts on the real
+composed message — that no `Bcc:` can be smuggled in, that a Saudi number is
+normalised, and that the Arabic subject and body survive encoding.
+
+> **Before the form works in production:** `mail()` on Hostinger sends as the
+> hosting domain, so `noreply@zero2one.sa` must exist as a mailbox or alias on
+> the account, and `info@zero2one.sa` must be able to receive. Submit the form
+> once after deploying and confirm the mail arrives — `tools/verify_deploy.py`
+> checks the pages, not the mailbox.
+
+---
+
 ## Running locally
 
 It's fully static — serve the folder with any static server:
@@ -227,8 +280,7 @@ image/CDN prep — is documented in **[`tools/README.md`](tools/README.md)**.
 | Item | Where | Note |
 |------|-------|------|
 | **Domain** | canonical / `og:url` / `sitemap.xml` / `robots.txt` | Currently assumes `https://zero2one.sa`. If the real domain differs, re-run `tools/generate_sitemap.py --base https://REAL_DOMAIN` and update the `<head>` URLs. |
-| **Opening hours** | `openingHoursSpecification` in `index.html` schema, `/contact/` page | Set to Sun–Thu 09:00–18:00. Confirm before launch. |
-| **Map coordinates** | `LocalBusiness` schema | `hasMap` points at the Google Maps place; a `geo` lat/long pair should be added once confirmed (do not guess it). |
+| **Map coordinates** | `LocalBusiness` schema | `hasMap` points at the Google Maps place. No `geo` pair and no opening hours are published — deliberately, they were not confirmed. |
 | **Contact form** | `data-endpoint` on `#contact-form` in `contact/index.html` | Empty by default — the enquiry is composed into a WhatsApp message, so it works with no third-party account. To collect submissions by email instead, put a form-service or serverless URL there (must accept a JSON `POST`) and re-run `tools/build_ar.py`. |
 | **Search Console** | — | Submit `sitemap.xml`, and use *URL Inspection* to re-crawl the six moved service URLs. Watch *Pages → Redirect* to confirm the 301s are seen. |
 | **Share image** | `og:image` | Uses `assets/images/about-us-zero2one.png` (portrait). A dedicated 1200×630 landscape image is recommended. |

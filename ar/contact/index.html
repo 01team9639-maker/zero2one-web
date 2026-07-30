@@ -51,7 +51,7 @@
    </script>
    <!-- FAQ structured data -->
    <script type="application/ld+json">
-   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"كم تستغرقون في الردّ؟","acceptedAnswer":{"@type":"Answer","text":"في نفس يوم العمل، من الأحد إلى الخميس، 9:00–18:00 بتوقيت الرياض. والرسائل التي تصل في نهاية الأسبوع نردّ عليها صباح الأحد."}},{"@type":"Question","name":"ماذا يحدث بعد إرسال النموذج؟","acceptedAnswer":{"@type":"Answer","text":"نقرأه، وإن كان هناك ما يحتاج توضيحاً نسأل سؤالاً أو سؤالين عبر واتساب أو البريد. ثم نحدّد مكالمة مدّتها ثلاثون دقيقة، مجانية وبلا التزام. وتخرج منها باتجاه واضح، سواء تعاملت معنا أم لا."}},{"@type":"Question","name":"هل يمكننا الاجتماع في مكتبكم؟","acceptedAnswer":{"@type":"Answer","text":"نعم — الدور السابع، مجمع الكمبيوترات، العليا، الرياض. راسلنا مسبقاً حتى نتأكّد من حضور الأشخاص المناسبين."}}]}
+   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"كم تستغرقون في الردّ؟","acceptedAnswer":{"@type":"Answer","text":"في نفس يوم العمل. والرسائل التي تصل خارج أيام العمل نردّ عليها في اليوم التالي."}},{"@type":"Question","name":"ماذا يحدث بعد إرسال النموذج؟","acceptedAnswer":{"@type":"Answer","text":"نقرأه، وإن كان هناك ما يحتاج توضيحاً نسأل سؤالاً أو سؤالين عبر واتساب أو البريد. ثم نحدّد مكالمة مدّتها ثلاثون دقيقة، مجانية وبلا التزام. وتخرج منها باتجاه واضح، سواء تعاملت معنا أم لا."}},{"@type":"Question","name":"هل يمكننا الاجتماع في مكتبكم؟","acceptedAnswer":{"@type":"Answer","text":"نعم — الدور السابع، مجمع الكمبيوترات، العليا، الرياض. راسلنا مسبقاً حتى نتأكّد من حضور الأشخاص المناسبين."}}]}
    </script>
    <link rel="preload" as="font" href="/assets/fonts/NeueMontreal-Regular.otf" type="font/otf"
       crossorigin="anonymous">
@@ -339,11 +339,11 @@
                            <div class="contact-form-col">
                               <h2 class="case-overview-label">أرسل طلبك</h2>
                               <div class="stripe"></div>
-                              <!-- Where the enquiry goes. Empty data-endpoint = compose it into a
-                                   WhatsApp message (no third-party account, nothing to expire).
-                                   To use a form service or a serverless function instead, put its
-                                   URL here and re-run tools/build_ar.py. -->
-                              <form id="contact-form" class="contact-form" data-endpoint=""
+                              <!-- Posts to /send.php (plain PHP mail() on Hostinger). The action is
+                                   also the native no-JS target: send.php answers a form
+                                   navigation with HTML instead of JSON. Clear the action to fall
+                                   back to composing a WhatsApp message instead. -->
+                              <form id="contact-form" class="contact-form" action="/send.php"
                                  method="POST" novalidate>
                                  <div class="form-grid">
                                     <div class="field-wrap">
@@ -384,7 +384,14 @@
                                           required></textarea>
                                     </div>
                                  </div>
-                                 <input type="hidden" name="_subject" value="طلب جديد — «من الصفر إلى الواحد».sa" />
+                                 <!-- Honeypot: bots fill it, humans never see it. A non-empty
+                                      value makes send.php answer "received" and send nothing. -->
+                                 <div class="field-honeypot" aria-hidden="true">
+                                    <label for="cf-website">الموقع الإلكتروني</label>
+                                    <input id="cf-website" name="website" type="text" tabindex="-1"
+                                       autocomplete="off" />
+                                 </div>
+                                 <input type="hidden" name="lang" value="ar" />
                                  <div class="form-actions">
                                     <div class="btn btn-normal">
                                        <button type="submit" class="btn-click magnetic form-btn" data-strength="18"
@@ -422,11 +429,6 @@
                                     <dd><a class="contact-value-ltr"
                                           href="mailto:info@zero2one.sa">info@zero2one.sa</a></dd>
                                  </div>
-                                 <div>
-                                    <dt>ساعات العمل</dt>
-                                    <dd>الأحد – الخميس، ⁦9⁩:⁦00⁩ – ⁦18⁩:⁦00⁩<span class="contact-hours-note">بتوقيت الرياض (GMT+3). مغلق الجمعة والسبت.</span>
-                                    </dd>
-                                 </div>
                               </dl>
                               <div class="contact-map">
                                  <iframe
@@ -448,7 +450,7 @@
                   <ul class="faq-list">
                      <li class="faq-item">
                         <h3 class="faq-q">كم تستغرقون في الردّ؟</h3>
-                        <p class="faq-a">في نفس يوم العمل، من الأحد إلى الخميس، ⁦9⁩:⁦00⁩–⁦18⁩:⁦00⁩ بتوقيت الرياض. والرسائل التي تصل في نهاية الأسبوع نردّ عليها صباح الأحد.</p>
+                        <p class="faq-a">في نفس يوم العمل. والرسائل التي تصل خارج أيام العمل نردّ عليها في اليوم التالي.</p>
                      </li>
                      <li class="faq-item">
                         <h3 class="faq-q">ماذا يحدث بعد إرسال النموذج؟</h3>

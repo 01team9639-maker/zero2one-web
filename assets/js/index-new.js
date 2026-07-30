@@ -1220,18 +1220,12 @@ function initContactForm() {
       const formData = new FormData(contactForm);
       const data = Object.fromEntries(formData.entries());
 
-      // Where the enquiry goes. Configured once, on the <form> in
-      // contact/index.html (then re-run tools/build_ar.py so /ar/ matches):
-      //
-      //   data-endpoint=""          the enquiry is composed into a WhatsApp
-      //                             message and opened in WhatsApp. This is the
-      //                             default: it needs no third-party account,
-      //                             no backend, and nothing can silently break.
-      //   data-endpoint="https://…" posted as JSON instead. Anything that takes
-      //                             a JSON POST and answers 2xx works — a form
-      //                             service on the agency's own account, or a
-      //                             serverless function.
-      const endpoint = (contactForm.getAttribute('data-endpoint') || '').trim();
+      // Where the enquiry goes: the form's own action, which is /send.php —
+      // plain PHP mail() on Hostinger, no third-party service. The same
+      // attribute is the native no-JS target, so there is one place to change.
+      // Clearing the action falls back to composing a WhatsApp message, which
+      // needs no backend at all.
+      const endpoint = (contactForm.getAttribute('action') || '').trim();
 
       if (!endpoint) {
         const number = whatsappNumber();
@@ -1267,7 +1261,13 @@ function initContactForm() {
           }
         });
 
-        if (response.ok) {
+        // send.php always answers {success, message}. Its message is the useful
+        // one — it names the field that failed validation, or the seconds left
+        // on the rate limit — so show that rather than a generic string.
+        const payload = await response.json().catch(() => null);
+        const detail = payload && typeof payload.message === 'string' ? payload.message : '';
+
+        if (response.ok && payload && payload.success) {
           label.textContent = COPY.sent;
           label.style.color = '#4CAF50';
           contactForm.reset();
@@ -1275,13 +1275,17 @@ function initContactForm() {
           trackLead('form', { service: data.service || '' });
 
           setTimeout(() => {
-            alert(COPY.ok);
+            alert(detail || COPY.ok);
           }, 500);
 
         } else {
-          throw new Error('Submission failed');
+          label.textContent = COPY.error;
+          label.style.color = '#f44336';
+          alert(detail || COPY.fail);
         }
       } catch (error) {
+        // Network failure or PHP unavailable — the WhatsApp link in .form-note
+        // right beside the button is still there, so say so.
         label.textContent = COPY.error;
         label.style.color = '#f44336';
         alert(COPY.fail);

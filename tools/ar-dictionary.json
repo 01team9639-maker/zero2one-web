@@ -357,9 +357,6 @@
   "Office": "المقر",
   "7th Floor, Computer Complex, Al Olaya, Riyadh, Saudi Arabia": "الدور السابع، مجمع الكمبيوترات، العليا، الرياض، المملكة العربية السعودية",
   "Phone": "الهاتف",
-  "Opening hours": "ساعات العمل",
-  "Sunday – Thursday, 9:00 – 18:00": "الأحد – الخميس، 9:00 – 18:00",
-  "Riyadh time (GMT+3). Closed Friday and Saturday.": "بتوقيت الرياض (GMT+3). مغلق الجمعة والسبت.",
   "Website Design and Development": "تصميم وتطوير المواقع",
   "Social Media Management and Content Creation": "إدارة وسائل التواصل وصناعة المحتوى",
   "E-commerce and Custom Systems Development": "تطوير المتاجر والأنظمة المخصّصة",
@@ -367,7 +364,6 @@
   "ZERO 2 ONE office location in Al Olaya, Riyadh": "موقع مكتب «من الصفر إلى الواحد» في العليا، الرياض",
   "Before you get in touch": "قبل أن تتواصل",
   "How quickly do you reply?": "كم تستغرقون في الردّ؟",
-  "Same business day, Sunday to Thursday, 9:00–18:00 Riyadh time. Messages that arrive over the weekend are answered on Sunday morning.": "في نفس يوم العمل، من الأحد إلى الخميس، 9:00–18:00 بتوقيت الرياض. والرسائل التي تصل في نهاية الأسبوع نردّ عليها صباح الأحد.",
   "What happens after I send the form?": "ماذا يحدث بعد إرسال النموذج؟",
   "We read it, and if anything is unclear we ask one or two questions by WhatsApp or email. Then we book a 30-minute call, free, no obligation. You leave that call with a direction whether or not you work with us.": "نقرأه، وإن كان هناك ما يحتاج توضيحاً نسأل سؤالاً أو سؤالين عبر واتساب أو البريد. ثم نحدّد مكالمة مدّتها ثلاثون دقيقة، مجانية وبلا التزام. وتخرج منها باتجاه واضح، سواء تعاملت معنا أم لا.",
   "Can we meet at your office?": "هل يمكننا الاجتماع في مكتبكم؟",
@@ -383,5 +379,7 @@
   "About ZERO 2 ONE": "من نحن — زيرو تو ون",
   "Contact ZERO 2 ONE": "تواصل معنا — زيرو تو ون",
   "Talk To Us": "تحدّث إلينا",
-  "Six services, built to feed each other. Start with the one that is actually blocking you.": "ست خدمات مبنية ليغذّي بعضها بعضاً. ابدأ بالخدمة التي تعيقك فعلاً."
+  "Six services, built to feed each other. Start with the one that is actually blocking you.": "ست خدمات مبنية ليغذّي بعضها بعضاً. ابدأ بالخدمة التي تعيقك فعلاً.",
+  "Same business day. Messages that arrive outside working days are answered on the next one.": "في نفس يوم العمل. والرسائل التي تصل خارج أيام العمل نردّ عليها في اليوم التالي.",
+  "Website": "الموقع الإلكتروني"
 }

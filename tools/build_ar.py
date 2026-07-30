@@ -124,6 +124,9 @@ HTML_REPLACEMENTS = [
      '<div class="loading-brand">من الصفر إلى الواحد</div>'),
     ('<span class="loading-brand-site">ZERO 2 ONE</span>',
      '<span class="loading-brand-site">من الصفر إلى الواحد</span>'),
+    # the contact form tells send.php which language the enquiry came from
+    ('<input type="hidden" name="lang" value="en" />',
+     '<input type="hidden" name="lang" value="ar" />'),
 ]
 
 # Attribute values that carry visible or indexable text.
@@ -138,6 +141,7 @@ KEEP_AS_IS = {
     "ZERO 2 ONE", "zero2one", "info@zero2one.sa", "arrow-up-right", "English",
     "Hello", "Bonjour", "Ciao", "Olá", "Hallå", "Guten tag", "Hallo",
     "1:04 PM GMT+3", "X", "Instagram", "Tiktok", "Facebook", "Youtube", "LinkedIn",
+    "en", "ar",
 }
 
 

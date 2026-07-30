@@ -24,6 +24,7 @@ python3 tools/optimize_images.py --png
 | [`check_links.py`](check_links.py) | Internal + external link checker (404 / redirect / blocked) |
 | [`check_robots.py`](check_robots.py) | robots.txt mistakes that hurt SEO |
 | [`verify_deploy.py`](verify_deploy.py) | **Run after every upload.** Checks the *live* site: are the retired URLs still 301ing, did `.htaccess` actually upload, is every sitemap URL reachable with a self-referencing canonical |
+| [`test_send.sh`](test_send.sh) | 22-case test suite for `send.php` — validation, `<select>` whitelist, header injection, honeypot, CSRF, rate limiting, UTF-8 mail composition. Uses local `php`, or Docker if there is none |
 
 **Build — these write files**
 
@@ -31,6 +32,7 @@ python3 tools/optimize_images.py --png
 |--------|--------|
 | [`build_ar.py`](build_ar.py) | The whole `/ar/` tree, from the English pages + [`ar-dictionary.json`](ar-dictionary.json) |
 | [`build_redirects.py`](build_redirects.py) | The `.htaccess` redirect block, `_redirects`, and the fallback stubs under `pages/` — all from [`redirects.json`](redirects.json) |
+| [`build_form.py`](build_form.py) | `send.php`'s `<select>` whitelist, read out of the real `<option value>`s in both contact pages |
 | [`generate_sitemap.py`](generate_sitemap.py) | `sitemap.xml` (English + Arabic, with hreflang alternates) |
 | [`optimize_images.py`](optimize_images.py) | WebP generation + PNG optimization (CDN prep) |
 | [`build.sh`](build.sh) | The minified CSS/JS bundles |
@@ -47,7 +49,9 @@ gates. `build_ar.py --check`, `build_redirects.py --check` and
 python3 tools/build_ar.py             # mirror it into /ar/
 python3 tools/generate_sitemap.py     # refresh the sitemap
 sh      tools/build.sh                # rebuild the CSS/JS bundles (if those changed)
+python3 tools/build_form.py           # re-sync the form whitelist (if the form changed)
 python3 tools/audit.py                # 0 errors expected
+sh      tools/test_send.sh            # only if send.php or the form changed
 sh      tools/deploy.sh --live        # upload + verify
 ```
 
@@ -55,7 +59,8 @@ sh      tools/deploy.sh --live        # upload + verify
 
 ## `audit.py` — SEO / code audit
 
-Scans every page (`index.html` + `pages/**/*.html`) and reports, per severity:
+Scans every page (both language trees; the generated redirect stubs under
+`pages/` are skipped) and reports, per severity:
 
 | Check | Level |
 |-------|-------|

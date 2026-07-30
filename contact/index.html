@@ -15,7 +15,7 @@
    <link rel="icon" type="image/svg+xml" href="/assets/icons/logo-z2o.svg">
    <link rel="apple-touch-icon" href="/assets/icons/logo-z2o.svg">
    <meta name="theme-color" content="#F9460E">
-   <meta name="description" content="Contact ZERO 2 ONE in Al Olaya, Riyadh. Call +966 53 030 7054, message us on WhatsApp, or send an enquiry — we reply the same business day, Sunday to Thursday." />
+   <meta name="description" content="Contact ZERO 2 ONE in Al Olaya, Riyadh. Call +966 53 030 7054, message us on WhatsApp, or send an enquiry — we reply the same business day." />
    <meta name="keywords" content="contact ZERO 2 ONE, digital marketing agency Riyadh contact, marketing agency Al Olaya Riyadh, marketing agency phone Saudi Arabia" />
    <meta name="author" content="ZERO 2 ONE" />
    <meta name="robots" content="index, follow" />
@@ -29,7 +29,7 @@
    <meta property="og:type" content="website" />
    <meta property="og:site_name" content="ZERO 2 ONE" />
    <meta property="og:title" content="Contact ZERO 2 ONE — Digital Marketing Agency in Riyadh" />
-   <meta property="og:description" content="Contact ZERO 2 ONE in Al Olaya, Riyadh. Call +966 53 030 7054, message us on WhatsApp, or send an enquiry — we reply the same business day, Sunday to Thursday." />
+   <meta property="og:description" content="Contact ZERO 2 ONE in Al Olaya, Riyadh. Call +966 53 030 7054, message us on WhatsApp, or send an enquiry — we reply the same business day." />
    <meta property="og:url" content="https://zero2one.sa/contact/" />
    <meta property="og:image" content="https://zero2one.sa/assets/images/about-us-zero2one.png" />
    <meta property="og:locale" content="en_US" />
@@ -38,7 +38,7 @@
    <!-- Twitter -->
    <meta name="twitter:card" content="summary_large_image" />
    <meta name="twitter:title" content="Contact ZERO 2 ONE — Digital Marketing Agency in Riyadh" />
-   <meta name="twitter:description" content="Contact ZERO 2 ONE in Al Olaya, Riyadh. Call +966 53 030 7054, message us on WhatsApp, or send an enquiry — we reply the same business day, Sunday to Thursday." />
+   <meta name="twitter:description" content="Contact ZERO 2 ONE in Al Olaya, Riyadh. Call +966 53 030 7054, message us on WhatsApp, or send an enquiry — we reply the same business day." />
    <meta name="twitter:image" content="https://zero2one.sa/assets/images/about-us-zero2one.png" />
 
    <!-- Breadcrumb structured data -->
@@ -51,7 +51,7 @@
    </script>
    <!-- FAQ structured data -->
    <script type="application/ld+json">
-   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How quickly do you reply?", "acceptedAnswer": {"@type": "Answer", "text": "Same business day, Sunday to Thursday, 9:00–18:00 Riyadh time. Messages that arrive over the weekend are answered on Sunday morning."}}, {"@type": "Question", "name": "What happens after I send the form?", "acceptedAnswer": {"@type": "Answer", "text": "We read it, and if anything is unclear we ask one or two questions by WhatsApp or email. Then we book a 30-minute call, free, no obligation. You leave that call with a direction whether or not you work with us."}}, {"@type": "Question", "name": "Can we meet at your office?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — 7th Floor, Computer Complex, Al Olaya, Riyadh. Message us first so we can make sure the right people are in."}}]}
+   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How quickly do you reply?", "acceptedAnswer": {"@type": "Answer", "text": "Same business day. Messages that arrive outside working days are answered on the next one."}}, {"@type": "Question", "name": "What happens after I send the form?", "acceptedAnswer": {"@type": "Answer", "text": "We read it, and if anything is unclear we ask one or two questions by WhatsApp or email. Then we book a 30-minute call, free, no obligation. You leave that call with a direction whether or not you work with us."}}, {"@type": "Question", "name": "Can we meet at your office?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — 7th Floor, Computer Complex, Al Olaya, Riyadh. Message us first so we can make sure the right people are in."}}]}
    </script>
    <link rel="preload" as="font" href="/assets/fonts/NeueMontreal-Regular.otf" type="font/otf"
       crossorigin="anonymous">
@@ -342,11 +342,11 @@
                            <div class="contact-form-col">
                               <h2 class="case-overview-label">Send an Enquiry</h2>
                               <div class="stripe"></div>
-                              <!-- Where the enquiry goes. Empty data-endpoint = compose it into a
-                                   WhatsApp message (no third-party account, nothing to expire).
-                                   To use a form service or a serverless function instead, put its
-                                   URL here and re-run tools/build_ar.py. -->
-                              <form id="contact-form" class="contact-form" data-endpoint=""
+                              <!-- Posts to /send.php (plain PHP mail() on Hostinger). The action is
+                                   also the native no-JS target: send.php answers a form
+                                   navigation with HTML instead of JSON. Clear the action to fall
+                                   back to composing a WhatsApp message instead. -->
+                              <form id="contact-form" class="contact-form" action="/send.php"
                                  method="POST" novalidate>
                                  <div class="form-grid">
                                     <div class="field-wrap">
@@ -387,7 +387,14 @@
                                           required></textarea>
                                     </div>
                                  </div>
-                                 <input type="hidden" name="_subject" value="New enquiry — zero2one.sa" />
+                                 <!-- Honeypot: bots fill it, humans never see it. A non-empty
+                                      value makes send.php answer "received" and send nothing. -->
+                                 <div class="field-honeypot" aria-hidden="true">
+                                    <label for="cf-website">Website</label>
+                                    <input id="cf-website" name="website" type="text" tabindex="-1"
+                                       autocomplete="off" />
+                                 </div>
+                                 <input type="hidden" name="lang" value="en" />
                                  <div class="form-actions">
                                     <div class="btn btn-normal">
                                        <button type="submit" class="btn-click magnetic form-btn" data-strength="18"
@@ -426,13 +433,6 @@
                                     <dd><a class="contact-value-ltr"
                                           href="mailto:info@zero2one.sa">info@zero2one.sa</a></dd>
                                  </div>
-                                 <div>
-                                    <dt>Opening hours</dt>
-                                    <dd>Sunday – Thursday, 9:00 – 18:00
-                                       <span class="contact-hours-note">Riyadh time (GMT+3). Closed Friday and
-                                          Saturday.</span>
-                                    </dd>
-                                 </div>
                               </dl>
                               <div class="contact-map">
                                  <iframe
@@ -454,7 +454,7 @@
                   <ul class="faq-list">
                      <li class="faq-item">
                         <h3 class="faq-q">How quickly do you reply?</h3>
-                        <p class="faq-a">Same business day, Sunday to Thursday, 9:00–18:00 Riyadh time. Messages that arrive over the weekend are answered on Sunday morning.</p>
+                        <p class="faq-a">Same business day. Messages that arrive outside working days are answered on the next one.</p>
                      </li>
                      <li class="faq-item">
                         <h3 class="faq-q">What happens after I send the form?</h3>
