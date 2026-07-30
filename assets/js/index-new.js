@@ -20,7 +20,7 @@ function initLoaderHome() {
   tl.timeScale(loaderSpeed);
 
   tl.set(".loading-screen", {
-    top: "0",
+    yPercent: 0,
   });
 
   if ($(window).width() > 540) {
@@ -104,7 +104,7 @@ function initLoaderHome() {
 
   tl.to(".loading-screen", {
     duration: .8,
-    top: "-100%",
+    yPercent: -100,
     ease: "Power4.easeInOut",
     delay: .2
   });
@@ -122,7 +122,7 @@ function initLoaderHome() {
   }, "=-.8");
 
   tl.set(".loading-screen", {
-    top: "calc(-100%)"
+    yPercent: -100
   });
 
   tl.set(".loading-screen .rounded-div-wrap.bottom", {
@@ -157,7 +157,7 @@ function initLoader() {
   tl.timeScale($(window).width() <= 540 ? 1.75 : 1);
 
   tl.set(".loading-screen", {
-    top: "0",
+    yPercent: 0,
   });
 
   if ($(window).width() > 540) {
@@ -191,7 +191,7 @@ function initLoader() {
 
   tl.to(".loading-screen", {
     duration: .8,
-    top: "-100%",
+    yPercent: -100,
     ease: "Power4.easeInOut",
     delay: .5
   });
@@ -209,7 +209,7 @@ function initLoader() {
   }, "=-.8");
 
   tl.set(".loading-screen", {
-    top: "calc(-100%)"
+    yPercent: -100
   });
 
   tl.set(".loading-screen .rounded-div-wrap.bottom", {
@@ -240,7 +240,7 @@ function pageTransitionIn() {
   });
 
   tl.set(".loading-screen", {
-    top: "100%"
+    yPercent: 100
   });
 
   tl.set(".loading-words", {
@@ -264,7 +264,7 @@ function pageTransitionIn() {
 
   tl.to(".loading-screen", {
     duration: .5,
-    top: "0%",
+    yPercent: 0,
     ease: "Power4.easeIn"
   });
 
@@ -296,7 +296,7 @@ function pageTransitionIn() {
 
   tl.to(".loading-screen", {
     duration: .8,
-    top: "-100%",
+    yPercent: -100,
     ease: "Power3.easeInOut"
   }, "=-.2");
 
@@ -327,7 +327,7 @@ function pageTransitionIn() {
   }
 
   tl.set(".loading-screen", {
-    top: "100%"
+    yPercent: 100
   });
 
   tl.set(".loading-words", {

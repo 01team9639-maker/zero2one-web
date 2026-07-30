@@ -78,7 +78,10 @@ main.touch .main-wrap {
    width: 100%;
    height: 100%;
    left: 0;
-   will-change: top;
+   /* The loader slides in and out on `transform`, never `top`. Animating `top`
+      moved a full-viewport element with a layout property, and every frame of
+      that counted as a layout shift — it was worth ~0.6 CLS on its own. */
+   will-change: transform;
 }
 
 .loading-screen,

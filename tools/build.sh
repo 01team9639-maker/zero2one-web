@@ -1,7 +1,7 @@
 #!/bin/sh
 # Rebuild the minified CSS bundle + JS after editing any source file.
-# NOTE: after changing a built file, bump the ?v=N stamp in the HTML
-#       (index.html + pages/projects/*.html) so caches fetch it instantly.
+# The ?v= stamps are rewritten automatically from each file's content hash
+# by tools/stamp_assets.py at the end of this script — never bump them by hand.
 # Usage:  sh tools/build.sh
 cd "$(dirname "$0")/.." || exit 1
 
@@ -27,5 +27,9 @@ npx --yes esbuild assets/js/index-new.js --minify --charset=utf8 --outfile=asset
   cat assets/js/vendor/lazyload-17.6.1.min.js;     printf '\n;\n'
   cat assets/js/vendor/locomotive-scroll.min.js;   printf '\n'
 } > assets/js/vendor.min.js
+
+# 4) re-stamp every ?v= in the HTML with a hash of the file it points at, so a
+#    changed bundle always gets a fresh URL and the 1-year cache stays correct
+python3 tools/stamp_assets.py
 
 echo "Rebuilt: bundle.min.css, i18n.min.js, index-new.min.js, vendor.min.js"
