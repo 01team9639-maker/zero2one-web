@@ -287,6 +287,52 @@ image/CDN prep — is documented in **[`tools/README.md`](tools/README.md)**.
 
 ---
 
+## Performance — what has been tried
+
+Current mobile Lighthouse: **~71-75** (was 50). CLS 0.615 -> ~0.045, TBT
+410ms -> ~200ms, initial payload 2.9 MB -> 1.6 MB. What moved the needle, and
+what did not:
+
+**Worked**
+
+| Change | Effect |
+|---|---|
+| Loader animated with `yPercent` instead of `top`/`height` | CLS 0.627 -> 0.047 — every frame of a full-viewport element moving via a layout property was a shift |
+| Logo: 352 KB SVG-wrapped PNG -> 7.6 KB WebP | the single heaviest asset on the site |
+| `loading="lazy"` on all 39 below-fold images | none had it; every card and portrait loaded up front |
+| Analytics deferred to idle / first interaction | 459 KB and most of the main-thread work off the critical path |
+| Hero as AVIF + a 1000w step | 115 KB -> 44 KB, LCP paint 1212ms -> 784ms |
+| `?v=` stamped from content hash | made a 1-year immutable cache safe |
+
+**Tried and reverted — do not retry without reading this**
+
+*Critical CSS (inline above-fold, async the rest).* It looked ideal: with JS
+disabled the loading screen covers the whole viewport, so the critical set is
+only ~8 KB and the first paint is pixel-identical without the bundle.
+
+It made things **much worse**: score 71 -> 41, **CLS 0.045 -> 1.12**. The page
+lays out its real content underneath the overlay, so when the async stylesheet
+finally applies it reflows everything. On a fast connection the shift is
+invisible (CLS stayed 0.04); under Slow 4G — the case it was meant to help —
+the stylesheet lands after content has painted and the reflow is enormous.
+
+*Stripping the unused template CSS.* PageSpeed reports "80 KiB of unused CSS",
+but that is **raw** bytes. The bundle is served with brotli at **17 KB**, so
+removing every unused rule would save roughly 11 KB over the wire — not worth
+the risk of pruning a template's stylesheet by hand.
+
+**The actual remaining lever** is `vendor.min.js`: 253 KB raw, **76 KB brotli —
+4.5x the entire stylesheet**. jQuery is ~87 KB raw of that, across 190 call
+sites in `index-new.js`. Removing it is a real refactor, and it is the only
+change left with a large effect on LCP, because the loading screen cannot lift
+until GSAP has loaded and run.
+
+Second: GA4 is loaded twice — directly via `gtag.js` (180 KB raw) *and* through
+GTM. If the GTM container already has a GA4 tag, the direct snippet can go;
+`trackLead()` in `index-new.js` would need to push to `dataLayer` instead.
+
+---
+
 ## Images & CDN
 
 Source images are heavy PNGs. `tools/optimize_images.py` generated **WebP**
