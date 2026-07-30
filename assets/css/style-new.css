@@ -5999,14 +5999,41 @@ body.lang-ar .btn-lang .btn-text-inner {
    margin-top: 2.8em;
 }
 
-/* The submit control is the site's standard outlined pill button, so it needs
-   nothing beyond neutralising the native <button> chrome. */
+/* The submit control uses the site's standard pill-button anatomy, but it is
+   also the primary action on the page and it sits on the cream background.
+   A bare .btn-normal would only give it `inset 0 0 0 1px var(--color-border)`
+   — a 17.5%-opacity hairline that all but vanishes here; that class is used
+   everywhere else on the dark footer, where the light border token applies.
+   So this one gets the solid accent treatment instead. */
 .contact-form .form-btn {
    -webkit-appearance: none;
    appearance: none;
-   background: transparent;
+   height: auto;
+   min-width: 0;
+   border-radius: 50px;
+   background: #F9460E;
+   box-shadow: 0 4px 14px rgba(249, 70, 14, .25);
    font: inherit;
    color: inherit;
+}
+
+.contact-form .form-btn .btn-text {
+   padding: 15px 38px;
+}
+
+.contact-form .form-btn .btn-text-inner {
+   font-family: 'Cairo', sans-serif;
+   font-weight: 700;
+   font-size: clamp(1em, 1.3vw, 1.1em);
+   letter-spacing: .6px;
+   color: #FFFDED;
+}
+
+/* The GSAP hover handler slides .btn-fill up on every .btn-click.magnetic.
+   Left at its default it would be the template's leftover purple, so pin it to
+   the brand dark — the cream label stays readable right through the wipe. */
+.contact-form .form-btn .btn-fill {
+   background: var(--color-dark);
 }
 
 .contact-form .form-btn[disabled] {
