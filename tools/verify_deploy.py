@@ -195,6 +195,54 @@ def check_essentials(base):
                "" if status == 200 else f"HTTP {status}")
 
 
+def check_not_public(base):
+    """Nothing outside the published site should be reachable. A Git-based
+    deploy checks the whole repository out into the web root, so this is the
+    difference between shipping a website and shipping the repository."""
+    print("\n── private paths ─────────────────────────────────────────────")
+    for path in ("/.git/config", "/.git/HEAD", "/tools/", "/tools/audit.py",
+                 "/tools/ar-dictionary.json", "/README.md", "/.gitignore"):
+        status, _, _ = fetch(base + path)
+        if status in (403, 404):
+            report(PASS, f"{path} not served", f"HTTP {status}")
+        else:
+            report(FAIL, f"{path} IS PUBLIC", f"HTTP {status} — check the deny rules in .htaccess")
+
+
+def check_form(base):
+    """Prove send.php is alive without sending mail: a deliberately invalid
+    payload must come back 422 from our own validation. A 5xx here means PHP is
+    down or the rate limiter is failing closed, which would silently reject
+    every real enquiry."""
+    print("\n── contact form ──────────────────────────────────────────────")
+    body = json.dumps({"lang": "en", "name": "x", "email": "",
+                       "service": "not-a-real-option", "message": "short"}).encode()
+    req = urllib.request.Request(base + "/send.php", data=body, method="POST", headers={
+        "User-Agent": UA, "Content-Type": "application/json",
+        "Accept": "application/json", "Origin": base,
+    })
+    opener = urllib.request.build_opener(urllib.request.HTTPSHandler(context=CTX))
+    try:
+        with opener.open(req, timeout=TIMEOUT) as r:
+            status, payload = r.status, r.read().decode("utf-8", "replace")
+    except urllib.error.HTTPError as e:
+        status, payload = e.code, e.read().decode("utf-8", "replace")
+    except Exception as e:
+        report(FAIL, "send.php unreachable", str(e))
+        return
+
+    if status == 422:
+        report(PASS, "send.php validates and rejects bad input", "HTTP 422")
+    elif status == 503:
+        report(FAIL, "send.php rate limiter is failing closed",
+               "HTTP 503 — it cannot write its state directory, so EVERY enquiry "
+               "is being rejected. Check the PHP user can write beside public_html.")
+    elif status in (200, 405) and "<?php" in payload:
+        report(FAIL, "send.php is served as text, not executed", "PHP is not running")
+    else:
+        report(FAIL, f"send.php answered HTTP {status}", payload[:160])
+
+
 def main():
     base = base_url()
     print("=" * 62)
@@ -206,6 +254,8 @@ def main():
     if urls:
         check_pages(base, urls)
     check_essentials(base)
+    check_not_public(base)
+    check_form(base)
 
     print("\n" + "=" * 62)
     print(f"{COUNTS[PASS]} ok · {COUNTS[WARN]} warning · {COUNTS[FAIL]} failure")

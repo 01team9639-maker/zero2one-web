@@ -138,7 +138,7 @@ What the handler enforces:
 | Header injection | CR/LF and control characters stripped from every header value |
 | Honeypot | off-screen `website` field; a filled value gets a fake success and sends nothing |
 | CSRF | `Origin` allow-list + `Sec-Fetch-Site` check |
-| Rate limiting | 30 s per IP, plus 5/min · 30/hour · 100/day on the mailbox. State is atomic (`flock` + atomic rename), lives **outside** the document root at `0600`, stores only HMAC'd IP fingerprints, and **fails closed** |
+| Rate limiting | 30 s per IP, plus 5/min · 30/hour · 100/day on the mailbox. State is atomic (`flock` + atomic rename), lives **outside** the document root at `0600`, and stores only HMAC'd IP fingerprints. It prefers a private directory beside `public_html` and falls back to the system temp dir if the PHP user cannot write there — otherwise the limiter fails closed and rejects every enquiry |
 | Encoding | RFC 2047 subjects, RFC 5322 display names, base64 UTF-8 body — Arabic round-trips intact |
 
 ### Keeping the whitelist honest
@@ -317,6 +317,31 @@ Regenerate anytime: `python3 tools/optimize_images.py --png`
 
 ## Deployment
 
+Two supported routes. **Either way, run `tools/verify_deploy.py` afterwards.**
+
+### A. Hostinger ⇄ GitHub sync (recommended)
+
+hPanel → *Website* → *GIT* → point it at this repository, branch `main`,
+directory `public_html`, then *Deploy*. Pushing to `main` is the deploy.
+
+The repository is public, so **use the plain HTTPS URL with no credentials in
+it** — Hostinger needs none to pull, and a tokenised URL would be written into
+`public_html/.git/config` on the server.
+
+Everything the site needs is committed — the minified bundles, `sitemap.xml`,
+the `/ar/` tree, the redirect stubs and `send.php`. There is no build step on
+the server; run `tools/build.sh` and `tools/build_ar.py` locally and commit the
+result.
+
+> **Why the deny rules at the top of `.htaccess` matter.** A Git deploy checks
+> out the *whole repository* into the web root, so without them
+> `zero2one.sa/tools/…`, `/README.md` and — worst — `/.git/config` would all be
+> served. Those paths return 404, and `verify_deploy.py` asserts it on every
+> run. `/.well-known/` is deliberately left reachable so Let's Encrypt can
+> renew the certificate.
+
+### B. Direct upload
+
 ```bash
 sh tools/deploy.sh            # dry run — shows exactly what would change
 sh tools/deploy.sh --live     # upload, then verify the live site
@@ -340,7 +365,11 @@ It hits the live site and reports, in one pass:
   covering because `.htaccess` did not upload, **`FAIL`** the URL is dead;
 - every page in `sitemap.xml` returns 200 with a self-referencing canonical and
   the right `<html lang>`;
-- `robots.txt`, `llms.txt` and the CSS/JS bundles are reachable.
+- `robots.txt`, `llms.txt` and the CSS/JS bundles are reachable;
+- `/.git/config`, `/tools/…` and `/README.md` are **not** served;
+- `send.php` is executing — it posts deliberately invalid input and expects a
+  `422` back. A `503` there means the rate limiter cannot write its state and is
+  failing closed, i.e. every real enquiry is being rejected.
 
 Exit code is the number of failures, so it drops straight into CI.
 

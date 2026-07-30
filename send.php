@@ -201,8 +201,31 @@ function rate_state_directory(string $recipient): string {
         }
         return $configured;
     }
+
     $namespace = substr(hash('sha256', __DIR__ . "\0" . $recipient), 0, 24);
-    return dirname(__DIR__) . '/.z2o-rate-' . $namespace;
+
+    // Preferred: a private directory alongside the document root. On some hosts
+    // the parent is not writable by the PHP user, and the limiter fails closed —
+    // which would reject every enquiry rather than let one through unmetered.
+    // The system temp directory is the fallback: still outside the web root,
+    // still 0700/0600, still HMAC-keyed. Worst case a temp sweep resets the
+    // counters, which for a rate limiter is an acceptable trade against an
+    // outage on the contact form.
+    $candidates = [
+        dirname(__DIR__) . '/.z2o-rate-' . $namespace,
+        rtrim(sys_get_temp_dir(), '/') . '/.z2o-rate-' . $namespace,
+    ];
+
+    $lastError = null;
+    foreach ($candidates as $directory) {
+        try {
+            rate_secure_directory($directory);
+            return $directory;
+        } catch (Throwable $e) {
+            $lastError = $e;
+        }
+    }
+    throw new RuntimeException('No usable rate-limit state directory.', 0, $lastError);
 }
 
 function rate_path_within(string $path, string $root): bool {
@@ -525,6 +548,19 @@ if ($fetchSite === 'cross-site') {
 $origin = trim((string) ($_SERVER['HTTP_ORIGIN'] ?? ''));
 if ($origin !== '') {
     $allowedOrigins = $ALLOWED_ORIGINS;
+
+    // The host the request actually arrived on is always a valid origin — that
+    // is precisely what "same-origin" means, so allowing it does not weaken the
+    // cross-origin guard. It keeps the form working on Hostinger's temporary
+    // domain, on a staging host, and on www/apex, without needing the list
+    // above to be edited for each one.
+    $selfHost = strtolower(trim((string) ($_SERVER['HTTP_HOST'] ?? '')));
+    if ($selfHost !== '' && preg_match('/^[a-z0-9.\-:\[\]]+$/', $selfHost) === 1) {
+        $https = (!empty($_SERVER['HTTPS']) && strtolower((string) $_SERVER['HTTPS']) !== 'off')
+            || strtolower((string) ($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '')) === 'https';
+        $allowedOrigins[] = ($https ? 'https://' : 'http://') . $selfHost;
+    }
+
     $testOrigin = getenv('Z2O_TEST_ALLOWED_ORIGIN');
     if (PHP_SAPI === 'cli-server' && is_string($testOrigin) && $testOrigin !== '') {
         $allowedOrigins[] = $testOrigin;

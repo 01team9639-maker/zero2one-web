@@ -15,6 +15,27 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
+    # ----------------------------------------------------------------
+    #  0) Serve nothing that is not part of the published site.
+    #
+    #     Hostinger's GitHub sync checks the WHOLE repository out into
+    #     public_html, so without this the audit toolkit, the READMEs and the
+    #     .git directory are all reachable over HTTP. .git is the dangerous
+    #     one: .git/config carries the remote URL, and any credentials
+    #     embedded in it, in plain text.
+    #
+    #     404 rather than 403, so these paths do not advertise that they exist.
+    # ----------------------------------------------------------------
+    RewriteRule ^(\.git|\.github|tools|node_modules)(/|$)  - [R=404,L]
+
+    #  Dotfiles (.gitignore, .mcp.json, .env …) — but NEVER /.well-known/,
+    #  which Let's Encrypt uses to renew the SSL certificate.
+    RewriteCond %{REQUEST_URI} !^/\.well-known/
+    RewriteRule (^|/)\.[^/]+$                              - [R=404,L]
+
+    #  Source and docs that happen to sit in the web root
+    RewriteRule \.(md|py|sh|lock)$                         - [R=404,L]
+
     # a) drop a trailing index.html from any directory URL
     RewriteCond %{THE_REQUEST} \s/+(?:[^\s?]*/)?index\.html[\s?]
     RewriteRule ^(.*/)?index\.html$ /$1 [R=301,L]
