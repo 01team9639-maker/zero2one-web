@@ -1211,7 +1211,7 @@ function initContactForm() {
     contactForm.addEventListener('submit', async function (e) {
       e.preventDefault();
 
-      const submitBtn = contactForm.querySelector('.form-btn');
+      const submitBtn = contactForm.querySelector('.contact-submit');
       // The submit control is the site's standard round-pill button, so the
       // visible label lives in .btn-text-inner rather than on the element.
       const label = submitBtn.querySelector('.btn-text-inner') || submitBtn;

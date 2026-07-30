@@ -6005,7 +6005,7 @@ body.lang-ar .btn-lang .btn-text-inner {
    — a 17.5%-opacity hairline that all but vanishes here; that class is used
    everywhere else on the dark footer, where the light border token applies.
    So this one gets the solid accent treatment instead. */
-.contact-form .form-btn {
+.contact-form .contact-submit {
    -webkit-appearance: none;
    appearance: none;
    height: auto;
@@ -6017,11 +6017,11 @@ body.lang-ar .btn-lang .btn-text-inner {
    color: inherit;
 }
 
-.contact-form .form-btn .btn-text {
+.contact-form .contact-submit .btn-text {
    padding: 15px 38px;
 }
 
-.contact-form .form-btn .btn-text-inner {
+.contact-form .contact-submit .btn-text-inner {
    font-family: 'Cairo', sans-serif;
    font-weight: 700;
    font-size: clamp(1em, 1.3vw, 1.1em);
@@ -6032,11 +6032,11 @@ body.lang-ar .btn-lang .btn-text-inner {
 /* The GSAP hover handler slides .btn-fill up on every .btn-click.magnetic.
    Left at its default it would be the template's leftover purple, so pin it to
    the brand dark — the cream label stays readable right through the wipe. */
-.contact-form .form-btn .btn-fill {
+.contact-form .contact-submit .btn-fill {
    background: var(--color-dark);
 }
 
-.contact-form .form-btn[disabled] {
+.contact-form .contact-submit[disabled] {
    cursor: progress;
 }
 

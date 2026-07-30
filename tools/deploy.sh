@@ -38,6 +38,7 @@ REMOTE_DIR="${Z2O_REMOTE_DIR:-public_html}"
 echo "==> Pre-flight"
 python3 tools/build_redirects.py --check
 python3 tools/build_form.py --check
+python3 tools/check_css_collisions.py >/dev/null && echo "  no CSS class collisions"
 python3 tools/build_ar.py --check  >/dev/null && echo "  Arabic tree builds clean"
 python3 tools/audit.py             >/dev/null && echo "  audit: 0 errors"
 python3 tools/check_links.py --internal-only >/dev/null && echo "  links: none broken"
