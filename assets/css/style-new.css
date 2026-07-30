@@ -1597,7 +1597,7 @@ main.touch .main-wrap {
 }
 
 /* Service cards */
-.our-services .services-cards {
+.services-cards {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    grid-auto-rows: 1fr;
@@ -1792,13 +1792,13 @@ main.touch .main-wrap {
 }
 
 @media screen and (max-width: 980px) {
-   .our-services .services-cards {
+   .services-cards {
       grid-template-columns: repeat(2, 1fr);
    }
 }
 
 @media screen and (max-width: 600px) {
-   .our-services .services-cards {
+   .services-cards {
       grid-template-columns: 1fr;
       max-width: 26em;
       margin-left: auto;
@@ -5592,7 +5592,7 @@ body.lang-ar .footer-case-wrap .next-case-cta .next-case-cta-arrow {
    }
 
    /* slightly smaller card grids */
-   .our-services .services-cards,
+   .services-cards,
    .testimonials .testi-cards {
       max-width: 86%;
       margin-left: auto;
@@ -5628,7 +5628,7 @@ body.lang-ar .footer-case-wrap .next-case-cta .next-case-cta-arrow {
 @media screen and (max-width: 540px) {
 
    /* Service cards: horizontal layout like testimonials — image right, text left, no secondary text */
-   .our-services .services-cards {
+   .services-cards {
       max-width: 24em;
       grid-auto-rows: auto;
    }
@@ -6115,6 +6115,32 @@ body.lang-ar .btn-lang .btn-text-inner {
    margin-top: 2.6em;
 }
 
+/* Two columns side by side, stacking on narrow screens — used for the paired
+   sections on /about/ (How We Work · Who We Work With) and /services/
+   (How An Engagement Runs · What You Get Either Way).
+
+   This is the counterpart to .case-intro-bottom, which stacks the same two
+   blocks vertically on the service detail pages; keep both. */
+.case-intro-split .row {
+   display: grid;
+   grid-template-columns: repeat(2, minmax(0, 1fr));
+   gap: clamp(2em, 5vw, 5em);
+   align-items: start;
+}
+
+.case-intro-split .row .flex-col {
+   width: 100%;
+   max-width: 42em;
+   margin: 0;
+}
+
+@media screen and (max-width: 860px) {
+   .case-intro-split .row {
+      grid-template-columns: minmax(0, 1fr);
+      gap: clamp(2.25em, 7vw, 3.25em);
+   }
+}
+
 /* "which service do you need" pairs: question above, service below */
 .case-include-item .case-include-link {
    display: inline-block;
@@ -6273,8 +6299,8 @@ body.lang-ar .footer-contacts {
    /* Service & testimonial cards keep their English horizontal layout
       (cream text panel on the left, image on the right); only the text is Arabic.
       Without this, RTL moves the text panel over the right-anchored image. */
-   body.lang-ar .our-services .service-card,
-   body.lang-ar .our-services .service-card-body,
+   body.lang-ar .service-card,
+   body.lang-ar .service-card-body,
    body.lang-ar .testimonials .testi-card,
    body.lang-ar .testimonials .testi-card-body {
       direction: ltr;
