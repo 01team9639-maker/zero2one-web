@@ -303,6 +303,7 @@ what did not:
 | Analytics deferred to idle / first interaction | 459 KB and most of the main-thread work off the critical path |
 | Hero as AVIF + a 1000w step | 115 KB -> 44 KB, LCP paint 1212ms -> 784ms |
 | `?v=` stamped from content hash | made a 1-year immutable cache safe |
+| jQuery replaced by a tested 18-method shim (`assets/js/dom.js`) | vendor bundle 253 KB -> 168 KB, score 73-75 -> 75-78, SI 3.6s -> 3.2s. 157 call sites untouched |
 | Deferred `<script>`s moved from end-of-body into `<head>` | score 66 -> 75, TBT 340ms -> ~0ms. `defer` still holds execution until parsing is done and keeps the order; only the *download* starts earlier, instead of after the browser has parsed 70 KB of HTML |
 
 **Tried and reverted — do not retry without reading this**
@@ -330,7 +331,20 @@ but that is **raw** bytes. The bundle is served with brotli at **17 KB**, so
 removing every unused rule would save roughly 11 KB over the wire — not worth
 the risk of pruning a template's stylesheet by hand.
 
-**The actual remaining lever** is `vendor.min.js`: 253 KB raw, **76 KB brotli —
+*Making locomotive-scroll desktop-only.* On mobile it is already switched off
+(`smartphone: { smooth: false }`) — verified in the browser: `has-scroll-smooth`
+is absent, so there is no smooth scrolling and no parallax there. It looked like
+46 KB of dead weight on exactly the profile PageSpeed grades.
+
+It is not a leaf dependency. `initSmoothScroll()` registers
+`ScrollTrigger.scrollerProxy('[data-scroll-container]', …)` and then
+`ScrollTrigger.defaults({ scroller: '[data-scroll-container]' })`, so **every
+scroll-driven animation on the site is routed through locomotive**, plus 30
+calls on the instance (`stop`/`start`/`update`/`scrollTo`/`destroy`). Removing
+it means rebuilding the scroll system, not deleting a library — for ~15 KB
+brotli and perhaps a point or two. Not worth it; left in place deliberately.
+
+**The remaining lever** is the rest of `vendor.min.js`: 253 KB raw, **76 KB brotli —
 4.5x the entire stylesheet**. jQuery is ~87 KB raw of that, across 190 call
 sites in `index-new.js`. Removing it is a real refactor, and it is the only
 change left with a large effect on LCP, because the loading screen cannot lift
@@ -442,3 +456,31 @@ three layers above. Recommended settings:
 - enable Brotli/Gzip for HTML/CSS/JS,
 - enable image auto-format (see above),
 - serve over HTTPS (canonical URLs are `https://`).
+
+---
+
+## Rolling back
+
+Every state that has been live is tagged. To put the site back exactly as it
+was before the JavaScript slimming work:
+
+```bash
+git checkout stable-2026-07-31 -- .
+git commit -m "Roll back to stable-2026-07-31"
+git push origin main          # Hostinger's GitHub sync redeploys it
+python3 tools/verify_deploy.py
+```
+
+`stable-2026-07-31` is the last state before `assets/js/dom.js` replaced
+jQuery: mobile Lighthouse 73-75, CLS 0.05, TBT ~0ms, all audits clean.
+
+Before shipping any change that touches the front-end JavaScript, capture a
+visual baseline first — this codebase breaks silently, and no audit catches it:
+
+```bash
+npm install                        # playwright + sharp, once
+node tools/visual_check.js --baseline
+#   …make the change, rebuild…
+node tools/visual_check.js         # pixel diff, 20 pages x 2 viewports
+node tools/test_dom.js             # the jQuery-shim semantics
+```
