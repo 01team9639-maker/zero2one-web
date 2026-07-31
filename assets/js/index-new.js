@@ -16,7 +16,7 @@ function initLoaderHome() {
 
   // On phones, play the whole intro ~3x faster so the content (LCP)
   // is revealed quickly on slow connections; desktop keeps the full intro.
-  var loaderSpeed = $(window).width() <= 540 ? 3 : 1;
+  var loaderSpeed = window.innerWidth <= 540 ? 3 : 1;
   tl.timeScale(loaderSpeed);
 
   tl.set(".loading-screen", {

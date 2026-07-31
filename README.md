@@ -303,6 +303,7 @@ what did not:
 | Analytics deferred to idle / first interaction | 459 KB and most of the main-thread work off the critical path |
 | Hero as AVIF + a 1000w step | 115 KB -> 44 KB, LCP paint 1212ms -> 784ms |
 | `?v=` stamped from content hash | made a 1-year immutable cache safe |
+| Deferred `<script>`s moved from end-of-body into `<head>` | score 66 -> 75, TBT 340ms -> ~0ms. `defer` still holds execution until parsing is done and keeps the order; only the *download* starts earlier, instead of after the browser has parsed 70 KB of HTML |
 
 **Tried and reverted — do not retry without reading this**
 
@@ -315,6 +316,14 @@ lays out its real content underneath the overlay, so when the async stylesheet
 finally applies it reflows everything. On a fast connection the shift is
 invisible (CLS stayed 0.04); under Slow 4G — the case it was meant to help —
 the stylesheet lands after content has painted and the reflow is enormous.
+
+*Starting the intro before the heavy init.* `once()` runs
+`initSmoothScroll()` and `initScript()` — every ScrollTrigger, magnetic button
+and card tilt on the page — before the first frame of the intro, and the intro
+is what reveals the LCP element. Moving `initLoader()` to the front of `once()`
+looked free. It is not: the curtain then never lifts at all (verified — it sits
+at `y=0` past four seconds, with no JS error). The intro depends on that setup
+having run. Reverted.
 
 *Stripping the unused template CSS.* PageSpeed reports "80 KiB of unused CSS",
 but that is **raw** bytes. The bundle is served with brotli at **17 KB**, so

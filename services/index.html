@@ -89,6 +89,14 @@
       })();
    </script>
 
+
+
+   <!-- Deferred, so execution still waits for parsing and stays in
+        order — only the download starts earlier, instead of after the
+        browser has parsed the whole document. -->
+   <script defer src="/assets/js/vendor.min.js?v=f76d9f4f"></script>
+   <script defer src="/assets/js/i18n.min.js?v=54304f96"></script>
+   <script defer src="/assets/js/index-new.min.js?v=41090a5c"></script>
 </head>
 
 <body data-barba="wrapper">
@@ -916,9 +924,6 @@
             </div>
         </div>
     </main>
-    <script defer src="/assets/js/vendor.min.js?v=f76d9f4f"></script>
-    <script defer src="/assets/js/i18n.min.js?v=54304f96"></script>
-    <script defer src="/assets/js/index-new.min.js?v=fdafa6b5"></script>
 </body>
 
 </html>
