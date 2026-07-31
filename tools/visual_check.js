@@ -48,10 +48,10 @@ const MASK = ['.big-name', '.contact-map', '#timeSpan',
   '#contact-form select', '#contact-form textarea', '#contact-form input'];
 
 const PAGES = [
-  '/', '/about/', '/work/', '/contact/', '/services/',
+  '/', '/about/', '/contact/', '/services/',
   '/services/web-design-riyadh/', '/services/seo-riyadh/', '/services/digital-advertising/',
   '/services/brand-identity/', '/services/social-media-management/', '/services/ecommerce-development/',
-  '/ar/', '/ar/about/', '/ar/work/', '/ar/contact/', '/ar/services/',
+  '/ar/', '/ar/about/', '/ar/contact/', '/ar/services/',
   '/ar/services/web-design-riyadh/', '/ar/services/seo-riyadh/', '/ar/services/digital-advertising/',
   '/ar/services/brand-identity/', '/ar/services/social-media-management/', '/ar/services/ecommerce-development/',
 ];
