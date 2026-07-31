@@ -33,8 +33,9 @@
     RewriteCond %{REQUEST_URI} !^/\.well-known/
     RewriteRule (^|/)\.[^/]+$                              - [R=404,L]
 
-    #  Source and docs that happen to sit in the web root
+    #  Source, docs and tooling manifests that sit in the web root
     RewriteRule \.(md|py|sh|lock)$                         - [R=404,L]
+    RewriteRule ^(package\.json|package-lock\.json)$        - [R=404,L]
 
     # a) drop a trailing index.html from any directory URL
     RewriteCond %{THE_REQUEST} \s/+(?:[^\s?]*/)?index\.html[\s?]

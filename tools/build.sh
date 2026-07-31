@@ -14,12 +14,15 @@ cat assets/css/normalize.css \
   | npx --yes esbuild --loader=css --minify --charset=utf8 > assets/css/bundle.min.css
 
 # 2) site JS
+npx --yes esbuild assets/js/dom.js       --minify --charset=utf8 --outfile=assets/js/dom.min.js
 npx --yes esbuild assets/js/i18n.js      --minify --charset=utf8 --outfile=assets/js/i18n.min.js
 npx --yes esbuild assets/js/index-new.js --minify --charset=utf8 --outfile=assets/js/index-new.min.js
 
 # 3) vendor bundle (exact library load order; sources in assets/js/vendor/)
 {
-  cat assets/js/vendor/jquery-3.5.1.min.js;        printf '\n;\n'
+  # our own 5 KB jQuery subset (assets/js/dom.js) in place of jQuery's 87 KB —
+  # see the header of that file for why, and tools/test_dom.js for the tests
+  cat assets/js/dom.min.js;                        printf '\n;\n'
   cat assets/js/vendor/js.cookie-2.2.0.min.js;     printf '\n;\n'
   cat assets/js/vendor/gsap-3.9.1.min.js;          printf '\n;\n'
   cat assets/js/vendor/ScrollTrigger-3.9.1.min.js; printf '\n;\n'

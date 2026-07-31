@@ -1,0 +1,14 @@
+{
+  "name": "zero2one-web",
+  "private": true,
+  "description": "Tooling for the ZERO 2 ONE site. The site itself is static and needs none of this at runtime.",
+  "scripts": {
+    "build": "sh tools/build.sh",
+    "visual:baseline": "node tools/visual_check.js --baseline",
+    "visual:check": "node tools/visual_check.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.49.0",
+    "sharp": "^0.33.0"
+  }
+}
