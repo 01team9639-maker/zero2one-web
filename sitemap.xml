@@ -74,6 +74,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://zero2one.sa/services/" />
   </url>
   <url>
+    <loc>https://zero2one.sa/work/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/work/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zero2one.sa/ar/work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zero2one.sa/work/" />
+  </url>
+  <url>
+    <loc>https://zero2one.sa/ar/work/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/work/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zero2one.sa/ar/work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zero2one.sa/work/" />
+  </url>
+  <url>
     <loc>https://zero2one.sa/services/brand-identity/</loc>
     <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
