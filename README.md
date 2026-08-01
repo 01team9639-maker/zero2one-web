@@ -272,6 +272,23 @@ python3 tools/geo_audit.py      # GEO / AEO / AIO readiness  (verdict: EXCELLENT
 python3 tools/check_links.py    # broken-link report
 ```
 
+### Provenance guard
+
+`python3 tools/check_provenance.py` refuses to let anything belonging to a
+different project ship. It runs first in the `tools/deploy.sh` pre-flight.
+
+It exists because this class of bug got through three times: a Formspree
+endpoint on a personal account, personal names in the markup, and — found
+2026-08-01 — a Google Maps link on **all 20 pages** that pointed at *أصول
+لاستعادة البيانات*, a data-recovery company from an earlier project. For months
+every page told Google and every visitor that our office was their office.
+
+The rule that catches the *next* one: any Google Maps URL encoding a specific
+business listing (`place/data=!…`, `?cid=…`, `maps.app.goo.gl/…`) fails the
+check unless it is listed in `ALLOWED_MAPS`. Those IDs are opaque — no reviewer
+can tell a right one from a wrong one by looking, so the guard forces somebody
+to open the link and vouch for it. Address *searches* pass freely.
+
 The full toolkit — audits, link check, robots validator, sitemap generator,
 image/CDN prep — is documented in **[`tools/README.md`](tools/README.md)**.
 
@@ -280,10 +297,10 @@ image/CDN prep — is documented in **[`tools/README.md`](tools/README.md)**.
 | Item | Where | Note |
 |------|-------|------|
 | **Domain** | canonical / `og:url` / `sitemap.xml` / `robots.txt` | Currently assumes `https://zero2one.sa`. If the real domain differs, re-run `tools/generate_sitemap.py --base https://REAL_DOMAIN` and update the `<head>` URLs. |
-| **Map coordinates** | `LocalBusiness` schema | `hasMap` points at the Google Maps place. No `geo` pair and no opening hours are published — deliberately, they were not confirmed. |
-| **Contact form** | `data-endpoint` on `#contact-form` in `contact/index.html` | Empty by default — the enquiry is composed into a WhatsApp message, so it works with no third-party account. To collect submissions by email instead, put a form-service or serverless URL there (must accept a JSON `POST`) and re-run `tools/build_ar.py`. |
+| **Google Business Profile** | — | **Not registered yet (confirmed 2026-08-01).** This is the single biggest lever left for local search: the Map Pack, the knowledge panel and "near me" results are all driven by it, and no amount of on-page markup substitutes. Register at business.google.com, verify the Al Olaya address, then come back and do the row below. |
+| **Map link / coordinates** | footer + `/contact/` anchors, `LocalBusiness` schema | Anchors point at a Google Maps *search* for our published address — deliberately, not at a business listing. `hasMap` and `geo` are absent because we have no verified listing to point them at. Once the Business Profile above exists: add its share URL to `ALLOWED_MAPS` in `tools/check_provenance.py`, set `hasMap` to it, and read the real lat/long off the pin for `geo`. **Never fabricate coordinates** — a wrong pin is worse than none. |
+| **Contact form** | `action="/send.php"` on `#contact-form` | Posts to our own PHP handler; falls back to a composed WhatsApp message if the POST fails. Needs PHP `mail()` working on the host — verify with `sh tools/test_send.sh` after deploy. |
 | **Search Console** | — | Submit `sitemap.xml`, and use *URL Inspection* to re-crawl the six moved service URLs. Watch *Pages → Redirect* to confirm the 301s are seen. |
-| **Share image** | `og:image` | Uses `assets/images/about-us-zero2one.png` (portrait). A dedicated 1200×630 landscape image is recommended. |
 
 ---
 

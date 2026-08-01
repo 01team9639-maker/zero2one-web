@@ -24,6 +24,7 @@ python3 tools/optimize_images.py --png
 | [`check_links.py`](check_links.py) | Internal + external link checker (404 / redirect / blocked) |
 | [`check_robots.py`](check_robots.py) | robots.txt mistakes that hurt SEO |
 | [`check_css_collisions.py`](check_css_collisions.py) | Classes we author that the purchased template already defines — the silent layout-wrecker that made the contact submit button render 0px wide |
+| [`check_provenance.py`](check_provenance.py) | Artefacts belonging to somebody else — the previous project's domain / phone / Google Maps listing, third-party form endpoints, personal names. Also fails any Maps link that asserts a specific business listing unless it is vouched for in `ALLOWED_MAPS`. Runs first in the `deploy.sh` pre-flight |
 | [`verify_deploy.py`](verify_deploy.py) | **Run after every upload.** Checks the *live* site: are the retired URLs still 301ing, did `.htaccess` actually upload, is every sitemap URL reachable with a self-referencing canonical |
 | [`test_send.sh`](test_send.sh) | 22-case test suite for `send.php` — validation, `<select>` whitelist, header injection, honeypot, CSRF, rate limiting, UTF-8 mail composition. Uses local `php`, or Docker if there is none |
 

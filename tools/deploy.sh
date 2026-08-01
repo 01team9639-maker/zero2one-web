@@ -36,6 +36,7 @@ REMOTE_DIR="${Z2O_REMOTE_DIR:-public_html}"
 
 # --- 1) make sure what we are about to ship is internally consistent ---------
 echo "==> Pre-flight"
+python3 tools/check_provenance.py
 python3 tools/build_redirects.py --check
 python3 tools/build_form.py --check
 python3 tools/check_css_collisions.py >/dev/null && echo "  no CSS class collisions"
