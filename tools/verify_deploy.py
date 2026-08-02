@@ -36,6 +36,7 @@ import os
 import re
 import ssl
 import sys
+import time
 import urllib.error
 import urllib.request
 from xml.dom import minidom
@@ -55,23 +56,87 @@ class NoRedirect(urllib.request.HTTPRedirectHandler):
         return None
 
 
+# Shared hosting throttles bursts. Without a pace, this script fires ~60
+# requests in a couple of seconds and Hostinger starts answering with a
+# generic page that carries no Location header — which reads exactly like a
+# missing redirect. That false alarm has now fooled two separate audits: a
+# third-party report called our sitemap broken, and this script reported all
+# eight /pages/ redirects dead while every one of them worked when fetched by
+# hand. A checker that cries wolf gets ignored, and then a real failure slips
+# through — so pace the requests and retry once before believing a miss.
+PACE = 0.35     # seconds between requests
+RETRIES = 2     # extra attempts when a response looks throttled
+_last_call = [0.0]
+
+
+class Headers(dict):
+    """Case-insensitive header lookup.
+
+    HTTP/2 sends header names lower-cased. Hostinger serves over HTTP/2, so a
+    redirect arrives as `location: …` while this script asked for `Location`.
+    `dict(r.headers)` throws away the case-insensitivity that
+    `http.client.HTTPMessage` provides, so every redirect check read as a
+    301 with no target — eight of them, all of which worked perfectly when
+    fetched by hand. Keep the original keys for display, match on the fold.
+    """
+
+    def __init__(self, pairs):
+        super().__init__(pairs)
+        self._fold = {k.lower(): v for k, v in self.items()}
+
+    def get(self, key, default=None):
+        return self._fold.get(key.lower(), default)
+
+    def __contains__(self, key):
+        return key.lower() in self._fold
+
+    def __getitem__(self, key):
+        return self._fold[key.lower()]
+
+
+def _throttled(status, headers, follow):
+    """Does this response look like rate limiting rather than a real answer?"""
+    if status in (429, 503):
+        return True
+    # Server claims a redirect but names no target — either throttling or a
+    # truncated response. Worth one more try before believing it.
+    if status and 300 <= status < 400 and "Location" not in headers:
+        return True
+    return False
+
+
 def fetch(url, follow=True):
     """-> (status, headers, body_text). Never raises for HTTP status codes."""
     handlers = [] if follow else [NoRedirect()]
     opener = urllib.request.build_opener(urllib.request.HTTPSHandler(context=CTX), *handlers)
     req = urllib.request.Request(url, headers={"User-Agent": UA})
-    try:
-        with opener.open(req, timeout=TIMEOUT) as r:
-            return r.status, dict(r.headers), r.read().decode("utf-8", "replace")
-    except urllib.error.HTTPError as e:
-        body = ""
+
+    result = (None, {}, "")
+    for attempt in range(RETRIES + 1):
+        gap = time.monotonic() - _last_call[0]
+        if gap < PACE:
+            time.sleep(PACE - gap)
+        # back off progressively once we suspect throttling
+        if attempt:
+            time.sleep(PACE * 4 * attempt)
+        _last_call[0] = time.monotonic()
+
         try:
-            body = e.read().decode("utf-8", "replace")
-        except Exception:
-            pass
-        return e.code, dict(e.headers or {}), body
-    except Exception as e:
-        return None, {}, str(e)
+            with opener.open(req, timeout=TIMEOUT) as r:
+                result = (r.status, Headers(r.headers.items()), r.read().decode("utf-8", "replace"))
+        except urllib.error.HTTPError as e:
+            body = ""
+            try:
+                body = e.read().decode("utf-8", "replace")
+            except Exception:
+                pass
+            result = (e.code, Headers((e.headers or {}).items()), body)
+        except Exception as e:
+            result = (None, {}, str(e))
+
+        if not _throttled(result[0], result[1], follow):
+            break
+    return result
 
 
 def report(level, what, detail=""):
