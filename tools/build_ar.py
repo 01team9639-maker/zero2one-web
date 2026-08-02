@@ -48,6 +48,7 @@ PAGES += [("services/index.html", "ar/services/index.html", "/services/")]
 PAGES += [(f"services/{s}/index.html", f"ar/services/{s}/index.html", f"/services/{s}/")
           for s in SERVICE_SLUGS]
 PAGES += [("about/index.html", "ar/about/index.html", "/about/"),
+          ("work/index.html", "ar/work/index.html", "/work/"),
           ("contact/index.html", "ar/contact/index.html", "/contact/")]
 
 # ---------------------------------------------------------------- Arabic <head>
@@ -87,6 +88,11 @@ AR_META = {
     "/about/": {
         "title": "من نحن — شركة تسويق رقمي في الرياض | زيرو تو ون",
         "description": "زيرو تو ون شركة نمو رقمي سعودية مقرّها العليا في الرياض. الاستراتيجية قبل التصميم، نظام واحد متكامل بدل خدمات متفرّقة، وتقارير تُقرأ في خمس دقائق.",
+    },
+    "/work/": {
+        "title": "أعمالنا — مشاريع تسويق رقمي في الرياض | زيرو تو ون",
+        "description": "أعمال في الهوية التجارية وتصميم المواقع وإدارة الحملات الإعلانية لشركات في الرياض — ما الذي كان معطّلاً، وماذا بنينا، وماذا قال العملاء بعدها.",
+        "keywords": "أعمال شركة تسويق رقمي بالرياض, معرض أعمال تسويق, دراسات حالة تسويق السعودية, مشاريع هوية تجارية الرياض, إعادة تصميم موقع الرياض",
     },
     "/contact/": {
         "title": "تواصل معنا — شركة تسويق رقمي في الرياض | زيرو تو ون",
@@ -211,10 +217,10 @@ def _translate_chunk(chunk, tr):
         hit = tr.text(raw)
         if not hit:
             return m.group(0)
-        # Preserve the original node's surrounding whitespace. The dictionary is
-        # keyed on normalised text, so without this a node like
-        # " — Brands Built in Riyadh" comes back with its leading space eaten and
-        # runs straight into the preceding element.
+        # Preserve the leading/trailing whitespace of the original node. The
+        # dictionary is keyed on normalised text, so without this a node like
+        # " — Brands Built in Riyadh" comes back with its leading space eaten
+        # and runs straight into the preceding element.
         lead = ' ' if raw[:1].isspace() else ''
         trail = ' ' if raw[-1:].isspace() else ''
         return '>' + lead + hit + trail + '<'
@@ -232,7 +238,8 @@ def ar_links(html):
              ('href="/#', 'href="/ar/#'),
              ('href="/about/"', 'href="/ar/about/"'),
              ('href="/contact/"', 'href="/ar/contact/"'),
-             ('href="/services/"', 'href="/ar/services/"')]
+             ('href="/services/"', 'href="/ar/services/"'),
+             ('href="/work/"', 'href="/ar/work/"')]
     rules += [(f'href="/services/{s}/"', f'href="/ar/services/{s}/"') for s in SERVICE_SLUGS]
     for a, b in rules:
         html = html.replace(a, b)
