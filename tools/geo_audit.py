@@ -32,6 +32,7 @@ import os
 import sys
 import glob
 import json
+import re
 from html.parser import HTMLParser
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -126,6 +127,43 @@ def discover_pages():
     return sorted(set(pages))
 
 
+def is_noindex_404(page, parsed):
+    """A noindex 404 is an error document, not GEO/AEO content."""
+    directives = parsed.metas.get("robots", "").lower().replace(",", " ").split()
+    return os.path.basename(page).lower() == "404.html" and "noindex" in directives
+
+
+def is_server_redirect_stub(page):
+    """Ignore Hugo's /blog/en/ alias only behind a real Apache 301/308."""
+    if os.fspath(page).replace(os.sep, "/") != "blog/en/index.html":
+        return False
+
+    redirect_files = (
+        (os.path.join(ROOT, "blog", ".htaccess"), ("en", "en/")),
+        (os.path.join(ROOT, ".htaccess"), ("blog/en", "blog/en/")),
+    )
+    for htaccess, candidates in redirect_files:
+        try:
+            lines = open(htaccess, encoding="utf-8").read().splitlines()
+        except OSError:
+            continue
+        for raw in lines:
+            line = raw.split("#", 1)[0].strip()
+            parts = line.split()
+            if len(parts) < 4 or parts[0].lower() != "rewriterule":
+                continue
+            pattern, target, flags = parts[1], parts[2], parts[3].upper()
+            permanent = re.search(r"(?:\[|,)R=(?:301|308)(?:,|\])", flags)
+            if target.rstrip("/") != "/blog" or not permanent:
+                continue
+            try:
+                if any(re.fullmatch(pattern, candidate) for candidate in candidates):
+                    return True
+            except re.error:
+                continue
+    return False
+
+
 def robots_ai_status():
     """Return (blocked_bots, welcomed_bots) based on robots.txt."""
     path = os.path.join(ROOT, "robots.txt")
@@ -177,6 +215,8 @@ def audit():
         parsed[page] = p
         types = [t for t, _ in p.ld_types()]
         all_types[page] = types
+        if is_noindex_404(page, p) or is_server_redirect_stub(page):
+            continue
         # each language tree has its own home page: / and /ar/
         is_home = page in ("index.html", "ar/index.html")
 

@@ -3,8 +3,10 @@
 ZERO 2 ONE — sitemap.xml generator + validator
 ===============================================
 
-Scans the site's pages and (re)writes /sitemap.xml, then validates that the
-output is well-formed XML.
+Scans the main site's pages and (re)writes /sitemap.xml, then validates that
+the output is well-formed XML and contains exactly the expected main-site
+URLs. The generated `/blog/` tree is deliberately excluded because Hugo owns
+its separate sitemap.
 
 Every page exists in two languages — English at `/…` and Arabic at `/ar/…` —
 so each <url> also carries the full set of <xhtml:link rel="alternate">
@@ -58,7 +60,9 @@ def discover():
     paths = []
     for f in glob.glob(os.path.join(ROOT, "**", "index.html"), recursive=True):
         rel = os.path.relpath(f, ROOT).replace(os.sep, "/")
-        if rel.split("/")[0] in ("_archive", "ar", "node_modules", "pages"):
+        if rel.split("/")[0] in (
+            "_archive", "ar", "blog", "node_modules", "pages"
+        ):
             continue
         paths.append("/" if rel == "index.html" else "/" + rel[: -len("index.html")])
     return sorted(set(paths), key=lambda p: (p.count("/"), p))
@@ -113,12 +117,35 @@ def build(base):
             + "\n".join(rows) + "\n</urlset>\n")
 
 
-def validate(path):
+def expected_locations(base):
+    """Return the canonical EN/AR URL set that the root sitemap must contain."""
+    locations = set()
+    for path in discover():
+        locations.add(base + path)
+        ar_file = "ar" + path + "index.html"
+        if os.path.isfile(os.path.join(ROOT, ar_file)):
+            locations.add(base + "/ar" + path)
+    return locations
+
+
+def validate(path, expected=None):
     try:
         dom = minidom.parse(path)
         urls = dom.getElementsByTagName("url")
         locs = [u.getElementsByTagName("loc")[0].firstChild.data
                 for u in urls if u.getElementsByTagName("loc")]
+        if len(locs) != len(set(locs)):
+            print("INVALID XML: duplicate <loc> entries")
+            return False
+        if expected is not None and set(locs) != expected:
+            missing = sorted(expected - set(locs))
+            extra = sorted(set(locs) - expected)
+            print("INVALID SITEMAP: URL inventory is stale")
+            for loc in missing:
+                print(f"  missing: {loc}")
+            for loc in extra:
+                print(f"  extra: {loc}")
+            return False
         print(f"VALID XML — {len(urls)} <url> entries:")
         for l in locs:
             print(f"  {l}")
@@ -133,7 +160,7 @@ def main():
         if not os.path.isfile(OUT):
             print("sitemap.xml not found")
             return 1
-        return 0 if validate(OUT) else 1
+        return 0 if validate(OUT, expected_locations(base_url())) else 1
 
     base = base_url()
     with open(OUT, "w", encoding="utf-8") as fh:

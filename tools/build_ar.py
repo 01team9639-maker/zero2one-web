@@ -239,6 +239,7 @@ def ar_links(html):
              ('href="/about/"', 'href="/ar/about/"'),
              ('href="/contact/"', 'href="/ar/contact/"'),
              ('href="/services/"', 'href="/ar/services/"'),
+             ('href="/blog/"', 'href="/blog/ar/"'),
              ('href="/work/"', 'href="/ar/work/"')]
     rules += [(f'href="/services/{s}/"', f'href="/ar/services/{s}/"') for s in SERVICE_SLUGS]
     for a, b in rules:
