@@ -8,7 +8,8 @@
     "visual:check": "node tools/visual_check.js"
   },
   "devDependencies": {
-    "playwright": "^1.49.0",
-    "sharp": "^0.33.0"
+    "esbuild": "0.28.1",
+    "playwright": "1.62.1",
+    "sharp": "0.35.3"
   }
 }

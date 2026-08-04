@@ -3,7 +3,14 @@
 # The ?v= stamps are rewritten automatically from each file's content hash
 # by tools/stamp_assets.py at the end of this script — never bump them by hand.
 # Usage:  sh tools/build.sh
+set -eu
 cd "$(dirname "$0")/.." || exit 1
+
+ESBUILD="./node_modules/.bin/esbuild"
+if [ ! -x "$ESBUILD" ]; then
+  echo "esbuild is not installed. Run: npm ci"
+  exit 1
+fi
 
 # 1) CSS bundle (order matters)
 cat assets/css/normalize.css \
@@ -11,12 +18,12 @@ cat assets/css/normalize.css \
     assets/css/styleguide.css \
     assets/css/components.css \
     assets/css/style-new.css \
-  | npx --yes esbuild --loader=css --minify --charset=utf8 > assets/css/bundle.min.css
+  | "$ESBUILD" --loader=css --minify --charset=utf8 > assets/css/bundle.min.css
 
 # 2) site JS
-npx --yes esbuild assets/js/dom.js       --minify --charset=utf8 --outfile=assets/js/dom.min.js
-npx --yes esbuild assets/js/i18n.js      --minify --charset=utf8 --outfile=assets/js/i18n.min.js
-npx --yes esbuild assets/js/index-new.js --minify --charset=utf8 --outfile=assets/js/index-new.min.js
+"$ESBUILD" assets/js/dom.js       --minify --charset=utf8 --outfile=assets/js/dom.min.js
+"$ESBUILD" assets/js/i18n.js      --minify --charset=utf8 --outfile=assets/js/i18n.min.js
+"$ESBUILD" assets/js/index-new.js --minify --charset=utf8 --outfile=assets/js/index-new.min.js
 
 # 3) vendor bundle (exact library load order; sources in assets/js/vendor/)
 {

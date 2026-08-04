@@ -29,6 +29,7 @@ import os
 import sys
 import glob
 import json
+import re
 from html.parser import HTMLParser
 from difflib import SequenceMatcher
 
@@ -152,6 +153,56 @@ def discover_pages():
     return sorted(set(pages))
 
 
+def is_noindex_404(page, parsed):
+    """A deliberate noindex error document is not an indexable content page.
+
+    Keep it in the scan so broken assets and links are still caught, but do not
+    require normal search-result metadata/content from it. Requiring noindex is
+    intentional: a 404 file served directly can otherwise return 200 and become
+    an indexable soft-404, which is a real problem worth reporting.
+    """
+    directives = parsed.metas.get("robots", "").lower().replace(",", " ").split()
+    return os.path.basename(page).lower() == "404.html" and "noindex" in directives
+
+
+def is_server_redirect_stub(page):
+    """Return true only when /blog/en/ has a real permanent Apache redirect.
+
+    The generated Hugo alias is intentionally tiny and lacks a description/H1.
+    It is safe to omit normal page requirements only when .htaccess handles the
+    public URL before Apache can serve that fallback HTML.
+    """
+    if os.fspath(page).replace(os.sep, "/") != "blog/en/index.html":
+        return False
+
+    redirect_files = (
+        # Per-directory RewriteRule patterns are relative to blog/.
+        (os.path.join(ROOT, "blog", ".htaccess"), ("en", "en/")),
+        # Also accept an equivalent site-root rule if hosting moves it there.
+        (os.path.join(ROOT, ".htaccess"), ("blog/en", "blog/en/")),
+    )
+    for htaccess, candidates in redirect_files:
+        try:
+            lines = open(htaccess, encoding="utf-8").read().splitlines()
+        except OSError:
+            continue
+        for raw in lines:
+            line = raw.split("#", 1)[0].strip()
+            parts = line.split()
+            if len(parts) < 4 or parts[0].lower() != "rewriterule":
+                continue
+            pattern, target, flags = parts[1], parts[2], parts[3].upper()
+            permanent = re.search(r"(?:\[|,)R=(?:301|308)(?:,|\])", flags)
+            if target.rstrip("/") != "/blog" or not permanent:
+                continue
+            try:
+                if any(re.fullmatch(pattern, candidate) for candidate in candidates):
+                    return True
+            except re.error:
+                continue
+    return False
+
+
 def resolve_internal(page_rel, value):
     v = value.strip(); low = v.lower()
     if low.startswith(("http://", "https://", "//", "mailto:", "tel:", "data:",
@@ -185,31 +236,33 @@ def audit():
         with open(os.path.join(ROOT, page), encoding="utf-8") as fh:
             p = PageParser(); p.feed(fh.read())
         parsed[page] = p
+        skip_page_seo = is_noindex_404(page, p) or is_server_redirect_stub(page)
 
-        # title
-        if not p.title:
-            add(page, "ERROR", "title-missing", "no <title>")
-        else:
-            titles.setdefault(p.title, []).append(page)
-            if not (15 <= len(p.title) <= 65):
-                add(page, "WARN", "title-length",
-                    f"{len(p.title)} chars (rec 15-65): {p.title!r}")
+        if not skip_page_seo:
+            # title
+            if not p.title:
+                add(page, "ERROR", "title-missing", "no <title>")
+            else:
+                titles.setdefault(p.title, []).append(page)
+                if not (15 <= len(p.title) <= 65):
+                    add(page, "WARN", "title-length",
+                        f"{len(p.title)} chars (rec 15-65): {p.title!r}")
 
-        # description
-        desc = p.metas.get("description")
-        if not desc:
-            add(page, "ERROR", "description-missing", "no meta description")
-        else:
-            descriptions.setdefault(desc, []).append(page)
-            if not (50 <= len(desc) <= 165):
-                add(page, "WARN", "description-length",
-                    f"{len(desc)} chars (rec 50-165)")
+            # description
+            desc = p.metas.get("description")
+            if not desc:
+                add(page, "ERROR", "description-missing", "no meta description")
+            else:
+                descriptions.setdefault(desc, []).append(page)
+                if not (50 <= len(desc) <= 165):
+                    add(page, "WARN", "description-length",
+                        f"{len(desc)} chars (rec 50-165)")
 
-        # lang / canonical
-        if not p.lang:
-            add(page, "WARN", "lang-missing", "<html> has no lang attribute")
-        if not p.canonical:
-            add(page, "WARN", "canonical-missing", "no <link rel=canonical>")
+            # lang / canonical
+            if not p.lang:
+                add(page, "WARN", "lang-missing", "<html> has no lang attribute")
+            if not p.canonical:
+                add(page, "WARN", "canonical-missing", "no <link rel=canonical>")
 
         # images / alt (whole page)
         for img in p.images:
@@ -218,20 +271,21 @@ def audit():
             elif img["alt"].strip() == "":
                 add(page, "INFO", "alt-empty", f"empty alt (decorative?): {img['src']}")
 
-        # content headings
-        ch = p.content_headings
-        levels = [l for l, _ in ch]
-        h1 = levels.count(1)
-        if h1 == 0:
-            add(page, "ERROR", "h1-missing", "no content <h1>")
-        elif h1 > 1:
-            add(page, "WARN", "h1-multiple", f"{h1} content <h1> tags")
-        prev = 0
-        for lvl, txt in ch:
-            if prev and lvl > prev + 1:
-                add(page, "WARN", "heading-skip",
-                    f"H{prev} -> H{lvl} ({txt[:40]!r})")
-            prev = lvl
+        if not skip_page_seo:
+            # content headings
+            ch = p.content_headings
+            levels = [l for l, _ in ch]
+            h1 = levels.count(1)
+            if h1 == 0:
+                add(page, "ERROR", "h1-missing", "no content <h1>")
+            elif h1 > 1:
+                add(page, "WARN", "h1-multiple", f"{h1} content <h1> tags")
+            prev = 0
+            for lvl, txt in ch:
+                if prev and lvl > prev + 1:
+                    add(page, "WARN", "heading-skip",
+                        f"H{prev} -> H{lvl} ({txt[:40]!r})")
+                prev = lvl
 
         # internal links exist?
         seen = set()
@@ -257,7 +311,8 @@ def audit():
                     f"shared with {', '.join(x for x in pgs if x != pg)}")
 
     # near-duplicate CONTENT (chrome excluded)
-    names = list(parsed)
+    names = [name for name, page in parsed.items()
+             if not (is_noindex_404(name, page) or is_server_redirect_stub(name))]
     for i in range(len(names)):
         for j in range(i + 1, len(names)):
             a, b = parsed[names[i]].content_text, parsed[names[j]].content_text

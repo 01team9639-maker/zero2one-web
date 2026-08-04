@@ -1,8 +1,9 @@
 # ZERO 2 ONE — Marketing Agency Website
 
 Marketing website for **ZERO 2 ONE**, a Riyadh-based digital marketing agency.
-Static, animation-driven site (no backend / build step) with a bilingual
-English ⇄ Arabic layer and a small Python audit toolkit under [`tools/`](tools/).
+Static, animation-driven site with a bilingual English ⇄ Arabic layer and a
+small local asset build/audit toolkit under [`tools/`](tools/). Production
+serves only the generated static files (plus the PHP contact handler).
 
 > **Tagline:** *from zero to one* — web design, SEO, advertising, brand
 > identity, social media, and e-commerce.
@@ -180,6 +181,17 @@ python3 -m http.server 8000
 
 Opening `index.html` via `file://` mostly works but a server is recommended
 (barba fetches pages over HTTP).
+
+After editing CSS or JavaScript sources, install the exact lockfile versions
+and rebuild the bundles:
+
+```bash
+npm ci
+npm run build
+```
+
+`esbuild`, Playwright, and Sharp are pinned in `package-lock.json`; the build
+does not download an unversioned compiler at runtime.
 
 ---
 
@@ -495,10 +507,10 @@ Before shipping any change that touches the front-end JavaScript, capture a
 visual baseline first — this codebase breaks silently, and no audit catches it:
 
 ```bash
-npm install                        # playwright + sharp, once
+npm ci                             # exact locked tooling, once
 node tools/visual_check.js --baseline
 #   …make the change, rebuild…
-node tools/visual_check.js         # pixel diff, 20 pages x 2 viewports
+node tools/visual_check.js         # pixel diff, 22 pages x 2 viewports
 node tools/test_dom.js             # the jQuery-shim semantics
 ```
 
@@ -515,4 +527,3 @@ deletes whatever is not in it. On 2026-08-04 a site deploy wiped the whole of
 `/blog/`, which was being uploaded over FTP at the time. The blog now ships
 through the same sync as the site, and a guard in the blog pipeline refuses to
 push if the build touched any path outside `blog/`.
-
