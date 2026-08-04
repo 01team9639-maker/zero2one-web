@@ -501,3 +501,18 @@ node tools/visual_check.js --baseline
 node tools/visual_check.js         # pixel diff, 20 pages x 2 viewports
 node tools/test_dom.js             # the jQuery-shim semantics
 ```
+
+### The blog lives in `blog/` — do not hand-edit it
+
+Everything under `blog/` is generated. It is written here by the pipeline in
+[`zeroone01z21-alt/blog-build`](https://github.com/zeroone01z21-alt/blog-build)
+and overwritten on every publish, so edits made by hand disappear without a
+trace.
+
+It has to live inside this repository rather than being uploaded separately:
+Hostinger's Git sync deploys *this repo's contents* to `public_html` and
+deletes whatever is not in it. On 2026-08-04 a site deploy wiped the whole of
+`/blog/`, which was being uploaded over FTP at the time. The blog now ships
+through the same sync as the site, and a guard in the blog pipeline refuses to
+push if the build touched any path outside `blog/`.
+
