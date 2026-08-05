@@ -51,6 +51,8 @@ EXCLUDES="
 .git
 .gitignore
 .DS_Store
+.codex-repos
+.visual
 .vscode
 .mcp.json
 node_modules

@@ -281,20 +281,24 @@ main.touch .main-wrap {
    color: #F9460E;
 }
 
+/* Seven top-level links no longer fit safely on tablet widths. Switch to the
+   existing side menu before the links can squeeze the brand mark to zero. */
+@media screen and (max-width: 1024px) {
+   .nav-bar .links-wrap li {
+      display: none;
+   }
+
+   .btn-hamburger {
+      transform: translateY(0%) scale(1) rotate(0.001deg);
+   }
+}
+
 @media screen and (max-width: 540px) {
 
    .nav-bar {
       padding: calc(var(--gap-padding) / 1) calc(var(--gap-padding) * .5) calc(var(--gap-padding) / 1) calc(var(--gap-padding) * .33);
    }
 
-   .nav-bar .links-wrap li {
-      display: none;
-   }
-
-   /* Show the hamburger from the start on mobile (nav links are hidden) */
-   .btn-hamburger {
-      transform: translateY(0%) scale(1) rotate(0.001deg);
-   }
 }
 
 /* ------------------------- Fixed Nav -------------------------------------------------- */

@@ -30,10 +30,10 @@
     # ----------------------------------------------------------------
     RewriteRule ^(\.git|\.github|tools|node_modules)(/|$)  - [R=404,L]
 
-    #  Dotfiles (.gitignore, .mcp.json, .env …) — but NEVER /.well-known/,
-    #  which Let's Encrypt uses to renew the SSL certificate.
-    RewriteCond %{REQUEST_URI} !^/\.well-known/
-    RewriteRule (^|/)\.[^/]+$                              - [R=404,L]
+    #  Dotfiles and dot-directories (.gitignore, .visual/, .env …) — but NEVER
+    #  /.well-known/, which Let's Encrypt uses to renew the SSL certificate.
+    RewriteCond %{REQUEST_URI} !^/\.well-known(?:/|$)
+    RewriteRule (^|/)\.[^/]+(?:/|$)                        - [R=404,L]
 
     #  Source, docs and tooling manifests that sit in the web root
     RewriteRule \.(md|py|sh|lock)$                         - [R=404,L]
