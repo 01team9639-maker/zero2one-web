@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>تحسين محركات البحث (SEO) — مدونة ZERO 2 ONE</title><link>https://zero2one.sa/blog/ar/categories/seo/</link><description>مقالات عملية في التسويق الرقمي من فريق ZERO 2 ONE في الرياض.</description><generator>Hugo</generator><language>ar</language><lastBuildDate>Mon, 03 Aug 2026 10:00:00 +0300</lastBuildDate><atom:link href="https://zero2one.sa/blog/ar/categories/seo/index.xml" rel="self" type="application/rss+xml"/><item><title>إثبات خط النشر — هذه صفحة فحص تقني</title><link>https://zero2one.sa/blog/ar/pipeline-proof/</link><pubDate>Mon, 03 Aug 2026 10:00:00 +0300</pubDate><guid>https://zero2one.sa/blog/ar/pipeline-proof/</guid><description>&lt;p&gt;&lt;strong&gt;هذه ليست مقالاً.&lt;/strong&gt; صفحة مؤقتة نُشرت لإثبات أن خط النشر يعمل قبل أن تُكتب أي
+كلمة حقيقية.&lt;/p&gt;
+&lt;h2 id="ما-تثبته"&gt;ما تثبته&lt;/h2&gt;
+&lt;p&gt;المحتوى يُكتب Markdown في مستودع، والبناء يجري في مستودع ثانٍ، وHTML الجاهز
+يُرفع إلى &lt;code&gt;/blog/&lt;/code&gt; على الاستضافة الحية. لا شيء هنا يُرسم بجافاسكربت — افتح
+مصدر الصفحة وستجد كل كلمة موجودة فيه أصلاً.&lt;/p&gt;</description></item></channel></rss>
