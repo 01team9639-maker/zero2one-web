@@ -133,8 +133,8 @@ What the handler enforces:
 
 | Guard | Detail |
 |---|---|
-| Field validation | name 2–100, company ≤100, email required + RFC-valid, message 10–5000 |
-| Phone | optional; Saudi mobile normalised to `+9665XXXXXXXX`, other international numbers accepted (the agency works across the GCC) |
+| Field validation | public form has three required fields: name 2–100, phone/WhatsApp, and service; optional legacy email/message values remain safely validated |
+| Phone | required; Saudi mobile normalised to `+9665XXXXXXXX`, other international numbers accepted (the agency works across the GCC) |
 | `<select>` whitelist | a forged option value is **rejected**, not merely checked for emptiness — in both languages |
 | Header injection | CR/LF and control characters stripped from every header value |
 | Honeypot | off-screen `website` field; a filled value gets a fake success and sends nothing |

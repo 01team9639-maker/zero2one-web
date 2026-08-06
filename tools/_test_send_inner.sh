@@ -44,8 +44,10 @@ fresh; expect "forged <select> value rejected" 422 \
     "$(printf '%s' "$VALID" | sed 's/Search Engine Optimization (SEO)/Free Forever/')" $ORIGIN
 fresh; expect "bad phone rejected" 422 \
     "$(printf '%s' "$VALID" | sed 's/0530307054/12345/')" $ORIGIN
-fresh; expect "missing email + short message rejected" 422 \
-    '{"lang":"en","name":"A","email":"","service":"Not sure yet","message":"hi"}' $ORIGIN
+fresh; expect "short name + missing phone rejected" 422 \
+    '{"lang":"en","name":"A","service":"Not sure yet"}' $ORIGIN
+fresh; expect "minimal three-field lead accepted" 200 \
+    '{"lang":"en","name":"Sara Al-Otaibi","phone":"0530307054","service":"Not sure yet"}' $ORIGIN
 fresh; expect "forged Arabic <select> value rejected" 422 \
     '{"lang":"ar","name":"محمد العتيبي","email":"a@b.com","service":"خدمة غير موجودة","message":"نحتاج تحسين محركات البحث لمتجرنا."}' $ORIGIN
 fresh; expect "oversized body rejected" 413 \

@@ -52,7 +52,7 @@
       crossorigin="anonymous">
 
    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-   <link href="/assets/css/bundle.min.css?v=caccdf60" rel="stylesheet">
+   <link href="/assets/css/bundle.min.css?v=6c00156e" rel="stylesheet">
    <!-- Analytics — deferred.
         dataLayer and gtag() exist immediately, so nothing that fires early is
         lost: events queue and are replayed when the tag scripts arrive. The
@@ -411,19 +411,9 @@
                                           required />
                                     </div>
                                     <div class="field-wrap">
-                                       <label class="field-label" for="cf-company">الشركة</label>
-                                       <input class="field" id="cf-company" name="company" type="text"
-                                          autocomplete="organization" />
-                                    </div>
-                                    <div class="field-wrap">
-                                       <label class="field-label" for="cf-email">البريد الإلكتروني</label>
-                                       <input class="field" id="cf-email" name="email" type="email"
-                                          autocomplete="email" required />
-                                    </div>
-                                    <div class="field-wrap">
                                        <label class="field-label" for="cf-phone">الجوال / واتساب</label>
                                        <input class="field" id="cf-phone" name="phone" type="tel" autocomplete="tel"
-                                          inputmode="tel" />
+                                          inputmode="tel" required />
                                     </div>
                                     <div class="field-wrap field-wrap-full">
                                        <label class="field-label" for="cf-service">ما الذي تحتاجه؟</label>
@@ -436,11 +426,6 @@
                                  <option value="إدارة وسائل التواصل وصناعة المحتوى">إدارة وسائل التواصل وصناعة المحتوى</option>
                                  <option value="تطوير المتاجر والأنظمة المخصّصة">تطوير المتاجر والأنظمة المخصّصة</option>
                                        </select>
-                                    </div>
-                                    <div class="field-wrap field-wrap-full">
-                                       <label class="field-label" for="cf-message">أين تتعثّر؟</label>
-                                       <textarea class="field" id="cf-message" name="message" rows="5"
-                                          required></textarea>
                                     </div>
                                  </div>
                                  <!-- Honeypot: bots fill it, humans never see it. A non-empty
@@ -457,12 +442,12 @@
                                           data-strength-text="9">
                                           <div class="btn-fill"></div>
                                           <span class="btn-text">
-                                             <span class="btn-text-inner">أرسل الطلب</span>
+                                             <span class="btn-text-inner">احصل على استشارتك الآن</span>
                                           </span>
                                        </button>
                                     </div>
-                                    <p class="form-note">تفضّل تجاوز النموذج؟ <a href="https://wa.me/966530307054"
-                                          target="_blank">راسلنا على واتساب</a> — بنفس سرعة الردّ.</p>
+                                    <p class="form-note">استشارة أولية مجانية · دون أي التزام مالي.<br>لن نشارك بياناتك. تفضّل واتساب؟ <a href="https://wa.me/966530307054"
+                                          target="_blank" rel="noopener">راسلنا مباشرة</a>.</p>
                                  </div>
                               </form>
                            </div>
@@ -490,10 +475,11 @@
                                  </div>
                               </dl>
                               <div class="contact-map">
-                                 <iframe
-                                    src="https://maps.google.com/maps?q=Computer%20Complex%2C%20Al%20Olaya%2C%20Riyadh&amp;z=16&amp;hl=en&amp;output=embed"
-                                    title="موقع مكتب «من الصفر إلى الواحد» في العليا، الرياض" loading="lazy"
-                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                 <a class="contact-map-link"
+                                    href="https://www.google.com/maps/search/?api=1&amp;query=Computer+Complex%2C+Al+Olaya%2C+Riyadh%2C+Saudi+Arabia"
+                                    target="_blank" rel="noopener" aria-label="افتح موقع «من الصفر إلى الواحد» في خرائط جوجل">
+                                    <span>اعرض موقعنا في خرائط جوجل</span>
+                                 </a>
                               </div>
                            </div>
                         </div>
