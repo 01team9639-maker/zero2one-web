@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://zero2one.sa/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/" />
@@ -12,7 +12,7 @@
   </url>
   <url>
     <loc>https://zero2one.sa/ar/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/" />
@@ -21,7 +21,7 @@
   </url>
   <url>
     <loc>https://zero2one.sa/about/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/about/" />
@@ -30,7 +30,7 @@
   </url>
   <url>
     <loc>https://zero2one.sa/ar/about/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/about/" />
@@ -39,7 +39,7 @@
   </url>
   <url>
     <loc>https://zero2one.sa/contact/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/contact/" />
@@ -48,7 +48,7 @@
   </url>
   <url>
     <loc>https://zero2one.sa/ar/contact/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/contact/" />
@@ -57,7 +57,7 @@
   </url>
   <url>
     <loc>https://zero2one.sa/services/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/services/" />
@@ -66,7 +66,7 @@
   </url>
   <url>
     <loc>https://zero2one.sa/ar/services/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/services/" />
@@ -75,7 +75,7 @@
   </url>
   <url>
     <loc>https://zero2one.sa/work/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/work/" />
@@ -84,7 +84,7 @@
   </url>
   <url>
     <loc>https://zero2one.sa/ar/work/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/work/" />
@@ -93,7 +93,7 @@
   </url>
   <url>
     <loc>https://zero2one.sa/services/brand-identity/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/services/brand-identity/" />
@@ -102,7 +102,7 @@
   </url>
   <url>
     <loc>https://zero2one.sa/ar/services/brand-identity/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/services/brand-identity/" />
@@ -111,7 +111,7 @@
   </url>
   <url>
     <loc>https://zero2one.sa/services/digital-advertising/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/services/digital-advertising/" />
@@ -120,7 +120,7 @@
   </url>
   <url>
     <loc>https://zero2one.sa/ar/services/digital-advertising/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/services/digital-advertising/" />
@@ -129,7 +129,7 @@
   </url>
   <url>
     <loc>https://zero2one.sa/services/ecommerce-development/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/services/ecommerce-development/" />
@@ -138,7 +138,7 @@
   </url>
   <url>
     <loc>https://zero2one.sa/ar/services/ecommerce-development/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/services/ecommerce-development/" />
@@ -147,7 +147,7 @@
   </url>
   <url>
     <loc>https://zero2one.sa/services/seo-riyadh/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/services/seo-riyadh/" />
@@ -156,7 +156,7 @@
   </url>
   <url>
     <loc>https://zero2one.sa/ar/services/seo-riyadh/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/services/seo-riyadh/" />
@@ -165,7 +165,7 @@
   </url>
   <url>
     <loc>https://zero2one.sa/services/social-media-management/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/services/social-media-management/" />
@@ -174,7 +174,7 @@
   </url>
   <url>
     <loc>https://zero2one.sa/ar/services/social-media-management/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/services/social-media-management/" />
@@ -183,7 +183,7 @@
   </url>
   <url>
     <loc>https://zero2one.sa/services/web-design-riyadh/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/services/web-design-riyadh/" />
@@ -192,7 +192,7 @@
   </url>
   <url>
     <loc>https://zero2one.sa/ar/services/web-design-riyadh/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://zero2one.sa/services/web-design-riyadh/" />

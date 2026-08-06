@@ -651,22 +651,22 @@ if (mb_len($company) > 100) {
 
 $emailRaw = no_header_injection(clean_text(field($in, 'email')));
 $email = null;
-if ($emailRaw === '') {
-    $errors[] = msg('An email address is required.', 'البريد الإلكتروني مطلوب.');
-} elseif (strlen($emailRaw) > 254 || !filter_var($emailRaw, FILTER_VALIDATE_EMAIL)) {
+if ($emailRaw !== '' && (strlen($emailRaw) > 254 || !filter_var($emailRaw, FILTER_VALIDATE_EMAIL))) {
     $errors[] = msg('Invalid email address.', 'صيغة البريد الإلكتروني غير صحيحة.');
-} else {
+} elseif ($emailRaw !== '') {
     $email = $emailRaw;
 }
 
 /**
- * Phone is optional. A Saudi mobile is normalised to +9665XXXXXXXX; we also
+ * Phone is required by the three-field lead form. A Saudi mobile is normalised to +9665XXXXXXXX; we also
  * accept a plain international number, because the agency works across the GCC
  * and rejecting a valid Kuwaiti or Emirati number would lose the enquiry.
  */
 $phoneRaw = ascii_digits(clean_text(field($in, 'phone')));
 $phone = null;
-if ($phoneRaw !== '') {
+if ($phoneRaw === '') {
+    $errors[] = msg('A phone or WhatsApp number is required.', 'رقم الجوال أو واتساب مطلوب.');
+} else {
     $p = preg_replace('/[^\d+]/', '', str_replace([' ', '-', '(', ')', '.'], '', $phoneRaw));
     if (is_string($p)) {
         if (strpos($p, '00') === 0) $p = '+' . substr($p, 2);
@@ -681,9 +681,9 @@ if ($phoneRaw !== '') {
 }
 
 $message = clean_text(field($in, 'message'));
-if (mb_len($message) < 10 || mb_len($message) > 5000) {
-    $errors[] = msg('Your message must be between 10 and 5000 characters.',
-                    'الرسالة يجب أن تكون بين 10 و5000 حرف.');
+if (mb_len($message) > 5000) {
+    $errors[] = msg('Your message must not exceed 5000 characters.',
+                    'يجب ألا تتجاوز الرسالة 5000 حرف.');
 }
 
 /* strict whitelist — a forged <option> value is rejected, not just "not empty" */
@@ -734,13 +734,13 @@ try {
 $lines = [
     $labels['name']    . ': ' . $name,
     $labels['company'] . ': ' . ($company !== '' ? $company : $labels['none']),
-    $labels['email']   . ': ' . $email,
+    $labels['email']   . ': ' . ($email ?? $labels['none']),
     $labels['phone']   . ': ' . ($phone ?? $labels['none']),
     $labels['service'] . ': ' . $service,
     '',
     str_repeat('-', 40),
     $labels['message'] . ':',
-    $message,
+    ($message !== '' ? $message : $labels['none']),
     str_repeat('-', 40),
     '',
     $labels['meta'] . ':',
@@ -751,11 +751,13 @@ $body = chunk_split(base64_encode(implode("\r\n", $lines)), 76, "\r\n");
 
 $headers = [
     'From: ' . encode_display_name($FROM_NAME) . ' <' . $FROM_EMAIL . '>',
-    'Reply-To: ' . encode_display_name($name) . ' <' . $email . '>',
     'MIME-Version: 1.0',
     'Content-Type: text/plain; charset=UTF-8',
     'Content-Transfer-Encoding: base64',
 ];
+if ($email !== null) {
+    array_splice($headers, 1, 0, ['Reply-To: ' . encode_display_name($name) . ' <' . $email . '>']);
+}
 
 $headerStr = implode("\r\n", $headers);
 $encSubject = encode_header($subject);

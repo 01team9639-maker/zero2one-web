@@ -5886,6 +5886,78 @@ body.lang-ar .footer-case-wrap .next-case-cta .next-case-cta-arrow {
    max-width: 48em;
 }
 
+.faq-cta {
+   display: grid;
+   grid-template-columns: minmax(0, 1fr) auto;
+   gap: clamp(1.5em, 4vw, 3.5em);
+   align-items: center;
+   margin-top: clamp(2.2em, 5vw, 4em);
+   padding: clamp(1.5em, 3.5vw, 2.5em);
+   border-radius: 1.5em;
+   background: #1C1D20;
+   color: #FFFDED;
+}
+
+.faq-cta h3 {
+   margin: 0 0 .35em;
+   font-family: 'Cairo', sans-serif;
+   font-size: clamp(1.2em, 2vw, 1.65em);
+   font-weight: 700;
+   line-height: 1.2;
+}
+
+.faq-cta p {
+   max-width: 38em;
+   margin: 0;
+   color: rgba(255, 253, 237, .72);
+   font-size: .92em;
+   line-height: 1.6;
+}
+
+.faq-cta > div:last-child {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: .65em;
+}
+
+.faq-cta-button {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 3.25em;
+   padding: .75em 1.45em;
+   border-radius: 999px;
+   background: #F9460E;
+   color: #FFFDED;
+   font-weight: 700;
+   text-decoration: none;
+   transition: transform .25s ease, background-color .25s ease;
+}
+
+.faq-cta-button:hover,
+.faq-cta-button:focus-visible {
+   transform: translateY(-2px);
+   background: #D93605;
+}
+
+.faq-cta small {
+   color: rgba(255, 253, 237, .65);
+   font-size: .7em;
+   text-align: center;
+}
+
+@media screen and (max-width: 720px) {
+   .faq-cta {
+      grid-template-columns: minmax(0, 1fr);
+      align-items: start;
+   }
+
+   .faq-cta > div:last-child {
+      align-items: stretch;
+   }
+}
+
 /* ==========================================================================
    Work / portfolio — the /work/ page and the home-page teaser
    ========================================================================== */
@@ -6332,6 +6404,27 @@ body.lang-ar .btn-lang .btn-text-inner {
    border: 0;
    /* the embed is a bright default-styled map — soften it into the page */
    filter: grayscale(.35) contrast(1.02);
+}
+
+.contact-map-link {
+   position: absolute;
+   inset: 0;
+   display: flex;
+   align-items: flex-end;
+   padding: 1.4em;
+   color: #FFFDED;
+   text-decoration: none;
+   background:
+      linear-gradient(135deg, rgba(28, 29, 32, .2), rgba(28, 29, 32, .9)),
+      url('/assets/images/old-city.webp') center 48% / cover no-repeat;
+}
+
+.contact-map-link span {
+   display: inline-flex;
+   padding: .7em 1.05em;
+   border-radius: 999px;
+   background: #F9460E;
+   font-weight: 700;
 }
 
 @media screen and (max-width: 900px) {
