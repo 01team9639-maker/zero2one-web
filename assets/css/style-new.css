@@ -897,6 +897,47 @@ main.touch .main-wrap {
    font-size: .85em;
 }
 
+/* Footer link rows — social accounts and the quick links beside them.
+   These were inline-flex list items with no margin, so the only thing
+   holding them apart was the whitespace between the <li> tags. Any
+   minifier removes that whitespace and the buttons end up touching —
+   which is exactly what happened once the blog started serving this
+   same footer through Hugo's minifier. An explicit gap does not depend
+   on source formatting, so the spacing survives every pipeline. */
+.socials ul,
+.quick-links ul {
+   display: flex;
+   flex-wrap: wrap;
+   gap: .4em 1.9em;
+}
+
+.quick-links li {
+   display: inline-flex;
+   font-size: .85em;
+}
+
+.quick-links .ui-label {
+   padding-left: calc(var(--gap-padding) * .5);
+   margin-bottom: 1em;
+}
+
+/* الروابط السريعة تأخذ سطرًا كاملًا فوق الصفّ الأصلي.
+   الأعمدة الثلاثة معًا تحتاج ~1834px بينما المتاح 1364px على لابتوب
+   1440، فكان السوشيال يلتفّ وحده تاركًا فراغًا إلى جانبه. سطر مستقل
+   يمنح الروابط مداها ويُبقي «الإصدار · التوقيت · التواصل» كما صمّمه
+   الموقع أصلًا. */
+.bottom-footer {
+   row-gap: calc(var(--gap-padding) * .75);
+   column-gap: calc(var(--gap-padding) * .5);
+}
+
+.bottom-footer .quick-links-col {
+   order: -1;
+   flex-basis: 100%;
+   width: 100%;
+   margin-bottom: calc(var(--gap-padding) * .4);
+}
+
 .bottom-footer p {
    font-size: .85em;
 }
@@ -6550,6 +6591,11 @@ body.lang-ar main div, body.lang-ar main .btn-text-inner {
 }
 
 /* social icon sits on the other side of the label */
+body.lang-ar .quick-links .ui-label {
+   padding-left: 0;
+   padding-right: calc(var(--gap-padding) * .5);
+}
+
 body.lang-ar .socials .social-icon {
    margin-right: 0;
    margin-left: .5em;
