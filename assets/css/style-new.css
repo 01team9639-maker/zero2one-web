@@ -1088,10 +1088,14 @@ main.touch .main-wrap {
    يستعمله الموقع في الهيدر والفوتر. لونٌ خاص — ولو أقرب إلى الأسود —
    يجعل القسم يبدو قطعةً من موقع آخر بجوار ما فوقه وما تحته. */
 .selected-work {
-   /* var(--color-dark) صراحةً لا اعتمادًا على .theme-dark: قاعدة .section
-      تسبقه في الترتيب فيخرج القسم شفافًا. وهو نفس الأسود الذي يستعمله
-      الموقع (#1C1D20)، فلا يبدو القسم قطعةً من موقع آخر. */
-   background: var(--color-dark);
+   /* الكريمي #FFFDED هو خلفية «آراء العملاء» و«الأسئلة الشائعة» أسفله
+      مباشرةً، فيتّصل القسم بما تحته بلا حافّة. اللون مكتوب حرفيًّا في
+      الموقع (36 موضعًا) ولا متغيّر له، فنكتبه كما هو لا نخترع متغيّرًا
+      جديدًا يفترق عنه لاحقًا.
+      ويُضبط صراحةً لا اعتمادًا على صنف موضوع: قاعدة .section تسبق
+      .theme-dark في الترتيب، فبلا لونٍ هنا يخرج القسم شفافًا — قِسته. */
+   background: #FFFDED;
+   color: var(--color-dark);
    padding-block: calc(var(--section-padding) * .9);
    overflow: hidden;
 }
@@ -1147,8 +1151,9 @@ main.touch .main-wrap {
    background-color: #f9460e;
 }
 
+/* حدّ داكن على خلفية فاتحة — النسخة الفاتحة من --color-border-light. */
 .selected-work-cta .btn-click {
-   box-shadow: inset 0 0 0 1px var(--color-border-light);
+   box-shadow: inset 0 0 0 1px var(--color-border);
 }
 
 .selected-work-cta .btn-click:hover .btn-text-inner,
