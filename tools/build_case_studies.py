@@ -30,7 +30,23 @@ import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SHELL = os.path.join(ROOT, "services", "brand-identity", "index.html")
+# ⚠️ الفوتر يُؤخذ من صفحة عادية لا من صفحة الخدمة.
+# صفحات الخدمات تستبدل الفوتر القياسي ببلاطة «Next service» تقود إلى
+# الخدمة التالية — وهي منطقية هناك وغريبة في صفحة مشروع: القارئ الذي
+# أنهى دراسة حالة يريد التواصل أو بقية الأعمال، لا خدمةً لم يسأل عنها.
+# وقرار المالك المتكرّر: الفوتر نفسه في كل صفحة.
+FOOTER_SOURCE = os.path.join(ROOT, "work", "index.html")
 BASE = "https://zero2one.sa"
+
+
+def standard_footer():
+    """كتلة الفوتر القياسية من `footer-rounded-div` حتى `</main>`."""
+    h = open(FOOTER_SOURCE, encoding="utf-8").read()
+    i = h.find('<div class="footer-rounded-div"')
+    j = h.find("</main>", i)
+    if i < 0 or j < i:
+        raise SystemExit("  ❌ تعذّر إيجاد الفوتر القياسي في work/index.html")
+    return h[i:j]
 
 
 def esc(text):
@@ -474,6 +490,13 @@ def build(slug, c, shell):
     end = h.find('<div class="footer-rounded-div"')
     end = h.rfind("\n", 0, end) + 1
     h = h[:start] + render_body(slug, c) + h[end:]
+
+    # استبدال فوتر صفحة الخدمة بالفوتر القياسي
+    i = h.find('<div class="footer-rounded-div"')
+    j = h.find("</main>", i)
+    if i < 0 or j < i:
+        raise SystemExit(f"  ❌ لم أجد الفوتر في {slug}")
+    h = h[:i] + standard_footer() + h[j:]
     return h
 
 
