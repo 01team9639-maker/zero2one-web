@@ -931,6 +931,33 @@ main.touch .main-wrap {
    column-gap: calc(var(--gap-padding) * .5);
 }
 
+/* شبكة الروابط الداخلية بين صفحات الخدمات.
+   كل صفحة خدمة كانت طريقًا مسدودًا: لا سبيل بينها وبين أخواتها إلا عبر
+   التنقّل العلوي، فيتوقّف عمق الزحف وتوزيع قيمة الروابط عند الصفحة التي
+   تترتّب أولًا. الآن كل صفحة تشير إلى الخمس الأخريات. */
+/* القسم يرث تباعد .case-intro الرأسي ليطابق جيرانه، لكن ذلك الصنف يحصر
+   العمود في 283px لأنه مصمَّم لعمودين متجاورين. هنا عمود واحد فيأخذ العرض
+   كاملًا وتتراصف الروابط أفقيًّا بدل أن تتكدّس رأسيًّا. */
+.related-services .flex-col {
+   /* عنصر مرن داخل .row، فالعرض يُحسم بـ flex-basis لا بـ width وحده. */
+   flex: 1 1 100%;
+   width: 100%;
+   max-width: none;
+}
+
+.related-services-list {
+   display: flex;
+   flex-wrap: wrap;
+   gap: .5em 1.9em;
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+
+.related-services-list li {
+   display: inline-flex;
+}
+
 .bottom-footer .quick-links-col {
    order: -1;
    flex-basis: 100%;

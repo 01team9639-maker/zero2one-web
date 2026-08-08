@@ -49,7 +49,7 @@
       crossorigin="anonymous">
 
    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-   <link href="/assets/css/bundle.min.css?v=4320a99c" rel="stylesheet">
+   <link href="/assets/css/bundle.min.css?v=e3cb24c3" rel="stylesheet">
    <!-- Analytics — deferred.
         dataLayer and gtag() exist immediately, so nothing that fires early is
         lost: events queue and are replayed when the tag scripts arrive. The
@@ -301,7 +301,7 @@
                             <a href="/ar/" class="btn-click magnetic" data-strength="20" data-strength-text="10">
                                 <span class="btn-text">
                                     <span class="brand-mark">
-                                        <img src="/assets/icons/logo-z2o.webp" width="167" height="77" alt="ZERO 2 ONE" loading="lazy" />
+                                        <img src="/assets/icons/logo-z2o.webp" width="167" height="77" alt="ZERO 2 ONE" fetchpriority="high" />
                                         <span class="brand-label">من الصفر إلى الواحد</span>
                                     </span>
                                 </span>
@@ -490,7 +490,63 @@
                   </div>
                </div>
             </section>
-         </section>
+                     <!-- ===== RELATED SERVICES — internal linking =====
+                 Every service page links to the other five. Without this each
+                 service sat as a dead end: the only way between them was the nav,
+                 so crawl depth and link equity stopped at whichever page ranked. -->
+            <section class="section case-intro related-services once-in" data-scroll-section>
+               <div class="container medium">
+                  <div class="row">
+                     <div class="flex-col">
+                        <h2 class="case-overview-label">خدمات ذات صلة</h2>
+                        <div class="stripe"></div>
+                        <ul class="related-services-list">
+                           <li class="btn btn-link">
+                              <a href="/ar/services/web-design-riyadh/" class="btn-click magnetic" data-strength="20"
+                                  data-strength-text="10">
+                                  <span class="btn-text">
+                                      <span class="btn-text-inner">تصميم وتطوير المواقع</span>
+                                  </span>
+                              </a>
+                           </li>
+                           <li class="btn btn-link">
+                              <a href="/ar/services/seo-riyadh/" class="btn-click magnetic" data-strength="20"
+                                  data-strength-text="10">
+                                  <span class="btn-text">
+                                      <span class="btn-text-inner">تحسين محركات البحث (SEO)</span>
+                                  </span>
+                              </a>
+                           </li>
+                           <li class="btn btn-link">
+                              <a href="/ar/services/digital-advertising/" class="btn-click magnetic" data-strength="20"
+                                  data-strength-text="10">
+                                  <span class="btn-text">
+                                      <span class="btn-text-inner">إدارة الحملات الإعلانية</span>
+                                  </span>
+                              </a>
+                           </li>
+                           <li class="btn btn-link">
+                              <a href="/ar/services/brand-identity/" class="btn-click magnetic" data-strength="20"
+                                  data-strength-text="10">
+                                  <span class="btn-text">
+                                      <span class="btn-text-inner">تطوير الهوية التجارية</span>
+                                  </span>
+                              </a>
+                           </li>
+                           <li class="btn btn-link">
+                              <a href="/ar/services/ecommerce-development/" class="btn-click magnetic" data-strength="20"
+                                  data-strength-text="10">
+                                  <span class="btn-text">
+                                      <span class="btn-text-inner">تطوير المتاجر والأنظمة المخصّصة</span>
+                                  </span>
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </section>
+</section>
 <div class="footer-rounded-div" data-scroll-section>
             <div class="rounded-div-wrap">
                <div class="rounded-div" style="background-color: #FFFDED;"></div>
