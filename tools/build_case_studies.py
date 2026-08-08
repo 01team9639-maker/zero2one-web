@@ -491,6 +491,12 @@ def build(slug, c, shell):
     end = h.rfind("\n", 0, end) + 1
     h = h[:start] + render_body(slug, c) + h[end:]
 
+    # تسمية مؤشّر الفأرة: القالب يقول "Next case" لأنه يتبع بلاطة الخدمة
+    # التالية، وقد أزلناها. تصير "View" كما في بقية الصفحات فلا يبقى في
+    # المصدر نصٌّ يشير إلى شيء غير موجود.
+    h = re.sub(r'(<div class="mouse-pos-list-span no-select">\s*<p>)[^<]*(</p>)',
+               r'\1View\2', h, count=1)
+
     # استبدال فوتر صفحة الخدمة بالفوتر القياسي
     i = h.find('<div class="footer-rounded-div"')
     j = h.find("</main>", i)
