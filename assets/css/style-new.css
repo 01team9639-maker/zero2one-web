@@ -931,6 +931,245 @@ main.touch .main-wrap {
    column-gap: calc(var(--gap-padding) * .5);
 }
 
+/* ===== CASE STUDY — صفحات المشاريع تحت /work/ =====
+   تستعير أقسام .case-overview من صفحات الخدمات فترث تباعدها وحاوياتها،
+   وهذه القواعد تضيف ما تحتاجه قصّة مشروع وحدها: بيانات المشروع، الصور،
+   الأرقام، والجداول. */
+.case-study-section .flex-col,
+.case-study-lead .flex-col,
+.case-study-cta .flex-col {
+   max-width: none;
+}
+
+.case-study-eyebrow {
+   margin: 0 0 1.2em;
+   font-size: clamp(11px, .78vw, 13px);
+   font-weight: 500;
+   letter-spacing: .18em;
+   text-transform: uppercase;
+   color: #f9460e;
+}
+
+.case-study-intro {
+   font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+   line-height: 1.55;
+}
+
+/* بيانات المشروع: قائمة تعريف لا جدول — العلاقة هنا مصطلح ووصفه،
+   وقارئ الشاشة يعلن «Client: HABBA» بدل خلية في شبكة بلا معنى. */
+.case-study-meta {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+   gap: 1.2em 2em;
+   margin: 2em 0 0;
+   padding: 1.4em 0 0;
+   border-top: 1px solid var(--color-border);
+}
+
+.case-study-meta dt {
+   margin: 0 0 .25em;
+   font-size: .78em;
+   letter-spacing: .1em;
+   text-transform: uppercase;
+   opacity: .6;
+}
+
+.case-study-meta dd {
+   margin: 0;
+   font-weight: 500;
+}
+
+.case-study-media {
+   display: flex;
+   flex-direction: column;
+   gap: calc(var(--gap-padding) * .4);
+}
+
+.case-figure {
+   margin: 0;
+}
+
+.case-figure img {
+   display: block;
+   width: 100%;
+   height: auto;
+   border-radius: .5rem;
+}
+
+.case-study-list,
+.case-study-steps {
+   margin: 1.6em 0 0;
+   padding-inline-start: 1.2em;
+}
+
+.case-study-list li,
+.case-study-steps li {
+   margin-block-end: .5em;
+}
+
+.case-study-deliverables {
+   columns: 2;
+   column-gap: 2.5em;
+}
+
+/* الأرقام المُبلَّغة من لوحة الإعلانات. تُعرض كبيرة لأنها الدليل، لا زينة. */
+.case-study-figures {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 1.6em 3em;
+   margin: 1.8em 0 0;
+   padding: 0;
+   list-style: none;
+}
+
+.case-study-figures li {
+   display: flex;
+   flex-direction: column;
+}
+
+.case-study-figure-value {
+   font-size: clamp(1.9rem, 3vw, 2.8rem);
+   font-weight: 400;
+   line-height: 1;
+   color: #f9460e;
+}
+
+.case-study-figure-label {
+   margin-block-start: .4em;
+   font-size: .82em;
+   opacity: .7;
+}
+
+/* الجدول يمرّر أفقيًّا داخل غلافه بدل أن يوسّع الصفحة على الموبايل. */
+.case-study-table-wrap {
+   margin: 1.8em 0 0;
+   overflow-x: auto;
+}
+
+.case-study-table {
+   width: 100%;
+   border-collapse: collapse;
+   text-align: start;
+}
+
+.case-study-table th,
+.case-study-table td {
+   padding: .7em 1em .7em 0;
+   border-block-end: 1px solid var(--color-border);
+   font-weight: 400;
+}
+
+.case-study-table thead th {
+   font-size: .78em;
+   letter-spacing: .1em;
+   text-transform: uppercase;
+   opacity: .6;
+}
+
+.case-study-table td {
+   text-align: end;
+   font-variant-numeric: tabular-nums;
+}
+
+.case-study-links {
+   margin-block-start: 2em;
+}
+
+@media screen and (max-width: 900px) {
+   .case-study-deliverables {
+      columns: 1;
+   }
+}
+
+/* ===== SELECTED WORK — قسم البرهان في الصفحة الرئيسية =====
+   خلفية داكنة تفصله بصريًّا عمّا حوله، والنصّ في عمود والصورة في الآخر.
+   يعتمد .theme-dark من الموقع لألوان النصّ فلا نعيد تعريفها هنا. */
+.selected-work {
+   background: #0A0A0A;
+   padding-block: calc(var(--section-padding) * .9);
+   overflow: hidden;
+}
+
+.selected-work .row {
+   align-items: center;
+   gap: calc(var(--gap-padding) * .75);
+}
+
+.selected-work-text {
+   flex: 1 1 46%;
+   max-width: 46%;
+}
+
+.selected-work-media {
+   flex: 1 1 50%;
+   max-width: 50%;
+}
+
+.selected-work-eyebrow {
+   margin: 0 0 1.2em;
+   font-size: clamp(11px, .78vw, 13px);
+   font-weight: 500;
+   letter-spacing: .18em;
+   text-transform: uppercase;
+   color: #f9460e;
+}
+
+/* عنصر <p> لا <h2>: الصفحة تحمل h1 واحدًا و«Selected Work» هو عنوان القسم.
+   جعل هذا السطر عنوانًا ثانيًا يكسر تسلسل العناوين على قارئات الشاشة. */
+.selected-work-title {
+   margin: 0 0 .5em;
+   font-size: clamp(2.4rem, 4.4vw, 4rem);
+   font-weight: 400;
+   line-height: 1.06;
+   letter-spacing: -.03em;
+}
+
+.selected-work-accent {
+   color: #f9460e;
+}
+
+.selected-work-lead {
+   max-width: 34em;
+   margin: 0 0 2em;
+   opacity: .82;
+}
+
+.selected-work-arrow {
+   display: inline-block;
+   margin-inline-start: .35em;
+   transition: transform var(--animation-primary, .4s cubic-bezier(.7, 0, .3, 1));
+}
+
+.selected-work-cta .btn-click:hover .selected-work-arrow,
+.selected-work-cta .btn-click:focus-visible .selected-work-arrow {
+   transform: translateX(.25em);
+}
+
+html[dir="rtl"] .selected-work-cta .btn-click:hover .selected-work-arrow,
+html[dir="rtl"] .selected-work-cta .btn-click:focus-visible .selected-work-arrow {
+   transform: translateX(-.25em);
+}
+
+.selected-work-media img {
+   width: 100%;
+   height: auto;
+   border-radius: .5rem;
+   display: block;
+}
+
+/* الأعمدة تتراصف رأسيًّا قبل أن يضيق أيٌّ منهما على محتواه. */
+@media screen and (max-width: 900px) {
+   .selected-work-text,
+   .selected-work-media {
+      flex: 1 1 100%;
+      max-width: 100%;
+   }
+
+   .selected-work-media {
+      margin-top: calc(var(--gap-padding) * .6);
+   }
+}
+
 /* شبكة الروابط الداخلية بين صفحات الخدمات.
    كل صفحة خدمة كانت طريقًا مسدودًا: لا سبيل بينها وبين أخواتها إلا عبر
    التنقّل العلوي، فيتوقّف عمق الزحف وتوزيع قيمة الروابط عند الصفحة التي

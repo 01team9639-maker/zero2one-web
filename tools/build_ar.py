@@ -50,6 +50,11 @@ PAGES += [(f"services/{s}/index.html", f"ar/services/{s}/index.html", f"/service
 PAGES += [("about/index.html", "ar/about/index.html", "/about/"),
           ("work/index.html", "ar/work/index.html", "/work/"),
           ("contact/index.html", "ar/contact/index.html", "/contact/")]
+# صفحات المشاريع — يولّدها tools/build_case_studies.py بالإنجليزية،
+# وتُترجَم هنا كأي صفحة أخرى فتبقى الترجمات في قاموس واحد.
+CASE_SLUGS = ["habba", "alrahwanji-paints"]
+PAGES += [(f"work/{c}/index.html", f"ar/work/{c}/index.html", f"/work/{c}/")
+          for c in CASE_SLUGS]
 
 # ---------------------------------------------------------------- Arabic <head>
 AR_META = {
@@ -93,6 +98,14 @@ AR_META = {
         "title": "أعمالنا — مشاريع تسويق رقمي في الرياض | زيرو تو ون",
         "description": "أعمال في الهوية التجارية وتصميم المواقع وإدارة الحملات الإعلانية لشركات في الرياض — ما الذي كان معطّلاً، وماذا بنينا، وماذا قال العملاء بعدها.",
         "keywords": "أعمال شركة تسويق رقمي بالرياض, معرض أعمال تسويق, دراسات حالة تسويق السعودية, مشاريع هوية تجارية الرياض, إعادة تصميم موقع الرياض",
+    },
+    "/work/habba/": {
+        "title": "هوية حبّة التجارية — محمصة ومقهى قهوة مختصة | زيرو تو ون",
+        "description": "كيف بنينا هوية تجارية متكاملة لعلامة حبّة للقهوة المختصة: نظام الشعار، قواعد الألوان، المطبوعات والقوائم والتغليف والزي واللوحات — مصمّمة لتبقى واضحة بكل مقاس.",
+    },
+    "/work/alrahwanji-paints/": {
+        "title": "حملة دهانات الرهونجي الإعلانية على فيسبوك وإنستغرام | زيرو تو ون",
+        "description": "كيف نقلنا دهانات الرهونجي من ترويج غير منظّم إلى إعلان مقيس على فيسبوك وإنستغرام: أرقام الوصول والتفاعل وأماكن الظهور كما وردت، وميزانية لا تُزاد إلا بعد ثبات النتائج.",
     },
     "/contact/": {
         "title": "تواصل معنا — شركة تسويق رقمي في الرياض | زيرو تو ون",
@@ -241,6 +254,7 @@ def ar_links(html):
              ('href="/services/"', 'href="/ar/services/"'),
              ('href="/blog/"', 'href="/blog/ar/"'),
              ('href="/work/"', 'href="/ar/work/"')]
+    rules += [(f'href="/work/{c}/"', f'href="/ar/work/{c}/"') for c in CASE_SLUGS]
     rules += [(f'href="/services/{s}/"', f'href="/ar/services/{s}/"') for s in SERVICE_SLUGS]
     for a, b in rules:
         html = html.replace(a, b)
