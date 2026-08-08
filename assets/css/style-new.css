@@ -921,6 +921,36 @@ main.touch .main-wrap {
    margin-bottom: 1em;
 }
 
+/* شهادة معروف — ختم وزارة التجارة السعودية.
+   إشارة ثقة رسمية للسوق السعودي، ومربوطة بصفحة التحقّق لا صورةً صمّاء:
+   ختم لا يمكن التحقّق منه لا يساوي شيئًا لمن يشكّ أصلًا.
+   nofollow لأن الرابط تحقّق لا توصية. */
+.bottom-footer .maroof-col {
+   order: -1;
+   flex-basis: 100%;
+   width: 100%;
+   margin-bottom: calc(var(--gap-padding) * .5);
+}
+
+.maroof {
+   display: inline-block;
+   max-width: 15rem;
+   border-radius: .4rem;
+   overflow: hidden;
+   line-height: 0;
+   transition: transform var(--animation-primary, .4s cubic-bezier(.7, 0, .3, 1));
+}
+
+.maroof img {
+   width: 100%;
+   height: auto;
+}
+
+.maroof:hover,
+.maroof:focus-visible {
+   transform: translateY(-2px);
+}
+
 /* الروابط السريعة تأخذ سطرًا كاملًا فوق الصفّ الأصلي.
    الأعمدة الثلاثة معًا تحتاج ~1834px بينما المتاح 1364px على لابتوب
    1440، فكان السوشيال يلتفّ وحده تاركًا فراغًا إلى جانبه. سطر مستقل
@@ -939,6 +969,44 @@ main.touch .main-wrap {
 .case-study-lead .flex-col,
 .case-study-cta .flex-col {
    max-width: none;
+}
+
+/* هندسة المسافات داخل صفحة المشروع (البند الأول).
+   القياس قبل التعديل: عنوان بحجم 41px وفراغ 41px تحته — أي 1em، وهو
+   ملتصق بنصّه نسبةً إلى حجمه؛ وفقرات بفراغ 17px مقابل ارتفاع سطر 29px،
+   أي أقلّ من سطر واحد بين فقرتين فتُقرأ ككتلة واحدة.
+   أما بين الأقسام فـ95px فوق و126px تحت — 221px، واسعة أصلًا فلم تُمسّ.
+   النسب هنا بـem لا بالبكسل: تكبر مع العنوان على الشاشات الكبيرة. */
+.case-study-section .case-overview-sub,
+.case-study-cta .case-overview-sub {
+   margin-block-end: 1.2em;
+}
+
+.case-study-section p,
+.case-study-cta p {
+   margin-block-end: 1.35em;
+}
+
+.case-study-section p:last-child,
+.case-study-cta p:last-child {
+   margin-block-end: 0;
+}
+
+.case-study-list,
+.case-study-steps,
+.case-study-figures,
+.case-study-table-wrap {
+   margin-block-start: 2.2em;
+}
+
+/* فسحة حول أزرار الدعوة: كانت صفرًا لأن قاعدة .related-services-list
+   العامّة `margin:0` تلي القاعدة الخاصّة في الترتيب فتغلبها. */
+.case-study-links {
+   margin-block-start: 2.6em !important;
+}
+
+.case-study-meta {
+   margin-block-start: 2.6em;
 }
 
 .case-study-eyebrow {
@@ -998,7 +1066,7 @@ main.touch .main-wrap {
 
 .case-study-list,
 .case-study-steps {
-   margin: 1.6em 0 0;
+   margin: 2.2em 0 0;
    padding-inline-start: 1.2em;
 }
 

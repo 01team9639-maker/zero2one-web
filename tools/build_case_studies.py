@@ -320,7 +320,9 @@ def render_section(s):
     o = ['            <section class="section case-overview case-study-section once-in" data-scroll-section>',
          '               <div class="container medium">',
          '                  <div class="row">',
-         '                     <div class="flex-col">',
+         # fade-in animate: محرّك الموقع نفسه (ScrollTrigger في index-new.js)
+         # يلتقط هذا الصنف ويحرّك العنصر عند دخوله الشاشة. لا سطر JS جديد.
+         '                     <div class="flex-col fade-in animate">',
          f'                        <h2 class="case-overview-sub">{s["title"]}</h2>',
          para(s["body"])]
     k = s["kind"]
@@ -350,10 +352,10 @@ def render_section(s):
         o.append('                        </ul>')
     o.append('                     </div>')
     if s.get("image"):
-        o += ['                     <div class="flex-col case-study-media">',
+        o += ['                     <div class="flex-col case-study-media fade-in animate">',
               '                        ' + img(*s["image"]), '                     </div>']
     elif s.get("images"):
-        o.append('                     <div class="flex-col case-study-media case-study-media-pair">')
+        o.append('                     <div class="flex-col case-study-media case-study-media-pair fade-in animate">')
         o += ['                        ' + img(n, a) for n, a in s["images"]]
         o.append('                     </div>')
     o += ['                  </div>', '               </div>', '            </section>']
@@ -366,14 +368,14 @@ def render_body(slug, c):
     o += ['            <section class="section case-overview case-study-lead once-in" data-scroll-section>',
           '               <div class="container medium">',
           '                  <div class="row">',
-          '                     <div class="flex-col">',
+          '                     <div class="flex-col fade-in animate">',
           f'                        <p class="case-study-eyebrow">{c["eyebrow"]}</p>',
           f'                        <p class="case-study-intro">{c["intro"]}</p>',
           '                        <dl class="case-study-meta">']
     for k, v in c["meta"]:
         o += [f'                           <div><dt>{k}</dt><dd>{v}</dd></div>']
     o += ['                        </dl>', '                     </div>',
-          '                     <div class="flex-col case-study-media">',
+          '                     <div class="flex-col case-study-media fade-in animate">',
           '                        ' + img(*c["hero_image"], cls="case-figure case-figure-hero"),
           '                     </div>',
           '                  </div>', '               </div>', '            </section>']
@@ -385,7 +387,7 @@ def render_body(slug, c):
     o += ['            <section class="section case-intro case-study-section once-in" data-scroll-section>',
           '               <div class="container medium">',
           '                  <div class="row">',
-          '                     <div class="flex-col">',
+          '                     <div class="flex-col fade-in animate">',
           '                        <h2 class="case-overview-label">What We Delivered</h2>',
           '                        <div class="stripe"></div>',
           '                        <ul class="case-study-list case-study-deliverables">']
@@ -397,7 +399,7 @@ def render_body(slug, c):
     o += ['            <section class="section case-intro case-study-cta once-in" data-scroll-section>',
           '               <div class="container medium">',
           '                  <div class="row">',
-          '                     <div class="flex-col">',
+          '                     <div class="flex-col fade-in animate">',
           f'                        <h2 class="case-overview-sub">{c["cta_title"]}</h2>',
           f'                        <p>{c["cta_body"]}</p>',
           '                        <ul class="related-services-list case-study-links">',
