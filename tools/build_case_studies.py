@@ -58,9 +58,7 @@ CASES = {
     "habba": {
         "title": "HABBA Brand Identity — Specialty Coffee Roastery | ZERO 2 ONE",
         "description": (
-            "How we built a complete brand identity for HABBA specialty coffee — "
-            "logo system, colour rules, stationery, menus, packaging, uniforms and "
-            "signage designed to stay recognisable at every scale."
+            "Brand identity for HABBA specialty coffee: logo system, colour rules, stationery, menus, packaging, uniforms and signage — recognisable at every scale."
         ),
         "eyebrow": "Brand Identity / Food &amp; Beverage",
         "h1": "HABBA — A Brand Identity Crafted Around the Ritual of Coffee",
@@ -169,9 +167,7 @@ CASES = {
     "alrahwanji-paints": {
         "title": "Alrahwanji Paints Ad Campaign — Facebook &amp; Instagram | ZERO 2 ONE",
         "description": (
-            "How we moved Alrahwanji Paints from unstructured promotion to a measured "
-            "advertising approach on Facebook and Instagram — reported reach, engagement "
-            "and placement data, with budget scaled only after results held steady."
+            "How Alrahwanji Paints moved to measured advertising on Facebook and Instagram — reported reach, engagement and placement data from the ad dashboard."
         ),
         "eyebrow": "Paid Media / Paints &amp; Coatings",
         "h1": "Turning Ad Spend into Focused, Measurable Growth",
