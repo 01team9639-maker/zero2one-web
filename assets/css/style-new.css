@@ -254,9 +254,11 @@ main.touch .main-wrap {
    left: 50%;
    transform: translateX(-50%);
    display: none;
-   padding-left: .6em;
+   /* منطقي لا مادّي: الحشو الأوسع في الجهة التي تجلس فيها النقطة،
+      فينقلبان معًا مع اتجاه اللغة. */
+   padding-inline-start: .6em;
    white-space: nowrap;
-   padding-right: .4em;
+   padding-inline-end: .4em;
    will-change: opacity;
 }
 
@@ -270,7 +272,10 @@ main.touch .main-wrap {
    position: absolute;
    border-radius: 50%;
    background: var(--color-white);
-   left: 0;
+   /* inset-inline-start لا left: النقطة تسبق الكلمة، و«يسبق» في العربية
+      يعني يمينًا. الخاصية المنطقية تحلّ إلى left في LTR وإلى right في
+      RTL بنفسها، فلا نحتاج قاعدة عربية مقابلة تنحرف عن هذه لاحقًا. */
+   inset-inline-start: 0;
    top: 47%;
    bottom: auto;
    width: calc(clamp(16px, 1.2vw, 19px) / 1.65);
