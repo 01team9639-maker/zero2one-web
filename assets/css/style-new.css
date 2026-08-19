@@ -1221,6 +1221,70 @@ main.touch .main-wrap {
    }
 }
 
+/* ===== زرّ واتساب العائم =====
+   ثابت أسفل الشاشة على كل صفحة. الأيقونة هي `social-whatsapp.svg`
+   الموجودة أصلًا في الموقع، تُرسم بقناع CSS كما تفعل أيقونات الفوتر —
+   فلا ملف جديد ولا طلب إضافي: الملف نفسه مخزَّن سلفًا في المتصفّح.
+
+   الموضع يسارًا في اللغتين لا `inset-inline-start`. الفرق مقصود:
+   النقطة بجانب الكلمة محتوى يتبع اتجاه النصّ، أما هذا فعنصر مثبّت في
+   زاوية الشاشة — يوازن البرغر في الزاوية المقابلة، وثباته يجعل الزائر
+   الذي بدّل اللغة يجده حيث تركه.
+
+   z-index 900 وليس 2000: فوق المحتوى والفوتر، وتحت القائمة الجانبية
+   حين تُفتح (2000) فلا يطفو فوق قائمة مفتوحة.
+
+   الحجم 3.5rem بحدّ أدنى 56px — أكبر من هدف اللمس الموصى به (44px)
+   بهامش مريح لإبهام يمسك الهاتف بيد واحدة. */
+.wa-float {
+   position: fixed;
+   inset-block-end: clamp(1rem, 3vw, 1.75rem);
+   left: clamp(1rem, 3vw, 1.75rem);
+   z-index: 900;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: max(3.5rem, 56px);
+   height: max(3.5rem, 56px);
+   border-radius: 50%;
+   background: #25D366;
+   box-shadow: 0 .35rem 1.1rem rgba(0, 0, 0, .22);
+   transition: transform var(--animation-primary, .4s cubic-bezier(.7, 0, .3, 1)),
+      box-shadow var(--animation-primary, .4s cubic-bezier(.7, 0, .3, 1));
+}
+
+.wa-float:hover,
+.wa-float:focus-visible {
+   transform: translateY(-3px);
+   box-shadow: 0 .6rem 1.5rem rgba(0, 0, 0, .28);
+}
+
+.wa-float-icon {
+   width: 58%;
+   height: 58%;
+   background-color: #fff;
+   -webkit-mask-image: url(../icons/social-whatsapp.svg);
+   mask-image: url(../icons/social-whatsapp.svg);
+   -webkit-mask-repeat: no-repeat;
+   mask-repeat: no-repeat;
+   -webkit-mask-position: center;
+   mask-position: center;
+   -webkit-mask-size: contain;
+   mask-size: contain;
+}
+
+/* من يفضّل حركة أقل لا يرى الزرّ يقفز. */
+@media (prefers-reduced-motion: reduce) {
+   .wa-float {
+      transition: none;
+   }
+
+   .wa-float:hover,
+   .wa-float:focus-visible {
+      transform: none;
+   }
+}
+
 /* ===== SELECTED WORK — قسم البرهان في الصفحة الرئيسية =====
    خلفية داكنة تفصله بصريًّا عمّا حوله، والنصّ في عمود والصورة في الآخر.
    يعتمد .theme-dark من الموقع لألوان النصّ فلا نعيد تعريفها هنا. */

@@ -47,7 +47,7 @@
 
    <link rel="preload" as="font" href="/assets/fonts/NeueMontreal-Regular.otf" type="font/otf"
       crossorigin="anonymous">
-   <link href="/assets/css/bundle.min.css?v=4adf1220" rel="stylesheet">
+   <link href="/assets/css/bundle.min.css?v=1650c050" rel="stylesheet">
    <!-- Analytics — deferred.
         dataLayer and gtag() exist immediately, so nothing that fires early is
         lost: events queue and are replayed when the tag scripts arrive. The
@@ -147,6 +147,18 @@
       <div class="mouse-pos-list-span no-select">
          <p>الخدمة التالية</p>
       </div>
+      <!-- ===== Floating WhatsApp button =====
+           Sits beside the hamburger, inside <main> but outside .main-wrap.
+           That placement is deliberate on two counts:
+             - .main-wrap carries locomotive's transform, and a transformed
+               ancestor makes position:fixed resolve against IT, not the
+               viewport - the button would scroll away with the page.
+             - tools/sync_site_chrome.py extracts from <main> to .main-wrap,
+               so the blog inherits this button with no second copy. -->
+      <a class="wa-float" href="https://wa.me/966530307054" target="_blank"
+          rel="noopener" aria-label="واتساب">
+          <span class="wa-float-icon" aria-hidden="true"></span>
+      </a>
       <!-- ===== Floating hamburger button (opens the side menu) ===== -->
       <div class="btn btn-hamburger">
             <div class="btn-click magnetic" data-strength="50" data-strength-text="25">
