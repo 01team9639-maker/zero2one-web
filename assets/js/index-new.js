@@ -376,7 +376,25 @@ function initPageTransitions() {
   });
 
   // do something after the transition finishes
-  barba.hooks.after(() => {
+  // المرساة تُلتقط من الرابط المضغوط، لا من العنوان ولا من barba.
+    //
+    // قِسنا الاثنين: بعد الضغط على /ar/#testimonials صار location.hash
+    // فارغًا، و data.next.url يحوي {href, path, port, query} **بلا hash**.
+    // ‏barba 2.10 يُسقطها عند تفكيك الرابط، فلا يبقى مصدر إلا الرابط نفسه.
+    //
+    // capture:true ليسبق معالج barba، و i > 0 ليستثني المراسي داخل الصفحة
+    // نفسها — تلك يتكفّل بها معالج التمرير السلس أدناه.
+    var pendingHash = '';
+    document.addEventListener('click', function (e) {
+      var el = e.target && e.target.nodeType === 1 ? e.target : null;
+      var a = el && el.closest ? el.closest('a[href*="#"]') : null;
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      var i = href.indexOf('#');
+      if (i > 0) pendingHash = href.slice(i);
+    }, true);
+
+    barba.hooks.after((data) => {
     select('html').classList.remove('is-transitioning');
     // reinit locomotive scroll
     scroll.init();
@@ -391,7 +409,11 @@ function initPageTransitions() {
     //
     // afterEnter() forces scrollTo(0,0), so this must run after it and after
     // locomotive has measured the new page — hence the delay.
-    var hash = window.location.hash;
+    // barba يُسقط المرساة من العنوان عند الانتقال — قِسناه: بعد الضغط على
+    // /ar/#testimonials صار location.hash فارغًا تمامًا. فالمصدر الموثوق هو
+    // الوجهة التي طلبها barba نفسه، لا شريط العنوان.
+    var hash = pendingHash || window.location.hash;
+    pendingHash = '';
     if (hash && hash.length > 1) {
       setTimeout(function () {
         var target = document.querySelector(hash);
