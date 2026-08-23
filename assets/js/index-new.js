@@ -381,6 +381,26 @@ function initPageTransitions() {
     // reinit locomotive scroll
     scroll.init();
     scroll.stop();
+
+    // Honour a hash in the destination URL after a barba transition.
+    //
+    // The smooth-scroll handler further down only binds a[href^="#"] —
+    // same-page anchors. A cross-page link such as /ar/#testimonials never
+    // matches it, so barba navigated and the hash was silently dropped:
+    // measured landing 5381px above the section, with no # in the address.
+    //
+    // afterEnter() forces scrollTo(0,0), so this must run after it and after
+    // locomotive has measured the new page — hence the delay.
+    var hash = window.location.hash;
+    if (hash && hash.length > 1) {
+      setTimeout(function () {
+        var target = document.querySelector(hash);
+        if (target) {
+          scroll.start();
+          scroll.scrollTo(target, { offset: 0, duration: 900, easing: [0.7, 0, 0.35, 1] });
+        }
+      }, 700);
+    }
   });
 
   // scroll to the top of the page
