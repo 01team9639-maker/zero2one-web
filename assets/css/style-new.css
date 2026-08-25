@@ -7221,3 +7221,51 @@ body.lang-ar .work-entry-detail a {
 body.lang-ar .work-entry-quote footer {
    direction: rtl;
 }
+
+/* ===== القائمة الجانبية على النوافذ القصيرة =====
+   أرسل عميل لقطةً من ويندوز: عناصر القائمة متداخلة و«English» مقطوع.
+   أُعيد إنتاجه بالقياس على نافذة 1080×294: العناصر تمتدّ إلى 331 بكسل
+   بينما الشاشة 294 — آخر عنصرين خارج الرؤية تمامًا.
+
+   السبب مجموع ثلاثة قرارات، كلٌّ سليم وحده:
+     • ‏.fixed-nav-inner يحجز `padding: 15vh … 10vh` — رُبع الشاشة حشوًا
+     • ‏.nav-row قابل للانكماش (`flex: 1 1 auto`) بلا `overflow`
+     • ‏.social-row في الأسفل يزاحم الروابط على ما تبقّى
+   على شاشة طويلة لا يظهر شيء. وعلى نافذة قصيرة — تكبير ويندوز 125٪،
+   أو شريط مهام، أو نافذة غير مكبّرة — ينهار الثلاثة معًا.
+
+   الإصلاح لا يغيّر شيئًا فوق 640 بكسل ارتفاعًا. */
+@media screen and (max-height: 640px) {
+   /* حشو مقيس بالبكسل لا بـvh: 15vh على شاشة 300 = 45 بكسل تختفي بلا فائدة */
+   .fixed-nav-inner {
+      padding-top: clamp(1.5rem, 6vh, 5rem);
+      padding-bottom: clamp(1rem, 4vh, 3.5rem);
+   }
+
+   /* القائمة تُمرَّر بدل أن تُقصّ. ‏-webkit-overflow-scrolling للمس على iOS. */
+   .fixed-nav .nav-row {
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+   }
+
+   /* ⚠️ الأهمّ: العنصر لا ينكمش. بدونه يضغط الفليكس ارتفاع الزرّ فيفيض
+      نصّه على العنصر التالي — وهو التداخل الذي رآه العميل. */
+   .fixed-nav .links-wrap > li {
+      flex: 0 0 auto;
+   }
+
+   .fixed-nav .links-wrap {
+      padding-bottom: 1em;
+   }
+}
+
+/* شاشة قصيرة جدًّا: نُقلّص الخطّ قليلًا كي تتّسع الثمانية بلا تمرير */
+@media screen and (max-height: 460px) {
+   .fixed-nav .links-wrap .btn-link .btn-click {
+      height: 2.6em;
+   }
+
+   .fixed-nav-inner {
+      padding-top: clamp(1rem, 4vh, 2.5rem);
+   }
+}
