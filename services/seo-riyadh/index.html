@@ -42,12 +42,103 @@
    </script>
    <!-- Service structured data -->
    <script type="application/ld+json">
-   {"@context":"https://schema.org","@type":"Service","serviceType":"SEO & Search Engine Optimization","provider":{"@type":"Organization","@id":"https://zero2one.sa/#organization","name":"ZERO 2 ONE","url":"https://zero2one.sa/"},"areaServed":"SA","description":"Rank higher and get found by customers already searching. Technical SEO, content and local search for organic growth in Riyadh, Saudi Arabia.","url":"https://zero2one.sa/services/seo-riyadh/"}
+{
+   "@context": "https://schema.org",
+   "@type": "Service",
+   "serviceType": "SEO & Search Engine Optimization",
+   "provider": {
+      "@type": "Organization",
+      "@id": "https://zero2one.sa/#organization",
+      "name": "ZERO 2 ONE",
+      "url": "https://zero2one.sa/"
+   },
+   "areaServed": "SA",
+   "description": "Rank higher and get found by customers already searching. Technical SEO, content and local search for organic growth in Riyadh, Saudi Arabia.",
+   "url": "https://zero2one.sa/services/seo-riyadh/",
+   "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "SEO Plans",
+      "itemListElement": [
+         {
+            "@type": "Offer",
+            "name": "Launch Plan",
+            "priceSpecification": {
+               "@type": "UnitPriceSpecification",
+               "price": "2500",
+               "priceCurrency": "SAR",
+               "unitCode": "MON",
+               "valueAddedTaxIncluded": false
+            },
+            "availability": "https://schema.org/InStock",
+            "url": "https://zero2one.sa/services/seo-riyadh/",
+            "itemOffered": {
+               "@type": "Service",
+               "name": "Launch Plan",
+               "serviceType": "Search Engine Optimization"
+            }
+         },
+         {
+            "@type": "Offer",
+            "name": "Growth Plan",
+            "priceSpecification": {
+               "@type": "UnitPriceSpecification",
+               "price": "4000",
+               "priceCurrency": "SAR",
+               "unitCode": "MON",
+               "valueAddedTaxIncluded": false
+            },
+            "availability": "https://schema.org/InStock",
+            "url": "https://zero2one.sa/services/seo-riyadh/",
+            "itemOffered": {
+               "@type": "Service",
+               "name": "Growth Plan",
+               "serviceType": "Search Engine Optimization"
+            }
+         },
+         {
+            "@type": "Offer",
+            "name": "Professional Plan",
+            "priceSpecification": {
+               "@type": "UnitPriceSpecification",
+               "price": "7000",
+               "priceCurrency": "SAR",
+               "unitCode": "MON",
+               "valueAddedTaxIncluded": false
+            },
+            "availability": "https://schema.org/InStock",
+            "url": "https://zero2one.sa/services/seo-riyadh/",
+            "itemOffered": {
+               "@type": "Service",
+               "name": "Professional Plan",
+               "serviceType": "Search Engine Optimization"
+            }
+         },
+         {
+            "@type": "Offer",
+            "name": "Leadership Plan",
+            "priceSpecification": {
+               "@type": "UnitPriceSpecification",
+               "price": "10000",
+               "priceCurrency": "SAR",
+               "unitCode": "MON",
+               "valueAddedTaxIncluded": false
+            },
+            "availability": "https://schema.org/InStock",
+            "url": "https://zero2one.sa/services/seo-riyadh/",
+            "itemOffered": {
+               "@type": "Service",
+               "name": "Leadership Plan",
+               "serviceType": "Search Engine Optimization"
+            }
+         }
+      ]
+   }
+}
    </script>
 
    <link rel="preload" as="font" href="/assets/fonts/NeueMontreal-Regular.otf" type="font/otf"
       crossorigin="anonymous">
-   <link href="/assets/css/bundle.min.css?v=9c1d7f6f" rel="stylesheet">
+   <link href="/assets/css/bundle.min.css?v=1ba6f8bd" rel="stylesheet">
    <!-- Analytics — deferred.
         dataLayer and gtag() exist immediately, so nothing that fires early is
         lost: events queue and are replayed when the tag scripts arrive. The
@@ -443,6 +534,10 @@
                            <p>Create search-focused content that builds trust and attracts qualified traffic.</p>
                         </div>
                         <div class="case-include-item">
+                           <h3>Backlink Building</h3>
+                           <p>Earn links from credible, relevant sites — one of the strongest signals Google uses to judge a site&rsquo;s authority.</p>
+                        </div>
+                        <div class="case-include-item">
                            <h3>Technical SEO Optimization</h3>
                            <p>Improve speed, indexing, website architecture, and technical performance.</p>
                         </div>
@@ -473,6 +568,114 @@
                            <span class="overlay case-image-tint"></span>
                            <div class="case-image-label">SEO</div>
                         </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!-- ===== SEO PLANS — pricing, the highest purchase-intent block on the page ===== -->
+            <section class="section case-overview seo-plans once-in" data-scroll-section>
+               <div class="container medium">
+                  <div class="row">
+                     <div class="flex-col fade-in animate">
+                        <h2 class="case-overview-sub">SEO Plans Built Around Your Project</h2>
+                        <p>Whether you run a company website, an online store, a digital platform, a services site, or any other business, there is a plan that matches your goals and the size of your project.</p>
+                        <p>We start by analysing your site and understanding what it needs, then build an integrated SEO plan that increases your visibility in Google, reaches more customers, and strengthens your ability to compete.</p>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="flex-col fade-in animate">
+                        <div class="seo-plans-grid">
+                        <article class="seo-plan">
+                           <p class="seo-plan-audience">For new websites and small stores</p>
+                           <h3 class="seo-plan-name">Launch Plan</h3>
+                           <p class="seo-plan-price"><span class="seo-plan-amount">2,500</span>
+                              <span class="seo-plan-unit">SAR / month</span>
+                           </p>
+                           <p class="seo-plan-lead">Prepares your site or store with a solid SEO foundation so it can start appearing in search results and building a steady digital presence.</p>
+                           <ul class="seo-plan-list">
+                                 <li>Website audit and opportunity discovery</li>
+                                 <li>Optimisation of your core pages or product pages</li>
+                                 <li>Keyword research and targeting</li>
+                                 <li>SEO-aligned content writing</li>
+                                 <li>Performance and progress tracking</li>
+                           </ul>
+                           <p class="seo-plan-fit">Right for you if you want to build a solid base and launch the correct way.</p>
+                           <div class="btn btn-normal seo-plan-cta">
+                              <a href="/contact/" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                 <div class="btn-fill"></div>
+                                 <span class="btn-text"><span class="btn-text-inner">Request This Plan</span></span>
+                              </a>
+                           </div>
+                        </article>
+                        <article class="seo-plan seo-plan-featured">
+                           <p class="seo-plan-audience">For sites and stores chasing more traffic and sales</p>
+                           <h3 class="seo-plan-name">Growth Plan</h3>
+                           <p class="seo-plan-price"><span class="seo-plan-amount">4,000</span>
+                              <span class="seo-plan-unit">SAR / month</span>
+                           </p>
+                           <p class="seo-plan-lead">Puts your site in front of customers searching for your products or services, and widens your reach to an audience that matters without wasted spend.</p>
+                           <ul class="seo-plan-list">
+                                 <li>Everything in the Launch Plan</li>
+                                 <li>Advanced content strategy</li>
+                                 <li>SEO-aligned article writing</li>
+                                 <li>Product and category page optimisation</li>
+                                 <li>High-quality backlink building</li>
+                                 <li>Regular performance reports</li>
+                           </ul>
+                           <p class="seo-plan-fit">Right for projects aiming to grow traffic and compete harder in the market.</p>
+                           <div class="btn btn-normal seo-plan-cta">
+                              <a href="/contact/" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                 <div class="btn-fill"></div>
+                                 <span class="btn-text"><span class="btn-text-inner">Request This Plan</span></span>
+                              </a>
+                           </div>
+                        </article>
+                        <article class="seo-plan">
+                           <p class="seo-plan-audience">For competitive websites and brands</p>
+                           <h3 class="seo-plan-name">Professional Plan</h3>
+                           <p class="seo-plan-price"><span class="seo-plan-amount">7,000</span>
+                              <span class="seo-plan-unit">SAR / month</span>
+                           </p>
+                           <p class="seo-plan-lead">An advanced SEO strategy that helps your brand compete against established sites and expand its presence in search results.</p>
+                           <ul class="seo-plan-list">
+                                 <li>Comprehensive content strategy</li>
+                                 <li>Backlink building from credible sources</li>
+                                 <li>Competitor analysis</li>
+                                 <li>Advanced technical optimisation</li>
+                                 <li>Continuous results monitoring</li>
+                           </ul>
+                           <p class="seo-plan-fit">Right for brands targeting a larger share of the market and a stronger digital presence.</p>
+                           <div class="btn btn-normal seo-plan-cta">
+                              <a href="/contact/" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                 <div class="btn-fill"></div>
+                                 <span class="btn-text"><span class="btn-text-inner">Request This Plan</span></span>
+                              </a>
+                           </div>
+                        </article>
+                        <article class="seo-plan">
+                           <p class="seo-plan-audience">For large stores and major brands</p>
+                           <h3 class="seo-plan-name">Leadership Plan</h3>
+                           <p class="seo-plan-price"><span class="seo-plan-amount">10,000</span>
+                              <span class="seo-plan-unit">SAR / month</span>
+                           </p>
+                           <p class="seo-plan-lead">A complete SEO solution for projects that want to expand their digital presence and build a durable search channel.</p>
+                           <ul class="seo-plan-list">
+                                 <li>End-to-end SEO strategy management</li>
+                                 <li>Full optimisation across every part of the site</li>
+                                 <li>Broad, advanced content plans</li>
+                                 <li>Site authority and domain strengthening</li>
+                                 <li>Advanced reporting and analytics</li>
+                           </ul>
+                           <p class="seo-plan-fit">Turns search engines into a steady source of demand for your business.</p>
+                           <div class="btn btn-normal seo-plan-cta">
+                              <a href="/contact/" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                 <div class="btn-fill"></div>
+                                 <span class="btn-text"><span class="btn-text-inner">Request This Plan</span></span>
+                              </a>
+                           </div>
+                        </article>
+                        </div>
+                        <p class="seo-plans-note">Every plan is monthly with no long-term lock-in. Prices exclude VAT.</p>
                      </div>
                   </div>
                </div>

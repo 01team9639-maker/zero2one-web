@@ -1285,6 +1285,102 @@ main.touch .main-wrap {
    }
 }
 
+/* ===== باقات السيو — بطاقات الأسعار =====
+   أعلى كتلة نيّةً شرائية في الصفحة، وكانت أكبر فجوة في تدقيق الموقع:
+   «لا أسعار، لا مدة، لا حالات» — فصفحة الخدمة تشرح ما هي الخدمة ولا
+   تشرح لماذا تختارها ولا بكم.
+
+   الشبكة تتدرّج بالمحتوى لا بأسماء الأجهزة: البطاقة تحتاج ~17rem لتُقرأ،
+   فأربعٌ تحتاج ~72rem مع الفجوات. auto-fit ينزل إلى ثلاث فاثنتين فواحدة
+   بلا استعلام وسائط واحد — ولا عتبة يقف زائرٌ فوقها. */
+.seo-plans-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+   gap: clamp(1rem, 2vw, 1.75rem);
+   margin-block-start: clamp(2rem, 4vw, 3.5rem);
+}
+
+.seo-plan {
+   display: flex;
+   flex-direction: column;
+   padding: clamp(1.5rem, 2.6vw, 2.25rem);
+   border-radius: var(--radius, 1.5rem);
+   box-shadow: inset 0 0 0 1px var(--color-border);
+   background: rgb(255 255 255 / 45%);
+}
+
+/* الباقة الموصى بها تُميَّز بالحدّ لا بالحجم: تكبيرها يكسر محاذاة الشبكة
+   على الشاشات الضيّقة، والحدّ يقرأه الزائر فورًا بلا كسر. */
+.seo-plan-featured {
+   box-shadow: inset 0 0 0 2px #f9460e;
+}
+
+.seo-plan-audience {
+   margin: 0 0 .6em;
+   font-size: .78em;
+   letter-spacing: .08em;
+   text-transform: uppercase;
+   opacity: .62;
+}
+
+.seo-plan-name {
+   margin: 0 0 .35em;
+   font-size: clamp(1.25rem, 1.8vw, 1.6rem);
+   line-height: 1.2;
+}
+
+.seo-plan-price {
+   margin: 0 0 1em;
+   display: flex;
+   align-items: baseline;
+   flex-wrap: wrap;
+   gap: .4em;
+}
+
+.seo-plan-amount {
+   font-size: clamp(1.9rem, 3vw, 2.6rem);
+   line-height: 1;
+   color: #f9460e;
+   font-variant-numeric: tabular-nums;
+   /* الرقم لاتيني في اللغتين — الاتجاه يُعزل كي لا تنقلب الفاصلة في RTL */
+   direction: ltr;
+   unicode-bidi: isolate;
+}
+
+.seo-plan-unit {
+   font-size: .82em;
+   opacity: .7;
+}
+
+.seo-plan-lead {
+   margin: 0 0 1.2em;
+}
+
+.seo-plan-list {
+   margin: 0 0 1.4em;
+   padding-inline-start: 1.15em;
+}
+
+.seo-plan-list li {
+   margin-block-end: .45em;
+}
+
+.seo-plan-fit {
+   margin: auto 0 1.4em;
+   font-size: .9em;
+   opacity: .78;
+}
+
+.seo-plan-cta {
+   margin-block-start: auto;
+}
+
+.seo-plans-note {
+   margin-block-start: clamp(1.5rem, 3vw, 2.5rem);
+   font-size: .9em;
+   opacity: .7;
+}
+
 /* ===== SELECTED WORK — قسم البرهان في الصفحة الرئيسية =====
    خلفية داكنة تفصله بصريًّا عمّا حوله، والنصّ في عمود والصورة في الآخر.
    يعتمد .theme-dark من الموقع لألوان النصّ فلا نعيد تعريفها هنا. */
