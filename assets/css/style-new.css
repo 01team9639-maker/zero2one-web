@@ -1315,14 +1315,6 @@ main.touch .main-wrap {
    box-shadow: inset 0 0 0 2px #f9460e;
 }
 
-.seo-plan-audience {
-   margin: 0 0 .6em;
-   font-size: .78em;
-   letter-spacing: .08em;
-   text-transform: uppercase;
-   opacity: .62;
-}
-
 .seo-plan-name {
    margin: 0 0 .35em;
    font-size: clamp(1.25rem, 1.8vw, 1.6rem);
@@ -1356,8 +1348,50 @@ main.touch .main-wrap {
    margin: 0 0 1.2em;
 }
 
+/* التفاصيل تتوسّع في مكانها — <details> لا جافاسكربت:
+   تعمل بلا سكربت، ويعلنها قارئ الشاشة كزرّ قابل للطيّ، والمحتوى يبقى
+   في المستند فيقرأه جوجل كاملًا. البطاقة المطويّة تعرض ما يقرّر به
+   الزائر — الاسم والسعر والوصف ولمن تناسب — والباقي عند الطلب. */
+.seo-plan-more {
+   margin-block-end: 1.4em;
+}
+
+.seo-plan-toggle {
+   display: flex;
+   align-items: center;
+   gap: .5em;
+   cursor: pointer;
+   font-size: .92em;
+   font-weight: 500;
+   color: #f9460e;
+   list-style: none;
+   padding-block: .3em;
+}
+
+/* علامة المثلّث الافتراضية تختلف بين المتصفّحات وتتجاهل الاتجاه */
+.seo-plan-toggle::-webkit-details-marker {
+   display: none;
+}
+
+.seo-plan-toggle::after {
+   content: '';
+   width: .5em;
+   height: .5em;
+   border-inline-end: 2px solid currentColor;
+   border-block-end: 2px solid currentColor;
+   transform: rotate(45deg);
+   transform-origin: center;
+   transition: transform var(--animation-primary, .35s cubic-bezier(.7, 0, .3, 1));
+   margin-block-start: -.25em;
+}
+
+.seo-plan-more[open] .seo-plan-toggle::after {
+   transform: rotate(225deg);
+   margin-block-start: .15em;
+}
+
 .seo-plan-list {
-   margin: 0 0 1.4em;
+   margin: .9em 0 0;
    padding-inline-start: 1.15em;
 }
 
@@ -1366,7 +1400,7 @@ main.touch .main-wrap {
 }
 
 .seo-plan-fit {
-   margin: auto 0 1.4em;
+   margin: 0 0 1.4em;
    font-size: .9em;
    opacity: .78;
 }
