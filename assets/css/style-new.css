@@ -7510,7 +7510,6 @@ body.lang-ar .work-entry-quote footer {
    /* برتقالي الهوية #f9460e لا #ff4a17 المقترح: الأول مستعمل في كل
       الموقع، وإدخال برتقالي ثانٍ يقارِبه يجعل الصفحة تبدو قطعةً من
       موقع آخر. */
-   --seo-page-bg: #eadbd3;
    --seo-surface: #fffdfb;
    --seo-text: #222724;
    --seo-muted: #626560;
@@ -7531,21 +7530,21 @@ body.lang-ar .work-entry-quote footer {
    padding-block: 0;
 }
 
-/* ── الشريط الدافئ الذي يحتضن البطاقة ── */
+/* ── الـHero على خلفية الصفحة نفسها ──
+   كان بطاقةً بيضاء فوق شريط دافئ #eadbd3، فبدا لوحًا طافيًا منفصلاً عن
+   الصفحة. أُزيل الاثنان: لا خلفية ولا حواف ولا ظلّ ولا حشوة داخلية —
+   المحتوى يجلس على كريمي الموقع كبقية الأقسام.
+   والمحاذاة بالبنية لا بالحساب: الـHero موضوع داخل .container.medium
+   نفسها التي تستعملها بقية الأقسام. جرّبنا حسابها بـcalc(100% -
+   var(--container-padding) * 2) فخرجت 115px بدل 230 — لأن المتغيّر
+   بوحدة em فيختلف باختلاف حجم خطّ العنصر الذي يقرؤه. البنية لا تكذب. */
 .seo-hero-shell {
-   background: var(--seo-page-bg);
-   padding-block: clamp(28px, 5vw, 72px);
+   padding-block: clamp(24px, 4vw, 56px);
    padding-inline: 0;
 }
 
 .seo-hero-card {
-   width: min(1320px, calc(100% - 48px));
-   margin-inline: auto;
-   background: var(--seo-surface);
-   border-radius: var(--seo-radius-lg);
-   padding: clamp(24px, 4vw, 64px);
-   /* ظلّ واحد خفيف — لا زجاج ولا طبقات */
-   box-shadow: 0 24px 60px rgb(34 39 36 / 7%);
+   width: 100%;
    color: var(--seo-text);
 }
 
@@ -7933,7 +7932,6 @@ html[lang="ar"] .seo-service-page .seo-outcome-panel .case-outcome { line-height
 /* ══ التجاوب ══ */
 
 @media (max-width: 1024px) {
-   .seo-hero-card { width: min(1320px, calc(100% - 32px)); }
    .seo-hero-grid { grid-template-columns: minmax(0, 1fr); }
    .seo-bento { grid-template-columns: repeat(2, minmax(0, 1fr)); }
    .seo-bento-dark { grid-column: 1 / -1; }
@@ -7942,13 +7940,7 @@ html[lang="ar"] .seo-service-page .seo-outcome-panel .case-outcome { line-height
 }
 
 @media (max-width: 768px) {
-   .seo-hero-shell { padding-block: 20px; }
-   /* لا يقلّ الهامش الجانبي عن 18px */
-   .seo-hero-card {
-      width: calc(100% - 36px);
-      border-radius: 26px;
-      padding: 22px 18px;
-   }
+   .seo-hero-shell { padding-block: 18px; }
    /* الترتيب المطلوب: نصّ ثم أزرار ثم صورة ثم البطاقات */
    .seo-hero-grid { gap: 22px; }
    .seo-hero-visual { order: 2; }
