@@ -1305,8 +1305,8 @@ main.touch .main-wrap {
    وفقرات المقدّمة تبقى في صفّها الضيّق — عرض القراءة وعرض المقارنة
    حاجتان مختلفتان. */
 .seo-plans-row {
-   width: min(94vw, 96rem);
-   margin-inline: calc((100% - min(94vw, 96rem)) / 2);
+   width: min(94vw, 100rem);
+   margin-inline: calc((100% - min(94vw, 100rem)) / 2);
 }
 
 /* توسيع الصفّ وحده لا يكفي: القالب يفرض
@@ -1325,7 +1325,10 @@ main.touch .main-wrap {
 
 .seo-plans-grid {
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+   /* أربعة أعمدة صراحةً لا auto-fit: بعد توسيع الصفحة إلى 100rem صار
+      المسار يسع خمسة، فيبقى مسار فارغ في الطرف لأربع بطاقات. الصريح
+      يقول ما نريد، والوسائط أدناه تتكفّل بالضيّق. */
+   grid-template-columns: repeat(4, minmax(0, 1fr));
    gap: clamp(1rem, 2vw, 1.75rem);
    margin-block-start: clamp(2rem, 4vw, 3.5rem);
    /* السقف أربعة لا مفتوح: على شاشة 1920 كان auto-fit يفتح خمسة مسارات
@@ -1335,7 +1338,6 @@ main.touch .main-wrap {
       و88rem (1408px) محسوبة لا مقدَّرة: أربعة أعمدة بحدّها الأدنى 17rem
       وثلاث فجوات تحتاج 1172px، وخمسة تحتاج 1472. فأي رقم بين الاثنين
       يسع أربعةً بسعة ويمنع الخامس. */
-   max-width: 88rem;
    margin-inline: auto;
 
 }
@@ -7534,17 +7536,18 @@ body.lang-ar .work-entry-quote footer {
    كان بطاقةً بيضاء فوق شريط دافئ #eadbd3، فبدا لوحًا طافيًا منفصلاً عن
    الصفحة. أُزيل الاثنان: لا خلفية ولا حواف ولا ظلّ ولا حشوة داخلية —
    المحتوى يجلس على كريمي الموقع كبقية الأقسام.
-   والمحاذاة بالبنية لا بالحساب: الـHero موضوع داخل .container.medium
-   نفسها التي تستعملها بقية الأقسام. جرّبنا حسابها بـcalc(100% -
-   var(--container-padding) * 2) فخرجت 115px بدل 230 — لأن المتغيّر
-   بوحدة em فيختلف باختلاف حجم خطّ العنصر الذي يقرؤه. البنية لا تكذب. */
+   والعرض 94vw لا عمود الحاوية: عمود .container.medium يعطي 979px عند
+   1440 و1292 عند 1920، وهو ضيّق على تخطيط من عمودين وثلاث بطاقات.
+   ‏94vw يعطي 1354 و1600 (بسقف 100rem) — العرض نفسه الذي تستعمله شبكة
+   الباقات أصلًا، فتتّحد الصفحة على عرض واحد واسع بدل عرضين. */
 .seo-hero-shell {
    padding-block: clamp(24px, 4vw, 56px);
    padding-inline: 0;
 }
 
 .seo-hero-card {
-   width: 100%;
+   width: min(94vw, 100rem);
+   margin-inline: auto;
    color: var(--seo-text);
 }
 
@@ -7571,7 +7574,7 @@ body.lang-ar .work-entry-quote footer {
       تُلقيه على خمسة أسطر في عمود عرضه ~530px. قِسناه: 66px ⟵ 5 أسطر،
       و56px ⟵ 4. والارتفاع 1.0 لا 0.98 ليتّسع الخطّ الزخرفي تحت
       «on Google» بلا أن يلامس السطر التالي. */
-   font-size: clamp(34px, 3.9vw, 58px);
+   font-size: clamp(36px, 4.5vw, 76px);
    line-height: 1;
    letter-spacing: -.04em;
    font-weight: 700;
@@ -7602,7 +7605,7 @@ body.lang-ar .work-entry-quote footer {
 .seo-hero-lead {
    margin: 0 0 clamp(22px, 2.6vw, 34px);
    max-width: 46ch;
-   font-size: clamp(15px, 1.05vw, 17px);
+   font-size: clamp(16px, 1.2vw, 20px);
    line-height: 1.6;
    color: var(--seo-muted);
 }
@@ -7618,10 +7621,10 @@ body.lang-ar .work-entry-quote footer {
    display: inline-flex;
    align-items: center;
    justify-content: center;
-   min-height: 52px;
-   padding: 0 clamp(20px, 2vw, 30px);
+   min-height: 58px;
+   padding: 0 clamp(24px, 2.2vw, 36px);
    border-radius: 999px;
-   font-size: clamp(14px, 1vw, 16px);
+   font-size: clamp(15px, 1.05vw, 18px);
    font-weight: 600;
    line-height: 1.2;
    text-align: center;
@@ -7678,8 +7681,8 @@ body.lang-ar .work-entry-quote footer {
    position: absolute;
    inset-inline-end: clamp(12px, 2vw, 22px);
    inset-block-end: clamp(12px, 2vw, 22px);
-   width: min(268px, 62%);
-   padding: 16px 18px;
+   width: min(320px, 58%);
+   padding: 18px 22px;
    background: var(--seo-surface);
    border-radius: 18px;
    box-shadow: 0 14px 34px rgb(34 39 36 / 14%);
@@ -7719,9 +7722,9 @@ body.lang-ar .work-entry-quote footer {
    flex-direction: column;
    justify-content: space-between;
    gap: 18px;
-   min-height: clamp(140px, 12vw, 172px);
-   padding: clamp(18px, 2vw, 28px);
-   border-radius: 26px;
+   min-height: clamp(150px, 13vw, 210px);
+   padding: clamp(20px, 2.2vw, 36px);
+   border-radius: 28px;
 }
 
 .seo-bento-dark {
@@ -7758,7 +7761,7 @@ body.lang-ar .work-entry-quote footer {
 
 .seo-bento-title {
    margin: 0 0 6px;
-   font-size: clamp(19px, 1.9vw, 28px);
+   font-size: clamp(21px, 2.2vw, 34px);
    font-weight: 700;
    line-height: 1.15;
    letter-spacing: -.02em;
@@ -7766,7 +7769,7 @@ body.lang-ar .work-entry-quote footer {
 
 .seo-bento-text {
    margin: 0;
-   font-size: clamp(12px, .95vw, 14px);
+   font-size: clamp(13px, 1.05vw, 16px);
    line-height: 1.5;
    opacity: .82;
 }
@@ -7776,7 +7779,7 @@ body.lang-ar .work-entry-quote footer {
 
 .seo-bento-number {
    margin: 0;
-   font-size: clamp(38px, 4vw, 62px);
+   font-size: clamp(44px, 4.8vw, 78px);
    font-weight: 700;
    line-height: 1;
    letter-spacing: -.04em;
@@ -7786,7 +7789,7 @@ body.lang-ar .work-entry-quote footer {
 
 .seo-bento-label {
    margin: 0;
-   font-size: clamp(13px, 1.05vw, 17px);
+   font-size: clamp(14px, 1.15vw, 19px);
    font-weight: 600;
 }
 
@@ -7912,6 +7915,49 @@ body.lang-ar .work-entry-quote footer {
    gap: 6px;
 }
 
+@media (max-width: 1024px) {
+   .seo-plans-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 640px) {
+   .seo-plans-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* الأقسام التالية تأخذ عرض الـHero نفسه.
+   كانت 899px (الخدمات) و979 (المراحل) داخل عمود الحاوية، بينما الـHero
+   وشبكة الباقات 1354 — عرضان في صفحة واحدة يقرأهما العين انكسارًا.
+   والحيلة هي حيلة .seo-plans-row نفسها: هامش سالب محسوب يُخرج العنصر
+   من عمود أبيه بلا لمس القالب. */
+/* الهامش السالب يتمركز على **الأب** لا على النافذة. و.flex-col في قسم
+   المقدّمة عرضه 899 داخل سطر عرضه 979، فمركزه 679.5 بينما مركز النافذة
+   720 — فخرجت شبكة الخدمات عند x=3 بدل 43. العلاج في الأب: يملأ سطره
+   فيتطابق المركزان. (نصّ المقدّمة يبقى مقروءًا بـmax-width على الفقرة
+   نفسها، فلا يتمدّد معه.) */
+.seo-service-page .case-overview .row .flex-col {
+   width: 100%;
+   max-width: none;
+}
+
+.seo-service-page .case-includes,
+.seo-service-page .process-list,
+.seo-service-page .seo-outcome-panel {
+   width: min(94vw, 100rem);
+   margin-inline: calc((100% - min(94vw, 100rem)) / 2);
+}
+
+.seo-service-page .case-include-item {
+   padding: clamp(20px, 2.1vw, 32px);
+}
+
+.seo-service-page .case-include-item h3 {
+   font-size: clamp(17px, 1.35vw, 22px);
+}
+
+.seo-service-page .process-list li {
+   padding: clamp(20px, 2vw, 32px);
+   font-size: clamp(14px, 1.1vw, 17px);
+}
+
 /* ══ العربية ══
    قياسان لا تقديران:
    ‏١) line-height:1 يكفي اللاتينية ويُركِب العربية بعضها — «منافسيك»
@@ -7941,6 +7987,16 @@ html[lang="ar"] .seo-service-page .seo-outcome-panel .case-outcome { line-height
 
 @media (max-width: 768px) {
    .seo-hero-shell { padding-block: 18px; }
+   /* 94vw يترك 11.7px فقط على شاشة 390 — دون الحدّ الأدنى 18. فيُثبَّت
+      الهامش بـ36px مقسومة على الجانبين بدل نسبة من العرض. */
+   .seo-hero-card,
+   .seo-service-page .case-includes,
+   .seo-service-page .process-list,
+   .seo-service-page .seo-outcome-panel,
+   .seo-plans-row {
+      width: calc(100% - 36px);
+      margin-inline: auto;
+   }
    /* الترتيب المطلوب: نصّ ثم أزرار ثم صورة ثم البطاقات */
    .seo-hero-grid { gap: 22px; }
    .seo-hero-visual { order: 2; }
