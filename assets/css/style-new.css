@@ -7554,7 +7554,11 @@ body.lang-ar .work-entry-quote footer {
 /* ── شبكة الـHero ── */
 .seo-hero-grid {
    display: grid;
-   grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+   /* العمود المرئي أضيق من النصّي، عكس ما كان: الصورة الجديدة رأسية
+      1024×1536 (نسبة 2:3)، فلو أخذت 1.08fr لخرجت بارتفاع ~1050px
+      تطغى على الهيرو. و0.75fr تعطيها ~489×733 عند 1440، ويكسب النصّ
+      العرض الفائض فيتّسع العنوان والزرّان. */
+   grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr);
    gap: clamp(24px, 3.5vw, 56px);
    align-items: center;
 }
@@ -7670,7 +7674,9 @@ body.lang-ar .work-entry-quote footer {
    margin: 0;
    border-radius: var(--seo-radius-md);
    overflow: hidden;
-   aspect-ratio: 4 / 3;
+   /* 2:3 تطابق نسبة الصورة نفسها، فلا يقصّ object-fit شيئًا. وهي صورة
+      تحمل نصًّا وشعارًا — أي قصٍّ فيها يقطع كلامًا لا خلفية. */
+   aspect-ratio: 2 / 3;
    background: var(--seo-soft-accent);
 }
 
