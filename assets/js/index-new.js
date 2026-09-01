@@ -1513,6 +1513,76 @@ function initScrolltriggerAnimations() {
     });
   }
 
+  // Scrolltrigger Animation : Hero image (صفحة SEO)
+  //
+  // نمطان معًا: دخولٌ ينحسر فيه التكبير مرّة واحدة عند الوصول، وانزياح
+  // خفيف مربوط بالتمرير. الأوّل وحده لا يُحسّ في هيرو ظاهر أصلًا عند
+  // التحميل، والثاني وحده يبدأ من منتصف تقدّمه لأن الهيرو أعلى الصفحة.
+  //
+  // ولا نُعيد استعمال .case-image-photo رغم تطابق الفكرة: صنفه مرتبط
+  // بـ.single-image التي تفرض padding-top:125% (نسبة 4:5)، ونسبتنا 4:3.
+  if (document.querySelector(".seo-hero-figure img")) {
+    var stillHero = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    $(".seo-hero-figure img").each(function () {
+      var img = this;
+      var figure = $(this).closest(".seo-hero-figure");
+      if (stillHero) return;
+
+      gsap.fromTo(img, { scale: 1.16 }, {
+        scale: 1,
+        duration: 1.8,
+        ease: "expo.out",
+        delay: 0.35
+      });
+
+      gsap.to(img, {
+        yPercent: -6,
+        ease: "none",
+        scrollTrigger: {
+          trigger: figure,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 0.6
+        }
+      });
+    });
+  }
+
+  // Animation : Hero counters (صفحة SEO)
+  //
+  // نفس تقنية عدّاد .stat-number: نُحرّك كائنًا وسيطًا لا النصّ، فالرقم
+  // يبقى مقروءًا لقارئ الشاشة بعد انتهاء الحركة. ومعالجة RTL نفسها —
+  // عزل من اليسار إلى اليمين حتى يُقرأ الرقم كما في الإنجليزية.
+  //
+  // وبلا ScrollTrigger عمدًا، خلافًا لعدّاد .stat-number: هذا في الهيرو
+  // فوق الطيّة، ويُبنى المُشغِّل بينما `main .once-in` مزاح 50vh فيسجّل
+  // العنصر «قبل نقطة البداية» ولا يُطلق أبدًا. قِسناه: الرقمان تجمّدا
+  // عند 1 و0 من الثانية الأولى وبقيا هناك سبع ثوانٍ. والتأخير 1.2s
+  // يوافق انحسار ستارة المقدّمة.
+  if (document.querySelector(".seo-bento-number")) {
+    $(".seo-bento-number").each(function () {
+      var el = this;
+      var target = parseInt((el.textContent || '').trim(), 10);
+      if (!target) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      var counter = { val: 0 };
+      el.textContent = '0';
+
+      gsap.to(counter, {
+        val: target,
+        duration: 1.6,
+        ease: "power2.out",
+        delay: 1.2,
+        onUpdate: function () {
+          var text = String(Math.round(counter.val));
+          el.textContent = document.body.classList.contains('lang-ar')
+            ? '\u2066' + text + '\u2069'
+            : text;
+        }
+      });
+    });
+  }
+
   if (document.querySelector(".footer-wrap")) {
     // Scrolltrigger Animation : Footer + hamburger
     $(".footer-wrap").each(function (index) {

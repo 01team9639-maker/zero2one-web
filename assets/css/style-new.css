@@ -7610,50 +7610,55 @@ body.lang-ar .work-entry-quote footer {
    color: var(--seo-muted);
 }
 
-/* ── الأزرار ── */
+/* ── الأزرار: مكوّن القالب .btn-normal بحشوته المنزلقة ──
+   الحشوة .btn-fill دائرة تنزلق لتغطّي الزرّ عند الهوفر — هي سلوك كل
+   أزرار الموقع. فبدل تقليدها بانتقال لوني، صار الزرّان المكوّن نفسه،
+   ولا يبقى لنا إلا اللون: الأساسي برتقالي في السكون وداكن عند الهوفر،
+   والثانوي محدَّد يمتلئ برتقاليًّا. */
 .seo-hero-actions {
    display: flex;
    flex-wrap: wrap;
    gap: 12px;
-}
-
-.seo-btn {
-   display: inline-flex;
    align-items: center;
-   justify-content: center;
+}
+
+/* ‏.btn في القالب يحمل margin-bottom بمقدار نصف gap-padding — منطقيّ
+   لأزرار مرصوصة رأسيًّا، ومُفسِد لصفّ أفقي: يزيح الزرّ الأوّل لأعلى مع
+   align-items:center فيبدوان غير متحاذيين حتى وهما في سطر واحد. */
+.seo-hero-cta {
+   margin-bottom: 0;
+}
+
+/* الارتفاع 58 كما هو، والحشوة الأفقية أضيق: قِسنا الزرّين 331+262+12
+   = 605px في عمود نصّ عرضه 599، فنزلا سطرين بفارق ستّة بكسلات. و22px
+   لكل جانب تعيدهما إلى 589 بمتنفّس عشرة. */
+.seo-hero-cta .btn-click {
    min-height: 58px;
-   padding: 0 clamp(24px, 2.2vw, 36px);
-   border-radius: 999px;
+   padding-inline: clamp(16px, 1.4vw, 22px);
+}
+
+.seo-hero-cta .btn-text-inner {
    font-size: clamp(15px, 1.05vw, 18px);
-   font-weight: 600;
-   line-height: 1.2;
-   text-align: center;
-   text-decoration: none;
-   transition: background-color .25s ease, color .25s ease,
-               border-color .25s ease, transform .25s ease;
 }
 
-.seo-btn-primary {
+/* الثانوي: محدَّد، وحشوته برتقالية */
+.seo-hero-cta .btn-click .btn-fill { background-color: var(--seo-accent); }
+.seo-hero-cta .btn-click:hover .btn-text-inner { color: #fffdfb; }
+
+/* الأساسي: برتقالي في السكون، والحشوة داكنة تنزلق فوقه.
+   ترتيبه بعد الثانوي لا قبله: المُحدِّدان متعادلان (0,3,0)، فلا يحسم
+   بينهما إلا ترتيب المصدر. قِسناه مقلوبًا: حشوة الزرّ الأساسي خرجت
+   برتقالية rgb(249,70,14) بدل الداكنة. */
+.seo-hero-cta-primary .btn-click {
    background: var(--seo-accent);
-   color: #fffdfb;
-   border: 1px solid var(--seo-accent);
-}
-
-.seo-btn-primary:hover { background: #d93a0c; border-color: #d93a0c; }
-
-.seo-btn-ghost {
-   background: transparent;
-   color: var(--seo-text);
-   border: 1px solid rgb(34 39 36 / 22%);
-}
-
-.seo-btn-ghost:hover {
    border-color: var(--seo-accent);
-   color: var(--seo-accent);
 }
 
-/* التركيز ظاهر بذاته لا بالتمرير — الزرّان يعملان بلوحة المفاتيح */
-.seo-btn:focus-visible {
+.seo-hero-cta-primary .btn-click .btn-text-inner { color: #fffdfb; }
+.seo-hero-cta-primary .btn-click .btn-fill { background-color: var(--seo-dark-card); }
+
+/* التركيز ظاهر بذاته — الزرّان يعملان بلوحة المفاتيح */
+.seo-hero-cta .btn-click:focus-visible {
    outline: 3px solid var(--seo-accent);
    outline-offset: 3px;
 }
@@ -8000,7 +8005,7 @@ html[lang="ar"] .seo-service-page .seo-outcome-panel .case-outcome { line-height
    /* الترتيب المطلوب: نصّ ثم أزرار ثم صورة ثم البطاقات */
    .seo-hero-grid { gap: 22px; }
    .seo-hero-visual { order: 2; }
-   .seo-hero-actions > .seo-btn { flex: 1 1 100%; }
+   .seo-hero-actions > .seo-hero-cta { flex: 1 1 100%; }
    .seo-hero-float {
       position: static;
       width: 100%;
@@ -8014,6 +8019,3 @@ html[lang="ar"] .seo-service-page .seo-outcome-panel .case-outcome { line-height
 }
 
 /* من لا يريد حركة لا يراها */
-@media (prefers-reduced-motion: reduce) {
-   .seo-btn { transition: none; }
-}
