@@ -687,6 +687,26 @@ function initHamburgerNav() {
     }, 100);
   });
 
+  // مراسي صفحة SEO — محصورة بها وحدها.
+  //
+  // القفز الافتراضي لا يعمل هنا: locomotive يزيح المحتوى بـtransform
+  // بينما النافذة نفسها لا تُمرَّر، فـhref="#..." لا يحرّك شيئًا. ولهذا
+  // يمرّ كل رابط داخلي عبر scroll.scrollTo مثل روابط القائمة أعلاه.
+  //
+  // ومن أطفأ الحركة في نظامه ينتقل فورًا بلا انزلاق.
+  $('.seo-service-page a[href^="#"]').on('click', function (e) {
+    var hash = $(this).attr('href');
+    if (!hash || hash.length < 2) return;
+    var target = document.querySelector(hash);
+    if (!target) return;
+    e.preventDefault();
+    var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    scroll.start();
+    scroll.scrollTo(target, still
+      ? { offset: 0, duration: 0 }
+      : { offset: 0, duration: 900, easing: [0.7, 0, 0.35, 1] });
+  });
+
 }
 
 /**
