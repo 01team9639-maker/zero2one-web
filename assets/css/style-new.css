@@ -7541,8 +7541,19 @@ body.lang-ar .work-entry-quote footer {
    ‏94vw يعطي 1354 و1600 (بسقف 100rem) — العرض نفسه الذي تستعمله شبكة
    الباقات أصلًا، فتتّحد الصفحة على عرض واحد واسع بدل عرضين. */
 .seo-hero-shell {
-   padding-block: clamp(24px, 4vw, 56px);
+   padding-block-start: clamp(24px, 4vw, 56px);
+   /* لا حشوة سفلى: القسم الذي يليه يحمل --section-padding أصلًا (104px
+      عند 1440)، فجمعُهما كان يفتح فجوة 194px تحت البطاقات — قِسناها.
+      الحشوة السفلى للهيرو تصير من نصيب القسم التالي وحده. */
+   padding-block-end: 0;
    padding-inline: 0;
+}
+
+/* وحشوة ذلك القسم نفسها تُخفَّض داخل نطاق الصفحة: 104px مصمّمة لصفحة
+   يبدأ قسمها الأوّل بعد رأسٍ فارغ، لا بعد بطاقات ممتلئة. فتصير الفجوة
+   الكلّية ~80px بدل 194 — فاصلٌ يُقرأ، لا فراغ. */
+.seo-service-page .case-overview {
+   padding-block-start: clamp(34px, 3.8vw, 52px);
 }
 
 .seo-hero-card {
@@ -8003,7 +8014,8 @@ html[lang="ar"] .seo-service-page .seo-outcome-panel .case-outcome { line-height
 }
 
 @media (max-width: 768px) {
-   .seo-hero-shell { padding-block: 18px; }
+   /* start وحدها: padding-block يعيد الحشوة السفلى التي أزلناها */
+   .seo-hero-shell { padding-block-start: 18px; }
    /* 94vw يترك 11.7px فقط على شاشة 390 — دون الحدّ الأدنى 18. فيُثبَّت
       الهامش بـ36px مقسومة على الجانبين بدل نسبة من العرض. */
    .seo-hero-card,
