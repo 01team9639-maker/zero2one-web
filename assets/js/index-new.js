@@ -1535,16 +1535,29 @@ function initScrolltriggerAnimations() {
         delay: 0.35
       });
 
-      gsap.to(img, {
-        yPercent: -6,
-        ease: "none",
-        scrollTrigger: {
-          trigger: figure,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: 0.6
-        }
-      });
+      // الانزياح بـobject-position لا بـyPercent.
+      //
+      // العنصر يملأ الإطار تمامًا (width/height 100% مع object-fit:cover)،
+      // فرفعه بـtransform يخرجه من الإطار: يُقصّ أعلاه ويُكشف فراغ أسفله.
+      // قِسناه: 7px عند التمرير صفر — أي قبل أي حركة، لأن البداية
+      // "top bottom" تكون مقطوعة أصلًا في هيرو أعلى الصفحة — ثم 11 و14
+      // و19px مع النزول.
+      //
+      // object-position يحرّك الصورة **داخل** إطارها بدل تحريك الإطار،
+      // فالتغطية كاملة دائمًا ولا يمكن أن ينكشف طرف. و"top top" تجعل
+      // التقدّم صفرًا عند التحميل لا منتصفه.
+      gsap.fromTo(img,
+        { objectPosition: "50% 42%" },
+        {
+          objectPosition: "50% 58%",
+          ease: "none",
+          scrollTrigger: {
+            trigger: figure,
+            start: "top top",
+            end: "bottom top",
+            scrub: 0.6
+          }
+        });
     });
   }
 
