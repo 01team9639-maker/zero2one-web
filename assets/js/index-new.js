@@ -1528,12 +1528,27 @@ function initScrolltriggerAnimations() {
       var figure = $(this).closest(".seo-hero-figure");
       if (stillHero) return;
 
-      gsap.fromTo(img, { scale: 1.16 }, {
-        scale: 1,
-        duration: 1.8,
-        ease: "expo.out",
-        delay: 0.35
-      });
+      // الدخول: ستارة تنكشف من الأسفل إلى الأعلى مع انحسار التكبير،
+      // ثم تطفو بطاقة «رفع ترتيب موقعك» بعدها بقليل.
+      //
+      // ‏clip-path على الإطار لا على الصورة، و«round» تُبقي الحواف
+      // الدائرية أثناء الكشف — بدونها ينكشف مستطيلٌ حادّ ثم يستدير فجأة
+      // في آخر إطار.
+      var radius = getComputedStyle(figure[0] || figure).borderRadius || "24px";
+      var tl = gsap.timeline({ delay: 0.35 });
+
+      tl.fromTo(figure,
+        { clipPath: "inset(0% 0% 100% 0% round " + radius + ")" },
+        { clipPath: "inset(0% 0% 0% 0% round " + radius + ")",
+          duration: 1.15, ease: "power3.inOut" }, 0);
+
+      tl.fromTo(img, { scale: 1.22 }, { scale: 1, duration: 1.9, ease: "expo.out" }, 0);
+
+      if (document.querySelector(".seo-hero-float")) {
+        tl.from(".seo-hero-float", {
+          y: 26, opacity: 0, duration: .85, ease: "power3.out"
+        }, 0.62);
+      }
 
       // الانزياح بـobject-position لا بـyPercent.
       //
@@ -1547,9 +1562,9 @@ function initScrolltriggerAnimations() {
       // فالتغطية كاملة دائمًا ولا يمكن أن ينكشف طرف. و"top top" تجعل
       // التقدّم صفرًا عند التحميل لا منتصفه.
       gsap.fromTo(img,
-        { objectPosition: "50% 42%" },
+        { objectPosition: "50% 36%" },
         {
-          objectPosition: "50% 58%",
+          objectPosition: "50% 64%",
           ease: "none",
           scrollTrigger: {
             trigger: figure,
