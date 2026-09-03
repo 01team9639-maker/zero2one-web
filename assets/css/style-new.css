@@ -7704,43 +7704,10 @@ body.lang-ar .work-entry-quote footer {
    object-fit: cover;
 }
 
-/* البطاقة العائمة — بلا رقم أداء: لا نملك بيانات موثّقة نعرضها */
-.seo-hero-float {
-   position: absolute;
-   inset-inline-end: clamp(12px, 2vw, 22px);
-   inset-block-end: clamp(12px, 2vw, 22px);
-   width: min(320px, 58%);
-   padding: 18px 22px;
-   background: var(--seo-surface);
-   border-radius: 18px;
-   box-shadow: 0 14px 34px rgb(34 39 36 / 14%);
-}
-
-.seo-float-title {
-   margin: 0 0 2px;
-   font-size: 15px;
-   font-weight: 700;
-   color: var(--seo-text);
-}
-
-.seo-float-sub {
-   margin: 0 0 10px;
-   font-size: 11px;
-   line-height: 1.4;
-   color: var(--seo-muted);
-}
-
-.seo-float-chart {
-   display: block;
-   width: 100%;
-   height: 34px;
-   color: var(--seo-accent);
-}
-
 /* ── شبكة البطاقات الثلاث ── */
 .seo-bento {
    display: grid;
-   grid-template-columns: 2.2fr 1fr 1.15fr;
+   grid-template-columns: repeat(2, minmax(0, 1fr));
    gap: 16px;
    margin-block-start: clamp(20px, 2.6vw, 34px);
 }
@@ -7802,23 +7769,51 @@ body.lang-ar .work-entry-quote footer {
    opacity: .82;
 }
 
-.seo-bento-peach { background: var(--seo-soft-accent); color: var(--seo-text); }
-.seo-bento-orange { background: var(--seo-accent); color: #fffdfb; }
+/* البطاقة الفاتحة — نظيرة الداكنة في الصفّ نفسه.
+   كانت بطاقة عائمة فوق الصورة، فصارت جارتها بطلب صريح. */
+.seo-bento-light {
+   flex-direction: row;
+   align-items: center;
+   gap: clamp(16px, 2vw, 28px);
+   background: var(--seo-soft-accent);
+   color: var(--seo-text);
+}
 
-.seo-bento-number {
-   margin: 0;
-   font-size: clamp(44px, 4.8vw, 78px);
+.seo-bento-chart {
+   flex: 0 0 auto;
+   width: clamp(84px, 8vw, 132px);
+   height: auto;
+   color: var(--seo-accent);
+}
+
+/* الأرقام صفٌّ لا بطاقتان: لا خلفية ولا حواف ولا حشوة — رقم كبير
+   ولافتة بجانبه، على خلفية الصفحة مباشرة. */
+.seo-stats {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: baseline;
+   gap: clamp(22px, 4vw, 72px);
+   margin-block-start: clamp(20px, 2.4vw, 34px);
+}
+
+.seo-stat {
+   display: flex;
+   align-items: baseline;
+   gap: clamp(10px, 1vw, 16px);
+}
+
+.seo-stat-number {
+   font-size: clamp(40px, 4.4vw, 72px);
    font-weight: 700;
    line-height: 1;
    letter-spacing: -.04em;
+   color: var(--seo-accent);
 }
 
-.seo-bento-peach .seo-bento-number { color: var(--seo-accent); }
-
-.seo-bento-label {
-   margin: 0;
+.seo-stat-label {
    font-size: clamp(14px, 1.15vw, 19px);
    font-weight: 600;
+   color: var(--seo-text);
 }
 
 /* ══ الأقسام التالية — اللغة البصرية نفسها ══ */
@@ -7853,24 +7848,30 @@ body.lang-ar .work-entry-quote footer {
 
 /* المراحل الخمس — أفقية على المكتبي، عمودية على الجوال */
 .seo-service-page .process-list {
-   display: grid;
-   grid-template-columns: repeat(5, minmax(0, 1fr));
-   gap: 14px;
+   display: block;
    margin: 0;
    padding: 0;
    list-style: none;
    counter-reset: seo-step;
 }
 
+/* سطور لا بطاقات: رقم على الطرف، ونصّ بجانبه، وخطّ شعرة يفصل. خمس
+   بطاقات ملوّنة تحت ثماني بطاقات خدمة كانت تصنع صفَّي بطاقات متتاليين. */
 .seo-service-page .process-list li {
    counter-increment: seo-step;
-   padding: clamp(16px, 1.6vw, 24px);
-   background: var(--seo-soft-accent);
-   border-radius: var(--seo-radius-md);
-   font-size: clamp(13px, 1vw, 15px);
+   display: flex;
+   align-items: baseline;
+   gap: clamp(14px, 1.6vw, 28px);
+   padding: clamp(14px, 1.5vw, 22px) 0;
+   background: none;
+   border-radius: 0;
+   border-block-end: 1px solid rgb(34 39 36 / 12%);
+   font-size: clamp(15px, 1.2vw, 19px);
    line-height: 1.45;
    color: var(--seo-text);
 }
+
+.seo-service-page .process-list li:last-child { border-block-end: 0; }
 
 /* القالب يضع هنا دائرة برتقالية مطلقة:
       position:absolute; left:0; top:.5em; width:.5em; height:.5em;
@@ -7885,7 +7886,9 @@ body.lang-ar .work-entry-quote footer {
    border-radius: 0;
    background: none;
    display: block;
-   margin-block-end: 8px;
+   flex: 0 0 auto;
+   min-width: 2.4em;
+   margin-block-end: 0;
    font-size: 12px;
    font-weight: 700;
    letter-spacing: .12em;
@@ -7897,10 +7900,16 @@ body.lang-ar .work-entry-quote footer {
    فخرجت شبكة المراحل الخمس في 283px وتداخلت بطاقاتها وقُصّ نصّها. قِسنا
    السلسلة: ul=283 ← flex-col=283 (max 725) ← row=979. فرُفع الوزن إلى
    (0,4,0) داخل نطاق الصفحة وحدها. */
+/* حافّة واحدة للصفحة كلّها.
+   كنّا نوسّع الشبكات وحدها بهامش سالب، فبقي العنوان و.stripe في عمود
+   الحاوية (979px عند 1440) بينما الشبكة تحته 1354 — فيبدو الخطّ تحت
+   العنوان أقصر من محتواه. العلاج في الأب لا في الأبناء: يتوسّع العمود
+   مرّة واحدة فيرث كلُّ ما فيه الحافّة نفسها. */
+.seo-service-page .case-overview .row .flex-col,
 .seo-service-page .case-intro-bottom .row .flex-col {
-   width: 100%;
+   width: min(94vw, 100rem);
    max-width: none;
-   margin-inline-end: 0;
+   margin-inline: calc((100% - min(94vw, 100rem)) / 2);
 }
 
 /* لوحة «النتيجة المتوقّعة» — داكنة كما في لغة البطاقات أعلاه */
@@ -7936,13 +7945,6 @@ body.lang-ar .work-entry-quote footer {
    letter-spacing: .14em;
 }
 
-/* رقم البطاقة ولافتتها متجاورين لا متباعدين على الطرفين */
-.seo-bento-peach,
-.seo-bento-orange {
-   justify-content: center;
-   gap: 6px;
-}
-
 @media (max-width: 1024px) {
    .seo-plans-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
@@ -7961,16 +7963,11 @@ body.lang-ar .work-entry-quote footer {
    720 — فخرجت شبكة الخدمات عند x=3 بدل 43. العلاج في الأب: يملأ سطره
    فيتطابق المركزان. (نصّ المقدّمة يبقى مقروءًا بـmax-width على الفقرة
    نفسها، فلا يتمدّد معه.) */
-.seo-service-page .case-overview .row .flex-col {
-   width: 100%;
-   max-width: none;
-}
-
 .seo-service-page .case-includes,
 .seo-service-page .process-list,
 .seo-service-page .seo-outcome-panel {
-   width: min(94vw, 100rem);
-   margin-inline: calc((100% - min(94vw, 100rem)) / 2);
+   width: 100%;
+   margin-inline: 0;
 }
 
 .seo-service-page .case-include-item {
@@ -7981,10 +7978,6 @@ body.lang-ar .work-entry-quote footer {
    font-size: clamp(17px, 1.35vw, 22px);
 }
 
-.seo-service-page .process-list li {
-   padding: clamp(20px, 2vw, 32px);
-   font-size: clamp(14px, 1.1vw, 17px);
-}
 
 /* ══ العربية ══
    قياسان لا تقديران:
@@ -7995,7 +7988,7 @@ body.lang-ar .work-entry-quote footer {
       يشوّه الكلمة لا يشدّها. فيعود إلى normal في كل عنوان يحمله. */
 html[lang="ar"] .seo-service-page .seo-hero-title,
 html[lang="ar"] .seo-service-page .seo-bento-title,
-html[lang="ar"] .seo-service-page .seo-bento-number,
+html[lang="ar"] .seo-service-page .seo-stat-number,
 html[lang="ar"] .seo-service-page .seo-outcome-panel .case-outcome {
    letter-spacing: normal;
 }
@@ -8007,10 +8000,7 @@ html[lang="ar"] .seo-service-page .seo-outcome-panel .case-outcome { line-height
 
 @media (max-width: 1024px) {
    .seo-hero-grid { grid-template-columns: minmax(0, 1fr); }
-   .seo-bento { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-   .seo-bento-dark { grid-column: 1 / -1; }
    .seo-service-page .case-includes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-   .seo-service-page .process-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 768px) {
@@ -8019,27 +8009,26 @@ html[lang="ar"] .seo-service-page .seo-outcome-panel .case-outcome { line-height
    /* 94vw يترك 11.7px فقط على شاشة 390 — دون الحدّ الأدنى 18. فيُثبَّت
       الهامش بـ36px مقسومة على الجانبين بدل نسبة من العرض. */
    .seo-hero-card,
-   .seo-service-page .case-includes,
-   .seo-service-page .process-list,
-   .seo-service-page .seo-outcome-panel,
+   .seo-service-page .case-overview .row .flex-col,
+   .seo-service-page .case-intro-bottom .row .flex-col,
    .seo-plans-row {
       width: calc(100% - 36px);
       margin-inline: auto;
    }
-   /* الترتيب المطلوب: نصّ ثم أزرار ثم صورة ثم البطاقات */
    .seo-hero-grid { gap: 22px; }
-   .seo-hero-visual { order: 2; }
    .seo-hero-actions > .seo-hero-cta { flex: 1 1 100%; }
-   .seo-hero-float {
-      position: static;
-      width: 100%;
-      margin-block-start: 12px;
-      box-shadow: 0 10px 24px rgb(34 39 36 / 12%);
-   }
+
+   /* لا صورة على الشاشات الصغيرة — بطلب صريح.
+      display:none لا visibility: العنصر يخرج من التدفّق فلا يترك فراغه،
+      ولا يحمّل المتصفّح شيئًا لأجله. وحركة GSAP عليه تصير بلا أثر
+      مرئيّ، وهي محروسة بـquerySelector فلا تُسقط شيئًا. */
+   .seo-hero-visual { display: none; }
+
    .seo-bento,
-   .seo-service-page .case-includes,
-   .seo-service-page .process-list { grid-template-columns: minmax(0, 1fr); }
-   .seo-bento-dark { flex-direction: column; align-items: flex-start; }
+   .seo-service-page .case-includes { grid-template-columns: minmax(0, 1fr); }
+   .seo-bento-dark,
+   .seo-bento-light { flex-direction: column; align-items: flex-start; }
+   .seo-stats { gap: 20px 36px; }
 }
 
 /* من لا يريد حركة لا يراها */

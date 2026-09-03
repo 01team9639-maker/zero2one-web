@@ -1544,9 +1544,11 @@ function initScrolltriggerAnimations() {
 
       tl.fromTo(img, { scale: 1.22 }, { scale: 1, duration: 1.9, ease: "expo.out" }, 0);
 
-      if (document.querySelector(".seo-hero-float")) {
-        tl.from(".seo-hero-float", {
-          y: 26, opacity: 0, duration: .85, ease: "power3.out"
+      // بطاقتا الصفّ تطفوان بعد الكشف — كانت البطاقة العائمة وحدها
+      // فوق الصورة، فصارتا اثنتين جنبًا إلى جنب تحتها.
+      if (document.querySelector(".seo-bento-card")) {
+        tl.from(".seo-bento-card", {
+          y: 26, opacity: 0, duration: .85, stagger: .08, ease: "power3.out"
         }, 0.62);
       }
 
@@ -1587,8 +1589,8 @@ function initScrolltriggerAnimations() {
   // العنصر «قبل نقطة البداية» ولا يُطلق أبدًا. قِسناه: الرقمان تجمّدا
   // عند 1 و0 من الثانية الأولى وبقيا هناك سبع ثوانٍ. والتأخير 1.2s
   // يوافق انحسار ستارة المقدّمة.
-  if (document.querySelector(".seo-bento-number")) {
-    $(".seo-bento-number").each(function () {
+  if (document.querySelector(".seo-stat-number")) {
+    $(".seo-stat-number").each(function () {
       var el = this;
       var target = parseInt((el.textContent || '').trim(), 10);
       if (!target) return;
