@@ -7979,6 +7979,21 @@ body.lang-ar .work-entry-quote footer {
 }
 
 
+/* مقدّمة الصفحة موسّطة دائمًا — بطلب صريح.
+   ‏:not(.seo-plans) ضروريّ لا تزيّد: .case-overview-sub مستعمل مرّتين
+   في هذه الصفحة — مرّة في المقدّمة ومرّة عنوانًا لقسم الباقات — فبلا
+   الاستثناء يسري التوسيط على قسم لم يُطلب.
+   و margin-inline:auto على الفقرة لا يكفي عنها text-align: الفقرة
+   محدودة بـ42em فتحتاج التوسيط مرّتين — ككتلة، وكأسطر داخلها. */
+.seo-service-page .case-overview:not(.seo-plans) .case-overview-sub,
+.seo-service-page .case-overview:not(.seo-plans) .case-overview-body {
+   text-align: center;
+}
+
+.seo-service-page .case-overview:not(.seo-plans) .case-overview-body p {
+   margin-inline: auto;
+}
+
 /* ══ العربية ══
    قياسان لا تقديران:
    ‏١) line-height:1 يكفي اللاتينية ويُركِب العربية بعضها — «منافسيك»
