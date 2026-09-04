@@ -7816,6 +7816,23 @@ body.lang-ar .work-entry-quote footer {
    color: var(--seo-text);
 }
 
+/* الأرقام داخل البطاقة الفاتحة لا على الصفحة.
+   كانت صفًّا مستقلًّا تحت الصفّ، فصارت ذيل البطاقة نفسها. وحجمها يقلّ
+   تبعًا: رقم 72px يليق بصفٍّ يملأ عرض الصفحة، ويطغى داخل بطاقة عرضها
+   نصف ذلك. ويفصلها خطّ شعرة عن النصّ فوقها بدل فراغ وحده. */
+.seo-bento-light .seo-stats {
+   margin-block-start: clamp(14px, 1.6vw, 22px);
+   padding-block-start: clamp(12px, 1.4vw, 18px);
+   border-block-start: 1px solid rgb(34 39 36 / 14%);
+   gap: clamp(18px, 2.6vw, 44px);
+}
+
+.seo-bento-light .seo-stat-number { font-size: clamp(28px, 2.9vw, 46px); }
+.seo-bento-light .seo-stat-label  { font-size: clamp(12px, 1vw, 15px); }
+
+/* الرسم يحاذي العنوان لا مركز بطاقة صارت أطول */
+.seo-bento-light { align-items: flex-start; }
+
 /* ══ الأقسام التالية — اللغة البصرية نفسها ══ */
 
 /* «ما تشمله الخدمة» — أربعة أعمدة وترقيم تلقائي.
