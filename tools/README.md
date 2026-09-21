@@ -26,6 +26,7 @@ python3 tools/optimize_images.py --png
 | [`check_css_collisions.py`](check_css_collisions.py) | Classes we author that the purchased template already defines — the silent layout-wrecker that made the contact submit button render 0px wide |
 | [`check_provenance.py`](check_provenance.py) | Artefacts belonging to somebody else — the previous project's domain / phone / Google Maps listing, third-party form endpoints, personal names. Also fails any Maps link that asserts a specific business listing unless it is vouched for in `ALLOWED_MAPS`. Runs first in the `deploy.sh` pre-flight |
 | [`verify_deploy.py`](verify_deploy.py) | **Run after every upload.** Checks the *live* site: are the retired URLs still 301ing, did `.htaccess` actually upload, is every sitemap URL reachable with a self-referencing canonical |
+| [`check_portfolio.py`](check_portfolio.py) | The portfolio's four silent failure modes: a case not registered in the Arabic tree, an image whose declared dimensions are not its real ones, a screenshot missing from the evidence ledger, and a number in a caption that the ledger does not record |
 | [`test_send.sh`](test_send.sh) | 22-case test suite for `send.php` — validation, `<select>` whitelist, header injection, honeypot, CSRF, rate limiting, UTF-8 mail composition. Uses local `php`, or Docker if there is none |
 
 **Build — these write files**
@@ -36,6 +37,9 @@ python3 tools/optimize_images.py --png
 | [`build_redirects.py`](build_redirects.py) | The `.htaccess` redirect block, `_redirects`, and the fallback stubs under `pages/` — all from [`redirects.json`](redirects.json) |
 | [`build_form.py`](build_form.py) | `send.php`'s `<select>` whitelist, read out of the real `<option value>`s in both contact pages |
 | [`generate_sitemap.py`](generate_sitemap.py) | `sitemap.xml` (English + Arabic, with hreflang alternates) |
+| [`build_case_studies.py`](build_case_studies.py) | `/work/<slug>/index.html` for every case in [`portfolio_data.py`](portfolio_data.py) |
+| [`build_portfolio.py`](build_portfolio.py) | The body of `/work/index.html`; preserves the original homepage teaser |
+| [`extract_portfolio_assets.py`](extract_portfolio_assets.py) | `assets/images/work/*.webp` from the company portfolio PDF. Needs `pymupdf` + `pillow`; run only when the source material changes |
 | [`optimize_images.py`](optimize_images.py) | WebP generation + PNG optimization (CDN prep) |
 | [`build.sh`](build.sh) | The minified CSS/JS bundles |
 | [`deploy.sh`](deploy.sh) | Nothing locally — uploads the site (dotfiles included) and then runs `verify_deploy.py` |
@@ -44,15 +48,50 @@ Every script exits non-zero when it finds real problems, so they double as CI
 gates. `build_ar.py --check`, `build_redirects.py --check` and
 `generate_sitemap.py --check` validate without writing.
 
+### Adding a project to the portfolio
+
+Everything a project needs lives in [`portfolio_data.py`](portfolio_data.py).
+Never edit generated `work/*/index.html` or the `/ar/` tree by hand.
+The original homepage selected-work teaser lives in `index.html` and is
+deliberately outside the portfolio generator's ownership.
+
+```bash
+# 1. put the images in assets/images/work/ (or extract them from a PDF:
+#    python3 tools/extract_portfolio_assets.py --pdf <path>)
+# 2. record every figure you intend to publish in PORTFOLIO_EVIDENCE.md,
+#    with the screenshot that shows it
+# 3. add an entry to ITEMS in portfolio_data.py and to GALLERY_ORDER.
+#    Cards use equal columns; no span totals or homepage selections are required.
+# 4. for a project with its own page: set "case": True, add the long-form copy
+#    to CASES, then add the slug to build_ar.py's AR_META with an Arabic title
+#    and description. CASE_SLUGS follows portfolio_data automatically.
+
+python3 tools/build_case_studies.py   # /work/<slug>/
+python3 tools/build_portfolio.py      # /work/ only; homepage stays unchanged
+python3 tools/build_ar.py --missing   # lists the new English strings
+#    → add each one to ar-dictionary.json, then:
+python3 tools/build_ar.py
+python3 tools/generate_sitemap.py
+sh      tools/build.sh                # only if the CSS or JS changed
+python3 tools/check_portfolio.py      # must pass before publishing
+```
+
+`build_portfolio.py` does not write `index.html`. The homepage retains its
+original image-and-text teaser and links to the new gallery. Detailed metrics
+remain in case pages and evidence viewers; listing cards share one visual layout.
+
 ### Order of operations after a content change
 
 ```bash
 # 1. edit the English page
+python3 tools/build_case_studies.py   # project pages, if the portfolio changed
+python3 tools/build_portfolio.py      # /work/ only; homepage stays unchanged, likewise
 python3 tools/build_ar.py             # mirror it into /ar/
 python3 tools/generate_sitemap.py     # refresh the sitemap
 sh      tools/build.sh                # rebuild the CSS/JS bundles (if those changed)
 python3 tools/build_form.py           # re-sync the form whitelist (if the form changed)
 python3 tools/audit.py                # 0 errors expected
+python3 tools/check_portfolio.py      # portfolio consistency
 sh      tools/test_send.sh            # only if send.php or the form changed
 sh      tools/deploy.sh --live        # upload + verify
 ```

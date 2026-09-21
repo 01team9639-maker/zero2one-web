@@ -8064,3 +8064,781 @@ html[lang="ar"] .seo-service-page .seo-outcome-panel .case-outcome { line-height
 }
 
 /* من لا يريد حركة لا يراها */
+
+
+/* ==========================================================================
+   PORTFOLIO — /work/، صفحات المشاريع، وقسم الأعمال في الصفحة الرئيسية
+   ==========================================================================
+
+   كل شيء هنا مسبوق بـ z2o- ولا يمسّ صنفاً عامًّا (.card / .grid / .title)
+   ولا وسم button مجرّداً: الصفحات الأخرى تشارك هذه الورقة نفسها.
+
+   التباين — قيست القيم لا خُمِّنت، على أرضية الأيفوري #FFFDED:
+
+     #F9460E برتقالي الهوية   3.47:1  ← عناوين كبيرة وحدود وزخرفة فقط
+     #C2350A برتقالي وظيفيّ   5.41:1  ← الروابط والنصّ الصغير
+     #5A5B5E رمادي النصّ      6.64:1
+     #6E6A5C حدّ تفاعليّ       5.36:1  ← أزرار المرشّحات
+
+   ولهذا لا يوجد زرّ برتقاليّ بنصّ أبيض في هذا الملف: تلك التركيبة 3.55:1
+   وترسب. الأزرار تستعمل مكوّن الموقع الداكن كما هي في بقية الصفحات.
+*/
+
+/* العارض ضمن القائمة عمداً: النافذة تُلحَق بـ<body> لتصعد إلى الطبقة
+   العليا، أي خارج .z2o-work-page تماماً. ولو بقيت المتغيّرات على الأقسام
+   وحدها لَحُلّ `var(--z2o-dark)` إلى لا شيء، فتفتح نافذةٌ بلا خلفية
+   وتظهر الصفحة من خلفها. */
+.z2o-featured,
+.z2o-work-page,
+.z2o-case-page,
+.z2o-viewer {
+   --z2o-canvas: #FFFDED;
+   --z2o-surface: #FFFFFF;
+   --z2o-ink: #1C1D20;
+   --z2o-muted: #5A5B5E;
+   --z2o-accent: #F9460E;
+   /* البرتقالي الوظيفيّ: نفس العائلة أغمق، ليعبر النصّ الصغير حدّ 4.5:1 */
+   --z2o-accent-ink: #C2350A;
+   --z2o-line: #C6C0A6;
+   --z2o-line-strong: #6E6A5C;
+   --z2o-dark: #1C1D20;
+   --z2o-dark-ink: #F4F2E6;
+   --z2o-dark-muted: #B3B0A4;
+   --z2o-radius: 20px;
+   --z2o-radius-sm: 12px;
+   --z2o-gap: clamp(16px, 2vw, 28px);
+   --z2o-pad: clamp(48px, 7vw, 104px);
+}
+
+/* عرض المحتوى.
+
+   `.container.medium` يعطي 979 بكسل عند 1440 — مناسبٌ لعمود نصّ، ضيّقٌ
+   لشبكة من ستّة عشر عملاً. تُوسَّع أقسام المعرض وحدها إلى مدى واحد يشمل
+   الترويسة والفتات والشبكة والختام، فتبقى حوافّها على خطّ واحد. الفوتر
+   خارج هذه المُحدِّدات عمداً: هو فوتر الموقع كله ولا يخصّ المعرض. */
+.z2o-featured > .container,
+.z2o-breadcrumb > .container,
+.z2o-work-page .case-header > .container,
+.z2o-work-intro > .container,
+.z2o-work-gallery > .container,
+.z2o-work-cta > .container {
+   width: 100%;
+   max-width: 80em;
+   margin-inline: auto;
+   padding-inline: clamp(20px, 4vw, 56px);
+}
+
+/* نصّ لقارئ الشاشة وحده — لا clip-path لأن Safari القديم يسقطه */
+.z2o-sr-only {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   padding: 0;
+   overflow: hidden;
+   clip: rect(0 0 0 0);
+   white-space: nowrap;
+   border: 0;
+}
+
+/* --------------------------------------------------------------- الفتات */
+.z2o-breadcrumb {
+   background: var(--z2o-canvas);
+   padding-block: clamp(14px, 2vw, 22px) 0;
+}
+
+.z2o-breadcrumb-list {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   gap: 0 10px;
+   font-size: clamp(13px, 1vw, 14px);
+   color: var(--z2o-muted);
+}
+
+.z2o-breadcrumb-list li + li::before {
+   /* فاصل منطقيّ: يميل مع اتجاه الكتابة فلا ينقلب في العربية */
+   content: "/";
+   margin-inline-end: 10px;
+   color: var(--z2o-line-strong);
+}
+
+.z2o-breadcrumb-list a {
+   color: var(--z2o-muted);
+   text-decoration: underline;
+   text-underline-offset: 3px;
+   text-decoration-thickness: 1px;
+}
+
+.z2o-breadcrumb-list a:hover,
+.z2o-breadcrumb-list a:focus-visible {
+   color: var(--z2o-accent-ink);
+}
+
+.z2o-breadcrumb-list [aria-current="page"] {
+   color: var(--z2o-ink);
+   font-weight: 600;
+}
+
+/* Uniform gallery: one card system, before and after category filtering. */
+.z2o-gallery {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   display: grid;
+   grid-template-columns: minmax(0, 1fr);
+   grid-auto-rows: 1fr;
+   gap: var(--z2o-gap);
+   align-items: stretch;
+}
+
+.z2o-gallery > .z2o-card { min-width: 0; grid-column: auto; }
+
+@media (min-width: 40em) {
+   .z2o-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 64em) {
+   .z2o-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* ---------------------------------------------------------------- البطاقة */
+.z2o-card-inner {
+   position: relative;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   background: var(--z2o-surface);
+   border: 1px solid var(--z2o-line);
+   border-radius: var(--z2o-radius);
+   overflow: hidden;
+   transition: border-color .22s ease, transform .22s ease;
+}
+
+.z2o-card-inner:hover { border-color: var(--z2o-line-strong); }
+
+.z2o-card-media {
+   position: relative;
+   overflow: hidden;
+   background: var(--z2o-canvas);
+}
+
+.z2o-card-img {
+   display: block;
+   width: 100%;
+   height: 100%;
+   transition: transform .5s cubic-bezier(.2, .7, .3, 1);
+}
+
+.z2o-fit-cover .z2o-card-img { object-fit: cover; }
+
+/* لقطات لوحات القياس contain على إطار محايد: القصّ يبتلع محور الأرقام،
+   وهو بالضبط ما جاء الزائر ليقرأه. */
+.z2o-fit-contain .z2o-card-img {
+   object-fit: contain;
+   object-position: center;
+}
+
+.z2o-card-media { aspect-ratio: 4 / 3; flex: 0 0 auto; }
+
+.z2o-card-inner:hover .z2o-fit-cover .z2o-card-img { transform: scale(1.02); }
+
+.z2o-card-body {
+   flex: 1 1 auto;
+   display: flex;
+   flex-direction: column;
+   gap: clamp(8px, 1vw, 12px);
+   padding: clamp(18px, 2vw, 26px);
+}
+
+.z2o-card-tag {
+   margin: 0;
+   font-size: clamp(11px, .9vw, 13px);
+   letter-spacing: .1em;
+   text-transform: uppercase;
+   font-weight: 600;
+   color: var(--z2o-accent-ink);
+}
+
+html[lang="ar"] .z2o-card-tag,
+html[lang="ar"] .z2o-eyebrow {
+   /* العربية لا حروف كبيرة لها، والتباعد يفكّ الكلمة */
+   text-transform: none;
+   letter-spacing: normal;
+}
+
+.z2o-card-title {
+   margin: 0;
+   font-size: clamp(20px, 1.9vw, 28px);
+   line-height: 1.2;
+   font-weight: 600;
+   color: var(--z2o-ink);
+}
+
+
+html[lang="ar"] .z2o-card-title { line-height: 1.45; }
+
+/* الرابط الوحيد في البطاقة. ::after يمدّ منطقة النقر على البطاقة كلها،
+   فتبقى المساحة كبيرة بلا رابط ثانٍ يكرّر نفسه في شجرة الوصول. */
+.z2o-card-link {
+   color: inherit;
+   text-decoration: none;
+}
+
+.z2o-card-link::after {
+   content: "";
+   position: absolute;
+   inset: 0;
+   z-index: 2;
+}
+
+.z2o-card-link:hover { color: var(--z2o-accent-ink); }
+
+.z2o-card-link:focus-visible {
+   outline: 3px solid var(--z2o-accent-ink);
+   outline-offset: 3px;
+   border-radius: 4px;
+}
+
+.z2o-card-summary {
+   margin: 0;
+   font-size: clamp(14px, 1.05vw, 16px);
+   line-height: 1.6;
+   color: var(--z2o-muted);
+}
+
+
+.z2o-card-facts {
+   margin: auto 0 0;
+   padding-block-start: clamp(10px, 1.2vw, 14px);
+   border-block-start: 1px solid var(--z2o-line);
+   display: flex;
+   flex-wrap: wrap;
+   gap: 4px clamp(14px, 2vw, 24px);
+   font-size: clamp(12px, .95vw, 13px);
+}
+
+.z2o-card-facts > div { display: flex; gap: 6px; }
+.z2o-card-facts dt { color: var(--z2o-muted); margin: 0; }
+.z2o-card-facts dd { margin: 0; color: var(--z2o-ink); font-weight: 600; }
+
+.z2o-card-cue {
+   margin: clamp(10px, 1.2vw, 14px) 0 0;
+   font-size: clamp(13px, 1vw, 14px);
+   font-weight: 600;
+   color: var(--z2o-accent-ink);
+}
+
+.z2o-card-cue::after {
+   /* سهم منطقيّ: ← في العربية و→ في الإنجليزية بلا قلب يدويّ */
+   content: " \2192";
+}
+
+html[dir="rtl"] .z2o-card-cue::after { content: " \2190"; }
+
+.z2o-card-shots { display: none; }
+
+/* ------------------------------------------------------------ لوحة الأرقام */
+.z2o-metrics {
+   margin: clamp(6px, 1vw, 10px) 0 0;
+   padding: 0;
+   display: flex;
+   flex-direction: column;
+   gap: clamp(10px, 1.4vw, 16px);
+}
+
+.z2o-metric { margin: 0; }
+
+.z2o-metric-label {
+   margin: 0 0 2px;
+   font-size: clamp(12px, .95vw, 13px);
+   letter-spacing: .08em;
+   text-transform: uppercase;
+   color: var(--z2o-dark-muted);
+}
+
+html[lang="ar"] .z2o-metric-label {
+   text-transform: none;
+   letter-spacing: normal;
+}
+
+.z2o-metric-value {
+   margin: 0;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: baseline;
+   gap: 0 .35em;
+   font-size: clamp(26px, 3vw, 46px);
+   line-height: 1.1;
+   font-weight: 600;
+   font-variant-numeric: tabular-nums;
+}
+
+.z2o-metric-before {
+   font-size: .52em;
+   font-weight: 500;
+   color: var(--z2o-dark-muted);
+}
+
+.z2o-metric-arrow {
+   font-size: .5em;
+   color: var(--z2o-accent);
+}
+
+/* السهم يرسم الاتجاه لا الاتجاهُ السهم: في العربية يشير يساراً، والقيمتان
+   داخل <bdi> فيبقى «SAR 17.6K» و«3.60×» بترتيبهما اللاتينيّ. */
+html[dir="rtl"] .z2o-metric-arrow { transform: scaleX(-1); display: inline-block; }
+
+.z2o-metric-after { color: var(--z2o-dark-ink); }
+
+.z2o-metrics-note {
+   margin: clamp(10px, 1.2vw, 14px) 0 0;
+   font-size: clamp(12px, .95vw, 13px);
+   line-height: 1.55;
+   color: var(--z2o-dark-muted);
+}
+
+/* اللوحة نفسها على صفحة المشروع: الأرضية فاتحة فتنقلب الألوان.
+
+   `.case-overview .row` عمودان متراكبان بعرض كامل وبلا gap، فاللوحة تلتصق
+   بقائمة بيانات المشروع فوقها التصاقاً تامّاً — قِيس: أسفل القائمة 927
+   وأعلى اللوحة 927. الهامش هنا لا في .row كي لا يتغيّر تباعد كل صفحات
+   المشاريع القائمة. */
+.z2o-metric-panel {
+   margin-block-start: clamp(28px, 3.5vw, 48px);
+   background: var(--z2o-dark);
+   color: var(--z2o-dark-ink);
+   border-radius: var(--z2o-radius);
+   padding: clamp(22px, 3vw, 40px);
+}
+
+/* لوحة بعرض 900 بكسل وأرقامها في عمود واحد تترك ثلثيها فارغاً */
+@media (min-width: 52em) {
+
+   .z2o-metric-panel .z2o-metrics {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: clamp(28px, 5vw, 72px);
+   }
+
+   .z2o-metric-panel .z2o-metric { flex: 0 1 auto; }
+}
+
+/* ================================================== صفحة الأعمال الكاملة */
+.z2o-work-page { background: var(--z2o-canvas); }
+
+.z2o-work-page .case-header,
+.z2o-case-page .case-header { background: var(--z2o-canvas); }
+
+.z2o-work-page .case-header h1 {
+   font-size: clamp(34px, 5vw, 76px);
+   line-height: 1.05;
+   letter-spacing: -.02em;
+}
+
+html[lang="ar"] .z2o-work-page .case-header h1 {
+   letter-spacing: normal;
+   line-height: 1.3;
+}
+
+.z2o-work-intro,
+.z2o-work-gallery,
+.z2o-work-cta {
+   background: var(--z2o-canvas);
+   color: var(--z2o-ink);
+}
+
+.z2o-work-intro { padding-block: clamp(6px, 1vw, 12px) clamp(26px, 3.5vw, 44px); }
+.z2o-work-intro > .container { padding-bottom: 0; }
+
+.z2o-work-lead {
+   margin: 0;
+   font-size: clamp(20px, 2.2vw, 30px);
+   line-height: 1.3;
+   font-weight: 600;
+   max-width: 20em;
+}
+
+.z2o-work-note {
+   margin: clamp(10px, 1.4vw, 16px) 0 0;
+   font-size: clamp(15px, 1.15vw, 17px);
+   line-height: 1.6;
+   color: var(--z2o-muted);
+   max-width: 40em;
+}
+
+.z2o-work-gallery { padding-block-end: var(--z2o-pad); }
+.z2o-work-gallery > .container { padding-bottom: 0; }
+
+/* ------------------------------------------------------------- المرشّحات */
+.z2o-filters {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 10px;
+   padding-block-end: clamp(22px, 3vw, 36px);
+}
+
+.z2o-filters[hidden] { display: none; }
+
+.z2o-filter {
+   /* مقاس اللمس ٤٤ بكسل: min-height صريح لأن الحشو وحده يتقلّص مع الخطّ */
+   min-height: 44px;
+   display: inline-flex;
+   align-items: center;
+   gap: 8px;
+   margin: 0;
+   padding-inline: clamp(14px, 1.6vw, 20px);
+   font: inherit;
+   font-size: clamp(14px, 1.05vw, 15px);
+   font-weight: 500;
+   color: var(--z2o-ink);
+   background: transparent;
+   border: 1px solid var(--z2o-line-strong);
+   border-radius: 999px;
+   cursor: pointer;
+   transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+
+.z2o-filter:hover { background: rgba(28, 29, 32, .06); }
+
+.z2o-filter:focus-visible {
+   outline: 3px solid var(--z2o-accent-ink);
+   outline-offset: 2px;
+}
+
+/* الحالة المختارة تختلف بأكثر من اللون: تعبئة معكوسة، ووزن أثقل،
+   وعلامة ✓ قبل النصّ. قارئ الشاشة يأخذها من aria-pressed. */
+.z2o-filter[aria-pressed="true"] {
+   background: var(--z2o-dark);
+   border-color: var(--z2o-dark);
+   color: var(--z2o-dark-ink);
+   font-weight: 700;
+}
+
+.z2o-filter[aria-pressed="true"]::before {
+   content: "\2713";
+   font-size: .9em;
+}
+
+.z2o-filter-count {
+   font-size: .8em;
+   font-variant-numeric: tabular-nums;
+   color: var(--z2o-muted);
+}
+
+.z2o-filter[aria-pressed="true"] .z2o-filter-count { color: var(--z2o-dark-muted); }
+
+/* عنصر مُستبعَد بالترشيح: display:none يُخرجه من التخطيط ومن التنقّل
+   بلوحة المفاتيح ومن شجرة الوصول دفعةً واحدة — بخلاف opacity أو
+   visibility اللتين تتركان روابطه قابلةً للتبويب. */
+.z2o-card[hidden] { display: none; }
+
+.z2o-video-library {
+   margin: clamp(30px, 4vw, 48px) 0 0;
+   padding-block-start: clamp(20px, 2.6vw, 30px);
+   border-block-start: 1px solid var(--z2o-line);
+   display: flex;
+   flex-wrap: wrap;
+   align-items: baseline;
+   gap: 6px 14px;
+   font-size: clamp(14px, 1.05vw, 16px);
+}
+
+.z2o-video-library a {
+   color: var(--z2o-accent-ink);
+   font-weight: 600;
+   text-decoration: underline;
+   text-underline-offset: 4px;
+}
+
+.z2o-video-library-note { color: var(--z2o-muted); font-size: .9em; }
+
+/* ------------------------------------------------------------ دعوة الختام */
+.z2o-work-cta { padding-block: var(--z2o-pad); }
+.z2o-work-cta > .container { padding-bottom: 0; }
+
+/* Portfolio contact CTA: override the template's purple round-button theme.
+   White text in normal, hover and keyboard-focus states. */
+.z2o-work-cta .btn-round .btn-click {
+   background: var(--z2o-accent);
+}
+
+.z2o-work-cta .btn-round .btn-text-inner {
+   color: #FFFFFF;
+}
+
+.z2o-work-cta .btn-round .btn-fill {
+   background: var(--z2o-dark);
+}
+
+.z2o-work-cta .btn-round .btn-click:hover,
+.z2o-work-cta .btn-round .btn-click:focus-visible {
+   background: var(--z2o-dark);
+}
+
+.z2o-work-cta .btn-round .btn-click:hover .btn-text-inner,
+.z2o-work-cta .btn-round .btn-click:focus-visible .btn-text-inner {
+   color: #FFFFFF;
+}
+
+.z2o-work-cta .btn-round .btn-click:focus-visible {
+   outline: 3px solid var(--z2o-accent-ink);
+   outline-offset: 5px;
+}
+
+
+.z2o-work-cta-title {
+   margin: 0;
+   font-size: clamp(26px, 3.4vw, 48px);
+   line-height: 1.15;
+   font-weight: 600;
+   max-width: 18em;
+}
+
+html[lang="ar"] .z2o-work-cta-title { line-height: 1.35; }
+
+.z2o-work-cta-body {
+   margin: clamp(12px, 1.6vw, 18px) 0 clamp(22px, 2.6vw, 30px);
+   font-size: clamp(15px, 1.15vw, 17px);
+   line-height: 1.6;
+   color: var(--z2o-muted);
+   max-width: 34em;
+}
+
+/* ============================================== صفحة المشروع: عناصر الدليل */
+.z2o-case-page .case-study-lead,
+.z2o-case-page .case-study-section,
+.z2o-case-page .case-study-cta { background: var(--z2o-canvas); }
+
+.z2o-evidence {
+   margin: clamp(18px, 2.4vw, 28px) 0 0;
+}
+
+.z2o-evidence-frame {
+   background: var(--z2o-surface);
+   border: 1px solid var(--z2o-line);
+   border-radius: var(--z2o-radius-sm);
+   padding: clamp(10px, 1.4vw, 16px);
+   overflow-x: auto;
+}
+
+.z2o-evidence-frame img {
+   display: block;
+   width: 100%;
+   height: auto;
+   /* اللقطات أصلها ٧٢٠ بكسل عرضاً. تمديدها يبعثر النصّ داخلها بلا أن
+      يضيف تفصيلاً، فتتوقّف عند عرضها الحقيقيّ وتتوسّط ما بقي. */
+   max-width: 100%;
+   margin-inline: auto;
+}
+
+.z2o-evidence-caption {
+   margin: clamp(10px, 1.2vw, 14px) 0 0;
+   font-size: clamp(13px, 1vw, 15px);
+   line-height: 1.6;
+   color: var(--z2o-muted);
+}
+
+.z2o-evidence-open {
+   display: inline-flex;
+   align-items: center;
+   min-height: 44px;
+   margin-block-start: 6px;
+   font-size: clamp(13px, 1vw, 15px);
+   font-weight: 600;
+   color: var(--z2o-accent-ink);
+   text-decoration: underline;
+   text-underline-offset: 4px;
+}
+
+.z2o-evidence-open:focus-visible {
+   outline: 3px solid var(--z2o-accent-ink);
+   outline-offset: 3px;
+}
+
+.z2o-evidence-open::after { content: " \2197"; margin-inline-start: 4px; }
+
+/* ================================================================ العارض */
+.z2o-viewer {
+   width: min(96vw, 1100px);
+   max-width: none;
+   max-height: 92vh;
+   padding: 0;
+   border: 0;
+   border-radius: var(--z2o-radius);
+   background: var(--z2o-dark);
+   color: var(--z2o-dark-ink);
+   overflow: hidden;
+}
+
+.z2o-viewer::backdrop { background: rgba(10, 10, 12, .82); }
+
+.z2o-viewer-inner {
+   display: flex;
+   flex-direction: column;
+   max-height: 92vh;
+}
+
+.z2o-viewer-bar {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 12px;
+   padding: 10px 12px;
+   border-block-end: 1px solid rgba(244, 242, 230, .18);
+}
+
+.z2o-viewer-count {
+   font-size: 13px;
+   font-variant-numeric: tabular-nums;
+   color: var(--z2o-dark-muted);
+}
+
+.z2o-viewer-actions { display: flex; gap: 8px; }
+
+.z2o-viewer-btn {
+   min-width: 44px;
+   min-height: 44px;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   font: inherit;
+   font-size: 18px;
+   line-height: 1;
+   color: var(--z2o-dark-ink);
+   background: transparent;
+   border: 1px solid rgba(244, 242, 230, .3);
+   border-radius: 10px;
+   cursor: pointer;
+}
+
+.z2o-viewer-btn:hover { background: rgba(244, 242, 230, .12); }
+
+.z2o-viewer-btn:focus-visible {
+   outline: 3px solid var(--z2o-accent);
+   outline-offset: 2px;
+}
+
+.z2o-viewer-btn[hidden] { display: none; }
+
+/* السهمان يتبعان اتجاه الصفحة: «السابق» إلى اليمين في العربية */
+html[dir="rtl"] .z2o-viewer-nav { transform: scaleX(-1); }
+
+.z2o-viewer-figure {
+   margin: 0;
+   flex: 1 1 auto;
+   min-height: 0;
+   display: flex;
+   flex-direction: column;
+}
+
+.z2o-viewer-stage {
+   flex: 1 1 auto;
+   min-height: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: clamp(10px, 2vw, 22px);
+   background: var(--z2o-surface);
+   overflow: auto;
+}
+
+.z2o-viewer-stage img {
+   display: block;
+   max-width: 100%;
+   max-height: 62vh;
+   width: auto;
+   height: auto;
+   object-fit: contain;
+}
+
+.z2o-viewer-caption {
+   padding: clamp(12px, 1.6vw, 18px);
+   font-size: clamp(13px, 1vw, 15px);
+   line-height: 1.6;
+   color: var(--z2o-dark-muted);
+}
+
+.z2o-viewer-caption a {
+   color: var(--z2o-accent);
+   text-decoration: underline;
+   text-underline-offset: 4px;
+}
+
+/* --------------------------------------------------------- الحركة والقياس */
+@media (prefers-reduced-motion: reduce) {
+
+   .z2o-card-inner,
+   .z2o-card-img,
+   .z2o-filter {
+      transition: none;
+   }
+
+   .z2o-card-inner:hover .z2o-fit-cover .z2o-card-img { transform: none; }
+
+   /* كشف .fade-in.animate في الموقع يبدأ من opacity:0 ويعتمد على
+      ScrollTrigger، ولا يستثني الحركة المخفَّضة. المحتوى يظهر عند التمرير
+      إليه — قِسناه: 0.998 — فلا شيء عالق، لكنه يظلّ حركةً لم يطلبها
+      الزائر. هنا تُثبَّت أقسام المعرض ظاهرةً من البداية.
+      !important لأن GSAP يكتب opacity سطريًّا على العنصر.
+      النطاق مقصور على أقسامنا: بقية الموقع سلوكها قرارٌ قائم لا نغيّره
+      من داخل ملفّ المعرض. */
+   .z2o-featured .fade-in.animate,
+   .z2o-work-page .fade-in.animate,
+   .z2o-case-page .fade-in.animate {
+      opacity: 1 !important;
+      transform: none !important;
+   }
+}
+
+@media (max-width: 39.99em) {
+   .z2o-featured-head { align-items: start; }
+   .z2o-featured-head-link { width: 100%; }
+   .z2o-card-proof-img { max-height: 120px; }
+   .z2o-viewer { width: 100vw; max-height: 100dvh; border-radius: 0; }
+   .z2o-viewer-inner { max-height: 100dvh; }
+   .z2o-viewer-stage img { max-height: 54vh; }
+}
+
+/* ٣٢٠ بكسل: العنوان الطويل بلا فاصل يدفع الصفحة أفقيًّا */
+@media (max-width: 22.5em) {
+
+   .z2o-card-title,
+   .z2o-featured-title,
+   .z2o-work-cta-title {
+      overflow-wrap: anywhere;
+   }
+
+   .z2o-filter { padding-inline: 12px; font-size: 13px; }
+}
+
+/* Listing cards share the site's warm canvas and functional orange links. */
+.z2o-gallery .z2o-card-inner {
+   background: var(--z2o-canvas);
+   border-color: var(--color-border);
+   color: var(--z2o-ink);
+}
+
+.z2o-gallery .z2o-card-media {
+   background: #F2F0E6;
+   border-block-end: 1px solid var(--color-border);
+   padding: 16px;
+}
+
+.z2o-gallery .z2o-card-title {
+   font-size: clamp(20px, 1.7vw, 25px);
+   line-height: 1.4;
+   min-block-size: 2.8em;
+   overflow-wrap: anywhere;
+}
+
+.z2o-gallery .z2o-card-summary { font-size: 15px; line-height: 1.7; }
+html[lang="ar"] .z2o-gallery .z2o-card-summary { line-height: 1.8; }
+
+.z2o-gallery .z2o-card-cue {
+   margin-block-start: auto;
+   padding-block-start: 20px;
+}

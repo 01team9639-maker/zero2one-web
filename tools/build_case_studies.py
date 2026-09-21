@@ -54,241 +54,23 @@ def esc(text):
 
 
 # ------------------------------------------------------------------ the copy
-CASES = {
-    "habba": {
-        "title": "HABBA Brand Identity — Specialty Coffee Roastery | ZERO 2 ONE",
-        "description": (
-            "Brand identity for HABBA specialty coffee: logo system, colour rules, stationery, menus, packaging, uniforms and signage — recognisable at every scale."
-        ),
-        "eyebrow": "Brand Identity / Food &amp; Beverage",
-        "h1": "HABBA — A Brand Identity Crafted Around the Ritual of Coffee",
-        "intro": (
-            "We created a warm, distinctive visual identity for HABBA, bringing its "
-            "specialty coffee experience to life across every customer touchpoint — "
-            "from the brandmark and packaging to printed materials and the physical space."
-        ),
-        "meta": [
-            ("Client", "HABBA"),
-            ("Industry", "Specialty Coffee Roastery &amp; Caf&eacute;"),
-            ("Service", "Brand Identity"),
-            ("Scope", "Logo System, Packaging &amp; Brand Applications"),
-        ],
-        "hero_image": ("habba-01-brand-hero", "HABBA specialty coffee brand identity and primary logo"),
-        "sections": [
-            {"kind": "text", "title": "From a Coffee Concept to a Complete Brand Experience",
-             "body": [
-                 "HABBA needed more than a recognizable logo. It needed a flexible identity that could feel "
-                 "consistent on a coffee cup, a menu, stationery, staff uniforms, and within the caf&eacute; itself.",
-                 "Our approach was to build one coherent visual system — distinctive enough to be remembered, "
-                 "flexible enough to work across different applications, and practical enough to support the "
-                 "brand as it grows.",
-             ]},
-            {"kind": "split", "title": "One Identity. Many Touchpoints.",
-             "body": [
-                 "A specialty coffee brand is experienced through repeated details — the cup customers hold, "
-                 "the menu they read, the packaging they carry, and the space they remember.",
-                 "The challenge was to create a visual identity that feels warm, refined, and recognizable "
-                 "while remaining functional across packaging, printed materials, digital communication, "
-                 "uniforms, and environmental branding.",
-             ],
-             "image": ("habba-02-logo-system",
-                       "HABBA horizontal, vertical, brandmark, and simplified logo system")},
-            {"kind": "list", "title": "Designed to Work at Every Scale",
-             "body": [
-                 "The HABBA identity is built around a distinctive H monogram inspired by the elegance and "
-                 "precision of specialty coffee culture.",
-                 "A flexible family of horizontal, vertical, simplified, and standalone brandmark "
-                 "configurations allows the identity to remain clear and recognizable across large-format "
-                 "signage, packaging, printed materials, and small digital applications.",
-             ],
-             "items": ["Horizontal Logo", "Vertical Logo", "Standalone Brandmark", "Simplified Logo"]},
-            {"kind": "wide", "title": "A Palette Inspired by Warmth, Craft, and Character",
-             "body": [
-                 "The color palette combines warm coffee-inspired brown with deep contrasting tones and a "
-                 "distinctive blue accent. Together, these colors give HABBA a refined yet approachable personality.",
-                 "The system also includes light and dark logo variations, ensuring clarity and consistency "
-                 "across different backgrounds and applications.",
-             ],
-             "image": ("habba-03-color-variations",
-                       "HABBA logo color variations across the brand palette")},
-            {"kind": "split", "title": "Consistency Builds Recognition",
-             "body": [
-                 "A strong identity depends on how consistently it is used. Clear logo guidelines were "
-                 "developed to protect the proportions, colors, spacing, and visual integrity of the HABBA brand.",
-                 "These rules prevent incorrect stretching, rotation, effects, recoloring, and layout changes — "
-                 "helping the identity remain recognizable wherever it appears.",
-             ],
-             "image": ("habba-04-logo-guidelines", "HABBA logo usage and misuse guidelines")},
-            {"kind": "pair", "title": "Bringing the Identity into Everyday Business",
-             "body": [
-                 "The identity was extended across the brand&rsquo;s essential printed materials, creating a "
-                 "consistent and professional experience in both customer-facing and operational touchpoints.",
-                 "From business cards and stationery to menus and branded stamps, every application follows "
-                 "the same visual language while adapting to its specific function.",
-             ],
-             "items": ["Business Cards", "Letterhead", "Envelopes", "Invoice and Document Templates",
-                       "Menus", "Branded Stamp"],
-             "images": [("habba-05-stationery",
-                         "HABBA business cards, letterhead, envelope, and stationery applications"),
-                        ("habba-06-menu-print",
-                         "HABBA menu, stamp, and printed collateral applications")]},
-            {"kind": "wide", "title": "Designed to Travel with the Customer",
-             "body": [
-                 "Packaging turns the brand into a physical experience customers can carry with them. "
-                 "HABBA&rsquo;s visual identity was adapted across coffee cups, coffee bags, and takeaway "
-                 "carriers while maintaining clear recognition and a consistent premium character.",
-                 "Each packaging application was designed to feel like a natural extension of the caf&eacute; "
-                 "experience — practical, memorable, and unmistakably HABBA.",
-             ],
-             "image": ("habba-07-packaging", "HABBA coffee cup, coffee bag, and takeaway packaging")},
-            {"kind": "split", "title": "From Visual Identity to Physical Experience",
-             "body": [
-                 "A complete brand identity should remain recognizable beyond printed materials. The HABBA "
-                 "system was extended into the physical environment through exterior signage and staff uniforms.",
-                 "These applications help create a connected customer experience — from seeing the caf&eacute; "
-                 "for the first time to interacting with the team inside.",
-             ],
-             "image": ("habba-08-environment", "HABBA signage and staff uniform applications")},
-        ],
-        "deliverables": [
-            "Brand Identity Direction", "Primary and Secondary Logo Configurations", "Standalone Brandmark",
-            "Logo Usage Guidelines", "Brand Color System", "Business Stationery",
-            "Menu and Printed Collateral", "Coffee Packaging", "Takeaway Packaging",
-            "Staff Uniform Applications", "Environmental Signage",
-        ],
-        "cta_title": "Your Brand Should Feel Complete at Every Touchpoint.",
-        "cta_body": ("From the first idea to the final application, we build identities that are ready to be "
-                     "seen, remembered, and used."),
-        "cta_label": "Build Your Brand with Us",
-        "service_url": "/services/brand-identity/",
-        "service_name": "Brand Identity Development",
-    },
+# النصّ الطويل لكل مشروع صار في مصدر واحد مع بيانات الشبكة والمختارات،
+# فلا يبقى عنوانُ مشروعٍ في ملف ووصفُه في آخر.
+from portfolio_data import CASES, strings_block, validate  # noqa: E402
 
-    "alrahwanji-paints": {
-        "title": "Alrahwanji Paints Ad Campaign — Facebook &amp; Instagram | ZERO 2 ONE",
-        "description": (
-            "How Alrahwanji Paints moved to measured advertising on Facebook and Instagram — reported reach, engagement and placement data from the ad dashboard."
-        ),
-        "eyebrow": "Paid Media / Paints &amp; Coatings",
-        "h1": "Turning Ad Spend into Focused, Measurable Growth",
-        "intro": (
-            "We helped Alrahwanji Paints move from unstructured promotion to a focused "
-            "advertising approach built around clear objectives, continuous performance "
-            "analysis, and smarter budget allocation."
-        ),
-        "meta": [
-            ("Client", "Alrahwanji Paints"),
-            ("Industry", "Paints &amp; Coatings"),
-            ("Market", "Ajman, United Arab Emirates"),
-            ("Service", "Advertising Campaign Management"),
-            ("Platforms", "Facebook &amp; Instagram"),
-            ("Objectives", "Reach, Engagement &amp; Follower Growth"),
-        ],
-        "hero_image": ("alrahwanji-01-project-overview",
-                       "Alrahwanji Paints advertising campaign project overview and strategy"),
-        "sections": [
-            {"kind": "text", "title": "From Scattered Promotion to a Clear Growth System",
-             "body": [
-                 "Before the campaign, the company had limited digital reach and no clear structure for "
-                 "managing its marketing budget.",
-                 "Our work focused on building brand visibility, attracting relevant engagement, and using "
-                 "live campaign data to determine where the advertising budget could perform most effectively.",
-             ]},
-            {"kind": "list", "title": "A Limited Digital Presence and No Clear Media Plan",
-             "body": [
-                 "The brand was not marketing consistently, audience growth was limited, and previous "
-                 "advertising activity lacked a defined strategy.",
-                 "The key challenge was to build trust and visibility while making every stage of the "
-                 "available budget clearer, more focused, and more accountable.",
-             ],
-             "items": ["Limited digital reach", "Low audience engagement", "No clear advertising strategy",
-                       "Unstructured budget distribution", "Limited performance tracking"]},
-            {"kind": "steps", "title": "Test, Learn, and Scale What Works",
-             "body": [
-                 "We defined reach and follower growth as the campaign&rsquo;s primary objectives, then "
-                 "monitored performance across campaigns and placements.",
-                 "Investment was increased gradually only after results became stable. Stronger-performing "
-                 "activity received more budget, while lower-performing campaigns were paused to reduce "
-                 "wasted spend and improve efficiency.",
-             ],
-             "items": ["Define clear campaign objectives.", "Launch and test campaign variations.",
-                       "Monitor engagement and cost efficiency.",
-                       "Identify stronger campaigns and placements.",
-                       "Gradually scale successful activity.", "Pause lower-performing campaigns."]},
-            {"kind": "split", "title": "A Measurable Performance Snapshot",
-             "body": [
-                 "The campaign produced measurable follower activity within the reported advertising period. "
-                 "Performance was monitored through follower growth, cost per result, campaign spend, and the "
-                 "activity timeline.",
-             ],
-             "image": ("alrahwanji-03-performance-overview",
-                       "Campaign followers, cost per follow, spending, and performance trend")},
-            {"kind": "figures", "title": "Engagement Beyond Passive Reach",
-             "body": [
-                 "The campaign generated multiple forms of audience activity, from page likes and post "
-                 "reactions to deeper post engagement and link clicks.",
-                 "This gave the team a clearer understanding of how users responded to the campaign, rather "
-                 "than relying on impressions alone.",
-             ],
-             "figures": [("295", "Facebook Likes"), ("139", "Post Engagements"),
-                         ("112", "Post Reactions"), ("19", "Link Clicks")],
-             "image": ("alrahwanji-04-engagement-results",
-                       "Campaign likes, engagements, reactions, and link clicks")},
-            {"kind": "table", "title": "Reels Delivered the Strongest Visibility",
-             "body": [
-                 "Placement analysis showed that Facebook Reels generated the strongest reported delivery, "
-                 "followed by the mobile app feed and Facebook Stories.",
-                 "This insight helped clarify where the campaign was gaining the most visibility and where "
-                 "future budget allocation could be focused.",
-             ],
-             "table_head": ("Placement", "Reported Delivery"),
-             "rows": [("Facebook Reels", "5,921"), ("Facebook Mobile App Feed", "1,436"),
-                      ("Facebook Stories", "412"), ("Facebook Mobile Web Feed", "9")],
-             "image": ("alrahwanji-05-placement-results",
-                       "Campaign delivery across Facebook Reels, feed, Stories, and mobile web")},
-            {"kind": "wide", "title": "Performance, Documented",
-             "body": [
-                 "Campaign decisions were supported by reported platform data covering follower activity, "
-                 "engagement, clicks, and placement-level delivery.",
-                 "Every figure on this page is reproduced from the advertising dashboard below. The client "
-                 "report also describes customer and revenue growth, but without verified numbers — so those "
-                 "outcomes are not claimed here.",
-             ],
-             "image": ("alrahwanji-02-dashboard-full",
-                       "Facebook advertising campaign performance dashboard")},
-            {"kind": "list", "title": "Clearer Performance. Smarter Budget Decisions.",
-             "body": [
-                 "Campaign performance was reviewed continuously. Successful activity was scaled gradually "
-                 "after achieving stable results, while lower-performing campaigns were reduced or paused.",
-                 "This approach helped the client move toward a more structured and informed way of managing "
-                 "advertising investment.",
-             ],
-             "items": ["Continuous Performance Monitoring", "Gradual Budget Scaling", "Placement Analysis",
-                       "Lower-Performance Reduction", "Campaign Reporting"]},
-        ],
-        "deliverables": [
-            "Campaign Objective Definition", "Facebook and Instagram Campaign Management",
-            "Audience and Placement Monitoring", "Campaign Performance Analysis", "Budget Optimization",
-            "Gradual Campaign Scaling", "Underperforming Campaign Reduction", "Results Reporting",
-        ],
-        "cta_title": "Your Ad Budget Should Produce More Than Impressions.",
-        "cta_body": ("We build, monitor, and optimize advertising campaigns around clear business objectives "
-                     "and measurable performance."),
-        "cta_label": "Plan Your Next Campaign",
-        "service_url": "/services/digital-advertising/",
-        "service_name": "Advertising Campaign Management",
-    },
-}
+validate()
 
 
 # ------------------------------------------------------------------ rendering
-def img(name, alt, cls="case-figure"):
-    """صورة المشروع بأبعادها الحقيقية — بلا أبعاد صريحة تهتزّ الصفحة (CLS)."""
-    path = os.path.join(ROOT, "assets", "images", f"{name}.webp")
+def webp_size(path, name):
+    """أبعاد ملف WebP من رأسه مباشرة — بلا مكتبات خارجية.
+
+    الأبعاد الصريحة في الوسم هي ما يمنع اهتزاز الصفحة (CLS)، وقراءتها من
+    الملف تعني أنها لا تكذب بعد استبدال صورة بأخرى.
+    """
     w = h = 0
     with open(path, "rb") as fh:
         data = fh.read(64)
-    # رأس WebP: VP8X أو VP8L أو VP8 — نقرأ الأبعاد بلا مكتبات خارجية
     if data[12:16] == b"VP8X":
         w = int.from_bytes(data[24:27], "little") + 1
         h = int.from_bytes(data[27:30], "little") + 1
@@ -301,11 +83,69 @@ def img(name, alt, cls="case-figure"):
         h = int.from_bytes(data[28:30], "little") & 0x3FFF
     if not (w and h):
         raise SystemExit(f"  ❌ تعذّرت قراءة أبعاد {name}.webp")
+    return w, h
+
+
+def img(name, alt, cls="case-figure", eager=False):
+    """صورة المشروع بأبعادها الحقيقية."""
+    path = os.path.join(ROOT, "assets", "images", f"{name}.webp")
+    w, h = webp_size(path, name)
+    # صورة البطل هي أكبر عنصر فوق الطيّة، وتأجيلها يؤجّل LCP بلا مقابل.
+    prio = ('fetchpriority="high" decoding="async"' if eager
+            else 'decoding="async" fetchpriority="low" loading="lazy"')
     return (f'<figure class="{cls}">\n'
-            f'                        <img decoding="async" fetchpriority="low" '
+            f'                        <img {prio} '
             f'src="/assets/images/{name}.webp" width="{w}" height="{h}" '
-            f'alt="{alt}" loading="lazy" />\n'
+            f'alt="{alt}" />\n'
             f'                     </figure>')
+
+
+def metric_panel(metrics, note, pad="                        "):
+    """لوحة أرقام مبنيّة بـHTML لا صورةً — تُقرأ بقارئ الشاشة وتكبر مع التكبير.
+
+    الأرقام تُفصَل بـ<bdi>: العربيّة RTL والقيم مثل «SAR 17.6K» و«3.60×» تبقى
+    LTR، فلا تنقلب العلامة إلى يسار الرقم ولا يسبق «بعد» «قبل» في القراءة.
+    """
+    o = [f'{pad}<dl class="z2o-metrics">']
+    for label, before, after in metrics:
+        o.append(f'{pad}   <div class="z2o-metric">')
+        o.append(f'{pad}      <dt class="z2o-metric-label">{label}</dt>')
+        o.append(f'{pad}      <dd class="z2o-metric-value">')
+        if before is not None:
+            o.append(f'{pad}         <bdi class="z2o-metric-before">{before}</bdi>')
+            o.append(f'{pad}         <span class="z2o-metric-arrow" aria-hidden="true">&rarr;</span>')
+        o.append(f'{pad}         <bdi class="z2o-metric-after">{after}</bdi>')
+        o.append(f'{pad}      </dd>')
+        o.append(f'{pad}   </div>')
+    o.append(f'{pad}</dl>')
+    if note:
+        o.append(f'{pad}<p class="z2o-metrics-note">{note}</p>')
+    return "\n".join(o)
+
+
+def evidence(name, alt, caption, pad="                        "):
+    """لقطة أصلية داخل إطار محايد، مع رابط مباشر للحجم الكامل.
+
+    الرابط عنصر <a> حقيقي إلى ملف الصورة: بلا جافاسكربت يفتح الصورة كما هي،
+    ومع جافاسكربت يعترضه العارض. لا زرّ يقود إلى لا شيء.
+
+    و`data-barba-prevent` شرطٌ لعمله: barba يلتقط نقرات الروابط قبل معالِجنا
+    وينتقل بنفسه، فيفتح ملف .webp كأنه صفحة مهما استدعينا preventDefault.
+    """
+    path = os.path.join(ROOT, "assets", "images", f"{name}.webp")
+    w, h = webp_size(path, name)
+    url = f"/assets/images/{name}.webp"
+    return "\n".join([
+        f'{pad}<figure class="z2o-evidence">',
+        f'{pad}   <div class="z2o-evidence-frame">',
+        f'{pad}      <img decoding="async" fetchpriority="low" loading="lazy" src="{url}" '
+        f'width="{w}" height="{h}" alt="{alt}" />',
+        f'{pad}   </div>',
+        f'{pad}   <figcaption class="z2o-evidence-caption">{caption}</figcaption>',
+        f'{pad}   <a class="z2o-evidence-open" href="{url}" data-z2o-viewer data-barba-prevent>'
+        f'<span class="z2o-evidence-open-text">View full size</span></a>',
+        f'{pad}</figure>',
+    ])
 
 
 def para(lines):
@@ -341,6 +181,8 @@ def render_section(s):
               for a, b in s["rows"]]
         o += ['                           </tbody>', '                        </table>',
               '                        </div>']
+    elif k == "evidence":
+        o += [evidence(n, a, cap) for n, a, cap in s["evidence"]]
     elif k == "figures":
         o.append('                        <ul class="case-study-figures">')
         o += [f'                           <li><span class="case-study-figure-value">{v}</span>'
@@ -358,9 +200,46 @@ def render_section(s):
     return "\n".join(o)
 
 
+def case_image(c):
+    """الصورة التي تمثّل المشروع في JSON-LD وبطاقات المشاركة.
+
+    المشاريع التي لا صورة بطل لها تمثّلها أول لقطة دليل فيها — وهي صورة
+    حقيقية من الصفحة، لا غلاف عامّ لا علاقة له بالمشروع.
+    """
+    if c.get("hero_image"):
+        return c["hero_image"][0]
+    for sec in c["sections"]:
+        if sec.get("evidence"):
+            return sec["evidence"][0][0]
+        if sec.get("image"):
+            return sec["image"][0]
+    raise SystemExit("  ❌ لا صورة تمثّل هذا المشروع")
+
+
+def breadcrumb(title):
+    """فتات التنقّل: عنصر <nav> حقيقي، والصفحة الحالية ليست رابطاً.
+
+    الروابط وسم <a> لا onclick، فتعمل بلا جافاسكربت ومع barba معاً.
+    """
+    return "\n".join([
+        '            <nav class="z2o-breadcrumb" aria-label="Breadcrumb" data-scroll-section>',
+        '               <div class="container medium">',
+        '                  <ol class="z2o-breadcrumb-list">',
+        '                     <li><a href="/">Home</a></li>',
+        '                     <li><a href="/work/">Our work</a></li>',
+        f'                     <li><span aria-current="page">{title}</span></li>',
+        '                  </ol>',
+        '               </div>',
+        '            </nav>',
+    ])
+
+
 def render_body(slug, c):
-    o = []
-    # الفتحة: التصنيف والمقدّمة وبيانات المشروع وصورة البطل
+    o = [breadcrumb(c.get("breadcrumb") or c["h1"].split(" &mdash; ")[0])]
+    # الفتحة: التصنيف والمقدّمة وبيانات المشروع، ثم صورة البطل أو لوحة الأرقام.
+    # المشاريع التي دليلها لقطة لوحة قياس لا صورة بطل لها: لقطة بعرض 717 بكسل
+    # ممدودة على نصف الشاشة تصير ضبابيّة وتُقرأ أسوأ من الأرقام نفسها. فتُبنى
+    # الأرقام بـHTML هنا وتبقى اللقطة في موضعها بحجمها الأصلي أسفل الصفحة.
     o += ['            <section class="section case-overview case-study-lead once-in" data-scroll-section>',
           '               <div class="container medium">',
           '                  <div class="row">',
@@ -370,11 +249,20 @@ def render_body(slug, c):
           '                        <dl class="case-study-meta">']
     for k, v in c["meta"]:
         o += [f'                           <div><dt>{k}</dt><dd>{v}</dd></div>']
-    o += ['                        </dl>', '                     </div>',
-          '                     <div class="flex-col case-study-media fade-in animate">',
-          '                        ' + img(*c["hero_image"], cls="case-figure case-figure-hero"),
-          '                     </div>',
-          '                  </div>', '               </div>', '            </section>']
+    o += ['                        </dl>', '                     </div>']
+    if c.get("hero_image"):
+        o += ['                     <div class="flex-col case-study-media fade-in animate">',
+              '                        ' + img(*c["hero_image"], cls="case-figure case-figure-hero",
+                                               eager=True),
+              '                     </div>']
+    elif c.get("hero_metrics"):
+        o += ['                     <div class="flex-col case-study-media fade-in animate">',
+              '                        <div class="z2o-metric-panel">',
+              metric_panel(c["hero_metrics"], c.get("hero_metric_note"),
+                           "                           "),
+              '                        </div>',
+              '                     </div>']
+    o += ['                  </div>', '               </div>', '            </section>']
 
     for s in c["sections"]:
         o.append(render_section(s))
@@ -426,6 +314,7 @@ def render_body(slug, c):
           '                        </ul>',
           '                     </div>', '                  </div>', '               </div>',
           '            </section>',
+          strings_block('            '),
           '         </section>']
     return "\n" + "\n".join(o) + "\n"
 
@@ -478,9 +367,13 @@ def build(slug, c, shell):
     h = re.sub(r'\s*<script type="application/ld\+json">.*?</script>\n', "\n", h, flags=re.S)
     ld = JSONLD.format(url=url, name=re.sub(r"\s*\|.*$", "", c["title"]),
                        desc=c["description"].replace('"', "'"),
-                       img=f"{BASE}/assets/images/{c['hero_image'][0]}.webp",
+                       img=f"{BASE}/assets/images/{case_image(c)}.webp",
                        service=c["service_name"], base=BASE)
     h = h.replace("</head>", ld + "</head>", 1)
+
+    # أرضية المعرض نفسها على صفحة المشروع، فلا تبدو الصفحتان من موقعين.
+    h = h.replace('<main class="main" id="work-single"',
+                  '<main class="main z2o-case-page" id="work-single"', 1)
 
     # ---- body
     h = re.sub(r"<h1>.*?</h1>", f"<h1>{c['h1']}</h1>", h, count=1, flags=re.S)
@@ -501,7 +394,7 @@ def build(slug, c, shell):
     if i < 0 or j < i:
         raise SystemExit(f"  ❌ لم أجد الفوتر في {slug}")
     h = h[:i] + standard_footer() + h[j:]
-    return h
+    return re.sub(r"[ \t]+(?=\n)", "", h)
 
 
 def main():

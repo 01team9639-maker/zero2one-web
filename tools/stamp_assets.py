@@ -46,14 +46,50 @@ def digest(rel_path):
     return h.hexdigest()[:8]
 
 
+# `blog/` مخرجات مولّدة يملكها مستودع آخر (zeroone01z21-alt/blog-build).
+# بصماتها تُكتب هناك بـ tools/sync_site_chrome.py التي تنسخ ?v= من صفحات
+# الموقع إلى قوالب Hugo، ثم يُخرِج البناء الصفحات إلى هنا.
+#
+# عمليًّا لم تكن هذه الأداة تكتب فيها أصلاً: صفحات المدونة تستعمل روابط
+# مطلقة (https://zero2one.sa/assets/...) و STAMPED لا يطابق إلا الجذرية.
+# أي أن الحدّ كان قائماً بالمصادفة لا بالقرار — ويكفي أن تتغيّر المزامنة
+# إلى مسارات نسبية حتى نجد أنفسنا نكتب في مخرجات مولّدة يمسحها أول نشر
+# للمدونة ونصنع تعارض دفع. فالاستبعاد هنا يحوّل المصادفة إلى قرار مكتوب.
+#
+# الملفات تبقى في المستودع لأن Hostinger يسحبه — الحدّ على الكتابة لا على
+# الوجود، ولذلك ليس في .gitignore.
+#
+# وثمن الحدّ مذكور صراحةً: حين تتغيّر حزمة، تبقى صفحات المدونة تشير إلى
+# البصمة القديمة حتى تُعاد مزامنة الواجهة هناك. bundle_drift() أدناه يقرأها
+# — ولا يكتب فيها — ليطبع تحذيراً، فلا يمرّ ذلك صامتاً.
+BLOG_DIR = "blog"
+
+# الشكلان معاً: الجذريّ الذي يكتبه الموقع، والمطلق الذي تنسخه المدونة.
+BLOG_STAMPED = re.compile(
+    r'(?:href|src)="(?:https://zero2one\.sa)?'
+    r'(?P<path>/assets/(?:css|js)/[\w.-]+\.(?:css|js))\?v=(?P<stamp>[\w.]+)"')
+
+
 def pages():
     out = []
     for f in glob.glob(os.path.join(ROOT, "**", "*.html"), recursive=True):
         rel = os.path.relpath(f, ROOT).replace(os.sep, "/")
-        if rel.split("/")[0] in ("node_modules", "_archive", "pages"):
+        if rel.split("/")[0] in ("node_modules", "_archive", "pages", BLOG_DIR):
             continue
         out.append(rel)
     return sorted(out)
+
+
+def bundle_drift(cache):
+    """يقرأ صفحات المدونة — ولا يكتب فيها — ليخبرنا متى تخلّفت بصماتها."""
+    stale = {}
+    for f in glob.glob(os.path.join(ROOT, BLOG_DIR, "**", "*.html"), recursive=True):
+        for m in BLOG_STAMPED.finditer(open(f, encoding="utf-8").read()):
+            asset, stamp = m.group("path"), m.group("stamp")
+            want = cache.get(asset) or digest(asset)
+            if want and stamp != want:
+                stale[asset] = (stamp, want)
+    return stale
 
 
 def main():
@@ -85,6 +121,15 @@ def main():
 
     for a in sorted(missing):
         print(f"  ! referenced but not on disk: {a}", file=sys.stderr)
+
+    drift = bundle_drift(cache)
+    if drift:
+        print(f"  ⚠️  المدونة تشير إلى {len(drift)} أصلاً ببصمة قديمة — "
+              f"مخرجاتها يملكها مستودع آخر فلا تُكتب من هنا.")
+        for asset, (was, want) in sorted(drift.items()):
+            print(f"     {asset}  ?v={was} -> ?v={want}")
+        print("     أعد مزامنة الواجهة هناك بعد نشر الموقع:")
+        print("     python3 tools/sync_site_chrome.py <مسار مستودع الموقع>")
 
     if check:
         if stale:

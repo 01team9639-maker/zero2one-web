@@ -438,6 +438,9 @@ function initPageTransitions() {
 
   if ($(window).width() > 540) {
     barba.hooks.leave(() => {
+      // العارض نافذة في الطبقة العليا: لولا هذا لبقي معلّقاً فوق الصفحة
+      // الجديدة طوال الانتقال.
+      if (z2oTeardown) { z2oTeardown(); z2oTeardown = null; }
       $(".btn-hamburger, .btn-menu").removeClass('active');
       $("main").removeClass('nav-active');
     });
@@ -579,6 +582,7 @@ function initScript() {
   initTimeZone();
   initPlayVideoInview();
   initScrolltriggerAnimations();
+  initPortfolio();
   initEmailLinks();
   setTimeout(initScrollRefresh, 500);
 }
@@ -1906,4 +1910,250 @@ function initScrolltriggerAnimations() {
 
   }); // End GSAP Matchmedia
 
+}
+
+/**
+* Portfolio — category filters and the evidence viewer
+* ====================================================
+*
+* Two behaviours, both optional: the gallery is complete in the HTML and every
+* card links somewhere real without this file. The filter bar ships `hidden`
+* and is only revealed here, so a visitor without JavaScript never sees a
+* control that does nothing, and the "view full size" links stay ordinary
+* anchors to the image file.
+*
+* Lifecycle: called from initScript(), which barba runs on `once` and on
+* `beforeEnter`. Every listener, dialog and observer is recorded and undone at
+* the top of the next run, so repeated transitions cannot stack handlers.
+*
+* Visible text comes from a `[data-z2o-strings]` block in the page, never from
+* a literal here — tools/build_ar.py translates the HTML and skips <script>,
+* so a string written in this file would stay English on the Arabic site.
+*/
+let z2oTeardown = null;
+
+function initPortfolio() {
+  if (z2oTeardown) { z2oTeardown(); z2oTeardown = null; }
+
+  // أثناء انتقال barba المتزامن قد توجد حاويتان في الـDOM معاً: القديمة
+  // تُحذف بعد 495ms والجديدة مُلحقة بعدها. الأخيرة هي الداخلة دائماً.
+  const containers = document.querySelectorAll('[data-barba="container"]');
+  const root = containers[containers.length - 1] || document;
+
+  const gallery = root.querySelector('[data-z2o-gallery]');
+  const openers = root.querySelectorAll('[data-z2o-viewer]');
+  if (!gallery && !openers.length) return;
+
+  const undo = [];
+  const on = (el, ev, fn, opts) => {
+    el.addEventListener(ev, fn, opts);
+    undo.push(() => el.removeEventListener(ev, fn, opts));
+  };
+
+  // ---------------------------------------------------------------- strings
+  const strings = {};
+  root.querySelectorAll('[data-z2o-string]').forEach((el) => {
+    strings[el.getAttribute('data-z2o-string')] = el.textContent.trim();
+  });
+  const t = (key, vars) => {
+    let s = strings[key] || '';
+    Object.keys(vars || {}).forEach((k) => { s = s.split('{' + k + '}').join(vars[k]); });
+    return s;
+  };
+
+  // ------------------------------------------------------- settle the scroll
+  // بعد تغيير التخطيط يجب أن تُعاد قياسات locomotive وScrollTrigger، وإلّا
+  // بقي ارتفاع الصفحة على قيمته قبل الترشيح فتعلق نهايتها في فراغ.
+  // rAF مزدوج: الأول بعد إعادة التنسيق، والثاني بعد رسمها فعلاً.
+  let settleId = 0;
+  const settle = () => {
+    cancelAnimationFrame(settleId);
+    settleId = requestAnimationFrame(() => {
+      settleId = requestAnimationFrame(() => {
+        if (typeof scroll !== 'undefined' && scroll) scroll.update();
+        if (typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
+      });
+    });
+  };
+  undo.push(() => cancelAnimationFrame(settleId));
+
+  // ---------------------------------------------------------------- filters
+  const filterBar = root.querySelector('[data-z2o-filters]');
+  if (gallery && filterBar) {
+    const buttons = Array.prototype.slice.call(
+      filterBar.querySelectorAll('[data-z2o-filter]'));
+    const cards = Array.prototype.slice.call(gallery.children);
+    const status = root.querySelector('[data-z2o-filter-status]');
+    filterBar.hidden = false;
+
+    const apply = (key, announce) => {
+      let shown = 0;
+      cards.forEach((card) => {
+        const cats = (card.getAttribute('data-categories') || '').split(' ');
+        const show = key === 'all' || cats.indexOf(key) !== -1;
+        // hidden وحده كافٍ: CSS يجعله display:none فيخرج من التخطيط ومن
+        // ترتيب التبويب ومن شجرة الوصول في خطوة واحدة.
+        card.hidden = !show;
+        if (show) shown += 1;
+      });
+      buttons.forEach((b) => {
+        const sel = b.getAttribute('data-z2o-filter') === key;
+        b.setAttribute('aria-pressed', sel ? 'true' : 'false');
+        b.classList.toggle('is-selected', sel);
+      });
+      if (key === 'all') gallery.removeAttribute('data-filtered');
+      else gallery.setAttribute('data-filtered', key);
+      if (status && announce) {
+        status.textContent = t('status', { visible: shown, total: cards.length });
+      }
+      settle();
+    };
+
+    buttons.forEach((b) => {
+      on(b, 'click', () => {
+        // التركيز يبقى على الزرّ الذي ضغطه الزائر — لا ينتقل إلى الشبكة
+        // ولا يُعاد إلى أعلى الصفحة.
+        apply(b.getAttribute('data-z2o-filter'), true);
+      });
+    });
+
+    undo.push(() => {
+      cards.forEach((c) => { c.hidden = false; });
+      gallery.removeAttribute('data-filtered');
+      filterBar.hidden = true;
+    });
+  }
+
+  // ----------------------------------------------------------------- viewer
+  if (openers.length) {
+    const dialog = document.createElement('dialog');
+    dialog.className = 'z2o-viewer';
+    dialog.setAttribute('aria-label', t('dialog') || 'Image viewer');
+    dialog.innerHTML =
+      '<div class="z2o-viewer-inner">' +
+        '<div class="z2o-viewer-bar">' +
+          '<p class="z2o-viewer-count" data-count></p>' +
+          '<div class="z2o-viewer-actions">' +
+            '<button type="button" class="z2o-viewer-btn z2o-viewer-nav" data-prev hidden>&#8592;</button>' +
+            '<button type="button" class="z2o-viewer-btn z2o-viewer-nav" data-next hidden>&#8594;</button>' +
+            '<button type="button" class="z2o-viewer-btn" data-close>&#10005;</button>' +
+          '</div>' +
+        '</div>' +
+        '<figure class="z2o-viewer-figure">' +
+          '<div class="z2o-viewer-stage"><img alt="" data-img /></div>' +
+          '<figcaption class="z2o-viewer-caption">' +
+            '<span data-caption></span> ' +
+            '<a data-original target="_blank" rel="noopener"></a>' +
+          '</figcaption>' +
+        '</figure>' +
+      '</div>';
+    document.body.appendChild(dialog);
+
+    const el = (sel) => dialog.querySelector(sel);
+    const imgEl = el('[data-img]');
+    const capEl = el('[data-caption]');
+    const origEl = el('[data-original]');
+    const countEl = el('[data-count]');
+    const prevBtn = el('[data-prev]');
+    const nextBtn = el('[data-next]');
+    const closeBtn = el('[data-close]');
+
+    closeBtn.setAttribute('aria-label', t('close') || 'Close');
+    prevBtn.setAttribute('aria-label', t('prev') || 'Previous image');
+    nextBtn.setAttribute('aria-label', t('next') || 'Next image');
+    origEl.textContent = t('original') || '';
+
+    let shots = [];
+    let index = 0;
+    let opener = null;
+
+    const show = (i) => {
+      index = (i + shots.length) % shots.length;
+      const s = shots[index];
+      imgEl.setAttribute('src', s.src);
+      imgEl.setAttribute('alt', s.alt);
+      if (s.w) imgEl.setAttribute('width', s.w);
+      if (s.h) imgEl.setAttribute('height', s.h);
+      capEl.textContent = s.caption;
+      origEl.setAttribute('href', s.src);
+      const many = shots.length > 1;
+      prevBtn.hidden = !many;
+      nextBtn.hidden = !many;
+      countEl.textContent = many
+        ? t('count', { current: index + 1, total: shots.length })
+        : '';
+    };
+
+    const close = () => {
+      if (dialog.open) dialog.close();
+    };
+
+    on(dialog, 'close', () => {
+      // إيقاف التمرير يُرفع هنا لا في زرّ الإغلاق، فيشمل Escape والنقر خارج
+      // النافذة معاً.
+      if (typeof scroll !== 'undefined' && scroll) scroll.start();
+      imgEl.removeAttribute('src');
+      if (opener && document.body.contains(opener)) opener.focus();
+      opener = null;
+    });
+
+    // النقر على الخلفية يغلق — العنصر نفسه هو هدف الحدث خارج المحتوى
+    on(dialog, 'click', (e) => { if (e.target === dialog) close(); });
+    on(closeBtn, 'click', close);
+    on(prevBtn, 'click', () => show(index - 1));
+    on(nextBtn, 'click', () => show(index + 1));
+    on(dialog, 'keydown', (e) => {
+      if (shots.length < 2) return;
+      if (e.key === 'ArrowRight') { e.preventDefault(); show(index + 1); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); show(index - 1); }
+    });
+
+    openers.forEach((link) => {
+      on(link, 'click', (e) => {
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.button) return;
+        if (typeof dialog.showModal !== 'function') return; // بلا <dialog>: الرابط كما هو
+        const scope = link.closest('.z2o-card, .z2o-evidence') || root;
+        const figures = scope.querySelectorAll('[data-z2o-shots] figure');
+        if (figures.length) {
+          shots = Array.prototype.map.call(figures, (f) => {
+            const i = f.querySelector('img');
+            const c = f.querySelector('figcaption');
+            return {
+              src: i.getAttribute('src'), alt: i.getAttribute('alt') || '',
+              w: i.getAttribute('width'), h: i.getAttribute('height'),
+              caption: c ? c.textContent.trim() : '',
+            };
+          });
+        } else {
+          // دليل داخل صفحة مشروع: الصورة والتعليق في الصفحة نفسها
+          const fig = link.closest('.z2o-evidence');
+          const i = fig && fig.querySelector('img');
+          const c = fig && fig.querySelector('.z2o-evidence-caption');
+          shots = [{
+            src: link.getAttribute('href'),
+            alt: i ? i.getAttribute('alt') || '' : '',
+            w: i ? i.getAttribute('width') : null,
+            h: i ? i.getAttribute('height') : null,
+            caption: c ? c.textContent.trim() : '',
+          }];
+        }
+        e.preventDefault();
+        opener = link;
+        show(0);
+        if (typeof scroll !== 'undefined' && scroll) scroll.stop();
+        dialog.showModal();
+        closeBtn.focus();
+      });
+    });
+
+    undo.push(() => {
+      if (dialog.open) dialog.close();
+      if (dialog.parentNode) dialog.parentNode.removeChild(dialog);
+    });
+  }
+
+  z2oTeardown = () => {
+    undo.forEach((fn) => { try { fn(); } catch (err) { /* لا شيء */ } });
+    undo.length = 0;
+  };
 }

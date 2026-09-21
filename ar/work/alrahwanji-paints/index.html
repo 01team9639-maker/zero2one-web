@@ -42,7 +42,7 @@
 
    <link rel="preload" as="font" href="/assets/fonts/NeueMontreal-Regular.otf" type="font/otf"
       crossorigin="anonymous">
-   <link href="/assets/css/bundle.min.css?v=08bcd014" rel="stylesheet">
+   <link href="/assets/css/bundle.min.css?v=d45fdf04" rel="stylesheet">
    <!-- Analytics — deferred.
         dataLayer and gtag() exist immediately, so nothing that fires early is
         lost: events queue and are replayed when the tag scripts arrive. The
@@ -88,7 +88,7 @@
         browser has parsed the whole document. -->
    <script defer src="/assets/js/vendor.min.js?v=748f32fb"></script>
    <script defer src="/assets/js/i18n.min.js?v=54304f96"></script>
-   <script defer src="/assets/js/index-new.min.js?v=a37cabb2"></script>
+   <script defer src="/assets/js/index-new.min.js?v=f29addd0"></script>
     <script type="application/ld+json">
    {"@context":"https://schema.org","@type":"CreativeWork","@id":"https://zero2one.sa/work/alrahwanji-paints/#case","name":"Alrahwanji Paints Ad Campaign — Facebook &amp; Instagram","headline":"Alrahwanji Paints Ad Campaign — Facebook &amp; Instagram","description":"كيف نقلنا دهانات الرهونجي من ترويج غير منظّم إلى إعلان مقيس على فيسبوك وإنستغرام: أرقام الوصول والتفاعل وأماكن الظهور كما وردت، وميزانية لا تُزاد إلا بعد ثبات النتائج.","url":"https://zero2one.sa/ar/work/alrahwanji-paints/","inLanguage":"ar","image":"https://zero2one.sa/assets/images/alrahwanji-01-project-overview.webp","about":{"@type":"Service","name":"إدارة الحملات الإعلانية"},"creator":{"@id":"https://zero2one.sa/#organization"},"isPartOf":{"@type":"CollectionPage","@id":"https://zero2one.sa/work/"}}
    </script>
@@ -139,7 +139,7 @@
          </div>
       </div>
    </div>
-   <main class="main" id="work-single" data-barba="container" data-barba-namespace="work-single">
+   <main class="main z2o-case-page" id="work-single" data-barba="container" data-barba-namespace="work-single">
       <div class="mouse-pos-list-image no-select"></div>
       <div class="mouse-pos-list-btn no-select"></div>
       <div class="mouse-pos-list-span no-select">
@@ -223,7 +223,7 @@
                                 </span>
                             </a>
                         </li>
-                        
+
                         <li class="btn btn-link">
                             <a href="https://wa.me/966530307054" target="_blank" rel="noopener" class="btn-click magnetic" data-strength="24" data-strength-text="12">
                                 <span class="btn-text">
@@ -352,7 +352,7 @@
                                 </span>
                             </a>
                         </li>
-                        
+
                         <li class="btn btn-link btn-contact">
                             <a href="https://wa.me/966530307054" target="_blank" rel="noopener" class="btn-click magnetic" data-strength="20" data-strength-text="10">
                                 <span class="btn-text">
@@ -378,6 +378,15 @@
                   </div>
                </div>
             </header>
+            <nav class="z2o-breadcrumb" aria-label="مسار التصفّح" data-scroll-section>
+               <div class="container medium">
+                  <ol class="z2o-breadcrumb-list">
+                     <li><a href="/ar/">الرئيسية</a></li>
+                     <li><a href="/ar/work/">أعمالنا</a></li>
+                     <li><span aria-current="page">تحويل الإنفاق الإعلاني إلى نموّ مركَّز وقابل للقياس</span></li>
+                  </ol>
+               </div>
+            </nav>
             <section class="section case-overview case-study-lead once-in" data-scroll-section>
                <div class="container medium">
                   <div class="row">
@@ -395,7 +404,7 @@
                      </div>
                      <div class="flex-col case-study-media fade-in animate">
                         <figure class="case-figure case-figure-hero">
-                        <img decoding="async" fetchpriority="low" src="/assets/images/alrahwanji-01-project-overview.webp" width="1489" height="2105" alt="نظرة عامة على مشروع حملة دهانات الرهونجي الإعلانية واستراتيجيتها" loading="lazy" />
+                        <img fetchpriority="high" decoding="async" src="/assets/images/alrahwanji-01-project-overview.webp" width="1489" height="2105" alt="نظرة عامة على مشروع حملة دهانات الرهونجي الإعلانية واستراتيجيتها" />
                      </figure>
                      </div>
                   </div>
@@ -458,7 +467,7 @@
                      </div>
                      <div class="flex-col case-study-media fade-in animate">
                         <figure class="case-figure">
-                        <img decoding="async" fetchpriority="low" src="/assets/images/alrahwanji-03-performance-overview.webp" width="1138" height="552" alt="متابعو الحملة وتكلفة المتابعة والإنفاق ومسار الأداء" loading="lazy" />
+                        <img decoding="async" fetchpriority="low" loading="lazy" src="/assets/images/alrahwanji-03-performance-overview.webp" width="1138" height="552" alt="متابعو الحملة وتكلفة المتابعة والإنفاق ومسار الأداء" />
                      </figure>
                      </div>
                   </div>
@@ -480,7 +489,7 @@
                      </div>
                      <div class="flex-col case-study-media fade-in animate">
                         <figure class="case-figure">
-                        <img decoding="async" fetchpriority="low" src="/assets/images/alrahwanji-04-engagement-results.webp" width="1138" height="552" alt="إعجابات الحملة وتفاعلاتها وردود الفعل ونقرات الروابط" loading="lazy" />
+                        <img decoding="async" fetchpriority="low" loading="lazy" src="/assets/images/alrahwanji-04-engagement-results.webp" width="1138" height="552" alt="إعجابات الحملة وتفاعلاتها وردود الفعل ونقرات الروابط" />
                      </figure>
                      </div>
                   </div>
@@ -507,7 +516,7 @@
                      </div>
                      <div class="flex-col case-study-media fade-in animate">
                         <figure class="case-figure">
-                        <img decoding="async" fetchpriority="low" src="/assets/images/alrahwanji-05-placement-results.webp" width="1138" height="709" alt="وصول الحملة عبر ريلز فيسبوك والموجز والقصص ومتصفّح الجوال" loading="lazy" />
+                        <img decoding="async" fetchpriority="low" loading="lazy" src="/assets/images/alrahwanji-05-placement-results.webp" width="1138" height="709" alt="وصول الحملة عبر ريلز فيسبوك والموجز والقصص ومتصفّح الجوال" />
                      </figure>
                      </div>
                   </div>
@@ -523,7 +532,7 @@
                      </div>
                      <div class="flex-col case-study-media fade-in animate">
                         <figure class="case-figure">
-                        <img decoding="async" fetchpriority="low" src="/assets/images/alrahwanji-02-dashboard-full.webp" width="1132" height="1863" alt="لوحة أداء حملة فيسبوك الإعلانية" loading="lazy" />
+                        <img decoding="async" fetchpriority="low" loading="lazy" src="/assets/images/alrahwanji-02-dashboard-full.webp" width="1132" height="1863" alt="لوحة أداء حملة فيسبوك الإعلانية" />
                      </figure>
                      </div>
                   </div>
@@ -603,6 +612,15 @@
                   </div>
                </div>
             </section>
+            <div hidden data-z2o-strings>
+               <span data-z2o-string="dialog">عارض الصور</span>
+               <span data-z2o-string="close">إغلاق العارض</span>
+               <span data-z2o-string="prev">الصورة السابقة</span>
+               <span data-z2o-string="next">الصورة التالية</span>
+               <span data-z2o-string="original">افتح الملف الأصلي</span>
+               <span data-z2o-string="count">{current} من {total}</span>
+               <span data-z2o-string="status">يُعرض {visible} من {total} عملاً</span>
+            </div>
          </section>
 <div class="footer-rounded-div" data-scroll-section>
                 <div class="rounded-div-wrap">

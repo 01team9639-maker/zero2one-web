@@ -47,6 +47,30 @@ const MASK = ['.big-name', '.contact-map', '#timeSpan',
   // in headless Chromium between runs
   '#contact-form select', '#contact-form textarea', '#contact-form input'];
 
+// صفحات المشاريع مُدرجة صراحةً: الأداة تلتقط ما في هذه القائمة فقط، ومشروع
+// جديد لا يُضاف هنا يخرج من الرقابة البصرية بلا أن يشتكي أحد.
+// المصدر الواحد لقائمتها: tools/portfolio_data.py
+const CASES = [
+  '/work/habba/',
+  '/work/alostaz-seo/',
+  '/work/cosmetic-surgery-egypt-seo/',
+  '/work/orthopedic-clinic-egypt-seo/',
+  '/work/alhokail-seo/',
+  '/work/google-ads-conversion-value/',
+  '/work/alrahwanji-paints/',
+  '/work/kuwait-tutoring-instagram-ads/',
+];
+const CASES_AR = [
+  '/ar/work/habba/',
+  '/ar/work/alostaz-seo/',
+  '/ar/work/cosmetic-surgery-egypt-seo/',
+  '/ar/work/orthopedic-clinic-egypt-seo/',
+  '/ar/work/alhokail-seo/',
+  '/ar/work/google-ads-conversion-value/',
+  '/ar/work/alrahwanji-paints/',
+  '/ar/work/kuwait-tutoring-instagram-ads/',
+];
+
 const PAGES = [
   '/', '/about/', '/work/', '/contact/', '/services/',
   '/services/web-design-riyadh/', '/services/seo-riyadh/', '/services/digital-advertising/',
@@ -54,6 +78,7 @@ const PAGES = [
   '/ar/', '/ar/about/', '/ar/work/', '/ar/contact/', '/ar/services/',
   '/ar/services/web-design-riyadh/', '/ar/services/seo-riyadh/', '/ar/services/digital-advertising/',
   '/ar/services/brand-identity/', '/ar/services/social-media-management/', '/ar/services/ecommerce-development/',
+  ...CASES, ...CASES_AR,
 ];
 const VIEWPORTS = [
   { name: 'mobile', width: 412, height: 915, isMobile: true, hasTouch: true },
