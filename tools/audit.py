@@ -4,7 +4,10 @@ ZERO 2 ONE — Static-site SEO / code audit
 ==========================================
 
 Scans every HTML page in the project and reports:
-  * Images missing (or with empty) alt text
+  * Images missing (or with empty) alt text — see classify_alt(): this reads
+    the markup only. It cannot judge whether an empty alt (decorative) or a
+    given alt text is the RIGHT choice for an image; that needs a person
+    looking at the image in its context.
   * <title> presence, length, and duplicates across pages
   * <meta name="description"> presence, length, and duplicates
   * Content heading structure (exactly one <h1>, no skipped levels)
@@ -44,6 +47,31 @@ VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link",
 # excluded from the content-quality checks.
 CHROME = ("loading-container", "fixed-nav", "nav-bar", "footer",
           "credits", "mouse-pos-list")
+
+
+def first_attr(attrs, name):
+    """Value of the first `name` attribute, read the way a browser reads it.
+
+    html.parser reports a valueless attribute (`<img alt>`, which is what the
+    blog's minifier makes of alt="") as (name, None), and dict(attrs) keeps the
+    last duplicate — so `dict(attrs).get("alt")` cannot tell `<img alt>` from
+    `<img>`. Here None means the attribute is absent; a valueless attribute is
+    the empty string, as in the DOM; and the first occurrence wins, as in the
+    DOM. Attribute names arrive lower-cased from html.parser.
+    """
+    for key, value in attrs:
+        if key == name:
+            return "" if value is None else value
+    return None
+
+
+def classify_alt(alt):
+    """'missing' (no alt attribute), 'empty' (alt present but blank: the
+    image is marked decorative) or 'present'. Markup only — see the module
+    docstring for what this cannot decide."""
+    if alt is None:
+        return "missing"
+    return "empty" if alt.strip() == "" else "present"
 
 
 class PageParser(HTMLParser):
@@ -88,9 +116,10 @@ class PageParser(HTMLParser):
         elif tag == "link" and a.get("rel", "").lower() == "canonical":
             self.canonical = a.get("href")
         elif tag == "img":
-            self.images.append({"src": a.get("src", ""), "alt": a.get("alt")})
-            if a.get("alt") and not self._in_chrome():
-                self._content_text.append(a["alt"])
+            alt = first_attr(attrs, "alt")
+            self.images.append({"src": a.get("src", ""), "alt": alt})
+            if alt and not self._in_chrome():
+                self._content_text.append(alt)
         elif tag in ("h1", "h2", "h3", "h4", "h5", "h6"):
             self._cap = ("h", int(tag[1])); self._buf = []; self._h_chrome = self._in_chrome()
 
@@ -266,9 +295,10 @@ def audit():
 
         # images / alt (whole page)
         for img in p.images:
-            if img["alt"] is None:
+            state = classify_alt(img["alt"])
+            if state == "missing":
                 add(page, "ERROR", "alt-missing", f"<img> no alt: {img['src']}")
-            elif img["alt"].strip() == "":
+            elif state == "empty":
                 add(page, "INFO", "alt-empty", f"empty alt (decorative?): {img['src']}")
 
         if not skip_page_seo:
@@ -336,7 +366,7 @@ def print_report(pages, parsed, issues):
     print(f"Pages scanned: {len(pages)}\n")
     for p in pages:
         pp = parsed[p]
-        no_alt = sum(1 for i in pp.images if i["alt"] is None)
+        no_alt = sum(1 for i in pp.images if classify_alt(i["alt"]) == "missing")
         print(f"  {p:40} title:{'Y' if pp.title else 'N'} "
               f"desc:{'Y' if pp.metas.get('description') else 'N'} "
               f"h1:{[l for l,_ in pp.content_headings].count(1)} "

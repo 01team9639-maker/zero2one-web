@@ -146,8 +146,8 @@ AR_META = {
 # text-node lookup cannot reach it (the JS runtime handled these the same way).
 HTML_REPLACEMENTS = [
     # hero <h1>
-    ('<h1 class="home-header-title"><span>Digital Marketing</span> Agency in Riyadh</h1>',
-     '<h1 class="home-header-title"><span>وكالة تسويق رقمي</span> في الرياض</h1>'),
+    ('<h1 class="home-header-title" id="main-content" tabindex="-1"><span>Digital Marketing</span> Agency in Riyadh</h1>',
+     '<h1 class="home-header-title" id="main-content" tabindex="-1"><span>وكالة تسويق رقمي</span> في الرياض</h1>'),
     # hero brand wordmark (GSAP clones it, but it is one element in the source)
     ('ZERO\n                                <span style="color:#F9460E;font-weight:900">2</span> ONE<span class="spacer">—</span>',
      'من الصفر <span style="color:#F9460E;font-weight:900">إلى</span> الواحد<span class="spacer">—</span>'),

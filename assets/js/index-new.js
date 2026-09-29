@@ -366,6 +366,63 @@ function pageTransitionOut() {
 
 }
 
+/**
+ * Page <head> after a barba navigation
+ *
+ * barba swaps the <main> container and the <title>; the rest of <head> stays
+ * as the first page loaded it. Measured before this existed: after
+ * /services/seo-riyadh/ → /work/ the document still declared the SEO page's
+ * canonical, hreflang, description, Open Graph, Twitter card and JSON-LD, so
+ * anything reading the live page (share sheets, extensions, rendering
+ * crawlers) was told it was on the previous page.
+ *
+ * The page-specific set is copied from the destination's HTML, and nothing
+ * else: styles, preloads, verification tags and the analytics snippets stay
+ * exactly as loaded — no tag runs twice, no page_view is added. JSON-LD is
+ * data: it is recreated as a fresh <script type="application/ld+json"> with
+ * its text set, and no node from the parsed page is ever inserted, so nothing
+ * executable can come across. The title stays barba's job.
+ */
+var HEAD_MANAGED = [
+  'meta[name="description"]', 'meta[name="keywords"]', 'meta[name="robots"]',
+  'link[rel="canonical"]', 'link[rel="alternate"][hreflang]',
+  'meta[property^="og:"]', 'meta[name^="twitter:"]',
+  'script[type="application/ld+json"]'
+].join(',');
+
+function syncHead(html) {
+  if (!html) return;
+  var next = new DOMParser().parseFromString(html, 'text/html');
+  var head = document.head;
+  var old = head.querySelectorAll(HEAD_MANAGED);
+  // the new set goes where the old one started
+  var mark = document.createTextNode('');
+  head.insertBefore(mark, old.length ? old[0] : null);
+  old.forEach(function (el) { el.remove(); });
+  next.head.querySelectorAll(HEAD_MANAGED).forEach(function (src) {
+    var el;
+    if (src.tagName === 'SCRIPT') {
+      el = document.createElement('script');
+      el.type = 'application/ld+json';
+      el.textContent = src.textContent;
+    } else {
+      el = document.createElement(src.tagName.toLowerCase());
+      for (var i = 0; i < src.attributes.length; i++) {
+        el.setAttribute(src.attributes[i].name, src.attributes[i].value);
+      }
+    }
+    head.insertBefore(el, mark);
+  });
+  mark.remove();
+  // the language switch is a full load, but no barba link may leave the
+  // page declaring the wrong language either
+  ['lang', 'dir'].forEach(function (name) {
+    var v = next.documentElement.getAttribute(name);
+    if (v === null) document.documentElement.removeAttribute(name);
+    else if (document.documentElement.getAttribute(name) !== v) document.documentElement.setAttribute(name, v);
+  });
+}
+
 function initPageTransitions() {
 
   //let scroll;
@@ -374,6 +431,48 @@ function initPageTransitions() {
   barba.hooks.before(() => {
     select('html').classList.add('is-transitioning');
   });
+
+  // the destination's canonical, hreflang, description, social cards and
+  // JSON-LD — see syncHead()
+  barba.hooks.beforeEnter((data) => {
+    syncHead(data.next.html);
+  });
+
+  // Keyboard for the side menu. Bound once, on document, so barba's page
+  // swaps can neither drop nor duplicate it — the per-page $(document).keydown
+  // this replaces added one more Escape handler with every navigation.
+  document.addEventListener('keydown', function (e) {
+    var n = navParts();
+    if (!n.toggle) return;
+    if ((e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') && e.target === n.toggle) {
+      // what a native <button> does; Space would otherwise scroll the page
+      e.preventDefault();
+      if (!e.repeat) n.toggle.click();   // the same path as mouse and touch
+    } else if ((e.key === 'Escape' || e.key === 'Esc') && isNavOpen(n)) {
+      setNavOpen(false);
+      n.toggle.focus({ preventScroll: true });
+    }
+  });
+
+  // Skip link: focus the page's <h1> and bring it on screen through
+  // locomotive (the window itself does not scroll here, so the browser's own
+  // jump to #main-content would move nothing). Capture phase, and the event
+  // stops here, so barba never sees the click as a navigation.
+  document.addEventListener('click', function (e) {
+    var el = e.target && e.target.nodeType === 1 ? e.target : null;
+    var a = el && el.closest ? el.closest('a.skip-link') : null;
+    if (!a) return;
+    e.preventDefault();
+    e.stopPropagation();
+    var n = navParts();
+    var target = n.root.querySelector('#main-content') || n.root.querySelector('h1');
+    if (!target) return;
+    focusQuietly(target);
+    var r = target.getBoundingClientRect();
+    if (r.top < 0 || r.bottom > window.innerHeight) {
+      scroll.scrollTo(target, { offset: 0, duration: 0 });
+    }
+  }, true);
 
   // do something after the transition finishes
   // المرساة تُلتقط من الرابط المضغوط، لا من العنوان ولا من barba.
@@ -400,6 +499,17 @@ function initPageTransitions() {
     scroll.init();
     scroll.stop();
 
+    // The link that started this navigation left with the old page, which
+    // drops focus to <body>: a keyboard or screen-reader user would start
+    // again from the top of the document. Put focus on the new page's heading
+    // instead — without scrolling; the hash handling below still decides where
+    // the page lands.
+    var active = document.activeElement;
+    if (!active || active === document.body || !document.body.contains(active)) {
+      focusQuietly(data.next.container.querySelector('#main-content') ||
+                   data.next.container.querySelector('h1'));
+    }
+
     // Honour a hash in the destination URL after a barba transition.
     //
     // The smooth-scroll handler further down only binds a[href^="#"] —
@@ -420,6 +530,7 @@ function initPageTransitions() {
         if (target) {
           scroll.start();
           scroll.scrollTo(target, { offset: 0, duration: 900, easing: [0.7, 0, 0.35, 1] });
+          focusQuietly(target);
         }
       }, 700);
     }
@@ -607,20 +718,15 @@ function initWindowInnerheight() {
 /**
 * Check touch device
 */
+let touchResizeBound = false;
+
 function initCheckTouchDevice() {
 
   function isTouchScreendevice() {
     return 'ontouchstart' in window || navigator.maxTouchPoints;
   };
 
-  if (isTouchScreendevice()) {
-    $('main').addClass('touch');
-    $('main').removeClass('no-touch');
-  } else {
-    $('main').removeClass('touch');
-    $('main').addClass('no-touch');
-  }
-  $(window).resize(function () {
+  function markTouch() {
     if (isTouchScreendevice()) {
       $('main').addClass('touch');
       $('main').removeClass('no-touch');
@@ -628,8 +734,99 @@ function initCheckTouchDevice() {
       $('main').removeClass('touch');
       $('main').addClass('no-touch');
     }
-  });
+  }
+  markTouch();
 
+  // One window listener for the whole visit. It reads `main` when it runs,
+  // so it also covers the page barba swaps in; binding it here on every
+  // initScript() stacked one more listener per navigation (PE-2).
+  if (!touchResizeBound) {
+    touchResizeBound = true;
+    $(window).resize(markTouch);
+  }
+
+}
+
+/**
+ * Side menu state — the one place that opens or closes it
+ *
+ * Markup on every page: the toggle is <div class="btn-click" role="button"
+ * tabindex="0" aria-expanded aria-controls="site-menu"> and the menu is
+ * <div class="fixed-nav" id="site-menu" inert>.
+ *
+ * Open: the menu is live, the page behind it (.main-wrap and the skip link)
+ * is inert, and focus moves to the first menu link. Closed: the reverse, and
+ * if focus was inside the menu it goes back to the toggle. Mouse, touch and
+ * keyboard all end up in setNavOpen(), so aria-expanded and inert cannot drift
+ * from what is on screen.
+ *
+ * During a barba transition the old and the new page are both in the DOM;
+ * navParts() reads the last container — the page being entered.
+ */
+function navParts() {
+  var cs = document.querySelectorAll('[data-barba="container"]');
+  var root = cs.length ? cs[cs.length - 1] : document.body;
+  return {
+    root: root,
+    toggle: root.querySelector('.btn-hamburger .btn-click'),
+    menu: root.querySelector('.fixed-nav'),
+    wrap: root.querySelector('.main-wrap'),
+    skip: root.querySelector('.skip-link')
+  };
+}
+
+function isNavOpen(n) {
+  return n.root.classList.contains('nav-active');
+}
+
+function syncNavState(n) {
+  var open = isNavOpen(n);
+  if (n.toggle) n.toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  if (n.menu) n.menu.inert = !open;
+  if (n.wrap) n.wrap.inert = open;
+  if (n.skip) n.skip.inert = open;
+}
+
+// The blog takes this header from the site only when its chrome is re-synced,
+// and loads this script from the site — so it can run it on older markup
+// that lacks the attributes. Fill in what is missing; change nothing else.
+function ensureNavSemantics(n) {
+  if (n.menu && !n.menu.id) n.menu.id = 'site-menu';
+  if (n.toggle) {
+    if (!n.toggle.hasAttribute('role')) n.toggle.setAttribute('role', 'button');
+    if (!n.toggle.hasAttribute('tabindex')) n.toggle.setAttribute('tabindex', '0');
+    if (n.menu && !n.toggle.hasAttribute('aria-controls')) n.toggle.setAttribute('aria-controls', n.menu.id);
+  }
+  syncNavState(n);
+}
+
+function setNavOpen(open) {
+  var n = navParts();
+  var focusWasInMenu = !!(n.menu && n.menu.contains(document.activeElement));
+  if (open) {
+    $(".btn-hamburger, .btn-menu").addClass('active');
+    $("main").addClass('nav-active');
+    scroll.stop();
+  } else {
+    $(".btn-hamburger, .btn-menu").removeClass('active');
+    $("main").removeClass('nav-active');
+    scroll.start();
+  }
+  syncNavState(n);
+  if (open) {
+    var first = n.menu && n.menu.querySelector('a[href]');
+    if (first) first.focus({ preventScroll: true });
+  } else if (focusWasInMenu && n.toggle) {
+    n.toggle.focus({ preventScroll: true });
+  }
+}
+
+// Focus something that is not normally focusable (a heading, a section)
+// without letting the browser scroll: locomotive owns the scroll position.
+function focusQuietly(el) {
+  if (!el) return;
+  if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '-1');
+  el.focus({ preventScroll: true });
 }
 
 /**
@@ -637,34 +834,18 @@ function initCheckTouchDevice() {
 */
 function initHamburgerNav() {
 
+  ensureNavSemantics(navParts());
+
   // Open/close navigation when clicked .btn-hamburger
+  // (Enter/Space on the toggle and Escape: see initPageTransitions)
 
   $(document).ready(function () {
     $(".btn-hamburger, .btn-menu").click(function () {
-      if ($(".btn-hamburger, .btn-menu").hasClass('active')) {
-        $(".btn-hamburger, .btn-menu").removeClass('active');
-        $("main").removeClass('nav-active');
-        scroll.start();
-      } else {
-        $(".btn-hamburger, .btn-menu").addClass('active');
-        $("main").addClass('nav-active');
-        scroll.stop();
-      }
+      setNavOpen(!$(".btn-hamburger, .btn-menu").hasClass('active'));
     });
     $('.fixed-nav-back').click(function () {
-      $(".btn-hamburger, .btn-menu").removeClass('active');
-      $("main").removeClass('nav-active');
-      scroll.start();
+      setNavOpen(false);
     });
-  });
-  $(document).keydown(function (e) {
-    if (e.keyCode == 27) {
-      if ($('main').hasClass('nav-active')) {
-        $(".btn-hamburger, .btn-menu").removeClass('active');
-        $("main").removeClass('nav-active');
-        scroll.start();
-      }
-    }
   });
 
   // Smooth-scroll nav + side-menu links to the page sections
@@ -677,16 +858,17 @@ function initHamburgerNav() {
     $lists.find('.btn-link').removeClass('active');
     $lists.find('.btn-link > a[href="' + hash + '"]').parent().addClass('active');
     // close the side menu if it is open
-    $(".btn-hamburger, .btn-menu").removeClass('active');
-    $("main").removeClass('nav-active');
-    scroll.start();
+    setNavOpen(false);
     setTimeout(function () {
       var opts = { offset: 0, duration: 900, easing: [0.7, 0, 0.35, 1] };
       if (hash === '#home') {
         scroll.scrollTo('top', opts);
       } else {
         var target = document.querySelector(hash);
-        if (target) scroll.scrollTo(target, opts);
+        if (target) {
+          scroll.scrollTo(target, opts);
+          focusQuietly(target);
+        }
       }
     }, 100);
   });
@@ -840,7 +1022,17 @@ function initCardTilt() {
 /**
 * Sticky Cursor with Delay
 */
+// The previous page's cursor follower: its endless position loop and its
+// document mousemove listener. Each page used to add one more of each, never
+// removed — a loop per page visited, all running at once (PE-2).
+let stickyCursorTeardown = null;
+
 function initStickyCursorWithDelay() {
+
+  if (stickyCursorTeardown) {
+    stickyCursorTeardown();
+    stickyCursorTeardown = null;
+  }
 
   // Sticky Cursor with delay
   // https://greensock.com/forums/topic/21161-animated-mouse-cursor/
@@ -857,8 +1049,9 @@ function initStickyCursorWithDelay() {
   var mouseX = 0
   var mouseY = 0
 
+  var follow = null;
   if (document.querySelector(".mouse-pos-list-image, .mouse-pos-list-btn, .mouse-post-list-span")) {
-    gsap.to({}, 0.0083333333, {
+    follow = gsap.to({}, 0.0083333333, {
       repeat: -1,
       onRepeat: function () {
 
@@ -896,10 +1089,15 @@ function initStickyCursorWithDelay() {
     });
   }
 
-  $(document).on("mousemove", function (e) {
+  function onMouseMove(e) {
     mouseX = e.clientX;
     mouseY = e.clientY;
-  });
+  }
+  document.addEventListener("mousemove", onMouseMove);
+  stickyCursorTeardown = function () {
+    document.removeEventListener("mousemove", onMouseMove);
+    if (follow) follow.kill();
+  };
 
   // Animated Section Assortiment Single Floating Image
   // Source: http://jsfiddle.net/639Jj/1/ 
@@ -1136,28 +1334,63 @@ function initHamburgerTheme() {
 /**
 * Scrolltrigger Scroll Letters Home
 */
+// The previous page's rolling letters. initScript() runs for every page
+// barba shows, and each run used to leave its timelines and a window resize
+// listener behind, alive for the rest of the visit (PE-2).
+let scrollLettersTeardown = null;
+
 function initScrollLetters() {
   // Scrolling Letters Both Direction
   // https://codepen.io/GreenSock/pen/rNjvgjo
   // Fixed example with resizing
   // https://codepen.io/GreenSock/pen/QWqoKBv?editors=0010
 
+  if (scrollLettersTeardown) {
+    scrollLettersTeardown();
+    scrollLettersTeardown = null;
+  }
+
   let direction = 1; // 1 = forward, -1 = backward scroll
 
-  const roll1 = roll(".big-name .name-wrap", { duration: 18 }),
-    roll2 = roll(".rollingText02", { duration: 10 }, true),
-    scroll = ScrollTrigger.create({
-      trigger: document.querySelector('[data-scroll-container]'),
-      onUpdate(self) {
-        if (self.direction !== direction) {
-          direction *= -1;
-          gsap.to([roll1, roll2], { timeScale: direction, overwrite: true });
-        }
+  // PE-1: roll() used to build its endless timeline even when the page has no
+  // such elements (".rollingText02" exists nowhere, ".big-name" only on the
+  // home pages). That timeline lasts 0 s, so its onReverseComplete — which
+  // pushes the playhead forward by duration × 10 — put it back where it
+  // already was, which completed the reverse again, and again, until
+  // "Maximum call stack size exceeded". No elements, no timeline.
+  const rolls = [
+    roll(".big-name .name-wrap", { duration: 18 }),
+    roll(".rollingText02", { duration: 10 }, true)
+  ].filter(Boolean);
+  if (!rolls.length) return;
+
+  const timelines = rolls.map(r => r.tl);
+  const trigger = ScrollTrigger.create({
+    trigger: document.querySelector('[data-scroll-container]'),
+    onUpdate(self) {
+      if (self.direction !== direction) {
+        direction *= -1;
+        gsap.to(timelines, { timeScale: direction, overwrite: true });
       }
-    });
+    }
+  });
+  const onResize = () => rolls.forEach(r => r.reposition());
+  window.addEventListener("resize", onResize);
+
+  scrollLettersTeardown = () => {
+    window.removeEventListener("resize", onResize);
+    trigger.kill();
+    const stop = () => timelines.forEach(tl => { gsap.killTweensOf(tl); tl.kill(); });
+    // barba is still animating the old page out when the new page's scripts
+    // start; stopping its letters now would freeze them on screen mid-exit
+    if (rolls.some(r => document.body.contains(r.el))) gsap.delayedCall(2, stop);
+    else stop();
+  };
 
   // helper function that clones the targets, places them next to the original, then animates the xPercent in a loop to make it appear to roll across the screen in a seamless loop.
   function roll(targets, vars, reverse) {
+    const elements = gsap.utils.toArray(targets);
+    if (!elements.length) return null;
     vars = vars || {};
     vars.ease || (vars.ease = "none");
     const tl = gsap.timeline({
@@ -1166,7 +1399,6 @@ function initScrollLetters() {
         this.totalTime(this.rawTime() + this.duration() * 10); // otherwise when the playhead gets back to the beginning, it'd stop. So push the playhead forward 10 iterations (it could be any number)
       }
     }),
-      elements = gsap.utils.toArray(targets),
       clones = elements.map(el => {
         let clone = el.cloneNode(true);
         el.parentNode.appendChild(clone);
@@ -1175,13 +1407,16 @@ function initScrollLetters() {
       positionClones = () => elements.forEach((el, i) => gsap.set(clones[i], { position: "absolute", overwrite: false, top: el.offsetTop, left: el.offsetLeft + (reverse ? -el.offsetWidth : el.offsetWidth) }));
     positionClones();
     elements.forEach((el, i) => tl.to([el, clones[i]], { xPercent: reverse ? 100 : -100, ...vars }, 0));
-    window.addEventListener("resize", () => {
-      let time = tl.totalTime(); // record the current time
-      tl.totalTime(0); // rewind and clear out the timeline
-      positionClones(); // reposition
-      tl.totalTime(time); // jump back to the proper time
-    });
-    return tl;
+    return {
+      tl,
+      el: elements[0],
+      reposition() {
+        let time = tl.totalTime(); // record the current time
+        tl.totalTime(0); // rewind and clear out the timeline
+        positionClones(); // reposition
+        tl.totalTime(time); // jump back to the proper time
+      }
+    };
   }
 
 }

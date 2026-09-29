@@ -430,6 +430,11 @@ main.touch .main-wrap {
 .fixed-nav .nav-row {
    display: flex;
    flex-direction: column;
+   /* .row sets flex-wrap: wrap. In a column that means: when the links do
+      not fit the height, the list wraps into a second column beside the
+      first — off the side of the menu, where it cannot be seen (measured at
+      200% zoom: 0 of 8 links visible). One column, always. */
+   flex-wrap: nowrap;
    flex: 1 1 auto;
    min-height: 0;
 }
@@ -469,6 +474,56 @@ main.touch .main-wrap {
 
 .fixed-nav .social-row {
    margin-left: calc(var(--gap-padding) / -4);
+}
+
+/* ------------------------- Keyboard access -------------------------------------------- */
+
+/* Skip link: the first Tab stop on every page, out of sight until focused. */
+.skip-link {
+   position: fixed;
+   top: calc(var(--gap-padding) / 2);
+   left: calc(var(--gap-padding) / 2);
+   z-index: 1000;
+   padding: .8em 1.4em;
+   border-radius: 2em;
+   background: var(--color-dark);
+   color: var(--color-white);
+   font-size: 1rem;
+   line-height: 1.2;
+   text-decoration: none;
+   transform: translateY(calc(-100% - var(--gap-padding)));
+}
+
+.skip-link:focus {
+   transform: none;
+   outline: 3px solid #F9460E;
+   outline-offset: 3px;
+}
+
+html[dir="rtl"] .skip-link {
+   left: auto;
+   right: calc(var(--gap-padding) / 2);
+}
+
+/* Focus ring for the navigation. .btn and .btn-click set outline: 0, which
+   left keyboard users with no sign of where they were. The orange keeps 3:1
+   against both the light pages and the dark menu. */
+.nav-bar .btn-click:focus-visible,
+.fixed-nav .btn-click:focus-visible,
+.btn-hamburger .btn-click:focus-visible {
+   outline: 3px solid #F9460E;
+   outline-offset: 3px;
+}
+
+/* over the orange sections an orange ring would vanish */
+.btn-hamburger.on-orange .btn-click:focus-visible {
+   outline-color: var(--color-dark);
+}
+
+/* On wide screens the toggle stays hidden (scale 0) until the page scrolls.
+   Keyboard focus reveals it, so the Tab stop is never invisible. */
+.btn-hamburger:focus-within {
+   transform: translateY(0%) scale(1) rotate(0.001deg);
 }
 
 .fixed-nav-rounded-div {
@@ -567,6 +622,14 @@ main.touch .main-wrap {
       bottom: auto;
       width: calc(clamp(16px, 1.2vw, 19px) / 1.5);
       height: calc(clamp(16px, 1.2vw, 19px) / 1.5);
+   }
+
+   /* RTL: the label starts at the right edge, so the dot goes to the left end,
+      the mirror of LTR. On the right it sat on the first Arabic letters
+      (measured at 390px: dot x 348-359 over text 294-358). */
+   html[dir="rtl"] .fixed-nav .nav-row .btn-link .btn-click::after {
+      left: .4em;
+      right: auto;
    }
 
    .fixed-nav .nav-row ul {
@@ -7451,6 +7514,20 @@ body.lang-ar .work-entry-quote footer {
    .fixed-nav .nav-row {
       overflow-y: auto;
       -webkit-overflow-scrolling: touch;
+      /* A scroll container clips whatever reaches outside it: the list's own
+         negative left margin, the active-page dot and the focus ring all do.
+         Padding gives them room inside the box and the equal negative margin
+         keeps every link exactly where it was. Up/down only — no sideways
+         scrolling — and a focused link is scrolled in with its ring. */
+      overflow-x: hidden;
+      /* the list's margin and the dot's offset are both fractions of
+         --gap-padding, so the room grows with it (a fixed 2.25rem was 2px
+         short at 1440×600) */
+      padding-left: calc(var(--gap-padding) + .5rem);
+      margin-left: calc(-1 * (var(--gap-padding) + .5rem));
+      padding-right: .5rem;
+      margin-right: -.5rem;
+      scroll-padding-block: .75rem;
    }
 
    /* ⚠️ الأهمّ: العنصر لا ينكمش. بدونه يضغط الفليكس ارتفاع الزرّ فيفيض
@@ -7461,6 +7538,26 @@ body.lang-ar .work-entry-quote footer {
 
    .fixed-nav .links-wrap {
       padding-bottom: 1em;
+   }
+}
+
+/* Short windows, right-to-left: the labels are right-aligned, exactly under
+   the floating close button, and the list starts at nearly the button's own
+   height — the top label ran underneath it (measured at 720×450: 7 of 8
+   labels fully visible). Start the list below the button: its top offset
+   plus its size, as .btn-hamburger defines them, plus a little air. Phones
+   (≤540px) already start lower (15vh) and are left alone. */
+@media screen and (max-height: 640px) and (min-width: 541px) {
+   html[dir="rtl"] .fixed-nav-inner {
+      padding-top: calc(var(--gap-padding) / 1.5 + clamp(4em, 5.5vw, 5em) + .75rem);
+   }
+}
+
+/* the phone layout has ~20px of side padding: less room needed, less given */
+@media screen and (max-height: 640px) and (max-width: 540px) {
+   .fixed-nav .nav-row {
+      padding-left: 1.25rem;
+      margin-left: -1.25rem;
    }
 }
 

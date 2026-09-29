@@ -139,7 +139,7 @@
 
    <link rel="preload" as="font" href="/assets/fonts/NeueMontreal-Regular.otf" type="font/otf"
       crossorigin="anonymous">
-   <link href="/assets/css/bundle.min.css?v=d45fdf04" rel="stylesheet">
+   <link href="/assets/css/bundle.min.css?v=74c25fce" rel="stylesheet">
    <!-- Analytics — deferred.
         dataLayer and gtag() exist immediately, so nothing that fires early is
         lost: events queue and are replayed when the tag scripts arrive. The
@@ -185,7 +185,7 @@
         browser has parsed the whole document. -->
    <script defer src="/assets/js/vendor.min.js?v=748f32fb"></script>
    <script defer src="/assets/js/i18n.min.js?v=54304f96"></script>
-   <script defer src="/assets/js/index-new.min.js?v=f29addd0"></script>
+   <script defer src="/assets/js/index-new.min.js?v=12fe5365"></script>
 </head>
 
 <body data-barba="wrapper">
@@ -234,6 +234,7 @@
       </div>
    </div>
    <main class="main seo-service-page" id="work-single" data-barba="container" data-barba-namespace="work-single">
+      <a class="skip-link" href="#main-content">Skip to main content</a>
       <div class="mouse-pos-list-image no-select"></div>
       <div class="mouse-pos-list-btn no-select"></div>
       <div class="mouse-pos-list-span no-select">
@@ -253,7 +254,7 @@
       </a>
       <!-- ===== Floating hamburger button (opens the side menu) ===== -->
       <div class="btn btn-hamburger">
-            <div class="btn-click magnetic" data-strength="50" data-strength-text="25">
+            <div class="btn-click magnetic" data-strength="50" data-strength-text="25" role="button" tabindex="0" aria-expanded="false" aria-controls="site-menu">
                 <div class="btn-fill"></div>
                 <div class="btn-text">
                     <div class="btn-bars"></div>
@@ -263,7 +264,7 @@
         </div>
         <div class="overlay fixed-nav-back"></div>
         <!-- ===== Side menu — navigation + social links ===== -->
-        <div class="fixed-nav theme-dark">
+        <div class="fixed-nav theme-dark" id="site-menu" inert>
             <div class="fixed-nav-rounded-div">
                 <div class="rounded-div-wrap">
                     <div class="rounded-div"></div>
@@ -471,7 +472,7 @@
                   <div class="seo-hero-grid">
                      <div class="seo-hero-copy">
                         <p class="seo-hero-eyebrow">ZERO 2 ONE &bull; SEO IN RIYADH</p>
-                        <h1 class="seo-hero-title">Make Your Customers Find You <span class="seo-hero-mark">on Google</span> Before Your Competitors</h1>
+                        <h1 class="seo-hero-title" id="main-content" tabindex="-1">Make Your Customers Find You <span class="seo-hero-mark">on Google</span> Before Your Competitors</h1>
                         <p class="seo-hero-lead">Our search engine optimization (SEO) services strengthen your visibility in Google results and widen your reach to the customers already searching for your services or products.</p>
                         <div class="seo-hero-actions">
                            <div class="btn btn-normal seo-hero-cta seo-hero-cta-primary">

@@ -376,7 +376,7 @@ def build(slug, c, shell):
                   '<main class="main z2o-case-page" id="work-single"', 1)
 
     # ---- body
-    h = re.sub(r"<h1>.*?</h1>", f"<h1>{c['h1']}</h1>", h, count=1, flags=re.S)
+    h = re.sub(r"<h1(\s[^>]*)?>.*?</h1>", lambda m: f"<h1{m.group(1) or ''}>{c['h1']}</h1>", h, count=1, flags=re.S)
     start = h.find("</header>") + len("</header>")
     end = h.find('<div class="footer-rounded-div"')
     end = h.rfind("\n", 0, end) + 1

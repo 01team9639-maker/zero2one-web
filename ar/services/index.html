@@ -51,7 +51,7 @@
    </script>
    <link rel="preload" as="font" href="/assets/fonts/NeueMontreal-Regular.otf" type="font/otf"
       crossorigin="anonymous">
-   <link href="/assets/css/bundle.min.css?v=d45fdf04" rel="stylesheet">
+   <link href="/assets/css/bundle.min.css?v=74c25fce" rel="stylesheet">
    <!-- Analytics — deferred.
         dataLayer and gtag() exist immediately, so nothing that fires early is
         lost: events queue and are replayed when the tag scripts arrive. The
@@ -97,7 +97,7 @@
         browser has parsed the whole document. -->
    <script defer src="/assets/js/vendor.min.js?v=748f32fb"></script>
    <script defer src="/assets/js/i18n.min.js?v=54304f96"></script>
-   <script defer src="/assets/js/index-new.min.js?v=f29addd0"></script>
+   <script defer src="/assets/js/index-new.min.js?v=12fe5365"></script>
 </head>
 
 <body class="lang-ar" data-barba="wrapper">
@@ -146,6 +146,7 @@
       </div>
    </div>
    <main class="main inner-page" id="services" data-barba="container" data-barba-namespace="services">
+        <a class="skip-link" href="#main-content">انتقل إلى المحتوى الرئيسي</a>
         <div class="mouse-pos-list-image no-select">
             <div class="mouse-pos-list-image-bounce overlay">
                 <div class="float-image-wrap"></div>
@@ -169,7 +170,7 @@
         </a>
         <!-- ===== Floating hamburger button (opens the side menu) ===== -->
         <div class="btn btn-hamburger">
-            <div class="btn-click magnetic" data-strength="50" data-strength-text="25">
+            <div class="btn-click magnetic" data-strength="50" data-strength-text="25" role="button" tabindex="0" aria-expanded="false" aria-controls="site-menu">
                 <div class="btn-fill"></div>
                 <div class="btn-text">
                     <div class="btn-bars"></div>
@@ -179,7 +180,7 @@
         </div>
         <div class="overlay fixed-nav-back"></div>
         <!-- ===== Side menu — navigation + social links ===== -->
-        <div class="fixed-nav theme-dark">
+        <div class="fixed-nav theme-dark" id="site-menu" inert>
             <div class="fixed-nav-rounded-div">
                 <div class="rounded-div-wrap">
                     <div class="rounded-div"></div>
@@ -391,7 +392,7 @@
                <div class="container medium once-in">
                   <div class="row">
                      <div class="flex-col">
-                        <h1><span>خدمات التسويق الرقمي</span> في الرياض</h1>
+                        <h1 id="main-content" tabindex="-1"><span>خدمات التسويق الرقمي</span> في الرياض</h1>
                      </div>
                   </div>
                </div>
