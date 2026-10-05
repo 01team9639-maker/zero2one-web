@@ -2345,6 +2345,14 @@ html[dir="rtl"] .about-us-cta .btn-click:focus-visible .about-us-arrow {
    margin-top: 2em;
 }
 
+/* Desktop: as wide as its label, not the whole text column. Stacked on a
+   phone it keeps the full width, like «Explore Our Work». */
+@media screen and (min-width: 721px) {
+   .about-us .about-us-cta {
+      width: fit-content;
+   }
+}
+
 @media screen and (max-width: 720px) {
 
    .about-us .row {
