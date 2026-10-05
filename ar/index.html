@@ -61,7 +61,7 @@
         imagesrcset="/assets/images/hero-frame-46-800.avif 800w, /assets/images/hero-frame-46-1000.avif 1000w, /assets/images/hero-frame-46-1400.avif 1400w, /assets/images/hero-frame-46-2000.avif 2000w"
         imagesizes="100vw" fetchpriority="high">
 
-    <link href="/assets/css/bundle.min.css?v=5a18c034" rel="stylesheet">
+    <link href="/assets/css/bundle.min.css?v=a89236e9" rel="stylesheet">
    <!-- Analytics — deferred.
         dataLayer and gtag() exist immediately, so nothing that fires early is
         lost: events queue and are replayed when the tag scripts arrive. The
@@ -107,7 +107,7 @@
         browser has parsed the whole document. -->
    <script defer src="/assets/js/vendor.min.js?v=748f32fb"></script>
    <script defer src="/assets/js/i18n.min.js?v=54304f96"></script>
-   <script defer src="/assets/js/index-new.min.js?v=12fe5365"></script>
+   <script defer src="/assets/js/index-new.min.js?v=7bda93f2"></script>
 </head>
 
 <body class="lang-ar" data-barba="wrapper">
@@ -740,17 +740,84 @@
                             </div>
                         </div>
                         <div class="flex-col selected-work-media">
-                            <picture>
-                                <source type="image/avif"
-                                    srcset="/assets/images/selected-work-800.avif 800w, /assets/images/selected-work-1200.avif 1200w, /assets/images/selected-work-1600.avif 1600w"
-                                    sizes="(max-width: 900px) 90vw, 45vw">
-                                <img decoding="async" fetchpriority="low" src="/assets/images/selected-work-1200.webp"
-                                    width="1200" height="800"
-                                    srcset="/assets/images/selected-work-800.webp 800w, /assets/images/selected-work-1200.webp 1200w, /assets/images/selected-work-1600.webp 1600w"
-                                    sizes="(max-width: 900px) 90vw, 45vw"
-                                    alt="مجموعة مختارة من مشاريع زيرو تو ون في الهوية التجارية والمواقع والحملات الرقمية"
-                                    loading="lazy" />
-                            </picture>
+                            <div class="selected-work-slider" data-selected-work-slider role="region" aria-label="مشاريع مختارة">
+                                <ul class="selected-work-track">
+                                    <li class="selected-work-slide">
+                                        <a class="selected-work-card" href="/ar/work/habba/">
+                                            <span class="selected-work-card-media selected-work-fit-cover">
+                                                <img decoding="async" fetchpriority="low" loading="lazy" src="/assets/images/habba-01-brand-hero.webp"
+                                                    width="2000" height="1415" sizes="(max-width: 900px) 90vw, 45vw"
+                                                    alt="الهوية التجارية لعلامة حبّة للقهوة المختصة وشعارها الأساسي" />
+                                            </span>
+                                            <span class="selected-work-card-body">
+                                                <span class="selected-work-card-tag">هوية تجارية</span>
+                                                <span class="selected-work-card-title">حبّة</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="selected-work-slide">
+                                        <a class="selected-work-card" href="/ar/work/alrahwanji-paints/">
+                                            <span class="selected-work-card-media selected-work-fit-contain">
+                                                <img decoding="async" fetchpriority="low" loading="lazy" src="/assets/images/alrahwanji-05-placement-results.webp"
+                                                    width="1138" height="709" sizes="(max-width: 900px) 90vw, 45vw"
+                                                    alt="ظهور حملة دهانات الرهونجي موزّعاً على أماكن العرض في فيسبوك" />
+                                            </span>
+                                            <span class="selected-work-card-body">
+                                                <span class="selected-work-card-tag">إدارة الحملات</span>
+                                                <span class="selected-work-card-title">دهانات الرهونجي</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="selected-work-slide">
+                                        <a class="selected-work-card" href="/ar/work/alostaz-seo/">
+                                            <span class="selected-work-card-media selected-work-fit-contain">
+                                                <img decoding="async" fetchpriority="low" loading="lazy" src="/assets/images/work/alostaz-search-console.webp"
+                                                    width="717" height="255" sizes="(max-width: 900px) 90vw, 45vw"
+                                                    alt="مقارنة سيرش كونسول لمنصة أستاذ: النقرات ومرات الظهور ومتوسط الترتيب" />
+                                            </span>
+                                            <span class="selected-work-card-body">
+                                                <span class="selected-work-card-tag">سيو</span>
+                                                <span class="selected-work-card-title">منصة أستاذ</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="selected-work-slide">
+                                        <a class="selected-work-card" href="/ar/work/google-ads-conversion-value/">
+                                            <span class="selected-work-card-media selected-work-fit-contain">
+                                                <img decoding="async" fetchpriority="low" loading="lazy" src="/assets/images/work/google-ads-conversion-value-after.webp"
+                                                    width="1136" height="275" sizes="(max-width: 900px) 90vw, 45vw"
+                                                    alt="لوحة إعلانات جوجل تُظهر قيمة التحويل ÷ التكلفة عند ⁦3.60⁩" />
+                                            </span>
+                                            <span class="selected-work-card-body">
+                                                <span class="selected-work-card-tag">إعلانات جوجل</span>
+                                                <span class="selected-work-card-title">حساب إعلانات جوجل، أُعيد بناؤه</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="selected-work-slide">
+                                        <a class="selected-work-card" href="/ar/work/cosmetic-surgery-egypt-seo/">
+                                            <span class="selected-work-card-media selected-work-fit-contain">
+                                                <img decoding="async" fetchpriority="low" loading="lazy" src="/assets/images/work/cosmetic-surgery-egypt-search-console.webp"
+                                                    width="781" height="286" sizes="(max-width: 900px) 90vw, 45vw"
+                                                    alt="إجماليات سيرش كونسول لمركز جراحة تجميل في مصر" />
+                                            </span>
+                                            <span class="selected-work-card-body">
+                                                <span class="selected-work-card-tag">سيو</span>
+                                                <span class="selected-work-card-title">مركز جراحة تجميل</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="selected-work-controls">
+                                    <button type="button" class="selected-work-nav selected-work-prev" aria-label="المشروع السابق">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6" /></svg>
+                                    </button>
+                                    <span class="selected-work-count" aria-hidden="true"><span data-selected-work-current>1</span> / 5</span>
+                                    <button type="button" class="selected-work-nav selected-work-next" aria-label="المشروع التالي">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" /></svg>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

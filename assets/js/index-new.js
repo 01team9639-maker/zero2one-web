@@ -694,6 +694,7 @@ function initScript() {
   initPlayVideoInview();
   initScrolltriggerAnimations();
   initPortfolio();
+  initSelectedWorkSlider();
   initEmailLinks();
   setTimeout(initScrollRefresh, 500);
 }
@@ -983,6 +984,37 @@ function initMagneticButtons() {
       });
     }
     $(this.parentNode).removeClass('not-active');
+  });
+}
+
+/*
+* Selected Work slider (home): the track is a native horizontal scroller with
+* scroll-snap, so touch, trackpad and keyboard already move it. This wires the
+* arrows (wrapping at both ends, so a focused arrow is never disabled under the
+* keyboard) and the "1 / 5" counter. Everything lives inside the barba
+* container and goes with it, so there is nothing to tear down.
+*/
+function initSelectedWorkSlider() {
+  var containers = document.querySelectorAll('[data-barba="container"]');
+  var root = containers[containers.length - 1] || document;
+  root.querySelectorAll('[data-selected-work-slider]').forEach(function (slider) {
+    if (slider.dataset.ready) return;
+    slider.dataset.ready = '1';
+    var track = slider.querySelector('.selected-work-track');
+    var count = track.children.length;
+    var current = slider.querySelector('[data-selected-work-current]');
+    // in RTL scrollLeft runs from 0 to negative
+    var sign = getComputedStyle(track).direction === 'rtl' ? -1 : 1;
+    function index() {
+      return Math.round(Math.abs(track.scrollLeft) / (track.clientWidth || 1));
+    }
+    function go(i) {
+      i = (i + count) % count;
+      track.scrollTo({ left: sign * i * track.clientWidth, behavior: 'smooth' });
+    }
+    slider.querySelector('.selected-work-prev').addEventListener('click', function () { go(index() - 1); });
+    slider.querySelector('.selected-work-next').addEventListener('click', function () { go(index() + 1); });
+    track.addEventListener('scroll', function () { current.textContent = index() + 1; }, { passive: true });
   });
 }
 

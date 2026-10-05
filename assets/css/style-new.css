@@ -1672,23 +1672,183 @@ html[dir="rtl"] .about-us-cta .btn-click:focus-visible .about-us-arrow {
    transform: translateX(-.25em);
 }
 
-.selected-work-media img {
-   width: 100%;
-   height: auto;
-   border-radius: .5rem;
+/* ── شريط المشاريع: الصورة الواحدة صارت شريحة لكل مشروع له صفحة دراسة حالة.
+   السحب تمرير أفقي أصلي بـscroll-snap — يعمل باللمس والفأرة ولوحة المفاتيح
+   بلا مكتبة؛ وinitSelectedWorkSlider في index-new.js يربط الأسهم والعدّاد فقط. */
+.selected-work-track {
+   display: flex;
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   overflow-x: auto;
+   scroll-snap-type: x mandatory;
+   scroll-behavior: smooth;
+   overscroll-behavior-x: contain;
+   scrollbar-width: none;
+}
+
+.selected-work-track::-webkit-scrollbar {
+   display: none;
+}
+
+.selected-work-slide {
+   flex: 0 0 100%;
+   min-width: 0;
+   scroll-snap-align: start;
+}
+
+.selected-work-card {
    display: block;
+   color: inherit;
+   text-decoration: none;
+}
+
+/* إطار ثابت 3:2 لكل الشرائح: لوحات Search Console وGoogle Ads عريضة جدًّا
+   (حتى 4:1)، فتُعرض كاملة داخل الإطار على أبيض بدل أن تُقصّ. */
+.selected-work-card-media {
+   display: block;
+   aspect-ratio: 3 / 2;
+   border-radius: .5rem;
+   overflow: hidden;
+   background: var(--color-white);
+   box-shadow: inset 0 0 0 1px var(--color-border);
+}
+
+.selected-work-card-media img {
+   display: block;
+   width: 100%;
+   height: 100%;
+}
+
+.selected-work-fit-cover img {
+   object-fit: cover;
+}
+
+.selected-work-fit-contain img {
+   object-fit: contain;
+   padding: 6%;
+   box-sizing: border-box;
+}
+
+.selected-work-card-body {
+   display: flex;
+   flex-direction: column;
+   gap: .3em;
+   padding-top: 1em;
+}
+
+.selected-work-card-tag {
+   font-size: clamp(11px, .78vw, 13px);
+   font-weight: 500;
+   letter-spacing: .18em;
+   text-transform: uppercase;
+   color: #f9460e;
+}
+
+.selected-work-card-title {
+   font-size: clamp(1.15rem, 1.6vw, 1.5rem);
+   line-height: 1.25;
+}
+
+.selected-work-card:hover .selected-work-card-title,
+.selected-work-card:focus-visible .selected-work-card-title {
+   text-decoration: underline;
+   text-underline-offset: .2em;
+}
+
+.selected-work-card:focus-visible,
+.selected-work-nav:focus-visible {
+   outline: 3px solid #F9460E;
+   outline-offset: 3px;
+}
+
+.selected-work-card:focus-visible {
+   border-radius: .5rem;
+}
+
+.selected-work-controls {
+   display: flex;
+   align-items: center;
+   gap: .75em;
+   margin-top: 1.1em;
+}
+
+.selected-work-nav {
+   display: grid;
+   place-items: center;
+   width: 3em;
+   height: 3em;
+   padding: 0;
+   border: 0;
+   border-radius: 50%;
+   background: transparent;
+   color: var(--color-dark);
+   box-shadow: inset 0 0 0 1px var(--color-border);
+   cursor: pointer;
+   transition: background-color .25s ease, color .25s ease;
+}
+
+.selected-work-nav:hover,
+.selected-work-nav:focus-visible {
+   background: #f9460e;
+   color: var(--color-white);
+}
+
+.selected-work-nav svg {
+   width: 1.25em;
+   height: 1.25em;
+   fill: none;
+   stroke: currentColor;
+   stroke-width: 2;
+   stroke-linecap: round;
+   stroke-linejoin: round;
+}
+
+/* «السابق» يشير إلى بداية السطر: يمينًا بالعربية. */
+html[dir="rtl"] .selected-work-nav svg {
+   transform: scaleX(-1);
+}
+
+.selected-work-count {
+   min-width: 3.5em;
+   text-align: center;
+   font-variant-numeric: tabular-nums;
+   opacity: .7;
 }
 
 /* الأعمدة تتراصف رأسيًّا قبل أن يضيق أيٌّ منهما على محتواه. */
 @media screen and (max-width: 900px) {
-   .selected-work-text,
-   .selected-work-media {
-      flex: 1 1 100%;
-      max-width: 100%;
+   /* عمود واحد بترتيب الموجز: العنوان، ثم الشريط، ثم الوصف والزرّ. الشريط
+      عمود مستقل في الترميز (جنب النصّ على الكمبيوتر)، فعمود النصّ يُذاب هنا
+      (display: contents) ليصير أبناؤه وهو إخوةً يرتّبهم order. ثمنه أن
+      ظهور النصّ المتدرّج (.fade-in على العمود) لا يُرى على الجوال — النصّ
+      ظاهر من البداية. */
+   .selected-work .row {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
    }
 
+   .selected-work-text {
+      display: contents;
+   }
+
+   .selected-work-eyebrow { order: 1; }
+   .selected-work-title { order: 2; }
+   .selected-work-media { order: 3; }
+   .selected-work-lead { order: 4; }
+   .selected-work-cta { order: 5; }
+
    .selected-work-media {
-      margin-top: calc(var(--gap-padding) * .6);
+      flex: none;
+      max-width: 100%;
+      margin: .9em 0 1.75em;
+   }
+
+   /* الفراغ حول القسم على الجوال كان 91px فوقه وتحته (0.9 من
+      --section-padding) — نصفه يكفي ليفصله عمّا حوله. */
+   .selected-work {
+      padding-block: calc(var(--section-padding) * .45);
    }
 }
 
