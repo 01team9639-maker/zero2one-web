@@ -1616,36 +1616,59 @@ html[dir="rtl"] .skip-link {
    opacity: .82;
 }
 
+/* زرّ «من نحن» (.about-us-cta) هو هذا الزرّ نفسه في قسمه، فيشاركه القواعد
+   التالية كلّها بدل نسخة ثانية تفترق عنه مع أول تعديل. */
+
 /* تعبئة الزر عند المرور برتقالية لا داكنة: القاعدة الافتراضية
    `.btn-fill{background-color:var(--color-dark)}` تعني تعبئةً داكنة فوق
    خلفية داكنة — أي هوفر لا يُرى أصلًا. */
-.selected-work-cta .btn-fill {
+.selected-work-cta .btn-fill,
+.about-us-cta .btn-fill {
    background-color: #f9460e;
 }
 
 /* حدّ داكن على خلفية فاتحة — النسخة الفاتحة من --color-border-light. */
-.selected-work-cta .btn-click {
+.selected-work-cta .btn-click,
+.about-us-cta .btn-click {
    box-shadow: inset 0 0 0 1px var(--color-border);
 }
 
+/* لوحة المفاتيح: الحشوة تنزلق مع الفأرة وحدها (mouseenter في index-new.js)
+   والنصّ يبيضّ عند التركيز، فكان يختفي أبيضَ على الخلفية الفاتحة بلا حلقة
+   تركيز (‏.btn-click يلغي outline). البرتقالي هنا يقوم مقام الحشوة، والحلقة
+   هي حلقة التنقّل نفسها. */
+.selected-work-cta .btn-click:focus-visible,
+.about-us-cta .btn-click:focus-visible {
+   background-color: #f9460e;
+   outline: 3px solid #F9460E;
+   outline-offset: 3px;
+}
+
 .selected-work-cta .btn-click:hover .btn-text-inner,
-.selected-work-cta .btn-click:focus-visible .btn-text-inner {
+.selected-work-cta .btn-click:focus-visible .btn-text-inner,
+.about-us-cta .btn-click:hover .btn-text-inner,
+.about-us-cta .btn-click:focus-visible .btn-text-inner {
    color: var(--color-white);
 }
 
-.selected-work-arrow {
+.selected-work-arrow,
+.about-us-arrow {
    display: inline-block;
    margin-inline-start: .35em;
    transition: transform var(--animation-primary, .4s cubic-bezier(.7, 0, .3, 1));
 }
 
 .selected-work-cta .btn-click:hover .selected-work-arrow,
-.selected-work-cta .btn-click:focus-visible .selected-work-arrow {
+.selected-work-cta .btn-click:focus-visible .selected-work-arrow,
+.about-us-cta .btn-click:hover .about-us-arrow,
+.about-us-cta .btn-click:focus-visible .about-us-arrow {
    transform: translateX(.25em);
 }
 
 html[dir="rtl"] .selected-work-cta .btn-click:hover .selected-work-arrow,
-html[dir="rtl"] .selected-work-cta .btn-click:focus-visible .selected-work-arrow {
+html[dir="rtl"] .selected-work-cta .btn-click:focus-visible .selected-work-arrow,
+html[dir="rtl"] .about-us-cta .btn-click:hover .about-us-arrow,
+html[dir="rtl"] .about-us-cta .btn-click:focus-visible .about-us-arrow {
    transform: translateX(-.25em);
 }
 
@@ -2317,6 +2340,11 @@ html[dir="rtl"] .selected-work-cta .btn-click:focus-visible .selected-work-arrow
    max-width: 34em;
 }
 
+/* Same pill as «Explore Our Work»: its look lives with .selected-work-cta. */
+.about-us .about-us-cta {
+   margin-top: 2em;
+}
+
 @media screen and (max-width: 720px) {
 
    .about-us .row {
@@ -2334,8 +2362,16 @@ html[dir="rtl"] .selected-work-cta .btn-click:focus-visible .selected-work-arrow
       margin-top: calc(var(--gap-padding) * 1.5);
    }
 
+   /* Stacked, the image sits right under the text, so its parallax goes.
+      data-scroll-position="top" makes the offset −0.2 × the page's scroll,
+      already 260–570px up by the time this section is on screen: beside the
+      text it only moves inside its own column, under the text it lands on
+      it. Locomotive writes the offset as an inline transform, which
+      !important outranks — so this holds even when smooth scrolling stays
+      on (a page opened wide and then narrowed keeps it). */
    .about-us .about-us-media img {
       max-width: 22em;
+      transform: none !important;
    }
 }
 
