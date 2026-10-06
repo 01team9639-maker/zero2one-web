@@ -694,7 +694,7 @@ function initScript() {
   initPlayVideoInview();
   initScrolltriggerAnimations();
   initPortfolio();
-  initSelectedWorkSlider();
+  initSliders();
   initEmailLinks();
   setTimeout(initScrollRefresh, 500);
 }
@@ -988,33 +988,45 @@ function initMagneticButtons() {
 }
 
 /*
-* Selected Work slider (home): the track is a native horizontal scroller with
-* scroll-snap, so touch, trackpad and keyboard already move it. This wires the
-* arrows (wrapping at both ends, so a focused arrow is never disabled under the
-* keyboard) and the "1 / 5" counter. Everything lives inside the barba
-* container and goes with it, so there is nothing to tear down.
+* Sliders (home: Selected Work, Our Team). Each track is a native horizontal
+* scroller with scroll-snap, so touch, trackpad and keyboard already move it.
+* This wires the arrows — one card per click, wrapping at both ends so a
+* focused arrow is never disabled under the keyboard — and the "1 / n"
+* counter. Everything lives inside the barba container and goes with it, so
+* there is nothing to tear down.
 */
-function initSelectedWorkSlider() {
+function initSliders() {
   var containers = document.querySelectorAll('[data-barba="container"]');
   var root = containers[containers.length - 1] || document;
-  root.querySelectorAll('[data-selected-work-slider]').forEach(function (slider) {
+  root.querySelectorAll('[data-slider]').forEach(function (slider) {
     if (slider.dataset.ready) return;
     slider.dataset.ready = '1';
-    var track = slider.querySelector('.selected-work-track');
-    var count = track.children.length;
-    var current = slider.querySelector('[data-selected-work-current]');
+    var track = slider.querySelector('[data-slider-track]');
+    var cards = track.children;
+    var current = slider.querySelector('[data-slider-current]');
     // in RTL scrollLeft runs from 0 to negative
     var sign = getComputedStyle(track).direction === 'rtl' ? -1 : 1;
-    function index() {
-      return Math.round(Math.abs(track.scrollLeft) / (track.clientWidth || 1));
+    function step() {
+      return cards.length > 1 ? Math.abs(cards[1].offsetLeft - cards[0].offsetLeft) : track.clientWidth;
     }
-    function go(i) {
-      i = (i + count) % count;
-      track.scrollTo({ left: sign * i * track.clientWidth, behavior: 'smooth' });
+    function pos() { return Math.abs(track.scrollLeft); }
+    function max() { return track.scrollWidth - track.clientWidth; }
+    function to(x) { track.scrollTo({ left: sign * x, behavior: 'smooth' }); }
+    // "at an end" within half a card: snap points sit a few pixels in from
+    // 0 and max when the track has padding (the team track does, for the shadows)
+    function atStart() { return pos() < step() / 2; }
+    function atEnd() { return pos() > max() - step() / 2; }
+    slider.querySelector('[data-slider-next]').addEventListener('click', function () {
+      to(atEnd() ? 0 : Math.min(max(), pos() + step()));
+    });
+    slider.querySelector('[data-slider-prev]').addEventListener('click', function () {
+      to(atStart() ? max() : Math.max(0, pos() - step()));
+    });
+    if (current) {
+      track.addEventListener('scroll', function () {
+        current.textContent = Math.min(cards.length, Math.round(pos() / (step() || 1)) + 1);
+      }, { passive: true });
     }
-    slider.querySelector('.selected-work-prev').addEventListener('click', function () { go(index() - 1); });
-    slider.querySelector('.selected-work-next').addEventListener('click', function () { go(index() + 1); });
-    track.addEventListener('scroll', function () { current.textContent = index() + 1; }, { passive: true });
   });
 }
 

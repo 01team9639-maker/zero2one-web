@@ -65,7 +65,12 @@ BANNED = [
     ("xqedjevn", "Formspree form ID from a personal account"),
     # personal identifiers that must not ship
     ("mohammad", "personal name — must not appear on the site"),
-    ("محمد", "personal name — must not appear on the site"),
+    # The template's original author was محمد الشلاش ("Mohammad Al Shlash
+    # Portfolio", commit f646464). The Arabic rule used to be the first name
+    # alone, which since 2026-10-06 also matched our own team (محمد العريني,
+    # محمد كارابالا, محمد) on the home page; the family name still catches him.
+    ("الشلاش", "surname of the template's original author"),
+    ("shlash", "surname of the template's original author"),
 ]
 
 # --- 2) patterns that need a human to vouch for them -------------------------
