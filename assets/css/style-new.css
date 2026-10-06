@@ -3052,6 +3052,11 @@ html[dir="rtl"] .slider-nav svg {
    width: 100%;
 }
 
+/* الأسهم وحدها (بلا عدّاد) في منتصف القسم، تحت البطاقات وفوق الزرّ المتوسّط */
+.team-slider .slider-controls {
+   justify-content: center;
+}
+
 .team-exp {
    margin: 0;
    font-family: 'Cairo', sans-serif;
