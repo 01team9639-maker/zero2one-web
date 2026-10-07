@@ -3035,10 +3035,19 @@ html[dir="rtl"] .slider-nav svg {
    margin-top: clamp(2em, 4vw, 3.5em);
 }
 
-/* حشوة حول الشريط ليظهر ظلّ البطاقة كاملًا داخل منطقة التمرير */
+/* الشريط بعرض الشاشة كلّها (خارج .container) لا بعرض المحتوى: كان يقصّ
+   البطاقات عند حدّ المحتوى وهي تُسحب فتبدو مبتورة من الجانبين. حشوته الأفقية
+   وscroll-padding تساويان هامش .container (أقصى عرض 100em ومتوسَّط، ثم
+   --container-padding)، فتبدأ أول بطاقة عند حافة النصّ وتتوقّف كل بطاقة
+   عند التمرير على الحافة نفسها، وما خارجها تمرّ فيه البطاقات حتى حافة الشاشة.
+   النسب لا vw، لئلا يتجاوز عرضٌ شريطَ التمرير الأصلي فيظهر تمرير أفقي. */
 .team-track {
+   --team-gutter: calc(max(0px, (100% - 100em) / 2) + var(--container-padding));
    gap: clamp(22px, 3vw, 56px);
-   padding: 8px 6px 18px;
+   /* رأسيًّا: حشوة ليظهر ظلّ البطاقة كاملًا داخل منطقة التمرير */
+   padding-block: 8px 18px;
+   padding-inline: var(--team-gutter);
+   scroll-padding-inline: var(--team-gutter);
 }
 
 .team-slide {
