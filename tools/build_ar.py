@@ -156,6 +156,7 @@ AR_META = {
 # every other page's wording, e.g. "How We Work" -> "كيف نعمل") stays as it is.
 PAGE_COPY = {
     "/services/seo-riyadh/": "tools/page-copy/seo-riyadh.json",
+    "/": "tools/page-copy/home.json",
 }
 
 

@@ -61,7 +61,7 @@
         imagesrcset="/assets/images/hero-frame-46-800.avif 800w, /assets/images/hero-frame-46-1000.avif 1000w, /assets/images/hero-frame-46-1400.avif 1400w, /assets/images/hero-frame-46-2000.avif 2000w"
         imagesizes="100vw" fetchpriority="high">
 
-    <link href="/assets/css/bundle.min.css?v=1e5e9167" rel="stylesheet">
+    <link href="/assets/css/bundle.min.css?v=7998feae" rel="stylesheet">
    <!-- Analytics — deferred.
         dataLayer and gtag() exist immediately, so nothing that fires early is
         lost: events queue and are replayed when the tag scripts arrive. The
@@ -107,7 +107,7 @@
         browser has parsed the whole document. -->
    <script defer src="/assets/js/vendor.min.js?v=748f32fb"></script>
    <script defer src="/assets/js/i18n.min.js?v=54304f96"></script>
-   <script defer src="/assets/js/index-new.min.js?v=d98b5c5b"></script>
+   <script defer src="/assets/js/index-new.min.js?v=666625f6"></script>
 </head>
 
 <body class="lang-ar" data-barba="wrapper">
@@ -821,6 +821,69 @@
                     </div>
                 </div>
             </section>
+            <!-- CLIENTS:BEGIN — home "Our Clients in Success". Same component as the SEO page (assets/css/style-new.css .logo-marquee*, initLogoMarquees in index-new.js) but with NO Pause/Play
+                 button: it runs by itself. It still holds on hover/keyboard focus, stops when the tab is hidden or the section is off-screen, and is a static wrapping grid with
+                 reduced motion or without scripts. Groups 2 and 3 are aria-hidden visual copies for the seamless loop. Cards are not links. -->
+            <section id="clients" class="section home-clients" data-scroll-section>
+                <div class="container">
+                    <h2 class="home-clients-title fade-in animate" id="clients-heading">عملائنا في النجاح</h2>
+                </div>
+                <div class="logo-marquee" data-logo-marquee data-speed="30" data-move="leftward">
+                    <div class="logo-marquee-viewport">
+                        <div class="logo-marquee-track">
+                        <ul class="logo-marquee-group" aria-labelledby="clients-heading">
+                            <li class="logo-marquee-item"><img src="/assets/images/clients/saudi-ceramics.webp" width="600" height="300" alt="الخزف السعودي" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item"><img src="/assets/images/clients/riyadh-contracting.webp" width="600" height="300" alt="مقاولات الرياض" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item"><img src="/assets/images/clients/isuzu.webp" width="600" height="300" alt="Isuzu" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item"><img src="/assets/images/clients/excellency-law-firm.webp" width="600" height="300" alt="المعالي للمحاماة والاستشارات القانونية" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item" style="--k:1.15"><img src="/assets/images/clients/zain.webp" width="600" height="300" alt="زين" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item"><img src="/assets/images/clients/panda.webp" width="600" height="300" alt="Panda" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item"><img src="/assets/images/clients/saudi-binladin-group.webp" width="600" height="300" alt="مجموعة بن لادن السعودية" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item"><img src="/assets/images/clients/saudi-oger.webp" width="600" height="300" alt="شركة سعودي أوجيه المحدودة" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item" style="--k:1.3"><img src="/assets/images/clients/barbarees.webp" width="600" height="300" alt="Barbarees" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item"><img src="/assets/images/clients/othaim.webp" width="600" height="300" alt="العثيم" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item"><img src="/assets/images/clients/saudi-electricity-company.webp" width="600" height="300" alt="الشركة السعودية للكهرباء" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item" style="--k:1.25"><img src="/assets/images/clients/king-fahad-national-library.webp" width="600" height="300" alt="مكتبة الملك فهد الوطنية" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item" style="--k:1.3"><img src="/assets/images/clients/makan-mem.webp" width="600" height="300" alt="مكان ميم للمقاولات العامة" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item" style="--k:1.15"><img src="/assets/images/clients/dr-sulaiman-al-habib.webp" width="600" height="300" alt="د. سليمان الحبيب المجموعة الطبية" loading="lazy" decoding="async"></li>
+                        </ul>
+                        <ul class="logo-marquee-group" aria-hidden="true">
+                            <li class="logo-marquee-item"><img src="/assets/images/clients/saudi-ceramics.webp" width="600" height="300" alt="" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item"><img src="/assets/images/clients/riyadh-contracting.webp" width="600" height="300" alt="" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item"><img src="/assets/images/clients/isuzu.webp" width="600" height="300" alt="" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item"><img src="/assets/images/clients/excellency-law-firm.webp" width="600" height="300" alt="" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item" style="--k:1.15"><img src="/assets/images/clients/zain.webp" width="600" height="300" alt="" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item"><img src="/assets/images/clients/panda.webp" width="600" height="300" alt="" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item"><img src="/assets/images/clients/saudi-binladin-group.webp" width="600" height="300" alt="" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item"><img src="/assets/images/clients/saudi-oger.webp" width="600" height="300" alt="" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item" style="--k:1.3"><img src="/assets/images/clients/barbarees.webp" width="600" height="300" alt="" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item"><img src="/assets/images/clients/othaim.webp" width="600" height="300" alt="" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item"><img src="/assets/images/clients/saudi-electricity-company.webp" width="600" height="300" alt="" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item" style="--k:1.25"><img src="/assets/images/clients/king-fahad-national-library.webp" width="600" height="300" alt="" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item" style="--k:1.3"><img src="/assets/images/clients/makan-mem.webp" width="600" height="300" alt="" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item" style="--k:1.15"><img src="/assets/images/clients/dr-sulaiman-al-habib.webp" width="600" height="300" alt="" loading="lazy" decoding="async"></li>
+                        </ul>
+                        <ul class="logo-marquee-group" aria-hidden="true">
+                            <li class="logo-marquee-item"><img src="/assets/images/clients/saudi-ceramics.webp" width="600" height="300" alt="" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item"><img src="/assets/images/clients/riyadh-contracting.webp" width="600" height="300" alt="" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item"><img src="/assets/images/clients/isuzu.webp" width="600" height="300" alt="" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item"><img src="/assets/images/clients/excellency-law-firm.webp" width="600" height="300" alt="" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item" style="--k:1.15"><img src="/assets/images/clients/zain.webp" width="600" height="300" alt="" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item"><img src="/assets/images/clients/panda.webp" width="600" height="300" alt="" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item"><img src="/assets/images/clients/saudi-binladin-group.webp" width="600" height="300" alt="" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item"><img src="/assets/images/clients/saudi-oger.webp" width="600" height="300" alt="" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item" style="--k:1.3"><img src="/assets/images/clients/barbarees.webp" width="600" height="300" alt="" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item"><img src="/assets/images/clients/othaim.webp" width="600" height="300" alt="" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item"><img src="/assets/images/clients/saudi-electricity-company.webp" width="600" height="300" alt="" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item" style="--k:1.25"><img src="/assets/images/clients/king-fahad-national-library.webp" width="600" height="300" alt="" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item" style="--k:1.3"><img src="/assets/images/clients/makan-mem.webp" width="600" height="300" alt="" loading="lazy" decoding="async"></li>
+                            <li class="logo-marquee-item" style="--k:1.15"><img src="/assets/images/clients/dr-sulaiman-al-habib.webp" width="600" height="300" alt="" loading="lazy" decoding="async"></li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- CLIENTS:END -->
             <section id="testimonials" class="section testimonials" data-scroll-section>
                 <div class="container">
                     <div class="testi-top">
