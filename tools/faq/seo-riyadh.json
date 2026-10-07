@@ -1,0 +1,123 @@
+{
+ "service": "seo-riyadh",
+ "name": {
+  "en": "SEO Agency in Saudi Arabia: Get Your Customers to Find You on Google and ChatGPT Before Your Competitors",
+  "ar": "تحسين محركات البحث SEO: اجعل عملاءك يجدونك في جوجل والـ ChatGPT قبل منافسيك"
+ },
+ "layout": "wide",
+ "heading": {
+  "status": "approved",
+  "source": "SEO Service Page .txt — AR line 140, EN line 268",
+  "en": "SEO FAQs",
+  "ar": "أسئلة شائعة عن تحسين محركات البحث"
+ },
+ "items": [
+  {
+   "id": "seo-1",
+   "status": "approved",
+   "source": "SEO Service Page .txt — AR line 141, EN line 269",
+   "en": {
+    "q": "When do SEO results start to show?",
+    "a": [
+     "SEO results usually begin to appear within three to six months, depending on your website's condition and the strength of the competition. Every month, we share reports and early indicators with you, such as indexing, website traffic, and keyword rankings."
+    ]
+   },
+   "ar": {
+    "q": "متى تظهر نتائج السيو؟",
+    "a": [
+     "تبدأ نتائج السيو بالظهور عادةً خلال ثلاثة إلى ستة أشهر، حسب حالة موقعك وقوة المنافسة. ونتابع معك كل شهر تقارير ومؤشرات مبكرة مثل الفهرسة وعدد الزيارات للموقع وترتيب الكلمات."
+    ]
+   }
+  },
+  {
+   "id": "seo-2",
+   "status": "approved",
+   "source": "SEO Service Page .txt — AR line 143, EN line 271",
+   "en": {
+    "q": "What is AI SEO?",
+    "a": [
+     "AI SEO means optimizing your website so it appears in the answers of AI platforms such as ChatGPT and Gemini. It focuses on strengthening these platforms' trust in your brand, the quality of your content, and your website's technical structure. It complements traditional SEO and makes sure you reach customers who rely on AI for their buying decisions.",
+     "AI SEO doesn't replace traditional SEO; it builds on its strong foundations. As consumers rely more and more on AI assistants for buying decisions, Zero2One combines traditional search engine optimization on Google with AI optimization so its clients appear strongly across every platform, backed by advanced tools and a specialist team that tests the latest strategies."
+    ]
+   },
+   "ar": {
+    "q": "ما هو تحسين محركات البحث بالذكاء الاصطناعي (AI SEO)؟",
+    "a": [
+     "تحسين موقعك ليظهر ضمن إجابات منصات الذكاء الاصطناعي (مثل ChatGPT وGemini). يركز على تعزيز ثقة المنصات بعلامتك التجارية وجودة محتواك وبنيتك موقعك التقنية، ليكمل التحسين التقليدي للـ SEO ويضمن وصولك للعملاء الذين يعتمدون على الذكاء الاصطناعي في قرارات الشراء.",
+     "لا يعد هذا النوع بديلاً للSEO التقليدي، بل يبنى على أساساته القوية. ومع اعتماد المستهلكين المتزايد على مساعدي الذكاء الاصطناعي في قرارات الشراء، تدمج zero2one بين تحسين محركات البحث التقليدي والذكاء الاصطناعي لضمان ظهور عملائها بقوة عبر مختلف المنصات، مدعومة بأدوات متطورة وفريق مختص يختبر أحدث الاستراتيجيات."
+    ]
+   }
+  },
+  {
+   "id": "seo-3",
+   "status": "approved",
+   "source": "SEO Service Page .txt — AR line 150, EN line 274",
+   "en": {
+    "q": "Do articles help improve your website's visibility in search engines (SEO) and AI?",
+    "a": [
+     "Yes. Blog posts support SEO when they're built on a clear strategy. Publishing useful, targeted content that addresses your audience's needs strengthens your site's topical authority and attracts visitors interested in your services.",
+     "Well-structured content also helps AI platforms understand your information and reference it easily. To get the most from it, Zero2One uses article writing as part of a comprehensive strategy that includes technical optimization, internal linking, and building your site's credibility."
+    ]
+   },
+   "ar": {
+    "q": "هل تساعد المقالات في تحسين ظهور موقعك عبر محركات البحث (SEO) والـ AI؟",
+    "a": [
+     "نعم، تدعم التدوينات تحسين محركات البحث عندما تكون مبنية على استراتيجية واضحة. فنشر محتوى مفيد وموجه يتناول احتياجات جمهورك ويعزز سلطة موقعك الموضوعية، مما يستقطب زواراً مهتمين بخدماتك.",
+     "كما يساعد المحتوى المنظم المنصات الذكية على فهم معلوماتك والإشارة إليها بسهولة. ولتحقيق أقصى فائدة، توظف zero2one كتابة المقالات كجزء من استراتيجية شمولية تشمل التحسين التقني، والروابط الداخلية، وبناء موثوقية الموقع."
+    ]
+   }
+  },
+  {
+   "id": "seo-4",
+   "status": "approved",
+   "source": "SEO Service Page .txt — AR line 153, EN line 277",
+   "en": {
+    "q": "Which package is right for me?",
+    "a": [
+     "It depends on the size of your website and how competitive your industry is. We start by analyzing your website, then recommend the package that fits your goals."
+    ]
+   },
+   "ar": {
+    "q": "ما الباقة المناسبة لي؟",
+    "a": [
+     "يعتمد ذلك على حجم موقعك وقوة المنافسة في مجالك. نبدأ بتحليل موقعك، ثم نرشح لك الباقة المناسبة لأهدافك."
+    ]
+   }
+  },
+  {
+   "id": "seo-5",
+   "status": "approved",
+   "source": "SEO Service Page .txt — AR line 155, EN line 279",
+   "en": {
+    "q": "Should I start with SEO or ads?",
+    "a": [
+     "Ads bring quick traffic but stop when you stop paying, while SEO builds visibility that grows over time. Many businesses combine both."
+    ]
+   },
+   "ar": {
+    "q": "هل أبدأ بالسيو أم بالإعلانات؟",
+    "a": [
+     "الإعلانات تجلب زيارات سريعة لكنها تتوقف بتوقف الدفع، والسيو يبني ظهوراً يكبر مع الوقت. وكثير من المشاريع تجمع بين الاثنين."
+    ]
+   }
+  },
+  {
+   "id": "seo-6",
+   "status": "approved",
+   "source": "SEO Service Page .txt — AR line 157, EN line 281",
+   "en": {
+    "q": "How do I choose the best SEO company in Saudi Arabia?",
+    "a": [
+     "Choose a company that shows real results, starts by analyzing your website, offers clear packages, and sends measurable reports. Ask about these four points before you sign."
+    ]
+   },
+   "ar": {
+    "q": "كيف أختار أفضل شركة SEO؟",
+    "a": [
+     "اختر شركة تعرض نتائج حقيقية، وتبدأ بتحليل موقعك، وتقدم باقات واضحة، وترسل تقارير قابلة للقياس. اسأل عن هذه النقاط الأربع قبل التعاقد."
+    ]
+   }
+  }
+ ],
+ "needs_owner_input": []
+}

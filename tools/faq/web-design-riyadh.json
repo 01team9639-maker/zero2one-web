@@ -1,0 +1,175 @@
+{
+ "service": "web-design-riyadh",
+ "name": {
+  "en": "Website Design & Development",
+  "ar": "تصميم وتطوير المواقع"
+ },
+ "layout": "page",
+ "heading": {
+  "status": "draft",
+  "en": "Website Design & Development FAQs",
+  "ar": "أسئلة شائعة عن تصميم وتطوير المواقع"
+ },
+ "items": [
+  {
+   "id": "web-design-riyadh-1",
+   "status": "draft",
+   "basis": "intro paragraph + “What’s Included?”",
+   "en": {
+    "q": "What types of websites do you design and develop?",
+    "a": [
+     "We design and develop corporate websites, high-converting landing pages, e-commerce stores, and custom dashboards and systems for companies, e-commerce businesses, and growing brands in Saudi Arabia."
+    ]
+   },
+   "ar": {
+    "q": "ما أنواع المواقع التي تصمّمونها وتطوّرونها؟",
+    "a": [
+     "نصمّم ونطوّر مواقع الشركات، وصفحات الهبوط عالية التحويل، والمتاجر الإلكترونية، ولوحات التحكّم والأنظمة المخصّصة، للشركات والمتاجر الإلكترونية والعلامات النامية في السعودية."
+    ]
+   }
+  },
+  {
+   "id": "web-design-riyadh-2",
+   "status": "draft",
+   "basis": "“High-Converting Landing Pages”",
+   "en": {
+    "q": "What is a high-converting landing page?",
+    "a": [
+     "It is a landing page built with a conversion-focused structure to generate leads, increase inquiries, and support campaign performance."
+    ]
+   },
+   "ar": {
+    "q": "ما صفحة الهبوط عالية التحويل؟",
+    "a": [
+     "هي صفحة هبوط مبنية بهيكل يركّز على التحويل لتوليد العملاء، وزيادة الاستفسارات، ودعم أداء الحملات."
+    ]
+   }
+  },
+  {
+   "id": "web-design-riyadh-3",
+   "status": "draft",
+   "basis": "“SEO-Ready Development”; SEO is a separate listed service",
+   "en": {
+    "q": "Will my website be built to appear in search engines?",
+    "a": [
+     "Yes. SEO-Ready Development is part of what’s included: technical website setup built to support visibility on search engines and long-term organic growth. We also offer search engine optimization as a separate service."
+    ]
+   },
+   "ar": {
+    "q": "هل يُبنى الموقع ليدعم الظهور في محركات البحث؟",
+    "a": [
+     "نعم. «تطوير جاهز لمحركات البحث» ضمن ما يتضمّنه الموقع: إعداد تقني للموقع يدعم الظهور في محركات البحث والنمو العضوي طويل الأمد. ونقدّم تحسين محركات البحث أيضاً كخدمة مستقلة."
+    ]
+   }
+  },
+  {
+   "id": "web-design-riyadh-4",
+   "status": "draft",
+   "basis": "“Analytics & Tracking Integration”",
+   "en": {
+    "q": "Can you set up analytics and tracking on my website?",
+    "a": [
+     "Yes. Analytics & Tracking Integration is included: we implement measurement tools to monitor user behavior and make data-driven decisions."
+    ]
+   },
+   "ar": {
+    "q": "هل يمكن ربط الموقع بأدوات التحليلات والتتبّع؟",
+    "a": [
+     "نعم. يتضمّن ذلك تكامل التحليلات والتتبّع: تطبيق أدوات القياس لمراقبة سلوك المستخدم واتخاذ قرارات مبنية على البيانات."
+    ]
+   }
+  },
+  {
+   "id": "web-design-riyadh-5",
+   "status": "draft",
+   "basis": "“E-commerce Development”, “Custom Dashboards & Systems”",
+   "en": {
+    "q": "Can you build an online store or a custom dashboard?",
+    "a": [
+     "Yes. E-commerce development covers complete online stores designed for smooth purchasing experiences and efficient product management, and custom dashboards and systems cover tailored digital systems and admin panels that improve internal operations and business workflows."
+    ]
+   },
+   "ar": {
+    "q": "هل تبنون متاجر إلكترونية ولوحات تحكّم؟",
+    "a": [
+     "نعم. يشمل تطوير المتاجر الإلكترونية متاجر متكاملة لتجارب شراء سلسة وإدارة فعّالة للمنتجات، وتشمل لوحات التحكّم والأنظمة المخصّصة أنظمة رقمية ولوحات إدارة مخصّصة تحسّن العمليات الداخلية وسير العمل."
+    ]
+   }
+  },
+  {
+   "id": "web-design-riyadh-6",
+   "status": "draft",
+   "basis": "“Our Process” (six steps)",
+   "en": {
+    "q": "How does the website process work?",
+    "a": [
+     "It runs in six stages: Business Discovery, Audience & Market Analysis, UX & Structure Planning, Development & Integrations, Testing & Launch, and Continuous Optimization."
+    ]
+   },
+   "ar": {
+    "q": "كيف تسير مراحل العمل في الموقع؟",
+    "a": [
+     "تسير في ست مراحل: استكشاف العمل، وتحليل الجمهور والسوق، وتخطيط التجربة والبنية، والتطوير والتكاملات، والاختبار والإطلاق، والتحسين المستمر."
+    ]
+   }
+  }
+ ],
+ "needs_owner_input": [
+  {
+   "id": "web-design-riyadh-need-1",
+   "status": "needs-owner-input",
+   "en": {
+    "q": "How much does a website cost?"
+   },
+   "ar": {
+    "q": "كم تكلفة الموقع؟"
+   },
+   "needs": {
+    "en": "Prices or price ranges per website type — not stated anywhere on the site for this service.",
+    "ar": "الأسعار أو نطاقاتها لكل نوع موقع — غير مذكورة في الموقع لهذه الخدمة."
+   }
+  },
+  {
+   "id": "web-design-riyadh-need-2",
+   "status": "needs-owner-input",
+   "en": {
+    "q": "How long does it take to build a website?"
+   },
+   "ar": {
+    "q": "كم يستغرق بناء الموقع؟"
+   },
+   "needs": {
+    "en": "Typical delivery times per website type.",
+    "ar": "مدد التسليم المعتادة لكل نوع موقع."
+   }
+  },
+  {
+   "id": "web-design-riyadh-need-3",
+   "status": "needs-owner-input",
+   "en": {
+    "q": "What do I need to prepare before we start?"
+   },
+   "ar": {
+    "q": "ماذا أجهّز قبل أن نبدأ؟"
+   },
+   "needs": {
+    "en": "What the client supplies (content, logo, accesses…).",
+    "ar": "ما يقدّمه العميل (المحتوى، الشعار، الصلاحيات…)."
+   }
+  },
+  {
+   "id": "web-design-riyadh-need-4",
+   "status": "needs-owner-input",
+   "en": {
+    "q": "Do you provide hosting, maintenance, or support after launch?"
+   },
+   "ar": {
+    "q": "هل تقدّمون الاستضافة أو الصيانة أو الدعم بعد الإطلاق؟"
+   },
+   "needs": {
+    "en": "Whether hosting, maintenance or support are offered, and on what terms — the page only mentions “Continuous Optimization”.",
+    "ar": "هل تُقدَّم الاستضافة أو الصيانة أو الدعم وبأي شروط — الصفحة تذكر «تحسين مستمر» فقط."
+   }
+  }
+ ]
+}

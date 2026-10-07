@@ -1,0 +1,539 @@
+{
+ "_what": "Owner-supplied copy for /services/seo-riyadh/ in both languages, parsed from 'SEO Service Page .txt' (2026-10-07). tools/build_ar.py uses 'pairs' as an EXACT English->Arabic table for this one page: it is applied before the shared dictionary and bypasses brandify()/isolate_numbers(), so the supplied Arabic reaches the page byte for byte. Edit the English page and this file together; never fix wording here without the owner.",
+ "meta": {
+  "title": {
+   "en": "Best SEO Agency for Google & AI in Riyadh | Zero2One",
+   "ar": "افضل شركة سيو SEO و Ai في الرياض، السعودية | Zero2One"
+  },
+  "description": {
+   "en": "Zero2One, the best SEO agency in Riyadh: competitor analysis, keyword research, technical SEO, content, and local SEO. SEO services in Saudi Arabia built for growth.",
+   "ar": "زيرو تو وان، افضل شركة خدمات سيو في الرياض: تحليل المنافسين، بحث الكلمات المفتاحية، السيو التقني، المحتوى، والسيو المحلي، نمو لعملك في السعودية."
+  }
+ },
+ "pairs": [
+  {
+   "id": "hero.h1",
+   "en": "SEO Agency in Saudi Arabia: Get Your Customers to Find You on Google and ChatGPT Before Your Competitors",
+   "ar": "تحسين محركات البحث SEO: اجعل عملاءك يجدونك في جوجل والـ ChatGPT قبل منافسيك"
+  },
+  {
+   "id": "hero.lead",
+   "en": "Our search engine optimization services boost your website's visibility on Google and in AI results, increasing your chances of reaching the customers who are searching for your services or products. With search engine optimization on Google and AI working together, make your brand dominate Google and AI.",
+   "ar": "تساعدك خدمات تحسين محركات البحث (SEO) لدينا على تعزيز ظهور موقعك في نتائج جوجل والذكاء الاصطناعي (Ai)، وزيادة فرص وصولك إلى العملاء الذين يبحثون عن خدماتك أو منتجاتك. اضمن هيمنة علامتك التجارية على في جوجل و Ai."
+  },
+  {
+   "id": "hero.cta_primary",
+   "en": "Get Your Free Consultation",
+   "ar": "استشارتك المجانية",
+   "also": [
+    "aud.cta"
+   ]
+  },
+  {
+   "id": "hero.cta_secondary",
+   "en": "Browse Our Results",
+   "ar": "تصفح نتائجنا"
+  },
+  {
+   "id": "vis.h2",
+   "en": "Why Does Your Business Need SEO Services?",
+   "ar": "لماذا تحتاج إلى خدمات SEO لعملك التجاري؟"
+  },
+  {
+   "id": "know.h2",
+   "en": "We Know Why You're Here",
+   "ar": "نحن نعلم لماذا أنت هنا؟"
+  },
+  {
+   "id": "know.1",
+   "en": "Your website is new and still not visible in the top search results.",
+   "ar": "موقعك الإلكتروني جديد ولا يزال غير مرئي في نتائج البحث الأولى."
+  },
+  {
+   "id": "know.2",
+   "en": "Your website isn't getting visits or leads from Google.",
+   "ar": "موقعك لا يحصل على زيارات أو عملاء محتملين من Google."
+  },
+  {
+   "id": "know.3",
+   "en": "Your business is missing or hard to find on Google Maps.",
+   "ar": "نشاطك التجاري مفقود أو غير ظاهر على خرائط جوجل (Google Maps)."
+  },
+  {
+   "id": "know.4",
+   "en": "Competitors are capturing the market and your target customers every day.",
+   "ar": "المنافسون يسيطرون على السوق والعملاء المستهدفين يومياً."
+  },
+  {
+   "id": "know.5",
+   "en": "Google's algorithm changed and your rankings suddenly dropped.",
+   "ar": "تغير خوارزميات (Google) وهبوط ترتيب موقعك فجأة."
+  },
+  {
+   "id": "know.6",
+   "en": "AI is changing the rules of the game, and you can't keep up with how customers now search.",
+   "ar": "الذكاء الاصطناعي يغير قواعد اللعبة وغير قادر على مواكبة طريقة بحث العملاء."
+  },
+  {
+   "id": "know.7",
+   "en": "Paid advertising (PPC) is expensive, and you're looking for sustainable, free, long-term growth.",
+   "ar": "التكلفة العالية للإعلانات المدفوعة (PPC وتبحث عن نمو مستدام ومجاني طويل الأمد."
+  },
+  {
+   "id": "svc.h2",
+   "en": "SEO Services in Saudi Arabia You'll Get From Zero2One",
+   "ar": "خدمات تحسين محركات البحث SEO التي ستحصل عليها من Zero2One"
+  },
+  {
+   "id": "svc.1.title",
+   "en": "Custom SEO Strategy",
+   "ar": "استراتيجية SEO مخصصة"
+  },
+  {
+   "id": "svc.1.desc",
+   "en": "At Zero2One, we tailor search engine optimization services to your website to match your needs precisely, using the tactics that deliver the greatest impact.",
+   "ar": "نقوم بتخصيص خدمات تحسين محركات البحث لموقعك الإلكتروني لدى zero2one لتناسب احتياجاتك بدقة، مع استخدام التكتيكات التي تحقق التأثير الأكبر."
+  },
+  {
+   "id": "svc.2.title",
+   "en": "Local SEO",
+   "ar": "تحسين محركات البحث المحلي (Local SEO)"
+  },
+  {
+   "id": "svc.2.desc",
+   "en": "Our SEO specialists make sure you appear prominently on Google Maps and in local search results.",
+   "ar": "يضمن متخصصو الـ SEO لدينا ظهورك بشكل بارز في خرائط جوجل ونتائج البحث المحلية."
+  },
+  {
+   "id": "svc.3.title",
+   "en": "Technical & On-Page SEO",
+   "ar": "التحسين التقني والداخلي (Technical & On-Page SEO)"
+  },
+  {
+   "id": "svc.3.desc",
+   "en": "We optimize every element of your website, including page titles, meta descriptions, image alt tags, internal links, and more, to achieve maximum visibility in search results.",
+   "ar": "نعمل على تحسين كل عنصر في موقعك الإلكتروني، بما في ذلك عناوين الصفحات، والأوصاف التعريفية (Meta Descriptions)، والنصوص البديلة للصور (Alt Tags)، والروابط الداخلية، وغيرها؛ لتحقيق أقصى ظهور ممكن في نتائج البحث."
+  },
+  {
+   "id": "svc.4.title",
+   "en": "Keyword Research & Market Analysis",
+   "ar": "البحث عن الكلمات المفتاحية وتحليل السوق"
+  },
+  {
+   "id": "svc.4.desc",
+   "en": "Our SEO services team carries out precise keyword research and market analysis to identify the gaps and opportunities for your business to grow.",
+   "ar": "يقوم فريق خدمات تحسين محركات البحث لدينا بإجراء بحث دقيقة للكلمات المفتاحية وتحليل السوق لتحديد الثغرات والفرص المتاحة لنمو عملك."
+  },
+  {
+   "id": "svc.5.title",
+   "en": "Professional Content Writing",
+   "ar": "كتابة المحتوى باحترافية"
+  },
+  {
+   "id": "svc.5.desc",
+   "en": "From blogs to website copy, we produce high-quality content that keeps your site fresh, encourages repeat visits, and makes it easier for customers to reach you.",
+   "ar": "بدءاً من المدونات وصولاً إلى نصوص المواقع الإلكترونية، ننتج محتوى عالي الجودة للحفاظ على حداثة محتوى موقعك وتشجيع الزيارات المتكررة وتسهيل الوصول للعملاء."
+  },
+  {
+   "id": "svc.6.title",
+   "en": "AI-Powered SEO (AI SEO)",
+   "ar": "تحسين محركات البحث المدعوم بالذكاء الاصطناعي (AI SEO)"
+  },
+  {
+   "id": "svc.6.desc",
+   "en": "We use AI tools to predict trends and improve your visibility across AI models and AI-powered search tools.",
+   "ar": "نوظف أدوات الذكاء الاصطناعي للتنبؤ بالاتجاهات وتحسين ظهورك عبر نماذج الـ Ai وأدوات البحث المدعومة بالذكاء الاصطناعي."
+  },
+  {
+   "id": "svc.7.title",
+   "en": "Backlink Building",
+   "ar": "بناء الروابط الخارجية (Backlinks)"
+  },
+  {
+   "id": "svc.7.desc",
+   "en": "Our SEO specialists build high-quality, relevant backlinks across diverse, high-DA domains. We also manage article placement on social media, selected websites, and news outlets.",
+   "ar": "يبني متخصصو الـ SEO لدينا بناء الروابط الخلفية (Backlinks) عالية الجودة وذات صلة عبر نطاقات متنوعة و(DA) عالية. كما ندير نشر المقالات على وسائل التواصل الاجتماعي، والمواقع المنتقاة، والمنافذ الإخبارية."
+  },
+  {
+   "id": "svc.8.title",
+   "en": "eCommerce SEO",
+   "ar": "تحسين محركات البحث للمتاجر الإلكترونية (eCommerce SEO)"
+  },
+  {
+   "id": "svc.8.desc",
+   "en": "We implement SEO strategies for long-term results, combined with paid ads for quick boosts (if you're interested in PPC advertising as well).",
+   "ar": "ننفذ استراتيجيات تحسين محركات البحث لتحقيق نتائج طويلة الأمد، مقرونة بالإعلانات المدفوعة للدفعات السريعة (إذا كنت مهتماً بالمتابعة في مجال الإعلانات PPC)."
+  },
+  {
+   "id": "svc.9.title",
+   "en": "Performance Tracking & Reporting",
+   "ar": "تتبع الأداء والتقارير"
+  },
+  {
+   "id": "svc.9.desc",
+   "en": "Zero2One provides monthly performance reports for your website, combining data from Google Analytics and other tracking tools to give you real-time insight into your SEO performance.",
+   "ar": "توفر Zero2one تقارير أداء شهرية خاصة بموقعك، نقوم بدمج للبيانات من Google Analytics وغيرها من برامج تتبع البيانات لتمنحك رؤية فورية لأداء الـ SEO الخاص بموقعك."
+  },
+  {
+   "id": "why.h2",
+   "en": "Why Zero2One Is the Best SEO Company in Saudi Arabia",
+   "ar": "لماذا شركة Zero2One كـ افضل شركة سيو في الرياض؟"
+  },
+  {
+   "id": "why.1.title",
+   "en": "Any Business Size, Any Industry",
+   "ar": "أي حجم للعمل، وأي قطاع"
+  },
+  {
+   "id": "why.1.desc",
+   "en": "We offer performance-driven SEO services tailored to businesses of every size and budget in Saudi Arabia, maximizing your return on investment without inflated agency fees.",
+   "ar": "نقدم خدمات SEO مدفوعة بالأداء ومصممة خصيصاً للشركات بمختلف أحجامها وميزانياتها في السعودية، لنضمن لك تحقيق أقصى عائد على الاستثمار دون أي رسوم وكالة مبالغ فيها."
+  },
+  {
+   "id": "why.2.title",
+   "en": "95% Client Retention Rate",
+   "ar": "معدل احتفاظ بالعملاء بنسبة 95%"
+  },
+  {
+   "id": "why.2.desc",
+   "en": "We maintain a leading retention rate by delivering high-quality service and transparent communication, with regular performance reports and continuous adjustments to make sure your goals are met.",
+   "ar": "نحافظ على معدل احتفاظ رائد عبر تقديم خدمات عالية الجودة وتواصل شفاف، مع تقارير أداء منتظمة وتعديلات مستمرة لضمان تحقيق أهدافك بدقة."
+  },
+  {
+   "id": "why.3.title",
+   "en": "Monthly Flexibility for Your Business",
+   "ar": "مرونة شهرية لعملك"
+  },
+  {
+   "id": "why.3.desc",
+   "en": "We earn your loyalty month after month through measurable performance, not restrictive contracts, giving you the freedom to scale services based on results and your business priorities.",
+   "ar": "نكسب ولاءك شهراً بعد شهر بأداء قابل للقياس وليس بالعقود المقيدة، مما يمنحك حرية توسيع نطاق الخدمات بناءً على النتائج وأولويات عملك."
+  },
+  {
+   "id": "why.4.title",
+   "en": "A Plan Built on Saudi Market Analysis",
+   "ar": "خطة مبنية على تحليل السوق السعودي"
+  },
+  {
+   "id": "why.4.desc",
+   "en": "We analyze your website and competitors and precisely target the keywords and phrases real customers in the Kingdom are searching for, so our strategy aligns with your goals and delivers real results.",
+   "ar": "نحلل موقعك ومنافسيك ونستهدف بدقة الكلمات والعبارات التي يبحث عنها العملاء الفعليون في المملكة، لضمان مواءمة استراتيجيتنا مع أهدافك وتحقيق نتائج حقيقية."
+  },
+  {
+   "id": "why.5.title",
+   "en": "Safe Methods & Exclusive Tools",
+   "ar": "أساليب آمنة وأدوات حصرية"
+  },
+  {
+   "id": "why.5.desc",
+   "en": "We use methods, links, and content fully compliant with Google's current guidelines, backed by advanced tools and extensive human expertise to ensure safe, sustainable growth.",
+   "ar": "نعتمد أساليب وروابط ومحتوى متوافقاً تماماً مع إرشادات جوجل الحالية، مع الاستفادة من أدوات متقدمة وخبرة بشرية واسعة لضمان نمو آمن ومستدام."
+  },
+  {
+   "id": "why.6.title",
+   "en": "In-House R&D Department",
+   "ar": "قسم بحث وتطوير داخلي"
+  },
+  {
+   "id": "why.6.desc",
+   "en": "Our team works as an in-house research and development department, testing the latest technologies and emerging marketing strategies, so your budget is spent efficiently and never wasted on ineffective campaigns.",
+   "ar": "يعمل فريقنا كقسم داخلي للبحث والتطوير لاختبار أحدث التقنيات والاستراتيجيات التسويقية الناشئة، مما يضمن توظيف ميزانيتك بكفاءة عالية بعيداً عن الحملات غير المجدية."
+  },
+  {
+   "id": "aud.h2",
+   "en": "Are Our SEO Services Right for You?",
+   "ar": "هل تناسبك خدمات تحسين محركات البحث SEO لدينا؟"
+  },
+  {
+   "id": "aud.1.title",
+   "en": "New Websites",
+   "ar": "المواقع الجديدة"
+  },
+  {
+   "id": "aud.1.desc",
+   "en": "Sites that want to launch on a solid SEO foundation from day one.",
+   "ar": "مواقع تريد الانطلاق على أساس SEO صحيح من اليوم الأول."
+  },
+  {
+   "id": "aud.2.title",
+   "en": "Company Websites",
+   "ar": "مواقع الشركات"
+  },
+  {
+   "id": "aud.2.desc",
+   "en": "Companies that want customers to find them on Google before they get in touch.",
+   "ar": "شركات تريد أن يجدها العملاء في جوجل قبل أن يتواصلوا."
+  },
+  {
+   "id": "aud.3.title",
+   "en": "Online Stores",
+   "ar": "المتاجر الإلكترونية"
+  },
+  {
+   "id": "aud.3.desc",
+   "en": "Stores that want steady sales that don't stop when ads are paused.",
+   "ar": "متاجر تريد مبيعات مستمرة لا تتوقف عند إيقاف الإعلانات."
+  },
+  {
+   "id": "aud.4.title",
+   "en": "Digital Platforms",
+   "ar": "المنصات الرقمية"
+  },
+  {
+   "id": "aud.4.desc",
+   "en": "Platforms that want new users from search, not just from ads.",
+   "ar": "منصات تريد مستخدمين جدداً من البحث، لا من الإعلانات فقط."
+  },
+  {
+   "id": "aud.5.title",
+   "en": "Service Websites",
+   "ar": "مواقع الخدمات"
+  },
+  {
+   "id": "aud.5.desc",
+   "en": "Service providers whose customers compare options on Google before deciding.",
+   "ar": "مقدمو خدمات يقارن عملاؤهم بين الخيارات في جوجل قبل القرار."
+  },
+  {
+   "id": "aud.6.title",
+   "en": "Local Businesses",
+   "ar": "الأنشطة المحلية"
+  },
+  {
+   "id": "aud.6.desc",
+   "en": "Businesses that want to reach nearby customers through Google Maps.",
+   "ar": "أنشطة تريد الوصول إلى العملاء القريبين منها عبر خرائط جوجل."
+  },
+  {
+   "id": "pkg.h2",
+   "en": "SEO Packages Designed to Fit Your Project's Needs",
+   "ar": "باقات SEO مصممة لتناسب احتياجات مشروعك"
+  },
+  {
+   "id": "proc.h2",
+   "en": "How We Work",
+   "ar": "آلية عملنا"
+  },
+  {
+   "id": "proc.1.label",
+   "en": "Discovery:",
+   "ar": "الاستكشاف:"
+  },
+  {
+   "id": "proc.1.text",
+   "en": "We understand your business goals, define your KPIs, and run comprehensive keyword research to understand your website.",
+   "ar": "نفهم أهداف عملك، ونحدد الـ (KPIs)، ونجري بحثاً شاملاً للكلمات المفتاحية لفهم طبيعة موقعك."
+  },
+  {
+   "id": "proc.2.label",
+   "en": "Analysis:",
+   "ar": "التحليل:"
+  },
+  {
+   "id": "proc.2.text",
+   "en": "We examine your website's performance and your competitors, review and analyze traffic, and evaluate your pages to pinpoint what is affecting performance.",
+   "ar": "نفحص أداء موقعك ومنافسيك، ونقوم بمراجعة وتحليل الزيارات وتقييم الصفحات لنحدد بدقة ما يؤثر على الأداء."
+  },
+  {
+   "id": "proc.3.label",
+   "en": "Strategy:",
+   "ar": "الاستراتيجية:"
+  },
+  {
+   "id": "proc.3.text",
+   "en": "We create a 3–6 month digital marketing plan focused on what matters most, to deliver fast, targeted results.",
+   "ar": "نبتكر خطة تسويق إلكتروني لمدة 3-6 أشهر تركز على الجوانب المهمة لضمان تحقيق نتائج سريعة ومستهدفة."
+  },
+  {
+   "id": "proc.4.label",
+   "en": "Execution:",
+   "ar": "التنفيذ:"
+  },
+  {
+   "id": "proc.4.text",
+   "en": "We implement the plan by improving your site structure and pages with the best keywords, along with managing listings and publishing content to expand your reach.",
+   "ar": "ننفذ الخطة بتحسين هيكل الموقع وصفحاته بأفضل الكلمات المفتاحية، إلى جانب إدارة القوائم ونشر المحتوى لزيادة الانتشار."
+  },
+  {
+   "id": "proc.5.label",
+   "en": "Measurement:",
+   "ar": "القياس:"
+  },
+  {
+   "id": "proc.5.text",
+   "en": "We continuously track campaign progress, traffic, conversion rates, and keyword rankings to draw accurate insights that support our strategy.",
+   "ar": "نتابع باستمرار تقدم الحملة وحركة الزيارات ومعدلات التحويل وترتيب الكلمات المفتاحية لنستخلص رؤى دقيقة تدعم استراتيجيتنا."
+  },
+  {
+   "id": "proc.6.label",
+   "en": "Reporting:",
+   "ar": "التقارير:"
+  },
+  {
+   "id": "proc.6.text",
+   "en": "We hold meetings and deliver comprehensive monthly reports on your website's performance, and set a new roadmap so you're always informed of progress.",
+   "ar": "نعقد اجتماعات ونقدم تقارير شهرية شاملة توضح أداء الموقع ونضع خارطة طريق جديدة لضمان اطلاعك على سير العمل."
+  },
+  {
+   "id": "proc.7.label",
+   "en": "Adjustment:",
+   "ar": "التعديل:"
+  },
+  {
+   "id": "proc.7.text",
+   "en": "We keep up with search engine algorithm updates and market changes, adjusting our strategies to keep your website at the top.",
+   "ar": "نواكب تحديثات خوارزميات محركات البحث وتغيرات السوق باستمرار، لنقوم بتعديل استراتيجياتنا لضمان صدارة موقعك الدائمة."
+  },
+  {
+   "id": "res.h2",
+   "en": "Expected Results From Our SEO Services",
+   "ar": "النتائج المتوقعة من خدمة تحسين محركات البحث"
+  },
+  {
+   "id": "res.1.title",
+   "en": "SEO Never Sleeps",
+   "ar": "السيو لا ينام"
+  },
+  {
+   "id": "res.1.desc",
+   "en": "SEO results keep running and growing 24/7, and don't stop when the budget does.",
+   "ar": "نتائج السيو تستمر وتكبر 24/7، ولا تتوقف بتوقف الميزانية."
+  },
+  {
+   "id": "res.2.title",
+   "en": "Higher Visibility on Google",
+   "ar": "ظهور أعلى في جوجل"
+  },
+  {
+   "id": "res.2.desc",
+   "en": "Your pages move up in search results for the phrases that matter to your business.",
+   "ar": "تتقدم صفحاتك في نتائج البحث عن العبارات المهمة لعملك."
+  },
+  {
+   "id": "res.3.title",
+   "en": "Dominate AI Results",
+   "ar": "هيمنة على نتائج الذكاء الاصطناعي"
+  },
+  {
+   "id": "res.3.desc",
+   "en": "Lead your visibility on AI platforms, the natural evolution of SEO in the age of artificial intelligence.",
+   "ar": "هيمن الظهور علي ال Ai، حيث يمثل التطور الطبيعي لتحسين محركات البحث في عصر الذكاء الاصطناعي."
+  },
+  {
+   "id": "res.4.title",
+   "en": "Lower Advertising Costs",
+   "ar": "تقليل تكلفة الإعلانات"
+  },
+  {
+   "id": "res.4.desc",
+   "en": "Steady, free monthly traffic reduces your reliance on paid ads.",
+   "ar": "زيارات مجانية مستمرة شهريآ تخفف اعتمادك على الإعلانات المدفوعة."
+  },
+  {
+   "id": "res.5.title",
+   "en": "Stronger Credibility With Your Customers",
+   "ar": "تعزيز المصداقية لعملائك"
+  },
+  {
+   "id": "res.5.desc",
+   "en": "Appearing at the top of the results gives your customers an impression of trust and professionalism.",
+   "ar": "الظهور في مقدمة النتائج يعطي عملاءك انطباعاً بالثقة والاحترافية."
+  },
+  {
+   "id": "res.6.title",
+   "en": "More Leads Every Month",
+   "ar": "عملاء محتملون أكثر شهريآ"
+  },
+  {
+   "id": "res.6.desc",
+   "en": "Visitors who find what they need on your website and get in touch with you.",
+   "ar": "زوار يجدون ما يحتاجونه في موقعك ويتواصلون معك."
+  },
+  {
+   "id": "side.title",
+   "en": "SEO Isn't a Cost. It's an Investment That Keeps Paying Off",
+   "ar": "السيو ليس تكلفة، بل استثمار يستمر"
+  },
+  {
+   "id": "side.label",
+   "en": "Real results from our work:",
+   "ar": "نتائج حقيقية من أعمالنا:"
+  },
+  {
+   "id": "side.1",
+   "en": "Alostaz Platform: a clear rise in clicks from Google over six months.",
+   "ar": "منصة أستاذ: ارتفاع واضح في النقرات من جوجل خلال ستة أشهر."
+  },
+  {
+   "id": "side.2",
+   "en": "Alhokail Medical Group: content and on- and off-page SEO, measured across two periods.",
+   "ar": "مجموعة الحقيل الطبية: محتوى وتحسين داخلي وخارجي، مقيس على فترتين."
+  },
+  {
+   "id": "side.3",
+   "en": "Cosmetic Surgery Centre: search visibility built from scratch.",
+   "ar": "مركز جراحة تجميل: ظهور في البحث بُني من الصفر."
+  },
+  {
+   "id": "side.cta",
+   "en": "View Our Work",
+   "ar": "شاهد أعمالنا"
+  },
+  {
+   "id": "alt.visibility.1",
+   "en": "Illustration of a Google search results page",
+   "ar": "رسم توضيحي لصفحة نتائج بحث جوجل",
+   "proposed": true
+  },
+  {
+   "id": "alt.visibility.2",
+   "en": "Illustration of a Google Maps business listing",
+   "ar": "رسم توضيحي لقائمة نشاط تجاري على خرائط جوجل",
+   "proposed": true
+  },
+  {
+   "id": "alt.visibility.3",
+   "en": "Illustration of a ChatGPT conversation",
+   "ar": "رسم توضيحي لمحادثة في ChatGPT",
+   "proposed": true
+  }
+ ],
+ "html_replacements": [
+  [
+   "seo-visibility-google-en",
+   "seo-visibility-google-ar"
+  ],
+  [
+   "seo-visibility-maps-en",
+   "seo-visibility-maps-ar"
+  ],
+  [
+   "seo-visibility-chatgpt-en",
+   "seo-visibility-chatgpt-ar"
+  ],
+  [
+   "width=\"1024\" height=\"1024\" alt=\"Illustration of a Google search results page\"",
+   "width=\"1024\" height=\"825\" alt=\"Illustration of a Google search results page\""
+  ]
+ ],
+ "held": [
+  {
+   "id": "vis.labels",
+   "reason": "AMBIGUOUS — stray '1' prefixes in the supplied label line; also ranking claims needing evidence. Not rendered until the owner clarifies.",
+   "en": "1 #1 in Google Search       #1 in Google Maps Search   1 #1 in ChatGPT Search",
+   "ar": "1 #1 in Google Search   1 #1 in Google Maps Search    #1 in ChatGPT Search"
+  },
+  {
+   "id": "team.h2",
+   "reason": "heading supplied, no team content supplied — section not rendered",
+   "en": "Meet Our SEO Specialists",
+   "ar": "تعرف على فريق متخصصين السيو"
+  },
+  {
+   "id": "clients.h2",
+   "reason": "heading supplied, client logos not supplied — section not rendered",
+   "en": "Our Clients in Success",
+   "ar": "عملائنا في النجاح"
+  }
+ ]
+}

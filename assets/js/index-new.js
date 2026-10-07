@@ -690,6 +690,7 @@ function initScript() {
   initTricksWords();
   initContactForm();
   initLeadTracking();
+  initDetailsScrollSync();
   initTimeZone();
   initPlayVideoInview();
   initScrolltriggerAnimations();
@@ -1682,6 +1683,33 @@ function initLeadTracking() {
     else if (/(maps\.google\.|google\.[a-z.]+\/maps)/i.test(href)) method = 'directions';
 
     if (method) trackLead(method);
+  }, true);
+}
+
+/**
+* Opening or closing a <details> changes the page height, but Locomotive only
+* re-measures on window resize: with smooth scrolling on, the bottom of the page
+* stayed unreachable by the height of the opened answer (measured: +303px for an
+* SEO plan card). The service-page FAQ and the plan cards are native <details>
+* and need no script to open; this only tells the scroll engine afterwards, with
+* its own update(). One listener on document (bound once, like initLeadTracking:
+* initScript() re-runs after every barba transition). "toggle" does not bubble,
+* hence capture. Reads the global `scroll` at call time, so it never holds a
+* stale instance; coalesced to one update() per frame.
+*/
+function initDetailsScrollSync() {
+  if (document.documentElement.dataset.detailsScrollSync) return;
+  document.documentElement.dataset.detailsScrollSync = '1';
+  var queued = false;
+  document.addEventListener('toggle', function (e) {
+    var d = e.target;
+    if (!d || !d.matches || !d.matches('details.svc-faq-item, details.seo-plan-more')) return;
+    if (queued) return;
+    queued = true;
+    requestAnimationFrame(function () {
+      queued = false;
+      if (scroll && typeof scroll.update === 'function') scroll.update();
+    });
   }, true);
 }
 

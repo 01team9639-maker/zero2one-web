@@ -1,0 +1,158 @@
+{
+ "service": "digital-advertising",
+ "name": {
+  "en": "Advertising Campaign Management",
+  "ar": "إدارة الحملات الإعلانية"
+ },
+ "layout": "page",
+ "heading": {
+  "status": "draft",
+  "en": "Advertising Campaign FAQs",
+  "ar": "أسئلة شائعة عن إدارة الحملات الإعلانية"
+ },
+ "items": [
+  {
+   "id": "digital-advertising-1",
+   "status": "draft",
+   "basis": "“Google Ads Management”, “Social Media Advertising”",
+   "en": {
+    "q": "Which advertising platforms do you manage?",
+    "a": [
+     "We manage Google Ads, including search campaigns, display campaigns, and remarketing, and social media advertising across platforms including Instagram, Snapchat, TikTok, and other relevant channels."
+    ]
+   },
+   "ar": {
+    "q": "ما منصات الإعلان التي تديرونها؟",
+    "a": [
+     "ندير إعلانات جوجل، وتشمل حملات البحث والعرض وإعادة الاستهداف، وإعلانات وسائل التواصل عبر منصات تشمل إنستغرام وسناب شات وتيك توك وقنوات أخرى ذات صلة."
+    ]
+   }
+  },
+  {
+   "id": "digital-advertising-2",
+   "status": "draft",
+   "basis": "third intro paragraph",
+   "en": {
+    "q": "What goals can your campaigns be built around?",
+    "a": [
+     "Increasing sales, generating leads, building brand awareness, or expanding into new markets. Each campaign is designed around performance and measurable outcomes."
+    ]
+   },
+   "ar": {
+    "q": "ما الأهداف التي يمكن أن تُبنى حولها الحملات؟",
+    "a": [
+     "زيادة المبيعات، أو توليد العملاء، أو بناء الوعي بالعلامة، أو التوسّع في أسواق جديدة. ونصمّم كل حملة حول الأداء والنتائج القابلة للقياس."
+    ]
+   }
+  },
+  {
+   "id": "digital-advertising-3",
+   "status": "draft",
+   "basis": "“Campaign Strategy Development”, “Audience Research & Targeting”, “Ad Messaging & Creative Direction”",
+   "en": {
+    "q": "What happens before a campaign launches?",
+    "a": [
+     "We define objectives, KPIs, customer journeys, and advertising plans aligned with your business goals, research your audience, and develop the ad messaging and creative direction. The process starts with Define Business Objectives and Market & Audience Research, followed by Campaign Planning & Launch."
+    ]
+   },
+   "ar": {
+    "q": "ماذا يحدث قبل إطلاق الحملة؟",
+    "a": [
+     "نحدّد الأهداف ومؤشرات الأداء ورحلات العملاء وخطط الإعلان المتوافقة مع أهداف عملك، ونبحث في جمهورك، ونطوّر رسائل الإعلان والتوجيه الإبداعي. وتبدأ آلية العمل بتحديد أهداف العمل وبحث السوق والجمهور، ثم تخطيط الحملة وإطلاقها."
+    ]
+   }
+  },
+  {
+   "id": "digital-advertising-4",
+   "status": "draft",
+   "basis": "“Cost Optimization & Performance Improvement”, “Testing & Conversion Optimization”",
+   "en": {
+    "q": "How do you improve campaign results over time?",
+    "a": [
+     "We continuously monitor and improve campaign efficiency to maximize return on ad spend, and run structured testing across creatives, audiences, and landing experiences to improve outcomes."
+    ]
+   },
+   "ar": {
+    "q": "كيف تحسّنون نتائج الحملة مع الوقت؟",
+    "a": [
+     "نراقب كفاءة الحملة ونحسّنها باستمرار لتعظيم العائد على الإنفاق الإعلاني، ونجري اختبارات منظّمة عبر التصاميم والجماهير وتجارب الهبوط لتحسين النتائج."
+    ]
+   }
+  },
+  {
+   "id": "digital-advertising-5",
+   "status": "draft",
+   "basis": "“Reporting & Insights”",
+   "en": {
+    "q": "Will I receive reports on my campaigns?",
+    "a": [
+     "Yes. We provide transparent reporting with actionable insights and measurable performance indicators."
+    ]
+   },
+   "ar": {
+    "q": "هل سأحصل على تقارير عن حملاتي؟",
+    "a": [
+     "نعم. نقدّم تقارير شفّافة مع رؤى قابلة للتنفيذ ومؤشرات أداء قابلة للقياس."
+    ]
+   }
+  }
+ ],
+ "needs_owner_input": [
+  {
+   "id": "digital-advertising-need-1",
+   "status": "needs-owner-input",
+   "en": {
+    "q": "How much advertising budget do I need?"
+   },
+   "ar": {
+    "q": "كم ميزانية الإعلانات التي أحتاجها؟"
+   },
+   "needs": {
+    "en": "Any minimum or recommended budget, and whether it differs per platform.",
+    "ar": "هل يوجد حدّ أدنى أو ميزانية موصى بها، وهل تختلف حسب المنصة."
+   }
+  },
+  {
+   "id": "digital-advertising-need-2",
+   "status": "needs-owner-input",
+   "en": {
+    "q": "What do you charge to manage campaigns?"
+   },
+   "ar": {
+    "q": "كم تتقاضون مقابل إدارة الحملات؟"
+   },
+   "needs": {
+    "en": "The management fee model (fixed, percentage of spend…) — not stated on the site.",
+    "ar": "نموذج أتعاب الإدارة (ثابت، نسبة من الإنفاق…) — غير مذكور في الموقع."
+   }
+  },
+  {
+   "id": "digital-advertising-need-3",
+   "status": "needs-owner-input",
+   "en": {
+    "q": "Is there a minimum contract period?"
+   },
+   "ar": {
+    "q": "هل توجد مدة تعاقد دنيا؟"
+   },
+   "needs": {
+    "en": "Contract terms and cancellation.",
+    "ar": "شروط التعاقد والإلغاء."
+   }
+  },
+  {
+   "id": "digital-advertising-need-4",
+   "status": "needs-owner-input",
+   "en": {
+    "q": "How often will I receive reports?"
+   },
+   "ar": {
+    "q": "كل كم أحصل على التقارير؟"
+   },
+   "needs": {
+    "en": "Reporting frequency and format.",
+    "ar": "وتيرة التقارير وشكلها."
+   }
+  }
+ ]
+}

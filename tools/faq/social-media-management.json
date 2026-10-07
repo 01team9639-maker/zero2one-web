@@ -1,0 +1,175 @@
+{
+ "service": "social-media-management",
+ "name": {
+  "en": "Social Media Management & Content Creation",
+  "ar": "إدارة وسائل التواصل وصناعة المحتوى"
+ },
+ "layout": "page",
+ "heading": {
+  "status": "draft",
+  "en": "Social Media Management FAQs",
+  "ar": "أسئلة شائعة عن إدارة وسائل التواصل"
+ },
+ "items": [
+  {
+   "id": "social-media-management-1",
+   "status": "draft",
+   "basis": "“What’s Included?” (eight items)",
+   "en": {
+    "q": "What does social media management include?",
+    "a": [
+     "It includes content strategy development, social media account management, marketing and sales copywriting, visual content design, reels and campaign concept development, publishing and community coordination, brand voice development, and performance analysis and optimization."
+    ]
+   },
+   "ar": {
+    "q": "ماذا تتضمّن إدارة وسائل التواصل؟",
+    "a": [
+     "تتضمّن تطوير استراتيجية المحتوى، وإدارة حسابات التواصل، وكتابة محتوى التسويق والمبيعات، وتصميم المحتوى البصري، وتطوير الريلز ومفاهيم الحملات، والنشر وإدارة المجتمع، وتطوير صوت العلامة، وتحليل الأداء وتحسينه."
+    ]
+   }
+  },
+  {
+   "id": "social-media-management-2",
+   "status": "draft",
+   "basis": "service meta description (Instagram, TikTok, X and more); “Social Media Account Management”",
+   "en": {
+    "q": "Which platforms do you work on?",
+    "a": [
+     "We manage and organize your digital presence across platforms, including Instagram, TikTok, and X, to maintain consistency and growth."
+    ]
+   },
+   "ar": {
+    "q": "على أي منصات تعملون؟",
+    "a": [
+     "ندير حضورك الرقمي وننظّمه عبر المنصات، ومنها إنستغرام وتيك توك وX، للحفاظ على الاتّساق والنمو."
+    ]
+   }
+  },
+  {
+   "id": "social-media-management-3",
+   "status": "draft",
+   "basis": "“Marketing & Sales Copywriting”, “Visual Content Design”, “Reels & Campaign Concept Development”, “Publishing & Community Coordination”",
+   "en": {
+    "q": "Do you create the content, or only publish it?",
+    "a": [
+     "We do both. We write marketing and sales copy, produce branded visual assets, develop reels and campaign concepts, and manage publishing schedules so content execution stays consistent."
+    ]
+   },
+   "ar": {
+    "q": "هل تصنعون المحتوى أم تنشرونه فقط؟",
+    "a": [
+     "نفعل الأمرين. نكتب محتوى التسويق والمبيعات، وننتج أصولاً بصرية بهوية العلامة، ونطوّر الريلز ومفاهيم الحملات، وندير جداول النشر لضمان بقاء تنفيذ المحتوى متّسقاً."
+    ]
+   }
+  },
+  {
+   "id": "social-media-management-4",
+   "status": "draft",
+   "basis": "“Our Process” (Monthly Planning & Production); “Content Strategy Development”",
+   "en": {
+    "q": "How is content planned and produced each month?",
+    "a": [
+     "Our process includes Monthly Planning & Production. It starts with business and audience discovery and a content strategy aligned with your business goals, audience behavior, and brand positioning, followed by monthly planning and production, then design and publishing."
+    ]
+   },
+   "ar": {
+    "q": "كيف يُخطَّط المحتوى ويُنتَج كل شهر؟",
+    "a": [
+     "تتضمّن آلية عملنا التخطيط والإنتاج الشهري. نبدأ باستكشاف العمل والجمهور وباستراتيجية محتوى متوافقة مع أهداف عملك وسلوك جمهورك وموقع علامتك، ثم التخطيط والإنتاج الشهري، فالتصميم والنشر."
+    ]
+   }
+  },
+  {
+   "id": "social-media-management-5",
+   "status": "draft",
+   "basis": "“Performance Analysis & Optimization”",
+   "en": {
+    "q": "How do you measure social media results?",
+    "a": [
+     "We track content performance and continuously improve the strategy based on insights and results."
+    ]
+   },
+   "ar": {
+    "q": "كيف تقيسون نتائج وسائل التواصل؟",
+    "a": [
+     "نتتبّع أداء المحتوى ونحسّن الاستراتيجية باستمرار بناءً على الرؤى والنتائج."
+    ]
+   }
+  },
+  {
+   "id": "social-media-management-6",
+   "status": "draft",
+   "basis": "“Brand Voice Development”",
+   "en": {
+    "q": "Can you define my brand’s voice on social media?",
+    "a": [
+     "Yes. Brand Voice Development is part of the service: we define the communication style and messaging principles that strengthen your connection with your audience."
+    ]
+   },
+   "ar": {
+    "q": "هل يمكنكم تحديد صوت علامتي على وسائل التواصل؟",
+    "a": [
+     "نعم. تطوير صوت العلامة جزء من الخدمة: نحدّد أسلوب التواصل ومبادئ الرسائل التي تقوّي ارتباطك بجمهورك."
+    ]
+   }
+  }
+ ],
+ "needs_owner_input": [
+  {
+   "id": "social-media-management-need-1",
+   "status": "needs-owner-input",
+   "en": {
+    "q": "How often will you post?"
+   },
+   "ar": {
+    "q": "كم مرة تنشرون؟"
+   },
+   "needs": {
+    "en": "Posting frequency per package.",
+    "ar": "وتيرة النشر لكل باقة."
+   }
+  },
+  {
+   "id": "social-media-management-need-2",
+   "status": "needs-owner-input",
+   "en": {
+    "q": "How much does social media management cost?"
+   },
+   "ar": {
+    "q": "كم تكلفة إدارة وسائل التواصل؟"
+   },
+   "needs": {
+    "en": "Prices or packages.",
+    "ar": "الأسعار أو الباقات."
+   }
+  },
+  {
+   "id": "social-media-management-need-3",
+   "status": "needs-owner-input",
+   "en": {
+    "q": "Do I approve content before it is published?"
+   },
+   "ar": {
+    "q": "هل أوافق على المحتوى قبل نشره؟"
+   },
+   "needs": {
+    "en": "The approval workflow.",
+    "ar": "آلية الموافقة على المحتوى."
+   }
+  },
+  {
+   "id": "social-media-management-need-4",
+   "status": "needs-owner-input",
+   "en": {
+    "q": "Do you reply to comments and messages?"
+   },
+   "ar": {
+    "q": "هل تردّون على التعليقات والرسائل؟"
+   },
+   "needs": {
+    "en": "Whether community replies are handled — the page lists “Publishing & Community Coordination” only as managing publishing schedules.",
+    "ar": "هل يشمل الخدمة الرد على المجتمع — الصفحة تذكر «النشر وإدارة المجتمع» بوصف إدارة جداول النشر فقط."
+   }
+  }
+ ]
+}

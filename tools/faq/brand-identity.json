@@ -1,0 +1,175 @@
+{
+ "service": "brand-identity",
+ "name": {
+  "en": "Brand Identity Development",
+  "ar": "تطوير الهوية التجارية"
+ },
+ "layout": "page",
+ "heading": {
+  "status": "draft",
+  "en": "Brand Identity FAQs",
+  "ar": "أسئلة شائعة عن الهوية التجارية"
+ },
+ "items": [
+  {
+   "id": "brand-identity-1",
+   "status": "draft",
+   "basis": "“What’s Included?” (eight items)",
+   "en": {
+    "q": "What does a brand identity project include?",
+    "a": [
+     "It includes brand strategy development, logo design, a visual identity system, color and typography selection, brand personality and tone of voice, brand guidelines, social media templates, and digital and print brand applications."
+    ]
+   },
+   "ar": {
+    "q": "ماذا يتضمّن مشروع الهوية التجارية؟",
+    "a": [
+     "يتضمّن تطوير استراتيجية العلامة، وتصميم الشعار، ونظام الهوية البصرية، واختيار الألوان والخطوط، وشخصية العلامة ونبرة الصوت، وإنشاء دليل العلامة، وقوالب وسائل التواصل، وتطبيقات العلامة الرقمية والمطبوعة."
+    ]
+   }
+  },
+  {
+   "id": "brand-identity-2",
+   "status": "draft",
+   "basis": "second intro paragraph; “Brand Strategy Development”",
+   "en": {
+    "q": "Do you start with the logo?",
+    "a": [
+     "No. We create brand identities that start from strategy before design. We take the time to understand your business, audience, positioning, and ambitions, then transform that foundation into a distinctive and scalable brand experience."
+    ]
+   },
+   "ar": {
+    "q": "هل تبدؤون بالشعار؟",
+    "a": [
+     "لا. نبني هويات تبدأ من الاستراتيجية قبل التصميم. نأخذ الوقت لفهم عملك وجمهورك وموقعك وطموحاتك، ثم نحوّل هذا الأساس إلى تجربة علامة مميّزة وقابلة للتوسّع."
+    ]
+   }
+  },
+  {
+   "id": "brand-identity-3",
+   "status": "draft",
+   "basis": "“Brand Guidelines Creation”, “Visual Identity System”",
+   "en": {
+    "q": "What are brand guidelines, and why do they matter?",
+    "a": [
+     "Brand guidelines are a comprehensive brand manual prepared to ensure consistency across all touchpoints. The visual identity system also includes usage standards."
+    ]
+   },
+   "ar": {
+    "q": "ما دليل العلامة، ولماذا هو مهم؟",
+    "a": [
+     "دليل العلامة هو دليل شامل يُعدّ لضمان الاتّساق عبر جميع نقاط التواصل. ويشمل نظام الهوية البصرية كذلك معايير الاستخدام."
+    ]
+   }
+  },
+  {
+   "id": "brand-identity-4",
+   "status": "draft",
+   "basis": "“Brand Personality & Tone of Voice”",
+   "en": {
+    "q": "What is a brand’s tone of voice?",
+    "a": [
+     "Brand personality and tone of voice define the communication style, the messaging principles, and the way the brand speaks to its audience."
+    ]
+   },
+   "ar": {
+    "q": "ما نبرة صوت العلامة؟",
+    "a": [
+     "شخصية العلامة ونبرة الصوت تحدّدان أسلوب التواصل ومبادئ الرسائل والطريقة التي تخاطب بها العلامة جمهورها."
+    ]
+   }
+  },
+  {
+   "id": "brand-identity-5",
+   "status": "draft",
+   "basis": "“Digital & Print Brand Applications”, “Social Media Templates”",
+   "en": {
+    "q": "Is the brand identity designed for both digital and print use?",
+    "a": [
+     "Yes. We deliver brand assets optimized for websites, presentations, marketing materials, and printed collateral, and we design flexible templates for social media."
+    ]
+   },
+   "ar": {
+    "q": "هل تُصمَّم الهوية للاستخدام الرقمي والمطبوع معاً؟",
+    "a": [
+     "نعم. نسلّم أصول العلامة محسّنة للمواقع والعروض والمواد التسويقية والمطبوعات، ونصمّم قوالب مرنة لوسائل التواصل."
+    ]
+   }
+  },
+  {
+   "id": "brand-identity-6",
+   "status": "draft",
+   "basis": "“Our Process” (six steps)",
+   "en": {
+    "q": "How does the brand identity process work?",
+    "a": [
+     "It runs in six stages: Brand Discovery & Vision Alignment, Market & Audience Research, Brand Strategy Definition, Identity Design & Development, Guidelines & Applications, and Final Delivery & Activation."
+    ]
+   },
+   "ar": {
+    "q": "كيف تسير مراحل بناء الهوية؟",
+    "a": [
+     "تسير في ست مراحل: استكشاف العلامة ومواءمة الرؤية، وبحث السوق والجمهور، وتحديد استراتيجية العلامة، وتصميم وتطوير الهوية، والدليل والتطبيقات، والتسليم النهائي والتفعيل."
+    ]
+   }
+  }
+ ],
+ "needs_owner_input": [
+  {
+   "id": "brand-identity-need-1",
+   "status": "needs-owner-input",
+   "en": {
+    "q": "How much does a brand identity cost?"
+   },
+   "ar": {
+    "q": "كم تكلفة بناء هوية تجارية؟"
+   },
+   "needs": {
+    "en": "Prices or packages.",
+    "ar": "الأسعار أو الباقات."
+   }
+  },
+  {
+   "id": "brand-identity-need-2",
+   "status": "needs-owner-input",
+   "en": {
+    "q": "How long does a brand identity project take?"
+   },
+   "ar": {
+    "q": "كم يستغرق مشروع الهوية؟"
+   },
+   "needs": {
+    "en": "Typical duration and stage timings.",
+    "ar": "المدة المعتادة وتوقيت المراحل."
+   }
+  },
+  {
+   "id": "brand-identity-need-3",
+   "status": "needs-owner-input",
+   "en": {
+    "q": "How many logo concepts and revisions are included?"
+   },
+   "ar": {
+    "q": "كم مقترح شعار وكم جولة تعديل مشمولة؟"
+   },
+   "needs": {
+    "en": "Number of concepts and revision rounds.",
+    "ar": "عدد المقترحات وجولات التعديل."
+   }
+  },
+  {
+   "id": "brand-identity-need-4",
+   "status": "needs-owner-input",
+   "en": {
+    "q": "Which file formats will I receive, and who owns the final files?"
+   },
+   "ar": {
+    "q": "ما صيغ الملفات التي أستلمها، ولمن تعود ملكية الملفات النهائية؟"
+   },
+   "needs": {
+    "en": "Delivered file formats and rights/ownership terms.",
+    "ar": "صيغ الملفات المسلَّمة وشروط الملكية والحقوق."
+   }
+  }
+ ]
+}

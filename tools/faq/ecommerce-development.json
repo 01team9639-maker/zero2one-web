@@ -1,0 +1,175 @@
+{
+ "service": "ecommerce-development",
+ "name": {
+  "en": "E-commerce & Custom Systems Development",
+  "ar": "تطوير المتاجر والأنظمة المخصّصة"
+ },
+ "layout": "page",
+ "heading": {
+  "status": "draft",
+  "en": "E-commerce & Custom Systems FAQs",
+  "ar": "أسئلة شائعة عن التجارة الإلكترونية والأنظمة المخصّصة"
+ },
+ "items": [
+  {
+   "id": "ecommerce-development-1",
+   "status": "draft",
+   "basis": "third intro paragraph",
+   "en": {
+    "q": "What can you build?",
+    "a": [
+     "We build online stores, booking platforms, operational dashboards, and fully customized solutions, tailored to your business rather than generic templates."
+    ]
+   },
+   "ar": {
+    "q": "ماذا يمكنكم أن تبنوا؟",
+    "a": [
+     "نبني متاجر إلكترونية، ومنصات حجز، ولوحات تشغيل، وحلولاً مخصّصة بالكامل، مفصّلة على عملك لا على قوالب جاهزة."
+    ]
+   }
+  },
+  {
+   "id": "ecommerce-development-2",
+   "status": "draft",
+   "basis": "first two intro paragraphs; “Our Process”",
+   "en": {
+    "q": "Do I need an online store or a custom system?",
+    "a": [
+     "Some businesses need more than a website: digital systems that streamline operations, organize workflows, and create better customer experiences. We start with business and operations discovery, then analyze the customer journey and workflows before planning the solution architecture."
+    ]
+   },
+   "ar": {
+    "q": "هل أحتاج متجراً إلكترونياً أم نظاماً مخصّصاً؟",
+    "a": [
+     "بعض الأعمال تحتاج أكثر من موقع: أنظمة رقمية تبسّط العمليات، وتنظّم سير العمل، وتصنع تجارب أفضل للعملاء. نبدأ باستكشاف العمل والعمليات، ثم نحلّل رحلة العميل وسير العمل قبل تخطيط هندسة الحل."
+    ]
+   }
+  },
+  {
+   "id": "ecommerce-development-3",
+   "status": "draft",
+   "basis": "“Booking & Order Management Systems”",
+   "en": {
+    "q": "Can the system handle bookings and orders?",
+    "a": [
+     "Yes. Booking and order management systems automate reservations, requests, and customer workflows."
+    ]
+   },
+   "ar": {
+    "q": "هل يمكن للنظام إدارة الحجوزات والطلبات؟",
+    "a": [
+     "نعم. أنظمة الحجوزات وإدارة الطلبات تؤتمت الحجوزات والطلبات وسير عمل العملاء."
+    ]
+   }
+  },
+  {
+   "id": "ecommerce-development-4",
+   "status": "draft",
+   "basis": "“Payment Gateway Integration”, “Third-Party Integrations”",
+   "en": {
+    "q": "Can you connect payments, shipping, and other tools?",
+    "a": [
+     "Yes. Payment gateway integration enables secure and seamless payment experiences, and third-party integrations connect your system with shipping providers, CRM tools, operational software, and external services."
+    ]
+   },
+   "ar": {
+    "q": "هل يمكنكم ربط الدفع والشحن وأدوات أخرى؟",
+    "a": [
+     "نعم. ربط بوابات الدفع يمكّن تجارب دفع آمنة وسلسة، وتكاملات الطرف الثالث تربط نظامك بمزوّدي الشحن وأدوات إدارة العملاء وبرامج التشغيل والخدمات الخارجية."
+    ]
+   }
+  },
+  {
+   "id": "ecommerce-development-5",
+   "status": "draft",
+   "basis": "“Scalability & Future Expansion Readiness”",
+   "en": {
+    "q": "Will the system be able to grow with my business?",
+    "a": [
+     "We build flexible architectures that support future upgrades and business expansion."
+    ]
+   },
+   "ar": {
+    "q": "هل سيتمكّن النظام من النموّ مع عملي؟",
+    "a": [
+     "نبني بُنى مرنة تدعم التحديثات المستقبلية وتوسّع العمل."
+    ]
+   }
+  },
+  {
+   "id": "ecommerce-development-6",
+   "status": "draft",
+   "basis": "“Our Process” (six steps)",
+   "en": {
+    "q": "How does the development process work?",
+    "a": [
+     "It runs in six stages: Business & Operations Discovery, Customer Journey & Workflow Analysis, Solution Architecture & Planning, Development & Testing, Launch & Integration, and Ongoing Optimization."
+    ]
+   },
+   "ar": {
+    "q": "كيف تسير مراحل التطوير؟",
+    "a": [
+     "تسير في ست مراحل: استكشاف العمل والعمليات، وتحليل رحلة العميل وسير العمل، وهندسة الحل والتخطيط، والتطوير والاختبار، والإطلاق والتكامل، والتحسين المستمر."
+    ]
+   }
+  }
+ ],
+ "needs_owner_input": [
+  {
+   "id": "ecommerce-development-need-1",
+   "status": "needs-owner-input",
+   "en": {
+    "q": "How much does an online store or custom system cost?"
+   },
+   "ar": {
+    "q": "كم تكلفة المتجر الإلكتروني أو النظام المخصّص؟"
+   },
+   "needs": {
+    "en": "Prices or price ranges.",
+    "ar": "الأسعار أو نطاقاتها."
+   }
+  },
+  {
+   "id": "ecommerce-development-need-2",
+   "status": "needs-owner-input",
+   "en": {
+    "q": "How long does development take?"
+   },
+   "ar": {
+    "q": "كم يستغرق التطوير؟"
+   },
+   "needs": {
+    "en": "Typical delivery times per project type.",
+    "ar": "مدد التسليم المعتادة لكل نوع مشروع."
+   }
+  },
+  {
+   "id": "ecommerce-development-need-3",
+   "status": "needs-owner-input",
+   "en": {
+    "q": "Which platforms or technologies do you use?"
+   },
+   "ar": {
+    "q": "ما المنصات أو التقنيات التي تستخدمونها؟"
+   },
+   "needs": {
+    "en": "Technology stack — not stated on the site; do not guess.",
+    "ar": "التقنيات المستخدمة — غير مذكورة في الموقع ولا تُخمَّن."
+   }
+  },
+  {
+   "id": "ecommerce-development-need-4",
+   "status": "needs-owner-input",
+   "en": {
+    "q": "Do you provide hosting, maintenance, or support after launch?"
+   },
+   "ar": {
+    "q": "هل تقدّمون الاستضافة أو الصيانة أو الدعم بعد الإطلاق؟"
+   },
+   "needs": {
+    "en": "Post-launch support and hosting terms.",
+    "ar": "شروط الدعم والاستضافة بعد الإطلاق."
+   }
+  }
+ ]
+}

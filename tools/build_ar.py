@@ -15,6 +15,12 @@ Sources of truth
     page structure & copy .... the English pages at the repo root
     translations ............. tools/ar-dictionary.json   (English -> Arabic)
     Arabic page metadata ..... AR_META below
+    owner-supplied pages ..... tools/page-copy/<page>.json, listed in PAGE_COPY below:
+                               copy the owner wrote in BOTH languages. Its Arabic is
+                               exact for that one page — applied before the shared
+                               dictionary, and never passed through brandify() or
+                               isolate_numbers(), which would rewrite "Zero2One" and
+                               inject bidi marks into words the owner wrote as is.
 
 Workflow — after editing any English page, run:
     python3 tools/build_ar.py
@@ -56,6 +62,8 @@ PAGES += [("about/index.html", "ar/about/index.html", "/about/"),
 # إلى المعرض ولا يُسجَّل في الشجرة العربية كان سيمرّ صامتاً.
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from portfolio_data import case_slugs  # noqa: E402
+
+import build_faq  # noqa: E402  (service-page FAQ content: tools/faq/<service>.json)
 
 CASE_SLUGS = case_slugs()
 PAGES += [(f"work/{c}/index.html", f"ar/work/{c}/index.html", f"/work/{c}/")
@@ -142,6 +150,47 @@ AR_META = {
     },
 }
 
+# Pages whose copy the owner supplied in both languages and wants shipped verbatim.
+# The file holds {"meta": {title, description}, "pairs": [{id, en, ar}]}: `pairs` is an
+# exact English -> Arabic table used for that page only, so the shared dictionary (and
+# every other page's wording, e.g. "How We Work" -> "كيف نعمل") stays as it is.
+PAGE_COPY = {
+    "/services/seo-riyadh/": "tools/page-copy/seo-riyadh.json",
+}
+
+
+def load_page_copy(page_path, include_drafts=False):
+    """The owner-supplied exact Arabic for a page: its PAGE_COPY file (if any) plus the
+    service FAQ (tools/faq/<service>.json — approved items only, or drafts too in the
+    local review preview). Returns None for a page with neither."""
+    rel = PAGE_COPY.get(page_path)
+    exact, meta, replace, files = {}, None, [], []
+
+    def add(en, ar, origin):
+        key = norm(en)
+        if key in exact and exact[key] != ar.strip():
+            raise SystemExit(f"{origin}: two different Arabic texts for {key[:60]!r}")
+        exact[key] = ar.strip()
+
+    if rel:
+        data = json.load(open(os.path.join(ROOT, rel), encoding="utf-8"))
+        for pair in data["pairs"]:
+            add(pair["en"], pair["ar"], rel)
+        meta = {k: html_mod.escape(v["ar"], quote=True) for k, v in data["meta"].items()}
+        replace = data.get("html_replacements", [])
+        files.append(rel)
+    slug = page_path.strip("/").split("/")[-1] if page_path.startswith("/services/") else None
+    if slug in build_faq.SERVICE_SLUGS:
+        faq = build_faq.pairs(slug, include_drafts)
+        for en, ar in faq:
+            add(en, ar, f"tools/faq/{slug}.json")
+        if faq:
+            files.append(f"tools/faq/{slug}.json")
+    if not files:
+        return None
+    return {"exact": exact, "meta": meta, "replace": replace, "file": " + ".join(files)}
+
+
 # Whole-element rewrites: markup that is built from several <span>s, so a
 # text-node lookup cannot reach it (the JS runtime handled these the same way).
 HTML_REPLACEMENTS = [
@@ -215,11 +264,26 @@ class Translator:
     def __init__(self, table):
         self.table = {norm(k): v for k, v in table.items()}
         self.missing = []
+        self.exact = {}          # the current page's owner-supplied copy (see PAGE_COPY)
+        self.exact_used = set()
+
+    def lookup(self, raw):
+        """Raw translation for JSON-LD strings: the page's exact copy, else the dictionary."""
+        key = norm(raw)
+        if key in self.exact:
+            self.exact_used.add(key)
+            return self.exact[key]
+        return self.table.get(key)
 
     def text(self, raw):
         key = norm(raw)
         if not key or key in KEEP_AS_IS:
             return None
+        if key in self.exact:
+            # Owner-supplied Arabic: escaped for HTML and nothing else — no brandify(),
+            # no isolate_numbers().
+            self.exact_used.add(key)
+            return html_mod.escape(self.exact[key], quote=True)
         hit = self.table.get(key)
         if hit is None:
             # Nothing with at least two Latin letters is prose; skip punctuation,
@@ -333,7 +397,7 @@ def translate_jsonld(html, tr, en_desc, ar_desc):
                         if k == "description" and norm(v) == norm(en_desc):
                             node[k] = ar_desc
                         else:
-                            hit = tr.table.get(norm(v))
+                            hit = tr.lookup(v)
                             if hit:
                                 node[k] = hit
                     elif k == "inLanguage":
@@ -404,23 +468,44 @@ def rewrite_head(html, page_path, meta):
 
 
 # ------------------------------------------------------------------------ build
+def render_arabic(src, page_path, tr, include_drafts=False, copy="load"):
+    """One English page -> its Arabic page (text of the page, not written anywhere).
+    `include_drafts` is for the local review preview (tools/build_faq.py --preview)."""
+    if copy == "load":
+        copy = load_page_copy(page_path, include_drafts)
+    meta = copy["meta"] if copy and copy["meta"] else AR_META[page_path]
+    tr.exact, tr.exact_used = (copy["exact"] if copy else {}), set()
+    en_desc = re.search(r'<meta name="description"\s+content="([^"]*)"', src).group(1)
+
+    out = rewrite_head(src, page_path, meta)
+    for a, b in HTML_REPLACEMENTS:
+        out = out.replace(a, b)
+    if copy:                 # this page's own asset/markup swaps (e.g. the -en images -> -ar)
+        for a, b in copy["replace"]:
+            if a not in out:
+                raise SystemExit(f"{copy['file']}: html_replacements entry matches nothing: {a[:70]!r}")
+            out = out.replace(a, b)
+    out = translate_jsonld(out, tr, en_desc, meta["description"])
+    out = ar_links(out)
+    out = swap_switcher(out, page_path)
+    out = translate_body(out, tr)
+    if copy:
+        unused = sorted(set(copy["exact"]) - tr.exact_used)
+        if unused:
+            tr.unused = getattr(tr, "unused", []) + [(page_path, k) for k in unused]
+    return out
+
+
 def build(check_only=False, missing_only=False):
     table = json.load(open(DICT_PATH, encoding="utf-8"))
     tr = Translator(table)
     written = []
+    tr.unused = []           # supplied entries that never reached their page
 
     for en_rel, ar_rel, page_path in PAGES:
         src = open(os.path.join(ROOT, en_rel), encoding="utf-8").read()
-        meta = AR_META[page_path]
-        en_desc = re.search(r'<meta name="description"\s+content="([^"]*)"', src).group(1)
-
-        out = rewrite_head(src, page_path, meta)
-        for a, b in HTML_REPLACEMENTS:
-            out = out.replace(a, b)
-        out = translate_jsonld(out, tr, en_desc, meta["description"])
-        out = ar_links(out)
-        out = swap_switcher(out, page_path)
-        out = translate_body(out, tr)
+        copy = load_page_copy(page_path)
+        out = render_arabic(src, page_path, tr, copy=copy)
 
         if not (check_only or missing_only):
             dst = os.path.join(ROOT, ar_rel)
@@ -434,11 +519,18 @@ def build(check_only=False, missing_only=False):
             seen.add(m)
             uniq.append(m)
 
+    unused_copy = tr.unused
+    if unused_copy:
+        print(f"\n{len(unused_copy)} page-copy entr{'y' if len(unused_copy) == 1 else 'ies'} never matched a text node "
+              "(the English page and tools/page-copy/*.json or tools/faq/*.json have drifted apart):")
+        for page, key in unused_copy[:20]:
+            print(f"  - {page}: {key[:90]}")
+
     if missing_only:
         print(f"{len(uniq)} untranslated string(s):\n")
         for m in uniq:
             print(json.dumps(m, ensure_ascii=False) + ": \"\",")
-        return 1 if uniq else 0
+        return 1 if (uniq or unused_copy) else 0
 
     for rel, size in written:
         print(f"  wrote {rel:38s} {size/1024:6.1f} KB")

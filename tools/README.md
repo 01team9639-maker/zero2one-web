@@ -41,6 +41,7 @@ python3 tools/optimize_images.py --png
 | [`build_portfolio.py`](build_portfolio.py) | The body of `/work/index.html`; preserves the original homepage teaser |
 | [`extract_portfolio_assets.py`](extract_portfolio_assets.py) | `assets/images/work/*.webp` from the company portfolio PDF. Needs `pymupdf` + `pillow`; run only when the source material changes |
 | [`optimize_images.py`](optimize_images.py) | WebP generation + PNG optimization (CDN prep) |
+| [`build_faq.py`](build_faq.py) | The FAQ section of each service page, from [`faq/<service>.json`](faq/README.md) (approved items only) |
 | [`build.sh`](build.sh) | The minified CSS/JS bundles |
 | [`deploy.sh`](deploy.sh) | Nothing locally — uploads the site (dotfiles included) and then runs `verify_deploy.py` |
 
