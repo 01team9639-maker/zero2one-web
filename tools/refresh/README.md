@@ -8,6 +8,12 @@ beige. Google Ads, consulting and mobile cards reuse existing artwork temporaril
 pending the owner's replacement images. These changes apply to both languages
 and remain local.
 
+Second homepage review: the differentiators section uses brand beige and the
+original magnetic fill-hover buttons with service-card SVG arrows. Clients copy
+is cream on orange, separated above by the original wave path. The visible pause
+button is removed on the homepage only; the focusable marquee supports Space to
+pause/resume, hover/focus holds, and a static reduced-motion layout.
+
 This is an **unpublished** local implementation. Nothing here authorizes a push,
 merge, deployment, workflow dispatch, GTM publication, or account change.
 

@@ -334,6 +334,25 @@ def original_home_layout(body,lang,ps):
         slides.append('<li class="selected-work-slide"><a class="selected-work-card" href="'+local('/work/'+slug+'/',lang)+'"><span class="selected-work-card-media selected-work-fit-contain">'+f'<img src="{src}" width="{c["w"]}" height="{c["h"]}" loading="lazy" decoding="async" alt=""></span><span class="selected-work-card-body">'+p(wc+j*2,'span','selected-work-card-title')+p(wc+j*2+1,'span','selected-work-card-description')+'</span></a></li>')
     work_html=re.sub(r'<ul class="slider-track" data-slider-track>[\s\S]*?</ul>',lambda _:'<ul class="slider-track" data-slider-track>'+''.join(slides)+'</ul>',work_html,count=1)
     replace_section(r'<section class="rf-section[^>]*rf-work"',work_html)
+    # Homepage-only owner refinements; retain every approved label and destination.
+    def original_button(m):
+        anchor=m[0].replace('class="rf-button magnetic"','class="btn-click magnetic"')
+        anchor=anchor.replace('<span class="btn-text">','<div class="btn-fill"></div><span class="btn-text">',1)
+        anchor=anchor.replace('</span></span></a>','</span><svg class="service-card-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg></span></a>')
+        return '<div class="btn btn-normal service-card-btn">'+anchor+'</div>'
+    def difference_buttons(m):
+        return re.sub(r'<a[^>]*class="rf-button magnetic"[^>]*>[\s\S]*?</a>',original_button,m[0])
+    body=re.sub(r'<section[^>]*rf-difference[^>]*>[\s\S]*?</section>',difference_buttons,body,count=1)
+    def clients_refinement(m):
+        block=m[0]
+        wave='<div class="rf-clients-wave" aria-hidden="true"><svg viewBox="0 0 1440 243.604" preserveAspectRatio="none"><g transform="translate(0,243.604) scale(1,-1)"><path d="M687.43 46.3562C317.5 -57.3952 153.84 43.218 0 58.6036V243.604H1440V28.6036C1264.45 46.0335 1058.46 150.417 687.43 46.3562Z" /></g></svg></div>'
+        wave=wave.replace('<g transform="translate(0,243.604) scale(1,-1)">','').replace('</g>','')
+        block=block.replace('<div class="rf-inner">',wave+'<div class="rf-inner">',1)
+        block=re.sub(r'<button[^>]*class="logo-marquee-toggle"[\s\S]*?</button>','',block,count=1)
+        helptext='اضغط مفتاح المسافة لإيقاف حركة الشعارات أو استئنافها.' if ar else 'Press Space to pause or resume the logos.'
+        block=block.replace('data-logo-marquee ',f'tabindex="0" role="region" aria-labelledby="clients-heading" aria-description="{helptext}" data-logo-marquee ',1)
+        return block
+    body=re.sub(r'<section[^>]*rf-clients[^>]*>[\s\S]*?</section>',clients_refinement,body,count=1)
     # Scope the remaining editorial sections so original section/footer CSS wins.
     body=body.replace('class="rf-section ', 'class="rf-page rf-section ')
     return body

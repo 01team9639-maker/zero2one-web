@@ -1809,9 +1809,9 @@ function initLogoMarquees() {
   var track = el.querySelector('.logo-marquee-track');
   var group = el.querySelector('.logo-marquee-group');
   var btn = el.querySelector('.logo-marquee-toggle');
-  if (!track || !group || !btn) return;
-  var labelPause = btn.querySelector('.logo-marquee-label-pause');
-  var labelPlay = btn.querySelector('.logo-marquee-label-play');
+  if (!track || !group) return;
+  var labelPause = btn && btn.querySelector('.logo-marquee-label-pause');
+  var labelPlay = btn && btn.querySelector('.logo-marquee-label-play');
   var speed = parseFloat(el.getAttribute('data-speed')) || 30;
   var alive = true, live = false, lastDistance = 0;
   var s = { manual: false, hover: false, focus: false, ignoreHover: false, ignoreFocus: false, loaded: false, inView: false, hidden: document.hidden };
@@ -1847,7 +1847,7 @@ function initLogoMarquees() {
     live = true;
     track.classList.add('is-paused');            // never runs before apply() allows it
     el.setAttribute('data-marquee-ready', '');
-    btn.hidden = false;
+    if (btn) btn.hidden = false;
     measure();
     if (typeof ResizeObserver === 'function') { ro = new ResizeObserver(measure); ro.observe(group); }
     apply();
@@ -1858,7 +1858,7 @@ function initLogoMarquees() {
     live = false;
     if (ro) { ro.disconnect(); ro = null; }
     el.removeAttribute('data-marquee-ready');
-    btn.hidden = true;
+    if (btn) btn.hidden = true;
     lastDistance = 0;
     apply();
     refreshScroll();
@@ -1870,14 +1870,20 @@ function initLogoMarquees() {
   if (mqReduce) { on(mqReduce, 'change', onMotionPref); }
 
   // explicit Pause / Play
-  on(btn, 'click', function () {
+  function toggleManual() {
     if (!s.manual) { s.manual = true; s.ignoreHover = false; s.ignoreFocus = false; }
     else { s.manual = false; s.ignoreHover = s.hover; s.ignoreFocus = s.focus; }
     apply();
+  }
+  if (btn) on(btn, 'click', toggleManual);
+  else on(el, 'keydown', function (e) {
+    if (e.target === el && (e.key === ' ' || e.code === 'Space')) {
+      e.preventDefault(); e.stopPropagation(); toggleManual();
+    }
   });
   // Space on this button must only operate the button: the page's smooth-scroll library treats a Space keydown anywhere
   // (except in text fields) as "scroll one screen". The button's own Space activation (on keyup) is not affected.
-  on(btn, 'keydown', function (e) { if (e.key === ' ' || e.code === 'Space') e.stopPropagation(); });
+  if (btn) on(btn, 'keydown', function (e) { if (e.key === ' ' || e.code === 'Space') e.stopPropagation(); });
   // implicit holds: pointer (mouse only — a tap would never "leave") and focus inside the component
   on(el, 'pointerenter', function (e) { if (e.pointerType === 'mouse') { s.hover = true; apply(); } });
   on(el, 'pointerleave', function (e) { if (e.pointerType === 'mouse') { s.hover = false; s.ignoreHover = false; apply(); } });

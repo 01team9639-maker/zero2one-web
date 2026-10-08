@@ -34,8 +34,15 @@ async function run(){
   assert.equal(colors.background,'rgb(249, 70, 14)','orange client section');assert.ok(Math.abs(colors.width-colors.screen)<3,'client slider spans viewport');
   assert.equal(await p.locator('.rf-closing').evaluate(e=>getComputedStyle(e).backgroundColor),'rgb(255, 253, 237)','beige pre-footer');
   const logo=p.locator('[data-logo-marquee]');assert.equal(await logo.getAttribute('data-running'),'true','logo animation runs');
-  await scrollTo('.logo-marquee-toggle');await logo.locator('button').click();assert.equal(await logo.getAttribute('data-running'),'false','logo pause works');
-  await logo.locator('button').click();assert.equal(await logo.getAttribute('data-manual'),'playing','logo resumes');
+  assert.equal(await logo.locator('button').count(),0,'homepage visible pause button removed');
+  await logo.focus();await p.keyboard.press('Space');assert.equal(await logo.getAttribute('data-manual'),'paused','keyboard pause works');
+  await p.keyboard.press('Space');assert.equal(await logo.getAttribute('data-running'),'true','keyboard resumes');
+  assert.equal(await p.locator('.rf-difference').evaluate(e=>getComputedStyle(e).backgroundColor),'rgb(255, 253, 237)','brand beige difference section');
+  assert.equal(await p.locator('.rf-difference .service-card-arrow').count(),2,'service SVG arrows reused');
+  const buttons=await p.locator('.rf-difference .service-card-btn').evaluateAll(es=>es.map(e=>e.getBoundingClientRect().toJSON()));
+  assert.ok(buttons[0].right<=buttons[1].left||buttons[1].right<=buttons[0].left||buttons[0].bottom<=buttons[1].top||buttons[1].bottom<=buttons[0].top,'difference buttons do not overlap');
+  assert.equal(await p.locator('#clients .rf-clients-wave').count(),1,'original orange wave reused');
+  assert.equal(await p.locator('#clients h2').evaluate(e=>getComputedStyle(e).color),'rgb(255, 253, 237)','cream clients heading');
   assert.ok(await p.evaluate(()=>window.__rfAnimationCalls)>0,'scroll reveal is used');
   await p.goto(origin+prefix+'/services/web-design-riyadh/');await ready();
   await scrollTo('.rf-process');await p.screenshot({path:path.join(out,`section-process-${lang}-${mobile}.png`)});
