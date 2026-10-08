@@ -1404,17 +1404,24 @@ function initCookieViews() {
 * Scrolltrigger Scroll Check
 */
 function initScrolltriggerNav() {
-
+  var n = navParts();
+  var bar = n.root.querySelector('.nav-bar');
+  if (!bar) return;
+  // The floating toggle replaces the desktop bar, never overlaps it.
+  // An update callback alone can leave stale state at progress zero.
+  var sync = function (self) {
+    n.root.classList.toggle('scrolled', self.scroll() > Math.max(0, self.start));
+  };
   ScrollTrigger.create({
-    start: 'top -30%',
-    onUpdate: self => {
-      $("main").addClass('scrolled');
-    },
-    onLeaveBack: () => {
-      $("main").removeClass('scrolled');
-    },
+    trigger: bar,
+    start: 'bottom top',
+    // Locomotive's transformed scroller can report max scroll as zero while
+    // refreshing. A content-length range keeps end strictly after start.
+    end: function () { return '+=' + Math.max(n.wrap ? n.wrap.scrollHeight : 0, window.innerHeight); },
+    onToggle: sync,
+    onUpdate: sync,
+    onRefresh: sync
   });
-
 }
 
 /**

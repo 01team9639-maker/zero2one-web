@@ -145,6 +145,16 @@ async function menuSettled(page, timeout = 4000) {
 
 /** Reach the toggle the way a keyboard user does. */
 async function focusToggle(page) {
+  // At desktop top the complete navbar replaces the floating toggle. Reach
+  // it after scrolling the navbar away, rather than expecting two menus.
+  const hidden = await page.evaluate(() => {
+    const t = document.querySelector('[data-barba="container"]:last-of-type .btn-hamburger');
+    return t && getComputedStyle(t).visibility === 'hidden';
+  });
+  if (hidden) {
+    await page.evaluate(() => scroll.scrollTo(600, { duration: 0, disableLerp: true }));
+    await page.waitForTimeout(800);
+  }
   await page.evaluate(() => document.activeElement && document.activeElement.blur && document.activeElement.blur());
   for (let i = 0; i < 60; i++) {
     await page.keyboard.press('Tab');
@@ -201,9 +211,9 @@ async function load(ctx, url) {
       check('K3b', S, 'closed menu is inert', st.menuInert === true, st);
       // visibility is measured once the toggle's reveal transition has run —
       // tabStops() samples 40 ms after each Tab, mid-animation
-      let tog = stops.find(s => s.isToggle);
-      if (tog && await focusToggle(p)) { await p.waitForTimeout(900); tog = await p.evaluate(describe); }
-      check('K4', S, 'menu toggle is in the Tab order and visible when focused', !!tog && tog.isToggle && tog.visible, tog || 'not reached in 45 stops');
+      let tog;
+      if (await focusToggle(p)) { await p.waitForTimeout(900); tog = await p.evaluate(describe); }
+      check('K4', S, 'menu toggle is reachable and visible after desktop navbar leaves', !!tog && tog.isToggle && tog.visible, tog || 'not reached in 60 stops');
       const navLink = stops.find(s => s.href && !s.inMenu && !s.isSkip && !s.isToggle && (s.cls || '').includes('btn-click'));
       check('K12', S, 'navigation link shows a focus ring', !!navLink && !!navLink.outline, navLink || 'no nav link reached');
       if (navLink) {
@@ -309,7 +319,7 @@ async function load(ctx, url) {
         try { await settled(p, dest); } catch (e) { perNav.push({ dest, error: 'did not settle' }); continue; }
         const s = await p.evaluate(state);
         const f = await p.evaluate(describe);
-        await p.evaluate(() => { const t = document.querySelector('[data-barba="container"]:last-of-type .btn-hamburger .btn-click'); t && t.focus(); });
+        if (!(await focusToggle(p))) throw new Error('menu toggle not reachable after navigation and scroll');
         await p.keyboard.press('Enter'); await p.waitForTimeout(800);
         const once = await p.evaluate(state);
         await p.keyboard.press('Escape'); await p.waitForTimeout(800);

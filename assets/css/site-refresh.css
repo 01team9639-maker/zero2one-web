@@ -2,6 +2,11 @@
    Scoped so the separately built blog and contact form keep their own layouts. */
 :root { --z2o-action-arrow:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 17 17 7M9 7h8v8' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
 :root { --rf-orange:#f9460e; }
+/* Desktop: the full bar is the navigation while it is on screen. Hidden
+   also removes the redundant toggle from Tab; mobile keeps its only menu. */
+@media (min-width:1025px) {
+ main:not(.scrolled):not(.nav-active) .btn-hamburger { visibility:hidden; pointer-events:none; }
+}
 .rf-home-page .rf-existing-faq { position:relative; background:#f9460e; color:#fffded; padding-top:clamp(120px,12vw,180px); }
 .rf-home-page .rf-existing-faq :is(h2,h3,.rf-answer p,.faq-eyebrow,.faq-label) { color:#fffded; }
 .rf-home-page .rf-existing-faq .rf-faq-item { border-color:#fffded80; }

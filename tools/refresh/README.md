@@ -33,6 +33,11 @@ hidden to avoid a duplicate icon. Footer icon colors follow their label states.
 Blog output files, forms, account settings and deployment remain untouched.
 
 Latest owner review: sidebar Services is a direct link; desktop keeps its dropdown.
+Desktop hamburger review: the floating toggle is hidden (including from Tab)
+while the full navbar is visible, shown after its bottom leaves the viewport,
+and remains available while the sidebar is open. At 1024px and below it remains
+visible because the desktop links are hidden. Scroll state is read explicitly
+from the current Barba container and reset on refresh/return to top. Local-only.
 Language is last on both navigation surfaces. Homepage FAQ is orange with the
 original beige-over-orange wave, cream questions and a beige consultation card.
 Homepage blog is brand beige. Owner originals in Downloads/111 remain untouched;
