@@ -13,6 +13,20 @@
 html[lang="ar"] .btn .arrow { transform:scaleX(-1)!important; }
 html[lang="ar"] :is(.rf-button::after,.faq-cta-button::after,.btn .arrow,.services-cta-arrow,.next-case-cta-arrow,.rf-blog-card>span,.rf-all-services::after,.btn-normal .btn-text:not(:has(svg,.arrow))::after,.btn-round .btn-text:not(:has(svg,.arrow))::after) { transform:scaleX(-1); }
 .btn-normal .btn-text,.btn-round .btn-text { gap:10px; }
+/* Action masks use currentColor: the parent must follow the label state too. */
+.services-cta .btn-text { color:#fffded; transition:color .35s ease; }
+.services-cta .btn-click:hover .btn-text,.services-cta .btn-click:focus-visible .btn-text,
+.services-cta .btn-click:focus-visible .btn-text-inner { color:#f9460e; }
+.services-cta .btn-click:focus-visible .btn-fill { background:#fffded; }
+.about-us-cta .btn-text { color:var(--color-dark); transition:color .35s ease; }
+.about-us-cta .btn-click:hover .btn-text,.about-us-cta .btn-click:focus-visible .btn-text,
+.about-us-cta .btn-click:hover .btn-text-inner,.about-us-cta .btn-click:focus-visible .btn-text-inner { color:#fffded; }
+.selected-work-cta .btn-click { background:#f9460e; box-shadow:inset 0 0 0 1px #f9460e; }
+.selected-work-cta .btn-text,.selected-work-cta .btn-text-inner { color:#fffded; transition:color .35s ease; }
+.selected-work-cta .btn-fill { background:#fffded; }
+.selected-work-cta .btn-click:hover .btn-text,.selected-work-cta .btn-click:hover .btn-text-inner,
+.selected-work-cta .btn-click:focus-visible .btn-text,.selected-work-cta .btn-click:focus-visible .btn-text-inner { color:#f9460e; }
+.selected-work-cta .btn-click:focus-visible { background:#fffded; }
 /* Shared slide-fill hover, including actions outside the original template. */
 .rf-button,.faq-cta-button { position:relative; isolation:isolate; overflow:hidden; }
 .rf-button::before,.faq-cta-button::before { content:''; position:absolute; inset:-1px; border-radius:inherit; background:#191b16; transform:translateY(105%); transition:transform .45s cubic-bezier(.36,0,.66,1); z-index:-1; }

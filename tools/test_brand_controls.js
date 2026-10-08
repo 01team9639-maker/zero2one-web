@@ -13,7 +13,16 @@ async function run(){
    const prefix=lang==='ar'?'/ar':'';
    async function go(route){await p.goto(origin+prefix+route);await p.waitForFunction(()=>document.querySelector('.loading-screen').getBoundingClientRect().bottom<=1);await p.waitForTimeout(800);}
    async function scrollTo(s){await p.evaluate(s=>scroll.scrollTo(document.querySelector(s),{duration:0,disableLerp:true,offset:-140}),s);await p.waitForTimeout(800);}
-   await go('/');await scrollTo('#clients');
+   await go('/');
+   if(!mobile)for(const cls of ['services-cta','about-us-cta','selected-work-cta']){
+    await p.mouse.move(0,0);await scrollTo('.'+cls);
+    const a=p.locator('.'+cls+' .btn-click');
+    async function colors(){return a.evaluate(e=>{const t=e.querySelector('.btn-text'),s=e.querySelector('.services-cta-arrow');return {text:getComputedStyle(e.querySelector('.btn-text-inner')).color,arrow:s?getComputedStyle(s).backgroundColor:getComputedStyle(t,'::after').backgroundColor};});}
+    const initial=await colors();assert.equal(initial.text,initial.arrow,cls+' resting arrow matches text');
+    await a.hover();await p.waitForTimeout(700);const hover=await colors();
+    assert.equal(hover.text,hover.arrow,cls+' hovered arrow matches text');assert.notEqual(hover.arrow,initial.arrow,cls+' arrow changes on hover');
+   }
+   await scrollTo('#clients');
    const wave=await p.locator('.rf-clients-wave').evaluate(e=>({border:getComputedStyle(e.parentNode).borderTopWidth,top:e.getBoundingClientRect().top,section:e.parentNode.getBoundingClientRect().top,width:e.getBoundingClientRect().width,screen:innerWidth}));
    assert.equal(wave.border,'0px');assert.ok(wave.top<wave.section);assert.ok(wave.width>wave.screen);
    const image=await p.screenshot({path:path.join(ROOT,'tools/reports/site-refresh',`wave-fixed-${lang}-${mobile}.png`)});
