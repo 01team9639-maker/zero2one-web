@@ -21,6 +21,17 @@ directional slider/navigation controls. FAQ plus markers are replaced by statefu
 chevrons in the editorial, original SEO and older accordion components. No copy,
 destinations, form handler or analytics configuration is changed.
 
+Fourth homepage/navigation review: work uses orange with cream content and a
+seam-free wave. Homepage blog cards are copied verbatim from the local blog index
+(three Arabic cards; one available English card). FAQ consultation uses the
+original magnetic/fill button; All FAQs is linked from both navigation surfaces.
+Contact navigation resolves to the existing language-specific form page. Shared
+navigation uses a chevron disclosure with reduced-motion-aware open animation.
+RTL action arrows are mirrored with explicit pseudo-element selectors; existing
+author-supplied arrow glyph in the work label remains in text but is visually
+hidden to avoid a duplicate icon. Footer icon colors follow their label states.
+Blog output files, forms, account settings and deployment remain untouched.
+
 This is an **unpublished** local implementation. Nothing here authorizes a push,
 merge, deployment, workflow dispatch, GTM publication, or account change.
 

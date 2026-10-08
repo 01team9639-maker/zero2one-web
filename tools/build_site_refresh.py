@@ -333,6 +333,10 @@ def original_home_layout(body,lang,ps):
         src='/assets/images/'+src+('.webp' if '.' not in src else '')
         slides.append('<li class="selected-work-slide"><a class="selected-work-card" href="'+local('/work/'+slug+'/',lang)+'"><span class="selected-work-card-media selected-work-fit-contain">'+f'<img src="{src}" width="{c["w"]}" height="{c["h"]}" loading="lazy" decoding="async" alt=""></span><span class="selected-work-card-body">'+p(wc+j*2,'span','selected-work-card-title')+p(wc+j*2+1,'span','selected-work-card-description')+'</span></a></li>')
     work_html=re.sub(r'<ul class="slider-track" data-slider-track>[\s\S]*?</ul>',lambda _:'<ul class="slider-track" data-slider-track>'+''.join(slides)+'</ul>',work_html,count=1)
+    # Existing left-arrow glyph is authoring decoration, not a second icon.
+    work_html=work_html.replace('شاهد أعمالنا ←','شاهد أعمالنا <span class="rf-copy-arrow" aria-hidden="true">←</span>')
+    work_wave='<div class="rf-work-wave" aria-hidden="true"><svg viewBox="0 0 1440 243.604" preserveAspectRatio="none"><path fill="#fffded" d="M0 0H1440V28.6036C1264.45 46.0335 1058.46 150.417 687.43 46.3562C317.5 -57.3952 153.84 43.218 0 58.6036Z" /></svg></div>'
+    work_html=work_html.replace('<div class="container">',work_wave+'<div class="container">',1)
     replace_section(r'<section class="rf-section[^>]*rf-work"',work_html)
     # Homepage-only owner refinements; retain every approved label and destination.
     def original_button(m):
@@ -418,12 +422,12 @@ def home_body(lang,restore=True):
     body+=LEGACY[lang]['testimonials']
     body+=home_faq(lang)
     body+='<section class="rf-faq-more" data-scroll-section>'+a(92 if ar else 81)+'</section>'
-    # Only the actual published local article is linked; no invented blog cards.
-    blogfile=ROOT/('blog/ar/how-to-choose-web-development-company/index.html' if ar else 'blog/how-to-choose-web-development-company/index.html')
+    # Reuse three real blog-index cards, including their exact copy and images.
+    blogfile=ROOT/('blog/ar/index.html' if ar else 'blog/index.html')
     blogcard=''
     if blogfile.exists():
-        bloghtml=blogfile.read_text(); title=re.search(r'<h1[^>]*>([\s\S]*?)</h1>',bloghtml)
-        if title: blogcard=f'<a class="rf-blog-card" href="{local("/blog/how-to-choose-web-development-company/",lang).replace("/ar/blog/","/blog/ar/")}" data-barba-prevent><span aria-hidden="true">↗</span><h3>{title.group(1)}</h3></a>'
+        cards=re.findall(r'<li class=card>[\s\S]*?</li>',blogfile.read_text())[:3]
+        blogcard='<ul class="rf-home-blog-cards">'+''.join(cards)+'</ul>'
     body+=section(p(94 if ar else 82,'h2'),p(95 if ar else 83)+blogcard+a(96 if ar else 84, '/blog/ar/' if ar else '/blog/'),8,'blog')
     body+=section(p(98 if ar else 85,'h2'),p(99 if ar else 86)+a(100 if ar else 87),9,'closing')
     for q in ps:
@@ -578,12 +582,36 @@ def decorate_existing(page, route, lang):
     return page
 
 
+def polish_chrome(page,lang):
+    faq_label='كل الأسئلة الشائعة' if lang=='ar' else 'All FAQs'
+    def navlist(m):
+        block=m[0]
+        label='خدماتنا' if lang=='ar' else 'Our Services'
+        pattern=r'<li class="btn btn-link">\s*<a href="'+re.escape(local('/services/',lang))+r'"[\s\S]*?</a>\s*</li>'
+        block=re.sub(pattern,lambda _:'<li class="rf-nav-services"><details><summary>'+label+'</summary>'+menu(lang)+'</details></li>',block)
+        def contact(a):
+            if re.search(r'تواصل معنا|Contact',a[0],re.I):
+                return re.sub(r'href="[^"]*"','href="'+local('/contact/',lang)+'"',a[0],count=1).replace(' target="_blank"','')
+            return a[0]
+        block=re.sub(r'<a\b[^>]*>[\s\S]*?</a>',contact,block)
+        if local('/faqs/',lang) not in block:
+            link='<li class="btn btn-link rf-nav-faq"><a href="'+local('/faqs/',lang)+'" class="btn-click magnetic" data-strength="20" data-strength-text="10"><span class="btn-text"><span class="btn-text-inner">'+faq_label+'</span></span></a></li>'
+            block=block.replace('</ul>',link+'</ul>')
+        return block
+    page=re.sub(r'<ul class="links-wrap">[\s\S]*?</ul>',navlist,page)
+    def faqcta(m):
+        if 'btn-text' in m[0]: return m[0]
+        return m[0].replace('class="faq-cta-button"','class="faq-cta-button btn-click magnetic" data-strength="20" data-strength-text="10"').replace('>'+m[1]+'</a>','><div class="btn-fill"></div><span class="btn-text"><span class="btn-text-inner">'+m[1]+'</span></span></a>')
+    page=re.sub(r'<a[^>]*class="faq-cta-button"[^>]*>([^<]+)</a>',faqcta,page)
+    return page
+
+
 def build(check=False):
     changed=[]
     for route in ROUTES:
         for lang in ('en','ar'):
             p=ROOT/(local(route,lang).strip('/')+'/index.html' if route!='/' or lang=='ar' else 'index.html')
-            result=render_page(route,lang)
+            result=polish_chrome(render_page(route,lang),lang)
             # Reuse content hashes from existing build stamps; build.sh restamps later.
             # stamp_assets' CLI owns stamping; avoid assumptions about its function API.
             if not p.exists() or p.read_text()!=result:
@@ -593,10 +621,18 @@ def build(check=False):
     for route in ('/about/','/services/seo-riyadh/'):
         for lang in ('en','ar'):
             p=ROOT/(local(route,lang).strip('/')+'/index.html')
-            cur=p.read_text(); new=decorate_existing(cur,route,lang)
+            cur=p.read_text(); new=polish_chrome(decorate_existing(cur,route,lang),lang)
             if new!=cur:
                 changed.append(str(p.relative_to(ROOT)))
                 if not check: p.write_text(new)
+    # Existing case/contact pages share navigation but are not reauthored here.
+    for p in ROOT.rglob('index.html'):
+        rel=p.relative_to(ROOT)
+        if rel.parts[0] in ('blog','node_modules','.git','tools'): continue
+        cur=p.read_text(); new=polish_chrome(cur,'ar' if rel.parts[0]=='ar' else 'en')
+        if new!=cur:
+            changed.append(str(rel))
+            if not check: p.write_text(new)
     return changed
 
 
