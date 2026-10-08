@@ -480,6 +480,11 @@
    "ar": "شاهد أعمالنا"
   },
   {
+   "id": "clients.h2",
+   "en": "Our Clients in Success",
+   "ar": "عملائنا في النجاح"
+  },
+  {
    "id": "alt.visibility.1",
    "en": "Illustration of a Google search results page",
    "ar": "رسم توضيحي لصفحة نتائج بحث جوجل",
@@ -496,9 +501,109 @@
    "en": "Illustration of a ChatGPT conversation",
    "ar": "رسم توضيحي لمحادثة في ChatGPT",
    "proposed": true
+  },
+  {
+   "id": "alt.client.saudi-ceramics",
+   "en": "Saudi Ceramics",
+   "ar": "الخزف السعودي",
+   "proposed": true
+  },
+  {
+   "id": "alt.client.riyadh-contracting",
+   "en": "Riyadh Contracting",
+   "ar": "مقاولات الرياض",
+   "proposed": true
+  },
+  {
+   "id": "alt.client.isuzu",
+   "en": "Isuzu",
+   "ar": "Isuzu",
+   "proposed": true
+  },
+  {
+   "id": "alt.client.excellency-law-firm",
+   "en": "Excellency Law Firm",
+   "ar": "المعالي للمحاماة والاستشارات القانونية",
+   "proposed": true
+  },
+  {
+   "id": "alt.client.zain",
+   "en": "Zain",
+   "ar": "زين",
+   "proposed": true
+  },
+  {
+   "id": "alt.client.panda",
+   "en": "Panda",
+   "ar": "Panda",
+   "proposed": true
+  },
+  {
+   "id": "alt.client.saudi-binladin-group",
+   "en": "Saudi Binladin Group",
+   "ar": "مجموعة بن لادن السعودية",
+   "proposed": true
+  },
+  {
+   "id": "alt.client.saudi-oger",
+   "en": "Saudi Oger Ltd.",
+   "ar": "شركة سعودي أوجيه المحدودة",
+   "proposed": true
+  },
+  {
+   "id": "alt.client.barbarees",
+   "en": "Barbarees",
+   "ar": "Barbarees",
+   "proposed": true
+  },
+  {
+   "id": "alt.client.othaim",
+   "en": "Othaim",
+   "ar": "العثيم",
+   "proposed": true
+  },
+  {
+   "id": "alt.client.saudi-electricity-company",
+   "en": "Saudi Electricity Company",
+   "ar": "الشركة السعودية للكهرباء",
+   "proposed": true
+  },
+  {
+   "id": "alt.client.king-fahad-national-library",
+   "en": "King Fahad National Library",
+   "ar": "مكتبة الملك فهد الوطنية",
+   "proposed": true
+  },
+  {
+   "id": "alt.client.makan-mem",
+   "en": "Makan Mem General Est.",
+   "ar": "مكان ميم للمقاولات العامة",
+   "proposed": true
+  },
+  {
+   "id": "alt.client.dr-sulaiman-al-habib",
+   "en": "Dr Sulaiman Al Habib Medical Group",
+   "ar": "د. سليمان الحبيب المجموعة الطبية",
+   "proposed": true
+  },
+  {
+   "id": "ui.marquee.pause",
+   "en": "Pause logo movement",
+   "ar": "إيقاف حركة الشعارات",
+   "proposed": true
+  },
+  {
+   "id": "ui.marquee.play",
+   "en": "Play logo movement",
+   "ar": "تشغيل حركة الشعارات",
+   "proposed": true
   }
  ],
  "html_replacements": [
+  [
+   "data-move=\"rightward\"",
+   "data-move=\"leftward\""
+  ],
   [
    "seo-visibility-google-en",
    "seo-visibility-google-ar"
@@ -528,12 +633,6 @@
    "reason": "heading supplied, no team content supplied — section not rendered",
    "en": "Meet Our SEO Specialists",
    "ar": "تعرف على فريق متخصصين السيو"
-  },
-  {
-   "id": "clients.h2",
-   "reason": "heading supplied, client logos not supplied — section not rendered",
-   "en": "Our Clients in Success",
-   "ar": "عملائنا في النجاح"
   }
  ]
 }

@@ -9846,3 +9846,202 @@ html[lang="ar"] .seo-service-page .seo-sec-title {
       grid-template-columns: minmax(0, 1fr);
    }
 }
+
+
+/* ══════════════════════════════════════════════════════════════════
+   شريط شعارات العملاء — «عملائنا في النجاح» (صفحة السيو، 2026-10-07)
+   ══════════════════════════════════════════════════════════════════
+   كل المحدِّدات تبدأ بـ.logo-marquee (صنف خاص بالمكوّن) فلا يتسرّب شيء لغيره.
+
+   ← الإعدادات في مكانين:
+       الحجم والمسافة ...... المتغيّرات --lm-* في .logo-marquee أدناه (وتصغير الجوال في @media)
+       السرعة والاتجاه .... خاصيتا data-speed (بكسل/ثانية) وdata-move على <div data-logo-marquee> في HTML الصفحة:
+                            rightward = تتحرّك يسارًا إلى اليمين (الإنجليزية) · leftward = يمينًا إلى اليسار (العربية)
+                            (build_ar يبدّل القيمة للعربية؛ والاتجاه صريح لا يتبع dir الصفحة)
+
+   الوضع الافتراضي (بلا JavaScript أو مع prefers-reduced-motion): شبكة ثابتة ملتفّة تعرض الشعارات الأربعة عشر كلها،
+   والمجموعتان المنسوختان مخفيّتان. السكربت (initLogoMarquees) يضع data-marquee-ready فيتحوّل إلى شريط متحرّك.
+
+   الحلقة بلا فجوة: المجموعة الواحدة عرضها = 14 × (عرض البطاقة + المسافة) لأن المسافة هامش كل بطاقة (لا gap بين
+   البطاقات) فيدخل الفاصل عند الدرزة في العرض. السكربت يقيس العرض الفعلي ويكتبه في --lm-distance، والمدّة =
+   المسافة ÷ السرعة (فالسرعة المحسوسة ثابتة في كل المقاسات). الحركة transform فقط، خطّية، بلا easing. */
+.logo-marquee {
+   --lm-card-w: 200px;
+   --lm-card-h: 124px;
+   --lm-gap: 24px;
+   --lm-pad: 14px;
+   --lm-radius: 20px;
+   --lm-distance: 3136px;      /* يكتبها السكربت بعد القياس */
+   --lm-duration: 105s;        /* يكتبها السكربت: المسافة ÷ data-speed */
+   margin-block-start: clamp(1.25rem, 2.6vw, 2.25rem);
+}
+
+.logo-marquee-viewport {
+   width: min(94vw, 100rem);
+   margin-inline: auto;
+}
+
+.logo-marquee-track {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.logo-marquee-group {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+
+/* المجموعتان 2 و3 نسختان بصريتان للحلقة: لا حاجة لهما في الوضع الثابت */
+.logo-marquee-group[aria-hidden="true"] { display: none; }
+
+.logo-marquee-item {
+   flex: none;
+   display: grid;
+   place-items: center;
+   width: var(--lm-card-w);
+   height: var(--lm-card-h);
+   margin-inline-end: var(--lm-gap);
+   margin-block-end: var(--lm-gap);
+   padding: var(--lm-pad);
+   overflow: hidden;
+   border-radius: var(--lm-radius);
+   background: #fff;
+   box-shadow: inset 0 0 0 1px var(--color-border), 0 6px 18px rgb(34 39 36 / 6%);
+}
+
+/* الشعار كما هو: contain بنسبته الأصلية 2:1، بألوانه، بلا مرشّحات ولا قصّ ولا تمطيط.
+   --k عامل الحجم البصري لكل شعار (1 افتراضيًّا) لأن هوامش الشعارات الداخلية ليست متساوية. */
+.logo-marquee-item img {
+   display: block;
+   width: calc(100% * var(--k, 1));
+   max-width: none;
+   height: auto;
+   aspect-ratio: 2 / 1;
+   object-fit: contain;
+}
+
+.logo-marquee-controls { display: none; }
+
+/* ── وضع الشريط المتحرّك (يفعّله السكربت) ── */
+.logo-marquee[data-marquee-ready] .logo-marquee-viewport {
+   width: 100%;
+   overflow: hidden;
+   direction: ltr;                           /* صريح: الحركة فيزيائية ولا يقلبها اتجاه الصفحة */
+   padding-block: 10px;                       /* مكان الظلّ كي لا يُقصّ */
+}
+
+.logo-marquee[data-marquee-ready] .logo-marquee-track {
+   width: max-content;
+   flex-wrap: nowrap;
+   justify-content: flex-start;
+   animation: lm-move-left var(--lm-duration) linear infinite;
+   will-change: transform;
+}
+
+.logo-marquee[data-marquee-ready][data-move="rightward"] .logo-marquee-track { animation-name: lm-move-right; }
+
+.logo-marquee[data-marquee-ready] .logo-marquee-group,
+.logo-marquee[data-marquee-ready] .logo-marquee-group[aria-hidden="true"] {
+   display: flex;
+   flex: none;
+   flex-wrap: nowrap;
+}
+
+.logo-marquee[data-marquee-ready] .logo-marquee-item { margin-block-end: 0; }
+
+.logo-marquee[data-marquee-ready] .logo-marquee-track.is-paused { animation-play-state: paused; }
+
+@keyframes lm-move-left {
+   from { transform: translate3d(0, 0, 0); }
+   to { transform: translate3d(calc(-1 * var(--lm-distance)), 0, 0); }
+}
+
+@keyframes lm-move-right {
+   from { transform: translate3d(calc(-1 * var(--lm-distance)), 0, 0); }
+   to { transform: translate3d(0, 0, 0); }
+}
+
+/* ── زرّ الإيقاف/التشغيل: يظهر مع الشريط المتحرّك فقط ── */
+.logo-marquee[data-marquee-ready] .logo-marquee-controls {
+   display: flex;
+   justify-content: flex-end;
+   width: min(94vw, 100rem);
+   margin: 14px auto 0;
+}
+
+.logo-marquee-toggle {
+   position: relative;
+   display: grid;
+   place-items: center;
+   width: 44px;
+   height: 44px;
+   padding: 0;
+   border: 0;
+   border-radius: 50%;
+   background: #fff;
+   box-shadow: inset 0 0 0 1px var(--color-border);
+   color: #222724;
+   cursor: pointer;
+   transition: background-color .2s ease, color .2s ease;
+}
+
+.logo-marquee-toggle:hover { background: #f9460e; color: #fff; }
+
+.logo-marquee-toggle:focus-visible {
+   outline: 3px solid #f9460e;
+   outline-offset: 3px;
+}
+
+/* الأيقونة: خطّان (إيقاف) أو مثلّث (تشغيل) — مرسومة بـCSS، والاسم في النصّ المخفي بصريًّا */
+.logo-marquee-icon {
+   display: block;
+   width: 14px;
+   height: 16px;
+   border-inline: 4px solid currentColor;
+   box-sizing: border-box;
+}
+
+.logo-marquee[data-manual="paused"] .logo-marquee-icon {
+   width: 0;
+   height: 0;
+   border-inline: 0;
+   border-block: 8px solid transparent;
+   border-left: 13px solid currentColor;
+   margin-left: 3px;
+}
+
+.logo-marquee-label {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   overflow: hidden;
+   clip-path: inset(50%);
+   white-space: nowrap;
+}
+
+/* الشاشات الصغيرة: بطاقات أصغر ومسافة أقلّ (والسكربت يعيد القياس وحده) */
+@media screen and (max-width: 700px) {
+   .logo-marquee {
+      --lm-card-w: 150px;
+      --lm-card-h: 96px;
+      --lm-gap: 16px;
+      --lm-pad: 10px;
+      --lm-radius: 16px;
+   }
+}
+
+/* حماية إضافية: مع طلب تقليل الحركة لا حركة ولا زرّ ولا نسخ، حتى لو وُجد data-marquee-ready */
+@media (prefers-reduced-motion: reduce) {
+   .logo-marquee[data-marquee-ready] .logo-marquee-viewport { width: min(94vw, 100rem); overflow: visible; padding-block: 0; }
+   .logo-marquee[data-marquee-ready] .logo-marquee-track { animation: none; width: auto; flex-wrap: wrap; justify-content: center; }
+   .logo-marquee[data-marquee-ready] .logo-marquee-group { flex-wrap: wrap; justify-content: center; }
+   .logo-marquee[data-marquee-ready] .logo-marquee-group[aria-hidden="true"],
+   .logo-marquee[data-marquee-ready] .logo-marquee-controls { display: none; }
+   .logo-marquee[data-marquee-ready] .logo-marquee-item { margin-block-end: var(--lm-gap); }
+}

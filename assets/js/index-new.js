@@ -691,6 +691,7 @@ function initScript() {
   initContactForm();
   initLeadTracking();
   initDetailsScrollSync();
+  initLogoMarquees();
   initTimeZone();
   initPlayVideoInview();
   initScrolltriggerAnimations();
@@ -1711,6 +1712,138 @@ function initDetailsScrollSync() {
       if (scroll && typeof scroll.update === 'function') scroll.update();
     });
   }, true);
+}
+
+/**
+* Client-logo marquee ("Our Clients in Success", SEO page).
+*
+* The movement itself is a CSS transform animation (assets/css/style-new.css,
+* .logo-marquee*): no requestAnimationFrame loop, no library. Without this
+* function — scripts off, or prefers-reduced-motion — the logos are a static
+* wrapping grid and every one is visible. This function only:
+*   - switches the grid to the moving layout (data-marquee-ready) unless motion
+*     is reduced, and measures one group's width -> --lm-distance, and the
+*     duration = distance / data-speed so the perceived speed is constant at
+*     every size (re-measured by one ResizeObserver);
+*   - decides whether it runs. Running needs: images loaded, section on screen,
+*     document visible, no explicit pause, and no hover / focus-within hold.
+*     The explicit Pause/Play choice always wins over the implicit holds. An
+*     explicit Play is only stronger than the hold(s) active at that moment
+*     (the pointer or focus is still on the button) and only until that hold
+*     ends: a later hover or focus holds the strip again.
+* initScript() re-runs after every barba transition, so everything registered
+* here (two IntersectionObservers, one ResizeObserver, the media-query and
+* visibilitychange listeners) is undone by the next call; the element listeners
+* die with the old container.
+*/
+var logoMarqueeTeardown = null;
+function initLogoMarquees() {
+  if (logoMarqueeTeardown) { logoMarqueeTeardown(); logoMarqueeTeardown = null; }
+  var containers = document.querySelectorAll('[data-barba="container"]');
+  var root = containers[containers.length - 1] || document;
+  var el = root.querySelector('[data-logo-marquee]');
+  if (!el) return;
+  var track = el.querySelector('.logo-marquee-track');
+  var group = el.querySelector('.logo-marquee-group');
+  var btn = el.querySelector('.logo-marquee-toggle');
+  if (!track || !group || !btn) return;
+  var labelPause = btn.querySelector('.logo-marquee-label-pause');
+  var labelPlay = btn.querySelector('.logo-marquee-label-play');
+  var speed = parseFloat(el.getAttribute('data-speed')) || 30;
+  var alive = true, live = false, lastDistance = 0;
+  var s = { manual: false, hover: false, focus: false, ignoreHover: false, ignoreFocus: false, loaded: false, inView: false, hidden: document.hidden };
+  var undo = [];
+  function on(t, ev, fn, opts) { t.addEventListener(ev, fn, opts); undo.push(function () { t.removeEventListener(ev, fn, opts); }); }
+
+  function apply() {
+    var held = (s.hover && !s.ignoreHover) || (s.focus && !s.ignoreFocus);
+    var run = live && s.loaded && s.inView && !s.hidden && !s.manual && !held;
+    track.classList.toggle('is-paused', !run);
+    el.setAttribute('data-running', run ? 'true' : 'false');
+    el.setAttribute('data-manual', s.manual ? 'paused' : 'playing');
+    if (labelPause) labelPause.hidden = s.manual;
+    if (labelPlay) labelPlay.hidden = !s.manual;
+  }
+
+  function measure() {
+    var d = Math.round(group.getBoundingClientRect().width * 2) / 2;
+    if (!d || d === lastDistance) return;
+    lastDistance = d;
+    el.style.setProperty('--lm-distance', d + 'px');
+    el.style.setProperty('--lm-duration', (d / speed) + 's');
+  }
+
+  function refreshScroll() {   // the section changed height (grid <-> single row)
+    if (typeof scroll !== 'undefined' && scroll && typeof scroll.update === 'function') scroll.update();
+  }
+
+  var ro = null;
+  function enable() {
+    if (live) return;
+    live = true;
+    track.classList.add('is-paused');            // never runs before apply() allows it
+    el.setAttribute('data-marquee-ready', '');
+    btn.hidden = false;
+    measure();
+    if (typeof ResizeObserver === 'function') { ro = new ResizeObserver(measure); ro.observe(group); }
+    apply();
+    refreshScroll();
+  }
+  function disable() {
+    if (!live) return;
+    live = false;
+    if (ro) { ro.disconnect(); ro = null; }
+    el.removeAttribute('data-marquee-ready');
+    btn.hidden = true;
+    lastDistance = 0;
+    apply();
+    refreshScroll();
+  }
+
+  // reduced motion: static grid; follows a change of the setting while the page is open
+  var mqReduce = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
+  function onMotionPref() { if (mqReduce && mqReduce.matches) disable(); else enable(); }
+  if (mqReduce) { on(mqReduce, 'change', onMotionPref); }
+
+  // explicit Pause / Play
+  on(btn, 'click', function () {
+    if (!s.manual) { s.manual = true; s.ignoreHover = false; s.ignoreFocus = false; }
+    else { s.manual = false; s.ignoreHover = s.hover; s.ignoreFocus = s.focus; }
+    apply();
+  });
+  // implicit holds: pointer (mouse only — a tap would never "leave") and focus inside the component
+  on(el, 'pointerenter', function (e) { if (e.pointerType === 'mouse') { s.hover = true; apply(); } });
+  on(el, 'pointerleave', function (e) { if (e.pointerType === 'mouse') { s.hover = false; s.ignoreHover = false; apply(); } });
+  on(el, 'focusin', function () { s.focus = true; apply(); });
+  on(el, 'focusout', function (e) { if (!el.contains(e.relatedTarget)) { s.focus = false; s.ignoreFocus = false; apply(); } });
+  on(document, 'visibilitychange', function () { s.hidden = document.hidden; apply(); });
+
+  // on screen? and: make sure the logos are loaded before they can move into view
+  var ioView = null, ioNear = null;
+  if (typeof IntersectionObserver === 'function') {
+    ioView = new IntersectionObserver(function (entries) { s.inView = entries[entries.length - 1].isIntersecting; apply(); });
+    ioView.observe(el);
+    ioNear = new IntersectionObserver(function (entries) {
+      if (!entries.some(function (en) { return en.isIntersecting; })) return;
+      ioNear.disconnect(); ioNear = null;
+      var imgs = [].slice.call(el.querySelectorAll('img'));
+      imgs.forEach(function (im) { im.loading = 'eager'; });
+      var ready = Promise.all(imgs.map(function (im) { return im.decode ? im.decode().catch(function () {}) : Promise.resolve(); }));
+      var timeout = new Promise(function (r) { setTimeout(r, 5000); });
+      Promise.race([ready, timeout]).then(function () { if (alive) { s.loaded = true; apply(); } });
+    }, { rootMargin: '800px 0px' });
+    ioNear.observe(el);
+  } else { s.inView = true; s.loaded = true; }
+
+  onMotionPref();
+
+  logoMarqueeTeardown = function () {
+    alive = false;
+    undo.forEach(function (f) { f(); });
+    if (ioView) ioView.disconnect();
+    if (ioNear) ioNear.disconnect();
+    if (ro) ro.disconnect();
+  };
 }
 
 /**
