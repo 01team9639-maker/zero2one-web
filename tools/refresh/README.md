@@ -14,6 +14,13 @@ is cream on orange, separated above by the original wave path. The visible pause
 button is removed on the homepage only; the focusable marquee supports Space to
 pause/resume, hover/focus holds, and a static reduced-motion layout.
 
+Third owner review: remove the clients section's top border and overlap the wave
+by one pixel to prevent seams. Shared CSS uses the exact service-card arrow path
+for action icons and slide-fill hover on editorial/FAQ actions, while retaining
+directional slider/navigation controls. FAQ plus markers are replaced by stateful
+chevrons in the editorial, original SEO and older accordion components. No copy,
+destinations, form handler or analytics configuration is changed.
+
 This is an **unpublished** local implementation. Nothing here authorizes a push,
 merge, deployment, workflow dispatch, GTM publication, or account change.
 

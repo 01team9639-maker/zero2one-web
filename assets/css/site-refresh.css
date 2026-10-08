@@ -1,5 +1,36 @@
 /* 2026-10-07: a shared editorial system. All copy remains in the source docs.
    Scoped so the separately built blog and contact form keep their own layouts. */
+:root { --z2o-action-arrow:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 17 17 7M9 7h8v8' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+/* One action-arrow icon; directional controls keep their own meaningful icons. */
+.rf-button::after,.faq-cta-button::after,.btn .arrow,.services-cta-arrow,.next-case-cta-arrow,.rf-blog-card>span,.rf-all-services::after,
+.btn-normal .btn-text:not(:has(svg,.arrow))::after,.btn-round .btn-text:not(:has(svg,.arrow))::after {
+ content:''; display:inline-block; width:25px; height:25px; flex-shrink:0; background:currentColor;
+ -webkit-mask:var(--z2o-action-arrow) center/contain no-repeat; mask:var(--z2o-action-arrow) center/contain no-repeat;
+ transform:none; position:relative; z-index:2;
+}
+.btn .arrow svg,.services-cta-arrow path,.next-case-cta-arrow path { display:none; }
+.btn .arrow { transform:none!important; }
+html[lang="ar"] .btn .arrow { transform:scaleX(-1)!important; }
+html[lang="ar"] :is(.rf-button::after,.faq-cta-button::after,.btn .arrow,.services-cta-arrow,.next-case-cta-arrow,.rf-blog-card>span,.rf-all-services::after,.btn-normal .btn-text:not(:has(svg,.arrow))::after,.btn-round .btn-text:not(:has(svg,.arrow))::after) { transform:scaleX(-1); }
+.btn-normal .btn-text,.btn-round .btn-text { gap:10px; }
+/* Shared slide-fill hover, including actions outside the original template. */
+.rf-button,.faq-cta-button { position:relative; isolation:isolate; overflow:hidden; }
+.rf-button::before,.faq-cta-button::before { content:''; position:absolute; inset:-1px; border-radius:inherit; background:#191b16; transform:translateY(105%); transition:transform .45s cubic-bezier(.36,0,.66,1); z-index:-1; }
+.rf-button:hover::before,.rf-button:focus-visible::before,.faq-cta-button:hover::before,.faq-cta-button:focus-visible::before { transform:translateY(0); }
+.faq-cta-button { display:inline-flex; align-items:center; justify-content:center; gap:12px; }
+.faq-cta-button:hover,.faq-cta-button:focus-visible,.rf-button:focus-visible { color:#fffded!important; }
+.btn-click:focus-visible .btn-fill { transform:translate3d(0,0,0)!important; }
+.btn-click:focus-visible .btn-text-inner,.btn-click:focus-visible .service-card-arrow { color:#fffded; stroke:#fffded; }
+/* The older SEO FAQ uses CSS bars; replace those with the same stateful chevron. */
+.svc-faq-icon::before { width:9px!important; height:9px!important; border-right:1.8px solid currentColor; border-bottom:1.8px solid currentColor; border-radius:0!important; background:none!important; transform:translate(-50%,-65%) rotate(45deg)!important; }
+.svc-faq-icon::after { display:none!important; }
+.svc-faq-item[open] .svc-faq-icon { color:#fff; }
+.svc-faq-item[open] .svc-faq-icon::before { transform:translate(-50%,-35%) rotate(225deg)!important; }
+.faq .plus::before { width:9px; height:9px; border-right:1.8px solid currentColor; border-bottom:1.8px solid currentColor; background:none; transform:translate(-50%,-65%) rotate(45deg); }
+.faq .plus::after { display:none; }
+.faq li.uk-open .plus::before { transform:translate(-50%,-35%) rotate(225deg); }
+.rf-service-content .rf-button:hover,.rf-service-content .rf-button:focus-visible { color:#fffded!important; }
+@media(prefers-reduced-motion:reduce) { .rf-button::before,.faq-cta-button::before { transition:none; } }
 .rf-page { --rf-ink:#24241f; --rf-muted:#64635b; --rf-paper:#fffdf3; --rf-sand:#f0ebdf; --rf-orange:#f9460e; color:var(--rf-ink); }
 .rf-about-page,.rf-seo-page { --rf-orange:#f9460e; --rf-paper:#fffdf3; --rf-sand:#f0ebdf; }
 .rf-page .case-top-wrap { background:var(--rf-paper); padding:0; }
@@ -33,9 +64,8 @@ html[lang="ar"] .rf-page p { line-height:1.95; }
 .rf-hero-copy h1 { margin-bottom:30px; }
 .rf-hero-copy p { max-width:58ch; }
 .rf-button { display:inline-flex; align-items:center; justify-content:center; gap:14px; min-height:54px; padding:14px 24px; background:var(--rf-orange); color:#fff!important; border:1px solid transparent; border-radius:100px; font-size:15px; font-weight:500; line-height:1.6; text-align:center; margin:10px 0; text-decoration:none; transition:background .22s,transform .22s; }
-.rf-button::after { content:'↗'; font-size:23px; line-height:1; }
-html[lang="ar"] .rf-button::after { content:'↖'; }
-.rf-button:hover { background:#ba3009; transform:translateY(-3px); }
+.rf-button::after { content:''; }
+.rf-button:hover { background:var(--rf-orange); }
 .rf-button { color:#191b16!important; }
 .rf-button .btn-text { color:inherit; }
 .rf-button:hover,.rf-button:hover .btn-text { color:#fff!important; }
@@ -109,8 +139,9 @@ html[lang="ar"] .rf-home-hero-top h1 { font-size:clamp(40px,6vw,88px); }
 .rf-faq-item summary { cursor:pointer; list-style:none; display:flex; gap:24px; justify-content:space-between; align-items:center; }
 .rf-faq-item summary::-webkit-details-marker { display:none; }
 .rf-faq-item summary h3 { font-size:23px; font-weight:500; margin:0; }
-.rf-faq-item summary span { width:34px; height:34px; display:grid; place-items:center; border:1px solid #c9c4b6; border-radius:50%; flex-shrink:0; transition:transform .25s; }
-.rf-faq-item[open] summary span { transform:rotate(45deg); }
+.rf-faq-item summary span { width:34px; height:34px; display:grid; place-items:center; border:1px solid #c9c4b6; border-radius:50%; flex-shrink:0; font-size:0; transition:transform .25s; }
+.rf-faq-item summary span::after { content:''; width:9px; height:9px; border-right:1.8px solid currentColor; border-bottom:1.8px solid currentColor; transform:translateY(-2px) rotate(45deg); }
+.rf-faq-item[open] summary span { transform:rotate(180deg); }
 .rf-answer { padding:24px 50px 0 0; }
 html[lang="ar"] .rf-answer { padding:24px 0 0 50px; }
 .rf-ink .rf-faq-item { border-color:#66695f; }
@@ -154,9 +185,9 @@ html[lang="ar"] .rf-answer { padding:24px 0 0 50px; }
 .rf-home-page .rf-difference { background:#fffded; }
 .rf-home-page .rf-difference .rf-actions { display:flex; flex-wrap:wrap; gap:14px; }
 .rf-home-page .rf-difference .service-card-btn { position:relative; inset:auto; margin:10px 0; max-width:100%; }
-.rf-home-page .rf-clients { position:relative; background:#f9460e; color:#fffded; --rf-muted:#fffded; }
-.rf-home-page .rf-clients-wave { position:absolute; top:0; left:0; width:100%; line-height:0; pointer-events:none; background:#fffded; }
-.rf-home-page .rf-clients-wave svg { display:block; width:100%; height:clamp(45px,7vw,110px); fill:#f9460e; }
+.rf-home-page .rf-clients { position:relative; border:0; background:#f9460e; color:#fffded; --rf-muted:#fffded; }
+.rf-home-page .rf-clients-wave { position:absolute; top:-1px; left:-1px; width:calc(100% + 2px); line-height:0; pointer-events:none; }
+.rf-home-page .rf-clients-wave svg { display:block; width:100%; height:calc(clamp(45px,7vw,110px) + 2px); fill:#f9460e; }
 .rf-home-page .rf-clients .rf-inner { width:100%; max-width:none; }
 .rf-home-page .rf-clients .rf-section-heading,.rf-home-page .rf-clients .rf-inner>p { margin-inline:auto; width:calc(100% - 64px); max-width:1280px; }
 .rf-home-page .rf-clients .logo-marquee { width:100%; max-width:none; }

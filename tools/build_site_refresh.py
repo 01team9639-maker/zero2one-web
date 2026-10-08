@@ -185,7 +185,7 @@ def render_block(heading, items, n, lang, slug):
         answers = []
         for q, a in cards:
             answers.append('<details class="rf-faq-item"><summary>'+textnode(q, 'h3')+
-                           '<span aria-hidden="true">+</span></summary><div class="rf-answer">'+
+                           '<span class="rf-faq-chevron" aria-hidden="true"></span></summary><div class="rf-answer">'+
                            ''.join(paragraph(p, lang) for p in a)+'</div></details>')
         return section(h, intro+'<div class="rf-faq-list">'+''.join(answers)+'</div>', n, 'faq', 'faq')
     if is_process(title):
@@ -258,7 +258,7 @@ def service_body(slug, lang):
 def home_faq(lang):
     src=LEGACY[lang]['faq']
     src=re.sub(r'<li class="faq-item">\s*<h3 class="faq-q">([\s\S]*?)</h3>\s*<p class="faq-a">([\s\S]*?)</p>\s*</li>',
-               r'<li><details class="rf-faq-item"><summary><h3>\1</h3><span aria-hidden="true">+</span></summary><div class="rf-answer"><p>\2</p></div></details></li>',src)
+               r'<li><details class="rf-faq-item"><summary><h3>\1</h3><span class="rf-faq-chevron" aria-hidden="true"></span></summary><div class="rf-answer"><p>\2</p></div></details></li>',src)
     return src.replace('section faq-section','section faq-section rf-existing-faq')
 
 
@@ -347,6 +347,13 @@ def original_home_layout(body,lang,ps):
         block=m[0]
         wave='<div class="rf-clients-wave" aria-hidden="true"><svg viewBox="0 0 1440 243.604" preserveAspectRatio="none"><g transform="translate(0,243.604) scale(1,-1)"><path d="M687.43 46.3562C317.5 -57.3952 153.84 43.218 0 58.6036V243.604H1440V28.6036C1264.45 46.0335 1058.46 150.417 687.43 46.3562Z" /></g></svg></div>'
         wave=wave.replace('<g transform="translate(0,243.604) scale(1,-1)">','').replace('</g>','')
+        # Extend the filled polygon past the viewBox; no antialiased beige seam
+        # at the straight bottom edge, even at fractional zoom/device pixels.
+        wave=wave.replace('V243.604H1440','V300H1440')
+        # Paint beige only ABOVE the curve, not behind the entire SVG. The
+        # bottom is transparent over orange, so fractional layer edges cannot
+        # blend beige into an orange horizontal hairline.
+        wave=re.sub(r'<path d="[^"]+" />','<path fill="#fffded" d="M0 0H1440V28.6036C1264.45 46.0335 1058.46 150.417 687.43 46.3562C317.5 -57.3952 153.84 43.218 0 58.6036Z" />',wave)
         block=block.replace('<div class="rf-inner">',wave+'<div class="rf-inner">',1)
         block=re.sub(r'<button[^>]*class="logo-marquee-toggle"[\s\S]*?</button>','',block,count=1)
         helptext='اضغط مفتاح المسافة لإيقاف حركة الشعارات أو استئنافها.' if ar else 'Press Space to pause or resume the logos.'
