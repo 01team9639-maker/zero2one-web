@@ -18,6 +18,7 @@ cat assets/css/normalize.css \
     assets/css/styleguide.css \
     assets/css/components.css \
     assets/css/style-new.css \
+    assets/css/site-refresh.css \
   | "$ESBUILD" --loader=css --minify --charset=utf8 > assets/css/bundle.min.css
 
 # 2) site JS

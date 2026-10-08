@@ -196,6 +196,11 @@ def page_file(slug):
 def build(check=False):
     changed = []
     for slug in SERVICE_SLUGS:
+        # Refreshed service FAQs are in the owner's language-specific Docs.
+        # They intentionally have different question counts in AR and EN.
+        import build_site_refresh
+        if build_site_refresh.manages(f"/services/{slug}/"):
+            continue
         data = load(slug)
         if not data:
             raise SystemExit(f"missing {path_of(slug)}")
@@ -216,6 +221,18 @@ def preview(outdir):
     table = json.load(open(build_ar.DICT_PATH, encoding="utf-8"))
     written = []
     for slug in SERVICE_SLUGS:
+        import build_site_refresh
+        if build_site_refresh.manages(f"/services/{slug}/"):
+            # The new, verbatim Docs content supersedes old FAQ draft files.
+            # Preview that source; never inject stale proposals into these pages.
+            for lang in ('en','ar'):
+                rel=("ar/" if lang=='ar' else '')+f"services/{slug}/index.html"
+                dst=os.path.join(outdir,rel)
+                os.makedirs(os.path.dirname(dst),exist_ok=True)
+                with open(dst,'w',encoding='utf-8') as f:
+                    f.write(build_site_refresh.render_page(f"/services/{slug}/",lang))
+                written.append(rel)
+            continue
         data = load(slug)
         cur = open(page_file(slug), encoding="utf-8").read()
         en = inject(cur, slug, render_section(slug, data, include_drafts=True))

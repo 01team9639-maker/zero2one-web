@@ -675,6 +675,68 @@ function delay(n) {
 /**
  * Fire all scripts on page load
  */
+var editorialRefreshCleanup = null;
+function initEditorialRefresh() {
+  if (editorialRefreshCleanup) editorialRefreshCleanup();
+  var containers = document.querySelectorAll('[data-barba="container"]');
+  var root = containers[containers.length - 1];
+  if (!root) return;
+  if (!root.matches('.rf-page, .rf-about-page, .rf-case-page, .rf-work-page, .rf-seo-page')) return;
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var animations = new Set(), undo = [], observer = null;
+  function on(el, event, handler, options) {
+    el.addEventListener(event, handler, options);
+    undo.push(function () { el.removeEventListener(event, handler, options); });
+  }
+  // Progressive enhancement: content is visible before and without JS. No
+  // timeout or animation failure can leave the SEO text hidden from visitors.
+  if (!reduced.matches && typeof IntersectionObserver !== 'undefined') {
+    observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        observer.unobserve(entry.target);
+        if (reduced.matches || !entry.target.animate) return;
+        var siblings = entry.target.parentElement.children;
+        var index = Array.prototype.indexOf.call(siblings, entry.target);
+        var anim = entry.target.animate([
+          { opacity: .3, transform: 'translateY(32px)' },
+          { opacity: 1, transform: 'translateY(0)' }
+        ], { duration: 780, delay: Math.min(index % 3, 2) * 75, easing: 'cubic-bezier(.2,.7,.2,1)' });
+        animations.add(anim);
+        anim.onfinish = function () { animations.delete(anim); };
+      });
+    }, { threshold: .07 });
+    root.querySelectorAll('[data-rf-reveal], .seo-service-card, .seo-tile, .case-study-section .flex-col, .z2o-card').forEach(function (el) { observer.observe(el); });
+  }
+  on(reduced, 'change', function () {
+    if (reduced.matches) { animations.forEach(function (a) { a.cancel(); }); animations.clear(); }
+  });
+  root.querySelectorAll('[data-rf-slider]').forEach(function (slider) {
+    var track = slider.querySelector('.rf-work-track');
+    var sign = getComputedStyle(track).direction === 'rtl' ? -1 : 1;
+    function move(forward) {
+      var max = track.scrollWidth - track.clientWidth;
+      var pos = Math.abs(track.scrollLeft);
+      var distance = track.children[0].getBoundingClientRect().width + 24;
+      var next = forward ? (pos >= max - 4 ? 0 : Math.min(pos + distance, max)) : (pos < 4 ? max : Math.max(0, pos - distance));
+      track.scrollTo({ left: sign * next, behavior: reduced.matches ? 'auto' : 'smooth' });
+    }
+    on(slider.querySelector('[data-rf-next]'), 'click', function () { move(true); });
+    on(slider.querySelector('[data-rf-prev]'), 'click', function () { move(false); });
+  });
+  root.querySelectorAll('.rf-nav-services details').forEach(function (details) {
+    on(document, 'click', function (event) { if (!details.contains(event.target)) details.open = false; });
+    on(details, 'keydown', function (event) {
+      if (event.key === 'Escape' && details.open) { details.open = false; details.querySelector('summary').focus(); event.stopPropagation(); }
+    });
+  });
+  editorialRefreshCleanup = function () {
+    if (observer) observer.disconnect();
+    animations.forEach(function (a) { a.cancel(); }); animations.clear();
+    undo.forEach(function (fn) { fn(); });
+  };
+}
+
 function initScript() {
   select('body').classList.remove('is-loading');
   initWindowInnerheight();
@@ -697,6 +759,7 @@ function initScript() {
   initScrolltriggerAnimations();
   initPortfolio();
   initSliders();
+  initEditorialRefresh();
   initEmailLinks();
   setTimeout(initScrollRefresh, 500);
 }
@@ -1760,6 +1823,7 @@ function initLogoMarquees() {
     var run = live && s.loaded && s.inView && !s.hidden && !s.manual && !held;
     track.classList.toggle('is-paused', !run);
     el.setAttribute('data-running', run ? 'true' : 'false');
+    el.setAttribute('data-hold', ((s.hover && !s.ignoreHover) ? 'hover ' : '') + ((s.focus && !s.ignoreFocus) ? 'focus' : ''));
     el.setAttribute('data-manual', s.manual ? 'paused' : 'playing');
     if (labelPause) labelPause.hidden = s.manual;
     if (labelPlay) labelPlay.hidden = !s.manual;
@@ -1811,6 +1875,9 @@ function initLogoMarquees() {
     else { s.manual = false; s.ignoreHover = s.hover; s.ignoreFocus = s.focus; }
     apply();
   });
+  // Space on this button must only operate the button: the page's smooth-scroll library treats a Space keydown anywhere
+  // (except in text fields) as "scroll one screen". The button's own Space activation (on keyup) is not affected.
+  on(btn, 'keydown', function (e) { if (e.key === ' ' || e.code === 'Space') e.stopPropagation(); });
   // implicit holds: pointer (mouse only — a tap would never "leave") and focus inside the component
   on(el, 'pointerenter', function (e) { if (e.pointerType === 'mouse') { s.hover = true; apply(); } });
   on(el, 'pointerleave', function (e) { if (e.pointerType === 'mouse') { s.hover = false; s.ignoreHover = false; apply(); } });

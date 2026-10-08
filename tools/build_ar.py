@@ -471,6 +471,15 @@ def rewrite_head(html, page_path, meta):
 def render_arabic(src, page_path, tr, include_drafts=False, copy="load"):
     """One English page -> its Arabic page (text of the page, not written anywhere).
     `include_drafts` is for the local review preview (tools/build_faq.py --preview)."""
+    # These pages have independently authored Arabic Google Docs, not a
+    # sentence-paired translation. Never run them through brandify/dictionary.
+    import build_site_refresh
+    if build_site_refresh.manages(page_path):
+        return build_site_refresh.render_page(page_path, "ar", src)
+    # Refresh-owned bilingual additions are reinserted from their Arabic
+    # source after translation, not passed through the old dictionary.
+    for marker in ("SEO-TEAM", "ABOUT-EXTRA"):
+        src = re.sub(r'<!-- REFRESH:'+marker+r':BEGIN -->[\s\S]*?<!-- REFRESH:'+marker+r':END -->', '', src)
     if copy == "load":
         copy = load_page_copy(page_path, include_drafts)
     meta = copy["meta"] if copy and copy["meta"] else AR_META[page_path]
@@ -493,7 +502,7 @@ def render_arabic(src, page_path, tr, include_drafts=False, copy="load"):
         unused = sorted(set(copy["exact"]) - tr.exact_used)
         if unused:
             tr.unused = getattr(tr, "unused", []) + [(page_path, k) for k in unused]
-    return out
+    return build_site_refresh.decorate_existing(out, page_path, "ar")
 
 
 def build(check_only=False, missing_only=False):
