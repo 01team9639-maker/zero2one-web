@@ -6,6 +6,13 @@ async function run(){const {srv,origin}=await serve(),browser=await chromium.lau
   const p=await ctx.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.message));const prefix=lang==='ar'?'/ar':'';
   await p.goto(origin+prefix+'/');await p.waitForTimeout(8500);
   for(const scope of ['.nav-bar','.fixed-nav'])assert.equal(await p.locator(scope+' a[href="'+prefix+'/faqs/"]').count(),1);
+  for(const scope of ['.nav-bar','.fixed-nav'])assert.equal(await p.locator(scope+' .links-wrap > li').last().evaluate(e=>e.classList.contains('btn-lang')),true,'language last');
+  assert.equal(await p.locator('.fixed-nav .rf-nav-services details').count(),0);
+  assert.equal(await p.locator('.fixed-nav .rf-sidebar-services a').getAttribute('href'),prefix+'/services/');
+  assert.equal(await p.locator('.rf-existing-faq').evaluate(e=>getComputedStyle(e).backgroundColor),'rgb(249, 70, 14)');
+  assert.equal(await p.locator('.rf-faq-wave').count(),1);
+  assert.equal(await p.locator('.rf-blog').evaluate(e=>getComputedStyle(e).backgroundColor),'rgb(255, 253, 237)');
+  for(const name of ['web','seo','ads'])assert.equal(await p.locator('.service-card img[src="/assets/images/owner-services-2026-10/'+name+'.webp"]').evaluate(e=>e.complete&&e.naturalWidth>0),true);
   assert.equal(await p.locator('.nav-bar .btn-contact a').getAttribute('href'),prefix+'/contact/');
   assert.equal(await p.locator('.nav-bar .btn-contact .btn-text-inner').evaluate(e=>getComputedStyle(e).color),await p.locator('.nav-bar .rf-nav-services summary').evaluate(e=>getComputedStyle(e).color),'nav contact color matches services');
   assert.equal(await p.locator('.rf-home-blog-cards .card').count(),lang==='ar'?3:1);

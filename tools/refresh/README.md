@@ -32,6 +32,14 @@ author-supplied arrow glyph in the work label remains in text but is visually
 hidden to avoid a duplicate icon. Footer icon colors follow their label states.
 Blog output files, forms, account settings and deployment remain untouched.
 
+Latest owner review: sidebar Services is a direct link; desktop keeps its dropdown.
+Language is last on both navigation surfaces. Homepage FAQ is orange with the
+original beige-over-orange wave, cream questions and a beige consultation card.
+Homepage blog is brand beige. Owner originals in Downloads/111 remain untouched;
+optimized copies are under assets/images/owner-services-2026-10. Web, SEO and ads
+images are assigned to their matching homepage cards. Four specialized SEO images
+are imported but await placement confirmation. No service copy is invented.
+
 This is an **unpublished** local implementation. Nothing here authorizes a push,
 merge, deployment, workflow dispatch, GTM publication, or account change.
 

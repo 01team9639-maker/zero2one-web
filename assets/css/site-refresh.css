@@ -2,6 +2,19 @@
    Scoped so the separately built blog and contact form keep their own layouts. */
 :root { --z2o-action-arrow:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 17 17 7M9 7h8v8' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
 :root { --rf-orange:#f9460e; }
+.rf-home-page .rf-existing-faq { position:relative; background:#f9460e; color:#fffded; padding-top:clamp(120px,12vw,180px); }
+.rf-home-page .rf-existing-faq :is(h2,h3,.rf-answer p,.faq-eyebrow,.faq-label) { color:#fffded; }
+.rf-home-page .rf-existing-faq .rf-faq-item { border-color:#fffded80; }
+.rf-home-page .rf-existing-faq .faq-list { border-color:#fffded80; }
+.rf-home-page .rf-existing-faq .rf-faq-chevron { color:#fffded; border-color:#fffded80; }
+.rf-home-page .rf-existing-faq .faq-cta { background:#fffded; color:#1c1d20; }
+.rf-home-page .rf-existing-faq .faq-cta :is(h3,p,small) { color:#1c1d20; }
+.rf-home-page .rf-faq-more { background:#f9460e; }
+.rf-home-page .rf-faq-more .rf-button { background:#fffded; color:#1c1d20; }
+.rf-home-page .rf-faq-more .rf-button:hover { color:#fffded; }
+.rf-home-page .rf-blog { background:#fffded; }
+.rf-faq-wave { position:absolute; top:-1px; left:-1px; width:calc(100% + 2px); pointer-events:none; line-height:0; }
+.rf-faq-wave svg { display:block; width:100%; height:calc(clamp(45px,7vw,110px) + 2px); }
 /* Pseudo-elements must be separate selectors, not nested inside :is(). */
 html[lang="ar"] .rf-button::after,html[lang="ar"] .faq-cta-button::after,
 html[lang="ar"] .btn-normal .btn-text:not(:has(svg,.arrow))::after,

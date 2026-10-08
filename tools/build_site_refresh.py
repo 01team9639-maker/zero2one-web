@@ -259,7 +259,9 @@ def home_faq(lang):
     src=LEGACY[lang]['faq']
     src=re.sub(r'<li class="faq-item">\s*<h3 class="faq-q">([\s\S]*?)</h3>\s*<p class="faq-a">([\s\S]*?)</p>\s*</li>',
                r'<li><details class="rf-faq-item"><summary><h3>\1</h3><span class="rf-faq-chevron" aria-hidden="true"></span></summary><div class="rf-answer"><p>\2</p></div></details></li>',src)
-    return src.replace('section faq-section','section faq-section rf-existing-faq')
+    src=src.replace('section faq-section','section faq-section rf-existing-faq')
+    wave='<div class="rf-faq-wave" aria-hidden="true"><svg viewBox="0 0 1440 243.604" preserveAspectRatio="none"><path fill="#fffded" d="M0 0H1440V28.6036C1264.45 46.0335 1058.46 150.417 687.43 46.3562C317.5 -57.3952 153.84 43.218 0 58.6036Z" /></svg></div>'
+    return src.replace('<div class="container medium">',wave+'<div class="container medium">',1)
 
 
 def original_home_layout(body,lang,ps):
@@ -303,6 +305,9 @@ def original_home_layout(body,lang,ps):
         card=re.sub(r'href="[^"]+"',lambda _:'href="'+local('/services/'+slug+'/',lang)+'"',card,count=1)
         card=re.sub(r'aria-label="[^"]+"','',card,count=1)
         card=re.sub(r'alt="[^"]*"','alt=""',card,count=1)
+        image={'web-design-riyadh':'web','seo-riyadh':'seo','digital-advertising':'ads'}.get(slug)
+        if image:
+            card=re.sub(r'<img\b[^>]*>',lambda _:f'<img src="/assets/images/owner-services-2026-10/{image}.webp" width="1440" height="1024" loading="lazy" decoding="async" alt="">',card,count=1)
         card=re.sub(r'<span class="btn-text-inner">[\s\S]*?</span>',lambda _:label(i+2),card,count=1)
         if slug in ('marketing-consulting','mobile-application'):
             card=card.replace('class="service-card"',f'class="service-card" data-image-pending="{slug}"')
@@ -597,13 +602,22 @@ def polish_chrome(page,lang):
         if local('/faqs/',lang) not in block:
             link='<li class="btn btn-link rf-nav-faq"><a href="'+local('/faqs/',lang)+'" class="btn-click magnetic" data-strength="20" data-strength-text="10"><span class="btn-text"><span class="btn-text-inner">'+faq_label+'</span></span></a></li>'
             block=block.replace('</ul>',link+'</ul>')
+        languages=re.findall(r'<li\b[^>]*class="[^"]*btn-lang[^"]*"[\s\S]*?</li>',block)
+        for item in languages: block=block.replace(item,'',1)
+        block=block.replace('</ul>',''.join(languages)+'</ul>')
         return block
     page=re.sub(r'<ul class="links-wrap">[\s\S]*?</ul>',navlist,page)
+    # Sidebar is a direct destination; only the desktop navbar has a dropdown.
+    before,marker,after=page.partition('<div class="main-wrap"')
+    label='خدماتنا' if lang=='ar' else 'Our Services'
+    direct='<li class="btn btn-link rf-sidebar-services"><a href="'+local('/services/',lang)+'" class="btn-click magnetic" data-strength="20" data-strength-text="10"><span class="btn-text"><span class="btn-text-inner">'+label+'</span></span></a></li>'
+    before=re.sub(r'<li class="rf-nav-services"><details>[\s\S]*?</details></li>',lambda _:direct,before)
+    page=before+marker+after
     def faqcta(m):
         if 'btn-text' in m[0]: return m[0]
         return m[0].replace('class="faq-cta-button"','class="faq-cta-button btn-click magnetic" data-strength="20" data-strength-text="10"').replace('>'+m[1]+'</a>','><div class="btn-fill"></div><span class="btn-text"><span class="btn-text-inner">'+m[1]+'</span></span></a>')
     page=re.sub(r'<a[^>]*class="faq-cta-button"[^>]*>([^<]+)</a>',faqcta,page)
-    return page
+    return re.sub(r'[ \t]+(?=\n)', '', page)
 
 
 def build(check=False):
