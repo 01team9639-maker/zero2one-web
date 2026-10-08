@@ -681,7 +681,7 @@ function initEditorialRefresh() {
   var containers = document.querySelectorAll('[data-barba="container"]');
   var root = containers[containers.length - 1];
   if (!root) return;
-  if (!root.matches('.rf-page, .rf-about-page, .rf-case-page, .rf-work-page, .rf-seo-page')) return;
+  if (!root.matches('.rf-page, .rf-home-page, .rf-about-page, .rf-case-page, .rf-work-page, .rf-seo-page')) return;
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
   var animations = new Set(), undo = [], observer = null;
   function on(el, event, handler, options) {

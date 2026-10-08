@@ -146,6 +146,18 @@ html[lang="ar"] .rf-answer { padding:24px 0 0 50px; }
 .rf-clients .logo-marquee-item { background:#fff; border:1px solid #e0ded5; border-radius:16px; }
 .rf-clients .logo-marquee-toggle { color:inherit; }
 .rf-clients .logo-marquee-viewport::before,.rf-clients .logo-marquee-viewport::after { display:none; }
+/* Owner's homepage review: original layouts, full-bleed orange client strip. */
+.rf-home-page .home-stat-divider { display:none; }
+.rf-home-page .rf-nav-services summary { color:inherit; }
+.rf-home-page .home-header .rf-nav-services summary { color:#fff; }
+.rf-home-page .selected-work-card-description { display:block; font-size:14px; line-height:1.8; margin-top:12px; }
+.rf-home-page .rf-clients { background:#f9460e; color:#191b16; --rf-muted:#191b16; }
+.rf-home-page .rf-clients .rf-inner { width:100%; max-width:none; }
+.rf-home-page .rf-clients .rf-section-heading,.rf-home-page .rf-clients .rf-inner>p { margin-inline:auto; width:calc(100% - 64px); max-width:1280px; }
+.rf-home-page .rf-clients .logo-marquee { width:100%; max-width:none; }
+.rf-home-page .rf-clients .logo-marquee-viewport { width:100%; }
+.rf-home-page .rf-clients .rf-index { color:#191b16; }
+.rf-home-page .rf-closing { background:#fffded; color:#191b16; --rf-muted:#64635b; }
 .rf-phone { width:65%; height:87%; border:10px solid #2c2c29; background:#fffdf4; border-radius:42px; box-shadow:25px 35px 50px #28231122; padding:20px; position:relative; transform:rotate(-7deg); }
 .rf-phone-camera { width:35%; height:16px; border-radius:12px; margin:0 auto 32px; background:#2c2c29; }
 .rf-phone-orbit { width:70%; aspect-ratio:1; border:25px solid #f9460e; border-radius:50%; margin:0 auto 22px; }

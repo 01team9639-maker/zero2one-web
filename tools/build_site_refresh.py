@@ -15,6 +15,7 @@ DATA = ROOT / 'tools/refresh'
 DOCS = json.loads((DATA / 'content-sources.json').read_text())['documents']
 LEGACY = json.loads((DATA / 'legacy-blocks.json').read_text())
 PROTECTED = json.loads((DATA / 'protected-design.json').read_text())
+HOME_ORIGINAL = json.loads((DATA / 'home-original-sections.json').read_text())
 WA = 'https://wa.me/966530307054'
 BASE = 'https://zero2one.sa'
 SERVICES = {
@@ -261,7 +262,84 @@ def home_faq(lang):
     return src.replace('section faq-section','section faq-section rf-existing-faq')
 
 
-def home_body(lang):
+def original_home_layout(body,lang,ps):
+    """Restore owner-selected original section layouts with the approved copy."""
+    ar=lang=='ar'; originals=HOME_ORIGINAL[lang]
+    def p(i,tag='p',cls='',**attrs): return textnode(ps[i],tag,cls,**attrs)
+    def label(i):
+        q=dict(ps[i],text=re.sub(r'^\[[^]]+\]\s*','',clean(ps[i])))
+        return textnode(q,'span','btn-text-inner')
+    def replace_section(pattern,new):
+        nonlocal body
+        body=re.sub(pattern+r'[\s\S]*?</section>',lambda _:new,body,count=1)
+    stat=3 if ar else 2;button=4 if ar else 3
+    record(ps[stat],'rendered');MANIFEST[ps[stat]['id']]=clean(ps[stat])
+    values=[]
+    for t in clean(ps[stat]).split('|'):
+        m=re.match(r'([+\d]+)\s+(.*)',t.strip())
+        values.append('<div class="stat"><div class="stat-number">'+esc(m[1])+'</div> <div class="stat-description">'+esc(m[2])+'</div></div>')
+    stats=f'<div class="stats animate" data-copy="{ps[stat]["id"]}">'+ '<span class="home-stat-divider" aria-hidden="true"> | </span>'.join(values)+'</div>'
+    intro=re.sub(r'<div class="stats animate">[\s\S]*?</div>\s*</div>\s*</div>\s*</div>',lambda _:stats+'</div>',originals['intro'],count=1)
+    intro=re.sub(r'<span class="btn-text-inner">[\s\S]*?</span>',lambda _:label(button),intro,count=1)
+    replace_section(r'<section class="rf-home-intro"',intro+'<div class="section-divider" data-scroll-section><div class="container"><div class="stripe"></div></div></div>')
+    about=6 if ar else 4
+    about_html=originals['about']
+    about_html=re.sub(r'<p class="about-us-lead">[\s\S]*?</p>',lambda _:p(about,'p','about-us-lead'),about_html,count=1)
+    about_body=p(about+1)+p(about+2)+'<ul>'+''.join(p(i,'li') for i in range(about+3,about+6))+'</ul>'
+    about_html=re.sub(r'<div class="about-us-body">[\s\S]*?</div>',lambda _:'<div class="about-us-body">'+about_body+'</div>',about_html,count=1)
+    about_html=re.sub(r'<span class="btn-text-inner">[\s\S]*?</span>\s*</span>',lambda _:label(about+6),about_html,count=1)
+    replace_section(r'<section class="rf-section[^>]*rf-about"',about_html)
+    services=originals['services']
+    template=re.search(r'<article class="service-card">[\s\S]*?</article>',services)[0]
+    start=16 if ar else 13
+    cards=[]
+    slugs=['web-design-riyadh','seo-riyadh','digital-advertising','brand-identity','social-media-management','ecommerce-development','marketing-consulting',None,None,'mobile-application']
+    for j,slug in enumerate(slugs):
+        if slug is None: continue
+        i=start+j*3;pic=2 if slug=='seo-riyadh' else SERVICES[slug][2]
+        card=re.sub(r'service-1',f'service-{pic}',template)
+        card=re.sub(r'<h3 class="service-card-title">[\s\S]*?</h3>',lambda _:p(i,'h3','service-card-title'),card,count=1)
+        card=re.sub(r'<p class="service-card-text">[\s\S]*?</p>',lambda _:p(i+1,'p','service-card-text'),card,count=1)
+        card=re.sub(r'href="[^"]+"',lambda _:'href="'+local('/services/'+slug+'/',lang)+'"',card,count=1)
+        card=re.sub(r'aria-label="[^"]+"','',card,count=1)
+        card=re.sub(r'alt="[^"]*"','alt=""',card,count=1)
+        card=re.sub(r'<span class="btn-text-inner">[\s\S]*?</span>',lambda _:label(i+2),card,count=1)
+        if slug in ('marketing-consulting','mobile-application'):
+            card=card.replace('class="service-card"',f'class="service-card" data-image-pending="{slug}"')
+        cards.append(card)
+    ad=paras(12 if ar else 13)
+    card=template.replace('service-1','service-3').replace('class="service-card"','class="service-card" data-image-pending="manage-google-adwords-campaigns"',1)
+    card=re.sub(r'<h3 class="service-card-title">[\s\S]*?</h3>',lambda _:textnode(ad[3],'h3','service-card-title'),card,count=1)
+    card=re.sub(r'<p class="service-card-text">[\s\S]*?</p>',lambda _:textnode(ad[4],'p','service-card-text'),card,count=1)
+    card=re.sub(r'href="[^"]+"',lambda _:'href="'+local('/services/manage-google-adwords-campaigns/',lang)+'"',card,count=1)
+    card=re.sub(r'aria-label="[^"]+"','',card,count=1)
+    card=re.sub(r'alt="[^"]*"','alt=""',card,count=1)
+    ad_button=dict(ad[7 if ar else 6],text=re.sub(r'^\[[^]]+\]\s*','',clean(ad[7 if ar else 6])))
+    card=re.sub(r'<span class="btn-text-inner">[\s\S]*?</span>',lambda _:textnode(ad_button,'span','btn-text-inner'),card,count=1)
+    cards.append(card)
+    services=re.sub(r'<div class="services-cards">[\s\S]*?</article>\s*</div>',lambda _:'<div class="services-cards">'+''.join(cards)+'</div>',services,count=1)
+    services=re.sub(r'<h2 class="services-title">[\s\S]*?</h2>',lambda _:p(14 if ar else 11,'h2','services-title'),services,count=1)
+    services=re.sub(r'<p class="services-sub">[\s\S]*?</p>',lambda _:p(15 if ar else 12,'p','services-sub'),services,count=1)
+    replace_section(r'<section class="rf-section[^>]*rf-services"',services)
+    work=64 if ar else 59;wc=67 if ar else 62
+    work_html=originals['work']
+    work_html=re.sub(r'<p class="selected-work-title">[\s\S]*?</p>',lambda _:p(work,'p','selected-work-title'),work_html,count=1)
+    work_html=re.sub(r'<p class="selected-work-lead">[\s\S]*?</p>',lambda _:p(work+1,'p','selected-work-lead'),work_html,count=1)
+    work_html=re.sub(r'<span class="btn-text-inner">[\s\S]*?</span>\s*</span>',lambda _:label(79 if ar else 74),work_html,count=1)
+    from portfolio_data import ITEMS
+    slides=[]
+    for j,slug in enumerate(['alostaz-seo','alhokail-seo','google-ads-conversion-value','alrahwanji-paints','kuwait-tutoring-instagram-ads','habba']):
+        item=next(x for x in ITEMS if x['slug']==slug);c=item['cover'];src=c['src']
+        src='/assets/images/'+src+('.webp' if '.' not in src else '')
+        slides.append('<li class="selected-work-slide"><a class="selected-work-card" href="'+local('/work/'+slug+'/',lang)+'"><span class="selected-work-card-media selected-work-fit-contain">'+f'<img src="{src}" width="{c["w"]}" height="{c["h"]}" loading="lazy" decoding="async" alt=""></span><span class="selected-work-card-body">'+p(wc+j*2,'span','selected-work-card-title')+p(wc+j*2+1,'span','selected-work-card-description')+'</span></a></li>')
+    work_html=re.sub(r'<ul class="slider-track" data-slider-track>[\s\S]*?</ul>',lambda _:'<ul class="slider-track" data-slider-track>'+''.join(slides)+'</ul>',work_html,count=1)
+    replace_section(r'<section class="rf-section[^>]*rf-work"',work_html)
+    # Scope the remaining editorial sections so original section/footer CSS wins.
+    body=body.replace('class="rf-section ', 'class="rf-page rf-section ')
+    return body
+
+
+def home_body(lang,restore=True):
     ar=lang=='ar'; ps=paras(3 if ar else 2)
     def p(i, tag='p',cls='',**attrs): return textnode(ps[i],tag,cls,**attrs)
     def a(i, href=None): return action(ps[i],lang,href)
@@ -325,7 +403,7 @@ def home_body(lang):
     for q in ps:
         if not any(r['id']==q['id'] for r in REPORT):
             if not authoring(q): record(q,'authoring','Document section label; not customer copy')
-    return body
+    return original_home_layout(body,lang,ps) if restore else body
 
 
 def menu(lang):
@@ -378,7 +456,7 @@ def render_page(route,lang,unused_src=None):
     elif route=='/services/':
         ar=lang=='ar'; ps=paras(3 if ar else 2); h=ps[14 if ar else 11]; intro=ps[15 if ar else 12]
         title=clean(h); description=clean(intro)
-        source=home_body(lang)
+        source=home_body(lang,restore=False)
         body=re.search(r'<section class="rf-section[^>]*id="services"[\s\S]*?</section>',source).group(0)
         body=body.replace(textnode(h,'h2'),textnode(h,'h1',id='main-content',tabindex='-1'),1)
         # Add the dedicated Google Ads page to the catalogue using its own supplied copy.
@@ -414,7 +492,7 @@ def render_page(route,lang,unused_src=None):
     if route=='/': footer=footer.removeprefix('</section>\n')
     page=prefix+body+footer
     page=page.replace('class="main seo-service-page"','class="main rf-page"')
-    if route=='/': page=page.replace('class="main home"','class="main home rf-page"').replace('class="main"','class="main home rf-page"')
+    if route=='/': page=page.replace('class="main home"','class="main home rf-home-page"').replace('class="main"','class="main home rf-home-page"')
     # Stable namespace avoids the old home-only loader's split-letter dependency.
     page=page.replace('data-barba-namespace="work-single"','data-barba-namespace="refresh"')
     if route!='/': page=re.sub(r'(<main\b[^>]*\bid=")[^"]*',r'\1refresh',page,count=1)

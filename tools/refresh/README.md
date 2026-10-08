@@ -1,5 +1,13 @@
 # Local page review — 8 October 2026
 
+Owner homepage revision, 8 October: restored the original three counters and
+round consultation CTA, About layout, orange services design (nine cards),
+split-column work slider and original footer. Approved source wording is retained.
+The clients marquee now spans the viewport on orange; the closing section is
+beige. Google Ads, consulting and mobile cards reuse existing artwork temporarily,
+pending the owner's replacement images. These changes apply to both languages
+and remain local.
+
 This is an **unpublished** local implementation. Nothing here authorizes a push,
 merge, deployment, workflow dispatch, GTM publication, or account change.
 
