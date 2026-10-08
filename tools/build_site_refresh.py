@@ -348,10 +348,10 @@ def original_home_layout(body,lang,ps):
         anchor=m[0].replace('class="rf-button magnetic"','class="btn-click magnetic"')
         anchor=anchor.replace('<span class="btn-text">','<div class="btn-fill"></div><span class="btn-text">',1)
         anchor=anchor.replace('</span></span></a>','</span><svg class="service-card-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg></span></a>')
-        return '<div class="btn btn-normal service-card-btn">'+anchor+'</div>'
+        return '<div class="btn btn-normal service-card-btn rf-home-action">'+anchor+'</div>'
     def difference_buttons(m):
         return re.sub(r'<a[^>]*class="rf-button magnetic"[^>]*>[\s\S]*?</a>',original_button,m[0])
-    body=re.sub(r'<section[^>]*rf-difference[^>]*>[\s\S]*?</section>',difference_buttons,body,count=1)
+    body=re.sub(r'<section\b[^>]*(?:rf-difference|rf-faq-more|rf-blog|rf-closing|class="section team")[^>]*>[\s\S]*?</section>',difference_buttons,body)
     def clients_refinement(m):
         block=m[0]
         wave='<div class="rf-clients-wave" aria-hidden="true"><svg viewBox="0 0 1440 243.604" preserveAspectRatio="none"><g transform="translate(0,243.604) scale(1,-1)"><path d="M687.43 46.3562C317.5 -57.3952 153.84 43.218 0 58.6036V243.604H1440V28.6036C1264.45 46.0335 1058.46 150.417 687.43 46.3562Z" /></g></svg></div>'
@@ -369,6 +369,9 @@ def original_home_layout(body,lang,ps):
         block=block.replace('data-logo-marquee ',f'tabindex="0" role="region" aria-labelledby="clients-heading" aria-description="{helptext}" data-logo-marquee ',1)
         return block
     body=re.sub(r'<section[^>]*rf-clients[^>]*>[\s\S]*?</section>',clients_refinement,body,count=1)
+    # Extend the cream polygon above the SVG viewport to avoid an antialiased
+    # orange top-edge hairline at fractional transformed scroll positions.
+    body=body.replace('M0 0H1440V28.6036','M0 -20H1440V28.6036')
     # Scope the remaining editorial sections so original section/footer CSS wins.
     body=body.replace('class="rf-section ', 'class="rf-page rf-section ')
     return body
@@ -613,6 +616,10 @@ def polish_chrome(page,lang):
     direct='<li class="btn btn-link rf-sidebar-services"><a href="'+local('/services/',lang)+'" class="btn-click magnetic" data-strength="20" data-strength-text="10"><span class="btn-text"><span class="btn-text-inner">'+label+'</span></span></a></li>'
     before=re.sub(r'<li class="rf-nav-services"><details>[\s\S]*?</details></li>',lambda _:direct,before)
     page=before+marker+after
+    def footerlinks(m):
+        direct='<li class="btn btn-link rf-footer-services"><a href="'+local('/services/',lang)+'" class="btn-click magnetic" data-strength="20" data-strength-text="10"><span class="btn-text"><span class="btn-text-inner">'+label+'</span></span></a></li>'
+        return re.sub(r'<li class="rf-nav-services"><details>[\s\S]*?</details></li>',lambda _:direct,m[0])
+    page=re.sub(r'<div class="quick-links">[\s\S]*?</ul>',footerlinks,page)
     def faqcta(m):
         if 'btn-text' in m[0]: return m[0]
         return m[0].replace('class="faq-cta-button"','class="faq-cta-button btn-click magnetic" data-strength="20" data-strength-text="10"').replace('>'+m[1]+'</a>','><div class="btn-fill"></div><span class="btn-text"><span class="btn-text-inner">'+m[1]+'</span></span></a>')

@@ -48,6 +48,22 @@ are imported but await placement confirmation. No service copy is invented.
 This is an **unpublished** local implementation. Nothing here authorizes a push,
 merge, deployment, workflow dispatch, GTM publication, or account change.
 
+Evening homepage review: Team, All FAQs, Blog and closing CTAs now use the
+same native outlined magnetic/fill button as the differentiators, including its
+service-card SVG arrow and matching label/icon hover colors. Blog CTA is centered.
+Footer Services is a direct link with cream/orange states, not a disclosure.
+On small screens the consultation circle becomes a compact centered pill and
+the differentiator actions wrap into centered rows. The wave cream path extends
+outside the viewBox and has a cream overlap to prevent its top raster seam.
+No source wording, destinations, hero, sliders or tracking code were changed.
+
+Verification: `test_home_button_review.js` passes eight language/viewport cases
+(English/Arabic at 1440, 440, 390 and 320px), including fractional-DPR wave pixel
+checks, native button hover, footer link behavior and mobile centering/overflow.
+Brand controls, homepage navigation and refresh interactions pass four cases each.
+All 2,350 nonempty source paragraphs remain present; generator check and whitespace
+check pass. Screenshots are retained in ignored `tools/reports/site-refresh/`.
+
 ## Owner constraints
 
 - Keep source documents and original assets. Do not delete or rewrite them.

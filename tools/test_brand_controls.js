@@ -37,9 +37,9 @@ async function run(){
    assert.ok(await faq.locator('summary span').evaluate(e=>parseFloat(getComputedStyle(e,'::after').borderRightWidth)>=1));
    await faq.locator('summary').focus();await p.keyboard.press('Enter');await p.waitForTimeout(300);assert.equal(await faq.evaluate(e=>e.open),true);
    await p.screenshot({path:path.join(ROOT,'tools/reports/site-refresh',`chevron-fixed-${lang}-${mobile}.png`)});
-   const cta=p.locator('.rf-faq-more .rf-button');await scrollTo('.rf-faq-more');
-   assert.ok(await cta.evaluate(e=>getComputedStyle(e,'::after').maskImage.includes('M7')),'approved arrow mask');
-   if(!mobile){await cta.hover();await p.waitForTimeout(600);assert.equal(await cta.evaluate(e=>getComputedStyle(e,'::before').transform),'matrix(1, 0, 0, 1, 0, 0)');}
+   const cta=p.locator('.rf-faq-more .btn-click');await scrollTo('.rf-faq-more');
+   assert.equal(await cta.locator('svg path').getAttribute('d'),'M7 17 17 7M9 7h8v8','approved native arrow');
+   if(!mobile){await cta.hover();await p.waitForTimeout(600);assert.equal(await cta.locator('.btn-fill').evaluate(e=>getComputedStyle(e).transform),'matrix(1, 0, 0, 1, 0, 0)');}
    await go('/services/seo-riyadh/');
    assert.equal(await p.locator('.svc-faq-icon').first().evaluate(e=>getComputedStyle(e,'::after').display),'none');
    assert.ok(await p.locator('.svc-faq-icon').first().evaluate(e=>parseFloat(getComputedStyle(e,'::before').borderRightWidth)>=1));

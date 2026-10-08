@@ -23,7 +23,7 @@ async function run(){const {srv,origin}=await serve(),browser=await chromium.lau
    await p.evaluate(s=>scroll.scrollTo(document.querySelector(s),{duration:0,disableLerp:true,offset:-120}),selector);await p.waitForTimeout(900);
    await p.screenshot({path:path.join(ROOT,'tools/reports/site-refresh',`latest-${lang}-${mobile}-${name}.png`)});
   }
-  const arrow=await p.locator('.rf-faq-more .rf-button').evaluate(e=>getComputedStyle(e,'::after').transform);
+  const arrow=await p.locator('.rf-faq-more .service-card-arrow').evaluate(e=>getComputedStyle(e).transform);
   assert.equal(arrow,lang==='ar'?'matrix(-1, 0, 0, 1, 0, 0)':'none');
   assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false);
   assert.equal(errors.length,0,errors.join('\n'));await ctx.close();console.log('PASS homepage/nav',lang,mobile);

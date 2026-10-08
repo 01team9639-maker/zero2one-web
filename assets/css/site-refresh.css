@@ -2,6 +2,27 @@
    Scoped so the separately built blog and contact form keep their own layouts. */
 :root { --z2o-action-arrow:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 17 17 7M9 7h8v8' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
 :root { --rf-orange:#f9460e; }
+.rf-home-page .rf-home-action { position:relative; inset:auto; margin:10px 0; max-width:100%; }
+.rf-home-page .rf-blog .rf-home-action { display:flex; width:fit-content; margin:30px auto 0; }
+.rf-home-page .rf-faq-more .rf-home-action .btn-click { background:#fffded; }
+.rf-home-page .rf-home-action .btn-text { color:#f9460e; }
+.rf-home-page .rf-home-action .btn-click:is(:hover,:focus-visible) :is(.btn-text,.btn-text-inner) { color:#fffded; }
+.rf-home-page .rf-home-action .btn-click:is(:hover,:focus-visible) .service-card-arrow { stroke:#fffded; }
+.rf-home-page .rf-home-action .btn-click:focus-visible .btn-fill { transform:translateY(0); }
+.quick-links .rf-footer-services :is(.btn-text,.btn-text-inner) { color:#fffded; }
+.quick-links .rf-footer-services .btn-click:is(:hover,:focus-visible) :is(.btn-text,.btn-text-inner) { color:#f9460e; }
+.rf-work-wave::before,.rf-faq-wave::before,.rf-clients-wave::before { content:''; position:absolute; top:-2px; inset-inline:0; height:4px; background:#fffded; pointer-events:none; }
+@media(max-width:760px) {
+ .rf-home-page .rf-difference .rf-actions { justify-content:center; }
+ .rf-home-page .rf-difference .rf-actions .rf-home-action { margin:0; }
+}
+@media(max-width:720px) {
+ .rf-home-page .home-intro .flex-col:nth-child(2) { align-items:center; padding-top:24px; }
+ .rf-home-page .home-intro .flex-col:nth-child(2) .btn { align-self:center; margin-bottom:0; }
+ .rf-home-page .home-intro .btn-round.btn-contact-round .btn-click { width:auto; height:auto; min-height:54px; max-width:min(100%,320px); border-radius:50px; }
+ .rf-home-page .home-intro .btn-round.btn-contact-round .btn-text { padding:14px 24px; gap:8px; }
+ .rf-home-page .home-intro .btn-round.btn-contact-round .btn-text-inner { font-size:15px; line-height:1.5; }
+}
 /* Desktop: the full bar is the navigation while it is on screen. Hidden
    also removes the redundant toggle from Tab; mobile keeps its only menu. */
 @media (min-width:1025px) {
