@@ -676,6 +676,9 @@ function delay(n) {
  * Fire all scripts on page load
  */
 var editorialRefreshCleanup = null;
+// Document-lifetime memory: revisiting About via Barba never replays a step.
+// A full page reload creates a fresh set, as requested by the owner.
+var aboutProcessRevealed = new Set();
 function initEditorialRefresh() {
   if (editorialRefreshCleanup) editorialRefreshCleanup();
   var containers = document.querySelectorAll('[data-barba="container"]');
@@ -711,23 +714,45 @@ function initEditorialRefresh() {
   on(reduced, 'change', function () {
     if (reduced.matches) { animations.forEach(function (a) { a.cancel(); }); animations.clear(); }
   });
-  var aboutStepTweens = [];
-  if (!reduced.matches) root.querySelectorAll('[data-about-step]').forEach(function (card) {
-    aboutStepTweens.push(gsap.fromTo(card, {opacity:0,y:48}, {
-      opacity:1,y:0,duration:.75,ease:'power3.out',
-      scrollTrigger:{trigger:card,start:'top 88%',once:true},
-      onComplete:function () { card.dataset.aboutRevealed='true'; }
-    }));
-  });
-  function clearAboutSteps() {
-    aboutStepTweens.forEach(function (tween) {
-      if (tween.scrollTrigger) tween.scrollTrigger.kill();
-      tween.kill();
-      gsap.set(tween.targets(), {clearProps:'opacity,transform'});
-    });
-    aboutStepTweens = [];
+  var aboutSteps = Array.from(root.querySelectorAll('[data-about-step]'));
+  var aboutObserver = null, lastAboutStart = -Infinity;
+  function revealAboutStep(card, animate) {
+    var key = document.documentElement.lang + ':' + aboutSteps.indexOf(card);
+    if (aboutProcessRevealed.has(key)) { card.dataset.aboutRevealed='true'; return; }
+    aboutProcessRevealed.add(key);
+    card.dataset.aboutRevealed='true';
+    if (!animate || reduced.matches || !card.animate) return;
+    // No hidden inline state, no resetting ancestor tween. Content remains
+    // visible after finish/cancel, refresh, resize, upward scroll or navigation.
+    var now = performance.now(), start = Math.max(now, lastAboutStart + 160);
+    lastAboutStart = start;
+    var anim = card.animate([
+      {opacity:0,transform:'translateY(24px) scale(.98)'},
+      {opacity:1,transform:'translateY(0) scale(1)'}
+    ], {duration:620,delay:start-now,easing:'cubic-bezier(.2,.7,.2,1)',fill:'backwards'});
+    card.dataset.aboutRevealCount='1';
+    animations.add(anim);
+    anim.onfinish = function () { animations.delete(anim); };
   }
-  on(reduced, 'change', function () { if (reduced.matches) clearAboutSteps(); });
+  if (aboutSteps.length) {
+    if (!reduced.matches && typeof IntersectionObserver !== 'undefined') {
+      aboutObserver = new IntersectionObserver(function (entries) {
+        entries.filter(function (entry) { return entry.isIntersecting; })
+          .sort(function (a,b) { return aboutSteps.indexOf(a.target)-aboutSteps.indexOf(b.target); })
+          .forEach(function (entry) {
+            aboutObserver.unobserve(entry.target);
+            revealAboutStep(entry.target,true);
+          });
+      }, {threshold:.12,rootMargin:'0px 0px -8% 0px'});
+      aboutSteps.forEach(function (card) { aboutObserver.observe(card); });
+    } else { aboutSteps.forEach(function (card) { revealAboutStep(card,false); }); }
+    on(reduced,'change',function () {
+      if (reduced.matches) {
+        if (aboutObserver) aboutObserver.disconnect();
+        aboutSteps.forEach(function (card) { revealAboutStep(card,false); });
+      }
+    });
+  }
   root.querySelectorAll('[data-rf-slider]').forEach(function (slider) {
     var track = slider.querySelector('.rf-work-track');
     var sign = getComputedStyle(track).direction === 'rtl' ? -1 : 1;
@@ -759,7 +784,7 @@ function initEditorialRefresh() {
       ScrollTrigger.refresh();
     });
   }
-  var whiteCards = Array.from(root.querySelectorAll('.rf-difference-item'));
+  var whiteCards = Array.from(root.querySelectorAll('.rf-difference-item, .rf-about-value'));
   var selectedCard = whiteCards[0];
   function syncCards() {
     whiteCards.forEach(function (card) {
@@ -815,7 +840,7 @@ function initEditorialRefresh() {
     state();
   });
   editorialRefreshCleanup = function () {
-    clearAboutSteps();
+    if (aboutObserver) aboutObserver.disconnect();
     if (updateFrame !== null) cancelAnimationFrame(updateFrame);
     if (observer) observer.disconnect();
     animations.forEach(function (a) { a.cancel(); }); animations.clear();

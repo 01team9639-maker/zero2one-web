@@ -605,7 +605,25 @@ def decorate_existing(page, route, lang):
     block=a+clients('<h2>'+title2+'</h2>',lang,7).replace('rf-clients"','rf-clients rf-about-clients"',1)+z
     if a in page: page=re.sub(re.escape(a)+r'[\s\S]*?'+re.escape(z),lambda _:block,page)
     else: page=page.replace('<!-- REFRESH:ABOUT -->',block+'<!-- REFRESH:ABOUT -->')
-    return refine_about_owner(page,lang)
+    return refine_about_interactions(refine_about_owner(page,lang))
+
+
+def refine_about_interactions(page):
+    """Keep process parents visible; native compact disclosures preserve all copy."""
+    marker='<!-- OWNER:ABOUT-INTERACTIONS-2026-10-09 -->'
+    if marker in page: return page
+    page=re.sub(r'<div class="flex-col fade-in animate">(?=\s*<h2 class="case-overview-label">(?:كيف نعمل|How We Work)</h2>)',
+                '<div class="flex-col rf-about-process">',page)
+    def disclosure(m):
+        content=m[1]
+        title=re.search(r'<h3>[\s\S]*?</h3>',content)
+        number=re.search(r'<span class="rf-about-card-number"[\s\S]*?</span>',content)
+        if not title or not number: raise ValueError('Expected numbered About value card')
+        answer=content.replace(title[0],'',1).replace(number[0],'',1).strip()
+        chevron='<svg class="rf-about-value-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>'
+        return '<details class="case-include-item rf-about-value" open><summary>'+number[0]+title[0]+chevron+'</summary><div class="rf-about-value-answer">'+answer+'</div></details>'
+    page=re.sub(r'<div class="case-include-item">([\s\S]*?)</div>',disclosure,page)
+    return page.replace('<!-- OWNER:ABOUT-2026-10-09 -->',marker+'<!-- OWNER:ABOUT-2026-10-09 -->',1)
 
 
 def refine_about_owner(page,lang):

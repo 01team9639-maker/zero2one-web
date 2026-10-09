@@ -2,10 +2,16 @@ const {chromium}=require('playwright'),{serve,isolate,ROOT}=require('./test_supp
 // Freeze the approved pre-review prose; this remains valid after local commits.
 const COPY_BASE='3b466483bcde38cfbf723b6f094c4a8184e8d2b6';
 (async()=>{const {srv,origin}=await serve(),b=await chromium.launch();try{
- for(const lang of ['ar','en'])for(const width of [1440,834,390,320]){
-  const c=await b.newContext({viewport:{width,height:1000},hasTouch:width<1000});await isolate(c,origin);const p=await c.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.message));
+ for(const lang of ['ar','en'])for(const width of [1440,1032,834,390,320]){
+  const c=await b.newContext({viewport:{width,height:width===1032?1400:1000},hasTouch:width<1100});await isolate(c,origin);const p=await c.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.message));
   await p.addInitScript(()=>{
    window.__aboutCountFrames=[];
+   window.__aboutAnimationStarts=[];
+   const animate=Element.prototype.animate;
+   Element.prototype.animate=function(frames,options){
+    if(this.matches('[data-about-step]'))window.__aboutAnimationStarts.push({step:[...document.querySelectorAll('[data-about-step]')].indexOf(this)+1,delay:options.delay,time:performance.now()});
+    return animate.call(this,frames,options);
+   };
    new MutationObserver(events=>events.forEach(event=>{
     const node=event.target.nodeType===1?event.target:event.target.parentElement;
     const el=node&&node.closest('.about-stats .stat-number');
@@ -34,13 +40,54 @@ const COPY_BASE='3b466483bcde38cfbf723b6f094c4a8184e8d2b6';
   await p.screenshot({path:path.join(ROOT,'tools/reports/site-refresh',`about-counter-${lang}-${width}.png`)});
   await move('.rf-about-values');await p.waitForTimeout(700);
   const box=await p.locator('.rf-about-values .case-includes').boundingBox();assert.ok(Math.abs(box.x+box.width/2-width/2)<2,'cards centered');
+  const cards=p.locator('.rf-about-value');
+  assert.equal(await cards.count(),6);
+  if(width<1100){
+   assert.equal(await cards.evaluateAll(es=>es.filter(e=>e.open).length),1,'one compact card initially open');
+   for(const i of [1,3,5]){
+    await move('.rf-about-value:nth-child('+(i+1)+')');
+    await cards.nth(i).locator('summary').click();await p.waitForTimeout(200);
+    assert.equal(await cards.nth(i).evaluate(e=>e.open),true);
+    assert.equal(await cards.evaluateAll(es=>es.filter(e=>e.open).length),1,'exclusive compact cards');
+    assert.equal(await cards.nth(i).locator('.rf-about-value-chevron').isVisible(),true);
+    assert.equal(await cards.nth(i).locator('p').isVisible(),true);
+   }
+   await cards.nth(5).locator('summary').click();await p.waitForTimeout(200);
+   assert.equal(await cards.nth(5).evaluate(e=>e.open),false,'click again closes');
+   await cards.nth(5).locator('summary').focus();await p.keyboard.press('Enter');await p.waitForTimeout(200);
+   assert.equal(await cards.nth(5).evaluate(e=>e.open),true,'keyboard opens');
+  }else{
+   assert.equal(await cards.evaluateAll(es=>es.every(e=>e.open)),true,'desktop content remains expanded');
+   assert.equal(await cards.first().locator('.rf-about-value-chevron').isVisible(),false);
+  }
+  await move('.rf-about-values');
   await p.screenshot({path:path.join(ROOT,'tools/reports/site-refresh',`about-values-${lang}-${width}.png`)});
   // Each card has its own trigger: scrolling down exposes them in DOM order.
   for(let i=0;i<6;i++){
    await move('.rf-about-timeline li:nth-child('+(i+1)+')');await p.waitForTimeout(900);
    assert.equal(await p.locator('[data-about-step]').nth(i).getAttribute('data-about-revealed'),'true');
    assert.equal(await p.locator('[data-about-step]').nth(i).evaluate(e=>getComputedStyle(e).opacity),'1');
+   assert.equal(await p.locator('.rf-about-process').evaluate(e=>getComputedStyle(e).opacity),'1','process parent must never hide cards');
   }
+  const revealed=await p.locator('[data-about-step]').evaluateAll(es=>es.map(e=>e.dataset.aboutRevealCount));
+  assert.ok(revealed.every(x=>x==='1'),'each step animates once');
+  const starts=await p.evaluate(()=>window.__aboutAnimationStarts);
+  assert.deepEqual(starts.map(s=>s.step),[1,2,3,4,5,6],'actual animations run in step order');
+  // Reproduce the reported up/down + resize/refresh interaction, not just
+  // individual GSAP target opacity; assert visible ancestor and stable replay count.
+  await p.evaluate(()=>scroll.scrollTo(0,{duration:0,disableLerp:true}));await p.waitForTimeout(900);
+  await move('.rf-about-process');await p.waitForTimeout(900);
+  await p.evaluate(()=>{ScrollTrigger.refresh();initEditorialRefresh();});await p.waitForTimeout(900);
+  assert.equal(await p.locator('.rf-about-process').evaluate(e=>getComputedStyle(e).opacity),'1');
+  assert.equal(await p.locator('[data-about-step]').evaluateAll(es=>es.every(e=>getComputedStyle(e).opacity==='1')),true,'steps persist after up/down/refresh');
+  assert.deepEqual(await p.locator('[data-about-step]').evaluateAll(es=>es.map(e=>e.dataset.aboutRevealCount)),revealed,'no replay on reinitialization');
+  assert.equal(await p.evaluate(()=>window.__aboutAnimationStarts.length),6,'no actual animation re-created');
+  await p.setViewportSize({width:width+1,height:width===1032?1400:1000});await p.waitForTimeout(600);
+  await p.mouse.wheel(0,600);await p.waitForTimeout(700);await p.mouse.wheel(0,-600);await p.waitForTimeout(700);
+  await move('.rf-about-process');await p.waitForTimeout(700);
+  assert.equal(await p.locator('.rf-about-process').evaluate(e=>getComputedStyle(e).opacity),'1','visible parent after native scroll and resize');
+  assert.equal(await p.evaluate(()=>window.__aboutAnimationStarts.length),6,'native up/down cannot replay steps');
+  await p.setViewportSize({width,height:width===1032?1400:1000});await p.waitForTimeout(300);
   await move('.case-intro-split');await p.waitForTimeout(750);await p.screenshot({path:path.join(ROOT,'tools/reports/site-refresh',`about-process-${lang}-${width}.png`)});
   await move('.rf-about-audience');await p.waitForTimeout(600);await p.screenshot({path:path.join(ROOT,'tools/reports/site-refresh',`about-audience-${lang}-${width}.png`)});
   await move('.rf-about-clients');await p.waitForTimeout(600);
@@ -48,6 +95,17 @@ const COPY_BASE='3b466483bcde38cfbf723b6f094c4a8184e8d2b6';
   const viewport=await p.locator('.rf-about-clients .logo-marquee-viewport').boundingBox();assert.ok(viewport.x<2&&Math.abs(viewport.width-width)<2,'full-bleed clients');
   await p.screenshot({path:path.join(ROOT,'tools/reports/site-refresh',`about-clients-${lang}-${width}.png`)});
   assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'no sideways page overflow');assert.equal(errors.length,0,errors.join('\n'));
+  if(width===1440){
+   // A Barba revisit is NOT a browser refresh: preserve the lifetime reveal set.
+   await p.evaluate(route=>barba.go(route),lang==='ar'?'/ar/services/':'/services/');await p.waitForTimeout(3500);
+   await p.evaluate(route=>barba.go(route),route);await p.waitForTimeout(3500);
+   await move('.rf-about-process');await p.waitForTimeout(1300);
+   assert.equal(await p.locator('.rf-about-process').evaluate(e=>getComputedStyle(e).opacity),'1');
+   assert.equal(await p.evaluate(()=>window.__aboutAnimationStarts.length),6,'no replay on Barba return');
+   await p.reload();await p.waitForTimeout(8500);await move('.rf-about-process');await p.waitForTimeout(1300);
+   assert.ok(await p.evaluate(()=>window.__aboutAnimationStarts.length)>0,'full reload permits animation again');
+   assert.equal(errors.length,0,errors.join('\n'));
+  }
   console.log('PASS About owner review',lang,width);await c.close();
  }
  const c=await b.newContext({reducedMotion:'reduce',viewport:{width:390,height:844}});await isolate(c,origin);const p=await c.newPage();await p.goto(origin+'/ar/about/');await p.waitForTimeout(8000);

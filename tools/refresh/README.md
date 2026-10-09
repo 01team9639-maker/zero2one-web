@@ -235,6 +235,26 @@ reduced-motion check. Screenshots are `about-*.png` in the ignored evidence
 folder. Refresh interaction checks and scroll/navigation lifecycle checks also
 pass. These are browser simulations, not real-device or screen-reader tests.
 
+### About interaction correction — 2026-10-09 (local only)
+
+Owner screenshots showed the legacy `.fade-in.animate` process parent at zero
+opacity. Its resetting ScrollTrigger could conceal the entire timeline even
+though individual step opacity tests passed. About now removes that parent
+animation and uses one-shot viewport reveals with a short ordered stagger;
+underlying content is visible without a hidden inline fallback. A document-life
+set prevents replay on upward scrolling, responsive reflow, script
+reinitialization and Barba revisits; a browser reload starts fresh. Reduced
+motion shows the content without animation.
+
+The six numbered value cards are native details/summary disclosures on phones
+and portrait tablets up to 1100 CSS pixels, with chevrons, keyboard support and
+one open card at a time (the active card can also close). Desktop/large landscape
+layouts remain fully expanded. Approved headings and body copy are unchanged.
+`test_about_owner.js` also covers 1032-pixel portrait iPad layout, actual step
+animation creation/order, parent visibility, native wheel up/down, resize,
+reinitialization, Barba return and fresh reload. The older target-only animation
+assertion was insufficient for the reported ancestor visibility regression.
+
 The rolling-letter test now waits for Locomotive's original loader to actually
 unlock input (`scroll.scroll.stop === false`) before sending wheel events. The
 cursor becomes normal earlier. It verifies positive playback after downward input
