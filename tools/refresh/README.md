@@ -64,6 +64,31 @@ Brand controls, homepage navigation and refresh interactions pass four cases eac
 All 2,350 nonempty source paragraphs remain present; generator check and whitespace
 check pass. Screenshots are retained in ignored `tools/reports/site-refresh/`.
 
+9 October compact homepage review: service cards and homepage blog previews use
+native horizontal overflow/snap with touch, logical RTL/LTR keyboard navigation
+and previous/next controls. The compact media query covers phones up to 760px
+and portrait tablets up to 1100px (including 1032px iPad Pro); desktop and larger
+landscape layouts remain grids. A single English blog card is not duplicated to
+simulate a carousel. Controls are hidden where no overflow exists.
+
+The four white differentiator cards use native details/summary with chevrons;
+only one can be open in the enhanced compact layout, with the first initially
+open. Larger layouts restore all four answers and disable the summary controls.
+Without JavaScript all answers are initially exposed. The orange card markup
+is byte-identical to its previous version in both languages. No copy was changed.
+Sliders use ResizeObserver, disconnected by the existing Barba cleanup, rather
+than extra global resize handlers. The initial lifecycle check caught extra
+resize handlers; they were replaced before delivery. Local only; no blog build,
+form, Google account or tracking implementation was modified.
+
+`node tools/test_home_compact.js` covers both languages across ten viewports,
+real Chromium touch input, arrow/keyboard boundaries, exclusive details,
+portrait/landscape switching, no overflow and the no-JS fallback. Device-width
+emulation is not testing Safari on a physical iPad. Existing button/wave (8),
+navigation (58), homepage navigation (4) and interaction (4) checks also pass.
+The strict rolling-letter/lifecycle checks pass 8/8 after the observer change;
+two Barba round trips also preserve a single working accordion and control set.
+
 ## Owner constraints
 
 - Keep source documents and original assets. Do not delete or rewrite them.

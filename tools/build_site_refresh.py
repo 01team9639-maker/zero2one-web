@@ -372,6 +372,16 @@ def original_home_layout(body,lang,ps):
     # Extend the cream polygon above the SVG viewport to avoid an antialiased
     # orange top-edge hairline at fractional transformed scroll positions.
     body=body.replace('M0 0H1440V28.6036','M0 -20H1440V28.6036')
+    def compact_slider(m):
+        track=m[0]
+        kind='services' if 'services-cards' in track.split('>')[0] else 'blog'
+        title=('خدماتنا' if kind=='services' else 'من مدونتنا') if ar else ('Our services' if kind=='services' else 'From our blog')
+        track=track.replace('>',f' data-home-scroll-track tabindex="0" role="region" aria-label="{title}">',1)
+        prev='السابق' if ar else 'Previous'; next_='التالي' if ar else 'Next'
+        def control(direction,title):
+            return f'<button type="button" data-home-scroll-{direction} aria-label="{title}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg></button>'
+        return '<div class="rf-home-scroll" data-home-scroll>'+track+'<div class="rf-home-scroll-controls" hidden>'+control('prev',prev)+control('next',next_)+'</div></div>'
+    body=re.sub(r'<div class="services-cards">[\s\S]*?</article>\s*</div>|<ul class="rf-home-blog-cards">[\s\S]*?</ul>',compact_slider,body)
     # Scope the remaining editorial sections so original section/footer CSS wins.
     body=body.replace('class="rf-section ', 'class="rf-page rf-section ')
     return body
@@ -403,7 +413,11 @@ def home_body(lang,restore=True):
     body+=section(p(14 if ar else 11,'h2'),p(15 if ar else 12)+'<div class="rf-services-grid">'+''.join(cards)+'</div>',2,'services','services')
     diff=47 if ar else 43; cstart=50 if ar else 46
     bento=[]
-    for i in range(5): bento.append('<article class="rf-card" data-rf-reveal>'+p(cstart+i*2,'h3')+p(cstart+i*2+1)+'</article>')
+    for i in range(5):
+        if i == 0:
+            bento.append('<article class="rf-card" data-rf-reveal>'+p(cstart,'h3')+p(cstart+1)+'</article>')
+        else:
+            bento.append('<details class="rf-card rf-difference-item" open><summary>'+p(cstart+i*2,'h3')+'<svg class="rf-difference-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></summary><div class="rf-difference-answer">'+p(cstart+i*2+1)+'</div></details>')
     end=60 if ar else 56
     body+=section(p(diff,'h2'),p(diff+1)+'<div class="rf-bento">'+''.join(bento)+'</div>'+p(end)+'<div class="rf-actions">'+a(end+1)+a(end+2)+'</div>',3,'difference')
     work=64 if ar else 59; wc=67 if ar else 62

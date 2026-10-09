@@ -411,6 +411,41 @@ html[lang="ar"] .rf-answer { padding:24px 0 0 50px; }
  .rf-simple-hero { padding-bottom:40px; }
 }
 @media(max-width:390px) { .rf-team-grid { grid-template-columns:1fr; } }
+/* Homepage only: phones and every current iPad portrait width (up to 1032px).
+   Desktop and larger landscape tablets retain their original grids. */
+.rf-difference-item>summary { list-style:none; }
+.rf-difference-item>summary::-webkit-details-marker { display:none; }
+.rf-difference-chevron { display:none; }
+.rf-home-scroll-controls { display:none; }
+.rf-home-page .rf-difference-item>summary { pointer-events:none; }
+@media(max-width:760px), (max-width:1100px) and (orientation:portrait) {
+ .rf-home-page .rf-home-scroll { min-width:0; }
+ .rf-home-page .rf-home-scroll [data-home-scroll-track] { display:flex; flex-wrap:nowrap; gap:20px; overflow-x:auto; overflow-y:hidden; scroll-snap-type:x mandatory; scroll-padding-inline:8px; overscroll-behavior-x:contain; -webkit-overflow-scrolling:touch; padding:8px 8px 16px; max-width:none; width:100%; scrollbar-width:thin; scrollbar-color:#fffded #ffffff30; }
+ .rf-home-page .rf-home-scroll .service-card { flex:0 0 min(clamp(270px,78vw,390px),calc(100% - 16px)); min-width:0; scroll-snap-align:start; scroll-snap-stop:always; }
+ .rf-home-page .rf-home-blog-cards .card { flex:0 0 min(clamp(270px,78vw,390px),calc(100% - 16px)); min-width:0; scroll-snap-align:start; scroll-snap-stop:always; }
+ .rf-home-page .rf-home-blog-cards { scrollbar-color:#f9460e #e0ddd2; }
+ .rf-home-page [data-home-scroll-track]:focus-visible { outline:2px solid currentColor; outline-offset:4px; }
+ .rf-home-page .rf-home-scroll-controls:not([hidden]) { display:flex; justify-content:center; gap:14px; margin-top:20px; }
+ .rf-home-scroll-controls button { display:grid; place-items:center; width:48px; height:48px; background:transparent; border:1px solid currentColor; border-radius:50%; color:inherit; cursor:pointer; }
+ .rf-home-page .our-services .rf-home-scroll-controls { color:#fffded; }
+ .rf-home-scroll-controls svg { width:22px; height:22px; stroke:currentColor; stroke-width:1.8; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+ .rf-home-scroll-controls [data-home-scroll-prev] svg { transform:rotate(180deg); }
+ html[lang="ar"] .rf-home-scroll-controls [data-home-scroll-prev] svg { transform:none; }
+ html[lang="ar"] .rf-home-scroll-controls [data-home-scroll-next] svg { transform:rotate(180deg); }
+ .rf-home-scroll-controls button:disabled { opacity:.35; cursor:default; }
+ .rf-home-scroll-controls button:focus-visible { outline:3px solid currentColor; outline-offset:3px; }
+ .rf-home-page .rf-difference .rf-bento { grid-template-columns:1fr; align-items:start; }
+ .rf-home-page .rf-difference .rf-bento .rf-card:first-child { grid-column:auto; }
+ .rf-home-page .rf-difference-item { padding:0; }
+ .rf-home-page .rf-difference-item:hover { transform:none; }
+ .rf-home-page .rf-difference-item>summary { display:flex; align-items:center; justify-content:space-between; gap:18px; padding:24px; cursor:pointer; pointer-events:auto; min-height:64px; }
+ .rf-home-page .rf-difference-item>summary h3 { margin:0; font-size:clamp(21px,2.6vw,28px); line-height:1.5; }
+ .rf-home-page .rf-difference-chevron { display:block; flex:none; width:24px; height:24px; fill:none; stroke:#f9460e; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; transition:transform .25s ease; }
+ .rf-home-page .rf-difference-item[open] .rf-difference-chevron { transform:rotate(180deg); }
+ .rf-home-page .rf-difference-answer { padding:0 24px 24px; }
+ .rf-home-page .rf-difference-answer p { margin:0; }
+ .rf-home-page .rf-difference-item>summary:focus-visible { outline:3px solid #f9460e; outline-offset:-4px; border-radius:20px; }
+}
 @media(prefers-reduced-motion:reduce) {
  .rf-page *, .rf-page *::before,.rf-page *::after { scroll-behavior:auto!important; transition:none!important; animation:none!important; }
 }

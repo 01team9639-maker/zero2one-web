@@ -730,7 +730,75 @@ function initEditorialRefresh() {
       if (event.key === 'Escape' && details.open) { details.open = false; details.querySelector('summary').focus(); event.stopPropagation(); }
     });
   });
+  // Owner's compact homepage layout. Native overflow handles touch swipes;
+  // controls and keyboard arrows use the same logical RTL/LTR progression.
+  var compact = window.matchMedia('(max-width:760px), (max-width:1100px) and (orientation:portrait)');
+  var updateFrame = null;
+  function refreshHeight() {
+    if (updateFrame !== null) cancelAnimationFrame(updateFrame);
+    updateFrame = requestAnimationFrame(function () {
+      updateFrame = null;
+      if (scroll && scroll.update) scroll.update();
+      ScrollTrigger.refresh();
+    });
+  }
+  var whiteCards = Array.from(root.querySelectorAll('.rf-difference-item'));
+  var selectedCard = whiteCards[0];
+  function syncCards() {
+    whiteCards.forEach(function (card) {
+      card.open = !compact.matches || card === selectedCard;
+      card.querySelector('summary').tabIndex = compact.matches ? 0 : -1;
+    });
+    refreshHeight();
+  }
+  whiteCards.forEach(function (card) {
+    on(card, 'toggle', function () {
+      if (compact.matches && card.open) {
+        selectedCard = card;
+        whiteCards.forEach(function (other) { if (other !== card) other.open = false; });
+      }
+      refreshHeight();
+    });
+  });
+  if (whiteCards.length) { syncCards(); on(compact, 'change', syncCards); }
+  root.querySelectorAll('[data-home-scroll]').forEach(function (slider) {
+    var track = slider.querySelector('[data-home-scroll-track]');
+    var controls = slider.querySelector('.rf-home-scroll-controls');
+    var prev = controls.querySelector('[data-home-scroll-prev]');
+    var next = controls.querySelector('[data-home-scroll-next]');
+    var sign = getComputedStyle(track).direction === 'rtl' ? -1 : 1;
+    function state() {
+      var max = Math.max(0, track.scrollWidth - track.clientWidth);
+      var pos = Math.abs(track.scrollLeft);
+      controls.hidden = !compact.matches || max < 4;
+      track.tabIndex = compact.matches && max >= 4 ? 0 : -1;
+      prev.disabled = pos < 4;
+      next.disabled = pos >= max - 4;
+    }
+    function move(forward) {
+      var max = track.scrollWidth - track.clientWidth;
+      var distance = track.children[0].getBoundingClientRect().width + parseFloat(getComputedStyle(track).gap);
+      track.scrollTo({left: sign * Math.max(0, Math.min(max, Math.abs(track.scrollLeft) + (forward ? distance : -distance))), behavior: reduced.matches ? 'auto' : 'smooth'});
+    }
+    on(prev, 'click', function () { move(false); });
+    on(next, 'click', function () { move(true); });
+    on(track, 'scroll', state, {passive:true});
+    on(track, 'keydown', function (event) {
+      if (!compact.matches || event.target !== track) return;
+      if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+        event.preventDefault(); move(event.key === (sign < 0 ? 'ArrowLeft' : 'ArrowRight'));
+      }
+    });
+    on(compact, 'change', state);
+    if (typeof ResizeObserver !== 'undefined') {
+      var trackResize = new ResizeObserver(state);
+      trackResize.observe(track);
+      undo.push(function () { trackResize.disconnect(); });
+    } else { on(window, 'resize', state); }
+    state();
+  });
   editorialRefreshCleanup = function () {
+    if (updateFrame !== null) cancelAnimationFrame(updateFrame);
     if (observer) observer.disconnect();
     animations.forEach(function (a) { a.cancel(); }); animations.clear();
     undo.forEach(function (fn) { fn(); });
