@@ -711,6 +711,23 @@ function initEditorialRefresh() {
   on(reduced, 'change', function () {
     if (reduced.matches) { animations.forEach(function (a) { a.cancel(); }); animations.clear(); }
   });
+  var aboutStepTweens = [];
+  if (!reduced.matches) root.querySelectorAll('[data-about-step]').forEach(function (card) {
+    aboutStepTweens.push(gsap.fromTo(card, {opacity:0,y:48}, {
+      opacity:1,y:0,duration:.75,ease:'power3.out',
+      scrollTrigger:{trigger:card,start:'top 88%',once:true},
+      onComplete:function () { card.dataset.aboutRevealed='true'; }
+    }));
+  });
+  function clearAboutSteps() {
+    aboutStepTweens.forEach(function (tween) {
+      if (tween.scrollTrigger) tween.scrollTrigger.kill();
+      tween.kill();
+      gsap.set(tween.targets(), {clearProps:'opacity,transform'});
+    });
+    aboutStepTweens = [];
+  }
+  on(reduced, 'change', function () { if (reduced.matches) clearAboutSteps(); });
   root.querySelectorAll('[data-rf-slider]').forEach(function (slider) {
     var track = slider.querySelector('.rf-work-track');
     var sign = getComputedStyle(track).direction === 'rtl' ? -1 : 1;
@@ -798,6 +815,7 @@ function initEditorialRefresh() {
     state();
   });
   editorialRefreshCleanup = function () {
+    clearAboutSteps();
     if (updateFrame !== null) cancelAnimationFrame(updateFrame);
     if (observer) observer.disconnect();
     animations.forEach(function (a) { a.cancel(); }); animations.clear();
@@ -2281,6 +2299,8 @@ function initScrolltriggerAnimations() {
   // Scrolltrigger Animation : Stats count-up + reveal
   if (document.querySelector(".stats.animate")) {
     $(".stats.animate").each(function (index) {
+      // About counters respect reduced motion and retain their literal metrics.
+      if (this.closest('.rf-about-page') && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
       let triggerElement = $(this);
       let statItems = $(this).find(".stat");
 

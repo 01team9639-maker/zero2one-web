@@ -601,11 +601,43 @@ def decorate_existing(page, route, lang):
             page=page[:start]+list_+'</ol>'+page[end+5:]
         page=page.replace('<div class="footer-rounded-div"','<!-- REFRESH:ABOUT --><div class="footer-rounded-div"',1)
     a='<!-- REFRESH:ABOUT-EXTRA:BEGIN -->'; z='<!-- REFRESH:ABOUT-EXTRA:END -->'
-    title=clean(paras(2)[75]) if lang=='en' else re.search(r'<h2 class="team-title">([\s\S]*?)</h2>',LEGACY[lang]['team']).group(1)
     title2='عملاؤنا في النجاح' if lang=='ar' else 'Our Clients in Success'
-    block=a+'<section class="section rf-about-team" data-scroll-section><div class="container medium"><h2>'+esc(title)+'</h2>'+team_cards(lang)+f'<a class="rf-button magnetic" data-strength="20" href="{local("/team/",lang)}">'+('تعرّف على فريقنا' if lang=='ar' else 'Meet Our Team')+'</a></div></section>'+clients('<h2>'+title2+'</h2>',lang,7)+z
+    block=a+clients('<h2>'+title2+'</h2>',lang,7).replace('rf-clients"','rf-clients rf-about-clients"',1)+z
     if a in page: page=re.sub(re.escape(a)+r'[\s\S]*?'+re.escape(z),lambda _:block,page)
     else: page=page.replace('<!-- REFRESH:ABOUT -->',block+'<!-- REFRESH:ABOUT -->')
+    return refine_about_owner(page,lang)
+
+
+def refine_about_owner(page,lang):
+    """Owner's About-only review; preserve prose, metrics and original destinations."""
+    marker='<!-- OWNER:ABOUT-2026-10-09 -->'
+    if marker in page: return page
+    def button(label,href,external=False):
+        attrs=' target="_blank" rel="noopener"' if external else ''
+        return '<div class="btn btn-normal service-card-btn rf-about-action"><a class="btn-click magnetic" data-strength="20" data-strength-text="10" href="'+href+'"'+attrs+'><div class="btn-fill"></div><span class="btn-text"><span class="btn-text-inner">'+label+'</span><svg class="service-card-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg></span></a></div>'
+    stats=re.search(r'<div class="about-stats">[\s\S]*?<div class="stat-description">[^<]*</div>\s*</div>\s*</div>',page)
+    head=re.search(r'<div class="case-includes-head">[\s\S]*?</div>\s*<div class="stripe"></div>',page)
+    if not stats or not head: raise ValueError('Expected original About stats and consultation block')
+    label=re.search(r'<span class="btn-text-inner">([\s\S]*?)<div class="arrow">',head[0])[1].strip()
+    href=re.search(r'<a href="([^"]+)"',head[0])[1]
+    title=re.search(r'<h2\b[^>]*>[\s\S]*?</h2>',head[0])[0]
+    page=page.replace(stats[0],'',1).replace(head[0],'<div class="case-includes-head">'+title+'</div>',1)
+    wave='<div class="rf-about-wave" aria-hidden="true"><svg viewBox="0 0 1440 243.604" preserveAspectRatio="none"><path d="M0 -20H1440V28.6036C1264.45 46.0335 1058.46 150.417 687.43 46.3562C317.5 -57.3952 153.84 43.218 0 58.6036Z" /></svg></div>'
+    band=marker+'<section class="section rf-about-counter-band" data-scroll-section>'+wave+'<div class="container"><div class="rf-about-counter-inner">'+stats[0].replace('class="about-stats"','class="about-stats stats animate"')+button(label,href,True)+'</div></div></section>'
+    page=page.replace('<section class="section case-overview rf-about-values"',band+'<section class="section case-overview rf-about-values"',1)
+    page=page.replace('class="section case-overview once-in"','class="section case-overview once-in rf-about-story"',1)
+    count=[0]
+    def numbered(m):
+        count[0]+=1
+        return m[0]+'<span class="rf-about-card-number" aria-hidden="true">'+str(count[0])+'</span>'
+    page=re.sub(r'<div class="case-include-item">',numbered,page)
+    page=page.replace('class="rf-step-card"','class="rf-step-card" data-about-step')
+    def who(m):
+        anchor=re.search(r'<a href="([^"]+)">([\s\S]*?)</a>',m[0])
+        if not anchor: raise ValueError('Expected About audience contact link')
+        content=m[0].replace(anchor[0],'').replace('class="flex-col"','class="flex-col rf-about-audience"',1)
+        return content.replace('</p>','</p>'+button(anchor[2],anchor[1]),1)
+    page=re.sub(r'<div class="flex-col">\s*<h2 class="case-overview-label">(?:مع من نعمل|Who We Work With)</h2>[\s\S]*?<p class="case-outcome">[\s\S]*?</p>\s*</div>',who,page)
     return page
 
 

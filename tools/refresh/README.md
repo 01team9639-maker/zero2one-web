@@ -215,6 +215,26 @@ Copy completeness is checked source-to-output as well as DOM-to-manifest.
 Normalizing whitespace or removing the editorial `[Button -> ...]` wrapper is
 allowed; changing spelling, claims, answers or punctuation is not.
 
+### About owner review — 2026-10-09 (local only)
+
+The About page in both languages now has a compact orange, wave-topped counter
+and consultation band. Existing metrics animate on entry; reduced-motion users
+see their final values without animation. Six differentiators have numbered
+orange badges in a centered responsive grid. Timeline cards reveal individually
+on scroll, and the existing audience contact text becomes a native magnetic CTA
+inside an orange card. Approved narrative text and destinations are unchanged.
+The Team section is removed only from About; Home and the Team page remain.
+The beige client marquee is full viewport width, removing the inset clipping
+boundary; moving edge cards can naturally enter/leave at the viewport edges.
+
+`node tools/test_about_owner.js` verifies both languages at 1440, 834, 390 and
+320 CSS pixels, exact About prose against the pre-change commit, actual counter
+intermediate values, every process reveal, centered cards, client viewport width,
+local contact destinations, no horizontal overflow or uncaught errors, plus a
+reduced-motion check. Screenshots are `about-*.png` in the ignored evidence
+folder. Refresh interaction checks and scroll/navigation lifecycle checks also
+pass. These are browser simulations, not real-device or screen-reader tests.
+
 The rolling-letter test now waits for Locomotive's original loader to actually
 unlock input (`scroll.scroll.stop === false`) before sending wheel events. The
 cursor becomes normal earlier. It verifies positive playback after downward input

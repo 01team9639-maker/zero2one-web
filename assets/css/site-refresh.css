@@ -449,3 +449,50 @@ html[lang="ar"] .rf-answer { padding:24px 0 0 50px; }
 @media(prefers-reduced-motion:reduce) {
  .rf-page *, .rf-page *::before,.rf-page *::after { scroll-behavior:auto!important; transition:none!important; animation:none!important; }
 }
+
+/* Owner's About-page review — no homepage/service section is affected. */
+.rf-about-page .rf-about-story { padding-bottom:24px; }
+.rf-about-page .rf-about-story .case-overview-body p:last-child { margin-bottom:0; }
+.rf-about-counter-band { position:relative; background:#f9460e; padding:74px 0 28px; }
+.rf-about-wave { position:absolute; top:-1px; inset-inline:0; height:42px; line-height:0; pointer-events:none; }
+.rf-about-wave::before { content:''; position:absolute; top:-2px; inset-inline:0; height:4px; background:#fffded; }
+.rf-about-wave svg { display:block; width:100%; height:100%; fill:#fffded; }
+.rf-about-counter-inner { max-width:1000px; margin:auto; text-align:center; }
+.rf-about-page .about-stats { grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; margin:0 0 24px; }
+.rf-about-page .about-stats :is(.stat-number,.stat-description) { color:#fffded; }
+.rf-about-page .about-stats .stat-number { direction:ltr; unicode-bidi:isolate; }
+.rf-about-page .about-stats .stat-description { margin-inline:auto; }
+.rf-about-page .rf-about-action { position:relative; inset:auto; margin:0; display:inline-flex; max-width:100%; }
+.rf-about-page .rf-about-action .btn-click { background:#fffded; }
+.rf-about-page .rf-about-action .btn-text-inner { color:#f9460e; }
+.rf-about-page .rf-about-action .btn-click:is(:hover,:focus-visible) :is(.btn-text-inner,.service-card-arrow) { color:#fffded; stroke:#fffded; }
+.rf-about-page .rf-about-action .btn-click:is(:hover,:focus-visible) { box-shadow:inset 0 0 0 1px #fffded; }
+.rf-about-page .rf-about-values { background:#fffded; padding-block:44px; }
+.rf-about-page .rf-about-values>.container { max-width:1100px; width:calc(100% - 64px); padding:0; margin-inline:auto; }
+.rf-about-page .rf-about-values .row { justify-content:center; }
+.rf-about-page .rf-about-values .flex-col { width:100%; max-width:none; }
+.rf-about-page .rf-about-values .case-includes-head { justify-content:center; margin:0 0 38px; }
+.rf-about-page .case-overview-label { opacity:1; font-size:clamp(25px,3vw,40px); line-height:1.4; letter-spacing:0; }
+.rf-about-page .rf-about-values .case-includes { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; margin:0; }
+.rf-about-page .rf-about-values .case-include-item { position:relative; width:100%; padding:32px 28px; background:#fff; margin:0; }
+.rf-about-page .rf-about-values .case-include-item p { color:#626158; }
+.rf-about-card-number { position:absolute; top:-17px; inset-inline-end:18px; display:grid; place-items:center; width:38px; height:38px; border-radius:50%; background:#f9460e; color:#fffded; font:600 20px/1 sans-serif; }
+.rf-about-page .case-intro-split { background:#fffded; padding-block:40px; }
+.rf-about-page .case-intro-split .flex-col { margin-bottom:32px; }
+.rf-about-page .rf-about-audience { padding:36px!important; border-radius:24px; background:#f9460e; }
+.rf-about-page .rf-about-audience :is(.case-overview-label,.case-outcome) { color:#fffded; }
+.rf-about-page .rf-about-audience .stripe { background:#fffded55; }
+.rf-about-page .rf-about-audience .rf-about-action { margin-top:24px; }
+.rf-about-page .rf-about-clients { background:#fffded; color:#191b16; border:0; padding-block:48px; }
+.rf-about-page .rf-about-clients .rf-inner { width:100%; max-width:none; }
+.rf-about-page .rf-about-clients .rf-section-heading { width:calc(100% - 64px); max-width:1280px; margin-inline:auto; }
+.rf-about-page .rf-about-clients :is(.logo-marquee,.logo-marquee-viewport) { width:100%; max-width:none; }
+@media(max-width:760px) {
+ .rf-about-page .rf-about-values>.container,.rf-about-page .rf-about-clients .rf-section-heading { width:calc(100% - 40px); }
+ .rf-about-page .rf-about-values .case-includes { grid-template-columns:1fr; gap:28px; }
+ .rf-about-page .rf-about-values .case-include-item { padding:30px 24px; }
+ .rf-about-page .about-stats { gap:12px; }
+ .rf-about-page .about-stats .stat-description { font-size:12px; }
+ .rf-about-page .rf-about-audience { padding:26px!important; }
+ .rf-about-page .case-intro-split>.container { padding-inline:20px; }
+}
