@@ -296,6 +296,10 @@ def original_home_layout(body,lang,ps):
     start=16 if ar else 13
     cards=[]
     slugs=['web-design-riyadh','seo-riyadh','digital-advertising','brand-identity','social-media-management','ecommerce-development','marketing-consulting',None,None,'mobile-application']
+    remaining_images={'brand-identity','social-media-management','ecommerce-development','marketing-consulting','mobile-application','manage-google-adwords-campaigns'}
+    def remaining_image(slug):
+        base='/assets/images/owner-services-2026-10/'+slug
+        return f'<img src="{base}-800.webp" srcset="{base}-480.webp 480w, {base}-800.webp 800w, {base}-1440.webp 1440w" sizes="(max-width:500px) 78vw, 390px" width="1440" height="1024" loading="lazy" decoding="async" alt="">'
     for j,slug in enumerate(slugs):
         if slug is None: continue
         i=start+j*3;pic=2 if slug=='seo-riyadh' else SERVICES[slug][2]
@@ -308,12 +312,13 @@ def original_home_layout(body,lang,ps):
         image={'web-design-riyadh':'web','seo-riyadh':'seo','digital-advertising':'ads'}.get(slug)
         if image:
             card=re.sub(r'<img\b[^>]*>',lambda _:f'<img src="/assets/images/owner-services-2026-10/{image}.webp" width="1440" height="1024" loading="lazy" decoding="async" alt="">',card,count=1)
+        elif slug in remaining_images:
+            card=re.sub(r'<img\b[^>]*>',lambda _:remaining_image(slug),card,count=1)
         card=re.sub(r'<span class="btn-text-inner">[\s\S]*?</span>',lambda _:label(i+2),card,count=1)
-        if slug in ('marketing-consulting','mobile-application'):
-            card=card.replace('class="service-card"',f'class="service-card" data-image-pending="{slug}"')
         cards.append(card)
     ad=paras(12 if ar else 13)
-    card=template.replace('service-1','service-3').replace('class="service-card"','class="service-card" data-image-pending="manage-google-adwords-campaigns"',1)
+    card=template.replace('service-1','service-3')
+    card=re.sub(r'<img\b[^>]*>',lambda _:remaining_image('manage-google-adwords-campaigns'),card,count=1)
     card=re.sub(r'<h3 class="service-card-title">[\s\S]*?</h3>',lambda _:textnode(ad[3],'h3','service-card-title'),card,count=1)
     card=re.sub(r'<p class="service-card-text">[\s\S]*?</p>',lambda _:textnode(ad[4],'p','service-card-text'),card,count=1)
     card=re.sub(r'href="[^"]+"',lambda _:'href="'+local('/services/manage-google-adwords-campaigns/',lang)+'"',card,count=1)

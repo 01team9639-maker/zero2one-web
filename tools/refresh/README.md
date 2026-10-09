@@ -91,6 +91,19 @@ two Barba round trips also preserve a single working accordion and control set.
 
 ## Owner constraints
 
+9 October service-photo delivery: the owner supplied six JPEGs in
+`Downloads/service-images`. Homepage identity, social, ecommerce, consulting,
+mobile and dedicated Google Ads cards now use their corresponding photographs
+in both languages, replacing reused placeholders. Existing web/SEO/general-ads
+photos are unchanged. No service-page hero or approved text was changed.
+`prepare_remaining_service_images.js` produces 480/800/1440px WebP derivatives
+without cropping or restyling; `remaining-provenance.json` records original and
+output hashes. Originals stay unchanged in Downloads. Homepage uses lazy loading,
+responsive srcset and explicit intrinsic dimensions. All 2,350 approved source
+paragraphs remain present. `test_remaining_service_images.js` verifies original
+hashes, card mapping and loading on desktop, portrait tablet and phone in both
+languages. The pending-photo markers on homepage have been removed. Local only.
+
 - Keep source documents and original assets. Do not delete or rewrite them.
 - Keep approved wording verbatim, including author-supplied typos. Layout markers
   and bullet formatting are not visitor copy. Do not invent missing content.
