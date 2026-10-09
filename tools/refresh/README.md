@@ -255,6 +255,42 @@ animation creation/order, parent visibility, native wheel up/down, resize,
 reinitialization, Barba return and fresh reload. The older target-only animation
 assertion was insufficient for the reported ancestor visibility regression.
 
+### Arabic SEO owner review — 2026-10-09 (local only)
+
+Only `/ar/services/seo-riyadh/` has the `rf-seo-owner` scope. CTA text and native
+service arrows inherit the same base/hover color. The owner's three Arabic
+mockups are used as illustrative images, not evidence of rankings, endorsements,
+ratings, business details or awards. The nine files from Downloads/2 4 replace
+the service placeholder images, with responsive WebP copies and service-style
+hover zoom. All 12 source images have hash-verified, unmodified archive copies
+under `assets/images/seo/owner-review-2026-10/originals/`; this preserves clipboard
+files beyond the temporary folder's lifetime.
+
+The Know-Why and Process sections are orange with top waves; Know-Why has seven
+numbered cards and a duplicate of the approved consultation CTA. Why-Zero2One
+retains the existing dark background with top/bottom waves, six numbered beige
+cards, bold titles and regular black text. The beige Audience section uses six
+original inline line icons in an SF-like style, not Apple font assets. Process
+cards use persistent sequential viewport reveals, with a longer, alternating
+entry movement and no hidden/resetting parent. About and SEO reveal state keys
+are isolated so navigation cannot consume another page's animation state.
+
+Four package price blocks, the SEO Team section and the Clients section were
+removed as explicitly requested. Other approved text, metadata, hero layout,
+FAQ, form/measurement integration and original destinations are unchanged.
+An existing duplicate paragraph corrupting the closing `html` tag was removed;
+the identical approved sentence remains in its package card. The existing VAT
+pricing note remains unchanged; no replacement pricing was invented.
+
+`node tools/test_seo_owner.js` passes at 1440, 1032 portrait, 834, 390 and 320 CSS
+pixels: exact DOM copy excluding only approved removals/the live clock, hero and
+header copy, all images, numbering, icons, CTA base/hover colors, responsive
+overflow, actual step animation order and persistence, uncaught errors, reduced
+motion and original image hashes. Screenshots use `seo-owner-*.png` in the ignored
+evidence folder. About and refresh interaction regression suites also pass.
+Other pages, including English SEO, have dependency hash updates only; their
+content/design is unchanged. No deployment or production measurement was sent.
+
 The rolling-letter test now waits for Locomotive's original loader to actually
 unlock input (`scroll.scroll.stop === false`) before sending wheel events. The
 cursor becomes normal earlier. It verifies positive playback after downward input

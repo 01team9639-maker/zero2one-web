@@ -676,7 +676,7 @@ function delay(n) {
  * Fire all scripts on page load
  */
 var editorialRefreshCleanup = null;
-// Document-lifetime memory: revisiting About via Barba never replays a step.
+// Document-lifetime memory: revisiting About/SEO via Barba never replays a step.
 // A full page reload creates a fresh set, as requested by the owner.
 var aboutProcessRevealed = new Set();
 function initEditorialRefresh() {
@@ -717,19 +717,20 @@ function initEditorialRefresh() {
   var aboutSteps = Array.from(root.querySelectorAll('[data-about-step]'));
   var aboutObserver = null, lastAboutStart = -Infinity;
   function revealAboutStep(card, animate) {
-    var key = document.documentElement.lang + ':' + aboutSteps.indexOf(card);
+    var key = (card.dataset.revealScope || 'about') + ':' + document.documentElement.lang + ':' + aboutSteps.indexOf(card);
     if (aboutProcessRevealed.has(key)) { card.dataset.aboutRevealed='true'; return; }
     aboutProcessRevealed.add(key);
     card.dataset.aboutRevealed='true';
     if (!animate || reduced.matches || !card.animate) return;
     // No hidden inline state, no resetting ancestor tween. Content remains
     // visible after finish/cancel, refresh, resize, upward scroll or navigation.
-    var now = performance.now(), start = Math.max(now, lastAboutStart + 160);
+    var seoStep = card.dataset.revealScope === 'seo';
+    var now = performance.now(), start = Math.max(now, lastAboutStart + (seoStep ? 200 : 160));
     lastAboutStart = start;
     var anim = card.animate([
-      {opacity:0,transform:'translateY(24px) scale(.98)'},
+      {opacity:0,transform:seoStep ? 'translate('+ (aboutSteps.indexOf(card)%2 ? '-20px' : '20px') +',24px) scale(.98)' : 'translateY(24px) scale(.98)'},
       {opacity:1,transform:'translateY(0) scale(1)'}
-    ], {duration:620,delay:start-now,easing:'cubic-bezier(.2,.7,.2,1)',fill:'backwards'});
+    ], {duration:seoStep ? 760 : 620,delay:start-now,easing:'cubic-bezier(.2,.7,.2,1)',fill:'backwards'});
     card.dataset.aboutRevealCount='1';
     animations.add(anim);
     anim.onfinish = function () { animations.delete(anim); };

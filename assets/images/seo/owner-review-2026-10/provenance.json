@@ -1,0 +1,290 @@
+[
+  {
+    "name": "strategy",
+    "original": "/Users/mohammad/Downloads/2 4/عمل محتوى seo.jpg",
+    "original_copy": "originals/strategy.jpg",
+    "sha256": "8556e974baaba4e29249f5fda12d18de81bb9fd825eaa2c62dc36c9d83677555",
+    "width": 1200,
+    "height": 675,
+    "outputs": [
+      {
+        "file": "strategy-480.webp",
+        "width": 480,
+        "height": 270,
+        "bytes": 27434,
+        "sha256": "677cd4033752f844ccd7c4a7d2e56ab636b491717bf3a8711b0a9df504931f00"
+      },
+      {
+        "file": "strategy-1200.webp",
+        "width": 1200,
+        "height": 675,
+        "bytes": 124666,
+        "sha256": "b3c82be1d7986d95629c9600ca7232dd65b365057b30f490210533a2a3a86bcc"
+      }
+    ]
+  },
+  {
+    "name": "local",
+    "original": "/Users/mohammad/Downloads/2 4/local seo.jpg",
+    "original_copy": "originals/local.jpg",
+    "sha256": "70094c75993cc8d6d34d4d79768303e6229853f045ca00d017c951f54ab92629",
+    "width": 1200,
+    "height": 675,
+    "outputs": [
+      {
+        "file": "local-480.webp",
+        "width": 480,
+        "height": 270,
+        "bytes": 24774,
+        "sha256": "e7003905e91f86ae1c0e4a5053f0f5f4c4c3d4f05b2cf9deb686aa247d10b2e3"
+      },
+      {
+        "file": "local-1200.webp",
+        "width": 1200,
+        "height": 675,
+        "bytes": 80370,
+        "sha256": "cae1e9bc5c8b9e7c938968fef352a4a5c23391e71041ac49fc50c0449cf62377"
+      }
+    ]
+  },
+  {
+    "name": "technical",
+    "original": "/Users/mohammad/Downloads/2 4/التدقيق التقني.jpg",
+    "original_copy": "originals/technical.jpg",
+    "sha256": "bb37d676d3839961984d770a490a9b4a2eef7b4a01b7190a56ab05275040c7c4",
+    "width": 1200,
+    "height": 675,
+    "outputs": [
+      {
+        "file": "technical-480.webp",
+        "width": 480,
+        "height": 270,
+        "bytes": 27320,
+        "sha256": "b89ce99f269186ef850bf1f40a984f3a0815ffc179634acfa2550fbac0c55e0b"
+      },
+      {
+        "file": "technical-1200.webp",
+        "width": 1200,
+        "height": 675,
+        "bytes": 100988,
+        "sha256": "78d43338c9c572942fe66873ee2f87cc1d7f6a6d006ce80c6b91bf938d6854c2"
+      }
+    ]
+  },
+  {
+    "name": "keywords",
+    "original": "/Users/mohammad/Downloads/2 4/بحث كلمات مفتاحية.jpg",
+    "original_copy": "originals/keywords.jpg",
+    "sha256": "26f78a13bd514d35d718dd4619917ef256b2f9c578fcecb4b7ba652ed5efa289",
+    "width": 1200,
+    "height": 675,
+    "outputs": [
+      {
+        "file": "keywords-480.webp",
+        "width": 480,
+        "height": 270,
+        "bytes": 16888,
+        "sha256": "0b960571074af310318cfdf581de2909a3f0268125557e0b7712341ae1a2d938"
+      },
+      {
+        "file": "keywords-1200.webp",
+        "width": 1200,
+        "height": 675,
+        "bytes": 76486,
+        "sha256": "ccff8ac2b867535824404762bc23a1d84d51a94990b55dfea68afa6c7b1603e3"
+      }
+    ]
+  },
+  {
+    "name": "content",
+    "original": "/Users/mohammad/Downloads/2 4/كتابة المحتوى.jpg",
+    "original_copy": "originals/content.jpg",
+    "sha256": "0842d4cf67ce628e6728c065e17d7fb6a6a30356e74b0b72f31355660901bf4b",
+    "width": 1200,
+    "height": 675,
+    "outputs": [
+      {
+        "file": "content-480.webp",
+        "width": 480,
+        "height": 270,
+        "bytes": 12586,
+        "sha256": "4a3ee72fc309789bd3c7c4232fe2385af4e3bfc2f8dbdbf9544ddcdd07225fb6"
+      },
+      {
+        "file": "content-1200.webp",
+        "width": 1200,
+        "height": 675,
+        "bytes": 36522,
+        "sha256": "8162acabc445ff9cd36d9848a03fc931d379658cb8f8ad386ed1b484bfb11ae2"
+      }
+    ]
+  },
+  {
+    "name": "ai",
+    "original": "/Users/mohammad/Downloads/2 4/seo with ai.jpg",
+    "original_copy": "originals/ai.jpg",
+    "sha256": "b1a8ebbb8541490bb4de62680a6787e2770f21cd869af1c42aa3aa7a706bd61f",
+    "width": 1200,
+    "height": 675,
+    "outputs": [
+      {
+        "file": "ai-480.webp",
+        "width": 480,
+        "height": 270,
+        "bytes": 14682,
+        "sha256": "1e8820b232b33cdf2b36029343f3ffadda78838dd7d0bf6f40759d2e1d9b2a80"
+      },
+      {
+        "file": "ai-1200.webp",
+        "width": 1200,
+        "height": 675,
+        "bytes": 44230,
+        "sha256": "ea510c73b093a90332386f9a67fec04837de1a61b278788bcea953acbe00f147"
+      }
+    ]
+  },
+  {
+    "name": "backlinks",
+    "original": "/Users/mohammad/Downloads/2 4/بناء الورابط الخارجية.jpg",
+    "original_copy": "originals/backlinks.jpg",
+    "sha256": "41ff7f4bec842136bc63a3498c5472197246ddc0fd8c4b5839c5ccc89b00f4ba",
+    "width": 1200,
+    "height": 675,
+    "outputs": [
+      {
+        "file": "backlinks-480.webp",
+        "width": 480,
+        "height": 270,
+        "bytes": 28072,
+        "sha256": "3484d185e19ac4da351148e8791379cff6745551efe8a67b1a9a20c684acab49"
+      },
+      {
+        "file": "backlinks-1200.webp",
+        "width": 1200,
+        "height": 675,
+        "bytes": 124550,
+        "sha256": "ed6e15ba50585ef58bd3039a6a2add64a9001c1957bde596d1c9851a598eaa65"
+      }
+    ]
+  },
+  {
+    "name": "ecommerce",
+    "original": "/Users/mohammad/Downloads/2 4/تحسين محركات البحث للمتاجر الالكترونية.jpg",
+    "original_copy": "originals/ecommerce.jpg",
+    "sha256": "08d8c76c601eb17005697bbaf4fcebd3ba77a192ef311a4a70a1973285d4392c",
+    "width": 1200,
+    "height": 675,
+    "outputs": [
+      {
+        "file": "ecommerce-480.webp",
+        "width": 480,
+        "height": 270,
+        "bytes": 23400,
+        "sha256": "c2e54f31ae5e57bb22de623ee72e5f07016077793b3bf02bcabefa7cb0d7266b"
+      },
+      {
+        "file": "ecommerce-1200.webp",
+        "width": 1200,
+        "height": 675,
+        "bytes": 90732,
+        "sha256": "cd0b0b8253e7878d611accd6ee1bb4ecde6db801484d542efdb136d8c6478027"
+      }
+    ]
+  },
+  {
+    "name": "reporting",
+    "original": "/Users/mohammad/Downloads/2 4/التقرير والمتابعة.jpg",
+    "original_copy": "originals/reporting.jpg",
+    "sha256": "cbbff38abc76318c4fb813790b89a5ccf1a10ab273d23058c1a40b4abc4eecf3",
+    "width": 1200,
+    "height": 675,
+    "outputs": [
+      {
+        "file": "reporting-480.webp",
+        "width": 480,
+        "height": 270,
+        "bytes": 14522,
+        "sha256": "6aa3f1a877d89d1ec90266138acc8134d6048b38c2b22c12b0f09cf325189b33"
+      },
+      {
+        "file": "reporting-1200.webp",
+        "width": 1200,
+        "height": 675,
+        "bytes": 52034,
+        "sha256": "33806695168cdf5263734e5b8b6b454ef6d0e64e0e37f79d8653c21e9f71ab1a"
+      }
+    ]
+  },
+  {
+    "name": "illustration-google-ar",
+    "original": "/var/folders/8_/5_y4wspx02q2c931shz3ywkc0000gn/T/codex-clipboard-2a3d2d17-d5a6-449a-8c22-5cae2074de3a.jpg",
+    "original_copy": "originals/illustration-google-ar.jpg",
+    "sha256": "954b956e58306292aaca75726d436c68cbb4c11bab751dbaf1247728e39e7bf9",
+    "width": 1152,
+    "height": 928,
+    "outputs": [
+      {
+        "file": "illustration-google-ar-640.webp",
+        "width": 640,
+        "height": 516,
+        "bytes": 25774,
+        "sha256": "de8f1460e375d1cbb48486ec5fdc455a16d3bd9fe9503324a096a0ce4abeb7cb"
+      },
+      {
+        "file": "illustration-google-ar-1024.webp",
+        "width": 1024,
+        "height": 825,
+        "bytes": 45480,
+        "sha256": "b8c8185bab724f551a648fd1929cde0dda6c0e2b36483205a80bbe611854633c"
+      }
+    ]
+  },
+  {
+    "name": "illustration-maps-ar",
+    "original": "/var/folders/8_/5_y4wspx02q2c931shz3ywkc0000gn/T/codex-clipboard-b99d67c9-91dc-4889-8122-43321fb856b4.jpg",
+    "original_copy": "originals/illustration-maps-ar.jpg",
+    "sha256": "383427bc7a764923891d57cc7214fac0915d1fd3488f7efa51003975df382bf5",
+    "width": 1024,
+    "height": 1024,
+    "outputs": [
+      {
+        "file": "illustration-maps-ar-640.webp",
+        "width": 640,
+        "height": 640,
+        "bytes": 35272,
+        "sha256": "67d34fb398439f3f9d8c54ca8d7b2cff68c6da9296e30882a59d773cfbe1ccee"
+      },
+      {
+        "file": "illustration-maps-ar-1024.webp",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 66048,
+        "sha256": "a8ca29c1c681598d5e22c1060a3ca86fecd506fee8b42cd7a9a4b9a9a2c67b2e"
+      }
+    ]
+  },
+  {
+    "name": "illustration-chatgpt-ar",
+    "original": "/var/folders/8_/5_y4wspx02q2c931shz3ywkc0000gn/T/codex-clipboard-572c9dc3-0f91-45ea-b297-1b1bc26b2c7d.jpg",
+    "original_copy": "originals/illustration-chatgpt-ar.jpg",
+    "sha256": "b00afdb532432ce504b93ffae31b02ebbdd0f732377de49cd13d961f0df86ef1",
+    "width": 1024,
+    "height": 1024,
+    "outputs": [
+      {
+        "file": "illustration-chatgpt-ar-640.webp",
+        "width": 640,
+        "height": 640,
+        "bytes": 34700,
+        "sha256": "79fdd04dbb32daeeb6a282262c0df87cf3f2b7a99194a2f2dc67fb43a31286bc"
+      },
+      {
+        "file": "illustration-chatgpt-ar-1024.webp",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 64812,
+        "sha256": "0932cad2f3fe93b536b1be56184e32b7697681849d3c5d13b3772ed0f2cf08c3"
+      }
+    ]
+  }
+]

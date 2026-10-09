@@ -49,7 +49,8 @@ def check():
         for i in range(start,end):
             para=DOCS['4']['paragraphs'][i];t=clean(para)
             if not t: continue
-            if i in (0,98,109,220,229): status='authoring'
+            if lang=='ar' and i in (106,108): status='owner-removed-2026-10-09'
+            elif i in (0,98,109,220,229): status='authoring'
             elif i in (12,139): status='held-unverified-ranking-label'
             else:
                 t=re.sub(r'^(Title|Description|العنوان|الوصف):\s*','',t)

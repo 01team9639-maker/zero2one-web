@@ -507,5 +507,59 @@ html[lang="ar"] .rf-answer { padding:24px 0 0 50px; }
  .rf-about-page .about-stats { gap:12px; }
  .rf-about-page .about-stats .stat-description { font-size:12px; }
  .rf-about-page .rf-about-audience { padding:26px!important; }
- .rf-about-page .case-intro-split>.container { padding-inline:20px; }
+.rf-about-page .case-intro-split>.container { padding-inline:20px; }
+}
+
+/* Arabic SEO owner review. The scope class is absent from every other page. */
+.rf-seo-owner :is(.seo-visibility,.seo-services,.seo-audience,.seo-plans) { background:#fffded; }
+.rf-seo-owner .seo-hero-cta .btn-text { display:flex; align-items:center; gap:12px; color:#f9460e; }
+.rf-seo-owner .seo-hero-cta .btn-text-inner { color:inherit; }
+.rf-seo-owner .seo-hero-cta .service-card-arrow { width:23px; height:23px; flex:none; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; transform:scaleX(-1); }
+.rf-seo-owner .seo-hero-cta-primary .btn-text { color:#fffded; }
+.rf-seo-owner .seo-hero-cta .btn-click:is(:hover,:focus-visible) .btn-text { color:#fffded; }
+.rf-seo-owner .seo-hero-cta .btn-click:is(:hover,:focus-visible) .btn-text-inner { color:inherit; }
+.rf-seo-owner .seo-shot,.rf-seo-owner .seo-card { transition:box-shadow .45s ease,transform .45s ease; }
+.rf-seo-owner .seo-shot img,.rf-seo-owner .seo-card-img { transition:transform .6s cubic-bezier(.2,.6,.2,1); }
+@media(hover:hover) and (prefers-reduced-motion:no-preference) {
+ .rf-seo-owner .seo-shot:hover,.rf-seo-owner .seo-card:hover { transform:translateY(-6px); box-shadow:0 16px 40px #191b1618; }
+ .rf-seo-owner .seo-shot:hover img { transform:scale(1.025); }
+ .rf-seo-owner .seo-card:hover .seo-card-img { transform:scale(1.07); }
+}
+.rf-seo-owner .seo-shot { padding:10px; border:1px solid #d8d1c3; box-shadow:0 8px 24px #191b1608; }
+.rf-seo-owner :is(.seo-know,.seo-why,.seo-process) { position:relative; padding-block:100px 88px; }
+.rf-seo-owner :is(.seo-know,.seo-process) { background:#f9460e; }
+.rf-seo-owner :is(.seo-know,.seo-process)>.seo-sec-inner>.seo-sec-title { color:#fffded; }
+.seo-owner-wave { position:absolute; inset-inline:0; top:-1px; height:56px; line-height:0; pointer-events:none; }
+.seo-owner-wave::before { content:''; position:absolute; top:-2px; inset-inline:0; height:4px; background:#fffded; }
+.seo-owner-wave svg { width:100%; height:100%; display:block; fill:#fffded; }
+.seo-owner-wave--bottom { top:auto; bottom:-1px; transform:rotate(180deg); }
+.rf-seo-owner .seo-know-list { gap:28px 24px; }
+.rf-seo-owner .seo-know-list li { background:#fffded; color:#191b16; padding:32px 26px; }
+.rf-seo-owner .seo-know-list li::before { display:none; }
+.seo-owner-number { position:absolute; inset-inline-end:20px; top:-17px; display:grid; place-items:center; width:38px; height:38px; border-radius:50%; background:#191b16; color:#fffded; font:600 19px/1 sans-serif; }
+.rf-seo-owner .seo-know .seo-section-cta { margin-top:36px; }
+.rf-seo-owner .seo-know .seo-hero-cta .btn-click { background:#fffded; }
+.rf-seo-owner .seo-know .seo-hero-cta .btn-text { color:#f9460e; }
+.rf-seo-owner .seo-know .seo-hero-cta .btn-fill { background:#191b16; }
+.rf-seo-owner .seo-know .seo-hero-cta .btn-click:is(:hover,:focus-visible) .btn-text { color:#fffded; }
+.rf-seo-owner .seo-why { padding-bottom:110px; }
+.rf-seo-owner .seo-why .seo-tiles { gap:28px 24px; }
+.rf-seo-owner .seo-why .seo-tile { position:relative; background:#fffded; color:#191b16; border-color:#fffded; padding:32px 26px; }
+.rf-seo-owner .seo-why .seo-tile :is(h3,p) { color:#191b16; }
+.rf-seo-owner .seo-why .seo-tile h3 { font-weight:700; }
+.rf-seo-owner .seo-why .seo-tile p { font-weight:400; }
+.rf-seo-owner .seo-why .seo-owner-number { background:#f9460e; }
+.seo-owner-icon { display:block; width:38px; height:38px; margin-bottom:20px; fill:none; stroke:#f9460e; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
+.rf-seo-owner .seo-audience .seo-tile { background:#fff; }
+.rf-seo-owner .seo-process .seo-timeline { --tl-ring:#f9460e; }
+.rf-seo-owner .seo-process .seo-timeline::before { background:#fffded88; }
+.rf-seo-owner .seo-process .seo-timeline-item { background:#fffded; }
+.rf-seo-owner .seo-process .seo-timeline-item::before { background:#191b16; color:#fffded; }
+.rf-seo-owner .seo-process .seo-timeline-item::after { background:#fffded88; }
+@media(max-width:700px) {
+ .rf-seo-owner :is(.seo-know,.seo-why,.seo-process) { padding-block:82px 70px; }
+ .seo-owner-wave { height:40px; }
+}
+@media(prefers-reduced-motion:reduce) {
+ .rf-seo-owner *,.rf-seo-owner *::before,.rf-seo-owner *::after { transition:none!important; animation:none!important; }
 }

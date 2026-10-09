@@ -578,6 +578,7 @@ def decorate_existing(page, route, lang):
         block=a+'<section class="section seo-sec rf-seo-team" data-scroll-section><div class="seo-sec-inner">'+textnode(heading,'h2','seo-sec-title')+team_cards(lang,'seo-riyadh')+'</div></section>'+z
         if a in page: page=re.sub(re.escape(a)+r'[\s\S]*?'+re.escape(z),lambda _:block,page)
         else: page=page.replace('<!-- CLIENTS:BEGIN',block+'\n<!-- CLIENTS:BEGIN',1)
+        if lang=='ar': page=refine_seo_owner(page)
         return re.sub(r'[ \t]+(?=\n)', '', page)
     if route!='/about/': return page
     if 'rf-about-page' not in page:
@@ -606,6 +607,89 @@ def decorate_existing(page, route, lang):
     if a in page: page=re.sub(re.escape(a)+r'[\s\S]*?'+re.escape(z),lambda _:block,page)
     else: page=page.replace('<!-- REFRESH:ABOUT -->',block+'<!-- REFRESH:ABOUT -->')
     return refine_about_interactions(refine_about_owner(page,lang))
+
+
+def refine_seo_owner(page):
+    """Arabic SEO owner review only; copy changes limited to explicit removals."""
+    # Repair a pre-existing duplicate paragraph injected into the closing tag.
+    # The approved sentence remains in the fourth package card, unchanged.
+    page=re.sub(r'</html<p class="seo-plan-fit">نحوّل محركات البحث إلى مصدر نموّ مستمرّ لمشروعك\.</p>\s*>','</html>',page)
+    # Remove requested sections even when another generator restores the block.
+    page=re.sub(r'<!-- REFRESH:SEO-TEAM:BEGIN -->[\s\S]*?<!-- REFRESH:SEO-TEAM:END -->\n?','',page)
+    page=re.sub(r'<section\b[^>]*id="clients"[\s\S]*?</section>','',page)
+    marker='<!-- OWNER:SEO-2026-10-09 -->'
+    if marker in page: return page
+    page=page.replace('rf-seo-page"','rf-seo-page rf-seo-owner"',1)
+    arrow='<svg class="service-card-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg>'
+    # Keep native magnetic/fill effects; the arrow inherits the label's color.
+    start=page.index('<!-- ===== SEO HERO')
+    end=page.index('<div class="footer-rounded-div"',start)
+    page=page[:start]+re.sub(r'(<span class="btn-text"><span class="btn-text-inner">[^<]*</span>)(</span>)',lambda m:m[1]+arrow+m[2],page[start:end])+page[end:]
+    def action():
+        return '<div class="seo-section-cta"><div class="btn btn-normal seo-hero-cta seo-hero-cta-primary"><a href="https://wa.me/966530307054" target="_blank" rel="noopener" class="btn-click magnetic" data-strength="20" data-strength-text="10"><div class="btn-fill"></div><span class="btn-text"><span class="btn-text-inner">استشارتك المجانية</span>'+arrow+'</span></a></div></div>'
+    def wave(edge='top'):
+        return '<div class="seo-owner-wave seo-owner-wave--'+edge+'" aria-hidden="true"><svg viewBox="0 0 1440 243.604" preserveAspectRatio="none"><path d="M0 -20H1440V28.6036C1264.45 46.0335 1058.46 150.417 687.43 46.3562C317.5 -57.3952 153.84 43.218 0 58.6036Z" /></svg></div>'
+    def section(id,fn):
+        nonlocal page
+        pattern=r'<section\b[^>]*id="'+re.escape(id)+r'"[\s\S]*?</section>'
+        page,n=re.subn(pattern,lambda m:fn(m[0]),page,count=1)
+        if n!=1: raise ValueError('Missing SEO section '+id)
+    base='/assets/images/seo/owner-review-2026-10/'
+    def shots(block):
+        names=iter(['google','maps','chatgpt'])
+        def pic(m):
+            name='illustration-'+next(names)+'-ar'
+            img=re.search(r'<img[\s\S]*?>',m[0])[0]
+            img=re.sub(r'src="[^"]+"','src="'+base+name+'-1024.webp"',img)
+            img=re.sub(r'srcset="[^"]+"','srcset="'+base+name+'-640.webp 640w, '+base+name+'-1024.webp 1024w"',img)
+            return '<picture>'+img+'</picture>'
+        return re.sub(r'<picture>[\s\S]*?</picture>',pic,block)
+    section('seo-why',shots)
+    def know(block):
+        block=block.replace('data-scroll-section>','data-scroll-section>'+wave(),1)
+        count=[0]
+        def number(m):
+            count[0]+=1
+            return '<li><span class="seo-owner-number" aria-hidden="true">'+str(count[0])+'</span>'+m[1]+'</li>'
+        block=re.sub(r'<li>([\s\S]*?)</li>',number,block)
+        return block.replace('</ul>','</ul>'+action(),1)
+    section('seo-know',know)
+    def services(block):
+        names=iter(['strategy','local','technical','keywords','content','ai','backlinks','ecommerce','reporting'])
+        def media(m):
+            name=next(names)
+            return '<img class="seo-card-img" src="'+base+name+'-1200.webp" srcset="'+base+name+'-480.webp 480w, '+base+name+'-1200.webp 1200w" sizes="(max-width:700px) 92vw, (max-width:1100px) 45vw, 30vw" width="1200" height="675" alt="" loading="lazy" decoding="async">'
+        return re.sub(r'<img class="seo-card-img"[^>]+>',media,block)
+    section('whats-included',services)
+    def why(block):
+        block=block.replace('data-scroll-section>','data-scroll-section>'+wave(),1)
+        count=[0]
+        def number(m):
+            count[0]+=1
+            return m[0]+'<span class="seo-owner-number" aria-hidden="true">'+str(count[0])+'</span>'
+        block=re.sub(r'<article class="seo-tile">',number,block)
+        return block.replace('</section>',wave('bottom')+'</section>')
+    section('seo-why-zero2one',why)
+    def audience(block):
+        # Original inline vector icons, SF-like line weight; no font dependency.
+        shapes=[
+          '<rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18M12 12v5m-2.5-2.5h5"/>',
+          '<path d="M4 21V5l8-2 8 2v16M8 8h1m6 0h1M8 12h1m6 0h1M10 21v-5h4v5"/>',
+          '<path d="M3 4h2l2 12h11l3-9H6"/><circle cx="9" cy="20" r="1"/><circle cx="17" cy="20" r="1"/>',
+          '<rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/>',
+          '<path d="m5 5 14 14m-2-16a5 5 0 0 0-5 6L3 18l3 3 9-9a5 5 0 0 0 6-5l-4 3-3-3 3-4Z"/>',
+          '<path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/>'
+        ]
+        icons=iter(shapes)
+        return re.sub(r'<article class="seo-tile">',lambda m:m[0]+'<svg class="seo-owner-icon" viewBox="0 0 24 24" aria-hidden="true">'+next(icons)+'</svg>',block)
+    section('seo-audience',audience)
+    section('seo-packages',lambda b:re.sub(r'<p class="seo-plan-price">[\s\S]*?</p>','',b))
+    def process(block):
+        block=block.replace('data-scroll-section>','data-scroll-section>'+wave(),1)
+        block=block.replace('seo-sec-title fade-in animate','seo-sec-title')
+        return block.replace('class="seo-timeline-item"','class="seo-timeline-item" data-about-step data-reveal-scope="seo"')
+    section('seo-process',process)
+    return page.replace('<!-- ===== SEO HERO',marker+'<!-- ===== SEO HERO',1)
 
 
 def refine_about_interactions(page):
