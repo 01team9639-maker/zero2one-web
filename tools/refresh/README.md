@@ -333,6 +333,27 @@ cursor becomes normal earlier. It verifies positive playback after downward inpu
 and reversal after upward input; no uncaught errors are exempted. The failed
 earlier result is retained as `scroll-before-readiness-fix.json`.
 
+### Scoped SEO publication — 2026-10-10
+
+The owner requested completion and upload. Only the Arabic and English SEO
+pages were released, from fresh `origin/main` revision `3b068b8`, using a separate
+release checkout `../zero2one-seo-release-2026-10-10`. The full local review branch
+was not pushed. Release commits are dependencies `3a786a6`, Arabic `ccc1942`,
+and English `47a1309`; GitHub `main` and live hosting both serve `47a1309`.
+
+The release isolates CSS/JS to SEO, retains only already-published service
+destinations, and uses the SEO page's existing `#faq` instead of publishing the
+unapproved FAQ route. GET-only production checks matched both SEO HTML pages,
+all 30 optimized images and four required bundles byte-for-byte; all 36 other
+affected pages match their prior design/content apart from the necessary main
+script cache stamp. Internal repository paths remain denied. No form submission
+or analytics execution was performed. Other proposed page designs remain local.
+
+The release's shared CSS remains `7998feae`; page-only CSS is `b973beff`, SEO JS
+`26726b99`, and main JS `b21e8b42`. The broader local preview deliberately retains
+its separate review bundles. The original image archive and all local commits
+remain available; release preparation did not overwrite this checkout.
+
 ## Still awaiting content/owner review
 
 1. Package headings were supplied without prices or deliverable matrices. No
