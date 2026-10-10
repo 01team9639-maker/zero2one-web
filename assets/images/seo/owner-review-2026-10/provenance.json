@@ -286,5 +286,77 @@
         "sha256": "0932cad2f3fe93b536b1be56184e32b7697681849d3c5d13b3772ed0f2cf08c3"
       }
     ]
+  },
+  {
+    "name": "illustration-google-en",
+    "original": "/var/folders/8_/5_y4wspx02q2c931shz3ywkc0000gn/T/codex-clipboard-a85666a1-38b0-42e4-aef6-81db1c20b898.jpg",
+    "original_copy": "originals/illustration-google-en.jpg",
+    "sha256": "18c1493939ea6802eab375c42cb12ef1e4fb21dd34cc4cf55e868ebb4088f6bc",
+    "width": 1024,
+    "height": 1024,
+    "outputs": [
+      {
+        "file": "illustration-google-en-640.webp",
+        "width": 640,
+        "height": 640,
+        "bytes": 32718,
+        "sha256": "68efd0e03daf88b12ff8bc5d3422a1063f11a0ded5125daecddde635b14c642b"
+      },
+      {
+        "file": "illustration-google-en-1024.webp",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 57492,
+        "sha256": "90d44a44ad97abdf1bb6de785d8e7849285662be2e07cea8afe66f3d41b8e9f6"
+      }
+    ]
+  },
+  {
+    "name": "illustration-maps-en",
+    "original": "/var/folders/8_/5_y4wspx02q2c931shz3ywkc0000gn/T/codex-clipboard-2dffad0a-f06c-4866-a0e0-3776b2ae7b9c.jpg",
+    "original_copy": "originals/illustration-maps-en.jpg",
+    "sha256": "d8c5cbca6fd3ec68b31febb73283b79cba7e8cf5ff6d8cd86f217613c69b305e",
+    "width": 1024,
+    "height": 1024,
+    "outputs": [
+      {
+        "file": "illustration-maps-en-640.webp",
+        "width": 640,
+        "height": 640,
+        "bytes": 33198,
+        "sha256": "8facc27e861fdbeb71b7410fc4196636dc5d3f66d96faf734e0658f0da4f69a4"
+      },
+      {
+        "file": "illustration-maps-en-1024.webp",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 56648,
+        "sha256": "00381e4b46946df13fed2d324eba42bca10d716b761c8d17d8bc137373faff1b"
+      }
+    ]
+  },
+  {
+    "name": "illustration-chatgpt-en",
+    "original": "/var/folders/8_/5_y4wspx02q2c931shz3ywkc0000gn/T/codex-clipboard-c5a86b05-afba-403a-92c2-d70163550db1.jpg",
+    "original_copy": "originals/illustration-chatgpt-en.jpg",
+    "sha256": "abdd47b622bf8bc64f9550f10bf933189ac5837d46f5c86c1d3f843703bc0b18",
+    "width": 1024,
+    "height": 1024,
+    "outputs": [
+      {
+        "file": "illustration-chatgpt-en-640.webp",
+        "width": 640,
+        "height": 640,
+        "bytes": 37484,
+        "sha256": "1c9cf500b74a5826a009dc3c957c970802ab98693a4b692b58445528c090ca29"
+      },
+      {
+        "file": "illustration-chatgpt-en-1024.webp",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 66502,
+        "sha256": "f78663ff84f92a424261707b52fe912bf651ceb7040201ad7d1b68cae8254a28"
+      }
+    ]
   }
 ]

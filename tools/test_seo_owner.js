@@ -21,9 +21,10 @@ const route='/ar/services/seo-riyadh/';
     const old=new DOMParser().parseFromString(before,'text/html');
     const clean=doc=>{
      const main=doc.querySelector('main').cloneNode(true);
-     main.querySelectorAll('#clients,.rf-seo-team,.seo-plan-price,[aria-hidden="true"],script,style,#timeSpan').forEach(e=>e.remove());
+     main.querySelectorAll('#clients,.rf-seo-team,.seo-plan-price,[aria-hidden="true"],script,style,#timeSpan,.seo-owner-details-label,.rf-home-scroll-controls').forEach(e=>e.remove());
      // Explicit added CTA is a duplicate of the approved hero label.
      main.querySelector('#seo-know .seo-section-cta')?.remove();
+     main.querySelectorAll('h1,h2,h3,h4,p,li,summary,article,figure,details,div,section').forEach(e=>e.appendChild(doc.createTextNode(' ')));
      return main.textContent.replace(/\s+/g,' ').trim();
     };
     if(clean(old)!==clean(document)){

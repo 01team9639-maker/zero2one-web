@@ -49,7 +49,7 @@ def check():
         for i in range(start,end):
             para=DOCS['4']['paragraphs'][i];t=clean(para)
             if not t: continue
-            if lang=='ar' and i in (106,108): status='owner-removed-2026-10-09'
+            if i in (106,108,227,228): status='owner-removed-2026-10-09'
             elif i in (0,98,109,220,229): status='authoring'
             elif i in (12,139): status='held-unverified-ranking-label'
             else:

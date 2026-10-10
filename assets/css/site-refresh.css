@@ -510,11 +510,17 @@ html[lang="ar"] .rf-answer { padding:24px 0 0 50px; }
 .rf-about-page .case-intro-split>.container { padding-inline:20px; }
 }
 
-/* Arabic SEO owner review. The scope class is absent from every other page. */
+/* Bilingual SEO owner review. The scope class is absent from other services. */
+.rf-seo-owner .seo-sec { border-block-start:0; }
+/* Locomotive transforms make the header/hero separate stacking contexts.
+   Lift the header itself, not only the dropdown, without changing other pages. */
+.rf-seo-owner .case-header { position:relative; z-index:90; overflow:visible; }
+.rf-seo-owner .case-header .nav-bar { z-index:91; }
 .rf-seo-owner :is(.seo-visibility,.seo-services,.seo-audience,.seo-plans) { background:#fffded; }
 .rf-seo-owner .seo-hero-cta .btn-text { display:flex; align-items:center; gap:12px; color:#f9460e; }
 .rf-seo-owner .seo-hero-cta .btn-text-inner { color:inherit; }
-.rf-seo-owner .seo-hero-cta .service-card-arrow { width:23px; height:23px; flex:none; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; transform:scaleX(-1); }
+.rf-seo-owner .service-card-arrow { width:23px; height:23px; flex:none; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; transform:none; }
+html[lang="ar"] .rf-seo-owner .service-card-arrow { transform:scaleX(-1); }
 .rf-seo-owner .seo-hero-cta-primary .btn-text { color:#fffded; }
 .rf-seo-owner .seo-hero-cta .btn-click:is(:hover,:focus-visible) .btn-text { color:#fffded; }
 .rf-seo-owner .seo-hero-cta .btn-click:is(:hover,:focus-visible) .btn-text-inner { color:inherit; }
@@ -530,8 +536,9 @@ html[lang="ar"] .rf-answer { padding:24px 0 0 50px; }
 .rf-seo-owner :is(.seo-know,.seo-process) { background:#f9460e; }
 .rf-seo-owner :is(.seo-know,.seo-process)>.seo-sec-inner>.seo-sec-title { color:#fffded; }
 .seo-owner-wave { position:absolute; inset-inline:0; top:-1px; height:56px; line-height:0; pointer-events:none; }
-.seo-owner-wave::before { content:''; position:absolute; top:-2px; inset-inline:0; height:4px; background:#fffded; }
-.seo-owner-wave svg { width:100%; height:100%; display:block; fill:#fffded; }
+/* Clip the original curve to its viewBox. Its negative control points must
+   not paint a stray seam outside the divider on fractional scroll positions. */
+.seo-owner-wave svg { width:100%; height:100%; display:block; overflow:hidden; fill:#fffded; }
 .seo-owner-wave--bottom { top:auto; bottom:-1px; transform:rotate(180deg); }
 .rf-seo-owner .seo-know-list { gap:28px 24px; }
 .rf-seo-owner .seo-know-list li { background:#fffded; color:#191b16; padding:32px 26px; }
@@ -556,6 +563,52 @@ html[lang="ar"] .rf-answer { padding:24px 0 0 50px; }
 .rf-seo-owner .seo-process .seo-timeline-item { background:#fffded; }
 .rf-seo-owner .seo-process .seo-timeline-item::before { background:#191b16; color:#fffded; }
 .rf-seo-owner .seo-process .seo-timeline-item::after { background:#fffded88; }
+/* Card depth stays visible on touch screens as well as during pointer hover. */
+.rf-seo-owner :is(.seo-shot,.seo-card,.seo-tile,.seo-plan,.seo-know-list li,.seo-timeline-item) { box-shadow:0 7px 22px #191b1610,inset 0 0 0 1px #191b1618; transition:box-shadow .4s ease,transform .4s ease; }
+.rf-seo-owner .seo-plan-featured { box-shadow:0 7px 22px #191b1610,inset 0 0 0 2px #f9460e; }
+.rf-seo-owner .seo-card-media { overflow:hidden; }
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference) {
+ .rf-seo-owner :is(.seo-shot,.seo-card,.seo-tile,.seo-plan,.seo-know-list li):hover { transform:translateY(-5px); box-shadow:0 18px 38px #191b1626,inset 0 0 0 1px #f9460e66; }
+}
+.rf-seo-owner .seo-plan-cta { margin-top:auto; padding-top:20px; }
+.rf-seo-owner .seo-plan-cta .btn-click { height:auto; min-height:54px; width:100%; }
+.rf-seo-owner .seo-plan-cta .btn-text { gap:12px; padding:14px 20px; height:auto; color:#f9460e; }
+.rf-seo-owner .seo-plan-cta .btn-text-inner { color:inherit; line-height:1.5; }
+.rf-seo-owner .seo-plan-cta .btn-click:is(:hover,:focus-visible) .btn-text { color:#fffded; }
+.rf-seo-owner .seo-plan-cta .btn-click:is(:hover,:focus-visible) .btn-text-inner { color:inherit; }
+.rf-seo-owner .seo-owner-accordion>summary { list-style:none; pointer-events:none; }
+.rf-seo-owner .seo-owner-accordion>summary::-webkit-details-marker { display:none; }
+.rf-seo-owner .seo-owner-chevron,.rf-seo-owner .seo-owner-details-label { display:none; }
+.rf-seo-owner .seo-owner-accordion .seo-owner-answer { min-width:0; }
+.rf-seo-owner .seo-owner-scroll { min-width:0; }
+@media(max-width:760px), (max-width:1100px) and (orientation:portrait) {
+ .rf-seo-owner .seo-owner-scroll [data-home-scroll-track] { display:flex; flex-wrap:nowrap; gap:20px; width:100%; max-width:none; overflow-x:auto; overflow-y:hidden; scroll-snap-type:x mandatory; scroll-padding-inline:10px; overscroll-behavior-x:contain; -webkit-overflow-scrolling:touch; padding:12px 10px 28px; scrollbar-width:thin; scrollbar-color:#f9460e #e0ddd2; }
+ .rf-seo-owner .seo-owner-scroll :is(.seo-shot,.seo-card) { flex:0 0 min(clamp(270px,78vw,430px),calc(100% - 16px)); min-width:0; scroll-snap-align:start; scroll-snap-stop:always; }
+ .rf-seo-owner [data-home-scroll-track]:focus-visible { outline:2px solid #f9460e; outline-offset:3px; }
+ .rf-seo-owner .rf-home-scroll-controls:not([hidden]) { display:flex; justify-content:center; gap:14px; margin-top:12px; color:#f9460e; }
+ .rf-seo-owner [data-seo-accordion] { grid-template-columns:1fr; align-items:start; gap:26px; }
+ .rf-seo-owner .seo-owner-accordion.seo-tile { padding:0; }
+ .rf-seo-owner .seo-owner-accordion.seo-tile::before { display:none; }
+ .rf-seo-owner .seo-owner-accordion>summary { position:relative; display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:76px; padding:24px; cursor:pointer; pointer-events:auto; }
+ .rf-seo-owner .seo-owner-accordion>summary h3 { margin:0; font-weight:700; line-height:1.45; }
+ .rf-seo-owner .seo-owner-chevron { display:block; width:24px; height:24px; flex:none; fill:none; stroke:#f9460e; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; transition:transform .25s ease; }
+ .rf-seo-owner .seo-owner-accordion[open]>summary .seo-owner-chevron { transform:rotate(180deg); }
+ .rf-seo-owner .seo-owner-answer { padding:0 24px 24px; }
+ .rf-seo-owner .seo-owner-accordion>summary:focus-visible { outline:3px solid #f9460e; outline-offset:-4px; border-radius:18px; }
+ .rf-seo-owner .seo-audience summary .seo-owner-icon { width:28px; height:28px; flex:none; margin:0; }
+ .rf-seo-owner .seo-audience summary h3 { margin-inline-end:auto; }
+ .rf-seo-owner .seo-plan { padding:0 0 24px; }
+ .rf-seo-owner .seo-plan .seo-owner-accordion>summary { flex-wrap:wrap; gap:10px; }
+ .rf-seo-owner .seo-plan-name { flex:1 1 100%; }
+ .rf-seo-owner .seo-owner-details-label { display:block; color:#f9460e; font-size:14px; }
+ .rf-seo-owner .seo-plan .seo-owner-chevron { margin-inline-end:auto; }
+ .rf-seo-owner .seo-plan .seo-plan-cta { margin:0 24px; padding-top:8px; }
+ .rf-seo-owner .seo-plan .seo-owner-answer { padding-bottom:12px; }
+ .rf-seo-owner .seo-plan .seo-plan-more { margin-bottom:0; }
+ .rf-seo-owner .seo-plan-more[data-seo-compact-includes] .seo-plan-toggle { pointer-events:none; cursor:default; }
+ .rf-seo-owner .seo-plan-more[data-seo-compact-includes] .seo-plan-toggle::after { display:none; }
+ .rf-seo-owner .seo-results-layout { grid-template-columns:1fr; }
+}
 @media(max-width:700px) {
  .rf-seo-owner :is(.seo-know,.seo-why,.seo-process) { padding-block:82px 70px; }
  .seo-owner-wave { height:40px; }

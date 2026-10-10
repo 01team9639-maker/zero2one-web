@@ -709,7 +709,7 @@ function initEditorialRefresh() {
         anim.onfinish = function () { animations.delete(anim); };
       });
     }, { threshold: .07 });
-    root.querySelectorAll('[data-rf-reveal], .seo-service-card, .seo-tile, .case-study-section .flex-col, .z2o-card').forEach(function (el) { observer.observe(el); });
+    root.querySelectorAll('[data-rf-reveal], .seo-service-card, .seo-tile, .rf-seo-owner .seo-shot, .rf-seo-owner .seo-card, .rf-seo-owner .seo-know-list li, .rf-seo-owner .seo-plan, .case-study-section .flex-col, .z2o-card').forEach(function (el) { observer.observe(el); });
   }
   on(reduced, 'change', function () {
     if (reduced.matches) { animations.forEach(function (a) { a.cancel(); }); animations.clear(); }
@@ -804,6 +804,64 @@ function initEditorialRefresh() {
     });
   });
   if (whiteCards.length) { syncCards(); on(compact, 'change', syncCards); }
+  // Each SEO section owns its own compact disclosure selection. Desktop and
+  // script-free pages show the approved copy in full; touch/keyboard compact
+  // visitors can open one card without closing a card in a different section.
+  root.querySelectorAll('[data-seo-accordion]').forEach(function (group) {
+    var cards = Array.from(group.querySelectorAll('.seo-owner-accordion'));
+    var chosen = cards[0];
+    var includes = Array.from(group.querySelectorAll('.seo-plan-more'));
+    var includeState = new Map(), wasCompact = null;
+    function syncSeoCards() {
+      if (wasCompact !== compact.matches) {
+        includes.forEach(function (more) {
+          if (compact.matches) {
+            if (more.dataset.seoDesktopIncludes === undefined) more.dataset.seoDesktopIncludes = String(more.open);
+            includeState.set(more, more.dataset.seoDesktopIncludes === 'true');
+            more.open = true;
+            more.dataset.seoCompactIncludes = '';
+          } else if (includeState.has(more)) {
+            more.open = includeState.get(more);
+            delete more.dataset.seoDesktopIncludes;
+            delete more.dataset.seoCompactIncludes;
+          }
+          more.querySelector('summary').tabIndex = compact.matches ? -1 : 0;
+        });
+        wasCompact = compact.matches;
+      }
+      cards.forEach(function (card) {
+        card.open = !compact.matches || card === chosen;
+        card.querySelector('summary').tabIndex = compact.matches ? 0 : -1;
+      });
+      refreshHeight();
+    }
+    cards.forEach(function (card) {
+      var summary = card.querySelector('summary');
+      on(summary, 'click', function (event) {
+        event.preventDefault();
+        if (!compact.matches) return;
+        chosen = card.open ? null : card;
+        syncSeoCards();
+        var answer = card.querySelector('.seo-owner-answer');
+        if (card.open && answer && !reduced.matches && answer.animate) {
+          var anim = answer.animate([
+            {opacity:.4, transform:'translateY(8px)'},
+            {opacity:1, transform:'translateY(0)'}
+          ], {duration:280, easing:'cubic-bezier(.2,.7,.2,1)'});
+          animations.add(anim);
+          anim.onfinish = function () { animations.delete(anim); };
+        }
+      });
+      on(card, 'toggle', refreshHeight);
+    });
+    includes.forEach(function (more) {
+      on(more.querySelector('summary'), 'click', function (event) {
+        if (compact.matches) event.preventDefault();
+      });
+    });
+    syncSeoCards();
+    on(compact, 'change', syncSeoCards);
+  });
   root.querySelectorAll('[data-home-scroll]').forEach(function (slider) {
     var track = slider.querySelector('[data-home-scroll-track]');
     var controls = slider.querySelector('.rf-home-scroll-controls');

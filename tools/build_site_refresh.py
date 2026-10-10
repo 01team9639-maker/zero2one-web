@@ -578,7 +578,7 @@ def decorate_existing(page, route, lang):
         block=a+'<section class="section seo-sec rf-seo-team" data-scroll-section><div class="seo-sec-inner">'+textnode(heading,'h2','seo-sec-title')+team_cards(lang,'seo-riyadh')+'</div></section>'+z
         if a in page: page=re.sub(re.escape(a)+r'[\s\S]*?'+re.escape(z),lambda _:block,page)
         else: page=page.replace('<!-- CLIENTS:BEGIN',block+'\n<!-- CLIENTS:BEGIN',1)
-        if lang=='ar': page=refine_seo_owner(page)
+        page=refine_seo_owner(page,lang)
         return re.sub(r'[ \t]+(?=\n)', '', page)
     if route!='/about/': return page
     if 'rf-about-page' not in page:
@@ -609,8 +609,8 @@ def decorate_existing(page, route, lang):
     return refine_about_interactions(refine_about_owner(page,lang))
 
 
-def refine_seo_owner(page):
-    """Arabic SEO owner review only; copy changes limited to explicit removals."""
+def refine_seo_owner(page,lang='ar'):
+    """Bilingual SEO review; preserve each language's supplied copy independently."""
     # Repair a pre-existing duplicate paragraph injected into the closing tag.
     # The approved sentence remains in the fourth package card, unchanged.
     page=re.sub(r'</html<p class="seo-plan-fit">نحوّل محركات البحث إلى مصدر نموّ مستمرّ لمشروعك\.</p>\s*>','</html>',page)
@@ -618,7 +618,7 @@ def refine_seo_owner(page):
     page=re.sub(r'<!-- REFRESH:SEO-TEAM:BEGIN -->[\s\S]*?<!-- REFRESH:SEO-TEAM:END -->\n?','',page)
     page=re.sub(r'<section\b[^>]*id="clients"[\s\S]*?</section>','',page)
     marker='<!-- OWNER:SEO-2026-10-09 -->'
-    if marker in page: return page
+    if marker in page: return refine_seo_compact(page,lang)
     page=page.replace('rf-seo-page"','rf-seo-page rf-seo-owner"',1)
     arrow='<svg class="service-card-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg>'
     # Keep native magnetic/fill effects; the arrow inherits the label's color.
@@ -626,7 +626,8 @@ def refine_seo_owner(page):
     end=page.index('<div class="footer-rounded-div"',start)
     page=page[:start]+re.sub(r'(<span class="btn-text"><span class="btn-text-inner">[^<]*</span>)(</span>)',lambda m:m[1]+arrow+m[2],page[start:end])+page[end:]
     def action():
-        return '<div class="seo-section-cta"><div class="btn btn-normal seo-hero-cta seo-hero-cta-primary"><a href="https://wa.me/966530307054" target="_blank" rel="noopener" class="btn-click magnetic" data-strength="20" data-strength-text="10"><div class="btn-fill"></div><span class="btn-text"><span class="btn-text-inner">استشارتك المجانية</span>'+arrow+'</span></a></div></div>'
+        label='استشارتك المجانية' if lang=='ar' else 'Get Your Free Consultation'
+        return '<div class="seo-section-cta"><div class="btn btn-normal seo-hero-cta seo-hero-cta-primary"><a href="https://wa.me/966530307054" target="_blank" rel="noopener" class="btn-click magnetic" data-strength="20" data-strength-text="10"><div class="btn-fill"></div><span class="btn-text"><span class="btn-text-inner">'+label+'</span>'+arrow+'</span></a></div></div>'
     def wave(edge='top'):
         return '<div class="seo-owner-wave seo-owner-wave--'+edge+'" aria-hidden="true"><svg viewBox="0 0 1440 243.604" preserveAspectRatio="none"><path d="M0 -20H1440V28.6036C1264.45 46.0335 1058.46 150.417 687.43 46.3562C317.5 -57.3952 153.84 43.218 0 58.6036Z" /></svg></div>'
     def section(id,fn):
@@ -638,7 +639,7 @@ def refine_seo_owner(page):
     def shots(block):
         names=iter(['google','maps','chatgpt'])
         def pic(m):
-            name='illustration-'+next(names)+'-ar'
+            name='illustration-'+next(names)+'-'+lang
             img=re.search(r'<img[\s\S]*?>',m[0])[0]
             img=re.sub(r'src="[^"]+"','src="'+base+name+'-1024.webp"',img)
             img=re.sub(r'srcset="[^"]+"','srcset="'+base+name+'-640.webp 640w, '+base+name+'-1024.webp 1024w"',img)
@@ -689,7 +690,68 @@ def refine_seo_owner(page):
         block=block.replace('seo-sec-title fade-in animate','seo-sec-title')
         return block.replace('class="seo-timeline-item"','class="seo-timeline-item" data-about-step data-reveal-scope="seo"')
     section('seo-process',process)
-    return page.replace('<!-- ===== SEO HERO',marker+'<!-- ===== SEO HERO',1)
+    return refine_seo_compact(page.replace('<!-- ===== SEO HERO',marker+'<!-- ===== SEO HERO',1),lang)
+
+
+def refine_seo_compact(page,lang):
+    """Accessible native disclosures and swipe tracks; compact behavior is enhanced by JS."""
+    marker='<!-- OWNER:SEO-COMPACT-2026-10-10 -->'
+    if marker in page: return page
+    chevron='<svg class="seo-owner-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>'
+    arrow='<svg class="service-card-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg>'
+    def section(id,fn):
+        nonlocal page
+        pattern=r'<section\b[^>]*id="'+re.escape(id)+r'"[\s\S]*?</section>'
+        page,n=re.subn(pattern,lambda m:fn(m[0]),page,count=1)
+        if n!=1: raise ValueError('Missing SEO compact section '+id)
+    def slider(block,cls):
+        title=re.search(r'<h2\b[^>]*>([\s\S]*?)</h2>',block)[1]
+        label=esc(html.unescape(re.sub(r'<[^>]+>','',title)).strip())
+        prev='البطاقة السابقة' if lang=='ar' else 'Previous card'
+        next_='البطاقة التالية' if lang=='ar' else 'Next card'
+        def control(direction,label):
+            return '<button type="button" data-home-scroll-'+direction+' aria-label="'+label+'"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg></button>'
+        # The existing track ends immediately before the section's inner wrapper.
+        pat=r'(<div class="'+cls+r'">)([\s\S]*?)(</div>)(\s*</div>\s*</section>)'
+        def track(m):
+            opening=m[1].replace('>',' data-home-scroll-track tabindex="0" role="region" aria-label="'+label+'">',1)
+            controls='<div class="rf-home-scroll-controls" hidden>'+control('prev',prev)+control('next',next_)+'</div>'
+            return '<div class="seo-owner-scroll" data-home-scroll>'+opening+m[2]+m[3]+controls+'</div>'+m[4]
+        block,n=re.subn(pat,track,block,count=1)
+        if n!=1: raise ValueError('Missing SEO slider track '+cls)
+        return block
+    section('seo-why',lambda b:slider(b,'seo-shots'))
+    section('whats-included',lambda b:slider(b,'seo-cards'))
+    def tile_group(block):
+        block=re.sub(r'(<div class="seo-tiles[^\"]*")',r'\1 data-seo-accordion',block,count=1)
+        def tile(m):
+            content=m[1]
+            title=re.search(r'<h3\b[^>]*>[\s\S]*?</h3>',content)
+            if not title: raise ValueError('Missing SEO card title')
+            decoration=''.join(re.findall(r'<span class="seo-owner-number"[\s\S]*?</span>|<svg class="seo-owner-icon"[\s\S]*?</svg>',content))
+            answer=content.replace(title[0],'',1)
+            for item in re.findall(r'<span class="seo-owner-number"[\s\S]*?</span>|<svg class="seo-owner-icon"[\s\S]*?</svg>',content): answer=answer.replace(item,'',1)
+            return '<details class="seo-tile seo-owner-accordion" open><summary>'+decoration+title[0]+chevron+'</summary><div class="seo-owner-answer">'+answer.strip()+'</div></details>'
+        return re.sub(r'<article class="seo-tile">([\s\S]*?)</article>',tile,block)
+    for id in ('seo-why-zero2one','seo-audience','seo-expected'): section(id,tile_group)
+    def plans(block):
+        block=block.replace('<div class="seo-plans-grid">','<div class="seo-plans-grid" data-seo-accordion>',1)
+        def plan(m):
+            content=m[2]
+            title=re.search(r'<h3 class="seo-plan-name">[\s\S]*?</h3>',content)
+            cta=re.search(r'<div class="btn btn-normal seo-plan-cta">[\s\S]*?</a>\s*</div>',content)
+            if not title or not cta: raise ValueError('Missing SEO package heading or CTA')
+            label='التفاصيل' if lang=='ar' else 'Details'
+            summary='<summary>'+title[0]+'<span class="seo-owner-details-label">'+label+'</span>'+chevron+'</summary>'
+            answer=content.replace(title[0],'',1).replace(cta[0],'',1).strip()
+            # Brand arrows are inline, inherit currentColor, and mirror in RTL.
+            action=cta[0]
+            action=re.sub(r'<svg\b[\s\S]*?</svg>','',action)
+            action=action.replace('</span></span>','</span>'+arrow+'</span>',1)
+            return '<article class="'+m[1]+'"><details class="seo-owner-accordion" open>'+summary+'<div class="seo-owner-answer">'+answer+'</div></details>'+action+'</article>'
+        return re.sub(r'<article class="(seo-plan[^"]*)">([\s\S]*?)</article>',plan,block)
+    section('seo-packages',plans)
+    return page.replace('<!-- OWNER:SEO-2026-10-09 -->',marker+'<!-- OWNER:SEO-2026-10-09 -->',1)
 
 
 def refine_about_interactions(page):

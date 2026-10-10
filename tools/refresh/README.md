@@ -255,9 +255,9 @@ animation creation/order, parent visibility, native wheel up/down, resize,
 reinitialization, Barba return and fresh reload. The older target-only animation
 assertion was insufficient for the reported ancestor visibility regression.
 
-### Arabic SEO owner review — 2026-10-09 (local only)
+### Initial Arabic SEO owner review — 2026-10-09 (local only)
 
-Only `/ar/services/seo-riyadh/` has the `rf-seo-owner` scope. CTA text and native
+This initial review added `rf-seo-owner` only to `/ar/services/seo-riyadh/`. CTA text and native
 service arrows inherit the same base/hover color. The owner's three Arabic
 mockups are used as illustrative images, not evidence of rankings, endorsements,
 ratings, business details or awards. The nine files from Downloads/2 4 replace
@@ -288,8 +288,44 @@ header copy, all images, numbering, icons, CTA base/hover colors, responsive
 overflow, actual step animation order and persistence, uncaught errors, reduced
 motion and original image hashes. Screenshots use `seo-owner-*.png` in the ignored
 evidence folder. About and refresh interaction regression suites also pass.
-Other pages, including English SEO, have dependency hash updates only; their
-content/design is unchanged. No deployment or production measurement was sent.
+At this stage other pages, including English SEO, had dependency hash updates
+only. No deployment or production measurement was sent.
+
+### Bilingual SEO compact review — 2026-10-10 (local only)
+
+Both `/ar/services/seo-riyadh/` and `/services/seo-riyadh/` now have matching owner
+design changes, while independently retaining their existing approved text.
+English uses the owner's three English illustration files; all 15 originals are
+archived and hash-verified. Image preparation can fall back to archived originals
+when the clipboard's temporary files expire.
+
+Visibility and nine-service cards become native horizontal swipe tracks on
+phones and portrait tablets up to 1100 CSS pixels. Directional controls, keyboard
+arrows, focus and RTL/LTR progression use the established homepage slider logic.
+Why, Audience, Packages and Expected Results each have an independent single-open
+disclosure group in this compact layout. Desktop restores fully visible cards.
+Packages keep the name, Details affordance and request CTA visible when closed;
+one expansion reveals descriptions, fit and all included features. The original
+native included-features disclosure remains available on desktop. Without
+JavaScript all outer disclosures start open, so no approved copy is lost.
+
+All cards have a base shadow, viewport entry motion and motion-aware hover depth.
+Package CTA arrows now share the brand path, 23px line styling and text colors;
+only Arabic arrows are mirrored. Authored section-top borders are removed;
+the wave SVG is clipped to its viewBox and its redundant overlay is removed,
+preventing stray seams at fractional scroll positions and high-density screens.
+Raising the SEO header's stacking context (rather than
+only the dropdown) keeps the services menu above the transformed hero.
+
+`node tools/test_seo_bilingual.js` passes 12 bilingual viewport contexts, genuine
+touch swipes, controls/keyboard, all four independent disclosure groups, one-tap
+complete packages, desktop/portrait resize, native arrow base/hover colors,
+dropdown overlap hit testing, zero section borders, persistent process reveals,
+script-free/reduced-motion fallbacks, original hashes and exact copy baselines.
+About owner and shared interaction regression tests also pass; the source-copy
+audit checks 2,350 paragraphs with no missing text outside explicit owner removals.
+Other pages have dependency cache-stamp updates only. Changes remain local;
+tests block external traffic, and no deployment or production measurement is sent.
 
 The rolling-letter test now waits for Locomotive's original loader to actually
 unlock input (`scroll.scroll.stop === false`) before sending wheel events. The
