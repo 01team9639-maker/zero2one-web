@@ -1,0 +1,216 @@
+{
+  "review_commit": "d3f7285fa2e949234f509cd42e55a21ff767d6de",
+  "note": "Owner originals remain unchanged in the local review archive. Mockups are illustrative, not independent ranking or endorsement evidence.",
+  "images": [
+    {
+      "original": "strategy.jpg",
+      "original_sha256": "8556e974baaba4e29249f5fda12d18de81bb9fd825eaa2c62dc36c9d83677555",
+      "outputs": [
+        {
+          "file": "strategy-480.webp",
+          "sha256": "677cd4033752f844ccd7c4a7d2e56ab636b491717bf3a8711b0a9df504931f00"
+        },
+        {
+          "file": "strategy-1200.webp",
+          "sha256": "b3c82be1d7986d95629c9600ca7232dd65b365057b30f490210533a2a3a86bcc"
+        }
+      ]
+    },
+    {
+      "original": "local.jpg",
+      "original_sha256": "70094c75993cc8d6d34d4d79768303e6229853f045ca00d017c951f54ab92629",
+      "outputs": [
+        {
+          "file": "local-480.webp",
+          "sha256": "e7003905e91f86ae1c0e4a5053f0f5f4c4c3d4f05b2cf9deb686aa247d10b2e3"
+        },
+        {
+          "file": "local-1200.webp",
+          "sha256": "cae1e9bc5c8b9e7c938968fef352a4a5c23391e71041ac49fc50c0449cf62377"
+        }
+      ]
+    },
+    {
+      "original": "technical.jpg",
+      "original_sha256": "bb37d676d3839961984d770a490a9b4a2eef7b4a01b7190a56ab05275040c7c4",
+      "outputs": [
+        {
+          "file": "technical-480.webp",
+          "sha256": "b89ce99f269186ef850bf1f40a984f3a0815ffc179634acfa2550fbac0c55e0b"
+        },
+        {
+          "file": "technical-1200.webp",
+          "sha256": "78d43338c9c572942fe66873ee2f87cc1d7f6a6d006ce80c6b91bf938d6854c2"
+        }
+      ]
+    },
+    {
+      "original": "keywords.jpg",
+      "original_sha256": "26f78a13bd514d35d718dd4619917ef256b2f9c578fcecb4b7ba652ed5efa289",
+      "outputs": [
+        {
+          "file": "keywords-480.webp",
+          "sha256": "0b960571074af310318cfdf581de2909a3f0268125557e0b7712341ae1a2d938"
+        },
+        {
+          "file": "keywords-1200.webp",
+          "sha256": "ccff8ac2b867535824404762bc23a1d84d51a94990b55dfea68afa6c7b1603e3"
+        }
+      ]
+    },
+    {
+      "original": "content.jpg",
+      "original_sha256": "0842d4cf67ce628e6728c065e17d7fb6a6a30356e74b0b72f31355660901bf4b",
+      "outputs": [
+        {
+          "file": "content-480.webp",
+          "sha256": "4a3ee72fc309789bd3c7c4232fe2385af4e3bfc2f8dbdbf9544ddcdd07225fb6"
+        },
+        {
+          "file": "content-1200.webp",
+          "sha256": "8162acabc445ff9cd36d9848a03fc931d379658cb8f8ad386ed1b484bfb11ae2"
+        }
+      ]
+    },
+    {
+      "original": "ai.jpg",
+      "original_sha256": "b1a8ebbb8541490bb4de62680a6787e2770f21cd869af1c42aa3aa7a706bd61f",
+      "outputs": [
+        {
+          "file": "ai-480.webp",
+          "sha256": "1e8820b232b33cdf2b36029343f3ffadda78838dd7d0bf6f40759d2e1d9b2a80"
+        },
+        {
+          "file": "ai-1200.webp",
+          "sha256": "ea510c73b093a90332386f9a67fec04837de1a61b278788bcea953acbe00f147"
+        }
+      ]
+    },
+    {
+      "original": "backlinks.jpg",
+      "original_sha256": "41ff7f4bec842136bc63a3498c5472197246ddc0fd8c4b5839c5ccc89b00f4ba",
+      "outputs": [
+        {
+          "file": "backlinks-480.webp",
+          "sha256": "3484d185e19ac4da351148e8791379cff6745551efe8a67b1a9a20c684acab49"
+        },
+        {
+          "file": "backlinks-1200.webp",
+          "sha256": "ed6e15ba50585ef58bd3039a6a2add64a9001c1957bde596d1c9851a598eaa65"
+        }
+      ]
+    },
+    {
+      "original": "ecommerce.jpg",
+      "original_sha256": "08d8c76c601eb17005697bbaf4fcebd3ba77a192ef311a4a70a1973285d4392c",
+      "outputs": [
+        {
+          "file": "ecommerce-480.webp",
+          "sha256": "c2e54f31ae5e57bb22de623ee72e5f07016077793b3bf02bcabefa7cb0d7266b"
+        },
+        {
+          "file": "ecommerce-1200.webp",
+          "sha256": "cd0b0b8253e7878d611accd6ee1bb4ecde6db801484d542efdb136d8c6478027"
+        }
+      ]
+    },
+    {
+      "original": "reporting.jpg",
+      "original_sha256": "cbbff38abc76318c4fb813790b89a5ccf1a10ab273d23058c1a40b4abc4eecf3",
+      "outputs": [
+        {
+          "file": "reporting-480.webp",
+          "sha256": "6aa3f1a877d89d1ec90266138acc8134d6048b38c2b22c12b0f09cf325189b33"
+        },
+        {
+          "file": "reporting-1200.webp",
+          "sha256": "33806695168cdf5263734e5b8b6b454ef6d0e64e0e37f79d8653c21e9f71ab1a"
+        }
+      ]
+    },
+    {
+      "original": "illustration-google-ar.jpg",
+      "original_sha256": "954b956e58306292aaca75726d436c68cbb4c11bab751dbaf1247728e39e7bf9",
+      "outputs": [
+        {
+          "file": "illustration-google-ar-640.webp",
+          "sha256": "de8f1460e375d1cbb48486ec5fdc455a16d3bd9fe9503324a096a0ce4abeb7cb"
+        },
+        {
+          "file": "illustration-google-ar-1024.webp",
+          "sha256": "b8c8185bab724f551a648fd1929cde0dda6c0e2b36483205a80bbe611854633c"
+        }
+      ]
+    },
+    {
+      "original": "illustration-maps-ar.jpg",
+      "original_sha256": "383427bc7a764923891d57cc7214fac0915d1fd3488f7efa51003975df382bf5",
+      "outputs": [
+        {
+          "file": "illustration-maps-ar-640.webp",
+          "sha256": "67d34fb398439f3f9d8c54ca8d7b2cff68c6da9296e30882a59d773cfbe1ccee"
+        },
+        {
+          "file": "illustration-maps-ar-1024.webp",
+          "sha256": "a8ca29c1c681598d5e22c1060a3ca86fecd506fee8b42cd7a9a4b9a9a2c67b2e"
+        }
+      ]
+    },
+    {
+      "original": "illustration-chatgpt-ar.jpg",
+      "original_sha256": "b00afdb532432ce504b93ffae31b02ebbdd0f732377de49cd13d961f0df86ef1",
+      "outputs": [
+        {
+          "file": "illustration-chatgpt-ar-640.webp",
+          "sha256": "79fdd04dbb32daeeb6a282262c0df87cf3f2b7a99194a2f2dc67fb43a31286bc"
+        },
+        {
+          "file": "illustration-chatgpt-ar-1024.webp",
+          "sha256": "0932cad2f3fe93b536b1be56184e32b7697681849d3c5d13b3772ed0f2cf08c3"
+        }
+      ]
+    },
+    {
+      "original": "illustration-google-en.jpg",
+      "original_sha256": "18c1493939ea6802eab375c42cb12ef1e4fb21dd34cc4cf55e868ebb4088f6bc",
+      "outputs": [
+        {
+          "file": "illustration-google-en-640.webp",
+          "sha256": "68efd0e03daf88b12ff8bc5d3422a1063f11a0ded5125daecddde635b14c642b"
+        },
+        {
+          "file": "illustration-google-en-1024.webp",
+          "sha256": "90d44a44ad97abdf1bb6de785d8e7849285662be2e07cea8afe66f3d41b8e9f6"
+        }
+      ]
+    },
+    {
+      "original": "illustration-maps-en.jpg",
+      "original_sha256": "d8c5cbca6fd3ec68b31febb73283b79cba7e8cf5ff6d8cd86f217613c69b305e",
+      "outputs": [
+        {
+          "file": "illustration-maps-en-640.webp",
+          "sha256": "8facc27e861fdbeb71b7410fc4196636dc5d3f66d96faf734e0658f0da4f69a4"
+        },
+        {
+          "file": "illustration-maps-en-1024.webp",
+          "sha256": "00381e4b46946df13fed2d324eba42bca10d716b761c8d17d8bc137373faff1b"
+        }
+      ]
+    },
+    {
+      "original": "illustration-chatgpt-en.jpg",
+      "original_sha256": "abdd47b622bf8bc64f9550f10bf933189ac5837d46f5c86c1d3f843703bc0b18",
+      "outputs": [
+        {
+          "file": "illustration-chatgpt-en-640.webp",
+          "sha256": "1c9cf500b74a5826a009dc3c957c970802ab98693a4b692b58445528c090ca29"
+        },
+        {
+          "file": "illustration-chatgpt-en-1024.webp",
+          "sha256": "f78663ff84f92a424261707b52fe912bf651ceb7040201ad7d1b68cae8254a28"
+        }
+      ]
+    }
+  ]
+}
