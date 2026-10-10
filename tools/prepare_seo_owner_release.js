@@ -22,7 +22,10 @@ for (const route of routes) {
 }
 const assets = 'assets/images/seo/owner-review-2026-10';
 fs.mkdirSync(path.join(root, assets), { recursive: true });
-const provenance = JSON.parse(fs.readFileSync(path.join(review, assets, 'provenance.json')));
+const privateProvenance = path.join(review, 'tools/refresh/image-archives/seo-owner-review-2026-10/provenance.json');
+// Compatibility with the immutable earlier local review; new releases keep
+// source paths and originals behind the existing /tools/ publication deny rule.
+const provenance = JSON.parse(fs.readFileSync(fs.existsSync(privateProvenance) ? privateProvenance : path.join(review, assets, 'provenance.json')));
 const images = provenance.map(item => {
   const outputs = item.outputs.map(output => {
     // Some source manifests use path strings, others output metadata records.

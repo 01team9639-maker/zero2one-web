@@ -109,20 +109,29 @@ const timelines = () => {
     await isolate(ctx, origin);
     const p = await ctx.newPage();
     const errs = []; p.on('pageerror', e => { errs.push(String(e).slice(0, 100)); errors.push({ stage: 'home animation', url: '/', kind: classifyError(e) || 'unclassified', error: String(e).slice(0, 100) }); });
-    await p.goto(origin + '/', { waitUntil: 'load' }); await p.waitForTimeout(5500);
+    await p.goto(origin + '/', { waitUntil: 'load' });
+    await p.waitForFunction(() => getComputedStyle(document.documentElement).cursor !== 'wait' &&
+      [...document.querySelectorAll('.loading-screen')].every(el => el.getBoundingClientRect().bottom <= 1));
+    // The original loader restores the cursor before it calls scroll.start().
+    // Wheel input during that interval is intentionally discarded by Locomotive.
+    await p.waitForFunction(() => typeof scroll === 'object' && scroll.scroll.stop === false);
     if (INJECT === 'home') { await injectPE1(p); await p.waitForTimeout(200); }
+    // Establish the direction under test with actual input. Loader/ScrollTrigger
+    // refresh can legitimately leave the timeline reversed after a fresh load;
+    // assuming that its initial direction is positive is not a feature test.
+    await p.mouse.move(700, 450);
+    for (let i = 0; i < 5; i++) { await p.mouse.wheel(0, 400); await p.waitForTimeout(150); }
+    await p.waitForTimeout(1200);
+    const down = await p.evaluate(timelines);
     const t0 = await p.evaluate(() => { const t = gsap.globalTimeline.getChildren(false, false, true).find(t => t.repeat && t.repeat() === -1); return t ? { d: t.duration(), time: t.totalTime() } : null; });
     await p.waitForTimeout(1000);
     const t1 = await p.evaluate(() => { const t = gsap.globalTimeline.getChildren(false, false, true).find(t => t.repeat && t.repeat() === -1); return t ? t.totalTime() : null; });
-    await p.mouse.move(700, 450);
-    for (let i = 0; i < 5; i++) { await p.mouse.wheel(0, 400); await p.waitForTimeout(150); }
-    await p.waitForTimeout(800);
     for (let i = 0; i < 3; i++) { await p.mouse.wheel(0, -400); await p.waitForTimeout(150); }
     await p.waitForTimeout(1200);
     const up = await p.evaluate(timelines);
     check('S3', 'home: the rolling name still runs (18 s loop, playing, reverses on scroll-up), no errors',
-      !!t0 && t0.d === 18 && t1 > t0.time && up.timeScales.some(s => s < 0) && errs.length === 0,
-      { t0, t1, up, errs });
+      !!t0 && t0.d === 18 && down.timeScales.some(s => s > 0) && t1 > t0.time && up.timeScales.some(s => s < 0) && errs.length === 0,
+      { t0, t1, down, up, errs });
     await ctx.close();
   }
 

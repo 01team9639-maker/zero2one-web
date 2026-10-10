@@ -1,0 +1,182 @@
+[
+  {
+    "service": "ecommerce-development",
+    "original": "/Users/mohammad/Downloads/service-images/01-custom-ecommerce-systems.jpg",
+    "sha256": "0a6586225874cbe95982c5d9fb6c3b7b3ff88c657d4a580824cbe9ad4955866f",
+    "width": 1440,
+    "height": 1024,
+    "outputs": [
+      {
+        "file": "ecommerce-development-480.webp",
+        "width": 480,
+        "height": 341,
+        "bytes": 20026,
+        "sha256": "9f5009aa1e39211bc4540a98cb726126fb3e6edd618e2709e32b8b7a6fa67f7a"
+      },
+      {
+        "file": "ecommerce-development-800.webp",
+        "width": 800,
+        "height": 569,
+        "bytes": 37896,
+        "sha256": "c580769025b3d879f03b6518b09cad666a262cdd283b4d2967eadb958a022808"
+      },
+      {
+        "file": "ecommerce-development-1440.webp",
+        "width": 1440,
+        "height": 1024,
+        "bytes": 74902,
+        "sha256": "8dc2a419cd17fb93703fbcb65aa7924e2c313bf25fef28ab68418a87915b62b2"
+      }
+    ]
+  },
+  {
+    "service": "social-media-management",
+    "original": "/Users/mohammad/Downloads/service-images/02-social-media-content.jpg",
+    "sha256": "8e0226e2b8cf1e7dbeb61b7b8c82f52c31d9fe5a9c0403bec1b62d31ae1d74b7",
+    "width": 1440,
+    "height": 1024,
+    "outputs": [
+      {
+        "file": "social-media-management-480.webp",
+        "width": 480,
+        "height": 341,
+        "bytes": 24612,
+        "sha256": "2a76dadfd93120f202bff9c100382530177b6ef50d8e27b848053f870814bc50"
+      },
+      {
+        "file": "social-media-management-800.webp",
+        "width": 800,
+        "height": 569,
+        "bytes": 47008,
+        "sha256": "4ea373a991ca9004ff23e709b6ca55df728abee1a0776c53354f7dcfe06dd0a1"
+      },
+      {
+        "file": "social-media-management-1440.webp",
+        "width": 1440,
+        "height": 1024,
+        "bytes": 92586,
+        "sha256": "6f600df3e2b3a398cdb76f75f5610f88e2e1943553070af47264d2dfb3ceb30f"
+      }
+    ]
+  },
+  {
+    "service": "brand-identity",
+    "original": "/Users/mohammad/Downloads/service-images/03-brand-identity.jpg",
+    "sha256": "ce8af2ad9c882a7632557c203c40bfc5d79b5ee428f900d13e7ece9f7c34aec2",
+    "width": 1440,
+    "height": 1024,
+    "outputs": [
+      {
+        "file": "brand-identity-480.webp",
+        "width": 480,
+        "height": 341,
+        "bytes": 19088,
+        "sha256": "4a4bf5beb32aba1a7d260ccb828d484a4c2d861ec5058469fdf31ab15e8832dd"
+      },
+      {
+        "file": "brand-identity-800.webp",
+        "width": 800,
+        "height": 569,
+        "bytes": 37338,
+        "sha256": "524fb0302acb349268d7cb09a6e67dddd44ef665e21ff11beffff6ff2faa1355"
+      },
+      {
+        "file": "brand-identity-1440.webp",
+        "width": 1440,
+        "height": 1024,
+        "bytes": 80838,
+        "sha256": "ea570efbce60e71f3ac150908a26ab9115ccf2e282d055b906a6246cc4f52db0"
+      }
+    ]
+  },
+  {
+    "service": "manage-google-adwords-campaigns",
+    "original": "/Users/mohammad/Downloads/service-images/04-google-ads.jpg",
+    "sha256": "9d8f856ee608c81f05d1850254fd3f844b7893c2a395680165cd937f3e851d8e",
+    "width": 1440,
+    "height": 1024,
+    "outputs": [
+      {
+        "file": "manage-google-adwords-campaigns-480.webp",
+        "width": 480,
+        "height": 341,
+        "bytes": 16598,
+        "sha256": "0b6b1ade491411087527845b96c7fe9f7f13047a75f0f7660f58093534b04889"
+      },
+      {
+        "file": "manage-google-adwords-campaigns-800.webp",
+        "width": 800,
+        "height": 569,
+        "bytes": 31366,
+        "sha256": "de815ea437a2ac87825cadf4ebf1d00524ff99a54f39a7bceb282e276f1a4552"
+      },
+      {
+        "file": "manage-google-adwords-campaigns-1440.webp",
+        "width": 1440,
+        "height": 1024,
+        "bytes": 62918,
+        "sha256": "31d01d0c6c3497063fd1923611b98dbe6910f56845f469baa9f81aaea4d5cdf7"
+      }
+    ]
+  },
+  {
+    "service": "mobile-application",
+    "original": "/Users/mohammad/Downloads/service-images/05-mobile-app-development.jpg",
+    "sha256": "2cc3851b3e3ca9a99dfa871cdbaa27307f73653ee2cc3cac915f79cf89eee6c9",
+    "width": 1440,
+    "height": 1024,
+    "outputs": [
+      {
+        "file": "mobile-application-480.webp",
+        "width": 480,
+        "height": 341,
+        "bytes": 21452,
+        "sha256": "21d3e6b4055071a069581ad07b88ca6bc8df1850c5ce60054b078e56b888fad0"
+      },
+      {
+        "file": "mobile-application-800.webp",
+        "width": 800,
+        "height": 569,
+        "bytes": 40328,
+        "sha256": "f13f185eb005afd87dc168de7f44154feb5209cf51756ce45491cb6246d3a518"
+      },
+      {
+        "file": "mobile-application-1440.webp",
+        "width": 1440,
+        "height": 1024,
+        "bytes": 86030,
+        "sha256": "15f804f99a4950ee0a4b98773c09c018cb95566dd209f2215255d222294f2c22"
+      }
+    ]
+  },
+  {
+    "service": "marketing-consulting",
+    "original": "/Users/mohammad/Downloads/service-images/06-marketing-consulting-plan.jpg",
+    "sha256": "d6e135d6a778857569e8d2d89561949338091732c93fa62648fd72757fb2cff7",
+    "width": 1440,
+    "height": 1024,
+    "outputs": [
+      {
+        "file": "marketing-consulting-480.webp",
+        "width": 480,
+        "height": 341,
+        "bytes": 16310,
+        "sha256": "ccc715349948a79c0c98d57348badee7914dfc20767ba3a03f881f9e9d1054ec"
+      },
+      {
+        "file": "marketing-consulting-800.webp",
+        "width": 800,
+        "height": 569,
+        "bytes": 30430,
+        "sha256": "8652a143edfd49b17024b971798f8c7291e423eba96ad9801bd6f7264bec656d"
+      },
+      {
+        "file": "marketing-consulting-1440.webp",
+        "width": 1440,
+        "height": 1024,
+        "bytes": 61036,
+        "sha256": "843fe55966e142a8034484dd497b95b569047419b2e3a3256e67161b190eff41"
+      }
+    ]
+  }
+]

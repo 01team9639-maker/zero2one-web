@@ -1,5 +1,10 @@
 # Scoped SEO owner release — 2026-10-10
 
+Historical scoped release. The owner subsequently approved the full reviewed
+site publication, documented in `tools/ALL-DESIGN-RELEASE.md`. Do not rebuild or
+run this partial-release packager against that full release; use `tools/build.sh`
+and the full review verification suite instead.
+
 This release is based on the existing published main revision
 `3b068b8f81c6e62f362977b508f6cc96422a4185`, not the full local design-review branch.
 The owner requested completion and upload on 2026-10-10.

@@ -373,7 +373,7 @@ def build(slug, c, shell):
 
     # أرضية المعرض نفسها على صفحة المشروع، فلا تبدو الصفحتان من موقعين.
     h = h.replace('<main class="main" id="work-single"',
-                  '<main class="main z2o-case-page" id="work-single"', 1)
+                  '<main class="main z2o-case-page rf-case-page" id="work-single"', 1)
 
     # ---- body
     h = re.sub(r"<h1(\s[^>]*)?>.*?</h1>", lambda m: f"<h1{m.group(1) or ''}>{c['h1']}</h1>", h, count=1, flags=re.S)
@@ -394,12 +394,16 @@ def build(slug, c, shell):
     if i < 0 or j < i:
         raise SystemExit(f"  ❌ لم أجد الفوتر في {slug}")
     h = h[:i] + standard_footer() + h[j:]
+    from stamp_assets import STAMPED, digest
+    h = STAMPED.sub(lambda m:f'{m["attr"]}="{m["path"]}?v={digest(m["path"]) or m["stamp"]}"', h)
     return re.sub(r"[ \t]+(?=\n)", "", h)
 
 
 def main():
     check = "--check" in sys.argv
-    shell = open(SHELL, encoding="utf-8").read()
+    # Service pages now have independently authored layouts. Do not inherit a
+    # service's new copy/FAQ/nav mutations into every existing case-study hero.
+    shell = open(os.path.join(ROOT, "tools", "refresh", "case-shell.html.txt"), encoding="utf-8").read()
     if "related-services" in shell:
         # قسم «خدمات ذات صلة» يخصّ صفحات الخدمات، وصفحة المشروع لها روابطها
         shell = re.sub(r'\s*<!-- ===== RELATED SERVICES.*?</section>\n', "\n", shell, flags=re.S)
