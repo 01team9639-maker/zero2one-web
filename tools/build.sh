@@ -22,6 +22,11 @@ cat assets/css/normalize.css \
   | "$ESBUILD" --loader=css --minify --charset=utf8 > assets/css/bundle.min.css
 
 # 2) site JS
+if [ -f assets/css/seo-studio-review.css ]; then
+  "$ESBUILD" assets/css/seo-studio-review.css --minify --charset=utf8 --outfile=assets/css/seo-studio-review.min.css
+  node tools/stamp_seo_studio_style.js
+fi
+
 "$ESBUILD" assets/js/dom.js       --minify --charset=utf8 --outfile=assets/js/dom.min.js
 "$ESBUILD" assets/js/i18n.js      --minify --charset=utf8 --outfile=assets/js/i18n.min.js
 "$ESBUILD" assets/js/index-new.js --minify --charset=utf8 --outfile=assets/js/index-new.min.js

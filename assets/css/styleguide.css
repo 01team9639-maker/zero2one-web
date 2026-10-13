@@ -56,6 +56,13 @@
 
 :root {
 
+    /* Reusable brand options; declaring these does not restyle other pages. */
+    --color-brand-orange: #F9460E;
+    --color-brand-orange-end: #FF8000;
+    --color-brand-gradient: linear-gradient(120deg, #F9460E 0%, #FF8000 100%);
+    --color-brand-beige: #FFFDED;
+    --color-brand-ivory: #FFFEF8;
+
     --color-dark: #1C1D20;
     --color-dark-dark: #141517;
     --color-light: #FFFFFF;

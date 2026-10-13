@@ -693,7 +693,7 @@ function initEditorialRefresh() {
   }
   // Progressive enhancement: content is visible before and without JS. No
   // timeout or animation failure can leave the SEO text hidden from visitors.
-  if (!reduced.matches && typeof IntersectionObserver !== 'undefined') {
+  if (!root.matches('.rf-seo-studio') && !reduced.matches && typeof IntersectionObserver !== 'undefined') {
     observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
@@ -812,6 +812,8 @@ function initEditorialRefresh() {
     var chosen = cards[0];
     var includes = Array.from(group.querySelectorAll('.seo-plan-more'));
     var includeState = new Map(), wasCompact = null;
+    var seoAnchorFrame = null;
+    undo.push(function () { if (seoAnchorFrame !== null) cancelAnimationFrame(seoAnchorFrame); });
     function syncSeoCards() {
       if (wasCompact !== compact.matches) {
         includes.forEach(function (more) {
@@ -837,11 +839,31 @@ function initEditorialRefresh() {
     }
     cards.forEach(function (card) {
       var summary = card.querySelector('summary');
+      on(summary, 'keydown', function (event) {
+        if (root.matches('.rf-seo-studio') && (event.key === ' ' || event.code === 'Space')) event.stopPropagation();
+      });
       on(summary, 'click', function (event) {
         event.preventDefault();
         if (!compact.matches) return;
+        var anchorTop = card.getBoundingClientRect().top;
         chosen = card.open ? null : card;
         syncSeoCards();
+        // A mobile accordion may close a taller card above the tapped title.
+        // Preserve the visitor's on-screen anchor in native and smooth modes.
+        if (root.matches('.rf-seo-studio') && anchorTop >= 0 && anchorTop < innerHeight) {
+          if (seoAnchorFrame !== null) cancelAnimationFrame(seoAnchorFrame);
+          seoAnchorFrame = requestAnimationFrame(function () {
+            seoAnchorFrame = null;
+            if (!card.isConnected) return;
+            if (document.documentElement.classList.contains('has-scroll-smooth')) {
+              if (scroll && scroll.scrollTo) scroll.scrollTo(card,{duration:0,disableLerp:true,offset:-anchorTop});
+            } else {
+              var targetTop=0;
+              for(var node=card;node;node=node.offsetParent) targetTop+=node.offsetTop;
+              window.scrollTo({top:targetTop-anchorTop,behavior:'instant'});
+            }
+          });
+        }
         var answer = card.querySelector('.seo-owner-answer');
         if (card.open && answer && !reduced.matches && answer.animate) {
           var anim = answer.animate([
@@ -868,13 +890,25 @@ function initEditorialRefresh() {
     var prev = controls.querySelector('[data-home-scroll-prev]');
     var next = controls.querySelector('[data-home-scroll-next]');
     var sign = getComputedStyle(track).direction === 'rtl' ? -1 : 1;
+    var always = slider.hasAttribute('data-home-scroll-always');
+    var autoHeight = slider.hasAttribute('data-home-scroll-auto-height');
     function state() {
       var max = Math.max(0, track.scrollWidth - track.clientWidth);
       var pos = Math.abs(track.scrollLeft);
-      controls.hidden = !compact.matches || max < 4;
-      track.tabIndex = compact.matches && max >= 4 ? 0 : -1;
+      controls.hidden = (!compact.matches && !always) || max < 4;
+      track.tabIndex = (compact.matches || always) && max >= 4 ? 0 : -1;
       prev.disabled = pos < 4;
       next.disabled = pos >= max - 4;
+      if(autoHeight){
+        if(compact.matches){
+          // A tablet can show more than one card. Size to all visible cards,
+          // not only the nearest snap point, so a neighbour's copy isn't cut.
+          var css=getComputedStyle(track),bounds=track.getBoundingClientRect(),height=0;
+          Array.from(track.children).forEach(function(card){var rect=card.getBoundingClientRect();if(rect.right>bounds.left+3&&rect.left<bounds.right-3)height=Math.max(height,card.offsetHeight);});
+          height+=parseFloat(css.paddingTop)+parseFloat(css.paddingBottom);
+          if(Math.abs(parseFloat(track.style.height||0)-height)>1){track.style.height=height+'px';refreshHeight();}
+        }else if(track.style.height){track.style.removeProperty('height');refreshHeight();}
+      }
     }
     function move(forward) {
       var max = track.scrollWidth - track.clientWidth;
@@ -885,7 +919,7 @@ function initEditorialRefresh() {
     on(next, 'click', function () { move(true); });
     on(track, 'scroll', state, {passive:true});
     on(track, 'keydown', function (event) {
-      if (!compact.matches || event.target !== track) return;
+      if ((!compact.matches && !always) || event.target !== track) return;
       if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
         event.preventDefault(); move(event.key === (sign < 0 ? 'ArrowLeft' : 'ArrowRight'));
       }
@@ -894,8 +928,10 @@ function initEditorialRefresh() {
     if (typeof ResizeObserver !== 'undefined') {
       var trackResize = new ResizeObserver(state);
       trackResize.observe(track);
+      if(autoHeight)Array.from(track.children).forEach(function(card){trackResize.observe(card);});
       undo.push(function () { trackResize.disconnect(); });
     } else { on(window, 'resize', state); }
+    if(autoHeight)on(track,'toggle',state,true);
     state();
   });
   editorialRefreshCleanup = function () {
@@ -904,6 +940,326 @@ function initEditorialRefresh() {
     if (observer) observer.disconnect();
     animations.forEach(function (a) { a.cancel(); }); animations.clear();
     undo.forEach(function (fn) { fn(); });
+  };
+}
+
+// SEO-only studio motion. Content has no hidden CSS/inline state: a failed
+// observer, disabled scripts, reduced motion or teardown always leaves it usable.
+// BEGIN SEO STUDIO STYLESHEET
+var seoStudioStylesheet='/assets/css/seo-studio-review.min.css?v=50da1eb3';
+// END SEO STUDIO STYLESHEET
+function ensureSeoStudioStyles(root) {
+  var link=document.querySelector('link[data-seo-studio-review]');
+  if(link&&link.sheet)return true;
+  if(!link){link=document.createElement('link');link.rel='stylesheet';link.href=seoStudioStylesheet;link.setAttribute('data-seo-studio-review','');document.head.appendChild(link);}
+  if(!link.dataset.seoStudioWaiting){
+    link.dataset.seoStudioWaiting='true';
+    link.addEventListener('load',function(){
+      delete link.dataset.seoStudioWaiting;
+      var containers=document.querySelectorAll('[data-barba="container"]'),current=containers[containers.length-1];
+      if(!current||!current.matches('.rf-seo-studio'))return;
+      initEditorialRefresh();initSeoStudioMotion();initSEOFlow();
+      if(typeof scroll!=='undefined'&&scroll&&scroll.update)scroll.update();
+      if(typeof ScrollTrigger!=='undefined')ScrollTrigger.refresh();
+    },{once:true});
+  }
+  return false;
+}
+var seoStudioCleanup = null;
+var seoStudioRevealed = new Set();
+function initSeoStudioMotion() {
+  if (seoStudioCleanup) { seoStudioCleanup(); seoStudioCleanup=null; }
+  var containers=document.querySelectorAll('[data-barba="container"]');
+  var root=containers[containers.length-1];
+  if (!root || !root.matches('.rf-seo-studio')) return;
+  if(!ensureSeoStudioStyles(root))return;
+  // Keep Arabic joining intact by animating whole words, never characters.
+  root.querySelectorAll('[data-seo-studio-reveal="heading"],.seo-hero-title-primary,.seo-hero-title-secondary,.seo-tile-title,.seo-card-title,.seo-plan-name,.seo-side-title').forEach(function(title){
+    var walker=document.createTreeWalker(title,NodeFilter.SHOW_TEXT),texts=[];
+    while(walker.nextNode())if(!walker.currentNode.parentElement.closest('.seo-title-word'))texts.push(walker.currentNode);
+    texts.forEach(function(node){
+      var fragment=document.createDocumentFragment();
+      node.textContent.split(/(\s+)/).forEach(function(part){
+        if(!part)return;
+        if(/^\s+$/.test(part))fragment.appendChild(document.createTextNode(part));
+        else {var word=document.createElement('span');word.className='seo-title-word';word.textContent=part;fragment.appendChild(word);}
+      });node.replaceWith(fragment);
+    });
+  });
+  var reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
+  var nodes=Array.from(root.querySelectorAll('[data-seo-studio-reveal]'));
+  var watch=Array.from(root.querySelectorAll('[data-seo-studio-reveal], [data-about-step]'));
+  var running=new Set(), active=new Set(), undo=[];
+  var entries=null, visibility=null, resize=null, frame=null, disposed=false;
+  var timeline=root.querySelector('[data-seo-studio-process]');
+  var processLength=0, reached=0;
+  var scroller=typeof scroll!=='undefined' && scroll && typeof scroll.on==='function' ? scroll : null;
+  function on(el,event,fn,opts) { el.addEventListener(event,fn,opts);undo.push(function(){el.removeEventListener(event,fn,opts);}); }
+  function animate(el,keyframes,options) {
+    if(reduced.matches || !el.animate) return;
+    var a=el.animate(keyframes,options);running.add(a);
+    a.onfinish=function(){running.delete(a);};
+    a.oncancel=function(){running.delete(a);};
+  }
+  function titleEffect(el,delay){
+    var words=Array.from(el.querySelectorAll('.seo-title-word'));
+    words.forEach(function(word,i){
+      animate(word,[{opacity:0,transform:'translateY(.8em) rotate(2deg)',filter:'blur(4px)',clipPath:'inset(0 0 100% 0)'},{opacity:1,transform:'translateY(0) rotate(0deg)',filter:'blur(0px)',clipPath:'inset(0 0 0 0)'}],{duration:780,delay:delay+Math.min(i*32,420),easing:'cubic-bezier(.16,1,.3,1)',fill:'backwards'});
+    });
+  }
+  function reveal(el,motion) {
+    var i=nodes.indexOf(el),kind=el.dataset.seoStudioReveal;
+    var key=document.documentElement.lang+':'+i+':'+kind;
+    el.dataset.seoStudioRevealed='true';
+    if(seoStudioRevealed.has(key)) return;
+    seoStudioRevealed.add(key);
+    if(!motion || reduced.matches) return;
+    var index=Array.prototype.indexOf.call(el.parentElement.children,el);
+    var delay=kind==='card' ? Math.min(index%3,2)*90 : 0;
+    var opts={duration:820,delay:delay,easing:'cubic-bezier(.16,1,.3,1)',fill:'backwards'};
+    if(kind==='heading') {
+      animate(el,[{opacity:.25,transform:'translateY(12px)'},{opacity:1,transform:'translateY(0)'}],opts);
+      titleEffect(el,0);
+    } else if(kind==='divider') {
+      animate(el,[{opacity:0,transform:'translateY(16px)'},{opacity:1,transform:'translateY(0)'}],opts);
+      var line=el.querySelector('.seo-studio-divider-line');
+      if(line) animate(line,[{transform:'scaleX(0)'},{transform:'scaleX(1)'}],{duration:1100,easing:opts.easing});
+    } else if(kind==='hero') {
+      animate(el,[{opacity:0,transform:'translateY(32px) scale(.975)'},{opacity:1,transform:'translateY(0) scale(1)'}],{duration:1100,delay:i%2*140,easing:opts.easing,fill:'backwards'});
+      titleEffect(el,160);
+    } else {
+      var angle=innerWidth>760 ? (index%2 ? '-1.6deg' : '1.6deg') : '0deg';
+      animate(el,[{opacity:0,transform:'translateY(44px) rotate('+angle+') scale(.95)',filter:'blur(3px)'},{opacity:1,transform:'translateY(0) rotate(0deg) scale(1)',filter:'blur(0px)'}],opts);
+      titleEffect(el,delay+120);
+      var art=el.querySelector('.seo-owner-illustration');
+      if(art)animate(art,[{opacity:.2,transform:'translateY(16px) scale(.9)'},{opacity:1,transform:'translateY(0) scale(1)'}],{duration:1000,delay:delay+80,easing:opts.easing,fill:'backwards'});
+      var icon=el.querySelector('.seo-studio-icon,.seo-owner-icon');
+      if(icon) animate(icon,[{opacity:.2,transform:'rotate(-18deg) scale(.6)'},{opacity:1,transform:'rotate(0deg) scale(1)'}],{duration:900,delay:delay+100,easing:opts.easing});
+      var image=el.querySelector('.seo-card-media img');
+      if(image) animate(image,[{transform:'scale(1.12)'},{transform:'scale(1)'}],{duration:1300,delay:delay,easing:opts.easing});
+    }
+  }
+  function layout() {
+    if(timeline) {
+      var steps=timeline.querySelectorAll(':scope > li');
+      if(steps.length>1) processLength=steps[steps.length-1].offsetTop-steps[0].offsetTop;
+      timeline.style.setProperty('--seo-process-length',Math.max(0,processLength)+'px');
+    }
+    schedule();
+  }
+  function paint() {
+    frame=null;
+    if(disposed || document.hidden) return;
+    var height=innerHeight;
+    if(timeline) {
+      var rect=timeline.getBoundingClientRect();
+      if(reduced.matches) reached=1;
+      else if(rect.top<height && rect.bottom>0) reached=Math.max(reached,Math.min(1,Math.max(0,(height*.68-rect.top-34)/Math.max(1,processLength))));
+      timeline.style.setProperty('--seo-process-progress',reached.toFixed(4));
+    }
+    if(!reduced.matches) active.forEach(function(el){
+      var rect=el.getBoundingClientRect();
+      var shift=Math.max(-12,Math.min(12,((rect.top+rect.height/2)/height-.5)*24));
+      el.style.setProperty('--seo-scroll-shift',shift.toFixed(2)+'px');
+    });
+  }
+  function schedule() { if(frame===null&&!disposed&&!document.hidden) frame=requestAnimationFrame(paint); }
+  function observe() {
+    if(entries) entries.disconnect();
+    if(visibility) visibility.disconnect();
+    if(reduced.matches || typeof IntersectionObserver==='undefined') {
+      nodes.forEach(function(el){reveal(el,false);});
+      active.forEach(function(el){el.classList.remove('seo-studio-motion-active');el.style.removeProperty('--seo-scroll-shift');});active.clear();
+      running.forEach(function(a){a.cancel();});running.clear();
+      schedule();return;
+    }
+    entries=new IntersectionObserver(function(batch){
+      batch.filter(function(e){return e.isIntersecting;}).sort(function(a,b){return nodes.indexOf(a.target)-nodes.indexOf(b.target);}).forEach(function(e){
+        entries.unobserve(e.target);reveal(e.target,true);
+      });
+    },{threshold:.08,rootMargin:'0px 0px -3% 0px'});
+    nodes.forEach(function(el){
+      if(el.dataset.seoStudioRevealed==='true') return;
+      entries.observe(el);
+    });
+    visibility=new IntersectionObserver(function(batch){
+      batch.forEach(function(e){
+        e.target.classList.toggle('seo-studio-motion-active',e.isIntersecting);
+        if(e.isIntersecting) active.add(e.target);
+        else { active.delete(e.target);e.target.style.removeProperty('--seo-scroll-shift'); }
+      });schedule();
+    },{threshold:0,rootMargin:'8% 0px 8% 0px'});
+    watch.forEach(function(el){visibility.observe(el);});
+  }
+  root.querySelectorAll('[data-home-scroll]').forEach(function(slider){
+    var track=slider.querySelector('[data-home-scroll-track]');
+    function state(){
+      var max=Math.max(0,track.scrollWidth-track.clientWidth);
+      slider.style.setProperty('--seo-scroll-progress',max ? Math.min(1,Math.abs(track.scrollLeft)/max).toFixed(4) : '0');
+    }
+    on(track,'scroll',state,{passive:true});
+    on(window,'resize',state);state();
+  });
+  on(window,'scroll',schedule,{passive:true});
+  on(window,'resize',layout);
+  on(document,'visibilitychange',function(){
+    if(document.hidden){if(frame!==null)cancelAnimationFrame(frame);frame=null;active.forEach(function(el){el.classList.remove('seo-studio-motion-active');});}
+    else { active.forEach(function(el){el.classList.add('seo-studio-motion-active');});schedule(); }
+  });
+  on(reduced,'change',function(){observe();schedule();});
+  if(scroller) { scroller.on('scroll',schedule);undo.push(function(){if(typeof scroller.off==='function')scroller.off('scroll',schedule);}); }
+  if(typeof ScrollTrigger!=='undefined') { ScrollTrigger.addEventListener('refresh',layout);undo.push(function(){ScrollTrigger.removeEventListener('refresh',layout);}); }
+  if(typeof ResizeObserver!=='undefined') { resize=new ResizeObserver(layout);resize.observe(root); }
+  observe();layout();
+  seoStudioCleanup=function(){
+    disposed=true;if(entries)entries.disconnect();if(visibility)visibility.disconnect();if(resize)resize.disconnect();
+    if(frame!==null)cancelAnimationFrame(frame);
+    running.forEach(function(a){a.cancel();});running.clear();
+    active.forEach(function(el){el.classList.remove('seo-studio-motion-active');el.style.removeProperty('--seo-scroll-shift');});active.clear();
+    undo.forEach(function(fn){fn();});
+  };
+}
+
+// One document-space ribbon; the section SVGs are color windows on exactly
+// the same geometry. Only scroll changes its draw progress, never the pointer.
+var seoFlowCleanup = null;
+function initSEOFlow() {
+  if(seoFlowCleanup){seoFlowCleanup();seoFlowCleanup=null;}
+  var containers=document.querySelectorAll('[data-barba="container"]');
+  var root=containers[containers.length-1];
+  if(!root||!root.matches('.rf-seo-studio'))return;
+  if(!ensureSeoStudioStyles(root))return;
+  var reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
+  var states=Array.from(root.querySelectorAll('[data-seo-flow]')).map(function(el){
+    var path=el.querySelector('.seo-flow-ribbon'),svg=el.querySelector('svg');
+    return {el:el,path:path,svg:svg,original:path?path.getAttribute('d'):'',box:svg?svg.getAttribute('viewBox'):'',top:0,height:0,progress:null};
+  }).filter(function(s){return !!s.path;});
+  if(!states.length)return;
+  var active=new Set(),undo=[],observer=null,resize=null,frame=null,disposed=false,dirty=true;
+  var samples=[],total=0,globalProgress=0;
+  var scroller=typeof scroll!=='undefined'&&scroll&&typeof scroll.on==='function'?scroll:null;
+  function on(el,event,fn,opts){el.addEventListener(event,fn,opts);undo.push(function(){el.removeEventListener(event,fn,opts);});}
+  function virtualTop(el){
+    // Recover fractional document coordinates even when Locomotive has frozen
+    // an offscreen transform. Integer offsetTop values can leave a 1px seam.
+    if(typeof DOMMatrixReadOnly==='function'){
+      var y=el.getBoundingClientRect().top+window.scrollY;
+      for(var n=el;n;n=n.parentElement){var transform=getComputedStyle(n).transform;if(transform&&transform!=='none')y-=new DOMMatrixReadOnly(transform).m42;if(n===root)break;}
+      return y;
+    }
+    var top=0;for(var node=el;node&&node!==root;node=node.offsetParent)top+=node.offsetTop;return top;
+  }
+  function scrollY(){
+    var position=scroller&&scroller.scroll&&scroller.scroll.instance&&scroller.scroll.instance.scroll;
+    return position&&Number.isFinite(position.y)?position.y:window.scrollY;
+  }
+  function geometry(){
+    var width=root.clientWidth||innerWidth;
+    // Read natural layout; offscreen Locomotive transforms are intentionally
+    // ignored. Every window then uses the same absolute path and scale.
+    states.forEach(function(s){s.top=virtualTop(s.el.parentElement);s.height=s.el.parentElement.getBoundingClientRect().height;});
+    var anchors=[.73,.59,.81,.27,.72,.86,.25,.69,.43,.78,.30];
+    var theme=getComputedStyle(root);
+    var orange=theme.getPropertyValue('--studio-orange').trim(),cream=theme.getPropertyValue('--studio-cream').trim();
+    function waveEdge(wave,fraction,flip){
+      if(!wave)return 0;
+      var svg=wave.querySelector('svg'),path=svg&&svg.querySelector('path'),box=svg&&svg.viewBox.baseVal;
+      if(!path||!box||!box.height||typeof path.isPointInFill!=='function')return wave.offsetHeight*.25;
+      var x=(flip?1-fraction:fraction)*box.width,lo=0,hi=box.height;
+      for(var n=0;n<16;n++){var mid=(lo+hi)/2;if(path.isPointInFill(new DOMPoint(x,mid)))lo=mid;else hi=mid;}
+      return lo/box.height*wave.offsetHeight;
+    }
+    states.forEach(function(s,i){
+      var light=s.el.dataset.seoFlowTone==='light';s.colorStart=light?cream:orange;s.colorEnd=s.colorStart;
+      var topWave=s.el.parentElement.querySelector(':scope > .seo-owner-wave--top'),bottomWave=s.el.parentElement.querySelector(':scope > .seo-owner-wave--bottom');
+      s.topWave=waveEdge(topWave,anchors[i],false);s.bottomWave=waveEdge(bottomWave,anchors[i+1],true);s.hasBottomWave=!!bottomWave;
+    });
+    states.forEach(function(s,i){s.effectiveEnd=s.hasBottomWave&&states[i+1]?states[i+1].colorStart:s.colorEnd;});
+    var start={x:width*anchors[0],y:states[0].top+24},last=start,d='M '+start.x+' '+start.y;
+    samples=[{y:start.y,length:0}];total=0;
+    function cubic(a,b,end){
+      d+=' C '+a.x+' '+a.y+' '+b.x+' '+b.y+' '+end.x+' '+end.y;
+      var from=last,previous=last;
+      for(var step=1;step<=32;step++){
+        var t=step/32,u=1-t;
+        var p={x:u*u*u*from.x+3*u*u*t*a.x+3*u*t*t*b.x+t*t*t*end.x,y:u*u*u*from.y+3*u*u*t*a.y+3*u*t*t*b.y+t*t*t*end.y};
+        total+=Math.hypot(p.x-previous.x,p.y-previous.y);samples.push({y:p.y,length:total});previous=p;
+      }
+      last=end;
+    }
+    states.forEach(function(s,i){
+      var end=i<states.length-1?states[i+1].top:s.top+s.height-24;
+      var y=last.y,h=Math.max(100,end-y),ex=width*anchors[i+1],left=width*(i%2?.20:.12),right=width*(i%2?.84:.88);
+      var q=width*(i%2?.69:.31),r=width*(i%2?.34:.74);
+      cubic({x:last.x,y:y+h*.10},{x:i%2?right:left,y:y+h*.19},{x:q,y:y+h*.34});
+      cubic({x:q,y:y+h*.46},{x:i%2?left:right,y:y+h*.54},{x:r,y:y+h*.68});
+      cubic({x:r,y:y+h*.81},{x:ex,y:y+h*.90},{x:ex,y:end});
+    });
+    states.forEach(function(s,i){
+      var end=i<states.length-1?states[i+1].top:s.top+s.height;
+      // Subpixel overlap removes antialiasing gaps between independently
+      // composited section windows without changing the shared path geometry.
+      s.el.style.top='-.75px';s.el.style.height=Math.max(1,end-s.top+1.5)+'px';
+      s.svg.setAttribute('viewBox','0 '+(s.top-.75)+' '+width+' '+Math.max(1,end-s.top+1.5));
+      s.path.setAttribute('d',d);s.path.style.strokeDasharray=reduced.matches?'none':'1';s.path.style.strokeDashoffset=reduced.matches?'0':String(1-globalProgress);s.progress=null;
+      s.el.dataset.seoFlowStart=String(s.top);s.el.dataset.seoFlowEnd=String(end);
+      // Match the actual filled wave boundary. A light stroke over a cream
+      // wave otherwise looks clipped despite continuous geometry.
+      var gradient=s.el.querySelector('linearGradient'),stops=gradient.querySelectorAll('stop'),span=end-s.top;
+      gradient.setAttribute('gradientUnits','userSpaceOnUse');gradient.setAttribute('x1','0');gradient.setAttribute('x2','0');gradient.setAttribute('y1',String(s.top));gradient.setAttribute('y2',String(end));
+      var top=Math.max(0,s.topWave),bottom=s.hasBottomWave?Math.max(0,end-(s.top+s.height-s.bottomWave)):0;
+      var offsets=[0,Math.max(0,(top-3)/span),Math.min(.45,(top+3)/span),Math.max(.55,1-(bottom+3)/span),Math.min(1,1-Math.max(0,bottom-3)/span),1];
+      var topColor=i?states[i-1].effectiveEnd:s.colorStart;
+      var colors=[topColor,topColor,s.colorStart,s.colorEnd,s.effectiveEnd,s.effectiveEnd];
+      stops.forEach(function(stop,n){stop.setAttribute('offset',offsets[n].toFixed(6));stop.style.stopColor=colors[n];});
+    });
+    root.dataset.seoFlowConnected='true';dirty=false;
+  }
+  function progressAt(y){
+    if(y<=samples[0].y)return 0;
+    if(y>=samples[samples.length-1].y)return 1;
+    var lo=0,hi=samples.length-1;
+    while(hi-lo>1){var mid=(lo+hi)>>1;if(samples[mid].y<y)lo=mid;else hi=mid;}
+    var a=samples[lo],b=samples[hi],t=(y-a.y)/Math.max(.001,b.y-a.y);
+    return (a.length+(b.length-a.length)*t)/Math.max(1,total);
+  }
+  function paint(){
+    frame=null;if(disposed||document.hidden)return;
+    if(dirty)geometry();
+    globalProgress=reduced.matches?1:Math.round(progressAt(scrollY()+innerHeight*.82)*10000)/10000;
+    root.dataset.seoFlowDraw=String(globalProgress);
+    active.forEach(function(s){
+      if(s.progress===globalProgress)return;
+      s.progress=globalProgress;s.path.style.strokeDashoffset=String(1-globalProgress);
+      s.el.dataset.seoFlowProgress=globalProgress.toFixed(4);
+    });
+    if(reduced.matches)states.forEach(function(s){s.path.style.strokeDashoffset='0';});
+  }
+  function schedule(){if(frame===null&&!disposed&&!document.hidden)frame=requestAnimationFrame(paint);}
+  function layout(){dirty=true;schedule();}
+  function observe(){
+    if(observer)observer.disconnect();active.clear();
+    if(frame!==null){cancelAnimationFrame(frame);frame=null;}
+    states.forEach(function(s){s.el.dataset.seoFlowReady='true';});
+    if(reduced.matches||typeof IntersectionObserver==='undefined'){states.forEach(function(s){active.add(s);});layout();return;}
+    observer=new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){var s=states.find(function(state){return state.el===entry.target;});if(entry.isIntersecting){active.add(s);s.progress=null;}else active.delete(s);});
+      schedule();
+    },{threshold:0});
+    states.forEach(function(s){observer.observe(s.el);});layout();
+  }
+  on(window,'scroll',schedule,{passive:true});on(window,'resize',layout);
+  on(document,'visibilitychange',function(){if(document.hidden){if(frame!==null)cancelAnimationFrame(frame);frame=null;}else layout();});
+  on(reduced,'change',observe);
+  if(scroller){scroller.on('scroll',schedule);undo.push(function(){if(typeof scroller.off==='function')scroller.off('scroll',schedule);});}
+  if(typeof ScrollTrigger!=='undefined'){ScrollTrigger.addEventListener('refresh',layout);undo.push(function(){ScrollTrigger.removeEventListener('refresh',layout);});}
+  if(typeof ResizeObserver!=='undefined'){resize=new ResizeObserver(layout);resize.observe(root);}
+  if(document.fonts)document.fonts.ready.then(function(){if(!disposed)layout();});
+  observe();
+  seoFlowCleanup=function(){
+    disposed=true;if(frame!==null)cancelAnimationFrame(frame);if(observer)observer.disconnect();if(resize)resize.disconnect();
+    active.clear();undo.forEach(function(fn){fn();});delete root.dataset.seoFlowConnected;delete root.dataset.seoFlowDraw;
+    states.forEach(function(s){s.el.style.removeProperty('height');s.el.style.removeProperty('top');s.svg.setAttribute('viewBox',s.box);s.path.style.removeProperty('stroke-dasharray');s.path.style.removeProperty('stroke-dashoffset');s.path.setAttribute('d',s.original);delete s.el.dataset.seoFlowReady;});
   };
 }
 
@@ -930,6 +1286,8 @@ function initScript() {
   initPortfolio();
   initSliders();
   initEditorialRefresh();
+  initSeoStudioMotion();
+  initSEOFlow();
   initEmailLinks();
   setTimeout(initScrollRefresh, 500);
 }

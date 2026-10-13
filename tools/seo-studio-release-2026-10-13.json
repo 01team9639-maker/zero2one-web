@@ -1,0 +1,490 @@
+{
+  "baseline": "2e183cfb087f8b466885b212e5dd2ebe400f4217",
+  "scope": "Both SEO service pages and their dependencies only; other page edits are cache stamps.",
+  "nonSeoMarkup": {
+    "about/index.html": "4ed12f1e0a93ebd5a2831156ae24c0fbe6c4e2524cbd3bc73d66498e891c77dc",
+    "ar/about/index.html": "5eaf99d71ef12828e8eaf01cc84ca218d00cfe8ed3641ecffe405600aee5df4a",
+    "ar/contact/index.html": "f5c124384dd2560ee332f8331d30e5cbae65d158451665ef24a34ba76d85ff4d",
+    "ar/faqs/index.html": "210c6d95098def65c7b7fb023680fff3644f8db13a43bc91201a49ae6e71b7ae",
+    "ar/index.html": "7415bdf75ba9618bb87c82db65228aa74dfc2f7f5946fcda5dd8198d3506192d",
+    "ar/services/brand-identity/index.html": "0d9de39bf35434b161856a0d5c8bc7e080a4d0a216d8f55054fbd60e0442a887",
+    "ar/services/digital-advertising/index.html": "e8a0f479949f29139782ca98375e8a3df4b343a6948bab24442df665ae08bbec",
+    "ar/services/ecommerce-development/index.html": "fa574fc1de247550a4a7c06c70ad655c8a95d719be052ff5c9984809fc2cac71",
+    "ar/services/index.html": "9ac85282a4c4987beea9f30566b46b8003f080e48dc378609ebe3e0ef45887c0",
+    "ar/services/manage-google-adwords-campaigns/index.html": "1b7ccd97e0ea13ed1eb9615dc7e4486bd12c2030382d24c9489eae0724abd1e0",
+    "ar/services/marketing-consulting/index.html": "daaacffe4caad1b52846e23c0f8f05969131350f0d32c74694da48f55e0395fe",
+    "ar/services/mobile-application/index.html": "6ac882d0e83def028ed18b495ce5459a444bd70d7e6f7e61ba91cfeaba229518",
+    "ar/services/social-media-management/index.html": "af6380f421551e889113e8d1bbc34e8adaa4462d31b222e8d1279d428839faff",
+    "ar/services/web-design-riyadh/index.html": "b1469e825d12d6135217a15ca558f611a7802ad597a59037fde0a9f4e4b72216",
+    "ar/team/index.html": "c7d642e40be93bb59577f38d2eb89dc1b3b636128a2b8d0b93a6df846f0f10d3",
+    "ar/work/alhokail-seo/index.html": "0eac590c81a0d5a8e938fc73e20660480aa79ad701bbca7c0b35310b02824e7a",
+    "ar/work/alostaz-seo/index.html": "6d0c035b11316bd9b8d76a97e909f4718237c72e40c6ff401e049b06301de809",
+    "ar/work/alrahwanji-paints/index.html": "b6673f566747fb54e4d68d7776e3023f0f774d64040d9103a4056020d43e14a5",
+    "ar/work/cosmetic-surgery-egypt-seo/index.html": "53b1e131c114ead3d2a9cabaf6a8de5050b0df24bdfbb46b5563b8bbbb45b5b1",
+    "ar/work/google-ads-conversion-value/index.html": "f7af11f8eab8809d143892c20c82d7733f09ae1e785241afa64ee03c820523b7",
+    "ar/work/habba/index.html": "70015c691dbefdf5bc256d0413316d9a631f3549b87f36de81714601d8b3fbe5",
+    "ar/work/index.html": "82a02757410ebf520bdcbf8b986cdf6ff19dbca5e5116a423a5c41cd180fb4f3",
+    "ar/work/kuwait-tutoring-instagram-ads/index.html": "647738d4f77dc6ad80564ad59353ad1106acbd0f8c3cee24fac57756577595cb",
+    "ar/work/orthopedic-clinic-egypt-seo/index.html": "d940e49c45cc7784238ddb9e37a0c2d486a1e4dece3cda41b6fd9c4d8fed1e28",
+    "blog/404.html": "658a4a45ac0cdd6dcf98022110ddba47410ae8db02a781a2ce9729215d59f06b",
+    "blog/ar/404.html": "026422e428b60b79647b5b5d021a0be7134cfd5bf40d725e17e5303d1287bd37",
+    "blog/ar/build-marketing-strategy/index.html": "510062f21a5ec3336238692d3cb935e981af3537825eca1b12ca8269b9c940dc",
+    "blog/ar/categories/advertising/index.html": "41cd3cb2c81c96ca754b6bb4c6cef9ad16d10be0affd9fae66898513c206e3fc",
+    "blog/ar/categories/brand-identity/index.html": "5640df25d2386485cc9c63899ec99e51798a46f5a2d88e0a3162ee6d29575a42",
+    "blog/ar/categories/ecommerce/index.html": "eaf2bf5f83d37012caff92a5974299bf7a799f6ded6be3533b4d64974be7cf35",
+    "blog/ar/categories/index.html": "cb423e468e69ce448186cf27633ee4e79d31fbb214e03d0c46daed995c0f06e7",
+    "blog/ar/categories/seo/index.html": "18e6326fe8193d6ee35181520e145a2b5b9ff1f48b308ed632052efdf2143c0e",
+    "blog/ar/categories/social-media/index.html": "cdbb351be2abb36c5b4568f61cb0df09b3e7f4ecc375e015c7136cccb1caec6d",
+    "blog/ar/categories/web-design/index.html": "c438280580ceac2ab91955285fbdc2613f64cf868ef5ae6f65a4564e765fc384",
+    "blog/ar/how-to-choose-web-development-company/index.html": "5338d323ab815f49b5ea4b50691a4afe34a0d586f82651ccaf088f260d449560",
+    "blog/ar/index.html": "1f7477eeaa430fbc2f0c5cbc2dd841fa9e3e940a2becfe360ec242d19da8db9b",
+    "blog/ar/seo-strategies-competitor-analysis/index.html": "9cb36fc4b3098a00aaa73a3d55d9ee5114c7f397afaa4653f64693c5a6ca648d",
+    "blog/ar/social-media-campaign-management/index.html": "72420c11f38f04a4842d65cb074b7c5f4c516f26bf5a34c54a94db5347938bb9",
+    "blog/ar/specialized-digital-marketing-strategies/index.html": "888f72edaa51d5fa2f8f0cab7444bbcae0e76196513c016c3c21c2a2fac568b1",
+    "blog/ar/web-design-services-in-riyadh/index.html": "52e238cea553f1b564eec7ea3f8510591febb2b52de7caae245a46f6ffbb6cb8",
+    "blog/categories/advertising/index.html": "3cc628cf8e020b080945194f9207d1de6ebd7d3248b4219d400cd8eee1faae69",
+    "blog/categories/brand-identity/index.html": "32f20668a6ae0c8fe939b3424c697235b2fa7929b439111594fd8e2e74d5b0d8",
+    "blog/categories/ecommerce/index.html": "fa45b29333f3a06da9dc540a2fa49bac560f20a26ccbae26016728fbbdcee018",
+    "blog/categories/index.html": "276266e1c8e84185cdc911fcb65ee8e4c7173f60354568581dfd8eb2bdf2b447",
+    "blog/categories/seo/index.html": "3a55e231944fdc14481a79fb8f72e5851930458601a20514a5a67ee0105d4e1b",
+    "blog/categories/social-media/index.html": "e5884e3b38c008a33d615eb7ba99ee537077f5feda14eca9419a70d69f6949f0",
+    "blog/categories/web-design/index.html": "f5e1042a53223fd7497506f563c0f5275005dfdcacfd1ee62be1ad065dfb9cab",
+    "blog/how-to-choose-web-development-company/index.html": "b5804ba02f1e2d104f7a28bd3417d765e542765ce5835e8d6f673dd5c00a9cc7",
+    "blog/index.html": "986d7fe19fb9cb006ba56ec1b6470ae0ed5fce5fc8d6175f2840127440714b29",
+    "contact/index.html": "36e9ea9be7b662f7003e816f53b3024ea8ba183f8da8a0b8d08188747db8c146",
+    "faqs/index.html": "58d92eaa7618f54aeff2ef5cd8663a05e752747f9c8df6f91ce1e0fb7c723799",
+    "index.html": "f4f39d38f2750f57734985cae3892bc118a6d4cb9ce829d779b6f2309b5fb173",
+    "pages/index.html": "1cde973aa93cbd261fa2672b8e75f574dc58cacc4da0e2dfce753bf637705391",
+    "pages/projects/advertising.html": "39a8f82128b3576ab1c61bebbc05d50ff0487b2412d17f0cae41910b8f7ef0cb",
+    "pages/projects/brand-identity.html": "7a9b28f0567cdce4a7bdffd5dce0e09b5e679a536d12c92f2c976a5e3df8cc5d",
+    "pages/projects/ecommerce.html": "3398f65d8302ee95580f3db5d67b2e27cc29a42c2fac4d371f703caa438f7224",
+    "pages/projects/index.html": "1cde973aa93cbd261fa2672b8e75f574dc58cacc4da0e2dfce753bf637705391",
+    "pages/projects/seo.html": "ba4614c25c070748387c2b266c329b85738552c0e7fe84b4a860b436c10b1114",
+    "pages/projects/social-media.html": "6c49eaacaf4e45dc13ec493b9fc989af8353b816d79c123e8f8fc7de50c742c4",
+    "pages/projects/website-design.html": "e795e55091a874f1df5692e355251dc73fb4a91a7dcf6302bd9e9458f0858506",
+    "services/brand-identity/index.html": "bb627689749f722b5211fecb9b7227522e6b37d794bc342e5bdc9e50660a52c8",
+    "services/digital-advertising/index.html": "11fc007d07b5c52dbc435e30ebb51eea29d30e86313a8cb68af03dd58be7a144",
+    "services/ecommerce-development/index.html": "222b0919ddc14b474e5a8b7c86b50eb5e807deaf0b7c929d0b143ebd89fff5b2",
+    "services/index.html": "656562eb33d16f954a77bf501cbd72512508d1f65baf83516336ed39ffda6b15",
+    "services/manage-google-adwords-campaigns/index.html": "23313d1821eb6ae54315090716c0b6b05bd89ceb196197a2d55b2ef25576cf1c",
+    "services/marketing-consulting/index.html": "f6c93a1372dfe61ff47cd9584dac6e1871baa13a3258a6e507b9bae12077c78a",
+    "services/mobile-application/index.html": "887153c131ed18d37b63e7cc3d69d3eaecee79561b5f98c7f57088df341e110b",
+    "services/social-media-management/index.html": "38378735284ca9447232bdf0535a3247ae3cc9d1944fda224da45b6b39235bdc",
+    "services/web-design-riyadh/index.html": "3e73583f6d5228fb5a88ad28054fa7bd1db789e71fa45818d0b8f5221314590d",
+    "team/index.html": "5a48552c3df83b048c76f52027cf37481bc2b4d1c74db2aacde58a6dfe6ffe85",
+    "work/alhokail-seo/index.html": "78f6db263af44905f1e20a22535843caeb3c37daa28843f6686f15db2b45b770",
+    "work/alostaz-seo/index.html": "99b75ea86e6ec17f8f5787f3e96562e394fc9c3e5d2cfa4c13de3348ef1eee8e",
+    "work/alrahwanji-paints/index.html": "2852c10ede52391b72e38a1731158893d737aff85ad868d5674724383d591339",
+    "work/cosmetic-surgery-egypt-seo/index.html": "44dba3451c4b2113561393eb7a803d988e69c7216156d83df322211ec261bd05",
+    "work/google-ads-conversion-value/index.html": "620a4eb12aa5f68b392249a9ca7259f965c4a9b7bd9f09494c0b3983a869935e",
+    "work/habba/index.html": "bb820aead423ff6435ba76206ab99a1a72a94e05394d7161830be2ec664c63ce",
+    "work/index.html": "5364b0d84fa1065bb21ebead1ff1044cf0d1ceb6af2b3889b8a0467ffcca370d",
+    "work/kuwait-tutoring-instagram-ads/index.html": "480f2c0d6db9c706bb7e65c515f33db652c203e94154a6ce01752e3b14068fb7",
+    "work/orthopedic-clinic-egypt-seo/index.html": "6217eaa897cee9faedc33dc2da7f58b92f8adccc61ac50af8bb57ea158290199"
+  },
+  "publicFiles": [
+    {
+      "file": "assets/css/styleguide.css",
+      "sha256": "d20654744b6a031989c24fa2b4c13a2cb7579a9d266a5caf8719c0df58e2d824",
+      "bytes": 30349
+    },
+    {
+      "file": "ar/services/seo-riyadh/index.html",
+      "sha256": "889ee2279f166b64e72d08b0907e6e4edd0eaa3aa6140495ac3a607b043d3425",
+      "bytes": 179733
+    },
+    {
+      "file": "services/seo-riyadh/index.html",
+      "sha256": "0da5662cb8341c8ba0dae23146d9e5496bff6757c45349fe5d751845fb3ad895",
+      "bytes": 173261
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/audience/01_ecommerce-320.webp",
+      "sha256": "4336e0612b882db5d7ecd020cd2c6a4b8b77f3cc18d971c228906dec97781a2d",
+      "bytes": 26054
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/audience/01_ecommerce.webp",
+      "sha256": "b3ea9417ac9683b748ae1448a08711a1262d7ada63a776f9542e4c1eb504896b",
+      "bytes": 43958
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/audience/02_company_websites-320.webp",
+      "sha256": "4909513c8d8deeffac0191de2eb916026aa31c90142dde6bc92ee402358fdaef",
+      "bytes": 22656
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/audience/02_company_websites.webp",
+      "sha256": "f88bbc7853986865c10a5d7b5b01e79f710994943e4f421872b54165801a3eed",
+      "bytes": 39010
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/audience/03_new_websites-320.webp",
+      "sha256": "74a3476e46c9f5233161b33dd6132a56e74415c5d7e1a0052bb99caa9affbc53",
+      "bytes": 23866
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/audience/03_new_websites.webp",
+      "sha256": "f6d395fa804a18e8bae604670465c5ebf182d0d871342074ac6009f38a5b0d43",
+      "bytes": 36762
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/audience/04_local_businesses-320.webp",
+      "sha256": "824fc42cb19fdc28949a80f7ba3e4a78588a612ba125983d34a5f4cbb2a42d2d",
+      "bytes": 27848
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/audience/04_local_businesses.webp",
+      "sha256": "0d6281d6e84662edc667792f062614a259c236b5cdbd53f1cc690ab405a82a86",
+      "bytes": 46788
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/audience/05_service_websites-320.webp",
+      "sha256": "fec56e08a19a4997b6902534713933486e056d815bf540711267fa0d80132339",
+      "bytes": 24008
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/audience/05_service_websites.webp",
+      "sha256": "c23cefa71287579f05e6e7b8299fe176115f2367bcfb5ae96ba6fa36da9d3df6",
+      "bytes": 38498
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/audience/06_digital_platforms-320.webp",
+      "sha256": "799a584806b831a4bf19178658cfaa6dc61d5ca3810d237b1a252343cd64a4c5",
+      "bytes": 30986
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/audience/06_digital_platforms.webp",
+      "sha256": "58c39c15eb4d09fb3d9d69ff3dda56bb4aa917a9003d7a1fb918acf678dbd668",
+      "bytes": 48632
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/know/01_new_website_visibility-320.webp",
+      "sha256": "d35201ea2bf8b730e5d777a0c478b54e5efc9e5c8337f04ed9629f8d1238053f",
+      "bytes": 26868
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/know/01_new_website_visibility.webp",
+      "sha256": "fd87c3d8155546f3b8de2201326a1f27fa654700f0cf4be0d1fa2900d56bc964",
+      "bytes": 29554
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/know/02_no_traffic_or_leads-320.webp",
+      "sha256": "c39af2a89b76e3430541713682bf6a9131048fbdd5089b587dd694f6488bc667",
+      "bytes": 30950
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/know/02_no_traffic_or_leads.webp",
+      "sha256": "0f8eb9afa2274d594302fbac15c1848afc401c3edda863da8aea840d01aa2086",
+      "bytes": 34420
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/know/03_missing_google_maps-320.webp",
+      "sha256": "a8f309d4b070233325d1f6194a004daf3b96a05d91ebcc357b89e92bb7b040b6",
+      "bytes": 35314
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/know/03_missing_google_maps.webp",
+      "sha256": "35dcaecfb8a93af19342a5bf493f67af75cbf092116973d851ee1aefbc657386",
+      "bytes": 40602
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/know/04_competitors_dominating-320.webp",
+      "sha256": "36661b7c654ee0f94b94951ab0276ad314b7c1a517f300e08fed90c54a4b8cb2",
+      "bytes": 39408
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/know/04_competitors_dominating.webp",
+      "sha256": "38f66322ccf6dc8b4a91b2bee3df294e84fb753c2afd7ef99290df0909fbf0c2",
+      "bytes": 40616
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/know/05_algorithm_rankings_drop-320.webp",
+      "sha256": "9af71861f19ec93d94d6bd347878a717869a8c5fdf6659776e36e21ab910e85f",
+      "bytes": 29028
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/know/05_algorithm_rankings_drop.webp",
+      "sha256": "5c498174d8e6fb3b2f4510364ea8c04623daa664c9ca95a3667954bac2fad20f",
+      "bytes": 40382
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/know/06_ai_search_changes-320.webp",
+      "sha256": "38647f1acae02631c8892f8a5f00c8784951649e3161735cad8e96805e90dc3c",
+      "bytes": 33786
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/know/06_ai_search_changes.webp",
+      "sha256": "8d3ac7b5bb91d69c7c8f7f4bd3f22b4b30a88345479db934e1e5739887b15496",
+      "bytes": 53192
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/know/07_high_ppc_cost-320.webp",
+      "sha256": "918913126651cfabfb56e54326497556567c2e85009bf450fb2d86034a9c5c7b",
+      "bytes": 37828
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/know/07_high_ppc_cost.webp",
+      "sha256": "c55dd6b3a7773a9b8e0f6ed211dad4d8052b9aea9aa4b933ff96f8c62419bc7d",
+      "bytes": 51268
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/why/01_all_sectors-320.webp",
+      "sha256": "8a8b8f8a4ff68e0b08e226ce1e313e9f8a8a5dea604980e75b244ce3126a17bc",
+      "bytes": 21128
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/why/01_all_sectors.webp",
+      "sha256": "efea34364453f06eb5e54dba26460f14fbe1eb96e0ef5f160051aadf8c0f1778",
+      "bytes": 25932
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/why/02_customer_retention-320.webp",
+      "sha256": "84bf546662a7903aee0167b6c057ef0ad9a2a32c6da78475fe93c5bb9b1c6135",
+      "bytes": 18990
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/why/02_customer_retention.webp",
+      "sha256": "710ffc50ccb4171667d5d9432e460a3ac602bf2f7f4b4293d1b9314e0559f14f",
+      "bytes": 33850
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/why/03_monthly_reports-320.webp",
+      "sha256": "0b49da18c3dcf095a13e75ff08201be2a285943c7b0328509c7b4d1c1e13e63d",
+      "bytes": 21052
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/why/03_monthly_reports.webp",
+      "sha256": "c585f6fab28e92b9f800f3a8da7e3270c35456b56ba8f4c87d95755a123d07e2",
+      "bytes": 24848
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/why/04_saudi_market_strategy-320.webp",
+      "sha256": "a0d276630a2fa94288d5554ba499b26049cb49886bc6c874bd5e0c58d7927369",
+      "bytes": 17564
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/why/04_saudi_market_strategy.webp",
+      "sha256": "375104010d58aab38f09d3c68592a7433ddfa7b873a95d1ff8a813a745651f70",
+      "bytes": 30086
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/why/05_safe_tools-320.webp",
+      "sha256": "0483b746936d34a852b510c26ef84a8f1b5f7c1d1f8e53789aa4674e2dcd5218",
+      "bytes": 18974
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/why/05_safe_tools.webp",
+      "sha256": "f06db74cb9137cbf5effce60fae7e64100c09a0e2f6c688bdda8c63894069169",
+      "bytes": 22710
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/why/06_research_and_development-320.webp",
+      "sha256": "c618a4b9a4f37bbd0b69598590ec754d3ca2ec1d5f63d0fb1df5b426a3c8dce9",
+      "bytes": 19710
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/why/06_research_and_development.webp",
+      "sha256": "bfe8cd4f343f282454574695b9af006027af656eadb27fd2be863990c122664a",
+      "bytes": 22742
+    },
+    {
+      "file": "assets/images/seo/phone-mockups-2026-10-12/chatgpt-search-1000.webp",
+      "sha256": "d9370415374e7e9cbf41fad47d5f3f8fc51d5dacfd197d2f6347636576ed3352",
+      "bytes": 120830
+    },
+    {
+      "file": "assets/images/seo/phone-mockups-2026-10-12/chatgpt-search-400.webp",
+      "sha256": "b1d1a8bae0214c05f13f2875ce492424cab9454d7ef2aae5b0c95fa81e41db42",
+      "bytes": 41258
+    },
+    {
+      "file": "assets/images/seo/phone-mockups-2026-10-12/chatgpt-search-700.webp",
+      "sha256": "3efc51176bcdba8667125100ddc82fc24bb5babf5ae4996c173210387a9ab2f0",
+      "bytes": 83914
+    },
+    {
+      "file": "assets/images/seo/phone-mockups-2026-10-12/google-maps-1000.webp",
+      "sha256": "a5bdef83482284b3839dfdd411378bb9a92830e93074810a8f7fa9e19f613c77",
+      "bytes": 134010
+    },
+    {
+      "file": "assets/images/seo/phone-mockups-2026-10-12/google-maps-400.webp",
+      "sha256": "e9014a946aac38a8e0b44042985847eaae1fec45b11a7b7cf5c3434ae9074cc0",
+      "bytes": 46046
+    },
+    {
+      "file": "assets/images/seo/phone-mockups-2026-10-12/google-maps-700.webp",
+      "sha256": "649d482975c10c6bdae7ac7312dad57f032c3345f64c1ca6a06c05cf2eb0bdf4",
+      "bytes": 91938
+    },
+    {
+      "file": "assets/images/seo/phone-mockups-2026-10-12/google-search-1000.webp",
+      "sha256": "05c3b66fcb562ce73d88ad50af935f61bcb724b4de5d5317d005310b8c5cc6a9",
+      "bytes": 117764
+    },
+    {
+      "file": "assets/images/seo/phone-mockups-2026-10-12/google-search-400.webp",
+      "sha256": "d928df51ee8825664756b1df65d5bd3d54cb0dd2d98397abe1b2c0ce6122b201",
+      "bytes": 40064
+    },
+    {
+      "file": "assets/images/seo/phone-mockups-2026-10-12/google-search-700.webp",
+      "sha256": "6243e6abeb8e3285b41bdfd0db281cd1aca79e0f0afd7605c2595d60596820b0",
+      "bytes": 81462
+    },
+    {
+      "file": "assets/icons/iconly/activity.svg",
+      "sha256": "aa688af5dd434152743e3a8038366b3b7123d178dbbecd622e6c8b74e906e0cd",
+      "bytes": 862
+    },
+    {
+      "file": "assets/icons/iconly/bag.svg",
+      "sha256": "2372c197c6fee8c3d3ec32dc0c4bcb760d868566a6d4bdd84248909703640f0e",
+      "bytes": 1197
+    },
+    {
+      "file": "assets/icons/iconly/buy.svg",
+      "sha256": "b31c689f1e2d76851720ee5b0daa7cbd3aaaad235d7023940cbc6777140bc142",
+      "bytes": 1202
+    },
+    {
+      "file": "assets/icons/iconly/call.svg",
+      "sha256": "cb6d85a1f530fd5115520f499f407b0cdb1d9e3ee949e96bb8cdd05dcce3557c",
+      "bytes": 766
+    },
+    {
+      "file": "assets/icons/iconly/category.svg",
+      "sha256": "24d2f6f2c7e239a6819cf3a530e2e68f97da27ae9af5fee8f2525f7db9bc914f",
+      "bytes": 1361
+    },
+    {
+      "file": "assets/icons/iconly/chart.svg",
+      "sha256": "91c4ad415c39af566d1ea195f8776ef97af3a4656f02af472d8eaa919245dea1",
+      "bytes": 847
+    },
+    {
+      "file": "assets/icons/iconly/chat.svg",
+      "sha256": "53b32442b9df7a84533cc1f25017f590d400e940e0e827281fb05de9721f7042",
+      "bytes": 1179
+    },
+    {
+      "file": "assets/icons/iconly/close-square.svg",
+      "sha256": "c530679da24ecc193726e05bed39eea127b0e3f559b71a8fd50ad4f9e4681e7f",
+      "bytes": 755
+    },
+    {
+      "file": "assets/icons/iconly/discovery.svg",
+      "sha256": "088a5b0f27c3f6f1930d88735eefccf2c83a4b2d7f8db2fea857ea69000250b8",
+      "bytes": 515
+    },
+    {
+      "file": "assets/icons/iconly/edit-square.svg",
+      "sha256": "dcf0e380f4af1b670b93d30d40f92682d7cad5a1f534a10e32ba32fed1c6ebd7",
+      "bytes": 930
+    },
+    {
+      "file": "assets/icons/iconly/folder.svg",
+      "sha256": "ddba51924fe481fa1e17125b1a8765e09cd0c8f44763ce0c5c340aa56527f699",
+      "bytes": 799
+    },
+    {
+      "file": "assets/icons/iconly/home.svg",
+      "sha256": "4ef939cb6f37470e0604d8c35e6ec07e88d0c3ae52b5ba9be8ac85f124bbecea",
+      "bytes": 1128
+    },
+    {
+      "file": "assets/icons/iconly/image.svg",
+      "sha256": "3ce9978c7fd1c510307b90cd22cd22495696b422b85e6edc635452bd190a567f",
+      "bytes": 1134
+    },
+    {
+      "file": "assets/icons/iconly/location.svg",
+      "sha256": "86ca0c26af1842a2630c30117d7bec65b4d60a5cc2c3c9626170b4a687fa2cf1",
+      "bytes": 731
+    },
+    {
+      "file": "assets/icons/iconly/message.svg",
+      "sha256": "7243fa409e9ecc2cab19dbb27d8bb9b9aff84506b47d2ec347d61aac67f96b7f",
+      "bytes": 887
+    },
+    {
+      "file": "assets/icons/iconly/paper-plus.svg",
+      "sha256": "cf919896d403267587cf28c8ac962df03ebe75d6e0cac99c827b705016d5ba73",
+      "bytes": 918
+    },
+    {
+      "file": "assets/icons/iconly/plus.svg",
+      "sha256": "28f3d385fbc42028a744abdf598d831a3843309b6ed7a22ff813524189bc15de",
+      "bytes": 741
+    },
+    {
+      "file": "assets/icons/iconly/search.svg",
+      "sha256": "8a59e64b3567fc2768d35906642543e0206a60bee1690643a6e587d65e51f03d",
+      "bytes": 475
+    },
+    {
+      "file": "assets/icons/iconly/setting.svg",
+      "sha256": "de8fc2849cdd7f70851e5b8c5f01ba90a91985693b276a87c3ac742dc936ed0f",
+      "bytes": 3085
+    },
+    {
+      "file": "assets/icons/iconly/star.svg",
+      "sha256": "52bd4b688ad3aaa34ff40dedfbdf1eb5ec6d943d4673e1800b57c2d6dc4b1d5e",
+      "bytes": 1271
+    },
+    {
+      "file": "assets/icons/iconly/swap.svg",
+      "sha256": "8e49b06f7e9b69dfdea19ea744cbbce6203a29f44d34536720bde77a625b053c",
+      "bytes": 695
+    },
+    {
+      "file": "assets/icons/iconly/tick-square.svg",
+      "sha256": "1a83f80bccad8d96f4b4dac9d69a3dcced1bb2c988c093941962c2ced8403f8e",
+      "bytes": 693
+    },
+    {
+      "file": "assets/icons/iconly/work.svg",
+      "sha256": "61cebe1e6ad5907502f72bb051552375b20a3840e73f7395afc05803ece17282",
+      "bytes": 1121
+    },
+    {
+      "file": "tools/test_seo_studio.js",
+      "sha256": "c4ee01a001f45e4983b3ac8216142ee51598e5f2759ea3a8841877611b143d86",
+      "bytes": 32842
+    }
+  ],
+  "originals": "Unmodified originals retained only in the local review archive.",
+  "iconLicense": "Free Iconly Essential Light: https://piqodesign.gumroad.com/l/iconly",
+  "reviewedSource": {
+    "script": "0c986dfa458933364ddabfb7852038d01e0a27fc1a280b5cab73c8906a34f9fa",
+    "stylesheet": "975d61b342d50819087771b28e9e1bd318b8d14455c59e0f407490e16472eb50"
+  },
+  "builtAssets": [
+    {
+      "file": "assets/css/bundle.min.css",
+      "sha256": "94b97ae415dcae2aa6f549ee67aeaa27cd6b80a35a75fd791cf4ef5da2acbf6f",
+      "bytes": 226309
+    },
+    {
+      "file": "assets/css/seo-studio-review.min.css",
+      "sha256": "50da1eb357cd1869f718e4d87e537a3ad267ce031f5b4ebe141a99dc3f21a984",
+      "bytes": 66102
+    },
+    {
+      "file": "assets/js/index-new.min.js",
+      "sha256": "cf52fef75aa02df927ae64878b9dba5c5b56c077fb667513ce5d5a552e8e75e1",
+      "bytes": 63813
+    },
+    {
+      "file": "assets/js/i18n.min.js",
+      "sha256": "54304f96eb66dec2babd9956b4778b1f65586f1c39d492e5faf5ee29e03113ca",
+      "bytes": 1229
+    },
+    {
+      "file": "assets/js/vendor.min.js",
+      "sha256": "748f32fbd7b68742b7ee7c318534ea12f7a04bdc62f676994c1813c2709a6a36",
+      "bytes": 172255
+    }
+  ]
+}
