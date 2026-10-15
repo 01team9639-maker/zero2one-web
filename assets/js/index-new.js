@@ -946,7 +946,7 @@ function initEditorialRefresh() {
 // SEO-only studio motion. Content has no hidden CSS/inline state: a failed
 // observer, disabled scripts, reduced motion or teardown always leaves it usable.
 // BEGIN SEO STUDIO STYLESHEET
-var seoStudioStylesheet='/assets/css/seo-studio-review.min.css?v=50da1eb3';
+var seoStudioStylesheet='/assets/css/seo-studio-review.min.css?v=2826ff8e';
 // END SEO STUDIO STYLESHEET
 function ensureSeoStudioStyles(root) {
   var link=document.querySelector('link[data-seo-studio-review]');
@@ -1158,9 +1158,26 @@ function initSEOFlow() {
     // Read natural layout; offscreen Locomotive transforms are intentionally
     // ignored. Every window then uses the same absolute path and scale.
     states.forEach(function(s){s.top=virtualTop(s.el.parentElement);s.height=s.el.parentElement.getBoundingClientRect().height;});
-    var anchors=[.73,.59,.81,.27,.72,.86,.25,.69,.43,.78,.30];
+    var anchors=[.73,.59,.81,.27,.72,.86,.25,.69,.43,.78,.30,.66];
     var theme=getComputedStyle(root);
     var orange=theme.getPropertyValue('--studio-orange').trim(),cream=theme.getPropertyValue('--studio-cream').trim();
+    var strength=Math.max(0,Math.min(1,parseFloat(theme.getPropertyValue('--seo-flow-opacity'))||.56));
+    function rgb(color){
+      if(color.charAt(0)==='#'){var hex=color.slice(1);if(hex.length===3)hex=hex.replace(/./g,function(c){return c+c;});return [0,2,4].map(function(i){return parseInt(hex.slice(i,i+2),16);});}
+      var parts=color.match(/[\d.]+/g);return parts?parts.slice(0,3).map(Number):[255,254,248];
+    }
+    function soften(color,background){
+      var foreground=rgb(color),base=rgb(background);
+      // Precompose the softened stroke into its section palette. The windows stay
+      // opaque so their subpixel overlap cannot produce a darker seam.
+      return 'rgb('+foreground.map(function(c,i){return Math.round(c*strength+base[i]*(1-strength));}).join(', ')+')';
+    }
+    function palette(section){
+      var style=getComputedStyle(section),gradient=style.backgroundImage.match(/rgba?\([^)]+\)/g);
+      if(gradient&&gradient.length>1)return [gradient[0],gradient[gradient.length-1]];
+      for(var node=section;node;node=node.parentElement){var background=getComputedStyle(node).backgroundColor;if(background!=='transparent'&&background!=='rgba(0, 0, 0, 0)')return [background,background];if(node===root)break;}
+      return [theme.backgroundColor,theme.backgroundColor];
+    }
     function waveEdge(wave,fraction,flip){
       if(!wave)return 0;
       var svg=wave.querySelector('svg'),path=svg&&svg.querySelector('path'),box=svg&&svg.viewBox.baseVal;
@@ -1170,7 +1187,8 @@ function initSEOFlow() {
       return lo/box.height*wave.offsetHeight;
     }
     states.forEach(function(s,i){
-      var light=s.el.dataset.seoFlowTone==='light';s.colorStart=light?cream:orange;s.colorEnd=s.colorStart;
+      var light=s.el.dataset.seoFlowTone==='light',background=palette(s.el.parentElement),color=light?cream:orange;
+      s.colorStart=soften(color,background[0]);s.colorEnd=soften(color,background[1]);
       var topWave=s.el.parentElement.querySelector(':scope > .seo-owner-wave--top'),bottomWave=s.el.parentElement.querySelector(':scope > .seo-owner-wave--bottom');
       s.topWave=waveEdge(topWave,anchors[i],false);s.bottomWave=waveEdge(bottomWave,anchors[i+1],true);s.hasBottomWave=!!bottomWave;
     });
@@ -1213,7 +1231,7 @@ function initSEOFlow() {
       var colors=[topColor,topColor,s.colorStart,s.colorEnd,s.effectiveEnd,s.effectiveEnd];
       stops.forEach(function(stop,n){stop.setAttribute('offset',offsets[n].toFixed(6));stop.style.stopColor=colors[n];});
     });
-    root.dataset.seoFlowConnected='true';dirty=false;
+    root.dataset.seoFlowOpacity=String(strength);root.dataset.seoFlowConnected='true';dirty=false;
   }
   function progressAt(y){
     if(y<=samples[0].y)return 0;
@@ -1258,7 +1276,7 @@ function initSEOFlow() {
   observe();
   seoFlowCleanup=function(){
     disposed=true;if(frame!==null)cancelAnimationFrame(frame);if(observer)observer.disconnect();if(resize)resize.disconnect();
-    active.clear();undo.forEach(function(fn){fn();});delete root.dataset.seoFlowConnected;delete root.dataset.seoFlowDraw;
+    active.clear();undo.forEach(function(fn){fn();});delete root.dataset.seoFlowConnected;delete root.dataset.seoFlowDraw;delete root.dataset.seoFlowOpacity;
     states.forEach(function(s){s.el.style.removeProperty('height');s.el.style.removeProperty('top');s.svg.setAttribute('viewBox',s.box);s.path.style.removeProperty('stroke-dasharray');s.path.style.removeProperty('stroke-dashoffset');s.path.setAttribute('d',s.original);delete s.el.dataset.seoFlowReady;});
   };
 }

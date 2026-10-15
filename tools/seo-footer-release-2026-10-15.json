@@ -1,0 +1,163 @@
+{
+  "baseline": "ea331efaa47fc4d4406851f0f92c3c8b64e70735",
+  "scope": "Bilingual SEO follow-up and shared footer only.",
+  "protectedMarkup": {
+    "about/index.html": "4ed12f1e0a93ebd5a2831156ae24c0fbe6c4e2524cbd3bc73d66498e891c77dc",
+    "ar/about/index.html": "5eaf99d71ef12828e8eaf01cc84ca218d00cfe8ed3641ecffe405600aee5df4a",
+    "ar/contact/index.html": "f5c124384dd2560ee332f8331d30e5cbae65d158451665ef24a34ba76d85ff4d",
+    "ar/faqs/index.html": "210c6d95098def65c7b7fb023680fff3644f8db13a43bc91201a49ae6e71b7ae",
+    "ar/index.html": "7415bdf75ba9618bb87c82db65228aa74dfc2f7f5946fcda5dd8198d3506192d",
+    "ar/services/brand-identity/index.html": "0d9de39bf35434b161856a0d5c8bc7e080a4d0a216d8f55054fbd60e0442a887",
+    "ar/services/digital-advertising/index.html": "e8a0f479949f29139782ca98375e8a3df4b343a6948bab24442df665ae08bbec",
+    "ar/services/ecommerce-development/index.html": "fa574fc1de247550a4a7c06c70ad655c8a95d719be052ff5c9984809fc2cac71",
+    "ar/services/index.html": "9ac85282a4c4987beea9f30566b46b8003f080e48dc378609ebe3e0ef45887c0",
+    "ar/services/manage-google-adwords-campaigns/index.html": "1b7ccd97e0ea13ed1eb9615dc7e4486bd12c2030382d24c9489eae0724abd1e0",
+    "ar/services/marketing-consulting/index.html": "daaacffe4caad1b52846e23c0f8f05969131350f0d32c74694da48f55e0395fe",
+    "ar/services/mobile-application/index.html": "6ac882d0e83def028ed18b495ce5459a444bd70d7e6f7e61ba91cfeaba229518",
+    "ar/services/social-media-management/index.html": "af6380f421551e889113e8d1bbc34e8adaa4462d31b222e8d1279d428839faff",
+    "ar/services/web-design-riyadh/index.html": "b1469e825d12d6135217a15ca558f611a7802ad597a59037fde0a9f4e4b72216",
+    "ar/team/index.html": "c7d642e40be93bb59577f38d2eb89dc1b3b636128a2b8d0b93a6df846f0f10d3",
+    "ar/work/alhokail-seo/index.html": "0eac590c81a0d5a8e938fc73e20660480aa79ad701bbca7c0b35310b02824e7a",
+    "ar/work/alostaz-seo/index.html": "6d0c035b11316bd9b8d76a97e909f4718237c72e40c6ff401e049b06301de809",
+    "ar/work/alrahwanji-paints/index.html": "b6673f566747fb54e4d68d7776e3023f0f774d64040d9103a4056020d43e14a5",
+    "ar/work/cosmetic-surgery-egypt-seo/index.html": "53b1e131c114ead3d2a9cabaf6a8de5050b0df24bdfbb46b5563b8bbbb45b5b1",
+    "ar/work/google-ads-conversion-value/index.html": "f7af11f8eab8809d143892c20c82d7733f09ae1e785241afa64ee03c820523b7",
+    "ar/work/habba/index.html": "70015c691dbefdf5bc256d0413316d9a631f3549b87f36de81714601d8b3fbe5",
+    "ar/work/index.html": "82a02757410ebf520bdcbf8b986cdf6ff19dbca5e5116a423a5c41cd180fb4f3",
+    "ar/work/kuwait-tutoring-instagram-ads/index.html": "647738d4f77dc6ad80564ad59353ad1106acbd0f8c3cee24fac57756577595cb",
+    "ar/work/orthopedic-clinic-egypt-seo/index.html": "d940e49c45cc7784238ddb9e37a0c2d486a1e4dece3cda41b6fd9c4d8fed1e28",
+    "blog/404.html": "658a4a45ac0cdd6dcf98022110ddba47410ae8db02a781a2ce9729215d59f06b",
+    "blog/ar/404.html": "026422e428b60b79647b5b5d021a0be7134cfd5bf40d725e17e5303d1287bd37",
+    "blog/ar/build-marketing-strategy/index.html": "510062f21a5ec3336238692d3cb935e981af3537825eca1b12ca8269b9c940dc",
+    "blog/ar/categories/advertising/index.html": "41cd3cb2c81c96ca754b6bb4c6cef9ad16d10be0affd9fae66898513c206e3fc",
+    "blog/ar/categories/brand-identity/index.html": "5640df25d2386485cc9c63899ec99e51798a46f5a2d88e0a3162ee6d29575a42",
+    "blog/ar/categories/ecommerce/index.html": "eaf2bf5f83d37012caff92a5974299bf7a799f6ded6be3533b4d64974be7cf35",
+    "blog/ar/categories/index.html": "cb423e468e69ce448186cf27633ee4e79d31fbb214e03d0c46daed995c0f06e7",
+    "blog/ar/categories/seo/index.html": "18e6326fe8193d6ee35181520e145a2b5b9ff1f48b308ed632052efdf2143c0e",
+    "blog/ar/categories/social-media/index.html": "cdbb351be2abb36c5b4568f61cb0df09b3e7f4ecc375e015c7136cccb1caec6d",
+    "blog/ar/categories/web-design/index.html": "c438280580ceac2ab91955285fbdc2613f64cf868ef5ae6f65a4564e765fc384",
+    "blog/ar/how-to-choose-web-development-company/index.html": "5338d323ab815f49b5ea4b50691a4afe34a0d586f82651ccaf088f260d449560",
+    "blog/ar/index.html": "1f7477eeaa430fbc2f0c5cbc2dd841fa9e3e940a2becfe360ec242d19da8db9b",
+    "blog/ar/seo-strategies-competitor-analysis/index.html": "9cb36fc4b3098a00aaa73a3d55d9ee5114c7f397afaa4653f64693c5a6ca648d",
+    "blog/ar/social-media-campaign-management/index.html": "72420c11f38f04a4842d65cb074b7c5f4c516f26bf5a34c54a94db5347938bb9",
+    "blog/ar/specialized-digital-marketing-strategies/index.html": "888f72edaa51d5fa2f8f0cab7444bbcae0e76196513c016c3c21c2a2fac568b1",
+    "blog/ar/web-design-services-in-riyadh/index.html": "52e238cea553f1b564eec7ea3f8510591febb2b52de7caae245a46f6ffbb6cb8",
+    "blog/categories/advertising/index.html": "3cc628cf8e020b080945194f9207d1de6ebd7d3248b4219d400cd8eee1faae69",
+    "blog/categories/brand-identity/index.html": "32f20668a6ae0c8fe939b3424c697235b2fa7929b439111594fd8e2e74d5b0d8",
+    "blog/categories/ecommerce/index.html": "fa45b29333f3a06da9dc540a2fa49bac560f20a26ccbae26016728fbbdcee018",
+    "blog/categories/index.html": "276266e1c8e84185cdc911fcb65ee8e4c7173f60354568581dfd8eb2bdf2b447",
+    "blog/categories/seo/index.html": "3a55e231944fdc14481a79fb8f72e5851930458601a20514a5a67ee0105d4e1b",
+    "blog/categories/social-media/index.html": "e5884e3b38c008a33d615eb7ba99ee537077f5feda14eca9419a70d69f6949f0",
+    "blog/categories/web-design/index.html": "f5e1042a53223fd7497506f563c0f5275005dfdcacfd1ee62be1ad065dfb9cab",
+    "blog/how-to-choose-web-development-company/index.html": "b5804ba02f1e2d104f7a28bd3417d765e542765ce5835e8d6f673dd5c00a9cc7",
+    "blog/index.html": "986d7fe19fb9cb006ba56ec1b6470ae0ed5fce5fc8d6175f2840127440714b29",
+    "contact/index.html": "36e9ea9be7b662f7003e816f53b3024ea8ba183f8da8a0b8d08188747db8c146",
+    "faqs/index.html": "58d92eaa7618f54aeff2ef5cd8663a05e752747f9c8df6f91ce1e0fb7c723799",
+    "index.html": "f4f39d38f2750f57734985cae3892bc118a6d4cb9ce829d779b6f2309b5fb173",
+    "pages/index.html": "1cde973aa93cbd261fa2672b8e75f574dc58cacc4da0e2dfce753bf637705391",
+    "pages/projects/advertising.html": "39a8f82128b3576ab1c61bebbc05d50ff0487b2412d17f0cae41910b8f7ef0cb",
+    "pages/projects/brand-identity.html": "7a9b28f0567cdce4a7bdffd5dce0e09b5e679a536d12c92f2c976a5e3df8cc5d",
+    "pages/projects/ecommerce.html": "3398f65d8302ee95580f3db5d67b2e27cc29a42c2fac4d371f703caa438f7224",
+    "pages/projects/index.html": "1cde973aa93cbd261fa2672b8e75f574dc58cacc4da0e2dfce753bf637705391",
+    "pages/projects/seo.html": "ba4614c25c070748387c2b266c329b85738552c0e7fe84b4a860b436c10b1114",
+    "pages/projects/social-media.html": "6c49eaacaf4e45dc13ec493b9fc989af8353b816d79c123e8f8fc7de50c742c4",
+    "pages/projects/website-design.html": "e795e55091a874f1df5692e355251dc73fb4a91a7dcf6302bd9e9458f0858506",
+    "services/brand-identity/index.html": "bb627689749f722b5211fecb9b7227522e6b37d794bc342e5bdc9e50660a52c8",
+    "services/digital-advertising/index.html": "11fc007d07b5c52dbc435e30ebb51eea29d30e86313a8cb68af03dd58be7a144",
+    "services/ecommerce-development/index.html": "222b0919ddc14b474e5a8b7c86b50eb5e807deaf0b7c929d0b143ebd89fff5b2",
+    "services/index.html": "656562eb33d16f954a77bf501cbd72512508d1f65baf83516336ed39ffda6b15",
+    "services/manage-google-adwords-campaigns/index.html": "23313d1821eb6ae54315090716c0b6b05bd89ceb196197a2d55b2ef25576cf1c",
+    "services/marketing-consulting/index.html": "f6c93a1372dfe61ff47cd9584dac6e1871baa13a3258a6e507b9bae12077c78a",
+    "services/mobile-application/index.html": "887153c131ed18d37b63e7cc3d69d3eaecee79561b5f98c7f57088df341e110b",
+    "services/social-media-management/index.html": "38378735284ca9447232bdf0535a3247ae3cc9d1944fda224da45b6b39235bdc",
+    "services/web-design-riyadh/index.html": "3e73583f6d5228fb5a88ad28054fa7bd1db789e71fa45818d0b8f5221314590d",
+    "team/index.html": "5a48552c3df83b048c76f52027cf37481bc2b4d1c74db2aacde58a6dfe6ffe85",
+    "work/alhokail-seo/index.html": "78f6db263af44905f1e20a22535843caeb3c37daa28843f6686f15db2b45b770",
+    "work/alostaz-seo/index.html": "99b75ea86e6ec17f8f5787f3e96562e394fc9c3e5d2cfa4c13de3348ef1eee8e",
+    "work/alrahwanji-paints/index.html": "2852c10ede52391b72e38a1731158893d737aff85ad868d5674724383d591339",
+    "work/cosmetic-surgery-egypt-seo/index.html": "44dba3451c4b2113561393eb7a803d988e69c7216156d83df322211ec261bd05",
+    "work/google-ads-conversion-value/index.html": "620a4eb12aa5f68b392249a9ca7259f965c4a9b7bd9f09494c0b3983a869935e",
+    "work/habba/index.html": "bb820aead423ff6435ba76206ab99a1a72a94e05394d7161830be2ec664c63ce",
+    "work/index.html": "5364b0d84fa1065bb21ebead1ff1044cf0d1ceb6af2b3889b8a0467ffcca370d",
+    "work/kuwait-tutoring-instagram-ads/index.html": "480f2c0d6db9c706bb7e65c515f33db652c203e94154a6ce01752e3b14068fb7",
+    "work/orthopedic-clinic-egypt-seo/index.html": "6217eaa897cee9faedc33dc2da7f58b92f8adccc61ac50af8bb57ea158290199"
+  },
+  "publicFiles": [
+    {
+      "file": "ar/services/seo-riyadh/index.html",
+      "sha256": "0c047f2d2680b738e37ebb5c5f761f26df8c53c2718087938e0cb791f579c99b",
+      "bytes": 181552
+    },
+    {
+      "file": "services/seo-riyadh/index.html",
+      "sha256": "47c75effc69c739ef5fbaef773369ac5eeb654f636238ca2dbcd7d72deb0f2b8",
+      "bytes": 174854
+    },
+    {
+      "file": "assets/css/footer-layout.css",
+      "sha256": "2c2a7c890403c36c5d615b49ffeeef8524f40c6587fdc9481206438e6983c768",
+      "bytes": 4325
+    },
+    {
+      "file": "assets/images/seo/phone-mockups-ar-2026-10-14/chatgpt-search-1000.webp",
+      "sha256": "adac0576424f55c63767eabeffe507aab813d288615ad6c13e2df141b0080f78",
+      "bytes": 131804
+    },
+    {
+      "file": "assets/images/seo/phone-mockups-ar-2026-10-14/chatgpt-search-400.webp",
+      "sha256": "fd1491914da9dae7f6b6b5bbc38e94189bea593eb57a448d5b652f1828f6057b",
+      "bytes": 42840
+    },
+    {
+      "file": "assets/images/seo/phone-mockups-ar-2026-10-14/chatgpt-search-700.webp",
+      "sha256": "528e75c8313c538c72f6ebc035df174f61292fb7cb3406115b70bd09b2d14031",
+      "bytes": 89236
+    },
+    {
+      "file": "assets/images/seo/phone-mockups-ar-2026-10-14/google-maps-1000.webp",
+      "sha256": "df4674b11097e52d51310cd38d5270d958fea21c1e9fc6a232044c18cc06ecbf",
+      "bytes": 137220
+    },
+    {
+      "file": "assets/images/seo/phone-mockups-ar-2026-10-14/google-maps-400.webp",
+      "sha256": "7a0a7fbbda6d77ed532c53c18af59d70e499b7ab0715798feceb225a4eae8c97",
+      "bytes": 42180
+    },
+    {
+      "file": "assets/images/seo/phone-mockups-ar-2026-10-14/google-maps-700.webp",
+      "sha256": "67c272bd658d689ab5f11788f7d0617a8d81c79d2097acc0180bc4c4311a4072",
+      "bytes": 90878
+    },
+    {
+      "file": "assets/images/seo/phone-mockups-ar-2026-10-14/google-search-1000.webp",
+      "sha256": "72d657d99d59f0ac15694ea4bdb337a0eb004327fe91e4f76c28bcd9f8a61626",
+      "bytes": 117172
+    },
+    {
+      "file": "assets/images/seo/phone-mockups-ar-2026-10-14/google-search-400.webp",
+      "sha256": "f1658dfa9ef7699d55a0f8dd7235e3998e695849bb74af1568b4fc799db0a3ad",
+      "bytes": 36016
+    },
+    {
+      "file": "assets/images/seo/phone-mockups-ar-2026-10-14/google-search-700.webp",
+      "sha256": "689695d44142276ae722c0accd60a7fb99c431a13ce59ca0b646da5505f5aa76",
+      "bytes": 79334
+    },
+    {
+      "file": "tools/preview_site.js",
+      "sha256": "7f6bebe0790c5e74556a24bf302cc2d3222e074486e155214649ae3f320c02b6",
+      "bytes": 2243
+    },
+    {
+      "file": "tools/test_footer_layout.js",
+      "sha256": "7863ccda82a69eee1eb2a376e893ab1eeef45b4cbae0511fb2dccc0dc8edf6ce",
+      "bytes": 6944
+    },
+    {
+      "file": "tools/test_seo_studio.js",
+      "sha256": "c4ee01a001f45e4983b3ac8216142ee51598e5f2759ea3a8841877611b143d86",
+      "bytes": 32842
+    }
+  ],
+  "originals": "Private supplied originals and provenance remain in the local review checkout."
+}

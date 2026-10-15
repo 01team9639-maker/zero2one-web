@@ -47,16 +47,17 @@ const BASELINE={
 const reports=path.join(ROOT,'tools/reports/site-refresh');
 const reviewRoot=path.resolve(process.env.SEO_STUDIO_REVIEW_ROOT||ROOT);
 const screens=[[320,780],[375,812],[440,956],[768,1024],[834,1194],[1024,1366],[1024,768],[1440,900]];
-const groups=[['#seo-why-zero2one',6],['#seo-audience',6],['#seo-expected',6]];
-const sections=['seo-why','seo-know','whats-included','seo-why-zero2one','seo-audience','seo-packages','seo-process','seo-expected','faq'];
+const groups=[['#seo-why-zero2one',6],['#seo-expected',6]];
+const sections=['seo-why','seo-know','whats-included','seo-why-zero2one','seo-audience','seo-packages','seo-process','seo-expected','faq','seo-team'];
 const route=lang=>(lang==='ar'?'/ar':'')+'/services/seo-riyadh/';
 const sha=value=>crypto.createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const bytesSha=value=>crypto.createHash('sha256').update(value).digest('hex');
 const norm=s=>s.replace(/\s+/g,' ').trim();
 const unstamped=s=>s.replace(/\?v=[a-f0-9]+/g,'?v=ASSET_HASH');
 const phoneKeys=['google-search','google-maps','chatgpt-search'];
-const phoneRoot='/assets/images/seo/phone-mockups-2026-10-12/';
-const captions=['#1 in Google Search','#1 in Google Maps Search','#1 in ChatGPT Search'];
+const phoneRoot=lang=>'/assets/images/seo/'+(lang==='ar'?'phone-mockups-ar-2026-10-14':'phone-mockups-2026-10-12')+'/';
+const phoneHeight=(lang,index)=>lang==='ar'&&index===0?1736:1700;
+const captions=lang=>lang==='ar'?['رقم ١ في بحث جوجل','رقم ١ في بحث خرائط جوجل','رقم ١ في بحث ChatGPT']:['#1 in Google Search','#1 in Google Maps Search','#1 in ChatGPT Search'];
 
 // Keep the original studio regression suite intact. Reuse its established
 // browser interaction helpers without evaluating its auto-running entrypoint.
@@ -85,7 +86,9 @@ async function snapshot(page,markup){
    // Title wrapping is presentation-only; its exact complete text is checked
    // separately, including the existing punctuation between the two lines.
    const h1=e.querySelector('h1');if(h1)h1.textContent=norm(h1.textContent);
-   e.querySelectorAll('[aria-hidden="true"],script,style,#timeSpan,.seo-card-placeholder,.seo-studio-shot-rank,.seo-studio-shot-note,[data-seo-flow]').forEach(n=>n.remove());
+   // Oct 14 explicitly adds the approved Kerolos profile. Independently test
+   // it against the existing team page rather than changing the old baseline.
+   e.querySelectorAll('[aria-hidden="true"],script,style,#timeSpan,.seo-card-placeholder,.seo-studio-shot-rank,.seo-studio-shot-note,[data-seo-flow],#seo-team').forEach(n=>n.remove());
    e.querySelectorAll('h1,h2,h3,h4,p,li,summary,article,figure,details,div,section,span').forEach(n=>n.appendChild(d.createTextNode(' ')));
    return norm(e.textContent);
   };
@@ -99,10 +102,10 @@ async function snapshot(page,markup){
    links:[...d.querySelectorAll('head link[rel="canonical"],head link[hreflang]')].map(e=>e.outerHTML),
    structured:[...d.querySelectorAll('script[type="application/ld+json"]')].map(e=>JSON.parse(e.textContent)),
    mainText:clean(main),headerText:clean(d.querySelector('header')),footerText:clean(d.querySelector('.footer')),
-   headings:[...main.querySelectorAll('h1,h2,h3,h4')].map(e=>[e.tagName,norm(e.textContent)]),
+   headings:[...main.querySelectorAll('h1,h2,h3,h4')].filter(e=>!e.closest('#seo-team')).map(e=>[e.tagName,norm(e.textContent)]),
    anchors:[...main.querySelectorAll('a')].map(e=>({href:e.getAttribute('href'),label:norm(e.textContent),target:e.getAttribute('target'),rel:e.getAttribute('rel')})),
    chromeAnchors:[...d.querySelectorAll('header a,.footer a')].map(e=>({href:e.getAttribute('href'),label:norm(e.textContent),target:e.getAttribute('target'),rel:e.getAttribute('rel')})),
-   images:[...main.querySelectorAll('img')].filter(e=>!e.closest('.seo-shot,.seo-card-placeholder,.seo-owner-illustration')).map(e=>({src:e.getAttribute('src'),srcset:e.getAttribute('srcset'),sizes:e.getAttribute('sizes'),alt:e.getAttribute('alt'),width:e.getAttribute('width'),height:e.getAttribute('height')})),
+   images:[...main.querySelectorAll('img')].filter(e=>!e.closest('.seo-shot,.seo-card-placeholder,.seo-owner-illustration,#seo-team')).map(e=>({src:e.getAttribute('src'),srcset:e.getAttribute('srcset'),sizes:e.getAttribute('sizes'),alt:e.getAttribute('alt'),width:e.getAttribute('width'),height:e.getAttribute('height')})),
    h1:norm(main.querySelector('h1').textContent),faq:faq.outerHTML
   };
  },markup);
@@ -159,15 +162,15 @@ async function structure(page,lang){
  assert.equal(await page.locator('.seo-owner-illustration').count(),19,'Seven know, six why, six audience supplied illustrations');
  assert.equal(await page.locator('#seo-know .seo-owner-illustration').count(),7);
  for(const id of ['seo-why-zero2one','seo-audience']){
-  const summaries=page.locator('#'+id+' details.seo-owner-accordion > summary');assert.equal(await summaries.count(),6);
+  const summaries=page.locator('#'+id+(id==='seo-audience'?' article.seo-audience-card > .seo-audience-heading':' details.seo-owner-accordion > summary'));assert.equal(await summaries.count(),6);
   assert.equal(await summaries.evaluateAll(es=>es.every(e=>e.parentElement.firstElementChild===e&&e.querySelector('.seo-owner-illustration')&&e.querySelector('.seo-studio-summary-copy'))),true,'Supplied artwork is part of the first native summary '+id);
  }
  assert.equal(await page.locator('.seo-card-placeholder,[data-image-placeholder]').count(),0,'Supplied artwork replaces all temporary slots');
  const captionNodes=page.locator('.seo-studio-shot-rank');
- assert.equal(await captionNodes.count(),3);assert.deepEqual((await captionNodes.allTextContents()).map(norm),captions);
- const noteNodes=page.locator('.seo-studio-shot-note');assert.equal(await noteNodes.count(),3);
- assert.deepEqual((await noteNodes.allTextContents()).map(norm),Array(3).fill(lang==='ar'?'تصوّر توضيحي':'Illustration'));
- assert.equal(await page.locator('[data-seo-flow]').count(),10,'Flow spans the hero and nine following content chapters');
+ assert.equal(await captionNodes.count(),3);assert.deepEqual((await captionNodes.allTextContents()).map(norm),captions(lang));
+ assert.equal(await captionNodes.evaluateAll((es,lang)=>es.every(e=>e.lang===lang&&e.dir===(lang==='ar'?'rtl':'ltr')),lang),true,'Rank captions follow the current page language and direction');
+ assert.equal(await page.locator('.seo-studio-shot-note').count(),0,'The removed illustration note does not return in either language');
+ assert.equal(await page.locator('[data-seo-flow]').count(),11,'Flow spans the hero and ten following content chapters');
  for(const selector of ['.seo-hero-shell',...sections.map(id=>'#'+id)]){
   const flow=page.locator(selector+' > [data-seo-flow]');assert.equal(await flow.count(),1,'Flow art belongs to each body section '+selector);
   assert.equal(await flow.evaluate(e=>e.parentElement.firstElementChild===e),true,'Decorative flow is the first section child');
@@ -189,33 +192,36 @@ async function structure(page,lang){
 }
 
 async function phoneAssets(){
- const directory=path.join(ROOT,phoneRoot),archive=path.join(reviewRoot,phoneRoot),provenance=JSON.parse(fs.readFileSync(path.join(archive,'provenance.json'),'utf8'));
+ for(const lang of ['ar','en']){
+ const directory=path.join(ROOT,phoneRoot(lang)),archive=path.join(reviewRoot,phoneRoot(lang)),provenance=JSON.parse(fs.readFileSync(path.join(archive,'provenance.json'),'utf8'));
  assert.equal(provenance.images.length,3);
  for(const [i,key] of phoneKeys.entries()){
   const record=provenance.images[i];assert.equal(record.name,key);
   const original=fs.readFileSync(path.join(archive,record.originalCopy));assert.equal(bytesSha(original),record.originalSha256,'Original supplied phone archived byte-identically');
-  const sourceMeta=await sharp(original).metadata();assert.equal(sourceMeta.width,1000);assert.equal(sourceMeta.height,1700);assert.equal(sourceMeta.hasAlpha,true);
+  const sourceMeta=await sharp(original).metadata();assert.equal(sourceMeta.width,1000);assert.equal(sourceMeta.height,phoneHeight(lang,i));assert.equal(sourceMeta.hasAlpha,true);
   for(const width of [400,700,1000]){
    const filename=key+'-'+width+'.webp',bytes=fs.readFileSync(path.join(directory,filename)),metadata=await sharp(bytes).metadata();
-   assert.equal(metadata.width,width);assert.equal(metadata.height,width*1.7);assert.equal(metadata.hasAlpha,true);
+   assert.equal(metadata.width,width);assert.equal(metadata.height,Math.round(width*phoneHeight(lang,i)/1000));assert.equal(metadata.hasAlpha,true);
    const alpha=await sharp(bytes).extractChannel('alpha').raw().toBuffer(),reference=await sharp(original).resize({width}).extractChannel('alpha').raw().toBuffer();
    assert.equal(bytesSha(alpha),bytesSha(reference),'WebP preserves full resized alpha '+filename);
    assert.ok(alpha.includes(0)&&alpha.includes(255),'Transparent and opaque pixels remain '+filename);
   }
  }
- console.log('PASS supplied phone dimensions, aspect ratio, archived originals and all nine alpha channels');
+ }
+ console.log('PASS both supplied phone languages, dimensions, archived originals and all eighteen alpha channels');
 }
 
 async function phones(page){
+ const lang=await page.locator('html').getAttribute('lang');
  const images=page.locator('.seo-shot img');assert.equal(await images.count(),3);
  for(const [i,key] of phoneKeys.entries()){
-  const image=images.nth(i);assert.equal(await image.getAttribute('src'),phoneRoot+key+'-700.webp');
-  assert.equal(await image.getAttribute('srcset'),[400,700,1000].map(w=>phoneRoot+key+'-'+w+'.webp '+w+'w').join(', '));
-  assert.equal(await image.getAttribute('width'),'1000');assert.equal(await image.getAttribute('height'),'1700');
+  const image=images.nth(i);assert.equal(await image.getAttribute('src'),phoneRoot(lang)+key+'-700.webp');
+  assert.equal(await image.getAttribute('srcset'),[400,700,1000].map(w=>phoneRoot(lang)+key+'-'+w+'.webp '+w+'w').join(', '));
+  assert.equal(await image.getAttribute('width'),'1000');assert.equal(await image.getAttribute('height'),String(phoneHeight(lang,i)));
   await jump(page,image,-120);await image.evaluate(e=>e.decode());
   const state=await image.evaluate(e=>{const s=getComputedStyle(e),r=e.getBoundingClientRect(),caption=e.closest('figure').querySelector('.seo-studio-shot-rank').getBoundingClientRect();return {fit:s.objectFit,loaded:e.complete&&e.naturalWidth>0,ratio:r.width/r.height,captionBottom:caption.bottom,imageTop:r.top};});
   assert.equal(state.fit,'contain','Phone artwork shows its full frame');assert.equal(state.loaded,true);
-  assert.ok(Math.abs(state.ratio-1000/1700)<.03,'Rendered full phone keeps supplied aspect ratio');
+  assert.ok(Math.abs(state.ratio-1000/phoneHeight(lang,i))<.003,'Rendered full phone keeps supplied aspect ratio');
   assert.ok(state.captionBottom<=state.imageTop+2,'Caption is above the phone artwork');
  }
 }
@@ -236,6 +242,56 @@ async function layout(page,width){
  const gradient=await page.locator('#seo-know').evaluate(e=>getComputedStyle(e).backgroundImage);
  assert.ok(gradient.includes('gradient')&&gradient.includes('249, 70, 14')&&gradient.includes('255, 128, 0'),'Know chapter uses the global two-orange gradient');
  assert.equal(await page.locator('#seo-process').evaluate(e=>getComputedStyle(e).backgroundColor),'rgb(249, 70, 14)','Process preserves the flat brand orange alongside the gradient');
+ if(width<=760){
+  const hero=await page.locator('.seo-hero-figure img').evaluate(e=>{const r=e.getBoundingClientRect(),f=e.parentElement.getBoundingClientRect();return {ratio:r.width/r.height,frameRatio:f.width/f.height,fit:getComputedStyle(e).objectFit,sourceRatio:e.naturalWidth/e.naturalHeight};});
+  assert.ok(Math.abs(hero.ratio-2/3)<.002&&Math.abs(hero.frameRatio-2/3)<.002,'Mobile orange hero frame follows the full artwork ratio without side gaps');
+  assert.equal(hero.fit,'contain','Hero keeps the entire composition');
+ }
+ const iconSides=await page.locator('#seo-process .seo-timeline-item').evaluateAll(es=>es.map(e=>{const r=e.getBoundingClientRect(),i=e.querySelector(':scope > .seo-studio-icon').getBoundingClientRect();return {left:i.left-r.left,right:r.right-i.right};}));
+ const lang=await page.locator('html').getAttribute('lang');
+ assert.ok(iconSides.every(s=>lang==='ar'?s.left+30<s.right:s.right+30<s.left),'Process icons move to the opposite side '+lang);
+}
+
+async function team(page,lang){
+ const existing=fs.readFileSync(path.join(ROOT,lang==='ar'?'ar/team/index.html':'team/index.html'),'utf8');
+ const expected=await page.evaluate(markup=>{const d=new DOMParser().parseFromString(markup,'text/html'),card=[...d.querySelectorAll('.team-card')].find(e=>e.querySelector('img')?.getAttribute('src')==='/assets/images/team/team-kerolos.webp');const n=s=>s.replace(/\s+/g,' ').trim();return {name:n(card.querySelector('.testi-name').textContent),role:n(card.querySelector('.testi-role').textContent),experience:n(card.querySelector('.team-exp').textContent),bio:n(card.querySelector('.testi-quote').textContent),photo:card.querySelector('img').getAttribute('src')};},existing);
+ const section=page.locator('#seo-team'),card=section.locator('.seo-team-card');
+ assert.equal(await card.count(),1,'Only confirmed Kerolos belongs to the SEO team');
+ for(const [key,cls] of Object.entries({name:'name',role:'role',experience:'experience',bio:'bio'}))assert.equal(norm(await card.locator('.seo-team-'+cls).textContent()),expected[key],'Exact existing '+lang+' team '+key);
+ assert.equal(await card.locator('img').getAttribute('src'),expected.photo);
+ assert.equal(await section.evaluate(e=>!!(document.querySelector('#faq').compareDocumentPosition(e)&Node.DOCUMENT_POSITION_FOLLOWING)),true,'Team follows FAQ');
+ await jump(page,section,-80);await page.waitForTimeout(1200);await card.locator('img').evaluate(e=>e.decode());
+ const shape=await card.evaluate(e=>{const photo=e.querySelector('.seo-team-photo').getBoundingClientRect(),identity=e.querySelector('.seo-team-identity').getBoundingClientRect(),r=e.getBoundingClientRect();return {width:r.width,height:r.height,photoTop:photo.top,photoBottom:photo.bottom,identityTop:identity.top,identityBottom:identity.bottom};});
+ assert.ok(shape.identityTop<shape.photoBottom&&shape.identityBottom>shape.photoTop,'Photo and identity sit side by side, never portrait stacked');
+ assert.ok(shape.width>shape.height,'Team card is landscape even on the smallest viewport '+JSON.stringify(shape));
+ await page.screenshot({path:path.join(reports,'seo-oct14-team-'+lang+'-'+page.viewportSize().width+'.png')});
+}
+
+async function footer(page,lang,width){
+ const bottom=page.locator('.footer .bottom-footer');
+ assert.equal(await bottom.evaluate(e=>getComputedStyle(e).display),'grid','SEO footer uses an explicit responsive grid');
+ const links=bottom.locator('.quick-links a,.socials a');assert.equal(await links.count(),12,'Keep all six quick links and six social accounts');
+ const layout=await bottom.evaluate(e=>{
+  const box=n=>{const r=n.getBoundingClientRect();return {left:r.left,right:r.right,top:r.top,bottom:r.bottom,width:r.width,height:r.height};};
+  return {frame:box(e),quick:box(e.querySelector('.quick-links')),social:box(e.querySelector('.socials')),credits:box(e.querySelector('.credits')),time:box(e.querySelector('.time')),certificate:box(e.querySelector('.maroof')),targets:[...e.querySelectorAll('.quick-links a,.socials a')].map(box),labels:[...e.querySelectorAll('.ui-label')].map(box),overflow:e.scrollWidth>e.clientWidth+1};
+ });
+ assert.equal(layout.overflow,false,'Footer content stays inside its container');
+ assert.ok(layout.targets.every(r=>r.height>=44&&r.left>=layout.frame.left-1&&r.right<=layout.frame.right+1),'Footer links fit and retain touch-target height');
+ assert.ok(layout.labels.every(r=>r.height>=12&&r.left>=layout.frame.left-1&&r.right<=layout.frame.right+1),'Every footer group has an aligned label');
+ if(width<=760)assert.ok(layout.social.top>=layout.quick.bottom+15,'Small screens stack the two link groups with a clear gap');
+ else assert.ok(Math.abs(layout.quick.top-layout.social.top)<2,'Desktop/tablet links share one organized row');
+ assert.ok(Math.abs(layout.credits.top-layout.time.top)<2,'Version and local time align on the same row');
+ assert.ok(layout.credits.top>=Math.max(layout.quick.bottom,layout.social.bottom)+15,'Utility information follows both link groups');
+ assert.ok(layout.certificate.width>150&&layout.certificate.width<260,'Certificate keeps a legible compact size');
+ if(width>1100)assert.ok(Math.abs((layout.certificate.top+layout.certificate.height/2)-(layout.credits.top+layout.credits.height/2))<40,'Desktop certificate shares the utility row');
+ assert.equal(await bottom.locator('#timeSpan').evaluate(e=>getComputedStyle(e).direction),'ltr','Live time remains readable in both languages');
+ await page.evaluate(()=>{if(typeof scroll!=='undefined'&&scroll.scrollTo)scroll.scrollTo('bottom',{duration:0,disableLerp:true});else window.scrollTo(0,document.body.scrollHeight);});
+ await page.waitForTimeout(900);await bottom.locator('.maroof img').evaluate(e=>e.decode());
+ const clear=await bottom.locator('.maroof').evaluate(e=>{const a=e.getBoundingClientRect(),b=document.querySelector('.wa-float').getBoundingClientRect();return a.bottom<=b.top||a.top>=b.bottom||a.right<=b.left||a.left>=b.right;});
+ assert.equal(clear,true,'Certificate never sits underneath the persistent WhatsApp button');
+ await page.screenshot({path:path.join(reports,'seo-oct15-footer-'+lang+'-'+width+'.png')});
+ assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'Footer cannot create page-wide horizontal scrolling');
+ console.log('PASS localized captions and organized SEO footer',lang,width);
 }
 
 async function flowMotion(page){
@@ -258,12 +314,15 @@ async function flowMotion(page){
  assert.equal(await page.evaluate(()=>typeof initSEOFlow),'function','Flow has its own initialization');
  const count=await page.locator('[data-seo-flow]').count();await page.evaluate(()=>{initSEOFlow();initSeoStudioMotion();});
  assert.equal(await page.locator('[data-seo-flow]').count(),count,'Repeated setup does not duplicate artwork');
- assert.equal(await page.locator('[data-seo-flow] svg').count(),10,'Repeated setup retains one SVG per section');
+ assert.equal(await page.locator('[data-seo-flow] svg').count(),11,'Repeated setup retains one SVG per section');
 }
 
 async function polish(page,lang,width,height){
  const compact=width<=760||(width<=1100&&height>=width);
- await copyCheck(page,lang);await structure(page,lang);await layout(page,width);
+ await copyCheck(page,lang);await structure(page,lang);await layout(page,width);await phones(page);await team(page,lang);
+ assert.equal(await page.locator('main.rf-seo-studio').getAttribute('data-seo-flow-opacity'),'0.56','Ribbon is a further 20% softer than the previous 70% strength');
+ const softened=await page.locator('.seo-hero-shell .seo-flow-start').evaluate(e=>getComputedStyle(e).stopColor);
+ assert.equal(softened,'rgb(252, 151, 117)','Orange is visually precomposed at 56% over the ivory background');
  assert.equal(sha(norm(await page.locator('h1').textContent())),BASELINE.pages[lang].h1.sha256,'Word effects preserve the complete accessible H1');
  assert.equal(await page.locator('.seo-title-word .seo-title-word').count(),0,'Heading words never nest after initialization');
  const heading=page.locator('#seo-know .seo-sec-title');await jump(page,heading,-100);await page.waitForTimeout(1250);
@@ -284,6 +343,9 @@ async function polish(page,lang,width,height){
  }
  const audience=page.locator('#seo-audience [data-home-scroll-track]'),audienceControls=page.locator('#seo-audience .rf-home-scroll-controls');
  assert.equal(await audience.locator(':scope > .seo-tile').count(),6,'Six audience cards keep all supplied illustrations');
+ assert.equal(await audience.locator('details,summary,.seo-owner-chevron').count(),0,'Audience cards are permanently open with no collapsing controls');
+ const audienceExpanded=()=>audience.locator('.seo-owner-answer').evaluateAll(es=>es.every(e=>getComputedStyle(e).display!=='none'&&e.getBoundingClientRect().height>15));
+ assert.equal(await audienceExpanded(),true,'Every audience description is rendered before swiping');
  await jump(page,audience,-100);await page.waitForTimeout(500);
  if(compact){
   assert.equal(await audience.evaluate(e=>getComputedStyle(e).display),'flex','Compact audience cards use a horizontal rail');
@@ -291,14 +353,12 @@ async function polish(page,lang,width,height){
   assert.equal(await audienceControls.isVisible(),true);
   await audienceControls.locator('[data-home-scroll-next]').click();await page.waitForTimeout(750);
   assert.ok(await audience.evaluate(e=>Math.abs(e.scrollLeft)>40),'Audience Next follows the language direction');
-  const second=audience.locator(':scope > .seo-tile').nth(1);
-  await second.locator(':scope > summary').click();await page.waitForTimeout(500);
-  assert.equal(await second.evaluate(e=>e.open),true,'Audience disclosure works inside the swipe rail');
-  assert.equal(await audience.locator('.seo-owner-accordion[open]').count(),1);
+  assert.equal(await audienceExpanded(),true,'Swiping cannot collapse audience copy');
   assert.ok(await audience.evaluate(e=>e.clientHeight>=e.children[1].offsetHeight),'Expanded audience copy is not clipped');
   await audienceControls.locator('[data-home-scroll-prev]').click();await page.waitForTimeout(750);
   assert.ok(await audience.evaluate(e=>Math.abs(e.scrollLeft)<4));
-  await audience.locator(':scope > .seo-tile').first().locator(':scope > summary').click();await page.waitForTimeout(500);
+  await audience.locator(':scope > .seo-tile').first().locator(':scope > .seo-audience-heading').click();await page.waitForTimeout(100);
+  assert.equal(await audienceExpanded(),true,'Tapping audience headings cannot hide their copy');
   await audience.focus();await page.keyboard.press(lang==='ar'?'ArrowLeft':'ArrowRight');await page.waitForTimeout(750);
   assert.ok(await audience.evaluate(e=>Math.abs(e.scrollLeft)>40),'Audience rail supports keyboard arrows');
   await audience.evaluate(e=>e.scrollTo({left:0,behavior:'instant'}));await page.waitForTimeout(400);
@@ -399,7 +459,7 @@ async function flowLifecycle(browser,origin,lang){
   const cleanup=await page.evaluate(()=>{seoFlowCleanup();const p=window.__seoFlowFrameProbe;p.requested=0;for(let i=0;i<20;i++)window.dispatchEvent(new Event('scroll'));return {requested:p.requested,pending:p.pending.size};});
   assert.deepEqual(cleanup,{requested:0,pending:0},'Cleanup removes listeners and pending frame work');
   await page.evaluate(()=>initSEOFlow());await page.waitForTimeout(400);
-  assert.equal(await page.locator('[data-seo-flow][data-seo-flow-ready="true"]').count(),10,'Flow restores cleanly after disposal');
+  assert.equal(await page.locator('[data-seo-flow][data-seo-flow-ready="true"]').count(),11,'Flow restores cleanly after disposal');
   console.log('PASS flow controller coalescing, idle CPU, document visibility and disposal',lang);
  }finally{await context.close();}
 }
@@ -454,7 +514,7 @@ async function runViewport(browser,origin,lang,width,height){
  try{
   await go(page,origin,lang);await structure(page,lang);await layout(page,width);
   if(!process.env.SEO_PREMIUM_QA_CAPTURE_ONLY){
-   await entrances(page);await motionScope(page);await flowMotion(page);await accordions(page,compact,['#seo-packages']);await sliders(page,lang,compact);if(compact)await sliderHitTargets(page,height);await phones(page);await buttons(page,lang,width);
+   await entrances(page);await motionScope(page);await flowMotion(page);await accordions(page,compact,['#seo-packages','#seo-audience']);await sliders(page,lang,compact);if(compact)await sliderHitTargets(page,height);await phones(page);await buttons(page,lang,width);await team(page,lang);
   }
   await screenshots(page,lang,width);await navDesktop(page,lang,width);
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'No horizontal page overflow');
@@ -472,8 +532,10 @@ async function fallbacks(browser,origin,lang){
  assert.equal(await fallback.locator('#seo-packages .seo-plan-content').count(),4,'No-JS keeps every package expanded');
  assert.equal(await fallback.locator('#seo-packages details').count(),0,'Package content cannot be collapsed without JavaScript either');
  assert.equal(await fallback.locator('#seo-packages .seo-plan-list').evaluateAll(es=>es.every(e=>getComputedStyle(e).display!=='none')),true);
+ assert.equal(await fallback.locator('#seo-audience article.seo-audience-card .seo-owner-answer').count(),6,'No-JS exposes every static audience card');
+ assert.equal(await fallback.locator('#seo-audience details').count(),0,'Audience copy needs no disclosure or JavaScript');
  assert.equal(await fallback.locator('[data-seo-flow] canvas').count(),0,'No-JS has no canvas decoration');
- assert.equal(await fallback.locator('[data-seo-flow] svg').count(),10,'No-JS retains static SVG artwork');
+ assert.equal(await fallback.locator('[data-seo-flow] svg').count(),11,'No-JS retains static SVG artwork');
  await noJS.close();
  const reduced=await browser.newContext({reducedMotion:'reduce',viewport:{width:375,height:812}});await isolate(reduced,origin);const page=await reduced.newPage();
  await page.addInitScript(()=>{window.__seoMotionCount=0;const animate=Element.prototype.animate;Element.prototype.animate=function(frames,options){if(this.matches('[data-seo-studio-reveal],[data-about-step][data-reveal-scope="seo"]'))window.__seoMotionCount++;return animate.call(this,frames,options);};});
@@ -499,6 +561,13 @@ async function fallbacks(browser,origin,lang){
   scopeCheck();await phoneAssets();fs.mkdirSync(reports,{recursive:true});
   const {srv,origin}=await serve();server=srv;
   const langs=process.env.SEO_PREMIUM_QA_LANG?[process.env.SEO_PREMIUM_QA_LANG]:['ar','en'];
+  if(process.argv[2]==='--footer'){
+   const sizes=[[320,780],[440,956],[834,1194],[1440,900]].filter(([w])=>!process.env.SEO_PREMIUM_QA_WIDTH||w===Number(process.env.SEO_PREMIUM_QA_WIDTH));
+   const tasks=langs.flatMap(lang=>sizes.map(([width,height])=>async()=>{
+    const context=await browser.newContext({viewport:{width,height},hasTouch:width<1101});await isolate(context,origin);const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
+    try{await go(page,origin,lang);await copyCheck(page,lang);await structure(page,lang);await footer(page,lang,width);assert.equal(await page.locator('main.rf-seo-studio').getAttribute('data-seo-flow-opacity'),'0.56');assert.deepEqual(errors,[]);}finally{await context.close();}
+   }));let next=0;await Promise.all([0,1].map(async()=>{while(next<tasks.length)await tasks[next++]();}));return;
+  }
   if(process.argv[2]==='--polish'){
    const sizes=[[320,780],[440,956],[834,1194],[1440,900]].filter(([w])=>!process.env.SEO_PREMIUM_QA_WIDTH||w===Number(process.env.SEO_PREMIUM_QA_WIDTH));
    const tasks=langs.flatMap(lang=>sizes.map(([width,height])=>async()=>{
@@ -511,7 +580,7 @@ async function fallbacks(browser,origin,lang){
    for(const lang of langs)for(const [width,height] of [[375,812],[834,1194],[1440,900]].filter(([w])=>!process.env.SEO_PREMIUM_QA_WIDTH||w===Number(process.env.SEO_PREMIUM_QA_WIDTH))){
     const context=await browser.newContext({viewport:{width,height},hasTouch:width<1101});await isolate(context,origin);const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
     try{
-     await go(page,origin,lang);await copyCheck(page,lang);await structure(page,lang);await accordions(page,width<1101,['#seo-packages']);
+     await go(page,origin,lang);await copyCheck(page,lang);await structure(page,lang);await accordions(page,width<1101,['#seo-packages','#seo-audience']);
      for(const id of ['seo-know','seo-why-zero2one','seo-audience']){
       await move(page,'#'+id,-55);await page.waitForTimeout(900);
       const first=page.locator('#'+id+' .seo-owner-illustration img').first();await first.waitFor({state:'visible'});await first.evaluate(e=>e.decode());
