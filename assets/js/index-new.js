@@ -884,6 +884,23 @@ function initEditorialRefresh() {
     syncSeoCards();
     on(compact, 'change', syncSeoCards);
   });
+  // Unlike the compact-only tiles, package disclosures are native and
+  // independently operable at every size. Preserve browser Enter/Space behavior
+  // without letting Locomotive interpret Space as an extra page scroll.
+  root.querySelectorAll('.seo-package-disclosure').forEach(function (card) {
+    on(card.querySelector('summary'), 'keydown', function (event) {
+      if (event.key === ' ' || event.code === 'Space') event.stopPropagation();
+    });
+    on(card, 'toggle', function () {
+      refreshHeight();
+      var answer=card.querySelector('.seo-owner-answer');
+      if(card.open && answer && !reduced.matches && answer.animate){
+        var animation=answer.animate([{opacity:.4,transform:'translateY(8px)'},{opacity:1,transform:'translateY(0)'}],{duration:280,easing:'cubic-bezier(.2,.7,.2,1)'});
+        animations.add(animation);
+        animation.onfinish=function(){animations.delete(animation);};
+      }
+    });
+  });
   root.querySelectorAll('[data-home-scroll]').forEach(function (slider) {
     var track = slider.querySelector('[data-home-scroll-track]');
     var controls = slider.querySelector('.rf-home-scroll-controls');
@@ -946,7 +963,7 @@ function initEditorialRefresh() {
 // SEO-only studio motion. Content has no hidden CSS/inline state: a failed
 // observer, disabled scripts, reduced motion or teardown always leaves it usable.
 // BEGIN SEO STUDIO STYLESHEET
-var seoStudioStylesheet='/assets/css/seo-studio-review.min.css?v=2826ff8e';
+var seoStudioStylesheet='/assets/css/seo-studio-review.min.css?v=9cc4e7c1';
 // END SEO STUDIO STYLESHEET
 function ensureSeoStudioStyles(root) {
   var link=document.querySelector('link[data-seo-studio-review]');

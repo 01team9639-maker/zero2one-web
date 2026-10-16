@@ -928,6 +928,35 @@ html[lang="ar"] .rf-seo-studio .rf-home-scroll-controls:not([hidden])::before { 
   .rf-seo-studio *::after { animation:none!important; transition:none!important; scroll-behavior:auto!important; }
 }
 
+/* Oct 16 PDF replacement: three complete package comparisons.
+   Values remain text (not color-only ticks), with no nested scrolling window. */
+.rf-seo-studio #seo-packages .seo-plans-scroll .seo-plans-grid[data-seo-package-edition] { align-items:flex-start; }
+.rf-seo-studio .seo-plan-pdf .seo-package-summary { grid-template-columns:27px minmax(0,1fr) 20px; list-style:none; cursor:pointer; }
+.rf-seo-studio .seo-package-summary::-webkit-details-marker { display:none; }
+.rf-seo-studio .seo-package-summary::marker { content:""; }
+.rf-seo-studio .seo-package-summary .seo-owner-chevron { display:block; grid-column:3; grid-row:1; }
+.rf-seo-studio .seo-package-disclosure[open] > summary .seo-owner-chevron { transform:rotate(180deg); }
+.rf-seo-studio .seo-package-summary:focus-visible { outline:3px solid var(--studio-orange); outline-offset:-4px; border-radius:22px; }
+.rf-seo-studio .seo-plan-pdf .seo-package-english { display:block; margin-top:4px; color:var(--studio-orange); font-size:13px; font-weight:500; line-height:1.5; letter-spacing:0; }
+html[lang="ar"] .rf-seo-studio .seo-package-english { text-align:right; }
+.rf-seo-studio .seo-plan-pdf .seo-package-audience-label { margin:0 0 5px; color:var(--studio-muted); font-size:12px; line-height:1.5; }
+.rf-seo-studio .seo-plan-pdf .seo-plan-fit { min-height:44px; margin-bottom:18px; font-size:15px; line-height:1.7; }
+.rf-seo-studio .seo-package-specs { display:grid; margin:12px 0 0; padding:0; }
+.rf-seo-studio .seo-package-spec { display:grid; grid-template-columns:minmax(0,1fr) minmax(74px,.65fr); align-items:center; gap:12px; min-height:76px; padding:12px 0; border-bottom:1px solid var(--studio-line); }
+.rf-seo-studio .seo-package-spec:last-child { border-bottom:0; }
+.rf-seo-studio .seo-package-spec dt { margin:0; color:var(--studio-ink); font-size:13px; font-weight:500; line-height:1.75; overflow-wrap:break-word; }
+.rf-seo-studio .seo-package-value { margin:0; color:var(--studio-muted); font-size:12px; font-weight:500; line-height:1.75; text-align:end; overflow-wrap:break-word; }
+.rf-seo-studio .seo-package-value--included { color:var(--studio-orange); font-size:22px; line-height:1.2; }
+.rf-seo-studio .seo-package-value--excluded { color:var(--studio-muted); font-size:11px; }
+.rf-seo-studio .seo-package-sr { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; border:0; }
+@media (min-width:1101px) {
+  .rf-seo-studio #seo-packages .seo-plans-grid[data-seo-package-edition] > .seo-plan-pdf { flex-basis:35%; }
+  .rf-seo-studio .seo-package-spec dt { font-size:15px; }
+  .rf-seo-studio .seo-package-value { font-size:14px; }
+  .rf-seo-studio .seo-package-value--included { font-size:23px; }
+  .rf-seo-studio .seo-package-value--excluded { font-size:12px; }
+}
+
 /* SEO-only Iconly chrome; leaving SEO restores the existing site styles. */
 body:has(main.rf-seo-studio) .footer-contact-icon-location {
   -webkit-mask-image:url("../icons/iconly/location.svg");

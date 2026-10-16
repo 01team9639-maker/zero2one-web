@@ -1,0 +1,14 @@
+const fs=require('fs'),path=require('path'),cp=require('child_process'),crypto=require('crypto'),assert=require('assert').strict;
+const root=path.dirname(__dirname),manifest=require('./seo-packages-release-2026-10-16.json');
+const read=f=>fs.readFileSync(path.join(root,f),'utf8'),before=f=>cp.execFileSync('git',['show',manifest.baseline+':'+f],{cwd:root,encoding:'utf8'});
+const sha=s=>crypto.createHash('sha256').update(s).digest('hex'),clean=s=>s.replace(/\?v=[a-f0-9]+/g,'?v=ASSET_HASH');
+for(const [file,hash] of Object.entries(manifest.protectedMarkup))assert.equal(sha(clean(read(file))),hash,'No markup changes outside SEO: '+file);
+for(const file of ['.htaccess','_redirects','send.php','sitemap.xml','assets/css/bundle.min.css','assets/css/styleguide.css','assets/css/style-new.css','assets/css/site-refresh.css','assets/css/footer-layout.css','assets/js/i18n.js','assets/js/i18n.min.js','assets/js/vendor.min.js','tools/build.sh'])assert.equal(read(file),before(file),'Protected production dependency: '+file);
+const normalize=s=>s.replace(/var seoStudioStylesheet='[^']+';/,"var seoStudioStylesheet='CONTENT_HASH';");
+assert.equal(normalize(read('assets/js/index-new.js').replace(manifest.scriptInsertion,'')),normalize(before('assets/js/index-new.js')),'Only native-package handlers and the stylesheet loader hash change in shared JS');
+assert.equal(read('assets/css/seo-studio-review.css').replace(manifest.cssInsertion,''),before('assets/css/seo-studio-review.css'),'Only package rules change; prior SEO styling and scoped icons stay intact');
+const allowed=new Set([...manifest.routes,'assets/css/seo-studio-review.css','assets/css/seo-studio-review.min.css','assets/js/index-new.js','assets/js/index-new.min.js','tools/page-copy/seo-packages-2026-10.json','tools/seo_packages.py','tools/iconly_icons.py','tools/test_seo_packages.js','tools/prepare_seo_packages_release.js','tools/seo-packages-release-2026-10-16.json','tools/test_seo_packages_release.js','tools/SEO-PACKAGES-RELEASE-2026-10-16.md','tools/test_seo_packages_release_navigation.js']);
+const changed=cp.execFileSync('git',['diff','--name-only',manifest.baseline],{cwd:root,encoding:'utf8'}).trim().split('\n');
+for(const f of changed)assert.ok(allowed.has(f)||(f.endsWith('.html')&&Object.hasOwn(manifest.protectedMarkup,f)),'Unexpected release file: '+f);
+assert.equal(cp.execFileSync('git',['diff','--name-only',manifest.baseline,'--','blog','assets/images'],{cwd:root,encoding:'utf8'}).trim(),'','Blog output and public images remain untouched');
+console.log('PASS isolated package release: shared CSS, form, navigation, footer, other services and blog unchanged apart from dependency hashes');

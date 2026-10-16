@@ -1,0 +1,41 @@
+{
+  "edition": "2026-10-16",
+  "source": {
+    "filename": "جدول_مقارنة_باقات_SEO_صفحة_واحدة_1.pdf",
+    "sha256": "f1c2163f6c5f562ffbd5d55749ef85b0d4416f717e5eeb08ee217bd74a6869c8",
+    "pages": 1,
+    "review": "All 26 table rows visually checked, including audience and all 25 service rows. Arabic is transcribed from the supplied table; English is a faithful translation. No prices or billing/contract terms are supplied."
+  },
+  "plans": [
+    {"id":"standard", "name":{"ar":"ستاندرد","en":"Standard"}, "icon":"discovery", "audience":{"ar":"المواقع الجديدة والمشاريع الناشئة","en":"New websites and startups"}},
+    {"id":"professional", "name":{"ar":"بروفيشنال","en":"Professional"}, "icon":"chart", "audience":{"ar":"الشركات والمواقع المتوسطة","en":"Mid-sized businesses and websites"}},
+    {"id":"enterprise", "name":{"ar":"إنتربرايز","en":"Enterprise"}, "icon":"work", "audience":{"ar":"المتاجر الكبرى والشركات الرائدة","en":"Large online stores and leading companies"}}
+  ],
+  "features": [
+    {"id":"site-audit", "label":{"ar":"التحليل الشامل للموقع","en":"Comprehensive website audit"}, "values":[true,true,true]},
+    {"id":"priority-keywords", "label":{"ar":"الكلمات المفتاحية ذات الأهمية","en":"Priority keywords"}, "values":[{"ar":"من 8 إلى 10 كلمات","en":"8-10 keywords"},{"ar":"من 12 إلى 20 كلمة","en":"12-20 keywords"},{"ar":"أكثر من 20 كلمة مفتاحية","en":"More than 20 keywords"}]},
+    {"id":"keyword-analysis", "label":{"ar":"تحليل الكلمات المفتاحية الخاصة بالموقع","en":"Website keyword analysis"}, "values":[true,true,true]},
+    {"id":"geo", "label":{"ar":"تحسين الظهور في محركات الذكاء الاصطناعي (GEO)","en":"Generative engine optimization (GEO)"}, "values":[false,true,true]},
+    {"id":"competitors", "label":{"ar":"تحليل المنافسين","en":"Competitor analysis"}, "values":[{"ar":"منافسان","en":"2 competitors"},{"ar":"5 منافسين","en":"5 competitors"},{"ar":"10 منافسين","en":"10 competitors"}]},
+    {"id":"content-plan", "label":{"ar":"خطة المحتوى","en":"Content plan"}, "values":[{"ar":"شهرية","en":"Monthly"},{"ar":"ربع سنوية","en":"Quarterly"},{"ar":"نصف سنوية","en":"Semiannual"}]},
+    {"id":"page-analysis", "label":{"ar":"تحليل أداء الصفحات","en":"Page performance analysis"}, "values":[{"ar":"20 صفحة","en":"20 pages"},{"ar":"50 صفحة","en":"50 pages"},{"ar":"جميع الصفحات","en":"All pages"}]},
+    {"id":"page-speed", "label":{"ar":"تحسين أداء وسرعة الصفحات","en":"Page speed and performance optimization"}, "values":[{"ar":"20 صفحة","en":"20 pages"},{"ar":"50 صفحة","en":"50 pages"},{"ar":"جميع الصفحات","en":"All pages"}]},
+    {"id":"page-titles", "label":{"ar":"تحسين العناوين الرئيسية للصفحات","en":"Page heading optimization"}, "values":[{"ar":"20 صفحة","en":"20 pages"},{"ar":"50 صفحة","en":"50 pages"},{"ar":"جميع الصفحات","en":"All pages"}]},
+    {"id":"issues-report", "label":{"ar":"تقرير بالمشكلات الموجودة بالموقع","en":"Website issues report"}, "values":[{"ar":"مع الحلول","en":"With solutions"},{"ar":"مع الحلول","en":"With solutions"},{"ar":"مع الحلول وخطة لمنع تكرار المشكلات","en":"With solutions and a plan to prevent recurring issues"}]},
+    {"id":"current-status", "label":{"ar":"تقرير الحالة الحالية للموقع","en":"Current website status report"}, "values":[true,{"ar":"مع تحديد التحسينات المطلوبة","en":"With required improvements identified"},{"ar":"مع تحسين الأداء العام","en":"With overall performance improvements"}]},
+    {"id":"monthly-articles", "label":{"ar":"نشر المقالات شهرياً","en":"Articles published per month"}, "values":[{"ar":"4 مقالات","en":"4 articles"},{"ar":"8 مقالات","en":"8 articles"},{"ar":"12 مقالاً","en":"12 articles"}]},
+    {"id":"bounce-rate", "label":{"ar":"دراسة الصفحات ذات معدل الارتداد المرتفع","en":"Analysis of high-bounce-rate pages"}, "values":[true,{"ar":"مع تحديد أسباب الارتداد","en":"With bounce causes identified"},{"ar":"مع معالجة المشكلات","en":"With issues addressed"}]},
+    {"id":"traffic", "label":{"ar":"تحليل حركة المرور (Traffic)","en":"Traffic analysis"}, "values":[{"ar":"أساسي","en":"Basic"},{"ar":"تفصيلي","en":"Detailed"},{"ar":"متقدم","en":"Advanced"}]},
+    {"id":"sitemap-robots", "label":{"ar":"مراجعة Sitemap وRobots.txt","en":"Sitemap and Robots.txt review"}, "values":[true,true,true]},
+    {"id":"domain", "label":{"ar":"دراسة حالة الدومين","en":"Domain status analysis"}, "values":[false,true,true]},
+    {"id":"harmful-links", "label":{"ar":"فحص الروابط الضارة من وإلى الموقع","en":"Harmful inbound and outbound link checks"}, "values":[true,true,true]},
+    {"id":"errors-404", "label":{"ar":"حل مشكلات صفحات 404","en":"404 page issue resolution"}, "values":[true,true,true]},
+    {"id":"backlink-plan", "label":{"ar":"وضع خطة للروابط الخلفية (Backlinks)","en":"Backlink planning"}, "values":[false,true,true]},
+    {"id":"quality-backlinks", "label":{"ar":"توفير روابط خلفية عالية الجودة","en":"High-quality backlinks provided"}, "values":[false,false,{"ar":"5 روابط","en":"5 links"}]},
+    {"id":"internal-links", "label":{"ar":"تحسين بنية الروابط الداخلية","en":"Internal linking structure optimization"}, "values":[false,true,true]},
+    {"id":"indexing", "label":{"ar":"مراجعة الصفحات غير المؤرشفة والعمل على أرشفتها","en":"Review and indexing of unindexed pages"}, "values":[true,true,true]},
+    {"id":"schema", "label":{"ar":"إعداد Schema والتحقق من صلاحيتها","en":"Schema setup and validation"}, "values":[false,false,true]},
+    {"id":"image-seo", "label":{"ar":"تحسين SEO الصور","en":"Image SEO optimization"}, "values":[false,true,true]},
+    {"id":"reporting", "label":{"ar":"التقارير","en":"Reporting"}, "values":[{"ar":"تقرير شهري","en":"Monthly report"},{"ar":"تقرير شهري متقدم","en":"Advanced monthly report"},{"ar":"تقرير شهري وتحليل أداء متقدم","en":"Monthly report and advanced performance analysis"}]}
+  ]
+}
