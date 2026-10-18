@@ -1,5 +1,37 @@
 # Local page review — 8 October 2026
 
+## Website-service follow-up — 18 October 2026 (local only)
+
+The owner requested consistent website-service benefit/audience cards, an
+all-width horizontal rail for the four website types, a balanced audience CTA,
+alternating desktop process steps, and ten descriptive technology icons from
+SVG Repo. The selected original SVG exports are individually listed as CC0;
+their source pages, download URLs and hashes are recorded beside the assets.
+Existing source wording is preserved in both languages.
+
+The website-service portfolio callout is excluded by its exact bilingual source
+heading, with the source exclusions recorded in coverage. Mohammed Karabala is
+removed from this service's team only. Its clients marquee has no visible pause
+button; native keyboard/hover pause and reduced-motion behavior remain.
+
+Footer text and contact/social icons on orange use brand cream, including hover
+and keyboard focus, through shared footer CSS. Contact pills fill dark instead
+of cream to retain that contrast; the existing cream CTA circle retains its
+orange label until its dark hover fill appears. Generated blog markup is not
+edited; the local preview resolves the current shared stylesheet for review.
+
+Verification: `test_web_design_followup.py` preserves all other page markup
+apart from deterministic asset stamps, and checks exact retained source text,
+links, metadata and other team cards. `test_web_design_followup_browser.js`
+checks bilingual layouts, rails, sequential desktop alternation, technology
+icons, no-JS/reduced-motion behavior and footer normal/hover/focus colors.
+`test_footer_layout.js` checks every main-site and blog footer. Publication of
+this follow-up was subsequently authorized by the owner on 18 October. The
+release retains all latest published blog output byte-for-byte. Its refresh
+generator check reports only the Arabic homepage's latest-blog teaser selection
+drift after the independent blog publication; that unrelated homepage copy is
+deliberately not regenerated in this web-service/footer release.
+
 ## Service source update — 17 October 2026 (local only)
 
 The owner requested the existing service pages be reconciled with the current

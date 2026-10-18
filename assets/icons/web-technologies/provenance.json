@@ -1,0 +1,107 @@
+{
+  "source": "SVG Repo",
+  "requestedCollection": "https://www.svgrepo.com/vectors/programming-languages/",
+  "purpose": "Descriptive technology marks on the website design service page. No endorsement or trademark rights claimed.",
+  "assets": [
+    {
+      "key": "wordpress",
+      "page": "https://www.svgrepo.com/svg/38867/wordpress-logo",
+      "download": "https://www.svgrepo.com/show/38867/wordpress-logo.svg",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "sha256": "5295aa81ddc4a9c3715ca080aac6934e76537c61d507229ac636fdef7833565d",
+      "bytes": 1763,
+      "geometryChanged": false
+    },
+    {
+      "key": "elementor",
+      "page": "https://www.svgrepo.com/svg/313877/elementor",
+      "download": "https://www.svgrepo.com/show/313877/elementor.svg",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "sha256": "e091fb4988d42ff6f8358a607d283f16e6aaf0a2908829a06aefdca8a06419d5",
+      "bytes": 480,
+      "geometryChanged": false
+    },
+    {
+      "key": "php",
+      "page": "https://www.svgrepo.com/svg/150351/php-programming-language",
+      "download": "https://www.svgrepo.com/show/150351/php-programming-language.svg",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "sha256": "48b7bbf61f73897ba2c040c7ea454bec7a53183fe4d433f816a9da2aaf6fdbb7",
+      "bytes": 1548,
+      "geometryChanged": false
+    },
+    {
+      "key": "react",
+      "page": "https://www.svgrepo.com/svg/303157/react-logo",
+      "download": "https://www.svgrepo.com/show/303157/react-logo.svg",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "sha256": "c1ec88735c72f0500ceb4324372a499820e2ff890dc10bd930f02dfa24d859bf",
+      "bytes": 4678,
+      "geometryChanged": false
+    },
+    {
+      "key": "nodejs",
+      "page": "https://www.svgrepo.com/svg/452075/node-js",
+      "download": "https://www.svgrepo.com/show/452075/node-js.svg",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "sha256": "9371c6baadafd088f9f58a8bbe56a602a1c3eda1db474e1cdc78742b1e6e8f18",
+      "bytes": 3269,
+      "geometryChanged": false
+    },
+    {
+      "key": "html5",
+      "page": "https://www.svgrepo.com/svg/306204/html5",
+      "download": "https://www.svgrepo.com/show/306204/html5.svg",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "sha256": "d613cd0321603404f66e26a13bad493c71de5b752f3900d72551982f9542c996",
+      "bytes": 495,
+      "geometryChanged": false
+    },
+    {
+      "key": "css3",
+      "page": "https://www.svgrepo.com/svg/303263/css3-logo",
+      "download": "https://www.svgrepo.com/show/303263/css3-logo.svg",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "sha256": "3c9f0f740290ca419633bfb07f88edb4b4da3afe4d381ebe3d81d4a8b116e127",
+      "bytes": 2774,
+      "geometryChanged": false
+    },
+    {
+      "key": "javascript",
+      "page": "https://www.svgrepo.com/svg/303206/javascript-logo",
+      "download": "https://www.svgrepo.com/show/303206/javascript-logo.svg",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "sha256": "baa03265be69ef581f3c4a092feacb7390f7f00460b50fa041de1520dace02cb",
+      "bytes": 1005,
+      "geometryChanged": false
+    },
+    {
+      "key": "mysql",
+      "page": "https://www.svgrepo.com/svg/373848/mysql",
+      "download": "https://www.svgrepo.com/show/373848/mysql.svg",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "sha256": "1b0032cfe0901084d400f65f1121c92eb05af4205cec8d8faaf4f85733f3e7fc",
+      "bytes": 2602,
+      "geometryChanged": false
+    },
+    {
+      "key": "woocommerce",
+      "page": "https://www.svgrepo.com/svg/354569/woocommerce-icon",
+      "download": "https://www.svgrepo.com/show/354569/woocommerce-icon.svg",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "sha256": "669798a1661120b8a71bd49a009466418d3d3f3e1ca1a2f823835e1f1d2c6a1a",
+      "bytes": 5077,
+      "geometryChanged": false
+    }
+  ]
+}

@@ -1,5 +1,16 @@
 /* Shared footer layout, promoted from the approved SEO design.
    Presentation only: keep destinations, social icons, certificate and live clock. */
+/* Light copy on the orange footer in both languages, including hover/focus.
+   The cream CTA circle keeps orange text until its dark fill enters. */
+.footer-wrap .footer { --footer-foreground:var(--color-brand-beige,#fffded); color:var(--footer-foreground); }
+.footer-wrap .footer :is(h1,h2,h3,h4,h5,h6,p,a,li,small,.ui-label) { color:var(--footer-foreground); }
+.footer-wrap .footer .bottom-footer :is(.btn-text,.btn-text-inner),
+.footer-wrap .footer .footer-contacts .btn-click :is(.btn-text,.btn-text-inner) { color:var(--footer-foreground)!important; }
+.footer-wrap .footer :is(.footer-contact-icon,.social-icon) { color:var(--footer-foreground); background-color:currentColor!important; }
+.footer-wrap .footer .footer-contacts .btn-click .btn-fill { background:#1c1d20!important; }
+.footer-wrap .footer .bottom-footer :is(.ui-label,.credits p:last-child) { opacity:1; }
+.footer-wrap .footer .btn-round .btn-click:not(:hover):not(:focus-visible) :is(.btn-text,.btn-text-inner) { color:var(--color-brand-orange,#f9460e)!important; }
+.footer-wrap .footer .btn-round .btn-click:is(:hover,:focus-visible) :is(.btn-text,.btn-text-inner) { color:var(--footer-foreground)!important; }
 .footer .bottom-footer { --footer-gutter:18px; --footer-width:1440px; }
 
 .footer .bottom-footer { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px 18px; width:calc(100% - var(--footer-gutter) * 2); max-width:var(--footer-width); margin:44px auto 0; padding:28px 0 96px; border-top:1px solid rgba(255,253,237,.28); }

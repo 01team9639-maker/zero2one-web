@@ -185,7 +185,7 @@ def flow(index, lang, tone):
     ],data_seo_flow=str(index),data_seo_flow_tone=tone,aria_hidden='true')
 
 
-def rail(grid, lang, label):
+def rail(grid, lang, label, always=False):
     grid.attrs.update({'data-home-scroll-track':None,'tabindex':'0','role':'region','aria-label':label})
     grid.add('service-studio-track')
     labels = ['البطاقة السابقة','البطاقة التالية'] if lang=='ar' else ['Previous card','Next card']
@@ -196,7 +196,9 @@ def rail(grid, lang, label):
         ],type='button',aria_label=label)
         control.attrs['data-home-scroll-'+direction] = None
         controls.append(control)
-    return n('div','service-studio-rail',[grid,controls],data_home_scroll=None)
+    wrapper=n('div','service-studio-rail',[grid,controls],data_home_scroll=None)
+    if always:wrapper.attrs['data-home-scroll-always']=None
+    return wrapper
 
 
 def section_kind(section, index):
@@ -361,9 +363,12 @@ def refine(page, slug, lang):
                     content=[e for e in list(card.children) if e is not existing_picture]
                     card.set([n('div','service-studio-card-top',[n('span','service-studio-index',[f'{i+1:02d}']),icon(ICONS[i%len(ICONS)])],aria_hidden='true'),drawing,n('div','service-studio-card-copy',content)])
             if kind in ('why','outcomes'):grid.attrs['data-seo-accordion']=None
-            if kind in ('benefits','deliverables','audience'):
+            site_types=slug=='web-design-riyadh' and art_kind=='types'
+            if site_types:section.attrs['data-web-site-types']='true'
+            if kind in ('benefits','deliverables','audience') or site_types:
                 parent=grid.parent;position=parent.children.index(grid)
-                wrapper=rail(grid,lang,title_text)
+                wrapper=rail(grid,lang,title_text,site_types)
+                if site_types:wrapper.attrs['data-web-site-types']='true'
                 parent.children.insert(position,wrapper);wrapper.parent=parent
         if kind=='process':
             timeline=section.first(lambda e:e.has('rf-timeline'))
@@ -378,6 +383,8 @@ def refine(page, slug, lang):
         if kind=='team':
             for card in [e for e in section.walk() if e.has('team-card')]:
                 card.add('service-studio-person');reveal(card)
+        if kind=='clients' and slug=='web-design-riyadh':
+            for toggle in [e for e in section.walk() if e.has('logo-marquee-toggle')]:toggle.detach()
         if kind=='faq':
             for card in [e for e in section.walk() if e.has('rf-faq-item')]:reveal(card)
         if kind=='packages':
@@ -391,6 +398,12 @@ def refine(page, slug, lang):
                     chips=n('div','service-studio-tech-grid')
                     for label in labels:
                         label.add('service-studio-tech-chip');chips.append(label)
+                        if slug=='web-design-riyadh':
+                            keys={'WordPress':'wordpress','Elementor':'elementor','PHP':'php','React':'react','Node.js':'nodejs','HTML5':'html5','CSS3':'css3','JavaScript':'javascript','MySQL':'mysql','WooCommerce':'woocommerce'}
+                            key=keys[label.text().strip()]
+                            label.attrs['data-web-technology']=key
+                            content=list(label.children)
+                            label.set([Node('img',{'src':'/assets/icons/web-technologies/'+key+'.svg','width':'48','height':'48','alt':'','loading':'lazy','decoding':'async','aria-hidden':'true'}),n('span','',content)])
                     prose.append(chips)
         # Normalize existing CTA labels and URLs, never invent a second action.
         actions=[e for e in section.walk() if e.tag=='a' and (e.has('rf-button') or e.has('btn-click') and e.parent and e.parent.has('brand-owner-cta'))]

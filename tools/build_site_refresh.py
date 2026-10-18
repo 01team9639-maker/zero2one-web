@@ -152,7 +152,7 @@ def clients(title, lang, n, intro=''):
 def team_cards(lang, slug=None):
     cards = re.findall(r'<li class="team-slide">[\s\S]*?</li>', LEGACY[lang]['team'])
     indices = {
-        'web-design-riyadh':[3,7,8,9,10], 'ecommerce-development':[3,7,8,9,10],
+        'web-design-riyadh':[3,7,9,10], 'ecommerce-development':[3,7,8,9,10],
         'mobile-application':[3,7,8,10], 'brand-identity':[3,10],
         'digital-advertising':[4,6], 'manage-google-adwords-campaigns':[4,6],
         'social-media-management':[4,6], 'marketing-consulting':[0,3,4],
@@ -261,6 +261,10 @@ def service_body(slug, lang):
         if p['style']=='HEADING_2': chunks.append([p,[]])
         elif chunks: chunks[-1][1].append(p)
     for n,(h,items) in enumerate(chunks,1):
+        if slug=='web-design-riyadh' and clean(h) in ('مواقع نفذناها بأنفسنا','Websites We Have Designed & Developed'):
+            for p in [h]+items:
+                record(p,'excluded','Owner removed the website-service portfolio callout on 2026-10-18')
+            continue
         if slug=='brand-identity' and n in (6,10,11):
             # Owner removed packages, specialists and clients on this service
             # only. Record the exact source exclusions instead of losing copy.
