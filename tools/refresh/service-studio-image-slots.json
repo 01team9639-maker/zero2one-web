@@ -1,0 +1,3275 @@
+{
+  "note": "Card image slots: owner-supplied illustrations matched to independent bilingual copy across all eight non-SEO services; existing brand outcome photos are preserved. Any remaining temporary images are explicitly marked.",
+  "slots": {
+    "web-design-riyadh/benefits/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/web-design-2026-10/benefits-01_fast_loading-640.webp",
+        "ar": "/assets/images/service-studio/web-design-2026-10/benefits-01_fast_loading-640.webp"
+      },
+      "titles": {
+        "en": "Fast Loading",
+        "ar": "Fast Loading"
+      }
+    },
+    "web-design-riyadh/benefits/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/web-design-2026-10/benefits-02_mobile_first_design-640.webp",
+        "ar": "/assets/images/service-studio/web-design-2026-10/benefits-02_mobile_first_design-640.webp"
+      },
+      "titles": {
+        "en": "Mobile-First Design",
+        "ar": "Mobile-First Design"
+      }
+    },
+    "web-design-riyadh/benefits/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/web-design-2026-10/benefits-03_seo_ai_ready-640.webp",
+        "ar": "/assets/images/service-studio/web-design-2026-10/benefits-03_seo_ai_ready-640.webp"
+      },
+      "titles": {
+        "en": "SEO & AI Ready",
+        "ar": "SEO & AI Ready"
+      }
+    },
+    "web-design-riyadh/know/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/web-design-2026-10/know-01_no_website_lost_customers-640.webp",
+        "ar": "/assets/images/service-studio/web-design-2026-10/know-01_no_website_lost_customers-640.webp"
+      },
+      "titles": {
+        "en": "You don't have a website and are losing customers who search for your business online before contacting you.",
+        "ar": "ليس لديك موقع إلكتروني، وتخسر عملاء يبحثون عنك أونلاين قبل أن يتواصلوا."
+      }
+    },
+    "web-design-riyadh/know/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/web-design-2026-10/know-02_outdated_website-640.webp",
+        "ar": "/assets/images/service-studio/web-design-2026-10/know-02_outdated_website-640.webp"
+      },
+      "titles": {
+        "en": "Your current website looks outdated and doesn't reflect the professionalism or quality of your services.",
+        "ar": "موقعك الحالي قديم ولا يعكس احترافية عملك وجودة خدماتك."
+      }
+    },
+    "web-design-riyadh/know/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/web-design-2026-10/know-03_slow_loading_visitors_leave-640.webp",
+        "ar": "/assets/images/service-studio/web-design-2026-10/know-03_slow_loading_visitors_leave-640.webp"
+      },
+      "titles": {
+        "en": "Your website is slow, causing visitors to leave before the page fully loads.",
+        "ar": "موقعك بطيء، والزوار يغادرونه قبل أن تكتمل الصفحة."
+      }
+    },
+    "web-design-riyadh/know/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/web-design-2026-10/know-04_poor_mobile_experience-640.webp",
+        "ar": "/assets/images/service-studio/web-design-2026-10/know-04_poor_mobile_experience-640.webp"
+      },
+      "titles": {
+        "en": "Your website doesn't work properly on mobile devices, even though most of your visitors access it from their phones.",
+        "ar": "موقعك لا يعمل بشكل جيد على الجوال، مع أن أغلب زوارك يدخلون منه."
+      }
+    },
+    "web-design-riyadh/know/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/web-design-2026-10/know-05_visits_without_conversions-640.webp",
+        "ar": "/assets/images/service-studio/web-design-2026-10/know-05_visits_without_conversions-640.webp"
+      },
+      "titles": {
+        "en": "You receive traffic, but those visitors aren't turning into calls, inquiries, or sales.",
+        "ar": "لديك زيارات، لكنها لا تتحول إلى اتصالات أو طلبات أو مبيعات."
+      }
+    },
+    "web-design-riyadh/know/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/web-design-2026-10/know-06_edits_need_developer-640.webp",
+        "ar": "/assets/images/service-studio/web-design-2026-10/know-06_edits_need_developer-640.webp"
+      },
+      "titles": {
+        "en": "Every small website update requires a developer, additional time, and extra costs.",
+        "ar": "كل تعديل بسيط على موقعك يحتاج مبرمجاً ووقتاً وتكلفة إضافية."
+      }
+    },
+    "web-design-riyadh/know/07": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/web-design-2026-10/know-07_invisible_search_ai_competitors-640.webp",
+        "ar": "/assets/images/service-studio/web-design-2026-10/know-07_invisible_search_ai_competitors-640.webp"
+      },
+      "titles": {
+        "en": "Your website isn't visible on Google or in AI-generated answers, while your competitors are getting ahead.",
+        "ar": "موقعك غير ظاهر في جوجل ولا في إجابات الذكاء الاصطناعي، والمنافسون يسبقونك."
+      }
+    },
+    "web-design-riyadh/deliverables/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/web-design-2026-10/deliverables-01_business_website-640.webp",
+        "ar": "/assets/images/service-studio/web-design-2026-10/deliverables-01_business_website-640.webp"
+      },
+      "titles": {
+        "en": "A Website Customized for Your Brand",
+        "ar": "موقع الكتروني لعملك"
+      }
+    },
+    "web-design-riyadh/deliverables/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/web-design-2026-10/deliverables-02_ui_ux_design-640.webp",
+        "ar": "/assets/images/service-studio/web-design-2026-10/deliverables-02_ui_ux_design-640.webp"
+      },
+      "titles": {
+        "en": "User Interface & User Experience (UI/UX)",
+        "ar": "واجهات وتجربة المستخدم (UI/UX)"
+      }
+    },
+    "web-design-riyadh/deliverables/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/web-design-2026-10/deliverables-03_responsive_all_devices-640.webp",
+        "ar": "/assets/images/service-studio/web-design-2026-10/deliverables-03_responsive_all_devices-640.webp"
+      },
+      "titles": {
+        "en": "Responsive Design for All Devices",
+        "ar": "متجاوب مع جميع الأجهزة (Responsive Design)"
+      }
+    },
+    "web-design-riyadh/deliverables/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/web-design-2026-10/deliverables-04_web_development-640.webp",
+        "ar": "/assets/images/service-studio/web-design-2026-10/deliverables-04_web_development-640.webp"
+      },
+      "titles": {
+        "en": "Website Development",
+        "ar": "لغات برمجة متنوعة (Web Development)"
+      }
+    },
+    "web-design-riyadh/deliverables/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/web-design-2026-10/deliverables-05_seo_ai_optimization-640.webp",
+        "ar": "/assets/images/service-studio/web-design-2026-10/deliverables-05_seo_ai_optimization-640.webp"
+      },
+      "titles": {
+        "en": "SEO & AI Ready",
+        "ar": "جاهز لجوجل والذكاء الاصطناعي (SEO & AI)"
+      }
+    },
+    "web-design-riyadh/deliverables/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/web-design-2026-10/deliverables-06_high_performance-640.webp",
+        "ar": "/assets/images/service-studio/web-design-2026-10/deliverables-06_high_performance-640.webp"
+      },
+      "titles": {
+        "en": "High Performance",
+        "ar": "سرعة وأداء عالي (High Performance)"
+      }
+    },
+    "web-design-riyadh/deliverables/08": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/web-design-2026-10/deliverables-08_arabic_english_support-640.webp",
+        "ar": "/assets/images/service-studio/web-design-2026-10/deliverables-08_arabic_english_support-640.webp"
+      },
+      "titles": {
+        "en": "Arabic & English Support",
+        "ar": ".دعم اللغتين العربية والإنجليزية"
+      }
+    },
+    "web-design-riyadh/deliverables/07": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/web-design-2026-10/deliverables-07_crm_full_handover-640.webp",
+        "ar": "/assets/images/service-studio/web-design-2026-10/deliverables-07_crm_full_handover-640.webp"
+      },
+      "titles": {
+        "en": "CRM Dashboard & Complete Handover",
+        "ar": "لوحة تحكم CRM وتسليم كامل"
+      }
+    },
+    "web-design-riyadh/deliverables/09": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/web-design-2026-10/deliverables-09_post_launch_support-640.webp",
+        "ar": "/assets/images/service-studio/web-design-2026-10/deliverables-09_post_launch_support-640.webp"
+      },
+      "titles": {
+        "en": "Post-Launch Technical Support",
+        "ar": "دعم فني بعد الإطلاق"
+      }
+    },
+    "web-design-riyadh/types/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/web-design-2026-10/types-01_websites_and_blogs-640.webp",
+        "ar": "/assets/images/service-studio/web-design-2026-10/types-01_websites_and_blogs-640.webp"
+      },
+      "titles": {
+        "en": "Website & Blog Design",
+        "ar": "تصميم المواقع الإلكترونية والمدونات"
+      }
+    },
+    "web-design-riyadh/types/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/web-design-2026-10/types-02_ecommerce_store_design-640.webp",
+        "ar": "/assets/images/service-studio/web-design-2026-10/types-02_ecommerce_store_design-640.webp"
+      },
+      "titles": {
+        "en": "E-commerce Website Design",
+        "ar": "تصميم المتاجر الإلكترونية"
+      }
+    },
+    "web-design-riyadh/types/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/web-design-2026-10/types-03_corporate_websites-640.webp",
+        "ar": "/assets/images/service-studio/web-design-2026-10/types-03_corporate_websites-640.webp"
+      },
+      "titles": {
+        "en": "Corporate & Business Websites",
+        "ar": "مواقع الشركات والمؤسسات"
+      }
+    },
+    "web-design-riyadh/types/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/web-design-2026-10/types-04_campaign_landing_pages-640.webp",
+        "ar": "/assets/images/service-studio/web-design-2026-10/types-04_campaign_landing_pages-640.webp"
+      },
+      "titles": {
+        "en": "Landing Pages for Advertising Campaigns",
+        "ar": "صفحات للحملات الإعلانية"
+      }
+    },
+    "web-design-riyadh/why/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/web-design-2026-10/why-01_technical_expertise-640.webp",
+        "ar": "/assets/images/service-studio/web-design-2026-10/why-01_technical_expertise-640.webp"
+      },
+      "titles": {
+        "en": "Advanced Technical Expertise",
+        "ar": "خبرة تقنية عالية"
+      }
+    },
+    "web-design-riyadh/why/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/web-design-2026-10/why-02_ongoing_support_maintenance-640.webp",
+        "ar": "/assets/images/service-studio/web-design-2026-10/why-02_ongoing_support_maintenance-640.webp"
+      },
+      "titles": {
+        "en": "Ongoing Technical Supportظ& Maintenance",
+        "ar": "دعم فني وصيانة مستمرة"
+      }
+    },
+    "web-design-riyadh/why/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/web-design-2026-10/why-03_future_scalability-640.webp",
+        "ar": "/assets/images/service-studio/web-design-2026-10/why-03_future_scalability-640.webp"
+      },
+      "titles": {
+        "en": "Scalable Solutions for the Future",
+        "ar": "حلول قابلة للتطوير مستقبلًا"
+      }
+    },
+    "web-design-riyadh/why/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/web-design-2026-10/why-04_custom_business_design-640.webp",
+        "ar": "/assets/images/service-studio/web-design-2026-10/why-04_custom_business_design-640.webp"
+      },
+      "titles": {
+        "en": "Custom Design for Your Business",
+        "ar": "تصميم مخصص لنشاطك"
+      }
+    },
+    "web-design-riyadh/why/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/web-design-2026-10/why-05_search_engine_optimization-640.webp",
+        "ar": "/assets/images/service-studio/web-design-2026-10/why-05_search_engine_optimization-640.webp"
+      },
+      "titles": {
+        "en": "Search Engine Optimization (SEO)",
+        "ar": "تهيئة الموقع لمحركات البحث SEO"
+      }
+    },
+    "web-design-riyadh/why/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/web-design-2026-10/why-06_diverse_technical_solutions-640.webp",
+        "ar": "/assets/images/service-studio/web-design-2026-10/why-06_diverse_technical_solutions-640.webp"
+      },
+      "titles": {
+        "en": "Diverse Technical Solutions",
+        "ar": "تنفيذ حلول تقنية متنوعة"
+      }
+    },
+    "web-design-riyadh/audience/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/web-design-2026-10/audience-01_service_websites-640.webp",
+        "ar": "/assets/images/service-studio/web-design-2026-10/audience-01_service_websites-640.webp"
+      },
+      "titles": {
+        "en": "Service-Based Businesses",
+        "ar": "مواقع الخدمات"
+      }
+    },
+    "web-design-riyadh/audience/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/web-design-2026-10/audience-02_ecommerce_websites-640.webp",
+        "ar": "/assets/images/service-studio/web-design-2026-10/audience-02_ecommerce_websites-640.webp"
+      },
+      "titles": {
+        "en": "E-commerce Stores",
+        "ar": "المتاجر الإلكترونية"
+      }
+    },
+    "web-design-riyadh/audience/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/web-design-2026-10/audience-03_company_websites-640.webp",
+        "ar": "/assets/images/service-studio/web-design-2026-10/audience-03_company_websites-640.webp"
+      },
+      "titles": {
+        "en": "Corporate Websites",
+        "ar": "مواقع الشركات"
+      }
+    },
+    "web-design-riyadh/audience/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/web-design-2026-10/audience-04_old_website_redesign-640.webp",
+        "ar": "/assets/images/service-studio/web-design-2026-10/audience-04_old_website_redesign-640.webp"
+      },
+      "titles": {
+        "en": "Outdated Websites",
+        "ar": "المواقع القديمة"
+      }
+    },
+    "web-design-riyadh/audience/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/web-design-2026-10/audience-05_advertising_pages-640.webp",
+        "ar": "/assets/images/service-studio/web-design-2026-10/audience-05_advertising_pages-640.webp"
+      },
+      "titles": {
+        "en": "Advertising Landing Pages",
+        "ar": "صفحات الإعلانات"
+      }
+    },
+    "brand-identity/benefits/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-benefits-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-benefits-01-640.webp"
+      },
+      "titles": {
+        "en": "Brand Strategy",
+        "ar": "Brand Strategy"
+      }
+    },
+    "brand-identity/benefits/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-benefits-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-benefits-02-640.webp"
+      },
+      "titles": {
+        "en": "Visual Identity",
+        "ar": "Visual Identity"
+      }
+    },
+    "brand-identity/benefits/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-benefits-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-benefits-03-640.webp"
+      },
+      "titles": {
+        "en": "Brand Guidelines",
+        "ar": "Brand Guidelines"
+      }
+    },
+    "brand-identity/know/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-know-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-know-01-640.webp"
+      },
+      "titles": {
+        "en": "Your project is new and has no clear identity to set it apart in the market.",
+        "ar": "مشروعك جديد، ولا يملك هوية واضحة تميزه في السوق."
+      }
+    },
+    "brand-identity/know/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-know-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-know-02-640.webp"
+      },
+      "titles": {
+        "en": "Your brand looks different on every platform: one logo here, other colors there.",
+        "ar": "علامتك تبدو مختلفة في كل منصة: شعار هنا، وألوان أخرى هناك."
+      }
+    },
+    "brand-identity/know/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-know-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-know-03-640.webp"
+      },
+      "titles": {
+        "en": "Your current logo is outdated or doesn't reflect the size of your business today.",
+        "ar": "شعارك الحالي قديم أو لا يعبر عن حجم عملك اليوم."
+      }
+    },
+    "brand-identity/know/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-know-04-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-know-04-640.webp"
+      },
+      "titles": {
+        "en": "Customers don't quickly understand what you offer, or why they should choose you.",
+        "ar": "العملاء لا يفهمون بسرعة ماذا تقدم، ولماذا يختارونك أنت."
+      }
+    },
+    "brand-identity/know/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-know-05-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-know-05-640.webp"
+      },
+      "titles": {
+        "en": "Smaller competitors look more professional than you because of their identity.",
+        "ar": "منافسون أصغر منك يبدون أكثر احترافية بسبب هويتهم."
+      }
+    },
+    "brand-identity/know/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-know-06-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-know-06-640.webp"
+      },
+      "titles": {
+        "en": "Every designer works on your brand in a different style, because there are no brand guidelines.",
+        "ar": "كل مصمم يعمل على علامتك بأسلوب مختلف، لعدم وجود دليل هوية."
+      }
+    },
+    "brand-identity/know/07": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-know-07-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-know-07-640.webp"
+      },
+      "titles": {
+        "en": "You're preparing to launch a website or campaign and need a visual foundation to build everything on.",
+        "ar": "تستعد لإطلاق موقع أو حملة، وتحتاج أساساً بصرياً يُبنى عليه كل شيء."
+      }
+    },
+    "brand-identity/deliverables/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-deliverables-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-deliverables-01-640.webp"
+      },
+      "titles": {
+        "en": "Brand Strategy",
+        "ar": "تصميم علامتك التجارية"
+      }
+    },
+    "brand-identity/deliverables/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-deliverables-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-deliverables-02-640.webp"
+      },
+      "titles": {
+        "en": "Market & Competitor Research",
+        "ar": "بحث السوق والمنافسين"
+      }
+    },
+    "brand-identity/deliverables/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-deliverables-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-deliverables-03-640.webp"
+      },
+      "titles": {
+        "en": "Logo Design",
+        "ar": "الشعار (Logo)"
+      }
+    },
+    "brand-identity/deliverables/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-deliverables-04-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-deliverables-04-640.webp"
+      },
+      "titles": {
+        "en": "Color & Typography System",
+        "ar": "الألوان والخطوط"
+      }
+    },
+    "brand-identity/deliverables/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-deliverables-05-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-deliverables-05-640.webp"
+      },
+      "titles": {
+        "en": "Tone of Voice & Key Messages",
+        "ar": "نبرة الصوت والرسائل"
+      }
+    },
+    "brand-identity/deliverables/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-deliverables-06-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-deliverables-06-640.webp"
+      },
+      "titles": {
+        "en": "Identity Applications",
+        "ar": "تطبيقات هويتك التجارية"
+      }
+    },
+    "brand-identity/deliverables/07": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-deliverables-07-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-deliverables-07-640.webp"
+      },
+      "titles": {
+        "en": "Identity for Stores, Restaurants & Cafés",
+        "ar": "المتاجر والمطاعم والمقاهي"
+      }
+    },
+    "brand-identity/deliverables/08": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-deliverables-08-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-deliverables-08-640.webp"
+      },
+      "titles": {
+        "en": "Rebranding",
+        "ar": "تحديث الهوية الحالية (Rebranding)"
+      }
+    },
+    "brand-identity/deliverables/09": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-deliverables-09-640.webp"
+      },
+      "titles": {
+        "en": "Brand Guidelines & Source Files"
+      }
+    },
+    "brand-identity/why/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-why-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-why-01-640.webp"
+      },
+      "titles": {
+        "en": "Any Business Size, Any Industry",
+        "ar": "أي حجم للعمل، وأي قطاع"
+      }
+    },
+    "brand-identity/why/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-why-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-why-02-640.webp"
+      },
+      "titles": {
+        "en": "95% Client Retention Rate",
+        "ar": "معدل احتفاظ بالعملاء بنسبة 95%"
+      }
+    },
+    "brand-identity/why/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-why-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-why-03-640.webp"
+      },
+      "titles": {
+        "en": "Strategy Before Design",
+        "ar": "الاستراتيجية قبل التصميم"
+      }
+    },
+    "brand-identity/why/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-why-04-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-why-04-640.webp"
+      },
+      "titles": {
+        "en": "An Identity That Works Everywhere",
+        "ar": "هوية تعمل في كل مكان"
+      }
+    },
+    "brand-identity/why/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-why-05-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-why-05-640.webp"
+      },
+      "titles": {
+        "en": "Built for the Saudi Market",
+        "ar": "مبنية للسوق المستهدف"
+      }
+    },
+    "brand-identity/why/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-why-06-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-why-06-640.webp"
+      },
+      "titles": {
+        "en": "In-House R&D Department",
+        "ar": "قسم بحث وتطوير داخلي"
+      }
+    },
+    "brand-identity/audience/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-audience-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-audience-01-640.webp"
+      },
+      "titles": {
+        "en": "New Projects",
+        "ar": "المشاريع الجديدة"
+      }
+    },
+    "brand-identity/audience/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-audience-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-audience-02-640.webp"
+      },
+      "titles": {
+        "en": "Inconsistent Brands",
+        "ar": "العلامات غير المتسقة"
+      }
+    },
+    "brand-identity/audience/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-audience-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-audience-03-640.webp"
+      },
+      "titles": {
+        "en": "Brands That Have Grown",
+        "ar": "العلامات التي كبرت"
+      }
+    },
+    "brand-identity/audience/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-audience-04-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-audience-04-640.webp"
+      },
+      "titles": {
+        "en": "Restaurants, Cafés & Stores",
+        "ar": "المطاعم والمقاهي والمتاجر"
+      }
+    },
+    "brand-identity/audience/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-audience-05-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-audience-05-640.webp"
+      },
+      "titles": {
+        "en": "Before a Website or Campaign",
+        "ar": "قبل إطلاق موقع أو حملة"
+      }
+    },
+    "brand-identity/audience/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-audience-06-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-audience-06-640.webp"
+      },
+      "titles": {
+        "en": "Expanding Companies",
+        "ar": "الشركات التي تتوسع"
+      }
+    },
+    "digital-advertising/benefits/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-benefits-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-benefits-01-640.webp"
+      },
+      "titles": {
+        "en": "Snapchat Ads",
+        "ar": "Snapchat Ads"
+      }
+    },
+    "digital-advertising/benefits/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-benefits-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-benefits-02-640.webp"
+      },
+      "titles": {
+        "en": "TikTok Ads",
+        "ar": "TikTok Ads"
+      }
+    },
+    "digital-advertising/benefits/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-benefits-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-benefits-03-640.webp"
+      },
+      "titles": {
+        "en": "Meta Ads",
+        "ar": "Meta Ads"
+      }
+    },
+    "digital-advertising/know/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-know-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-know-01-640.webp"
+      },
+      "titles": {
+        "en": "Your ads get views and likes, but sales aren't moving.",
+        "ar": "إعلاناتك مشاهدات ولايكات فقط، لكن المبيعات لا تتحرك."
+      }
+    },
+    "digital-advertising/know/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-know-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-know-02-640.webp"
+      },
+      "titles": {
+        "en": "You boost posts randomly, without a strategy or a clear goal.",
+        "ar": "النشر عشوائياً دون استراتيجية أو هدف واضح لعملك."
+      }
+    },
+    "digital-advertising/know/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-know-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-know-03-640.webp"
+      },
+      "titles": {
+        "en": "You don't know which platform suits your audience: Snapchat, TikTok, or Instagram.",
+        "ar": "لا تعرف أي منصة تناسب جمهورك: سناب شات أم تيك توك أم إنستغرام."
+      }
+    },
+    "digital-advertising/know/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-know-04-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-know-04-640.webp"
+      },
+      "titles": {
+        "en": "Your designs and videos don't grab attention in the first few seconds.",
+        "ar": "تصاميمك وفيديوهاتك لا تلفت الانتباه في الثواني الأولى."
+      }
+    },
+    "digital-advertising/know/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-know-05-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-know-05-640.webp"
+      },
+      "titles": {
+        "en": "Your cost per customer is high and rising every month.",
+        "ar": "تكلفة الحصول على العميل مرتفعة وتزداد كل شهر."
+      }
+    },
+    "digital-advertising/know/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-know-06-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-know-06-640.webp"
+      },
+      "titles": {
+        "en": "There's no tracking on your website, so you don't know who bought because of the ad.",
+        "ar": "لا يوجد تتبع على موقعك، فلا تعرف من اشترى بسبب الإعلان."
+      }
+    },
+    "digital-advertising/know/07": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-know-07-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-know-07-640.webp"
+      },
+      "titles": {
+        "en": "You want to reach new customers beyond your current followers.",
+        "ar": "تريد الوصول إلى عملاء جدد خارج دائرة متابعيك الحاليين."
+      }
+    },
+    "digital-advertising/deliverables/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-deliverables-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-deliverables-01-640.webp"
+      },
+      "titles": {
+        "en": "A Campaign Strategy Built Around Your Audience",
+        "ar": "استراتيجية حملات حسب جمهورك"
+      }
+    },
+    "digital-advertising/deliverables/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-deliverables-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-deliverables-02-640.webp"
+      },
+      "titles": {
+        "en": "Snapchat Ads",
+        "ar": "إعلانات سناب شات (Snapchat Ads)"
+      }
+    },
+    "digital-advertising/deliverables/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-deliverables-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-deliverables-03-640.webp"
+      },
+      "titles": {
+        "en": "TikTok Ads",
+        "ar": "إعلانات تيك توك (TikTok Ads)"
+      }
+    },
+    "digital-advertising/deliverables/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-deliverables-04-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-deliverables-04-640.webp"
+      },
+      "titles": {
+        "en": "Instagram & Facebook Advertising (Meta Ads)",
+        "ar": "إعلانات إنستغرام وفيسبوك (Meta Ads)"
+      }
+    },
+    "digital-advertising/deliverables/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-deliverables-05-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-deliverables-05-640.webp"
+      },
+      "titles": {
+        "en": "X & LinkedIn Ads for Businesses",
+        "ar": "إعلانات إكس ولينكد إن للشركات"
+      }
+    },
+    "digital-advertising/deliverables/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-deliverables-06-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-deliverables-06-640.webp"
+      },
+      "titles": {
+        "en": "Creative Advertising Content",
+        "ar": "صناعة المحتوى الإعلاني"
+      }
+    },
+    "digital-advertising/deliverables/07": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-deliverables-07-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-deliverables-07-640.webp"
+      },
+      "titles": {
+        "en": "Messaging & Lead Generation Campaigns",
+        "ar": "حملات رسائل وعملاء"
+      }
+    },
+    "digital-advertising/deliverables/08": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-deliverables-08-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-deliverables-08-640.webp"
+      },
+      "titles": {
+        "en": "Retargeting & Product Catalogs",
+        "ar": "إعادة الاستهداف وكتالوج المنتجات"
+      }
+    },
+    "digital-advertising/deliverables/09": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-deliverables-09-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-deliverables-09-640.webp"
+      },
+      "titles": {
+        "en": "Conversion Tracking & Reporting",
+        "ar": "تتبع التحويلات والتقارير"
+      }
+    },
+    "digital-advertising/why/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-why-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-why-01-640.webp"
+      },
+      "titles": {
+        "en": "Any Business Size, Any Industry",
+        "ar": "أي حجم للعمل، وأي قطاع"
+      }
+    },
+    "digital-advertising/why/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-why-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-why-02-640.webp"
+      },
+      "titles": {
+        "en": "95% Client Retention Rate",
+        "ar": "معدل احتفاظ بالعملاء بنسبة 95%"
+      }
+    },
+    "digital-advertising/why/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-why-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-why-03-640.webp"
+      },
+      "titles": {
+        "en": "Creative Advertising and Media Buying in One Team",
+        "ar": "المحتوى والإعلان في فريق واحد"
+      }
+    },
+    "digital-advertising/why/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-why-04-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-why-04-640.webp"
+      },
+      "titles": {
+        "en": "Your Ad Accounts Are Yours",
+        "ar": "حساباتك الإعلانية ملكك"
+      }
+    },
+    "digital-advertising/why/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-why-05-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-why-05-640.webp"
+      },
+      "titles": {
+        "en": "Built for the Saudi Market",
+        "ar": "مبنية للسوق السعودي"
+      }
+    },
+    "digital-advertising/why/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-why-06-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-why-06-640.webp"
+      },
+      "titles": {
+        "en": "In-House R&D Department",
+        "ar": "قسم بحث وتطوير داخلي"
+      }
+    },
+    "digital-advertising/audience/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-audience-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-audience-01-640.webp"
+      },
+      "titles": {
+        "en": "Online Stores",
+        "ar": "المتاجر الإلكترونية"
+      }
+    },
+    "digital-advertising/audience/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-audience-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-audience-02-640.webp"
+      },
+      "titles": {
+        "en": "Restaurants & Cafés",
+        "ar": "العيادات والمراكز"
+      }
+    },
+    "digital-advertising/audience/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-audience-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-audience-03-640.webp"
+      },
+      "titles": {
+        "en": "Clinics & Centers",
+        "ar": "المطاعم والمقاهي"
+      }
+    },
+    "digital-advertising/audience/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-audience-04-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-audience-04-640.webp"
+      },
+      "titles": {
+        "en": "New Brands",
+        "ar": "العلامات الجديدة"
+      }
+    },
+    "digital-advertising/audience/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-audience-05-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-audience-05-640.webp"
+      },
+      "titles": {
+        "en": "Education Centers",
+        "ar": "المراكز التعليمية"
+      }
+    },
+    "digital-advertising/audience/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-audience-06-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-audience-06-640.webp"
+      },
+      "titles": {
+        "en": "Offers & Seasons",
+        "ar": "العروض والمواسم"
+      }
+    },
+    "digital-advertising/outcomes/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-outcomes-04-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-outcomes-01-640.webp"
+      },
+      "titles": {
+        "en": "Fast Reach to Your Audience",
+        "ar": "مكاسب أعلى ونمو تجاري مستدام"
+      }
+    },
+    "digital-advertising/outcomes/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-outcomes-05-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-outcomes-02-640.webp"
+      },
+      "titles": {
+        "en": "Content That Stops the Scroll",
+        "ar": "عملاء محتملون أكثر شهرياً"
+      }
+    },
+    "digital-advertising/outcomes/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-outcomes-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-outcomes-03-640.webp"
+      },
+      "titles": {
+        "en": "Sales, Not Just Views",
+        "ar": "حملات أذكى، وأداء أقوى، وتكاليف أقل"
+      }
+    },
+    "digital-advertising/outcomes/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-outcomes-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-outcomes-04-640.webp"
+      },
+      "titles": {
+        "en": "Lower Cost per Customer",
+        "ar": "وصول سريع لجمهورك"
+      }
+    },
+    "digital-advertising/outcomes/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-outcomes-06-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-outcomes-05-640.webp"
+      },
+      "titles": {
+        "en": "A Brand Your Audience Remembers",
+        "ar": "محتوى يلفت الانتباه"
+      }
+    },
+    "digital-advertising/outcomes/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-outcomes-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/digital-advertising-outcomes-06-640.webp"
+      },
+      "titles": {
+        "en": "More Leads Every Month",
+        "ar": "حملة يتذكرها عملائك"
+      }
+    },
+    "manage-google-adwords-campaigns/benefits/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-benefits-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-benefits-01-640.webp"
+      },
+      "titles": {
+        "en": "Google Search Ads",
+        "ar": "Google Search Ads"
+      }
+    },
+    "manage-google-adwords-campaigns/benefits/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-benefits-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-benefits-02-640.webp"
+      },
+      "titles": {
+        "en": "Google Maps Ads",
+        "ar": "Google Maps Ads"
+      }
+    },
+    "manage-google-adwords-campaigns/benefits/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-benefits-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-benefits-03-640.webp"
+      },
+      "titles": {
+        "en": "YouTube Ads",
+        "ar": "YouTube Ads"
+      }
+    },
+    "manage-google-adwords-campaigns/know/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-know-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-know-01-640.webp"
+      },
+      "titles": {
+        "en": "You're spending on Google Ads, but calls are few or not serious.",
+        "ar": "تحتاج عملاء الآن (بشكل سريع ونتيجة لحظية)."
+      }
+    },
+    "manage-google-adwords-campaigns/know/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-know-05-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-know-02-640.webp"
+      },
+      "titles": {
+        "en": "Your cost per click goes up every month, and you don't know why.",
+        "ar": "المنافسون يظهرون فوقك في نتائج البحث وعلى الخرائط."
+      }
+    },
+    "manage-google-adwords-campaigns/know/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-know-06-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-know-03-640.webp"
+      },
+      "titles": {
+        "en": "Your ads show up for searches that have nothing to do with your service, wasting your budget.",
+        "ar": "تصرف على إعلانات جوجل، لكن الاتصالات قليلة أو غير جادة."
+      }
+    },
+    "manage-google-adwords-campaigns/know/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-know-07-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-know-04-640.webp"
+      },
+      "titles": {
+        "en": "You don't know which ad or keyword brought you the customer.",
+        "ar": "لديك متجر والاعلانات لا تجلب لك المبيعات والنتيجة غير مرضيه بالمرة."
+      }
+    },
+    "manage-google-adwords-campaigns/know/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-know-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-know-05-640.webp"
+      },
+      "titles": {
+        "en": "Competitors appear above you in search results and on Google Maps.",
+        "ar": "تكلفة النقرة ترتفع كل شهر، ولا تعرف السبب."
+      }
+    },
+    "manage-google-adwords-campaigns/know/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-know-04-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-know-06-640.webp"
+      },
+      "titles": {
+        "en": "Visitors reach your website from the ad, then leave without getting in touch.",
+        "ar": "إعلاناتك تظهر لكن لا علاقة لها بخدمتك، فتضيع الميزانية."
+      }
+    },
+    "manage-google-adwords-campaigns/know/07": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-know-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-know-07-640.webp"
+      },
+      "titles": {
+        "en": "You need customers now, and SEO takes time to deliver results.",
+        "ar": "لا تعرف أي إعلان أو كلمة مفتاحية جلبت لك العميل."
+      }
+    },
+    "manage-google-adwords-campaigns/deliverables/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-deliverables-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-deliverables-01-640.webp"
+      },
+      "titles": {
+        "en": "A Campaign Strategy Built for Your Business",
+        "ar": "استراتيجية مخصصة لعملك"
+      }
+    },
+    "manage-google-adwords-campaigns/deliverables/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-deliverables-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-deliverables-02-640.webp"
+      },
+      "titles": {
+        "en": "Purchase-Intent Keyword Research",
+        "ar": "بحث الكلمات المفتاحية التي تجلب لك العملاء"
+      }
+    },
+    "manage-google-adwords-campaigns/deliverables/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-deliverables-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-deliverables-03-640.webp"
+      },
+      "titles": {
+        "en": "Search Ads",
+        "ar": "إعلانات البحث (Search Ads)"
+      }
+    },
+    "manage-google-adwords-campaigns/deliverables/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-deliverables-04-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-deliverables-04-640.webp"
+      },
+      "titles": {
+        "en": "Google Maps & Local Search Ads",
+        "ar": "إعلانات الخرائط والبحث المحلي"
+      }
+    },
+    "manage-google-adwords-campaigns/deliverables/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-deliverables-05-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-deliverables-05-640.webp"
+      },
+      "titles": {
+        "en": "YouTube, Display & App Ads",
+        "ar": "إعلانات يوتيوب والتطبيقات"
+      }
+    },
+    "manage-google-adwords-campaigns/deliverables/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-deliverables-06-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-deliverables-06-640.webp"
+      },
+      "titles": {
+        "en": "Shopping & Performance Max Ads",
+        "ar": "إعلانات التسوق والأداء الأفضل (Shopping & Performance Max)"
+      }
+    },
+    "manage-google-adwords-campaigns/deliverables/07": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-deliverables-08-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-deliverables-07-640.webp"
+      },
+      "titles": {
+        "en": "Remarketing",
+        "ar": "إعداد الحالات الناجحة (Conversion tracking)"
+      }
+    },
+    "manage-google-adwords-campaigns/deliverables/08": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-deliverables-09-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-deliverables-08-640.webp"
+      },
+      "titles": {
+        "en": "Ad Copy & Landing Pages",
+        "ar": "إعادة الاستهداف (Remarketing)"
+      }
+    },
+    "manage-google-adwords-campaigns/deliverables/09": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-deliverables-10-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-deliverables-09-640.webp"
+      },
+      "titles": {
+        "en": "Conversion Tracking & Reporting",
+        "ar": "كتابة الإعلانات وصفحات الهبوط"
+      }
+    },
+    "manage-google-adwords-campaigns/complementary/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-complementary-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-complementary-01-640.webp"
+      },
+      "titles": {
+        "en": "Landing Page Design",
+        "ar": "تصميم صفحات الهبوط"
+      }
+    },
+    "manage-google-adwords-campaigns/complementary/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-complementary-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-complementary-02-640.webp"
+      },
+      "titles": {
+        "en": "Ad Content Writing",
+        "ar": "كتابة المحتوى الإعلاني"
+      }
+    },
+    "manage-google-adwords-campaigns/complementary/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-complementary-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-complementary-03-640.webp"
+      },
+      "titles": {
+        "en": "User Experience Optimization (CRO)",
+        "ar": "تحسين تجربة المستخدم (CRO)"
+      }
+    },
+    "manage-google-adwords-campaigns/complementary/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-complementary-04-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-complementary-04-640.webp"
+      },
+      "titles": {
+        "en": "Performance Analysis",
+        "ar": "تحليل الأداء"
+      }
+    },
+    "manage-google-adwords-campaigns/complementary/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-complementary-05-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-complementary-05-640.webp"
+      },
+      "titles": {
+        "en": "Budget Management",
+        "ar": "إدارة الميزانيات"
+      }
+    },
+    "manage-google-adwords-campaigns/why/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-why-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-why-01-640.webp"
+      },
+      "titles": {
+        "en": "Any Business Size, Any Industry",
+        "ar": "أي حجم للعمل، وأي قطاع"
+      }
+    },
+    "manage-google-adwords-campaigns/why/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/brand-identity-why-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-why-02-640.webp"
+      },
+      "titles": {
+        "en": "95% Client Retention Rate",
+        "ar": "حماية الميزانية من النقرات الوهمية"
+      }
+    },
+    "manage-google-adwords-campaigns/why/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-why-04-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-why-03-640.webp"
+      },
+      "titles": {
+        "en": "Your Ad Account Is Yours",
+        "ar": "نهتم بك وبنجاحك!"
+      }
+    },
+    "manage-google-adwords-campaigns/why/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-why-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-why-04-640.webp"
+      },
+      "titles": {
+        "en": "Protecting Your Budget From Waste",
+        "ar": "حسابك الإعلاني ملكك"
+      }
+    },
+    "manage-google-adwords-campaigns/why/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-why-05-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-why-05-640.webp"
+      },
+      "titles": {
+        "en": "Decisions Based on Data",
+        "ar": "قرارات مبنية على البيانات"
+      }
+    },
+    "manage-google-adwords-campaigns/why/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-why-06-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-why-06-640.webp"
+      },
+      "titles": {
+        "en": "In-House R&D Department",
+        "ar": "قسم بحث وتطوير داخلي"
+      }
+    },
+    "manage-google-adwords-campaigns/audience/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-audience-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-audience-01-640.webp"
+      },
+      "titles": {
+        "en": "Service Businesses",
+        "ar": "الشركات الخدمية"
+      }
+    },
+    "manage-google-adwords-campaigns/audience/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-audience-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-audience-02-640.webp"
+      },
+      "titles": {
+        "en": "Online Stores",
+        "ar": "المتاجر الإلكترونية"
+      }
+    },
+    "manage-google-adwords-campaigns/audience/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-audience-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-audience-03-640.webp"
+      },
+      "titles": {
+        "en": "Local Businesses",
+        "ar": "الأنشطة المحلية"
+      }
+    },
+    "manage-google-adwords-campaigns/audience/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-audience-04-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-audience-04-640.webp"
+      },
+      "titles": {
+        "en": "B2B Companies",
+        "ar": "شركات B2B"
+      }
+    },
+    "manage-google-adwords-campaigns/audience/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-audience-05-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-audience-05-640.webp"
+      },
+      "titles": {
+        "en": "Offers & Seasons",
+        "ar": "العروض والمواسم"
+      }
+    },
+    "manage-google-adwords-campaigns/audience/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-audience-06-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-audience-06-640.webp"
+      },
+      "titles": {
+        "en": "Anyone Who Tried Ads Without Results",
+        "ar": "من جرب الإعلانات دون نتيجة"
+      }
+    },
+    "manage-google-adwords-campaigns/outcomes/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-outcomes-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-outcomes-01-640.webp"
+      },
+      "titles": {
+        "en": "Results From Day One",
+        "ar": "نتائج من اليوم الأول"
+      }
+    },
+    "manage-google-adwords-campaigns/outcomes/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-outcomes-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-outcomes-02-640.webp"
+      },
+      "titles": {
+        "en": "Customers Ready to Buy",
+        "ar": "عملاء جاهزون للشراء"
+      }
+    },
+    "manage-google-adwords-campaigns/outcomes/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-outcomes-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-outcomes-03-640.webp"
+      },
+      "titles": {
+        "en": "Lower Cost per Customer",
+        "ar": "تكلفة أقل لكل عميل"
+      }
+    },
+    "manage-google-adwords-campaigns/outcomes/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-outcomes-04-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-outcomes-04-640.webp"
+      },
+      "titles": {
+        "en": "Appear Above Competitors",
+        "ar": "ظهور فوق المنافسين"
+      }
+    },
+    "manage-google-adwords-campaigns/outcomes/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-outcomes-05-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-outcomes-05-640.webp"
+      },
+      "titles": {
+        "en": "Pay for Engagement",
+        "ar": "تدفع مقابل التفاعل"
+      }
+    },
+    "manage-google-adwords-campaigns/outcomes/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-outcomes-06-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-outcomes-06-640.webp"
+      },
+      "titles": {
+        "en": "More Leads Every Month",
+        "ar": "عملاء محتملون أكثر شهرياً"
+      }
+    },
+    "manage-google-adwords-campaigns/deliverables/10": {
+      "owner_supplied": true,
+      "images": {
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/manage-google-adwords-campaigns-deliverables-10-640.webp"
+      },
+      "titles": {
+        "ar": "تتبع التحويلات والتقارير"
+      }
+    },
+    "social-media-management/benefits/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-benefits-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-benefits-01-640.webp"
+      },
+      "titles": {
+        "en": "Content Strategy",
+        "ar": "Content Strategy"
+      }
+    },
+    "social-media-management/benefits/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-benefits-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-benefits-02-640.webp"
+      },
+      "titles": {
+        "en": "Reels & Short Videos",
+        "ar": "Reels & Short Videos"
+      }
+    },
+    "social-media-management/benefits/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-benefits-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-benefits-03-640.webp"
+      },
+      "titles": {
+        "en": "Community Management",
+        "ar": "Community Management"
+      }
+    },
+    "social-media-management/know/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-know-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-know-01-640.webp"
+      },
+      "titles": {
+        "en": "You post regularly, but receive very few inquiries or orders through your social accounts.",
+        "ar": "تنشر باستمرار، لكن الرسائل والطلبات من حساباتك قليلة."
+      }
+    },
+    "social-media-management/know/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-know-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-know-02-640.webp"
+      },
+      "titles": {
+        "en": "You don't have enough time to manage your accounts, respond to comments, and answer messages.",
+        "ar": "لا تجد وقتاً لإدارة الحسابات والرد على التعليقات والرسائل."
+      }
+    },
+    "social-media-management/know/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-know-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-know-03-640.webp"
+      },
+      "titles": {
+        "en": "Your posts feel disconnected, with no clear strategy, purpose, or consistent brand identity.",
+        "ar": "منشوراتك متفرقة، بلا خطة أو هدف أو هوية واضحة."
+      }
+    },
+    "social-media-management/know/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-know-04-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-know-04-640.webp"
+      },
+      "titles": {
+        "en": "Your designs and photos don't reflect the quality of your products or services.",
+        "ar": "تصاميمك وصورك لا تعكس جودة منتجك أو خدمتك."
+      }
+    },
+    "social-media-management/know/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-know-05-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-know-05-640.webp"
+      },
+      "titles": {
+        "en": "You're not sure what to post or which type of content your audience actually responds to.",
+        "ar": "لا تعرف ماذا تنشر، ولا أي نوع محتوى ينجح مع جمهورك."
+      }
+    },
+    "social-media-management/know/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-know-06-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-know-06-640.webp"
+      },
+      "titles": {
+        "en": "Platform algorithms keep changing, and your organic reach continues to decline.",
+        "ar": "الخوارزميات تتغير، والوصول إلى متابعيك ينخفض باستمرار."
+      }
+    },
+    "social-media-management/know/07": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-know-07-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-know-07-640.webp"
+      },
+      "titles": {
+        "en": "Your website has little or no written content to support its visibility on Google.",
+        "ar": "موقعك بلا مقالات أو محتوى مكتوب يساعدك على الظهور في جوجل."
+      }
+    },
+    "social-media-management/deliverables/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-deliverables-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-deliverables-01-640.webp"
+      },
+      "titles": {
+        "en": "01 | We Understand Your Audience & Market",
+        "ar": "01 | نبدأ بفهم جمهورك وسوقك"
+      }
+    },
+    "social-media-management/deliverables/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-deliverables-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-deliverables-02-640.webp"
+      },
+      "titles": {
+        "en": "02 | We Build a Clear Strategy",
+        "ar": "02 | نبني استراتيجية واضحة"
+      }
+    },
+    "social-media-management/deliverables/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-deliverables-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-deliverables-03-640.webp"
+      },
+      "titles": {
+        "en": "03 | We Turn Ideas into Content",
+        "ar": "03 | نحول الأفكار إلى محتوى"
+      }
+    },
+    "social-media-management/deliverables/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-deliverables-04-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-deliverables-04-640.webp"
+      },
+      "titles": {
+        "en": "04 | We Put Your Content in Front of the Right People",
+        "ar": "04 | نوصل محتواك للجمهور الصحيح"
+      }
+    },
+    "social-media-management/deliverables/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-deliverables-05-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-deliverables-05-640.webp"
+      },
+      "titles": {
+        "en": "05 | We Keep Your Brand Close to Your Audience",
+        "ar": "05 | نخلي علامتك قريبة من جمهورها"
+      }
+    },
+    "social-media-management/deliverables/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-deliverables-06-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-deliverables-06-640.webp"
+      },
+      "titles": {
+        "en": "06 | We Make Influencer Marketing Work for Your Brand",
+        "ar": "06 | نستفيد من قوة المؤثرين"
+      }
+    },
+    "social-media-management/deliverables/07": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-deliverables-07-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-deliverables-07-640.webp"
+      },
+      "titles": {
+        "en": "07 | We Measure What Works",
+        "ar": "07 | نعرف ماذا يعمل وماذا يحتاج إلى تحسين"
+      }
+    },
+    "social-media-management/deliverables/08": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-deliverables-08-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-deliverables-08-640.webp"
+      },
+      "titles": {
+        "en": "08 | Everything Stays Organized Behind the Scenes",
+        "ar": "08 | كل شيء منظم خلف الكواليس"
+      }
+    },
+    "social-media-management/complementary/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-complementary-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-complementary-01-640.webp"
+      },
+      "titles": {
+        "en": "Short-Form Video & Photography",
+        "ar": "إنتاج الفيديوهات القصيرة والتصوير"
+      }
+    },
+    "social-media-management/complementary/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-complementary-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-complementary-02-640.webp"
+      },
+      "titles": {
+        "en": "Motion Graphics",
+        "ar": "الموشن جرافيك (Motion Graphics)"
+      }
+    },
+    "social-media-management/complementary/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-complementary-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-complementary-03-640.webp"
+      },
+      "titles": {
+        "en": "Paid Social Media Campaigns",
+        "ar": "حملات الترويج المدفوعة"
+      }
+    },
+    "social-media-management/complementary/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-complementary-04-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-complementary-04-640.webp"
+      },
+      "titles": {
+        "en": "Tracking & Analytics Setup",
+        "ar": "ربط أدوات التتبع"
+      }
+    },
+    "social-media-management/why/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-why-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-why-01-640.webp"
+      },
+      "titles": {
+        "en": "Any Business Size. Any Industry.",
+        "ar": "أي حجم للعمل، وأي قطاع"
+      }
+    },
+    "social-media-management/why/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-why-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-why-02-640.webp"
+      },
+      "titles": {
+        "en": "95% Client Retention Rate",
+        "ar": "معدل احتفاظ بالعملاء بنسبة 95%"
+      }
+    },
+    "social-media-management/why/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-why-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-why-03-640.webp"
+      },
+      "titles": {
+        "en": "One Complete Content Team",
+        "ar": "فريق محتوى متكامل"
+      }
+    },
+    "social-media-management/why/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-why-04-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-why-04-640.webp"
+      },
+      "titles": {
+        "en": "Your Approval Before Publishing",
+        "ar": "موافقتك قبل النشر"
+      }
+    },
+    "social-media-management/why/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-why-05-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-why-05-640.webp"
+      },
+      "titles": {
+        "en": "Built for the Saudi Market",
+        "ar": "مبنية للسوق السعودي"
+      }
+    },
+    "social-media-management/why/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-why-06-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-why-06-640.webp"
+      },
+      "titles": {
+        "en": "In-House Research & Development Team",
+        "ar": "قسم بحث وتطوير داخلي"
+      }
+    },
+    "social-media-management/audience/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-audience-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-audience-01-640.webp"
+      },
+      "titles": {
+        "en": "Active Accounts With Little to Show for It",
+        "ar": "الحسابات النشطة بلا نتائج"
+      }
+    },
+    "social-media-management/audience/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-audience-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-audience-02-640.webp"
+      },
+      "titles": {
+        "en": "Business Owners With No Time",
+        "ar": "أصحاب الأعمال بلا وقت"
+      }
+    },
+    "social-media-management/audience/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-audience-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-audience-03-640.webp"
+      },
+      "titles": {
+        "en": "New Brands",
+        "ar": "العلامات الجديدة"
+      }
+    },
+    "social-media-management/audience/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-audience-04-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-audience-04-640.webp"
+      },
+      "titles": {
+        "en": "Small Businesses",
+        "ar": "المشاريع الصغيرة"
+      }
+    },
+    "social-media-management/audience/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-audience-05-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-audience-05-640.webp"
+      },
+      "titles": {
+        "en": "Restaurants, Cafés & Online Stores",
+        "ar": "المطاعم والمقاهي والمتاجر"
+      }
+    },
+    "social-media-management/audience/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-audience-06-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-audience-06-640.webp"
+      },
+      "titles": {
+        "en": "Websites That Need More Content",
+        "ar": "المواقع التي تحتاج محتوى مكتوباً"
+      }
+    },
+    "social-media-management/outcomes/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-outcomes-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-outcomes-01-640.webp"
+      },
+      "titles": {
+        "en": "A Consistent Professional Presence",
+        "ar": "حضور احترافي متسق"
+      }
+    },
+    "social-media-management/outcomes/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-outcomes-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-outcomes-02-640.webp"
+      },
+      "titles": {
+        "en": "Real Engagement",
+        "ar": "تفاعل حقيقي"
+      }
+    },
+    "social-media-management/outcomes/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-outcomes-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-outcomes-03-640.webp"
+      },
+      "titles": {
+        "en": "Greater Customer Trust",
+        "ar": "تعزيز المصداقية لعملائك"
+      }
+    },
+    "social-media-management/outcomes/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-outcomes-04-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/social-media-management-outcomes-04-640.webp"
+      },
+      "titles": {
+        "en": "More Inquiries Every Month",
+        "ar": "رسائل وطلبات أكثر شهرياً"
+      }
+    },
+    "ecommerce-development/benefits/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-benefits-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-benefits-01-640.webp"
+      },
+      "titles": {
+        "en": "Mada & Apple Pay",
+        "ar": "Mada & Apple Pay"
+      }
+    },
+    "ecommerce-development/benefits/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-benefits-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-benefits-02-640.webp"
+      },
+      "titles": {
+        "en": "Fast Checkout",
+        "ar": "Fast Checkout"
+      }
+    },
+    "ecommerce-development/benefits/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-benefits-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-benefits-03-640.webp"
+      },
+      "titles": {
+        "en": "Mobile-First Store",
+        "ar": "Mobile-First Store"
+      }
+    },
+    "ecommerce-development/know/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-know-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-know-01-640.webp"
+      },
+      "titles": {
+        "en": "You sell through Instagram and WhatsApp, and orders get lost between messages and bank transfers.",
+        "ar": "تبيع عبر إنستغرام وواتساب، والطلبات تضيع بين الرسائل والتحويلات البنكية."
+      }
+    },
+    "ecommerce-development/know/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-know-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-know-02-640.webp"
+      },
+      "titles": {
+        "en": "Customers add products to the cart, then leave before paying.",
+        "ar": "العميل يضيف المنتج إلى السلة، ثم يتركها قبل الدفع."
+      }
+    },
+    "ecommerce-development/know/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-know-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-know-03-640.webp"
+      },
+      "titles": {
+        "en": "Your current store is slow on mobile and its pages feel cluttered.",
+        "ar": "متجرك الحالي بطيء على الجوال، وصفحاته غير مرتبة."
+      }
+    },
+    "ecommerce-development/know/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-know-04-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-know-04-640.webp"
+      },
+      "titles": {
+        "en": "Your payment options are limited: no installments, no Apple Pay.",
+        "ar": "طرق الدفع عندك محدودة، فلا تقسيط ولا Apple Pay."
+      }
+    },
+    "ecommerce-development/know/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-know-05-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-know-05-640.webp"
+      },
+      "titles": {
+        "en": "Every order means a manual follow-up with the shipping company.",
+        "ar": "كل طلب يحتاج منك متابعة يدوية مع شركة الشحن."
+      }
+    },
+    "ecommerce-development/know/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-know-06-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-know-06-640.webp"
+      },
+      "titles": {
+        "en": "You can't say for sure which product sells best or where your customers come from.",
+        "ar": "لا تعرف بالأرقام أي منتج يبيع أكثر، ولا من أين يأتي عملاؤك."
+      }
+    },
+    "ecommerce-development/know/07": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-know-07-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-know-07-640.webp"
+      },
+      "titles": {
+        "en": "A big season like National Day or Ramadan is coming, and your store isn't ready for the rush.",
+        "ar": "موسم كبير مثل اليوم الوطني أو رمضان يقترب، ومتجرك غير جاهز للضغط."
+      }
+    },
+    "ecommerce-development/deliverables/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-deliverables-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-deliverables-01-640.webp"
+      },
+      "titles": {
+        "en": "The Right Platform for Your Business",
+        "ar": "اختيار المنصة المناسبة لتجارتك"
+      }
+    },
+    "ecommerce-development/deliverables/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-deliverables-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-deliverables-02-640.webp"
+      },
+      "titles": {
+        "en": "A Design That Looks Like Your Brand",
+        "ar": "تصميم يشبه علامتك"
+      }
+    },
+    "ecommerce-development/deliverables/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-deliverables-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-deliverables-03-640.webp"
+      },
+      "titles": {
+        "en": "Product Pages That Make the Sale",
+        "ar": "صفحات منتجات تقنع بالشراء"
+      }
+    },
+    "ecommerce-development/deliverables/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-deliverables-04-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-deliverables-04-640.webp"
+      },
+      "titles": {
+        "en": "Easy Payment, the Way Your Customers Pay",
+        "ar": "دفع سهل بالطرق التي يستخدمها عميلك"
+      }
+    },
+    "ecommerce-development/deliverables/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-deliverables-05-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-deliverables-05-640.webp"
+      },
+      "titles": {
+        "en": "Connected Shipping and Order Tracking",
+        "ar": "شحن مربوط وتتبع للطلبات"
+      }
+    },
+    "ecommerce-development/deliverables/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-deliverables-06-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-deliverables-06-640.webp"
+      },
+      "titles": {
+        "en": "Dashboard and Sales Reports",
+        "ar": "لوحة تحكم وتقارير مبيعات"
+      }
+    },
+    "ecommerce-development/deliverables/07": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-deliverables-07-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-deliverables-07-640.webp"
+      },
+      "titles": {
+        "en": "Policy Pages and Verification Details",
+        "ar": "صفحات السياسات وبيانات التوثيق"
+      }
+    },
+    "ecommerce-development/deliverables/08": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-deliverables-08-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-deliverables-08-640.webp"
+      },
+      "titles": {
+        "en": "Ecommerce App Development",
+        "ar": "إنشاء تطبيق متجر إلكتروني"
+      }
+    },
+    "ecommerce-development/deliverables/09": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-deliverables-09-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-deliverables-09-640.webp"
+      },
+      "titles": {
+        "en": "Custom Booking and Order Systems",
+        "ar": "أنظمة حجوزات وطلبات مخصّصة"
+      }
+    },
+    "ecommerce-development/why/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-why-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-why-01-640.webp"
+      },
+      "titles": {
+        "en": "A Store Built Around Your Product",
+        "ar": "متجر مبني على منتجك أنت"
+      }
+    },
+    "ecommerce-development/why/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-why-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-why-02-640.webp"
+      },
+      "titles": {
+        "en": "95% Client Retention",
+        "ar": "معدل احتفاظ بالعملاء بنسبة 95%"
+      }
+    },
+    "ecommerce-development/why/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-why-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-why-03-640.webp"
+      },
+      "titles": {
+        "en": "A Store You Can Run Yourself",
+        "ar": "متجر تديره بنفسك"
+      }
+    },
+    "ecommerce-development/why/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-why-04-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-why-04-640.webp"
+      },
+      "titles": {
+        "en": "Everything in Your Name",
+        "ar": "كل شيء باسمك"
+      }
+    },
+    "ecommerce-development/why/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-why-05-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-why-05-640.webp"
+      },
+      "titles": {
+        "en": "Ready for the Big Seasons",
+        "ar": "جاهز لمواسم البيع"
+      }
+    },
+    "ecommerce-development/why/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-why-06-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-why-06-640.webp"
+      },
+      "titles": {
+        "en": "From Store to Marketing, One Team",
+        "ar": "من المتجر إلى التسويق في مكان واحد"
+      }
+    },
+    "ecommerce-development/audience/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-audience-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-audience-01-640.webp"
+      },
+      "titles": {
+        "en": "Merchants Selling Through Messages",
+        "ar": "من يبيع عبر الرسائل"
+      }
+    },
+    "ecommerce-development/audience/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-audience-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-audience-02-640.webp"
+      },
+      "titles": {
+        "en": "Shop Owners",
+        "ar": "أصحاب المحلات"
+      }
+    },
+    "ecommerce-development/audience/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-audience-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-audience-03-640.webp"
+      },
+      "titles": {
+        "en": "Stores Ready to Move",
+        "ar": "متاجر تريد الانتقال"
+      }
+    },
+    "ecommerce-development/audience/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-audience-04-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-audience-04-640.webp"
+      },
+      "titles": {
+        "en": "Digital Products and Subscriptions",
+        "ar": "المنتجات الرقمية والاشتراكات"
+      }
+    },
+    "ecommerce-development/audience/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-audience-05-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-audience-05-640.webp"
+      },
+      "titles": {
+        "en": "New Brands",
+        "ar": "العلامات الجديدة"
+      }
+    },
+    "ecommerce-development/audience/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-audience-06-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-audience-06-640.webp"
+      },
+      "titles": {
+        "en": "Booking-Based Businesses",
+        "ar": "الأعمال القائمة على الحجز"
+      }
+    },
+    "ecommerce-development/outcomes/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-outcomes-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-outcomes-01-640.webp"
+      },
+      "titles": {
+        "en": "Your Store Sells While You're Away",
+        "ar": "متجرك يبيع وأنت خارج العمل"
+      }
+    },
+    "ecommerce-development/outcomes/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-outcomes-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-outcomes-02-640.webp"
+      },
+      "titles": {
+        "en": "More Completed Orders",
+        "ar": "طلبات مكتملة أكثر"
+      }
+    },
+    "ecommerce-development/outcomes/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-outcomes-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-outcomes-03-640.webp"
+      },
+      "titles": {
+        "en": "Less Time on Follow-Up",
+        "ar": "وقت أقل في المتابعة"
+      }
+    },
+    "ecommerce-development/outcomes/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-outcomes-04-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-outcomes-04-640.webp"
+      },
+      "titles": {
+        "en": "Customers Who Come Back",
+        "ar": "عميل يعود ليشتري"
+      }
+    },
+    "ecommerce-development/outcomes/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-outcomes-05-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-outcomes-05-640.webp"
+      },
+      "titles": {
+        "en": "Trust From the First Visit",
+        "ar": "ثقة من أول زيارة"
+      }
+    },
+    "ecommerce-development/outcomes/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-outcomes-06-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/ecommerce-development-outcomes-06-640.webp"
+      },
+      "titles": {
+        "en": "Numbers to Base Decisions On",
+        "ar": "أرقام تبني عليها قراراتك"
+      }
+    },
+    "mobile-application/benefits/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-benefits-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-benefits-01-640.webp"
+      },
+      "titles": {
+        "en": "iOS & Android",
+        "ar": "iOS & Android"
+      }
+    },
+    "mobile-application/benefits/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-benefits-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-benefits-02-640.webp"
+      },
+      "titles": {
+        "en": "Smooth User Experience",
+        "ar": "Smooth User Experience"
+      }
+    },
+    "mobile-application/benefits/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-benefits-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-benefits-03-640.webp"
+      },
+      "titles": {
+        "en": "Push Notifications",
+        "ar": "Push Notifications"
+      }
+    },
+    "mobile-application/know/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-know-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-know-01-640.webp"
+      },
+      "titles": {
+        "en": "You have an app idea and don't know where to start turning it into a product.",
+        "ar": "لديك فكرة تطبيق، ولا تعرف من أين تبدأ تحويلها إلى منتج."
+      }
+    },
+    "mobile-application/know/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-know-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-know-02-640.webp"
+      },
+      "titles": {
+        "en": "Your customers order from you often, and reordering through the website or messages is tiring for them.",
+        "ar": "عملاؤك يطلبون منك كثيراً، وتكرار الطلب عبر الموقع أو الرسائل متعب لهم."
+      }
+    },
+    "mobile-application/know/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-know-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-know-03-640.webp"
+      },
+      "titles": {
+        "en": "You rely on third-party apps that take a commission on every order.",
+        "ar": "تعتمد على تطبيقات وسيطة تأخذ عمولة من كل طلب."
+      }
+    },
+    "mobile-application/know/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-know-04-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-know-04-640.webp"
+      },
+      "titles": {
+        "en": "Your current app is slow, and its store ratings are low.",
+        "ar": "تطبيقك الحالي بطيء، أو تقييمات منخفضة في المتاجر."
+      }
+    },
+    "mobile-application/know/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-know-05-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-know-05-640.webp"
+      },
+      "titles": {
+        "en": "You need an internal app for your team or field staff.",
+        "ar": "تحتاج تطبيقاً داخلياً لفريقك أو موظفيك الميدانيين."
+      }
+    },
+    "mobile-application/know/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-know-06-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-know-06-640.webp"
+      },
+      "titles": {
+        "en": "You want to reach customers directly with offers, without ad spend.",
+        "ar": "تريد الوصول إلى عملائك مباشرة بالعروض دون تكلفة إعلانية."
+      }
+    },
+    "mobile-application/know/07": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-know-07-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-know-07-640.webp"
+      },
+      "titles": {
+        "en": "You're worried about an app project that drags on and costs more than expected.",
+        "ar": "تخاف من مشروع تطبيق يطول ويتكلف أكثر من المتوقع."
+      }
+    },
+    "mobile-application/deliverables/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-deliverables-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-deliverables-01-640.webp"
+      },
+      "titles": {
+        "en": "Idea & Requirements Analysis",
+        "ar": "تحليل الفكرة والمتطلبات"
+      }
+    },
+    "mobile-application/deliverables/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-deliverables-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-deliverables-02-640.webp"
+      },
+      "titles": {
+        "en": "App UI/UX Design",
+        "ar": "تصميم واجهات وتجربة المستخدم (UI/UX)"
+      }
+    },
+    "mobile-application/deliverables/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-deliverables-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-deliverables-03-640.webp"
+      },
+      "titles": {
+        "en": "Custom Mobile Application Development (iOS & Android)",
+        "ar": "برمجة تطبيقات iOS وأندرويد"
+      }
+    },
+    "mobile-application/deliverables/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-deliverables-04-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-deliverables-04-640.webp"
+      },
+      "titles": {
+        "en": "Control Panel",
+        "ar": "لوحة التحكم"
+      }
+    },
+    "mobile-application/deliverables/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-deliverables-05-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-deliverables-05-640.webp"
+      },
+      "titles": {
+        "en": "System & Service Integrations",
+        "ar": "الربط مع الأنظمة والخدمات"
+      }
+    },
+    "mobile-application/deliverables/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-deliverables-06-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-deliverables-06-640.webp"
+      },
+      "titles": {
+        "en": "Store & Ordering Apps",
+        "ar": "تطبيقات المتاجر والطلبات"
+      }
+    },
+    "mobile-application/deliverables/07": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-deliverables-07-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-deliverables-07-640.webp"
+      },
+      "titles": {
+        "en": "Testing & Quality Assurance",
+        "ar": "الاختبار وضمان الجودة"
+      }
+    },
+    "mobile-application/deliverables/08": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-deliverables-08-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-deliverables-08-640.webp"
+      },
+      "titles": {
+        "en": "App Store Publishing",
+        "ar": "الرفع على المتاجر"
+      }
+    },
+    "mobile-application/deliverables/09": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-deliverables-09-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-deliverables-09-640.webp"
+      },
+      "titles": {
+        "en": "Support & Updates",
+        "ar": "الدعم والتحديثات"
+      }
+    },
+    "mobile-application/technologies/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-technologies-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-technologies-01-640.webp"
+      },
+      "titles": {
+        "en": "Front End",
+        "ar": "الواجهات الأمامية"
+      }
+    },
+    "mobile-application/technologies/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-technologies-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-technologies-02-640.webp"
+      },
+      "titles": {
+        "en": "Back End & APIs",
+        "ar": "الأنظمة وواجهات API"
+      }
+    },
+    "mobile-application/technologies/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-technologies-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-technologies-03-640.webp"
+      },
+      "titles": {
+        "en": "Infrastructure & Operations",
+        "ar": "البنية والتشغيل"
+      }
+    },
+    "mobile-application/why/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-why-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-why-01-640.webp"
+      },
+      "titles": {
+        "en": "Any Business Size, Any Industry",
+        "ar": "فريق تقني متكامل"
+      }
+    },
+    "mobile-application/why/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-why-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-why-02-640.webp"
+      },
+      "titles": {
+        "en": "95% Client Retention Rate",
+        "ar": "أي حجم للعمل، وأي قطاع"
+      }
+    },
+    "mobile-application/why/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-why-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-why-03-640.webp"
+      },
+      "titles": {
+        "en": "A Complete Technical Team",
+        "ar": "عملاء سعداء"
+      }
+    },
+    "mobile-application/why/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-why-04-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-why-04-640.webp"
+      },
+      "titles": {
+        "en": "Clear Stages, No Surprises",
+        "ar": "مراحل واضحة بلا مفاجآت"
+      }
+    },
+    "mobile-application/why/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-why-05-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-why-05-640.webp"
+      },
+      "titles": {
+        "en": "Built for the Saudi Market",
+        "ar": "مبنية لجميع الأسواق"
+      }
+    },
+    "mobile-application/why/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-why-06-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-why-06-640.webp"
+      },
+      "titles": {
+        "en": "In-House R&D Department",
+        "ar": "قسم بحث وتطوير داخلي"
+      }
+    },
+    "mobile-application/audience/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-audience-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-audience-01-640.webp"
+      },
+      "titles": {
+        "en": "Online Stores",
+        "ar": "المتاجر الإلكترونية"
+      }
+    },
+    "mobile-application/audience/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-audience-04-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-audience-02-640.webp"
+      },
+      "titles": {
+        "en": "Restaurants & Cafés",
+        "ar": "المواقع الخدمية"
+      }
+    },
+    "mobile-application/audience/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-audience-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-audience-03-640.webp"
+      },
+      "titles": {
+        "en": "Booking-Based Services",
+        "ar": "الشركات الناشئة"
+      }
+    },
+    "mobile-application/audience/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-audience-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-audience-04-640.webp"
+      },
+      "titles": {
+        "en": "Startups",
+        "ar": "المطاعم والمقاهي"
+      }
+    },
+    "mobile-application/audience/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-audience-05-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-audience-05-640.webp"
+      },
+      "titles": {
+        "en": "Internal Needs",
+        "ar": "تطبيقات داخلية"
+      }
+    },
+    "mobile-application/audience/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-audience-06-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-audience-06-640.webp"
+      },
+      "titles": {
+        "en": "Education & Training",
+        "ar": "التعليم والتدريب"
+      }
+    },
+    "mobile-application/outcomes/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-outcomes-06-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-outcomes-01-640.webp"
+      },
+      "titles": {
+        "en": "Your App Never Sleeps",
+        "ar": "عملاء يعودون أكثر"
+      }
+    },
+    "mobile-application/outcomes/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-outcomes-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-outcomes-02-640.webp"
+      },
+      "titles": {
+        "en": "Customers Who Come Back More",
+        "ar": "تجربة أفضل لعملائك"
+      }
+    },
+    "mobile-application/outcomes/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-outcomes-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-outcomes-03-640.webp"
+      },
+      "titles": {
+        "en": "A Better Customer Experience",
+        "ar": "قناة تسويق مباشرة"
+      }
+    },
+    "mobile-application/outcomes/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-outcomes-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-outcomes-04-640.webp"
+      },
+      "titles": {
+        "en": "A Direct Marketing Channel",
+        "ar": "تعزيز المصداقية لعملائك"
+      }
+    },
+    "mobile-application/outcomes/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-outcomes-04-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-outcomes-05-640.webp"
+      },
+      "titles": {
+        "en": "Stronger Credibility With Your Customers",
+        "ar": "عمليات أسهل"
+      }
+    },
+    "mobile-application/outcomes/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-outcomes-05-640.webp"
+      },
+      "titles": {
+        "en": "Easier Operations"
+      }
+    },
+    "mobile-application/technologies/04": {
+      "owner_supplied": true,
+      "images": {
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/mobile-application-technologies-04-640.webp"
+      },
+      "titles": {
+        "ar": "لغات برمجة التطبيقات"
+      }
+    },
+    "marketing-consulting/benefits/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-benefits-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-benefits-01-640.webp"
+      },
+      "titles": {
+        "en": "Market Research",
+        "ar": "Market Research"
+      }
+    },
+    "marketing-consulting/benefits/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-benefits-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-benefits-02-640.webp"
+      },
+      "titles": {
+        "en": "Written Marketing Plan",
+        "ar": "Written Marketing Plan"
+      }
+    },
+    "marketing-consulting/benefits/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-benefits-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-benefits-03-640.webp"
+      },
+      "titles": {
+        "en": "Clear KPIs",
+        "ar": "Clear KPIs"
+      }
+    },
+    "marketing-consulting/know/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-know-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-know-01-640.webp"
+      },
+      "titles": {
+        "en": "You spend on marketing, but you don't know which channel actually works.",
+        "ar": "تصرف على التسويق، لكنك لا تعرف أي قناة تحقق نتيجة فعلاً."
+      }
+    },
+    "marketing-consulting/know/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-know-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-know-02-640.webp"
+      },
+      "titles": {
+        "en": "You work without a plan, and your marketing decisions depend on the moment.",
+        "ar": "تعمل بلا خطة، وقراراتك التسويقية حسب الموقف."
+      }
+    },
+    "marketing-consulting/know/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-know-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-know-03-640.webp"
+      },
+      "titles": {
+        "en": "Your budget is spread across everything, so no channel succeeds.",
+        "ar": "ميزانيتك موزعة على كل شيء، فلا تنجح أي قناة."
+      }
+    },
+    "marketing-consulting/know/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-know-04-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-know-04-640.webp"
+      },
+      "titles": {
+        "en": "Your message is generic and tries to suit everyone, so it convinces no one.",
+        "ar": "رسالتك عامة تحاول أن تناسب الجميع، فلا تقنع أحداً."
+      }
+    },
+    "marketing-consulting/know/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-know-05-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-know-05-640.webp"
+      },
+      "titles": {
+        "en": "Your project is new, and you don't know where to start marketing.",
+        "ar": "مشروعك جديد، ولا تعرف من أين تبدأ التسويق."
+      }
+    },
+    "marketing-consulting/know/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-know-06-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-know-06-640.webp"
+      },
+      "titles": {
+        "en": "You have an in-house marketing team, but it needs clear direction.",
+        "ar": "لديك فريق تسويق داخلي، لكنه يحتاج اتجاهاً واضحاً."
+      }
+    },
+    "marketing-consulting/know/07": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-know-07-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-know-07-640.webp"
+      },
+      "titles": {
+        "en": "There are no KPIs to tell you whether marketing is achieving its goal.",
+        "ar": "لا توجد مؤشرات تقيس بها هل التسويق يحقق هدفه أم لا."
+      }
+    },
+    "marketing-consulting/deliverables/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-deliverables-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-deliverables-01-640.webp"
+      },
+      "titles": {
+        "en": "Current Marketing Review",
+        "ar": "مراجعة وضعك التسويقي الحالي"
+      }
+    },
+    "marketing-consulting/deliverables/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-deliverables-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-deliverables-02-640.webp"
+      },
+      "titles": {
+        "en": "Market & Competitor Research",
+        "ar": "دراسة السوق والمنافسين"
+      }
+    },
+    "marketing-consulting/deliverables/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-deliverables-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-deliverables-03-640.webp"
+      },
+      "titles": {
+        "en": "Audience & Persona Definition",
+        "ar": "تحديد الجمهور والشخصيات المستهدفة"
+      }
+    },
+    "marketing-consulting/deliverables/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-deliverables-04-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-deliverables-04-640.webp"
+      },
+      "titles": {
+        "en": "Positioning & Key Message",
+        "ar": "التموضع والرسالة الأساسية"
+      }
+    },
+    "marketing-consulting/deliverables/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-deliverables-05-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-deliverables-05-640.webp"
+      },
+      "titles": {
+        "en": "Channel Selection & Priorities",
+        "ar": "اختيار القنوات وترتيب الأولويات"
+      }
+    },
+    "marketing-consulting/deliverables/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-deliverables-06-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-deliverables-06-640.webp"
+      },
+      "titles": {
+        "en": "Budget Allocation",
+        "ar": "توزيع الميزانية"
+      }
+    },
+    "marketing-consulting/deliverables/07": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-deliverables-07-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-deliverables-07-640.webp"
+      },
+      "titles": {
+        "en": "A Written Marketing Plan With a Timeline",
+        "ar": "خطة تسويقية مكتوبة بجدول زمني"
+      }
+    },
+    "marketing-consulting/deliverables/08": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-deliverables-08-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-deliverables-08-640.webp"
+      },
+      "titles": {
+        "en": "Handover & Walkthrough Session",
+        "ar": "جلسة تسليم وشرح"
+      }
+    },
+    "marketing-consulting/deliverables/09": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-deliverables-09-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-deliverables-09-640.webp"
+      },
+      "titles": {
+        "en": "Periodic Follow-up (Optional)",
+        "ar": "متابعة دورية (اختيارية)"
+      }
+    },
+    "marketing-consulting/why/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-why-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-why-01-640.webp"
+      },
+      "titles": {
+        "en": "Any Business Size, Any Industry",
+        "ar": "أي حجم للعمل، وأي قطاع"
+      }
+    },
+    "marketing-consulting/why/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-why-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-why-02-640.webp"
+      },
+      "titles": {
+        "en": "95% Client Retention Rate",
+        "ar": "معدل احتفاظ بالعملاء بنسبة 95%"
+      }
+    },
+    "marketing-consulting/why/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-why-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-why-03-640.webp"
+      },
+      "titles": {
+        "en": "An Independent, Honest View",
+        "ar": "رأي مستقل وصادق"
+      }
+    },
+    "marketing-consulting/why/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-why-04-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-why-04-640.webp"
+      },
+      "titles": {
+        "en": "A Marketing Consultant With Execution Experience",
+        "ar": "خبرة تنفيذ لا تنظير"
+      }
+    },
+    "marketing-consulting/why/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-why-05-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-why-05-640.webp"
+      },
+      "titles": {
+        "en": "Built for the Saudi Market",
+        "ar": "مبنية للسوق السعودي"
+      }
+    },
+    "marketing-consulting/why/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-why-06-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-why-06-640.webp"
+      },
+      "titles": {
+        "en": "In-House R&D Department",
+        "ar": "قسم بحث وتطوير داخلي"
+      }
+    },
+    "marketing-consulting/audience/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-audience-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-audience-01-640.webp"
+      },
+      "titles": {
+        "en": "New Projects",
+        "ar": "المشاريع الجديدة"
+      }
+    },
+    "marketing-consulting/audience/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-audience-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-audience-02-640.webp"
+      },
+      "titles": {
+        "en": "Businesses on Many Channels",
+        "ar": "أعمال تصرف على قنوات كثيرة"
+      }
+    },
+    "marketing-consulting/audience/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-audience-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-audience-03-640.webp"
+      },
+      "titles": {
+        "en": "In-House Marketing Teams",
+        "ar": "فرق التسويق الداخلية"
+      }
+    },
+    "marketing-consulting/audience/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-audience-04-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-audience-04-640.webp"
+      },
+      "titles": {
+        "en": "Before Hiring an Agency",
+        "ar": "قبل التعاقد مع وكالة"
+      }
+    },
+    "marketing-consulting/audience/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-audience-05-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-audience-05-640.webp"
+      },
+      "titles": {
+        "en": "Entering a New Market",
+        "ar": "أعمال تدخل سوقاً جديداً"
+      }
+    },
+    "marketing-consulting/audience/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-audience-06-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-audience-06-640.webp"
+      },
+      "titles": {
+        "en": "Small Businesses",
+        "ar": "المشاريع الصغيرة"
+      }
+    },
+    "marketing-consulting/outcomes/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-outcomes-01-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-outcomes-01-640.webp"
+      },
+      "titles": {
+        "en": "A Plan That Works for You",
+        "ar": "خطة تعمل لك"
+      }
+    },
+    "marketing-consulting/outcomes/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-outcomes-02-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-outcomes-02-640.webp"
+      },
+      "titles": {
+        "en": "A Clear Direction",
+        "ar": "اتجاه واضح"
+      }
+    },
+    "marketing-consulting/outcomes/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-outcomes-03-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-outcomes-03-640.webp"
+      },
+      "titles": {
+        "en": "Smarter Spending",
+        "ar": "إنفاق أذكى"
+      }
+    },
+    "marketing-consulting/outcomes/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-outcomes-04-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-outcomes-04-640.webp"
+      },
+      "titles": {
+        "en": "One Team, One Plan",
+        "ar": "فريق على خطة واحدة"
+      }
+    },
+    "marketing-consulting/outcomes/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-outcomes-05-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-outcomes-05-640.webp"
+      },
+      "titles": {
+        "en": "Stronger Credibility With Your Customers",
+        "ar": "تعزيز المصداقية لعملائك"
+      }
+    },
+    "marketing-consulting/outcomes/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-outcomes-06-640.webp",
+        "ar": "/assets/images/service-studio/owner-illustrations-2026-10/marketing-consulting-outcomes-06-640.webp"
+      },
+      "titles": {
+        "en": "Measurable Progress",
+        "ar": "تقدم قابل للقياس"
+      }
+    }
+  }
+}

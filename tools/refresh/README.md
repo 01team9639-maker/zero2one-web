@@ -1,5 +1,53 @@
 # Local page review — 8 October 2026
 
+## Service source update — 17 October 2026 (local only)
+
+The owner requested the existing service pages be reconciled with the current
+documents linked from `Main Pages - Zero2One.xlsx`, explicitly excluding Email
+Marketing and CRO. The owner chose the **primary Arabic documents**, not the
+additional Saudi-dialect variants. No new routes or homepage cards are added.
+
+`content-sources.json` remains the original preserved snapshot. The versioned
+`content-update-2026-10-17.json` records all 16 current service documents, their
+source URLs and export hashes. `service_content_update.py` overlays them for the
+builder without rewriting the original source. Raw HTML exports and the
+independent pre-update preservation snapshot are retained under ignored
+`tools/reports/site-refresh/content-update-2026-10-17/`.
+
+The changes include the new ecommerce documents, updated website service types
+and technology section, eight-stage social media copy and influencer management,
+and the latest primary Arabic copy for identity, advertising, Google Ads and app
+development. The general FAQ pages follow the same updated source answers.
+Metadata follows each current document, not the workbook's `Old Title` column.
+The service catalogue uses the current Google Ads hero/consultation label. The
+homepage, existing SEO body/packages/team comment, navigation/footer, portraits,
+profiles, logo marquees, canonical URLs, language links and tracking settings
+remain unchanged apart from deterministic asset stamps.
+
+Only source formatting is normalized: document comments are kept out of public
+copy, incorrectly styled description paragraphs are not treated as extra cards,
+and the source's technology labels use a responsive chip grid. Brand photographs
+follow the meaning of each outcome after the Arabic source reorders them.
+Owner-removed brand packages/team/clients remain removed. No package prices,
+unconfirmed ecommerce metrics, technical decisions, or missing project examples
+are fabricated. These unresolved source items remain in `pending.json`.
+
+Verification commands for this update:
+
+```sh
+python3 tools/build_site_refresh.py --check
+python3 tools/test_service_content_update.py
+python3 tools/test_refresh_copy.py
+node tools/test_service_content_update_browser.js
+node tools/test_service_studio_interactions.js
+```
+
+The old `test_service_studio.js` exact-copy baseline intentionally describes the
+pre-update wording. Do not overwrite it or present a new capture as proof that
+authorized content changes did not occur. The new preservation/coverage test
+instead checks the latest independent owner-source text and unchanged scope.
+Nothing in this update authorizes publication.
+
 Owner homepage revision, 8 October: restored the original three counters and
 round consultation CTA, About layout, orange services design (nine cards),
 split-column work slider and original footer. Approved source wording is retained.
@@ -392,6 +440,108 @@ original local review checkout/archive remains available and unchanged.
    indexing, and received GA4/Ads conversions were not tested by this task.
 9. Blog generated files and its repository were not changed. Shared asset hash
    synchronization needs a separately approved blog release later.
+
+### Common service studio — 2026-10-15 (local review only)
+
+The owner requested the SEO presentation style across the other services, with
+temporary artwork wherever final images are missing. The eight bilingual detail
+routes and bilingual service catalogue now share the orange/cream/ivory palette,
+split hero, responsive image frame, approved CTA arrow, image-first cards, compact
+swipe rails, native compact disclosures, orange process timeline, section waves,
+and the connected scroll-only ribbon. Existing SEO markup is unchanged.
+
+`tools/service_studio.py` is a presentation adapter after the existing page
+generator. It preserves each route's original H1 wording, source copy, metadata,
+schema, destinations, team membership/portraits and client logos. Existing brand
+outcome photographs remain. Sparse package sections keep their original
+consultation prompt; no prices, packages, people or claims are invented. Team
+biographies use the full mobile card width below the portrait/name row.
+
+`assets/css/service-studio.css` is included last in the shared bundle and scoped
+to `.rf-service-studio`. The SEO entrance/ribbon controllers are reused with
+service-specific once-only reveal keys and normal Barba cleanup. No pointer
+response or idle animation loop is added. Without scripts all copy and native
+rails remain available; reduced motion skips entrances and shows a static line.
+
+Temporary SVG art is generated from the already-vetted free local Iconly geometry
+by `python3 tools/prepare_service_studio_art.py`. No original user image is
+modified. `tools/refresh/service-studio-image-slots.json` maps every placeholder
+to its service, section, card and original bilingual title, for later replacement.
+Matching existing service photos are reused in heroes and the catalogue.
+
+Local QA (external measurement/contact traffic isolated):
+
+- `node tools/test_service_studio.js --copy` compares the independent pre-change
+  snapshot, including all other HTML ignoring asset stamps. Do not recapture the
+  baseline to accept a redesign or hide a content change.
+- `node tools/test_service_studio.js` checks all 18 pages at 320, 440, 834 and
+  1440 pixels, including image loading, horizontal controls and page overflow.
+- `node tools/test_service_studio_interactions.js` checks real touch gestures,
+  single-open keyboard disclosures, image/text placement, heading effects,
+  connected geometry, pointer independence, mobile CTA alignment, readable team
+  cards, script-free/reduced-motion fallbacks and cross-page Barba navigation.
+- `node tools/test_service_studio_interactions.js --seo` reuses the independent
+  SEO content/metadata/FAQ/schema fingerprints and original flow/fallback tests.
+  The historical SEO-only route-scope assertion is intentionally not rerun:
+  the new service suite enforces the newly authorized exact 18-page scope instead.
+- `python3 tools/test_refresh_copy.py`,
+  `python3 tools/prepare_service_studio_art.py --check`,
+  `python3 tools/build_site_refresh.py --check`, and `git diff --check` verify
+  source coverage, deterministic artwork/generation and whitespace.
+
+Preview with `node tools/preview_site.js 8766`. This also maps generated blog
+asset URLs locally without editing the separately owned blog output. No push,
+deployment or blog publication belongs to this local review. Real iOS/Android
+device testing is not claimed.
+
+### Replacement SEO packages — 2026-10-16 (local review only)
+
+The owner supplied `جدول_مقارنة_باقات_SEO_صفحة_واحدة_1.pdf` as the new package
+content. Its one-page table was rendered and visually checked in full. The
+source ledger is `tools/page-copy/seo-packages-2026-10.json`, including its SHA-256,
+three plan names/audiences and all 25 service rows. English is a faithful
+translation of the Arabic table, not additional scope. In particular, the content
+plan cadence is monthly / quarterly / semiannual, and Schema is Enterprise-only.
+
+`tools/seo_packages.py` replaces only the existing package cards and the Service
+JSON-LD offer entries, after the older presentation adapters. It takes precedence
+over the archived October 7 four-plan copy. Standard, Professional and Enterprise
+were initially permanently open in a native RTL/LTR swipe rail, with the approved
+WhatsApp destination and action arrow. Included and excluded rows are explicitly
+available as text for assistive technology. The PDF supplies no prices or
+commercial terms: legacy structured-data prices and the old monthly/no-contract/
+VAT note are removed rather than silently attached to the replacement offers.
+No other sections, metadata or shared footer content are reauthored.
+
+`node tools/test_seo_packages.js` verifies all 75 service values, all three
+audiences, the new structured offers, no stale prices, unchanged non-package
+HTML, native controls/touch gestures, connected ribbon geometry, script-free and
+reduced-motion readability. It uses a separately captured pre-edit scope snapshot
+under ignored `tools/reports/site-refresh/seo-packages-before-2026-10-16.json`;
+do not recapture it to accept changes. Older SEO/service snapshots remain intact
+as historical evidence; their former four-plan or unchanged-SEO assertions are
+superseded only by this explicitly approved package scope, not reset wholesale.
+Cross-service/SEO navigation is checked separately with
+`node tools/test_service_studio_interactions.js --lifecycle`.
+
+No deployment or blog synchronization is performed by this local edit.
+
+Owner follow-up (same day): package cards now use independent native
+`details/summary` at every size, initially closed, with the existing chevron and
+an always-visible WhatsApp request button outside each disclosure. All 75 values
+are retained. The compact rail follows the height of visible cards, avoiding a
+large blank area after swiping away from an open card. Space/Enter use native
+activation, with Space isolated from the smooth-scroll shortcut. Teardown and
+reduced-motion behavior use the existing editorial controller.
+
+The SEO team section is retained verbatim between its existing source markers,
+inside `<!-- SEO TEAM DISABLED:2026-10-16 ... -->`, not deleted or rendered as a
+hidden live section. The generator reapplies this once without nested comments.
+The scope test unwraps only that exact comment before comparing its original
+fingerprint, so profile content stays protected. Browser checks require no live
+SEO team cards, visible chevrons and open/close behavior at all four widths,
+full content availability after opening, unchanged CTA destinations, native touch
+swiping and no-script/reduced-motion disclosure operation.
 
 ## Publication gate — important for page-by-page approval
 

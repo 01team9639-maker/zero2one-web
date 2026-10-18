@@ -1,0 +1,1093 @@
+{
+  "note": "Owner-supplied website service illustrations. Full-frame responsive WebP; original colors and lossless alpha retained. Originals remain read-only in Downloads.",
+  "entries": [
+    {
+      "kind": "benefits",
+      "number": 1,
+      "source": "owner-supplied/website_design_34_illustrations/01_لماذا_تحتاج_موقعا_احترافيا/01_fast_loading.png",
+      "sourceSha256": "15c9964f42186821d9bbd8f31065f79cd301a6416d2255e5afd1b11dd8e065ed",
+      "width": 1254,
+      "height": 1254,
+      "sourceBytes": 783690,
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/benefits-01_fast_loading-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 18706,
+          "sha256": "c3f828552b2f693070223f594869085bcfd60647f682385a18ab5866f00046be"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/benefits-01_fast_loading-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 43270,
+          "sha256": "3618b4a16142cac31d05951a0531a8286269264bbf9d944d37290d11d3b2d559"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/benefits-01_fast_loading-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 73162,
+          "sha256": "5eea0925d19ccb1d7a0039ba79feb415b7db36a7b4f263d00f570d67e94ff199"
+        }
+      ]
+    },
+    {
+      "kind": "benefits",
+      "number": 2,
+      "source": "owner-supplied/website_design_34_illustrations/01_لماذا_تحتاج_موقعا_احترافيا/02_mobile_first_design.png",
+      "sourceSha256": "2ea2f8e53bf2ab3ce12882182d12154687528b0bbd6d94af0286ee1ede227361",
+      "width": 1254,
+      "height": 1254,
+      "sourceBytes": 844351,
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/benefits-02_mobile_first_design-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 19824,
+          "sha256": "02732a07ecf6be8e0186a28c2198daf3df74c0210c8fb586f287b124a186fbfa"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/benefits-02_mobile_first_design-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 45950,
+          "sha256": "f0a9ea563afe8eecf1fe11827f61bf86e3194e74b6326419443b95f42b10e23f"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/benefits-02_mobile_first_design-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 76692,
+          "sha256": "0fee137273daeaa0d45f8943cdd178574bd624a4a6565394aa44e76f8a1a859a"
+        }
+      ]
+    },
+    {
+      "kind": "benefits",
+      "number": 3,
+      "source": "owner-supplied/website_design_34_illustrations/01_لماذا_تحتاج_موقعا_احترافيا/03_seo_ai_ready.png",
+      "sourceSha256": "a089ee8a79138c0a89bf5d0914d1846b928413789b5a7914533fdd372489c8fa",
+      "width": 1254,
+      "height": 1254,
+      "sourceBytes": 797910,
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/benefits-03_seo_ai_ready-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 21354,
+          "sha256": "0608769965520a4d3bdd37125d8cff9624818a1cd8c61a8e4a7886b4d152ed4b"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/benefits-03_seo_ai_ready-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 51038,
+          "sha256": "cc0d7c0d756bc008409980612ba9e745a199bd0ef8f48a69c98668b2c22df1a2"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/benefits-03_seo_ai_ready-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 89240,
+          "sha256": "d8b9ed6ff80d48e74f9b80af0bdab90252da8442cc4dfdad431255017366be2f"
+        }
+      ]
+    },
+    {
+      "kind": "know",
+      "number": 1,
+      "source": "owner-supplied/website_design_34_illustrations/02_لماذا_أنت_هنا/01_no_website_lost_customers.png",
+      "sourceSha256": "f2ef5b33bb9c62bfb6e5a4513386c47e76b8a6ada5e6d2ee87e779e13e8c26ef",
+      "width": 1254,
+      "height": 1254,
+      "sourceBytes": 655697,
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/know-01_no_website_lost_customers-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 21618,
+          "sha256": "b384581397e5116669c4fd17ef2c08670fd7d40d4e41b577510b7c0b81f935a6"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/know-01_no_website_lost_customers-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 53106,
+          "sha256": "a199141339324fdf8791e9db5979bf3089d049be58d504408b64cab793f3544d"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/know-01_no_website_lost_customers-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 93086,
+          "sha256": "3288092bbfec82d4584638823cd1eb6486c0368a5de462cefdea5d5c75fcc0cd"
+        }
+      ]
+    },
+    {
+      "kind": "know",
+      "number": 2,
+      "source": "owner-supplied/website_design_34_illustrations/02_لماذا_أنت_هنا/02_outdated_website.png",
+      "sourceSha256": "79c1c285cb469c3a437a9c9736ebb6fd887272ab9344a8c7306e0c05b0b2e051",
+      "width": 1254,
+      "height": 1254,
+      "sourceBytes": 945134,
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/know-02_outdated_website-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 23598,
+          "sha256": "7086ba9fe66cf1c997958e6888d381e88b73faabc852fa8ab5a38708f8892e6d"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/know-02_outdated_website-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 55736,
+          "sha256": "43c6fa918a21c2e2465c3fc882f5e0b4832113c9020bcf13b296dd706d4aaf3d"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/know-02_outdated_website-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 95812,
+          "sha256": "98727fc6af1a7f24c8f7bec654560a25b24eaa5a1cd73abcde66f90bc17f4221"
+        }
+      ]
+    },
+    {
+      "kind": "know",
+      "number": 3,
+      "source": "owner-supplied/website_design_34_illustrations/02_لماذا_أنت_هنا/03_slow_loading_visitors_leave.png",
+      "sourceSha256": "7e0fd7d6d9a14d8ac45c9056d305d5bd982afae07f39bb7e5d68e98fcda57f72",
+      "width": 1254,
+      "height": 1254,
+      "sourceBytes": 816932,
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/know-03_slow_loading_visitors_leave-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 21578,
+          "sha256": "9de73ef27388232509a6ef20c65299963b4d7ebbe1bfc66ba92d2ebf1d386125"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/know-03_slow_loading_visitors_leave-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 51954,
+          "sha256": "69dce853d540af0b7789b4d28f323cdc31aaf02016fbf51637ca5add816b5ddd"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/know-03_slow_loading_visitors_leave-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 89616,
+          "sha256": "170b8e88b39c47a41279de256318c32e5c5b1db634babe23ea90300630ad5d75"
+        }
+      ]
+    },
+    {
+      "kind": "know",
+      "number": 4,
+      "source": "owner-supplied/website_design_34_illustrations/02_لماذا_أنت_هنا/04_poor_mobile_experience.png",
+      "sourceSha256": "c9b8eefaa6881cca3ef55e5bdb255e50b2b4905297775ac8569ac159296bc908",
+      "width": 1254,
+      "height": 1254,
+      "sourceBytes": 946831,
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/know-04_poor_mobile_experience-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 23868,
+          "sha256": "8550a0a5e7739ead8c36e27b137d2c252eb5751ce42b1b9cc1e27ab645a93758"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/know-04_poor_mobile_experience-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 56332,
+          "sha256": "e178bc7bc58abcc2f53a59640a35cd90972bb3a5810e9007a549fa6b23cf1287"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/know-04_poor_mobile_experience-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 96864,
+          "sha256": "563a0c48675a236225fc5a6002cfdf42e44267d9936f0013d30c2a3d768d469e"
+        }
+      ]
+    },
+    {
+      "kind": "know",
+      "number": 5,
+      "source": "owner-supplied/website_design_34_illustrations/02_لماذا_أنت_هنا/05_visits_without_conversions.png",
+      "sourceSha256": "69a2ed1577649024f16f6b815b3a513359a901ff8f6b183ab759b0fcca5bdc9c",
+      "width": 1254,
+      "height": 1254,
+      "sourceBytes": 788037,
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/know-05_visits_without_conversions-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 26270,
+          "sha256": "e166f13bc8b9f0021b9f71716a623a723200a021146559b2ebd4f52bb5656689"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/know-05_visits_without_conversions-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 62238,
+          "sha256": "d7a22d5b2cd343f61ed0560ff6c3a614d6a4083609a194336201c8e9f4c70336"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/know-05_visits_without_conversions-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 108988,
+          "sha256": "5eb653dba9d7a7ec757dbc4bba98cd4cf9e801e1fc6ed01199f96ab43a91a415"
+        }
+      ]
+    },
+    {
+      "kind": "know",
+      "number": 6,
+      "source": "owner-supplied/website_design_34_illustrations/02_لماذا_أنت_هنا/06_edits_need_developer.png",
+      "sourceSha256": "523301672ff2877f6cc5ae6bb08152e8cc1686190144d63aee6ef40f82c09b9a",
+      "width": 1254,
+      "height": 1254,
+      "sourceBytes": 922970,
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/know-06_edits_need_developer-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 23956,
+          "sha256": "c01c53a28a9d4c42b0d03edd743f073005a0e493c42d38d4fbfc486bb5ad3a67"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/know-06_edits_need_developer-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 56924,
+          "sha256": "321c8915747e6f9a96112f289a64731e18319be1a4e02af5dd85de6405e781c8"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/know-06_edits_need_developer-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 96894,
+          "sha256": "b6c004a3b7b2fb70ace88385b9d7d2ddcd15d3b335b668550f1cad672583f66c"
+        }
+      ]
+    },
+    {
+      "kind": "know",
+      "number": 7,
+      "source": "owner-supplied/website_design_34_illustrations/02_لماذا_أنت_هنا/07_invisible_search_ai_competitors.png",
+      "sourceSha256": "145cdcc105a45671d61b178e3c35c829cff67e835556d0362f07ad7bd0971249",
+      "width": 1254,
+      "height": 1254,
+      "sourceBytes": 936746,
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/know-07_invisible_search_ai_competitors-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 27912,
+          "sha256": "06dd9aa7d40312af4bc2bb5818cc1489fb0e6963dc5264fe985ddcda577f1d33"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/know-07_invisible_search_ai_competitors-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 65802,
+          "sha256": "97a8664fd5505c727b734fb0e5a431b79880a0a5813d7ec547147bfba17e82d9"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/know-07_invisible_search_ai_competitors-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 115792,
+          "sha256": "165814a8d5f9d33606a27d7b2ff8fd0f8a11e44a03b5f626fede72b8990b640a"
+        }
+      ]
+    },
+    {
+      "kind": "deliverables",
+      "number": 1,
+      "source": "owner-supplied/website_design_34_illustrations/03_كل_ما_يحتاجه_موقعك_في_مكان_واحد/01_business_website.png",
+      "sourceSha256": "49813ea4223ede0e2314dd77f4c0d9f3bcaf807b2ce4286530f6c1e63b8486de",
+      "width": 1254,
+      "height": 1254,
+      "sourceBytes": 806230,
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/deliverables-01_business_website-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 19868,
+          "sha256": "5945e337cd8185b78c49198b291fdb95b174ba0716d3a3336a75fe247628c496"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/deliverables-01_business_website-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 45812,
+          "sha256": "fb39af8e3267a55ba3361fd8d463dc3369a7247410adc43fa2a2671d5321f6cc"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/deliverables-01_business_website-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 77410,
+          "sha256": "8c20543717f33f6c79b4f16c78839b24641809cbb6bb3a9cbc0382e9a0f62f41"
+        }
+      ]
+    },
+    {
+      "kind": "deliverables",
+      "number": 2,
+      "source": "owner-supplied/website_design_34_illustrations/03_كل_ما_يحتاجه_موقعك_في_مكان_واحد/02_ui_ux_design.png",
+      "sourceSha256": "ae6a313578b87cff050f2052b54c330624fc7e7d5c21f58ff6447ff0ff210f70",
+      "width": 1254,
+      "height": 1254,
+      "sourceBytes": 903670,
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/deliverables-02_ui_ux_design-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 23474,
+          "sha256": "3f902b9dc1b8b83f9619402ee30e8179882fd8d1eb7e74f7fa48e2849ef134eb"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/deliverables-02_ui_ux_design-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 55284,
+          "sha256": "9387a47f1fc588bdeb3e0582147ecb09f4a39fa6d625d86970629a782c8a1b64"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/deliverables-02_ui_ux_design-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 94630,
+          "sha256": "d42808fb4f93ace78f551edc49f08e7c93e4fbc5c48276b98256204deb278b47"
+        }
+      ]
+    },
+    {
+      "kind": "deliverables",
+      "number": 3,
+      "source": "owner-supplied/website_design_34_illustrations/03_كل_ما_يحتاجه_موقعك_في_مكان_واحد/03_responsive_all_devices.png",
+      "sourceSha256": "f5f7a68027777321a63313ed4e3eec02838352291255a04b19c452bb1645b8dd",
+      "width": 1254,
+      "height": 1254,
+      "sourceBytes": 913838,
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/deliverables-03_responsive_all_devices-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 24372,
+          "sha256": "4828dc66edb4294176bcb7d5094ec36e116042c8c7d5a43157162ba1b87be467"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/deliverables-03_responsive_all_devices-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 57168,
+          "sha256": "38a6e7218892eb4a1c1b52a085a5e948e33c3a024b7b2276c584f8df100b5532"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/deliverables-03_responsive_all_devices-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 97130,
+          "sha256": "f9968bceb05e45e7a855f27e30658fb1c73b14f93e130e1b07a65e6742bca5b0"
+        }
+      ]
+    },
+    {
+      "kind": "deliverables",
+      "number": 4,
+      "source": "owner-supplied/website_design_34_illustrations/03_كل_ما_يحتاجه_موقعك_في_مكان_واحد/04_web_development.png",
+      "sourceSha256": "1283aa91ffe8a78c25901e260d81322d26725dc31783fb485b3191fdc0923996",
+      "width": 1254,
+      "height": 1254,
+      "sourceBytes": 768072,
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/deliverables-04_web_development-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 21934,
+          "sha256": "f98dc0fdf849b8c724895e9a8414f1cfc630ab25674d742292ceea71f18c1eef"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/deliverables-04_web_development-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 50404,
+          "sha256": "0fe460db9aa48cb83c42a7f3b47ee465179fae344957059f2563c02bbcb32c9e"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/deliverables-04_web_development-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 86982,
+          "sha256": "588a6e7d108de4024fcf019360774d953f90c703aba77c51c11a401d9ba084a9"
+        }
+      ]
+    },
+    {
+      "kind": "deliverables",
+      "number": 5,
+      "source": "owner-supplied/website_design_34_illustrations/03_كل_ما_يحتاجه_موقعك_في_مكان_واحد/05_seo_ai_optimization.png",
+      "sourceSha256": "60873f15c2c683f35406ef042be69574bcfc7f2f257725ed0a037148d1b1b358",
+      "width": 1254,
+      "height": 1254,
+      "sourceBytes": 933764,
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/deliverables-05_seo_ai_optimization-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 24782,
+          "sha256": "85482ebd5199ef04f3ab86b36cfc8a7e3e5079219e485701c2c90da07f557e82"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/deliverables-05_seo_ai_optimization-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 59406,
+          "sha256": "c444fffe23d980cc480f1f588af3a1e13b841063aec6350837bd1c45e183fc97"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/deliverables-05_seo_ai_optimization-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 102826,
+          "sha256": "81347fd3c631885453f4481cc70d8dcf82f7ff4208b5f030fdac5c85c5f350ef"
+        }
+      ]
+    },
+    {
+      "kind": "deliverables",
+      "number": 6,
+      "source": "owner-supplied/website_design_34_illustrations/03_كل_ما_يحتاجه_موقعك_في_مكان_واحد/06_high_performance.png",
+      "sourceSha256": "ec1aa72a113516c8be45d8886648a521382c71ff5f0e9276442d1136761d7828",
+      "width": 1254,
+      "height": 1254,
+      "sourceBytes": 950754,
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/deliverables-06_high_performance-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 23538,
+          "sha256": "06659a7fd464729952418f5f256a67514042a238e86b2a5b12f4b0031e902315"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/deliverables-06_high_performance-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 55846,
+          "sha256": "41065e49ebaadea67aeca78500b2ae7644bc6a801cf17191914ebf39c4dcb5df"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/deliverables-06_high_performance-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 95512,
+          "sha256": "4215a0721e061dcb803a8775ee81ffe3d52db7973160028746dc1ec56f3969b9"
+        }
+      ]
+    },
+    {
+      "kind": "deliverables",
+      "number": 7,
+      "source": "owner-supplied/website_design_34_illustrations/03_كل_ما_يحتاجه_موقعك_في_مكان_واحد/07_crm_full_handover.png",
+      "sourceSha256": "b92f5c52b85298d28e67442f5d3f48a444c816795cd965a1d155a8934f09464f",
+      "width": 1254,
+      "height": 1254,
+      "sourceBytes": 878509,
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/deliverables-07_crm_full_handover-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 21680,
+          "sha256": "13f0ca449d2f863ba4e854b7a08e0234839eccbdb2793a17b71f81a9f8b37e2f"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/deliverables-07_crm_full_handover-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 50946,
+          "sha256": "771c7c2819340bafa9e9fd811fe67a5d763904a61d039725a4718a9200f95096"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/deliverables-07_crm_full_handover-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 87820,
+          "sha256": "1f8813cc0869f925c04c61b40c013f9d51d44270137ca74a2a87cfee0f86d499"
+        }
+      ]
+    },
+    {
+      "kind": "deliverables",
+      "number": 8,
+      "source": "owner-supplied/website_design_34_illustrations/03_كل_ما_يحتاجه_موقعك_في_مكان_واحد/08_arabic_english_support.png",
+      "sourceSha256": "cfa7a4cac027c4a68c20570f8e9950302345d88a7b18c119207269db7a8c6227",
+      "width": 1254,
+      "height": 1254,
+      "sourceBytes": 779690,
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/deliverables-08_arabic_english_support-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 21756,
+          "sha256": "b8f5366bfef4a1712564f08b13a0453c077f7158c270009037723aa328f248ce"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/deliverables-08_arabic_english_support-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 51452,
+          "sha256": "3381f3961f381f13e77965b9a5dcb8661f3074bb2c4effb62345147c14c9e7c3"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/deliverables-08_arabic_english_support-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 89716,
+          "sha256": "50f0509195e8bce23b7bb55f6e5f4b184ee82284080ad7791e57109bb6a06d58"
+        }
+      ]
+    },
+    {
+      "kind": "deliverables",
+      "number": 9,
+      "source": "owner-supplied/website_design_34_illustrations/03_كل_ما_يحتاجه_موقعك_في_مكان_واحد/09_post_launch_support.png",
+      "sourceSha256": "154d2a8cd044bd84acdbb85512f68743a862e7ae06a989c4a356d4bf8795eb27",
+      "width": 1254,
+      "height": 1254,
+      "sourceBytes": 819580,
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/deliverables-09_post_launch_support-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 23468,
+          "sha256": "104a28df4d2b5d42c681ba6cdafd8787e26ffe7b016191eb850b17d14e57cd05"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/deliverables-09_post_launch_support-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 55144,
+          "sha256": "e63fe19774cae7c0f30f2665185b1c8d6365edac8bcd77150302da7fe900dad3"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/deliverables-09_post_launch_support-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 94632,
+          "sha256": "ca3622f3fa23af0b5752e75ea93340617c7147396a1a7fbd1b67dfb9ee5b89df"
+        }
+      ]
+    },
+    {
+      "kind": "types",
+      "number": 1,
+      "source": "owner-supplied/website_design_34_illustrations/04_خدمات_تصميم_المواقع_الإلكترونية/01_websites_and_blogs.png",
+      "sourceSha256": "f9ff0a988c967c24c56d33d9047ae107b989d67e7564c7d6cb19ba5ead6a4083",
+      "width": 1254,
+      "height": 1254,
+      "sourceBytes": 949906,
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/types-01_websites_and_blogs-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 25378,
+          "sha256": "74df668077ab194e28a082485073f3bce07dab1ab744845595ac7ebdb8e7d980"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/types-01_websites_and_blogs-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 60846,
+          "sha256": "58bf5ec6cbfe873000b795de511fdd57e502ff73e117c52556a549a38d58715b"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/types-01_websites_and_blogs-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 103506,
+          "sha256": "ec7b8e8822f2b4a0507c61e3304fb5ebe9a2f8d722c1030b1701d253dfbfda65"
+        }
+      ]
+    },
+    {
+      "kind": "types",
+      "number": 2,
+      "source": "owner-supplied/website_design_34_illustrations/04_خدمات_تصميم_المواقع_الإلكترونية/02_ecommerce_store_design.png",
+      "sourceSha256": "0cb45e5b6fa007a41a7a6002b206a71f8e0b31af6c6c7c8abd7896533352403b",
+      "width": 1254,
+      "height": 1254,
+      "sourceBytes": 854523,
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/types-02_ecommerce_store_design-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 20910,
+          "sha256": "e7b9a725ce7dde8d2d69fea3ac05e79a42b5c97a96a4023c4a964a7c52657753"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/types-02_ecommerce_store_design-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 49666,
+          "sha256": "045aefecf212fd658f3d9659f85a7ee75bef117ad570f364ab218ce7409589a5"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/types-02_ecommerce_store_design-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 85558,
+          "sha256": "0ae03561d1b0ac0aeff7efc6ad175b496f4772feb75301e9e367d1f5b7e9f662"
+        }
+      ]
+    },
+    {
+      "kind": "types",
+      "number": 3,
+      "source": "owner-supplied/website_design_34_illustrations/04_خدمات_تصميم_المواقع_الإلكترونية/03_corporate_websites.png",
+      "sourceSha256": "27f2a2b4e01fec5f7136856453fa35ff9aaa8a0c2cee98766a256a5876e06308",
+      "width": 1254,
+      "height": 1254,
+      "sourceBytes": 974558,
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/types-03_corporate_websites-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 25810,
+          "sha256": "fe1de8f4f4787c05bcc5a3447e221a4eb7e603065f7e7d99416065884196eec6"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/types-03_corporate_websites-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 61386,
+          "sha256": "872cb17f036478aa73ca7470432c208bb4a22f4912e2dc660dcf47033bbffec7"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/types-03_corporate_websites-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 104220,
+          "sha256": "6a5120610a925dd1bef8fedc80ac47129134ab5fda933acfe8642f3e654bc559"
+        }
+      ]
+    },
+    {
+      "kind": "types",
+      "number": 4,
+      "source": "owner-supplied/website_design_34_illustrations/04_خدمات_تصميم_المواقع_الإلكترونية/04_campaign_landing_pages.png",
+      "sourceSha256": "d43a5d294e95d44943ecfcbaa49a09c03f8cc75bb5734042d3a1bd351da0ae36",
+      "width": 1254,
+      "height": 1254,
+      "sourceBytes": 838200,
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/types-04_campaign_landing_pages-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 22960,
+          "sha256": "f8def5a92e68d23b03dada6ca593a159c13b626e264b2b1da0192b6ee1f01091"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/types-04_campaign_landing_pages-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 53776,
+          "sha256": "666fa2a3a5d46645ad90e203a78b57590a208b96d0880b91cbfd499e2e7762f2"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/types-04_campaign_landing_pages-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 91882,
+          "sha256": "ebcfe24199b1d8b0393207d160a23a2aa1b32eb66afb932851007aa0862ba8e8"
+        }
+      ]
+    },
+    {
+      "kind": "why",
+      "number": 1,
+      "source": "owner-supplied/website_design_34_illustrations/05_ليش_تختار_من_الصفر_إلى_الواحد/01_technical_expertise.png",
+      "sourceSha256": "8fd8e0ea8573f42457e68f204e8b9e2ad04a810213a30b64d97fb995bd4e874d",
+      "width": 1254,
+      "height": 1254,
+      "sourceBytes": 821973,
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/why-01_technical_expertise-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 25006,
+          "sha256": "e5fb5030f030e998aaef88322c11c392f5f9aea3954e3b4b4b392338dd08bc08"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/why-01_technical_expertise-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 58674,
+          "sha256": "e95a00eb02421f4ee725a3ababd8745e8eaa5082f41a1e0da9e293b6cfa3feee"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/why-01_technical_expertise-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 102904,
+          "sha256": "7f830760322e6700fe9891ac244c8ef24c202dfe40d0608ac6562625f7863276"
+        }
+      ]
+    },
+    {
+      "kind": "why",
+      "number": 2,
+      "source": "owner-supplied/website_design_34_illustrations/05_ليش_تختار_من_الصفر_إلى_الواحد/02_ongoing_support_maintenance.png",
+      "sourceSha256": "3a23e56ca7e92a9a1b117922164d3a507b7ad1f0b593902f3cec4709974e1ce9",
+      "width": 1254,
+      "height": 1254,
+      "sourceBytes": 799007,
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/why-02_ongoing_support_maintenance-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 21358,
+          "sha256": "f7cdcac810760b2b370e92ae6e9757e5cdcb4aac23ec6a3671b0f5680b4cd958"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/why-02_ongoing_support_maintenance-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 50000,
+          "sha256": "beaf95e0c0a4cd0df5db28332a1992be7c2113e8e84f19e808b3a3df05d1b192"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/why-02_ongoing_support_maintenance-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 86968,
+          "sha256": "de10d8d1ba43b82f9bec72eb5bccc1bc3b4e8a7ebc10eac1f12d9505fc89d0af"
+        }
+      ]
+    },
+    {
+      "kind": "why",
+      "number": 3,
+      "source": "owner-supplied/website_design_34_illustrations/05_ليش_تختار_من_الصفر_إلى_الواحد/03_future_scalability.png",
+      "sourceSha256": "1fda79aa33e0fe500d90bd268301ed9778f8ca0d5bd1c7c86b4d1f7ccfc45f3c",
+      "width": 1254,
+      "height": 1254,
+      "sourceBytes": 772545,
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/why-03_future_scalability-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 25696,
+          "sha256": "4153c1ead390ed1a8ab7dd5c76aee97dcf2ab16dc840b5c85763f9477d8da55c"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/why-03_future_scalability-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 60116,
+          "sha256": "b84497f63ca220b22cc2e0b31f10e1acfbd3c2da18f627cfc8e05a7c58df715f"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/why-03_future_scalability-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 104954,
+          "sha256": "17c063c7dd876bcc16f85421d05790d160433a95b2192854e4c050e6c8096dda"
+        }
+      ]
+    },
+    {
+      "kind": "why",
+      "number": 4,
+      "source": "owner-supplied/website_design_34_illustrations/05_ليش_تختار_من_الصفر_إلى_الواحد/04_custom_business_design.png",
+      "sourceSha256": "0e71c2b7bc1b28830d466e14da7ad15b9a3fd751e180f958dfaf898a382528be",
+      "width": 1254,
+      "height": 1254,
+      "sourceBytes": 888432,
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/why-04_custom_business_design-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 21712,
+          "sha256": "bf589a2153ac1f7089afb3e354fda90be541f0203c1650eeb6086fa5e16b36f8"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/why-04_custom_business_design-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 49778,
+          "sha256": "54dc037c5295174a18f3e91a65c5205df919e3abafddc171341bbef7647eb2d6"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/why-04_custom_business_design-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 85452,
+          "sha256": "6a8c74a129234154cd2e2b56c83dbe3b9cf456e34885605f8c635db4b1c39aa5"
+        }
+      ]
+    },
+    {
+      "kind": "why",
+      "number": 5,
+      "source": "owner-supplied/website_design_34_illustrations/05_ليش_تختار_من_الصفر_إلى_الواحد/05_search_engine_optimization.png",
+      "sourceSha256": "e1dfa1f687b7940c34ff81df20ad3c5dc8090469493b7773fa7376259b19ab70",
+      "width": 1254,
+      "height": 1254,
+      "sourceBytes": 824027,
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/why-05_search_engine_optimization-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 22764,
+          "sha256": "87e391b901c3e3e9650a354bfa9554d56dc72d4dd754c58f4d059aefb2616c3a"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/why-05_search_engine_optimization-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 53992,
+          "sha256": "e538368ebf14260dfd993f4e87f081fe7ab0c5e2ad5d88b1b8d3cef8f6f4614a"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/why-05_search_engine_optimization-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 92820,
+          "sha256": "7e3f2fb7974330fb8eb75cf513280de52a427f08b80f507fc20435a2dd740b56"
+        }
+      ]
+    },
+    {
+      "kind": "why",
+      "number": 6,
+      "source": "owner-supplied/website_design_34_illustrations/05_ليش_تختار_من_الصفر_إلى_الواحد/06_diverse_technical_solutions.png",
+      "sourceSha256": "d509170ad6a357ec1ebf8a2158cdffd563909d718809f8676f400189b45a2894",
+      "width": 1254,
+      "height": 1254,
+      "sourceBytes": 813897,
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/why-06_diverse_technical_solutions-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 26486,
+          "sha256": "618b3c1e856636c1400a1632a21eb9a005f1c3cc934b6de2f5034244f0b63970"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/why-06_diverse_technical_solutions-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 63190,
+          "sha256": "6647b29a20dda27265d835556942bb74fbaac05960ef3c57b47de3b90491d6a6"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/why-06_diverse_technical_solutions-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 111066,
+          "sha256": "cd2500ec6c0a0b4954430afbf4e599fb44f8796f5a2c7c66b8799ca0c8753ff5"
+        }
+      ]
+    },
+    {
+      "kind": "audience",
+      "number": 1,
+      "source": "owner-supplied/website_design_34_illustrations/06_هل_تناسبك_خدماتنا/01_service_websites.png",
+      "sourceSha256": "92ff5b1f03b83eedc15010918ee7cbead1eece9d829227f4712ef27276989837",
+      "width": 1254,
+      "height": 1254,
+      "sourceBytes": 798330,
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/audience-01_service_websites-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 20996,
+          "sha256": "eba2ebd35063c06b8187fc8a38348d990ede9b8cab59fccbc3b2791404266c86"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/audience-01_service_websites-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 49256,
+          "sha256": "d8c063c82f951abb3150732a218779ac246b59a04ae21685e73f3dca126ea73c"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/audience-01_service_websites-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 85726,
+          "sha256": "f5466aa86dd1f61311b698ac213408a35b9b745c454df0ef4707b34b3b803e6f"
+        }
+      ]
+    },
+    {
+      "kind": "audience",
+      "number": 2,
+      "source": "owner-supplied/website_design_34_illustrations/06_هل_تناسبك_خدماتنا/02_ecommerce_websites.png",
+      "sourceSha256": "af0aa59aa57d71d270f60f3a1508ce62ed6dbfcb9aebb0153a0c3bb72be9773e",
+      "width": 1254,
+      "height": 1254,
+      "sourceBytes": 955293,
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/audience-02_ecommerce_websites-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 22002,
+          "sha256": "de8af363a25d0517835d348f4aaf339743ec56ddfc152bf9c67cdebe78bc7b9b"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/audience-02_ecommerce_websites-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 51420,
+          "sha256": "4ca8199bd8433952e24802ed3fe763354f3eaa73170d2350c169ac4da5ae76f3"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/audience-02_ecommerce_websites-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 86596,
+          "sha256": "d6d9f35c3b7a7f6320b199c700d59cc4e126ba30e9fb066a6280d20083f4f6d9"
+        }
+      ]
+    },
+    {
+      "kind": "audience",
+      "number": 3,
+      "source": "owner-supplied/website_design_34_illustrations/06_هل_تناسبك_خدماتنا/03_company_websites.png",
+      "sourceSha256": "53b5d73a938d27c5d4c680abab84e5b0a5a8ec3157246844d8c91c3b55abeae9",
+      "width": 1254,
+      "height": 1254,
+      "sourceBytes": 939362,
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/audience-03_company_websites-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 24510,
+          "sha256": "b98e21ac49bc1964175e4ed17de6423aa7466443279c694d6a77c6bd7bcad47e"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/audience-03_company_websites-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 57950,
+          "sha256": "e1e21cba29968b7a85b10444ccd1ecfe4469fca60dc9a57b1f56b1bc3b52871b"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/audience-03_company_websites-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 99600,
+          "sha256": "3585e26ef49eeb210b1146c9db477198bd8667722093cbb44c3c7cd5d7f3fc7f"
+        }
+      ]
+    },
+    {
+      "kind": "audience",
+      "number": 4,
+      "source": "owner-supplied/website_design_34_illustrations/06_هل_تناسبك_خدماتنا/04_old_website_redesign.png",
+      "sourceSha256": "fc5860b65aaffb1c1ffc5634034b4968f186eedb0df6ed136f2a9c9d7ef2e5ba",
+      "width": 1254,
+      "height": 1254,
+      "sourceBytes": 737792,
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/audience-04_old_website_redesign-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 24228,
+          "sha256": "5a10b95b654b559e9499e46f1f592bed17559fb38acfe45812af8553023dede9"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/audience-04_old_website_redesign-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 58656,
+          "sha256": "c45e2c8f1e37bfc8d62091d259aae839cab573bed1ab48bc759268e93a7532bf"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/audience-04_old_website_redesign-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 102236,
+          "sha256": "0e615655c08ca7bf14fa2ed0e514c7483fa6bc470a4cfffbf2c5a844a322ca45"
+        }
+      ]
+    },
+    {
+      "kind": "audience",
+      "number": 5,
+      "source": "owner-supplied/website_design_34_illustrations/06_هل_تناسبك_خدماتنا/05_advertising_pages.png",
+      "sourceSha256": "59ae9e104537a98cb8e2d38d39bcce20a4016e80b6de1302d223b65e60bfe98a",
+      "width": 1254,
+      "height": 1254,
+      "sourceBytes": 827016,
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/audience-05_advertising_pages-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 22038,
+          "sha256": "897a38eb2a98650bc10f2bcd7b70ab72fda128503e971a915fc37be7e0fc128f"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/audience-05_advertising_pages-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 52816,
+          "sha256": "f2ac3a2e617677d798da1a883e21bec6428f975c81f0d77b56e917575307d565"
+        },
+        {
+          "url": "/assets/images/service-studio/web-design-2026-10/audience-05_advertising_pages-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 91344,
+          "sha256": "50df8c01d3b0f4a1b18770126c4ee22da222bcbbaea798a089fca0db05de5a15"
+        }
+      ]
+    }
+  ]
+}

@@ -10,15 +10,31 @@ from pathlib import Path
 from build_site_refresh import ROOT, DOCS, SERVICES, clean
 
 class Text(HTMLParser):
+    BLOCKS={'address','article','aside','blockquote','br','dd','details','div',
+            'dl','dt','figcaption','figure','footer','form','h1','h2','h3','h4',
+            'h5','h6','header','hr','li','main','nav','ol','p','section',
+            'summary','table','td','th','tr','ul'}
     def __init__(self):
-        super().__init__(); self.parts=[]; self.skip=0
+        super().__init__(); self.parts=[]; self.skip=0; self.hidden=[]
     def handle_starttag(self, tag, attrs):
-        if tag in ('script','style'): self.skip+=1
+        a=dict(attrs)
+        # Decorative card numbers and vector artwork must not interrupt a
+        # source paragraph split across several visual cards. Never count them
+        # as prose, or use duplicated hidden copy to satisfy completeness.
+        studio_decoration=a.get('aria-hidden')=='true' and any(c.startswith('service-studio-') for c in a.get('class','').split())
+        hidden=tag in ('script','style') or studio_decoration
+        if tag not in ('area','base','br','col','embed','hr','img','input','link','meta','param','source','track','wbr'):
+            self.hidden.append((tag,hidden))
+            if hidden:self.skip+=1
+        if not self.skip and tag in self.BLOCKS: self.parts.append(' ')
         if tag=='meta':
-            a=dict(attrs)
-            if a.get('name')=='description': self.parts.append(a.get('content',''))
+            if a.get('name')=='description': self.parts.extend([' ',a.get('content',''),' '])
     def handle_endtag(self,tag):
-        if tag in ('script','style'): self.skip=max(0,self.skip-1)
+        for i in range(len(self.hidden)-1,-1,-1):
+            if self.hidden[i][0]==tag:
+                self.skip=max(0,self.skip-sum(int(v) for _,v in self.hidden[i:]))
+                self.hidden=self.hidden[:i];break
+        if not self.skip and tag in self.BLOCKS: self.parts.append(' ')
     def handle_data(self,data):
         if not self.skip: self.parts.append(data)
 
@@ -32,7 +48,9 @@ def check():
     results=[]
     for row,route in routes.items():
         p=Text();p.feed((ROOT/(route.strip('/')+'/index.html' if route!='/' else 'index.html')).read_text())
-        page=norm(' '.join(p.parts))
+        # Inline typography can split words and punctuation into spans. Preserve
+        # their literal adjacency; only semantic block boundaries add spaces.
+        page=norm(''.join(p.parts))
         for i,para in enumerate(DOCS[str(row)]['paragraphs']):
             key=f'{row}:{i}';t=clean(para)
             if not t: continue
@@ -45,7 +63,7 @@ def check():
     # The mock ranking labels are explicit review holds, not reported as present.
     for lang,start,end in [('ar',0,131),('en',131,len(DOCS['4']['paragraphs']))]:
         route=('/ar' if lang=='ar' else '')+'/services/seo-riyadh/'
-        p=Text();p.feed((ROOT/route.strip('/')/'index.html').read_text());page=norm(' '.join(p.parts))
+        p=Text();p.feed((ROOT/route.strip('/')/'index.html').read_text());page=norm(''.join(p.parts))
         for i in range(start,end):
             para=DOCS['4']['paragraphs'][i];t=clean(para)
             if not t: continue

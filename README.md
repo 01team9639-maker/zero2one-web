@@ -172,7 +172,16 @@ normalised, and that the Arabic subject and body survive encoding.
 
 ## Running locally
 
-It's fully static — serve the folder with any static server:
+It's fully static. For a full local review, including the blog's shared assets:
+
+```bash
+node tools/preview_site.js 8766
+# then open http://127.0.0.1:8766
+```
+
+This localhost-only server resolves production `/assets/` URLs to this checkout
+in HTML responses. It never changes generated blog files or publishes anything.
+A plain static server also works for the main site:
 
 ```bash
 python3 -m http.server 8000
@@ -181,6 +190,12 @@ python3 -m http.server 8000
 
 Opening `index.html` via `file://` mostly works but a server is recommended
 (barba fetches pages over HTTP).
+
+The responsive footer is shared through `assets/css/footer-layout.css`, included
+in the main CSS bundle. Run `node tools/test_footer_layout.js` to check every
+footer, both languages, compact layouts, keyboard focus and the floating contact
+button. At publication time, sync the blog's asset stamps in its owning Hugo
+repository as documented below; do not patch generated `blog/` output here.
 
 After editing CSS or JavaScript sources, install the exact lockfile versions
 and rebuild the bundles:

@@ -1,0 +1,327 @@
+/* Local brand-identity review follow-up. Existing native waves, magnetic
+   actions, and one-time process reveals remain in charge of their motion. */
+
+/* The corner signature keeps its graduated rings while changing to orange. */
+.rf-brand-owner .brand-owner-pillar::before {
+  transition:background-color .45s ease,border-color .45s ease,box-shadow .45s ease;
+}
+.rf-brand-owner .brand-owner-pillar::after {
+  z-index:1;
+  transition:color .45s ease;
+}
+.rf-brand-owner .brand-owner-pillar>.brand-owner-symbol,
+.rf-brand-owner .brand-owner-pillar>h3 {
+  position:relative;
+  z-index:1;
+}
+
+/* Alternating cream process cards on the adopted orange section. No CSS
+   hidden state: the native reveal enhancement animates each card once. */
+.rf-brand-owner .brand-owner-process {
+  position:relative;
+  isolation:isolate;
+  border:0;
+  background:var(--brand-owner-orange);
+  color:var(--brand-owner-cream);
+  padding:116px 0 120px;
+}
+.rf-brand-owner .brand-owner-process>.rf-inner {
+  position:relative;
+  z-index:1;
+}
+.rf-brand-owner .brand-owner-process .brand-owner-wave {
+  color:var(--brand-owner-cream);
+}
+.rf-brand-owner :is(.brand-owner-process,.brand-owner-outcomes,.brand-owner-investment) .rf-section-heading {
+  align-items:baseline;
+}
+.rf-brand-owner .brand-owner-process :is(h2,.rf-index) {
+  color:var(--brand-owner-cream);
+}
+.rf-brand-owner .brand-owner-process .rf-timeline {
+  max-width:1080px;
+  padding-block:8px;
+}
+.rf-brand-owner .brand-owner-process .rf-timeline::before {
+  width:2px;
+  background:#fffded66;
+  left:50%;
+  inset-inline-start:auto;
+  top:0;
+  bottom:0;
+  transform:translateX(-50%);
+}
+.rf-brand-owner .brand-owner-process .rf-timeline>li {
+  width:calc(50% - 42px);
+  margin:0 0 38px;
+}
+.rf-brand-owner .brand-owner-process .rf-timeline>li:nth-child(even) {
+  margin-inline-start:calc(50% + 42px);
+}
+.rf-brand-owner .brand-owner-process .rf-timeline>li:last-child {
+  margin-bottom:0;
+}
+.rf-brand-owner .brand-owner-process .rf-step-card {
+  min-height:132px;
+  padding:30px 32px;
+  border:1px solid #fffded80;
+  border-radius:22px;
+  background:var(--brand-owner-cream);
+  color:var(--brand-owner-ink);
+  --rf-muted:#4f5048;
+  box-shadow:0 12px 32px #5b1f101a;
+}
+.rf-brand-owner .brand-owner-process .rf-step-card p {
+  color:var(--brand-owner-ink);
+  font-size:17px;
+  line-height:1.85;
+}
+.rf-brand-owner .brand-owner-process .rf-step-no {
+  width:44px;
+  height:44px;
+  top:30px;
+  inset-inline-end:-64px;
+  inset-inline-start:auto;
+  background:var(--brand-owner-ink);
+  color:var(--brand-owner-cream);
+  box-shadow:0 0 0 6px var(--brand-owner-orange);
+  font-size:13px;
+  font-variant-numeric:tabular-nums;
+}
+.rf-brand-owner .brand-owner-process .rf-timeline>li:nth-child(even) .rf-step-no {
+  inset-inline-start:-64px;
+  inset-inline-end:auto;
+}
+
+/* Every supplied composition keeps its complete 1440 × 1024 frame. */
+.rf-brand-owner .brand-owner-outcomes {
+  border:0;
+  padding:78px 0 92px;
+  background:var(--brand-owner-cream);
+  color:var(--brand-owner-ink);
+}
+.rf-brand-owner .brand-owner-outcomes h2 {
+  max-width:27ch;
+}
+.rf-brand-owner .brand-owner-outcomes .rf-card-grid {
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  align-items:stretch;
+  gap:28px 24px;
+}
+.rf-brand-owner .brand-owner-outcome-card {
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  padding:0;
+  overflow:hidden;
+  border:1px solid var(--brand-owner-line);
+  border-radius:22px;
+  background:#fff;
+  color:var(--brand-owner-ink);
+  box-shadow:0 10px 30px #1c1d200c;
+  transition:border-color .35s ease,box-shadow .35s ease,transform .35s ease;
+}
+.rf-brand-owner .brand-owner-outcome-card>.rf-card-no {
+  position:absolute;
+  z-index:1;
+  inset-block-start:18px;
+  inset-inline-start:18px;
+  display:grid;
+  place-items:center;
+  width:32px;
+  height:32px;
+  margin:0;
+  border-radius:50%;
+  background:var(--brand-owner-cream);
+  color:var(--brand-owner-ink);
+  box-shadow:0 3px 12px #1c1d2010;
+}
+.rf-brand-owner .brand-owner-outcome-media {
+  display:block;
+  flex:none;
+  width:100%;
+  aspect-ratio:1440 / 1024;
+  overflow:hidden;
+  background:var(--brand-owner-cream);
+}
+.rf-brand-owner .brand-owner-outcome-media img {
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:center;
+}
+.rf-brand-owner .brand-owner-outcome-card>h3 {
+  padding:24px 26px 0;
+  margin:0 0 12px;
+  color:var(--brand-owner-ink);
+  font-size:clamp(21px,1.7vw,25px);
+  font-weight:600;
+  line-height:1.45;
+}
+.rf-brand-owner .brand-owner-outcome-card>p {
+  padding:0 26px 28px;
+  margin:0;
+  color:#55564e;
+  font-size:16px;
+  line-height:1.8;
+}
+.rf-brand-owner .brand-owner-outcome-card:hover {
+  transform:none;
+}
+
+/* The portfolio action uses the native fill and a centered placement. Ink
+   labels stay readable on both its orange base and cream hover fill. */
+.rf-brand-owner .brand-owner-investment {
+  border:0;
+  padding:92px 0;
+  background:var(--brand-owner-ink);
+  color:var(--brand-owner-cream);
+}
+.rf-brand-owner .brand-owner-investment h2 {
+  max-width:27ch;
+}
+.rf-brand-owner .brand-owner-investment .rf-index {
+  color:#ff946d;
+}
+.rf-brand-owner .brand-owner-investment .rf-prose {
+  max-width:1000px;
+  margin-inline:auto;
+}
+.rf-brand-owner .brand-owner-investment .rf-prose>p {
+  color:#eeeadd;
+}
+.rf-brand-owner .brand-owner-investment .rf-prose>p:first-child {
+  grid-column:1 / -1;
+  color:var(--brand-owner-cream);
+}
+.rf-brand-owner .brand-owner-investment :is(.brand-owner-actions,.rf-actions) {
+  grid-column:1 / -1;
+  justify-content:center;
+  margin-top:32px;
+}
+.rf-brand-owner .brand-owner-investment .rf-prose>.brand-owner-cta {
+  grid-column:1 / -1;
+  justify-self:center;
+  margin-top:18px;
+}
+.rf-brand-owner .brand-owner-investment .brand-owner-cta--primary .btn-text {
+  color:var(--brand-owner-ink);
+}
+.rf-brand-owner .brand-owner-investment .brand-owner-cta .service-card-arrow {
+  color:inherit;
+  stroke:currentColor;
+}
+.rf-brand-owner .brand-owner-investment .brand-owner-cta--primary .btn-fill {
+  background:var(--brand-owner-cream);
+}
+.rf-brand-owner .brand-owner-investment .brand-owner-cta--primary .btn-click:is(:hover,:focus-visible) .btn-text {
+  color:var(--brand-owner-ink);
+}
+.rf-brand-owner .brand-owner-investment .brand-owner-cta .btn-click:focus-visible {
+  outline-color:var(--brand-owner-cream);
+}
+
+@media (hover:hover) and (pointer:fine) {
+  .rf-brand-owner .brand-owner-pillar:hover::before {
+    background-color:var(--brand-owner-orange);
+    border-color:var(--brand-owner-orange);
+    box-shadow:0 0 0 24px #f9460e45,0 0 0 49px #f9460e20;
+  }
+  .rf-brand-owner .brand-owner-pillar:hover::after {
+    color:var(--brand-owner-cream);
+  }
+  .rf-brand-owner .brand-owner-outcome-card:hover {
+    border-color:#f9460e80;
+    box-shadow:0 16px 36px #1c1d2015;
+    transform:translateY(-3px);
+  }
+}
+@media (max-width:1100px) {
+  .rf-brand-owner .brand-owner-outcomes .rf-card-grid {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+@media (max-width:760px), (max-width:1100px) and (orientation:portrait) {
+  .rf-brand-owner .brand-owner-process .rf-timeline {
+    max-width:850px;
+  }
+  .rf-brand-owner .brand-owner-process .rf-timeline::before {
+    left:auto;
+    inset-inline-start:22px;
+    transform:none;
+  }
+  .rf-brand-owner .brand-owner-process .rf-timeline>li,
+  .rf-brand-owner .brand-owner-process .rf-timeline>li:nth-child(even) {
+    width:calc(100% - 66px);
+    margin-inline-start:66px;
+    margin-bottom:28px;
+  }
+  .rf-brand-owner .brand-owner-process .rf-timeline>li:last-child {
+    margin-bottom:0;
+  }
+  .rf-brand-owner .brand-owner-process .rf-step-no,
+  .rf-brand-owner .brand-owner-process .rf-timeline>li:nth-child(even) .rf-step-no {
+    inset-inline-start:-66px;
+    inset-inline-end:auto;
+  }
+}
+@media (max-width:760px) {
+  .rf-brand-owner .brand-owner-process {
+    padding:88px 0 96px;
+  }
+  .rf-brand-owner :is(.brand-owner-process,.brand-owner-outcomes,.brand-owner-investment) .rf-section-heading {
+    gap:18px;
+    margin-bottom:32px;
+  }
+  .rf-brand-owner .brand-owner-process .rf-step-card {
+    min-height:0;
+    padding:24px;
+    border-radius:20px;
+  }
+  .rf-brand-owner .brand-owner-process .rf-step-card p {
+    font-size:16px;
+  }
+  .rf-brand-owner .brand-owner-process .rf-step-no {
+    top:24px;
+  }
+  .rf-brand-owner .brand-owner-outcomes {
+    padding:64px 0 72px;
+  }
+  .rf-brand-owner .brand-owner-outcomes .rf-card-grid {
+    grid-template-columns:minmax(0,1fr);
+    gap:24px;
+  }
+  .rf-brand-owner .brand-owner-outcome-card>h3 {
+    padding:23px 24px 0;
+    font-size:23px;
+  }
+  .rf-brand-owner .brand-owner-outcome-card>p {
+    padding:0 24px 26px;
+  }
+  .rf-brand-owner .brand-owner-investment {
+    padding:68px 0 72px;
+  }
+}
+@media (max-width:380px) {
+  .rf-brand-owner .brand-owner-process .rf-step-card {
+    padding:22px 20px;
+  }
+  .rf-brand-owner .brand-owner-outcome-card>h3 {
+    padding-inline:20px;
+    font-size:21px;
+  }
+  .rf-brand-owner .brand-owner-outcome-card>p {
+    padding-inline:20px;
+  }
+}
+@media (prefers-reduced-motion:reduce) {
+  .rf-brand-owner .brand-owner-pillar::before,
+  .rf-brand-owner .brand-owner-pillar::after,
+  .rf-brand-owner .brand-owner-outcome-card {
+    transition:none;
+  }
+  .rf-brand-owner .brand-owner-outcome-card:hover {
+    transform:none;
+  }
+}

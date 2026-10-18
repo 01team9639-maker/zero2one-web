@@ -1,0 +1,256 @@
+{
+  "preparedAt": "2026-10-12T20:17:18.727Z",
+  "sourceDate": "2026-10-12",
+  "transformation": "Full composition preserved. Aspect-ratio resize and WebP encoding only; no crop, retouching, background removal, flattening, or added artwork.",
+  "encoder": {
+    "sharp": "0.35.3",
+    "libwebp": "1.6.0",
+    "options": {
+      "quality": 90,
+      "alphaQuality": 100,
+      "effort": 6,
+      "smartSubsample": true
+    }
+  },
+  "widths": [
+    400,
+    700,
+    1000
+  ],
+  "images": [
+    {
+      "name": "google-search",
+      "subject": "Google Search",
+      "origin": "Owner-supplied illustrative mockup; not a newly generated image or verified ranking record.",
+      "sourceFilename": "١.png",
+      "sourcePath": "local-workstation/Desktop/١.png",
+      "originalCopy": "originals/google-search.png",
+      "originalSha256": "2460a9f2845ed0c9b6d111ff6d6dc2e4fce892348bc571d0bf5f32d429c99ec2",
+      "originalBytes": 970794,
+      "originalWidth": 1000,
+      "originalHeight": 1700,
+      "originalFormat": "png",
+      "originalHasAlpha": true,
+      "originalCopyByteIdentical": true,
+      "originalTransparency": {
+        "minimum": 0,
+        "maximum": 255,
+        "transparentPixels": 295841,
+        "partiallyTransparentPixels": 1399575,
+        "sha256": "9b523c13c274663a602faeaf9d428662445a31dc35223ae4f20168beb43c7be5"
+      },
+      "outputs": [
+        {
+          "file": "google-search-400.webp",
+          "format": "webp",
+          "width": 400,
+          "height": 680,
+          "bytes": 40064,
+          "sha256": "d928df51ee8825664756b1df65d5bd3d54cb0dd2d98397abe1b2c0ce6122b201",
+          "hasAlpha": true,
+          "decodeVerified": true,
+          "alphaMatchesResizedOriginal": true,
+          "transparency": {
+            "minimum": 0,
+            "maximum": 255,
+            "transparentPixels": 46713,
+            "partiallyTransparentPixels": 223924,
+            "sha256": "86e3f07ae338b073ce24a6e41acd2ce28d96ccac7b02796fa86ca5358bbef950"
+          }
+        },
+        {
+          "file": "google-search-700.webp",
+          "format": "webp",
+          "width": 700,
+          "height": 1190,
+          "bytes": 81462,
+          "sha256": "6243e6abeb8e3285b41bdfd0db281cd1aca79e0f0afd7605c2595d60596820b0",
+          "hasAlpha": true,
+          "decodeVerified": true,
+          "alphaMatchesResizedOriginal": true,
+          "transparency": {
+            "minimum": 0,
+            "maximum": 255,
+            "transparentPixels": 143149,
+            "partiallyTransparentPixels": 689116,
+            "sha256": "6044f266d96f1e1f53270c8d253d498bf8df8e911d2549247fd4bd2964a7fdef"
+          }
+        },
+        {
+          "file": "google-search-1000.webp",
+          "format": "webp",
+          "width": 1000,
+          "height": 1700,
+          "bytes": 117764,
+          "sha256": "05c3b66fcb562ce73d88ad50af935f61bcb724b4de5d5317d005310b8c5cc6a9",
+          "hasAlpha": true,
+          "decodeVerified": true,
+          "alphaMatchesResizedOriginal": true,
+          "transparency": {
+            "minimum": 0,
+            "maximum": 255,
+            "transparentPixels": 295841,
+            "partiallyTransparentPixels": 1399575,
+            "sha256": "9b523c13c274663a602faeaf9d428662445a31dc35223ae4f20168beb43c7be5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "google-maps",
+      "subject": "Google Maps Search",
+      "origin": "Owner-supplied illustrative mockup; not a newly generated image or verified ranking record.",
+      "sourceFilename": "٢.png",
+      "sourcePath": "local-workstation/Desktop/٢.png",
+      "originalCopy": "originals/google-maps.png",
+      "originalSha256": "92dcef19bd162ae63f97a819e9c1204fd64d6df0a9b5007a8e87202cd2b86880",
+      "originalBytes": 1174920,
+      "originalWidth": 1000,
+      "originalHeight": 1700,
+      "originalFormat": "png",
+      "originalHasAlpha": true,
+      "originalCopyByteIdentical": true,
+      "originalTransparency": {
+        "minimum": 0,
+        "maximum": 255,
+        "transparentPixels": 210122,
+        "partiallyTransparentPixels": 1483656,
+        "sha256": "0254cacc5c80d1e30e412123741dc438186621ab8d360ab12e04cb5929f541d5"
+      },
+      "outputs": [
+        {
+          "file": "google-maps-400.webp",
+          "format": "webp",
+          "width": 400,
+          "height": 680,
+          "bytes": 46046,
+          "sha256": "e9014a946aac38a8e0b44042985847eaae1fec45b11a7b7cf5c3434ae9074cc0",
+          "hasAlpha": true,
+          "decodeVerified": true,
+          "alphaMatchesResizedOriginal": true,
+          "transparency": {
+            "minimum": 0,
+            "maximum": 255,
+            "transparentPixels": 32899,
+            "partiallyTransparentPixels": 237731,
+            "sha256": "3c262b0d0904b1e3e55eea7afc5f16cfdfa93c6a37d989e698b265bdfdfda05c"
+          }
+        },
+        {
+          "file": "google-maps-700.webp",
+          "format": "webp",
+          "width": 700,
+          "height": 1190,
+          "bytes": 91938,
+          "sha256": "649d482975c10c6bdae7ac7312dad57f032c3345f64c1ca6a06c05cf2eb0bdf4",
+          "hasAlpha": true,
+          "decodeVerified": true,
+          "alphaMatchesResizedOriginal": true,
+          "transparency": {
+            "minimum": 0,
+            "maximum": 255,
+            "transparentPixels": 100810,
+            "partiallyTransparentPixels": 730205,
+            "sha256": "440758191a08ca1522e526f03403765ee66f3eafb4661d6f3e876e63a1dfb1ea"
+          }
+        },
+        {
+          "file": "google-maps-1000.webp",
+          "format": "webp",
+          "width": 1000,
+          "height": 1700,
+          "bytes": 134010,
+          "sha256": "a5bdef83482284b3839dfdd411378bb9a92830e93074810a8f7fa9e19f613c77",
+          "hasAlpha": true,
+          "decodeVerified": true,
+          "alphaMatchesResizedOriginal": true,
+          "transparency": {
+            "minimum": 0,
+            "maximum": 255,
+            "transparentPixels": 210122,
+            "partiallyTransparentPixels": 1483656,
+            "sha256": "0254cacc5c80d1e30e412123741dc438186621ab8d360ab12e04cb5929f541d5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "chatgpt-search",
+      "subject": "ChatGPT Search",
+      "origin": "Owner-supplied illustrative mockup; not a newly generated image or verified ranking record.",
+      "sourceFilename": "٣.png",
+      "sourcePath": "local-workstation/Desktop/٣.png",
+      "originalCopy": "originals/chatgpt-search.png",
+      "originalSha256": "9d4c9069cdf9574426831629987b3fb51f59565084e7830266ad7287a9a863a0",
+      "originalBytes": 1028893,
+      "originalWidth": 1000,
+      "originalHeight": 1700,
+      "originalFormat": "png",
+      "originalHasAlpha": true,
+      "originalCopyByteIdentical": true,
+      "originalTransparency": {
+        "minimum": 0,
+        "maximum": 255,
+        "transparentPixels": 259654,
+        "partiallyTransparentPixels": 1435642,
+        "sha256": "db79983b7d52419f3233c2c03dd4bce186688ddf454805d6c616a4f363468b61"
+      },
+      "outputs": [
+        {
+          "file": "chatgpt-search-400.webp",
+          "format": "webp",
+          "width": 400,
+          "height": 680,
+          "bytes": 41258,
+          "sha256": "b1d1a8bae0214c05f13f2875ce492424cab9454d7ef2aae5b0c95fa81e41db42",
+          "hasAlpha": true,
+          "decodeVerified": true,
+          "alphaMatchesResizedOriginal": true,
+          "transparency": {
+            "minimum": 0,
+            "maximum": 255,
+            "transparentPixels": 40928,
+            "partiallyTransparentPixels": 229583,
+            "sha256": "be72bd9931692404f2ee7cd816b3c09d264f5ddcadb792d625ac4187ac913000"
+          }
+        },
+        {
+          "file": "chatgpt-search-700.webp",
+          "format": "webp",
+          "width": 700,
+          "height": 1190,
+          "bytes": 83914,
+          "sha256": "3efc51176bcdba8667125100ddc82fc24bb5babf5ae4996c173210387a9ab2f0",
+          "hasAlpha": true,
+          "decodeVerified": true,
+          "alphaMatchesResizedOriginal": true,
+          "transparency": {
+            "minimum": 0,
+            "maximum": 255,
+            "transparentPixels": 126424,
+            "partiallyTransparentPixels": 705157,
+            "sha256": "dc4383f52b3c61e1cc6fbadc96b7e5368cecd3d5ff319e027b468959399294b9"
+          }
+        },
+        {
+          "file": "chatgpt-search-1000.webp",
+          "format": "webp",
+          "width": 1000,
+          "height": 1700,
+          "bytes": 120830,
+          "sha256": "d9370415374e7e9cbf41fad47d5f3f8fc51d5dacfd197d2f6347636576ed3352",
+          "hasAlpha": true,
+          "decodeVerified": true,
+          "alphaMatchesResizedOriginal": true,
+          "transparency": {
+            "minimum": 0,
+            "maximum": 255,
+            "transparentPixels": 259654,
+            "partiallyTransparentPixels": 1435642,
+            "sha256": "db79983b7d52419f3233c2c03dd4bce186688ddf454805d6c616a4f363468b61"
+          }
+        }
+      ]
+    }
+  ]
+}

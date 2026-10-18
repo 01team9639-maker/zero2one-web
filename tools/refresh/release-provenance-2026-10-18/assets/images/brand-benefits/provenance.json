@@ -1,0 +1,352 @@
+{
+  "version": 1,
+  "sourceDirectory": "owner-supplied/brand-benefits",
+  "optimizationOnly": true,
+  "sourceFrame": {
+    "width": 1440,
+    "height": 1024,
+    "aspectRatio": "45:32"
+  },
+  "settings": {
+    "resizeWidths": [
+      480,
+      800,
+      1440
+    ],
+    "webp": {
+      "quality": 82,
+      "effort": 6
+    },
+    "avif": {
+      "quality": 55,
+      "effort": 4
+    },
+    "crop": false
+  },
+  "images": [
+    {
+      "order": 1,
+      "title": "Your Brand Is Always Working",
+      "copyKey": "8:73",
+      "source": "01-brand-always-present.jpg",
+      "sourceSha256": "6d9d9a4131c80d2e3974c227c22765717662c0e50ebd8072224aeda492bbf035",
+      "width": 1440,
+      "height": 1024,
+      "bytes": 375095,
+      "outputs": [
+        {
+          "file": "01-brand-always-present-480.webp",
+          "width": 480,
+          "height": 341,
+          "bytes": 24946,
+          "sha256": "61e68262dce6f76fe21fe89411bf38b085d839adf62a0061a616a6859d923ec6"
+        },
+        {
+          "file": "01-brand-always-present-480.avif",
+          "width": 480,
+          "height": 341,
+          "bytes": 15257,
+          "sha256": "39c6c4dcb8608590d612d29f16cf618711a5d9c018eb1e42bb4aff37502fd4e1"
+        },
+        {
+          "file": "01-brand-always-present-800.webp",
+          "width": 800,
+          "height": 569,
+          "bytes": 48650,
+          "sha256": "a2969223c8211a8877179dcfaa37e42ee99fcb901ca38c930d77f59b21fc6a28"
+        },
+        {
+          "file": "01-brand-always-present-800.avif",
+          "width": 800,
+          "height": 569,
+          "bytes": 30488,
+          "sha256": "7f95a32602c76366fba7fc7d420ccfbbd9bfa331d3e8e0851da51e6af501a62d"
+        },
+        {
+          "file": "01-brand-always-present-1440.webp",
+          "width": 1440,
+          "height": 1024,
+          "bytes": 98468,
+          "sha256": "a6e4d825acbbc005e6c37d25f7a8db045aa0b062deccdc681f15b45573e2fb62"
+        },
+        {
+          "file": "01-brand-always-present-1440.avif",
+          "width": 1440,
+          "height": 1024,
+          "bytes": 63957,
+          "sha256": "fbf824311c1ac689cadfeaaf09ddc08a95b95bf371b50ce8a4605234b20e6dee"
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "title": "A Brand People Remember",
+      "copyKey": "8:75",
+      "source": "02-memorable-brand.jpg",
+      "sourceSha256": "1c1d343cbdedf1066fcd45ce64638e5ac5a797dd3ab2bd9985743fdc5f18f99b",
+      "width": 1440,
+      "height": 1024,
+      "bytes": 270035,
+      "outputs": [
+        {
+          "file": "02-memorable-brand-480.webp",
+          "width": 480,
+          "height": 341,
+          "bytes": 13142,
+          "sha256": "18d290bd82e2d4ce939f2d1ac8359ec61a7dede8a45316ac861e368b3fd47696"
+        },
+        {
+          "file": "02-memorable-brand-480.avif",
+          "width": 480,
+          "height": 341,
+          "bytes": 8945,
+          "sha256": "85f5f37b2780322314401b770199a364763646496123559759ed0af81ce39065"
+        },
+        {
+          "file": "02-memorable-brand-800.webp",
+          "width": 800,
+          "height": 569,
+          "bytes": 24614,
+          "sha256": "efc0d5b926dfbe4c61a1c60d2679a25297bc5f9e7379da1051f2ba0d311c17ad"
+        },
+        {
+          "file": "02-memorable-brand-800.avif",
+          "width": 800,
+          "height": 569,
+          "bytes": 16747,
+          "sha256": "6f1fdf35c18a5ab2c152d1c5c0dddaef351e3c2ed33b0302e57bfa3718af9286"
+        },
+        {
+          "file": "02-memorable-brand-1440.webp",
+          "width": 1440,
+          "height": 1024,
+          "bytes": 55118,
+          "sha256": "cc3e43d4fa3e832e1401a0dea7e9dff5957c8f94ce898cb4491bb33acf2e25bc"
+        },
+        {
+          "file": "02-memorable-brand-1440.avif",
+          "width": 1440,
+          "height": 1024,
+          "bytes": 36985,
+          "sha256": "94dbb858c5d1d860efd0766ea879fc26b4d66ad86d79669fe47c8a340047b448"
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "title": "A Consistent Presence Everywhere",
+      "copyKey": "8:77",
+      "source": "03-consistent-presence.jpg",
+      "sourceSha256": "edc2a01f673a08ad2fc9de8b50ea6a3356d864180ffa880df9bd67c6ab26083e",
+      "width": 1440,
+      "height": 1024,
+      "bytes": 378412,
+      "outputs": [
+        {
+          "file": "03-consistent-presence-480.webp",
+          "width": 480,
+          "height": 341,
+          "bytes": 23644,
+          "sha256": "bd3acefd6592758be7c789b6aa5a5b37d9513d02ba5826edaea76048874be5d7"
+        },
+        {
+          "file": "03-consistent-presence-480.avif",
+          "width": 480,
+          "height": 341,
+          "bytes": 13613,
+          "sha256": "1ad7e877269fd3266e626e554b852d9e241e51393909352acd63c122ab30c450"
+        },
+        {
+          "file": "03-consistent-presence-800.webp",
+          "width": 800,
+          "height": 569,
+          "bytes": 46642,
+          "sha256": "2ce5e356c7870b0870ba3b2ddb1fbcf356b8155c1a1706fcd3f986ec15ee1158"
+        },
+        {
+          "file": "03-consistent-presence-800.avif",
+          "width": 800,
+          "height": 569,
+          "bytes": 27498,
+          "sha256": "cd1b9de268634a0c30dcd46abd01b4d26deb6c76df1f73306c6f7c834cae8990"
+        },
+        {
+          "file": "03-consistent-presence-1440.webp",
+          "width": 1440,
+          "height": 1024,
+          "bytes": 98114,
+          "sha256": "ab565f1a384f360dcfb0cbc8b7b64dec8d929a96c96debe86650886956e7c504"
+        },
+        {
+          "file": "03-consistent-presence-1440.avif",
+          "width": 1440,
+          "height": 1024,
+          "bytes": 61662,
+          "sha256": "737d63d30c56c0854da743fbadd4dfeb432df7cd5a48f398a82e026807782fea"
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "title": "Stand Out From Competitors",
+      "copyKey": "8:79",
+      "source": "04-stand-out.jpg",
+      "sourceSha256": "3277fcd43658c773d7db6c09554679a7c72989783d879868b9d60d8a98e510a7",
+      "width": 1440,
+      "height": 1024,
+      "bytes": 293395,
+      "outputs": [
+        {
+          "file": "04-stand-out-480.webp",
+          "width": 480,
+          "height": 341,
+          "bytes": 11952,
+          "sha256": "24062dc487645a001ff6601294c07ab1f51401952d66f3d1704e6cdd75ad7d64"
+        },
+        {
+          "file": "04-stand-out-480.avif",
+          "width": 480,
+          "height": 341,
+          "bytes": 8886,
+          "sha256": "f9148263c95aeb5c8c499535ce40899593abb2221592d2bb6c6572c88bfcadc7"
+        },
+        {
+          "file": "04-stand-out-800.webp",
+          "width": 800,
+          "height": 569,
+          "bytes": 25726,
+          "sha256": "7e6b8a8b0c269e7a7c048193967fbbabc30d6e7ec21efa3873ea47eae836d042"
+        },
+        {
+          "file": "04-stand-out-800.avif",
+          "width": 800,
+          "height": 569,
+          "bytes": 17949,
+          "sha256": "d47d329db6c4c3a4e286d7ee46926517eef1a65d2bf02ee6b162a87da94fa821"
+        },
+        {
+          "file": "04-stand-out-1440.webp",
+          "width": 1440,
+          "height": 1024,
+          "bytes": 66858,
+          "sha256": "a7cada865b8d4e58353e0ec83021c438de776a3a824d97038f4237d42fc64485"
+        },
+        {
+          "file": "04-stand-out-1440.avif",
+          "width": 1440,
+          "height": 1024,
+          "bytes": 44393,
+          "sha256": "96700ae1b83fe1b125422aef51256907fb5df4f33d41a760a1f2a9466d79e21d"
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "title": "Stronger Credibility With Your Customers",
+      "copyKey": "8:81",
+      "source": "05-build-trust.jpg",
+      "sourceSha256": "3eecb0f07cdfb54caa366da96ec2c79421bf08d1e185d7c939cdf7dce0ed0e03",
+      "width": 1440,
+      "height": 1024,
+      "bytes": 292132,
+      "outputs": [
+        {
+          "file": "05-build-trust-480.webp",
+          "width": 480,
+          "height": 341,
+          "bytes": 14408,
+          "sha256": "ea60fc61466d2ae051ba68cd6a4b0d68510345cb70722b4ea4eecb79939f7c28"
+        },
+        {
+          "file": "05-build-trust-480.avif",
+          "width": 480,
+          "height": 341,
+          "bytes": 9899,
+          "sha256": "21b4eebc31566b7b59cd2736663be53146233d8b3bddf5cd3f3e3974772c2c3a"
+        },
+        {
+          "file": "05-build-trust-800.webp",
+          "width": 800,
+          "height": 569,
+          "bytes": 28260,
+          "sha256": "0db675029d4610feb3086da125925a4608d8176473aca904a40754aa348ae8c3"
+        },
+        {
+          "file": "05-build-trust-800.avif",
+          "width": 800,
+          "height": 569,
+          "bytes": 18539,
+          "sha256": "aa1b0a69cb2e669cf589a8ec9f1440949742c7f10747a8dabddd56de69101c02"
+        },
+        {
+          "file": "05-build-trust-1440.webp",
+          "width": 1440,
+          "height": 1024,
+          "bytes": 62224,
+          "sha256": "c4736682cff06ceecfbf522fd73d6529640d2c96ba5a7dceaef193e55d04d7df"
+        },
+        {
+          "file": "05-build-trust-1440.avif",
+          "width": 1440,
+          "height": 1024,
+          "bytes": 40708,
+          "sha256": "917a58eb699f54995697055c81f205467c6441d7404ebcaf60d54d4f89e9df3f"
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "title": "A Foundation for All Your Marketing",
+      "copyKey": "8:83",
+      "source": "06-marketing-foundation.jpg",
+      "sourceSha256": "7af58cad18a92b6887c43b56bad361a05bc0a34d1e45d87899620e09221e094f",
+      "width": 1440,
+      "height": 1024,
+      "bytes": 373523,
+      "outputs": [
+        {
+          "file": "06-marketing-foundation-480.webp",
+          "width": 480,
+          "height": 341,
+          "bytes": 22902,
+          "sha256": "226e0aeae5fc744fdef17b7752dfb9d1e8e59ea54bec19abd78e00ebaea5b8cb"
+        },
+        {
+          "file": "06-marketing-foundation-480.avif",
+          "width": 480,
+          "height": 341,
+          "bytes": 13919,
+          "sha256": "d2d4c31f15836adb66dcd27ec9be8992ae1c81996daf4cbaa037ed4898424997"
+        },
+        {
+          "file": "06-marketing-foundation-800.webp",
+          "width": 800,
+          "height": 569,
+          "bytes": 44460,
+          "sha256": "4e235f7a59309ce854ceef581be242213269b425312d252d8c6a682b0c26c4d8"
+        },
+        {
+          "file": "06-marketing-foundation-800.avif",
+          "width": 800,
+          "height": 569,
+          "bytes": 27575,
+          "sha256": "8c56c87fce6901ab081945d33298e5e7cdfb70fa6eba41f6ec0c558a5c4df77c"
+        },
+        {
+          "file": "06-marketing-foundation-1440.webp",
+          "width": 1440,
+          "height": 1024,
+          "bytes": 93932,
+          "sha256": "9a566ac1d818ddae778344e013180d5ac30a1dd2b9354ec8cf9956583fd2ba72"
+        },
+        {
+          "file": "06-marketing-foundation-1440.avif",
+          "width": 1440,
+          "height": 1024,
+          "bytes": 60151,
+          "sha256": "e4b43df68d03fb4d4e3d55834f6066cd6c1217b2aca3376f6d92a2804456c8a6"
+        }
+      ]
+    }
+  ]
+}

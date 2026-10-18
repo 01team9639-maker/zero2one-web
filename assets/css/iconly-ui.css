@@ -1,0 +1,127 @@
+/* Local Iconly Essential Light assets; license and source records live in
+   ../icons/iconly/provenance.json. Append after the shared legacy styles. */
+
+.footer-contact-icon-location {
+  -webkit-mask-image:url("../icons/iconly/location.svg");
+  mask-image:url("../icons/iconly/location.svg");
+}
+.footer-contact-icon-phone {
+  -webkit-mask-image:url("../icons/iconly/call.svg");
+  mask-image:url("../icons/iconly/call.svg");
+}
+.footer-contact-icon-email {
+  -webkit-mask-image:url("../icons/iconly/message.svg");
+  mask-image:url("../icons/iconly/message.svg");
+}
+
+/* Preserve the menu button's existing layout, fill, and entrance animations. */
+.btn-hamburger .btn-bars::before {
+  content:"";
+  display:block;
+  width:24px;
+  height:24px;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  background-color:var(--color-white);
+  -webkit-mask-image:url("../icons/iconly/category.svg");
+  mask-image:url("../icons/iconly/category.svg");
+}
+.btn-hamburger .btn-bars::after { display:none; }
+.btn-hamburger.active .btn-bars::before {
+  top:50%;
+  transform:translate(-50%,-50%);
+  background-color:#f9460e;
+  -webkit-mask-image:url("../icons/iconly/close-square.svg");
+  mask-image:url("../icons/iconly/close-square.svg");
+}
+.btn-hamburger.on-orange .btn-click:is(:hover,:focus-visible) .btn-bars::before {
+  background-color:#f9460e;
+}
+.btn-hamburger.active .btn-click:hover .btn-bars::before {
+  background-color:#fffded;
+}
+
+/* The selected label and pressed state remain the accessible control name. */
+.z2o-filter[aria-pressed="true"]::before {
+  content:"";
+  display:block;
+  flex:none;
+  width:1.1em;
+  height:1.1em;
+  font-size:1em;
+  background-color:currentColor;
+  -webkit-mask-image:url("../icons/iconly/tick-square.svg");
+  mask-image:url("../icons/iconly/tick-square.svg");
+}
+
+/* Checked visibility and the original checkbox background remain stateful. */
+.form .checkbox-button .custom-check::after {
+  background-image:none;
+  background-color:var(--color-white);
+  -webkit-mask-image:url("../icons/iconly/tick-square.svg");
+  mask-image:url("../icons/iconly/tick-square.svg");
+}
+
+/* Success decoration uses the same local free Tick Square asset. The spoken
+   result remains text, and the site's directional submit arrow is untouched. */
+.iconly-status-success::after {
+  content:"";
+  display:inline-block;
+  width:1.1em;
+  height:1.1em;
+  margin-inline-start:.45em;
+  vertical-align:-.15em;
+  background-color:currentColor;
+  -webkit-mask-image:url("../icons/iconly/tick-square.svg");
+  mask-image:url("../icons/iconly/tick-square.svg");
+}
+.iconly-viewer-close {
+  display:block;
+  width:24px;
+  height:24px;
+  margin:auto;
+  background-color:currentColor;
+  -webkit-mask-image:url("../icons/iconly/close-square.svg");
+  mask-image:url("../icons/iconly/close-square.svg");
+}
+
+/* Iconly's free Essential set has no Pause export. Keep this motion control
+   as an explicit translated text button rather than an unlicensed icon. */
+.logo-marquee-toggle {
+  width:auto;
+  min-width:44px;
+  min-height:44px;
+  height:auto;
+  padding:10px 16px;
+  border-radius:999px;
+}
+.logo-marquee-icon { display:none; }
+.logo-marquee-label {
+  position:static;
+  width:auto;
+  height:auto;
+  margin:0;
+  overflow:visible;
+  clip-path:none;
+  font-size:13px;
+  line-height:1.4;
+}
+.logo-marquee-label[hidden] { display:none; }
+
+.btn-hamburger .btn-bars::before,
+.z2o-filter[aria-pressed="true"]::before,
+.form .checkbox-button .custom-check::after,
+.iconly-status-success::after,
+.iconly-viewer-close {
+  -webkit-mask-repeat:no-repeat;
+  mask-repeat:no-repeat;
+  -webkit-mask-position:center;
+  mask-position:center;
+  -webkit-mask-size:contain;
+  mask-size:contain;
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .btn-hamburger .btn-bars::before { transition:none; }
+}

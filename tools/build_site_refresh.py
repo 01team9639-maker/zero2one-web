@@ -9,10 +9,13 @@ This builder does not deploy, change analytics, or modify the contact endpoint.
 from pathlib import Path
 import html, json, re, sys
 from html.parser import HTMLParser
+from iconly_icons import iconly_svg
+from service_content_update import apply as apply_content_update, meta_value, is_faq
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / 'tools/refresh'
-DOCS = json.loads((DATA / 'content-sources.json').read_text())['documents']
+ORIGINAL_DOCS = json.loads((DATA / 'content-sources.json').read_text())['documents']
+DOCS = apply_content_update(ORIGINAL_DOCS)
 LEGACY = json.loads((DATA / 'legacy-blocks.json').read_text())
 PROTECTED = json.loads((DATA / 'protected-design.json').read_text())
 HOME_ORIGINAL = json.loads((DATA / 'home-original-sections.json').read_text())
@@ -42,8 +45,13 @@ def local(route, lang):
     return ('/ar' if lang == 'ar' else '') + route
 
 
-def paras(row):
-    return [dict(p, id=f'{row}:{i}') for i, p in enumerate(DOCS[str(row)]['paragraphs'])]
+def paras(row, original=False):
+    source=ORIGINAL_DOCS if original else DOCS
+    return [dict(p, id=f'{row}:{i}') for i, p in enumerate(source[str(row)]['paragraphs'])]
+
+
+def primary_action(ps):
+    return next(p for p in ps if re.match(r'^\[(?:Main button|Primary Button|الزر الرئيسي)',clean(p),re.I))
 
 
 def clean(p):
@@ -73,7 +81,8 @@ def authoring(p):
         or t.casefold() in ('client logos', 'side card:', 'highlight card:', '(packages)',
                             'شعارات العملاء', 'البطاقة الجانبية:', 'البطاقة البارزة:',
                             '(الباقات)', 'يبقى كما هو', 'تبقى كما هي')
-        or t.startswith(('Slider cards (', 'شرائح السلايدر ('))):
+        or t.startswith(('Slider cards (', 'شرائح السلايدر ('))
+        or re.match(r'لا توجد أعمال منشورة.*(?:تعرض|تُعرض) البطاقة',t)):
         record(p, 'authoring', 'Layout instruction or structural marker')
         return True
     return False
@@ -103,7 +112,7 @@ def action(p, lang, href=None):
                 href='/blog/'
                 BLOCKED.append(dict(id=p['id'],text=t,reason='English strategy article URL not available; CTA currently points to the English blog index'))
         elif re.search(r'Blog|المدونة', instruction, re.I): href = '/blog/ar/' if lang == 'ar' else '/blog/'
-        elif re.search(r'Second button|الزر الثاني', instruction, re.I): href = local('/work/', lang)
+        elif re.search(r'Second(?:ary)? button|الزر الثاني', instruction, re.I): href = local('/work/', lang)
         else: href = WA
     q = dict(p, text=label)
     external = ' target="_blank" rel="noopener"' if href == WA else ''
@@ -162,7 +171,7 @@ def groups(items):
 
 
 def is_process(t):
-    return bool(re.search(r'How We Work|آلية عملنا|كيف نعمل|موقعك من الفكرة', t, re.I))
+    return bool(re.search(r'How We Work|From Idea to Launch|آلية عملنا|كيف نعمل|موقعك من الفكرة', t, re.I))
 
 
 def render_block(heading, items, n, lang, slug):
@@ -170,9 +179,9 @@ def render_block(heading, items, n, lang, slug):
     h = textnode(heading, 'h2')
     lead, cards = groups(items)
     intro = ''.join(paragraph(p, lang) for p in lead)
-    isfaq = bool(re.search(r'FAQs|أسئلة', title, re.I))
-    team = bool(re.search(r'Meet Our|Who.s Behind|تعرف على فريق|من يقف خلف', title, re.I))
-    logos = bool(re.search(r'Clients.*Success|Clients We|عملاؤنا|عملاء أطلقنا', title, re.I))
+    isfaq = is_faq(title)
+    team = bool(re.search(r'Meet (?:Our|the)|Who.s Behind|تعرّ?ف على فريق|من يقف خلف', title, re.I))
+    logos = bool(re.search(r'^Our Clients$|Clients.*Success|Clients We|عملاؤنا|عملاء أطلقنا|عملاء صممنا', title, re.I))
     packages = bool(re.search(r'Packages|^باقات', title, re.I))
     if logos: return clients(h, lang, n, intro)
     if team: return section(h, intro+team_cards(lang, slug), n, 'team')
@@ -213,7 +222,7 @@ def render_block(heading, items, n, lang, slug):
             continue
         paras_html = []
         for p in a:
-            if re.match(r'^\[(?:Main button|Second button|Button|الزر|زر)',clean(p)):
+            if re.match(r'^\[(?:Main button|Primary Button|Second(?:ary)? button|Button|الزر|زر)',clean(p),re.I):
                 tail.append(action(p, lang))
             else: paras_html.append(paragraph(p, lang))
         rendered.append(f'<article class="rf-card" data-rf-reveal><span class="rf-card-no" aria-hidden="true">{i:02d}</span>'+
@@ -251,8 +260,15 @@ def service_body(slug, lang):
     for p in ps[first_section:]:
         if p['style']=='HEADING_2': chunks.append([p,[]])
         elif chunks: chunks[-1][1].append(p)
-    for n,(h,items) in enumerate(chunks,1): body += render_block(h,items,n,lang,slug)
-    return body, ps[1]['text'].split(':',1)[1].strip(), ps[2]['text'].split(':',1)[1].strip()
+    for n,(h,items) in enumerate(chunks,1):
+        if slug=='brand-identity' and n in (6,10,11):
+            # Owner removed packages, specialists and clients on this service
+            # only. Record the exact source exclusions instead of losing copy.
+            for p in [h]+items:
+                record(p,'excluded','Owner removed this brand service section on 2026-10-10')
+            continue
+        body += render_block(h,items,n,lang,slug)
+    return body, meta_value(ps[1]['text']), meta_value(ps[2]['text'])
 
 
 def home_faq(lang):
@@ -316,7 +332,9 @@ def original_home_layout(body,lang,ps):
             card=re.sub(r'<img\b[^>]*>',lambda _:remaining_image(slug),card,count=1)
         card=re.sub(r'<span class="btn-text-inner">[\s\S]*?</span>',lambda _:label(i+2),card,count=1)
         cards.append(card)
-    ad=paras(12 if ar else 13)
+    # Homepage copy is outside this content update. Retain its approved card,
+    # independently of the new detail-page hero and source paragraph indices.
+    ad=paras(12 if ar else 13,original=True)
     card=template.replace('service-1','service-3')
     card=re.sub(r'<img\b[^>]*>',lambda _:remaining_image('manage-google-adwords-campaigns'),card,count=1)
     card=re.sub(r'<h3 class="service-card-title">[\s\S]*?</h3>',lambda _:textnode(ad[3],'h3','service-card-title'),card,count=1)
@@ -518,7 +536,7 @@ def render_page(route,lang,unused_src=None):
         body=body.replace(textnode(h,'h2'),textnode(h,'h1',id='main-content',tabindex='-1'),1)
         # Add the dedicated Google Ads page to the catalogue using its own supplied copy.
         ad=paras(12 if ar else 13)
-        card='<article class="rf-service-card"><div class="rf-service-image"><img src="/assets/images/service-3-640.webp" width="640" height="640" alt="" loading="lazy"></div><div class="rf-service-content">'+textnode(ad[3],'h3')+textnode(ad[4])+action(ad[7 if ar else 6],lang,local('/services/manage-google-adwords-campaigns/',lang))+'</div></article>'
+        card='<article class="rf-service-card"><div class="rf-service-image"><img src="/assets/images/service-3-640.webp" width="640" height="640" alt="" loading="lazy"></div><div class="rf-service-content">'+textnode(ad[3],'h3')+textnode(ad[4])+action(primary_action(ad),lang,local('/services/manage-google-adwords-campaigns/',lang))+'</div></article>'
         body=body.replace('</div></div></section>',card+'</div></div></section>')
         body=body.replace('<h3 ', '<h2 ').replace('</h3>', '</h2>')
     elif route=='/team/':
@@ -529,8 +547,9 @@ def render_page(route,lang,unused_src=None):
         title='الأسئلة الشائعة' if lang=='ar' else 'Frequently asked questions'
         body='<section class="rf-hero rf-simple-hero" data-scroll-section><div class="rf-inner"><h1 id="main-content" tabindex="-1">'+title+'</h1></div></section>'+home_faq(lang)
         for n,slug in enumerate(SERVICES,1):
-            spec=SERVICES[slug]; ps=paras(spec[1 if lang=='ar' else 0]); a=next(i for i,p in enumerate(ps) if p['style']=='HEADING_2' and re.search(r'FAQs|أسئلة',p['text']))
-            block=render_block(ps[a],ps[a+1:],n,lang,slug).replace('id="faq"',f'id="faq-{slug}"')
+            spec=SERVICES[slug]; ps=paras(spec[1 if lang=='ar' else 0]); a=next(i for i,p in enumerate(ps) if p['style']=='HEADING_2' and is_faq(p['text']))
+            z=next((i for i in range(a+1,len(ps)) if ps[i]['style']=='HEADING_2'),len(ps))
+            block=render_block(ps[a],ps[a+1:z],n,lang,slug).replace('id="faq"',f'id="faq-{slug}"')
             body+=block
         seo=paras(4)
         # The English tab uses normal paragraphs even for its headings. Restore
@@ -560,6 +579,10 @@ def render_page(route,lang,unused_src=None):
         label='خدماتنا' if lang=='ar' else 'Our Services'
         return '<li class="rf-nav-services"><details><summary>'+label+'</summary>'+menu(lang)+'<a class="rf-all-services" href="'+local('/services/',lang)+'">'+label+' ↗</a></details></li>'
     page=re.sub(pattern,nav,page)
+    if route=='/services/brand-identity/': page=refine_brand_owner(page,lang)
+    if route=='/services/' or route.startswith('/services/'):
+        from service_studio import refine
+        page=refine(page,'catalogue' if route=='/services/' else route.strip('/').split('/')[-1],lang)
     page=page.replace('<div class="main-wrap" data-scroll-container>','<div class="main-wrap" data-scroll-container>')
     from stamp_assets import STAMPED, digest
     page=STAMPED.sub(lambda m:f'{m["attr"]}="{m["path"]}?v={digest(m["path"]) or m["stamp"]}"',page)
@@ -567,6 +590,139 @@ def render_page(route,lang,unused_src=None):
 
 
 def manages(route): return route in ROUTES
+
+
+def refine_brand_owner(page,lang):
+    """Local brand review, preserving each language's independent source copy."""
+    marker='<!-- OWNER:BRAND-IDENTITY-2026-10-10 -->'
+    if marker in page: return page
+    page=page.replace('class="main rf-page"','class="main rf-page rf-brand-owner"',1)
+    arrow='<svg class="service-card-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg>'
+    chevron='<svg class="brand-owner-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>'
+    symbols=['discovery','search','edit-square','category','chat','image','home','swap','folder']
+    def symbol(index):
+        return iconly_svg(symbols[index],'brand-owner-symbol')
+    def wave(edge):
+        # Include the original curve's shallow negative crest in the viewport:
+        # clipping at y=0 would flatten the peak into a straight horizontal edge.
+        return '<div class="brand-owner-wave brand-owner-wave--'+edge+'" aria-hidden="true"><svg viewBox="0 -20 1440 243.604" preserveAspectRatio="none"><path d="M0 -20H1440V28.6036C1264.45 46.0335 1058.46 150.417 687.43 46.3562C317.5 -57.3952 153.84 43.218 0 58.6036Z" /></svg></div>'
+    def button(anchor,variant):
+        attrs=re.search(r'<a\b([^>]*)>',anchor)[1]
+        attrs=re.sub(r'class="[^"]*"','class="btn-click magnetic"',attrs)
+        return '<div class="btn btn-normal brand-owner-cta brand-owner-cta--'+variant+'"><a'+attrs+'><div class="btn-fill"></div><span class="btn-text"><span class="btn-text-inner">'+re.search(r'<span class="btn-text-inner">([\s\S]*?)</span>',anchor)[1]+'</span>'+arrow+'</span></a></div>'
+    def hero(m):
+        anchors=re.findall(r'<a\b[^>]*>[\s\S]*?</a>',m[0])
+        if len(anchors)!=2: raise ValueError('Expected two brand hero CTAs')
+        actions='<div class="brand-owner-actions">'+button(anchors[0],'primary')+button(anchors[1],'secondary')+'</div>'
+        return m[0].replace(anchors[0]+anchors[1],actions,1)
+    page,n=re.subn(r'<section class="rf-preserved-hero-lead"[\s\S]*?</section>',hero,page,count=1)
+    if n!=1: raise ValueError('Missing protected brand hero lead')
+    def section(id,fn):
+        nonlocal page
+        page,n=re.subn(r'<section\b[^>]*id="'+re.escape(id)+r'"[\s\S]*?</section>',lambda m:fn(m[0]),page,count=1)
+        if n!=1: raise ValueError('Missing brand section '+id)
+    def pillars(block):
+        block=block.replace('rf-ink rf-cards','rf-ink rf-cards brand-owner-pillars',1)
+        def cards(m):
+            # One approved three-label paragraph remains one copy record. SVG
+            # decorations contain no text; normalized labels are unchanged.
+            labels=['Brand Strategy','Visual Identity','Brand Guidelines']
+            if re.sub(r'\s+',' ',html.unescape(m[2])).strip()!=' '.join(labels):
+                raise ValueError('Unexpected brand pillar source labels')
+            tiles=' '.join('<article class="brand-owner-pillar" data-rf-reveal data-pillar-number="'+f'{i+1:02d}'+'">'+iconly_svg(['discovery','category','folder'][i],'brand-owner-symbol')+'<h3 lang="en" dir="ltr">'+label+'</h3></article>' for i,label in enumerate(labels))
+            return '<div class="brand-owner-pillar-grid" data-copy="'+m[1]+'">'+tiles+'</div>'
+        block=re.sub(r'<div class="rf-prose"><p data-copy="([^"]+)"[^>]*>([\s\S]*?)</p></div>',cards,block,count=1)
+        block=block.replace('data-scroll-section>','data-scroll-section>'+wave('top'),1)
+        return block.replace('</section>',wave('bottom')+'</section>')
+    section('section-1',pillars)
+    def know(block):
+        block=block.replace('rf-white rf-cards','rf-white rf-cards brand-owner-know',1)
+        count=[0]
+        def card(m):
+            count[0]+=1
+            return '<article class="brand-owner-know-card" data-rf-reveal><span class="brand-owner-number" aria-hidden="true">'+str(count[0])+'</span>'+m[0]+'</article>'
+        block=re.sub(r'<div class="rf-prose">([\s\S]*?)</div>',lambda m:'<div class="brand-owner-know-grid">'+re.sub(r'<p\b[^>]*>[\s\S]*?</p>',card,m[1])+'</div>',block,count=1)
+        # Reuse the approved hero CTA label/destination, not invented copy.
+        source=re.search(r'<a data-copy="(?:8|9):5"[\s\S]*?</a>',page)[0]
+        source=source.replace('<div class="btn-fill"></div>','').replace(arrow,'')
+        source=re.sub(r' data-copy="[^"]+"','',source,count=1)
+        block=block.replace('<div class="rf-actions"></div>','<div class="brand-owner-actions">'+button(source,'light')+'</div>',1)
+        return block.replace('</section>',wave('bottom')+'</section>')
+    section('section-2',know)
+    def deliverables(block):
+        block=block.replace('rf-sand rf-cards','rf-sand rf-cards brand-owner-deliverables',1)
+        block=block.replace('class="rf-card-grid"','class="brand-owner-disclosure-grid" data-brand-disclosures',1)
+        count=[0]
+        def disclosure(m):
+            i=count[0]; count[0]+=1
+            title=re.search(r'<h3\b[^>]*>[\s\S]*?</h3>',m[1])[0]
+            answer=re.sub(r'<span class="rf-card-no"[\s\S]*?</span>','',m[1]).replace(title,'',1)
+            return '<details class="brand-owner-disclosure" name="brand-deliverables"'+(' open' if i==0 else '')+' data-rf-reveal><summary class="brand-owner-summary"><span class="brand-owner-number" aria-hidden="true">'+f'{i+1:02d}'+'</span>'+symbol(i)+title+chevron+'</summary><div class="brand-owner-answer">'+answer+'</div></details>'
+        block=re.sub(r'<article class="rf-card" data-rf-reveal>([\s\S]*?)</article>',disclosure,block)
+        expected=8 if lang=='ar' else 9
+        if count[0]!=expected: raise ValueError('Unexpected number of approved brand deliverables')
+        return block
+    section('section-3',deliverables)
+    def compact_cards(block,kind):
+        # The owner invited a creative layout for these two sections after the
+        # initial request. Keep every approved title, sentence and CTA intact.
+        block=block.replace('rf-cards"','rf-cards brand-owner-'+kind+'"',1)
+        grid='brand-owner-proof-grid' if kind=='why' else 'brand-owner-audience-grid'
+        block=block.replace('class="rf-card-grid"','class="'+grid+'" data-brand-compact',1)
+        audience_symbols=['star','swap','chart','bag','activity','work']
+        count=[0]
+        def card(m):
+            i=count[0]; count[0]+=1
+            title=re.search(r'<h3\b[^>]*>[\s\S]*?</h3>',m[1])[0]
+            answer=re.sub(r'<span class="rf-card-no"[\s\S]*?</span>','',m[1]).replace(title,'',1)
+            decoration=('<span class="brand-owner-number" aria-hidden="true">'+f'{i+1:02d}'+'</span>' if kind=='why' else iconly_svg(audience_symbols[i],'brand-owner-symbol'))
+            return '<details class="brand-owner-compact-card" open data-rf-reveal><summary class="brand-owner-summary">'+decoration+title+chevron+'</summary><div class="brand-owner-answer">'+answer+'</div></details>'
+        block=re.sub(r'<article class="rf-card" data-rf-reveal>([\s\S]*?)</article>',card,block)
+        if count[0]!=6: raise ValueError('Expected six brand '+kind+' cards')
+        if kind=='why':
+            block=block.replace('data-scroll-section>','data-scroll-section>'+wave('top'),1)
+            block=block.replace('</section>',wave('bottom')+'</section>')
+        else:
+            block=block.replace('<div class="rf-actions">','<div class="brand-owner-actions">',1)
+            block=re.sub(r'<a\b[^>]*class="rf-button magnetic"[\s\S]*?</a>',lambda m:button(m[0],'primary'),block)
+        return block
+    section('section-4',lambda b:compact_cards(b,'why'))
+    section('section-5',lambda b:compact_cards(b,'audience'))
+    def process(block):
+        block=block.replace('rf-process"','rf-process brand-owner-process"',1)
+        block=block.replace('data-scroll-section>','data-scroll-section>'+wave('top'),1)
+        block=block.replace('<li data-rf-reveal>','<li>')
+        block=block.replace('class="rf-step-card"','class="rf-step-card" data-about-step data-reveal-scope="brand"')
+        return block.replace('</section>',wave('bottom')+'</section>')
+    section('section-7',process)
+    def outcomes(block):
+        block=block.replace('rf-cards"','rf-cards brand-owner-outcomes"',1)
+        stems=['01-brand-always-present','02-memorable-brand','03-consistent-presence','04-stand-out','05-build-trust','06-marketing-foundation']
+        count=[0]
+        def card(m):
+            title=html.unescape(re.search(r'<h3\b[^>]*>([\s\S]*?)</h3>',m[1])[1])
+            # The updated Arabic source reorders outcomes. Keep the supplied
+            # owner photographs attached to their meaning, not an old index.
+            mapping=[('دائماً','01-brand-always-present'),('يتذكرها','02-memorable-brand'),
+                     ('متسق','03-consistent-presence'),('تميزك','04-stand-out'),
+                     ('المصداقية','05-build-trust'),('أساس','06-marketing-foundation')]
+            stem=next((image for term,image in mapping if term in title),stems[count[0]])
+            count[0]+=1
+            base='/assets/images/brand-benefits/'+stem
+            sizes='(max-width:760px) 92vw, (max-width:1100px) 44vw, 29vw'
+            sources=''.join('<source type="image/'+fmt+'" srcset="'+', '.join(base+'-'+str(w)+'.'+fmt+' '+str(w)+'w' for w in (480,800,1440))+'" sizes="'+sizes+'">' for fmt in ('avif','webp'))
+            picture='<picture class="brand-owner-outcome-media">'+sources+'<img src="'+base+'.jpg" width="1440" height="1024" alt="" loading="lazy" decoding="async"></picture>'
+            return '<article class="rf-card brand-owner-outcome-card" data-rf-reveal>'+picture+m[1]+'</article>'
+        block=re.sub(r'<article class="rf-card" data-rf-reveal>([\s\S]*?)</article>',card,block)
+        if count[0]!=6: raise ValueError('Expected six illustrated brand outcome cards')
+        return block
+    section('section-8',outcomes)
+    def investment(block):
+        block=block.replace('rf-cards"','rf-cards brand-owner-investment"',1)
+        block=re.sub(r'<a\b[^>]*class="rf-button magnetic"[\s\S]*?</a>',lambda m:button(m[0],'primary'),block)
+        return block
+    section('section-9',investment)
+    return page.replace('<section class="section case-top-wrap',marker+'<section class="section case-top-wrap',1)
 
 
 def decorate_existing(page, route, lang):
@@ -579,6 +735,8 @@ def decorate_existing(page, route, lang):
         if a in page: page=re.sub(re.escape(a)+r'[\s\S]*?'+re.escape(z),lambda _:block,page)
         else: page=page.replace('<!-- CLIENTS:BEGIN',block+'\n<!-- CLIENTS:BEGIN',1)
         page=refine_seo_owner(page,lang)
+        page=refine_seo_studio(page,lang)
+        page=refine_seo_premium(page,lang)
         return re.sub(r'[ \t]+(?=\n)', '', page)
     if route!='/about/': return page
     if 'rf-about-page' not in page:
@@ -613,10 +771,21 @@ def refine_seo_owner(page,lang='ar'):
     """Bilingual SEO review; preserve each language's supplied copy independently."""
     # Repair a pre-existing duplicate paragraph injected into the closing tag.
     # The approved sentence remains in the fourth package card, unchanged.
-    page=re.sub(r'</html<p class="seo-plan-fit">نحوّل محركات البحث إلى مصدر نموّ مستمرّ لمشروعك\.</p>\s*>','</html>',page)
+    duplicate_fit=('نحوّل محركات البحث إلى مصدر نموّ مستمرّ لمشروعك.' if lang=='ar'
+                   else 'Turns search engines into a steady source of demand for your business.')
+    page=re.sub(r'</html<p class="seo-plan-fit">'+re.escape(duplicate_fit)+r'</p>\s*>','</html>',page)
     # Remove requested sections even when another generator restores the block.
     page=re.sub(r'<!-- REFRESH:SEO-TEAM:BEGIN -->[\s\S]*?<!-- REFRESH:SEO-TEAM:END -->\n?','',page)
     page=re.sub(r'<section\b[^>]*id="clients"[\s\S]*?</section>','',page)
+    # Package orders use the site's approved WhatsApp destination in both
+    # languages; preserve all package copy and the adopted arrow/fill markup.
+    def package_link(m):
+        attrs=re.sub(r'\s+(?:target|rel)="[^"]*"','',m[2])
+        attrs=re.sub(r'href="[^"]*"','href="'+WA+'"',attrs,count=1)
+        return m[1]+attrs+' target="_blank" rel="noopener noreferrer">'
+    page,n=re.subn(r'(<div class="btn btn-normal seo-plan-cta">\s*<a\b)([^>]*)(>)',package_link,page)
+    expected_plans=3 if 'data-seo-package-edition=' in page else 4
+    if n!=expected_plans: raise ValueError('Unexpected WhatsApp SEO package order link count')
     marker='<!-- OWNER:SEO-2026-10-09 -->'
     if marker in page: return refine_seo_compact(page,lang)
     page=page.replace('rf-seo-page"','rf-seo-page rf-seo-owner"',1)
@@ -672,17 +841,8 @@ def refine_seo_owner(page,lang='ar'):
         return block.replace('</section>',wave('bottom')+'</section>')
     section('seo-why-zero2one',why)
     def audience(block):
-        # Original inline vector icons, SF-like line weight; no font dependency.
-        shapes=[
-          '<rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18M12 12v5m-2.5-2.5h5"/>',
-          '<path d="M4 21V5l8-2 8 2v16M8 8h1m6 0h1M8 12h1m6 0h1M10 21v-5h4v5"/>',
-          '<path d="M3 4h2l2 12h11l3-9H6"/><circle cx="9" cy="20" r="1"/><circle cx="17" cy="20" r="1"/>',
-          '<rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/>',
-          '<path d="m5 5 14 14m-2-16a5 5 0 0 0-5 6L3 18l3 3 9-9a5 5 0 0 0 6-5l-4 3-3-3 3-4Z"/>',
-          '<path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/>'
-        ]
-        icons=iter(shapes)
-        return re.sub(r'<article class="seo-tile">',lambda m:m[0]+'<svg class="seo-owner-icon" viewBox="0 0 24 24" aria-hidden="true">'+next(icons)+'</svg>',block)
+        icons=iter(['paper-plus','work','buy','category','setting','location'])
+        return re.sub(r'<article class="seo-tile">',lambda m:m[0]+iconly_svg(next(icons),'seo-owner-icon'),block)
     section('seo-audience',audience)
     section('seo-packages',lambda b:re.sub(r'<p class="seo-plan-price">[\s\S]*?</p>','',b))
     def process(block):
@@ -754,6 +914,383 @@ def refine_seo_compact(page,lang):
     return page.replace('<!-- OWNER:SEO-2026-10-09 -->',marker+'<!-- OWNER:SEO-2026-10-09 -->',1)
 
 
+def refine_seo_studio(page,lang='ar'):
+    """SEO-only presentation hooks; preserve supplied copy and native controls.
+
+    Every insertion checks its own class rather than relying only on the page
+    marker. This keeps the transformation idempotent when the FAQ generator
+    refreshes its block independently of the rest of the page.
+    """
+    marker='<!-- OWNER:SEO-STUDIO-2026-10-12 -->'
+    if 'seo-service-page' not in page: return page
+
+    def attr(tag,name,value):
+        if re.search(r'\b'+re.escape(name)+r'(?:=|\s|>)',tag): return tag
+        return tag[:-1]+' '+name+'="'+esc(value)+'">'
+
+    def classes(tag,add=(),remove=()):
+        def value(m):
+            names=[n for n in m[1].split() if n not in remove]
+            names.extend(n for n in add if n not in names)
+            return 'class="'+' '.join(names)+'"'
+        return re.sub(r'class="([^"]*)"',value,tag,count=1)
+
+    def reveal(tag,kind='card'):
+        return attr(tag,'data-seo-studio-reveal',kind)
+
+    def index(n,cls='seo-studio-index'):
+        return '<span class="'+cls+'" aria-hidden="true">'+f'{n:02d}'+'</span>'
+
+    def icon(key):
+        return iconly_svg(key,'seo-studio-icon')
+
+    def section(id,fn):
+        nonlocal page
+        pattern=r'<section\b[^>]*id="'+re.escape(id)+r'"[\s\S]*?</section>'
+        page,n=re.subn(pattern,lambda m:fn(m[0]),page,count=1)
+        if n!=1: raise ValueError('Missing SEO studio section '+id)
+
+    page=re.sub(r'<main\b[^>]*class="[^"]*\bseo-service-page\b[^"]*"[^>]*>',
+                lambda m:classes(m[0],('rf-seo-studio',)),page,count=1)
+    # Keep an existing content-hash stamp; the build's asset stamper owns it.
+    if not re.search(r'<link\b[^>]*href="/assets/css/seo-studio-review\.min\.css(?:\?[^"\s]*)?"',page):
+        css='<link href="/assets/css/seo-studio-review.min.css?v=0" rel="stylesheet" data-seo-studio-review>'
+        page=page.replace('</head>','   '+css+'\n</head>',1)
+
+    def hero(block):
+        block=re.sub(r'<div\b[^>]*class="[^"]*\bseo-hero-card\b[^"]*"[^>]*>',
+                     lambda m:classes(m[0],remove=('once-in',)),block,count=1)
+        return re.sub(r'<div\b[^>]*class="(?:seo-hero-copy|seo-hero-visual)"[^>]*>',
+                      lambda m:reveal(m[0],'hero'),block)
+    page=re.sub(r'<section\b[^>]*class="[^"]*\bseo-hero-shell\b[^"]*"[^>]*>[\s\S]*?</section>',
+                lambda m:hero(m[0]),page,count=1)
+
+    def shots(block):
+        chips=[('search','Google'),('location','Maps'),('chat','AI')]
+        count=[0]
+        def shot(m):
+            count[0]+=1
+            opening=reveal(m[1])
+            if 'seo-studio-shot-head' in m[2]: return opening+m[2]+m[3]
+            key,label=chips[count[0]-1]
+            head='<div class="seo-studio-shot-head" aria-hidden="true">'+index(count[0])+icon(key)+'<span class="seo-studio-shot-label">'+label+'</span></div>'
+            return opening+head+m[2]+m[3]
+        block=re.sub(r'(<figure\b[^>]*class="seo-shot"[^>]*>)([\s\S]*?)(</figure>)',shot,block)
+        if count[0]!=3: raise ValueError('Expected three SEO studio visibility shots')
+        return block
+    section('seo-why',shots)
+
+    def know(block):
+        keys=['search','activity','location','work','swap','chat','chart']
+        count=[0]
+        def card(m):
+            count[0]+=1
+            opening=reveal(m[1])
+            if 'seo-studio-card-head' in m[2]: return opening+m[2]+m[3]
+            number=re.search(r'<span class="seo-owner-number"[\s\S]*?</span>',m[2])
+            if not number: raise ValueError('Missing SEO studio customer card number')
+            copy=m[2].replace(number[0],'',1)
+            head='<div class="seo-studio-card-head">'+index(count[0],'seo-owner-number seo-studio-index')+icon(keys[count[0]-1])+'</div>'
+            return opening+head+'<div class="seo-studio-copy">'+copy+'</div>'+m[3]
+        block=re.sub(r'(<li\b[^>]*>)([\s\S]*?)(</li>)',card,block)
+        if count[0]!=7: raise ValueError('Expected seven SEO studio customer cards')
+        return block
+    section('seo-know',know)
+
+    def services(block):
+        keys=['discovery','location','setting','search','edit-square','chat','swap','buy','chart']
+        count=[0]
+        def card(m):
+            count[0]+=1
+            opening=reveal(m[1])
+            content=m[2]
+            if 'seo-studio-service-head' not in content:
+                head='<div class="seo-studio-service-head">'+index(count[0])+icon(keys[count[0]-1])+'</div>'
+                content=content.replace('<div class="seo-card-body">','<div class="seo-card-body">'+head,1)
+            return opening+content+m[3]
+        block=re.sub(r'(<article\b[^>]*class="seo-card"[^>]*>)([\s\S]*?)(</article>)',card,block)
+        if count[0]!=9: raise ValueError('Expected nine SEO studio service cards')
+        return block
+    section('whats-included',services)
+
+    def summary_icons(block,keys,art=False):
+        count=[0]
+        def summary(m):
+            count[0]+=1
+            key=keys[count[0]-1]
+            return m[1]+(icon(key) if 'seo-studio-icon' not in m[2] else '')+m[2]+m[3]
+        block=re.sub(r'(<summary\b[^>]*>)([\s\S]*?)(</summary>)',summary,block)
+        if count[0]!=len(keys): raise ValueError('Unexpected SEO studio summary count')
+        block=re.sub(r'<details\b[^>]*class="seo-tile seo-owner-accordion"[^>]*>',lambda m:reveal(m[0]),block)
+        if art:
+            count=[0]
+            def answer(m):
+                count[0]+=1
+                if 'seo-studio-result-art' in m[2]: return m[0]
+                key=keys[count[0]-1]
+                drawing=('<div class="seo-studio-result-art seo-studio-result-art--'+key+'" aria-hidden="true">'
+                         '<span class="seo-studio-art-orbit"></span>'
+                         '<span class="seo-studio-art-dot"></span><span class="seo-studio-art-dot"></span><span class="seo-studio-art-dot"></span>'
+                         '<span class="seo-studio-art-bars"><span class="seo-studio-art-bar"></span><span class="seo-studio-art-bar"></span><span class="seo-studio-art-bar"></span></span>'
+                         '<span class="seo-studio-art-line"></span></div>')
+                return m[1]+drawing+m[2]+m[3]
+            block=re.sub(r'(<div class="seo-owner-answer">)([\s\S]*?)(</div>)',answer,block)
+            if count[0]!=len(keys): raise ValueError('Unexpected SEO studio answer count')
+        return block
+    section('seo-why-zero2one',lambda b:summary_icons(b,['work','star','swap','location','tick-square','discovery']))
+
+    def audience(block):
+        count=[0]
+        def summary(m):
+            count[0]+=1
+            return m[1]+(index(count[0]) if 'seo-studio-index' not in m[2] else '')+m[2]+m[3]
+        block=re.sub(r'(<summary\b[^>]*>|<div class="seo-audience-heading">)([\s\S]*?)(</summary>|</div>)',summary,block)
+        if count[0]!=6: raise ValueError('Expected six SEO studio audience cards')
+        return re.sub(r'<(?:details|article)\b[^>]*class="seo-tile seo-owner-accordion[^\"]*"[^>]*>',lambda m:reveal(m[0]),block)
+    section('seo-audience',audience)
+
+    def plans(block):
+        block=re.sub(r'<section\b[^>]*>',lambda m:classes(m[0],remove=('once-in',)),block,count=1)
+        block=re.sub(r'<div\b[^>]*class="[^"]*\bflex-col\b[^"]*"[^>]*>',
+                     lambda m:classes(m[0],remove=('fade-in','animate')),block)
+        block=re.sub(r'<h2\b[^>]*class="case-overview-sub"[^>]*>',lambda m:reveal(m[0],'heading'),block,count=1)
+        keys=['discovery','activity','chart','star']
+        count=[0]
+        def plan(m):
+            count[0]+=1
+            content=m[2]
+            def summary(s):
+                return s[1]+(icon(keys[count[0]-1]) if 'seo-studio-icon' not in s[2] else '')+s[2]+s[3]
+            content=re.sub(r'(<summary\b[^>]*>)([\s\S]*?)(</summary>)',summary,content,count=1)
+            return reveal(m[1])+content+m[3]
+        block=re.sub(r'(<article\b[^>]*class="seo-plan[^"]*"[^>]*>)([\s\S]*?)(</article>)',plan,block)
+        expected=3 if 'data-seo-package-edition=' in block else 4
+        if count[0]!=expected: raise ValueError('Unexpected legacy/replacement SEO studio plan count')
+        return block
+    section('seo-packages',plans)
+
+    def process(block):
+        block=re.sub(r'<ol\b[^>]*class="seo-timeline"[^>]*>',lambda m:attr(m[0],'data-seo-studio-process',''),block,count=1)
+        keys=['discovery','search','work','setting','activity','chart','swap']
+        count=[0]
+        def step(m):
+            count[0]+=1
+            content=m[2]
+            if 'seo-studio-icon' not in content:
+                content=icon(keys[count[0]-1])+content
+            if count[0]==1 and 'seo-studio-process-line' not in content:
+                # A decorative descendant keeps the ordered list at seven real
+                # steps. CSS/JS can size this line to the whole timeline.
+                content='<span class="seo-studio-process-line" aria-hidden="true"><span class="seo-studio-process-progress"></span></span>'+content
+            return m[1]+content+m[3]
+        block=re.sub(r'(<li\b[^>]*class="seo-timeline-item"[^>]*>)([\s\S]*?)(</li>)',step,block)
+        if count[0]!=7: raise ValueError('Expected seven SEO studio process steps')
+        return block
+    section('seo-process',process)
+
+    def expected(block):
+        block=summary_icons(block,['activity','search','chat','chart','tick-square','work'],art=True)
+        block=re.sub(r'<aside\b[^>]*class="seo-side"[^>]*>',lambda m:reveal(m[0]),block,count=1)
+        # This existing screenshot is documented in PORTFOLIO_EVIDENCE.md,
+        # page 9 of the owner's portfolio, and already used by its case study.
+        if 'seo-studio-side-evidence' not in block and (ROOT/'assets/images/work/alostaz-search-console.webp').is_file():
+            thumb=('<figure class="seo-studio-side-evidence" aria-hidden="true">'
+                   '<img src="/assets/images/work/alostaz-search-console.webp" width="717" height="255" alt="" loading="lazy" decoding="async">'
+                   '</figure>')
+            block=re.sub(r'(<aside\b[^>]*class="seo-side"[^>]*>)',lambda m:m[1]+thumb,block,count=1)
+        return block
+    section('seo-expected',expected)
+
+    def faq(block):
+        return re.sub(r'<details\b[^>]*class="svc-faq-item"[^>]*>',lambda m:reveal(m[0]),block)
+    section('faq',faq)
+
+    ids=['seo-why','seo-know','whats-included','seo-why-zero2one','seo-audience','seo-packages','seo-process','seo-expected','faq']
+    for n,id in enumerate(ids,1):
+        def presentation(block,n=n,id=id):
+            block=re.sub(r'<h2\b[^>]*class="[^"]*\bseo-sec-title\b[^"]*"[^>]*>',
+                         lambda m:reveal(classes(m[0],remove=('fade-in','animate')),'heading'),block)
+            if 'seo-studio-divider' not in block:
+                divider=('<div class="seo-studio-divider" aria-hidden="true" data-seo-studio-reveal="divider">'
+                         +index(n,'seo-studio-divider-index')+
+                         '<span class="seo-studio-divider-line"></span><span class="seo-studio-divider-orbits">'
+                         '<span class="seo-studio-divider-orbit"></span><span class="seo-studio-divider-orbit"></span><span class="seo-studio-divider-orbit"></span>'
+                         '</span></div>')
+                inner='container medium' if id=='seo-packages' else r'seo-sec-inner[^"]*'
+                block,count=re.subn(r'(?=<div class="'+inner+r'">)',lambda _:divider,block,count=1)
+                if count!=1: raise ValueError('Missing SEO studio divider anchor '+id)
+            return block
+        section(id,presentation)
+    if marker not in page:
+        page=page.replace('<!-- OWNER:SEO-COMPACT-2026-10-10 -->',marker+'<!-- OWNER:SEO-COMPACT-2026-10-10 -->',1)
+    return page
+
+
+def refine_seo_premium(page,lang):
+    """Owner's split hero, supplied phone mockups and replaceable image slots."""
+    def section(id,fn):
+        nonlocal page
+        page,n=re.subn(r'<section\b[^>]*id="'+re.escape(id)+r'"[\s\S]*?</section>',lambda m:fn(m[0]),page,count=1)
+        if n!=1: raise ValueError('Missing premium SEO section '+id)
+    def title(m):
+        if 'seo-hero-title-primary' in m[2]: return m[0]
+        primary,separator,secondary=m[2].partition(': ')
+        if not separator: raise ValueError('Expected the approved two-part SEO title')
+        primary=re.sub(r'\bSEO\b','<span class="seo-hero-title-accent">SEO</span>',primary,count=1)
+        return m[1]+'<span class="seo-hero-title-primary">'+primary+'</span><span class="seo-hero-title-separator">:</span> <span class="seo-hero-title-secondary">'+secondary+'</span>'+m[3]
+    page=re.sub(r'(<h1\b[^>]*class="seo-hero-title"[^>]*>)([\s\S]*?)(</h1>)',title,page,count=1)
+    def phones(block):
+        stems=['google-search','google-maps','chatgpt-search']
+        labels=(['رقم ١ في بحث جوجل','رقم ١ في بحث خرائط جوجل','رقم ١ في بحث ChatGPT'] if lang=='ar' else
+                ['#1 in Google Search','#1 in Google Maps Search','#1 in ChatGPT Search'])
+        count=[0]
+        def shot(m):
+            i=count[0]; count[0]+=1
+            content=m[2]
+            content=re.sub(r'<figcaption class="seo-studio-shot-caption">[\s\S]*?</figcaption>','',content)
+            directory='phone-mockups-ar-2026-10-14' if lang=='ar' else 'phone-mockups-2026-10-12'
+            base='/assets/images/seo/'+directory+'/'+stems[i]
+            height=1736 if lang=='ar' and i==0 else 1700
+            alt=('تصوّر توضيحي للظهور في ' if lang=='ar' else 'Illustrative search visibility on ')+['Google Search','Google Maps','ChatGPT'][i]
+            caption='<figcaption class="seo-studio-shot-caption"><span class="seo-studio-shot-rank" lang="'+lang+'" dir="'+('rtl' if lang=='ar' else 'ltr')+'">'+labels[i]+'</span></figcaption>'
+            pic='<picture style="--seo-phone-ratio:1000 / '+str(height)+'"><img src="'+base+'-700.webp" srcset="'+', '.join(base+'-'+str(w)+'.webp '+str(w)+'w' for w in (400,700,1000))+'" sizes="(max-width:760px) 88vw, (max-width:1100px) 58vw, 31vw" width="1000" height="'+str(height)+'" alt="'+esc(alt)+'" loading="lazy" decoding="async"></picture>'
+            content=re.sub(r'<picture\b[^>]*>[\s\S]*?</picture>',lambda _:caption+pic,content,count=1)
+            return m[1]+content+m[3]
+        block=re.sub(r'(<figure\b[^>]*class="seo-shot"[^>]*>)([\s\S]*?)(</figure>)',shot,block)
+        if count[0]!=3: raise ValueError('Expected three supplied phone mockups')
+        return block
+    section('seo-why',phones)
+    supplied=json.loads((ROOT/'assets/images/seo/illustrations-2026-10-13/provenance.json').read_text())['images']
+    def illustration(group,stem):
+        meta=next(i for i in supplied if i['group']==group and i['stem']==stem)
+        base='/assets/images/seo/illustrations-2026-10-13/'+group+'/'+stem
+        return '<figure class="seo-owner-illustration" data-seo-illustration="'+group+'/'+stem+'" aria-hidden="true"><img src="'+base+'.webp" srcset="'+base+'-320.webp 320w, '+base+'.webp '+str(meta['width'])+'w" sizes="(max-width:760px) 38vw, (max-width:1100px) 28vw, 22vw" width="'+str(meta['width'])+'" height="'+str(meta['height'])+'" alt="" loading="lazy" decoding="async"></figure>'
+    def know(block):
+        keys=['01_new_website_visibility','02_no_traffic_or_leads','03_missing_google_maps','04_competitors_dominating','05_algorithm_rankings_drop','06_ai_search_changes','07_high_ppc_cost']; count=[0]
+        def card(m):
+            i=count[0];count[0]+=1
+            content=m[2]
+            content=re.sub(r'<figure class="(?:seo-card-placeholder|seo-owner-illustration)[^"]*"[\s\S]*?</figure>','',content)
+            content=content.replace('<div class="seo-studio-copy">',illustration('know',keys[i])+'<div class="seo-studio-copy">',1)
+            return m[1]+content+m[3]
+        block=re.sub(r'(<li\b[^>]*>)([\s\S]*?)(</li>)',card,block)
+        if count[0]!=7: raise ValueError('Expected seven reserved customer image slots')
+        return block
+    section('seo-know',know)
+    def covers(block,group,keys):
+        count=[0]
+        def summary(m):
+            i=count[0];count[0]+=1
+            content=re.sub(r'<figure class="(?:seo-card-placeholder|seo-owner-illustration)[^"]*"[\s\S]*?</figure>','',m[2])
+            if 'seo-studio-summary-copy' not in content:
+                content='<span class="seo-studio-summary-copy">'+content+'</span>'
+            return m[1]+illustration(group,keys[i])+content+m[3]
+        block=re.sub(r'(<summary\b[^>]*>|<div class="seo-audience-heading">)([\s\S]*?)(</summary>|</div>)',summary,block)
+        if count[0]!=6: raise ValueError('Expected six image-led premium summaries')
+        return block
+    section('seo-why-zero2one',lambda b:covers(b,'why',['01_all_sectors','02_customer_retention','03_monthly_reports','04_saudi_market_strategy','05_safe_tools','06_research_and_development']))
+    section('seo-audience',lambda b:covers(b,'audience',['03_new_websites','02_company_websites','01_ecommerce','06_digital_platforms','05_service_websites','04_local_businesses']))
+    def audience_slider(block):
+        if 'seo-audience-scroll' in block: return block
+        title=re.search(r'<h2\b[^>]*>([\s\S]*?)</h2>',block)[1]
+        label=esc(html.unescape(re.sub(r'<[^>]+>','',title)).strip())
+        labels=['البطاقة السابقة','البطاقة التالية'] if lang=='ar' else ['Previous card','Next card']
+        controls='<div class="rf-home-scroll-controls" hidden>'
+        for direction,text in zip(('prev','next'),labels):
+            controls+='<button type="button" data-home-scroll-'+direction+' aria-label="'+text+'"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button>'
+        controls+='</div>'
+        def wrap(m):
+            opening=m[1][:-1]+' data-home-scroll-track tabindex="0" role="region" aria-label="'+label+'">'
+            return '<div class="seo-audience-scroll" data-home-scroll data-home-scroll-auto-height>'+opening+m[2]+'</div>'+controls+'</div>'
+        block,n=re.subn(r'(<div class="seo-tiles[^\"]*"[^>]*>)([\s\S]*?</details>\s*)</div>(?=\s*<div class="seo-section-cta")',wrap,block,count=1)
+        if n!=1: raise ValueError('Missing six-card SEO audience rail')
+        return block
+    section('seo-audience',audience_slider)
+    def expanded_audience(block):
+        block=block.replace(' data-seo-accordion','').replace(' data-home-scroll-auto-height','')
+        def card(m):
+            opening=m[1].replace('<details','<article',1).replace(' open','').replace('seo-tile seo-owner-accordion','seo-tile seo-owner-accordion seo-audience-card')
+            content=m[2].replace('<summary>','<div class="seo-audience-heading">',1).replace('</summary>','</div>',1)
+            content=re.sub(r'<svg class="seo-owner-chevron"[\s\S]*?</svg>','',content)
+            return opening+content+'</article>'
+        return re.sub(r'(<details\b[^>]*class="seo-tile seo-owner-accordion"[^>]*>)([\s\S]*?)</details>',card,block)
+    section('seo-audience',expanded_audience)
+    def expanded_packages(block):
+        # Permanent content is not a disabled disclosure: use ordinary headings
+        # and lists, so every detail remains available even without JavaScript.
+        block=block.replace(' data-seo-accordion','')
+        def card(m):
+            content=m[2]
+            if 'seo-plan-content' in content: return m[0]
+            if content.count('<details')!=2 or content.count('</details>')!=2:
+                raise ValueError('Expected the two existing package disclosures')
+            content=re.sub(r'<details\b[^>]*class="seo-owner-accordion"[^>]*>','<div class="seo-plan-content">',content,count=1)
+            content=content.replace('<summary>','<div class="seo-plan-heading">',1).replace('</summary>','</div>',1)
+            content=content.replace('<span class="seo-owner-details-label">','<span class="seo-owner-details-label" hidden>',1)
+            content=re.sub(r'<svg class="seo-owner-chevron"[\s\S]*?</svg>','',content,count=1)
+            content=re.sub(r'<details\b[^>]*class="seo-plan-more"[^>]*>','<div class="seo-plan-more">',content,count=1)
+            content=content.replace('<summary class="seo-plan-toggle">','<p class="seo-plan-toggle">',1).replace('</summary>','</p>',1)
+            content=content.replace('</details>','</div>')
+            return m[1]+content+m[3]
+        block,n=re.subn(r'(<article\b[^>]*class="seo-plan[^\"]*"[^>]*>)([\s\S]*?)(</article>)',card,block)
+        expected=3 if 'data-seo-package-edition=' in block else 4
+        if n!=expected: raise ValueError('Unexpected permanently expanded SEO package count')
+        return block
+    section('seo-packages',expanded_packages)
+    def package_slider(block):
+        if 'seo-plans-scroll' in block: return block
+        title='باقات تحسين محركات البحث' if lang=='ar' else 'SEO packages'
+        labels=['الباقة السابقة','الباقة التالية'] if lang=='ar' else ['Previous package','Next package']
+        controls='<div class="rf-home-scroll-controls" hidden>'
+        for direction,label in zip(('prev','next'),labels):
+            controls+='<button type="button" data-home-scroll-'+direction+' aria-label="'+label+'"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button>'
+        controls+='</div>'
+        def wrap(m):
+            opening=m[1][:-1]+' data-home-scroll-track tabindex="0" role="region" aria-label="'+title+'">'
+            return '<div class="seo-plans-scroll" data-home-scroll data-home-scroll-always>'+opening+m[2]+'</div>'+controls+'</div>'
+        block,n=re.subn(r'(<div class="seo-plans-grid"[^>]*>)([\s\S]*?</article>\s*)</div>(?=\s*<p class="seo-plans-note")',wrap,block,count=1)
+        if n!=1: raise ValueError('Missing four-card SEO package rail')
+        return block
+    section('seo-packages',package_slider)
+    # The Oct 16 owner-supplied comparison replaces package copy and the hidden
+    # offer catalogue only; the surrounding SEO presentation stays untouched.
+    from seo_packages import refine as refine_seo_packages
+    page=refine_seo_packages(page,lang)
+    # The owner confirmed Kerolos as the only SEO team member. Reuse his exact
+    # existing bilingual profile; don't assign unrelated staff to the SEO team.
+    cards=team_cards(lang,'seo-riyadh')
+    card=re.search(r'<article class="testi-card team-card">([\s\S]*?)</article>',cards)
+    if not card: raise ValueError('Missing confirmed SEO team profile')
+    profile=card[1]
+    image=re.search(r'<img\b[^>]*>',profile)[0]
+    image=re.sub(r' sizes="[^"]*"',' sizes="(max-width:760px) 100px, 260px"',image)
+    def field(cls): return re.search(r'<p class="'+cls+r'">([\s\S]*?)</p>',profile)[1]
+    heading='تعرف على فريق متخصصين السيو' if lang=='ar' else 'Meet Our SEO Team'
+    team='<!-- SEO-STUDIO:TEAM:BEGIN --><section class="section seo-sec seo-team" id="seo-team" data-scroll-section><div class="seo-studio-divider" aria-hidden="true" data-seo-studio-reveal="divider"><span class="seo-studio-divider-index">10</span><span class="seo-studio-divider-line"></span></div><div class="seo-sec-inner"><h2 class="seo-sec-title" data-seo-studio-reveal="heading">'+heading+'</h2><article class="seo-team-card" data-seo-studio-reveal="card"><div class="seo-team-photo">'+image+'</div><div class="seo-team-identity"><h3 class="seo-team-name">'+field('testi-name')+'</h3><p class="seo-team-role">'+field('testi-role')+'</p><p class="seo-team-experience">'+field('team-exp')+'</p></div><p class="seo-team-bio">'+field('testi-quote')+'</p></article></div></section><!-- SEO-STUDIO:TEAM:END -->'
+    if '<!-- SEO-STUDIO:TEAM:BEGIN -->' in page:
+        page=re.sub(r'<!-- SEO-STUDIO:TEAM:BEGIN -->[\s\S]*?<!-- SEO-STUDIO:TEAM:END -->',lambda _:team,page,count=1)
+    else: page=page.replace('<!-- FAQ:END seo-riyadh -->','<!-- FAQ:END seo-riyadh -->\n'+team,1)
+    # Broad scroll-drawn ribbon, with one clipped window per section palette.
+    pattern=r'<section\b[^>]*class="[^"]*(?:seo-sec|seo-hero-shell|seo-plans)[^"]*"[^>]*>[\s\S]*?</section>'
+    index=[0]
+    def flow(m):
+        i=index[0];index[0]+=1
+        block=re.sub(r'<div class="seo-flow-trace"[\s\S]*?</div>', '', m[0])
+        tone='light' if re.search(r'id="(?:seo-know|seo-why-zero2one|seo-process)"',m[0]) else 'orange'
+        d='M 790 -80 C 790 50 160 20 210 210 C 235 360 835 130 810 340 C 765 520 -90 420 160 580 C 470 800 980 570 850 790 C 790 910 790 990 790 1080'
+        gradient='seo-ribbon-'+lang+'-'+str(i)
+        window='<div class="seo-flow-trace" data-seo-flow="'+str(i)+'" data-seo-flow-tone="'+tone+'" aria-hidden="true"><svg viewBox="0 0 1000 1000" preserveAspectRatio="none" fill="none" focusable="false"><defs><linearGradient id="'+gradient+'" x1="0" y1="0" x2="1" y2="1"><stop class="seo-flow-bridge-top" offset="0"/><stop class="seo-flow-bridge-top-end" offset="0"/><stop class="seo-flow-start" offset=".01"/><stop class="seo-flow-end" offset=".99"/><stop class="seo-flow-bridge-bottom" offset="1"/><stop class="seo-flow-bridge-bottom-end" offset="1"/></linearGradient></defs><path class="seo-flow-ribbon" pathLength="1" stroke="url(#'+gradient+')" d="'+d+'"/></svg></div>'
+        return re.sub(r'(<section\b[^>]*>)',lambda s:s[1]+window,block,count=1)
+    page=re.sub(pattern,flow,page)
+    if index[0]!=11: raise ValueError('Expected eleven connected SEO flow chapters')
+    # Owner follow-up: retain the full confirmed profile in an HTML comment,
+    # not a hidden/live section. Rebuilding first restores its canonical block
+    # above, so this wrapper cannot nest or accidentally re-enable the team.
+    page=re.sub(r'(<!-- SEO-STUDIO:TEAM:BEGIN -->)([\s\S]*?)(<!-- SEO-STUDIO:TEAM:END -->)',
+                lambda m:m[1]+'<!-- SEO TEAM DISABLED:2026-10-16\n'+m[2]+'\n-->'+m[3],page,count=1)
+    return page
+
+
 def refine_about_interactions(page):
     """Keep process parents visible; native compact disclosures preserve all copy."""
     marker='<!-- OWNER:ABOUT-INTERACTIONS-2026-10-09 -->'
@@ -805,6 +1342,16 @@ def refine_about_owner(page,lang):
     return page
 
 
+def polish_iconly(page):
+    """Update already-reviewed SEO pages without touching arrows or chevrons."""
+    if 'class="seo-owner-icon"' not in page: return page
+    icons=iter(['paper-plus','work','buy','category','setting','location'])
+    page,count=re.subn(r'<svg\b[^>]*class="seo-owner-icon"[^>]*>[\s\S]*?</svg>',
+                       lambda _:iconly_svg(next(icons),'seo-owner-icon'),page)
+    if count!=6: raise ValueError('Expected six SEO audience icons')
+    return page
+
+
 def polish_chrome(page,lang):
     faq_label='كل الأسئلة الشائعة' if lang=='ar' else 'All FAQs'
     def navlist(m):
@@ -839,7 +1386,7 @@ def polish_chrome(page,lang):
         if 'btn-text' in m[0]: return m[0]
         return m[0].replace('class="faq-cta-button"','class="faq-cta-button btn-click magnetic" data-strength="20" data-strength-text="10"').replace('>'+m[1]+'</a>','><div class="btn-fill"></div><span class="btn-text"><span class="btn-text-inner">'+m[1]+'</span></span></a>')
     page=re.sub(r'<a[^>]*class="faq-cta-button"[^>]*>([^<]+)</a>',faqcta,page)
-    return re.sub(r'[ \t]+(?=\n)', '', page)
+    return polish_iconly(re.sub(r'[ \t]+(?=\n)', '', page))
 
 
 def build(check=False):
@@ -875,6 +1422,8 @@ def build(check=False):
 if __name__=='__main__':
     changed=build('--check' in sys.argv)
     if '--check' not in sys.argv:
+        from service_studio import write_manifest
+        write_manifest()
         # Stable per-ID coverage, including explicitly held/excluded copy.
         coverage={r['id']:r for r in REPORT}
         (DATA/'copy-manifest.json').write_text(json.dumps(MANIFEST,ensure_ascii=False,indent=2))

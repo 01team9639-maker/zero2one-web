@@ -724,13 +724,13 @@ function initEditorialRefresh() {
     if (!animate || reduced.matches || !card.animate) return;
     // No hidden inline state, no resetting ancestor tween. Content remains
     // visible after finish/cancel, refresh, resize, upward scroll or navigation.
-    var seoStep = card.dataset.revealScope === 'seo';
-    var now = performance.now(), start = Math.max(now, lastAboutStart + (seoStep ? 200 : 160));
+    var enhancedStep = card.dataset.revealScope === 'seo' || card.dataset.revealScope === 'brand';
+    var now = performance.now(), start = Math.max(now, lastAboutStart + (enhancedStep ? 200 : 160));
     lastAboutStart = start;
     var anim = card.animate([
-      {opacity:0,transform:seoStep ? 'translate('+ (aboutSteps.indexOf(card)%2 ? '-20px' : '20px') +',24px) scale(.98)' : 'translateY(24px) scale(.98)'},
+      {opacity:0,transform:enhancedStep ? 'translate('+ (aboutSteps.indexOf(card)%2 ? '-20px' : '20px') +',24px) scale(.98)' : 'translateY(24px) scale(.98)'},
       {opacity:1,transform:'translateY(0) scale(1)'}
-    ], {duration:seoStep ? 760 : 620,delay:start-now,easing:'cubic-bezier(.2,.7,.2,1)',fill:'backwards'});
+    ], {duration:enhancedStep ? 760 : 620,delay:start-now,easing:'cubic-bezier(.2,.7,.2,1)',fill:'backwards'});
     card.dataset.aboutRevealCount='1';
     animations.add(anim);
     anim.onfinish = function () { animations.delete(anim); };
@@ -785,6 +785,79 @@ function initEditorialRefresh() {
       ScrollTrigger.refresh();
     });
   }
+  // Brand deliverables disclose at every size; reasons/audience cards collapse
+  // only on compact screens. Each group owns one selection and retains native
+  // details as a script-free fallback.
+  root.querySelectorAll('[data-brand-disclosures], [data-brand-compact]').forEach(function (group) {
+    var limited = group.hasAttribute('data-brand-compact');
+    var cards = Array.from(group.querySelectorAll('.brand-owner-disclosure, .brand-owner-compact-card'));
+    var chosen = cards.find(function (card) { return card.open; }) || null;
+    var anchorFrame = null;
+    undo.push(function () { if (anchorFrame !== null) cancelAnimationFrame(anchorFrame); });
+    function syncBrandCards() {
+      cards.forEach(function (card) {
+        if (limited) card.open = !compact.matches || card === chosen;
+        var summary = card.querySelector('summary');
+        summary.tabIndex = limited && !compact.matches ? -1 : 0;
+        if (limited && !compact.matches) summary.setAttribute('aria-disabled', 'true');
+        else summary.removeAttribute('aria-disabled');
+      });
+      refreshHeight();
+    }
+    cards.forEach(function (card) {
+      var summary = card.querySelector('summary');
+      // Keep native Space activation without also triggering the smooth
+      // scroll controller's global page-down keyboard shortcut.
+      on(summary, 'keydown', function (event) {
+        if (event.key === ' ' || event.code === 'Space') event.stopPropagation();
+      });
+      on(summary, 'click', function (event) {
+        event.preventDefault();
+        if (limited && !compact.matches) return;
+        var anchorTop = card.getBoundingClientRect().top;
+        var opening = !card.open;
+        chosen = opening ? card : null;
+        cards.forEach(function (other) { other.open = other === card && opening; });
+        // Closing a taller, earlier row must not pull the clicked title above
+        // the viewport. Preserve its on-screen position in smooth/native mode.
+        var anchorDelta = card.getBoundingClientRect().top - anchorTop;
+        if (anchorTop >= 0 && anchorTop < innerHeight && scroll && scroll.scrollTo) {
+          if (document.documentElement.classList.contains('has-scroll-smooth')) {
+            if (Math.abs(anchorDelta) > 2) {
+              if (scroll.update) scroll.update();
+              scroll.scrollTo(card, { duration:0, disableLerp:true, offset:-anchorTop });
+            }
+          } else {
+            // Let native details/focus anchoring settle before measuring again;
+            // its scroll adjustment may happen after the first layout read.
+            if (anchorFrame !== null) cancelAnimationFrame(anchorFrame);
+            anchorFrame = requestAnimationFrame(function () {
+              anchorFrame = null;
+              if (!card.isConnected) return;
+              // Use document layout coordinates, not a rect/pageYOffset pair
+              // that native anchoring can update between the two reads.
+              var targetTop = 0;
+              for (var node = card; node; node = node.offsetParent) targetTop += node.offsetTop;
+              window.scrollTo({ top:targetTop - anchorTop, behavior:'instant' });
+            });
+          }
+        }
+        var answer = card.querySelector('.brand-owner-answer');
+        if (opening && !reduced.matches && answer.animate) {
+          var anim = answer.animate([
+            { opacity: .25, transform: 'translateY(8px)' },
+            { opacity: 1, transform: 'translateY(0)' }
+          ], { duration: 320, easing: 'cubic-bezier(.2,.7,.2,1)' });
+          animations.add(anim);
+          anim.onfinish = function () { animations.delete(anim); };
+        }
+        refreshHeight();
+      });
+      on(card, 'toggle', refreshHeight);
+    });
+    syncBrandCards();
+    if (limited) on(compact, 'change', syncBrandCards);
+  });
   var whiteCards = Array.from(root.querySelectorAll('.rf-difference-item, .rf-about-value'));
   var selectedCard = whiteCards[0];
   function syncCards() {
@@ -840,7 +913,7 @@ function initEditorialRefresh() {
     cards.forEach(function (card) {
       var summary = card.querySelector('summary');
       on(summary, 'keydown', function (event) {
-        if (root.matches('.rf-seo-studio') && (event.key === ' ' || event.code === 'Space')) event.stopPropagation();
+        if (root.matches('.rf-seo-studio,.rf-service-studio') && (event.key === ' ' || event.code === 'Space')) event.stopPropagation();
       });
       on(summary, 'click', function (event) {
         event.preventDefault();
@@ -850,7 +923,7 @@ function initEditorialRefresh() {
         syncSeoCards();
         // A mobile accordion may close a taller card above the tapped title.
         // Preserve the visitor's on-screen anchor in native and smooth modes.
-        if (root.matches('.rf-seo-studio') && anchorTop >= 0 && anchorTop < innerHeight) {
+        if (root.matches('.rf-seo-studio,.rf-service-studio') && anchorTop >= 0 && anchorTop < innerHeight) {
           if (seoAnchorFrame !== null) cancelAnimationFrame(seoAnchorFrame);
           seoAnchorFrame = requestAnimationFrame(function () {
             seoAnchorFrame = null;
@@ -963,7 +1036,7 @@ function initEditorialRefresh() {
 // SEO-only studio motion. Content has no hidden CSS/inline state: a failed
 // observer, disabled scripts, reduced motion or teardown always leaves it usable.
 // BEGIN SEO STUDIO STYLESHEET
-var seoStudioStylesheet='/assets/css/seo-studio-review.min.css?v=9cc4e7c1';
+var seoStudioStylesheet='/assets/css/seo-studio-review.min.css?v=cc0f09cc';
 // END SEO STUDIO STYLESHEET
 function ensureSeoStudioStyles(root) {
   var link=document.querySelector('link[data-seo-studio-review]');
@@ -988,10 +1061,10 @@ function initSeoStudioMotion() {
   if (seoStudioCleanup) { seoStudioCleanup(); seoStudioCleanup=null; }
   var containers=document.querySelectorAll('[data-barba="container"]');
   var root=containers[containers.length-1];
-  if (!root || !root.matches('.rf-seo-studio')) return;
-  if(!ensureSeoStudioStyles(root))return;
+  if (!root || !root.matches('.rf-seo-studio,.rf-service-studio')) return;
+  if(root.matches('.rf-seo-studio')&&!ensureSeoStudioStyles(root))return;
   // Keep Arabic joining intact by animating whole words, never characters.
-  root.querySelectorAll('[data-seo-studio-reveal="heading"],.seo-hero-title-primary,.seo-hero-title-secondary,.seo-tile-title,.seo-card-title,.seo-plan-name,.seo-side-title').forEach(function(title){
+  root.querySelectorAll('[data-seo-studio-reveal="heading"],.seo-hero-title-primary,.seo-hero-title-secondary,.seo-tile-title,.seo-card-title,.seo-plan-name,.seo-side-title,.service-studio-title-primary,.service-studio-title-secondary,.service-studio-card h3,.service-studio-catalogue-grid h2').forEach(function(title){
     var walker=document.createTreeWalker(title,NodeFilter.SHOW_TEXT),texts=[];
     while(walker.nextNode())if(!walker.currentNode.parentElement.closest('.seo-title-word'))texts.push(walker.currentNode);
     texts.forEach(function(node){
@@ -1026,7 +1099,7 @@ function initSeoStudioMotion() {
   }
   function reveal(el,motion) {
     var i=nodes.indexOf(el),kind=el.dataset.seoStudioReveal;
-    var key=document.documentElement.lang+':'+i+':'+kind;
+    var key=(root.dataset.studioService||'seo')+':'+document.documentElement.lang+':'+i+':'+kind;
     el.dataset.seoStudioRevealed='true';
     if(seoStudioRevealed.has(key)) return;
     seoStudioRevealed.add(key);
@@ -1144,8 +1217,8 @@ function initSEOFlow() {
   if(seoFlowCleanup){seoFlowCleanup();seoFlowCleanup=null;}
   var containers=document.querySelectorAll('[data-barba="container"]');
   var root=containers[containers.length-1];
-  if(!root||!root.matches('.rf-seo-studio'))return;
-  if(!ensureSeoStudioStyles(root))return;
+  if(!root||!root.matches('.rf-seo-studio,.rf-service-studio'))return;
+  if(root.matches('.rf-seo-studio')&&!ensureSeoStudioStyles(root))return;
   var reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
   var states=Array.from(root.querySelectorAll('[data-seo-flow]')).map(function(el){
     var path=el.querySelector('.seo-flow-ribbon'),svg=el.querySelector('svg');
@@ -1176,6 +1249,7 @@ function initSEOFlow() {
     // ignored. Every window then uses the same absolute path and scale.
     states.forEach(function(s){s.top=virtualTop(s.el.parentElement);s.height=s.el.parentElement.getBoundingClientRect().height;});
     var anchors=[.73,.59,.81,.27,.72,.86,.25,.69,.43,.78,.30,.66];
+    while(anchors.length<=states.length)anchors.push([.74,.33,.82,.47][(anchors.length-12)%4]);
     var theme=getComputedStyle(root);
     var orange=theme.getPropertyValue('--studio-orange').trim(),cream=theme.getPropertyValue('--studio-cream').trim();
     var strength=Math.max(0,Math.min(1,parseFloat(theme.getPropertyValue('--seo-flow-opacity'))||.56));
@@ -2147,8 +2221,8 @@ function initContactForm() {
     const ar = (document.documentElement.getAttribute('lang') || 'en').indexOf('ar') === 0;
     const COPY = ar ? {
       sending: 'جارٍ الإرسال…',
-      sent: 'تم الإرسال ✓',
-      opened: 'افتح واتساب ✓',
+      sent: 'تم الإرسال',
+      opened: 'افتح واتساب',
       error: 'خطأ!',
       head: 'طلب جديد من الموقع',
       ok: 'شكراً لتواصلك مع ZERO 2 ONE. وصلتنا رسالتك وسنعاود الاتصال بك في نفس يوم العمل.',
@@ -2159,8 +2233,8 @@ function initContactForm() {
       }
     } : {
       sending: 'Sending…',
-      sent: 'Sent ✓',
-      opened: 'Opening WhatsApp ✓',
+      sent: 'Sent',
+      opened: 'Opening WhatsApp',
       error: 'Error!',
       head: 'New enquiry from the website',
       ok: 'Thanks for reaching out to ZERO 2 ONE. We have your message and will get back to you the same business day.',
@@ -2214,12 +2288,14 @@ function initContactForm() {
         window.open('https://wa.me/' + number + '?text=' + encodeURIComponent(asMessage(data)),
           '_blank', 'noopener');
         label.textContent = COPY.opened;
+        label.classList.add('iconly-status-success');
         label.style.color = '#4CAF50';
         contactForm.reset();
         $('.field').parent().removeClass('not-empty');
         trackLead('form', { service: data.service || '' });
         setTimeout(function () {
           label.textContent = originalLabel;
+          label.classList.remove('iconly-status-success');
           label.style.color = '';
         }, 4000);
         return;
@@ -2227,6 +2303,7 @@ function initContactForm() {
 
       // Visual Feedback
       label.textContent = COPY.sending;
+      label.classList.remove('iconly-status-success');
       submitBtn.style.opacity = '0.5';
       submitBtn.disabled = true;
 
@@ -2248,6 +2325,7 @@ function initContactForm() {
 
         if (response.ok && payload && payload.success) {
           label.textContent = COPY.sent;
+          label.classList.add('iconly-status-success');
           label.style.color = '#4CAF50';
           contactForm.reset();
           $('.field').parent().removeClass('not-empty');
@@ -2259,6 +2337,7 @@ function initContactForm() {
 
         } else {
           label.textContent = COPY.error;
+          label.classList.remove('iconly-status-success');
           label.style.color = '#f44336';
           alert(detail || COPY.fail);
         }
@@ -2266,11 +2345,13 @@ function initContactForm() {
         // Network failure or PHP unavailable — the WhatsApp link in .form-note
         // right beside the button is still there, so say so.
         label.textContent = COPY.error;
+        label.classList.remove('iconly-status-success');
         label.style.color = '#f44336';
         alert(COPY.fail);
       } finally {
         setTimeout(() => {
           label.textContent = originalLabel;
+          label.classList.remove('iconly-status-success');
           label.style.color = '';
           submitBtn.style.opacity = '1';
           submitBtn.disabled = false;
@@ -3121,7 +3202,7 @@ function initPortfolio() {
           '<div class="z2o-viewer-actions">' +
             '<button type="button" class="z2o-viewer-btn z2o-viewer-nav" data-prev hidden>&#8592;</button>' +
             '<button type="button" class="z2o-viewer-btn z2o-viewer-nav" data-next hidden>&#8594;</button>' +
-            '<button type="button" class="z2o-viewer-btn" data-close>&#10005;</button>' +
+            '<button type="button" class="z2o-viewer-btn" data-close><span class="iconly-viewer-close" aria-hidden="true"></span></button>' +
           '</div>' +
         '</div>' +
         '<figure class="z2o-viewer-figure">' +

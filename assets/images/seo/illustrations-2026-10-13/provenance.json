@@ -1,0 +1,424 @@
+{
+  "source": "User supplied illustrations, 2026-10-13",
+  "treatment": "Full frame, original color and alpha preserved",
+  "images": [
+    {
+      "group": "know",
+      "stem": "01_new_website_visibility",
+      "source": "owner-supplied/SEO_7_Transparent_Illustrations/01_new_website_visibility.png",
+      "sha256": "959fc2f6c5294e12b6e8c40c5176e9a77bb98c92150e8a3be16af4db8f3c8f07",
+      "width": 377,
+      "height": 375,
+      "outputs": [
+        {
+          "filename": "01_new_website_visibility-320.webp",
+          "width": 320,
+          "bytes": 26868,
+          "sha256": "d35201ea2bf8b730e5d777a0c478b54e5efc9e5c8337f04ed9629f8d1238053f"
+        },
+        {
+          "filename": "01_new_website_visibility.webp",
+          "width": 377,
+          "bytes": 29554,
+          "sha256": "fd87c3d8155546f3b8de2201326a1f27fa654700f0cf4be0d1fa2900d56bc964"
+        }
+      ]
+    },
+    {
+      "group": "know",
+      "stem": "02_no_traffic_or_leads",
+      "source": "owner-supplied/SEO_7_Transparent_Illustrations/02_no_traffic_or_leads.png",
+      "sha256": "d2dad5186fa61e33639eb5bb3908c52e949aed7c2873321c196b29128d4c8d46",
+      "width": 390,
+      "height": 361,
+      "outputs": [
+        {
+          "filename": "02_no_traffic_or_leads-320.webp",
+          "width": 320,
+          "bytes": 30950,
+          "sha256": "c39af2a89b76e3430541713682bf6a9131048fbdd5089b587dd694f6488bc667"
+        },
+        {
+          "filename": "02_no_traffic_or_leads.webp",
+          "width": 390,
+          "bytes": 34420,
+          "sha256": "0f8eb9afa2274d594302fbac15c1848afc401c3edda863da8aea840d01aa2086"
+        }
+      ]
+    },
+    {
+      "group": "know",
+      "stem": "03_missing_google_maps",
+      "source": "owner-supplied/SEO_7_Transparent_Illustrations/03_missing_google_maps.png",
+      "sha256": "ecd01edd9ea82697b23ca1d3b9ce94545cc39fb55697de931e6282674f586878",
+      "width": 395,
+      "height": 415,
+      "outputs": [
+        {
+          "filename": "03_missing_google_maps-320.webp",
+          "width": 320,
+          "bytes": 35314,
+          "sha256": "a8f309d4b070233325d1f6194a004daf3b96a05d91ebcc357b89e92bb7b040b6"
+        },
+        {
+          "filename": "03_missing_google_maps.webp",
+          "width": 395,
+          "bytes": 40602,
+          "sha256": "35dcaecfb8a93af19342a5bf493f67af75cbf092116973d851ee1aefbc657386"
+        }
+      ]
+    },
+    {
+      "group": "know",
+      "stem": "04_competitors_dominating",
+      "source": "owner-supplied/SEO_7_Transparent_Illustrations/04_competitors_dominating.png",
+      "sha256": "235b2cdd7e29ea0f721e0cef83a7fefdfc0c65ec8f930d272972e7f3fb2c4b20",
+      "width": 370,
+      "height": 453,
+      "outputs": [
+        {
+          "filename": "04_competitors_dominating-320.webp",
+          "width": 320,
+          "bytes": 39408,
+          "sha256": "36661b7c654ee0f94b94951ab0276ad314b7c1a517f300e08fed90c54a4b8cb2"
+        },
+        {
+          "filename": "04_competitors_dominating.webp",
+          "width": 370,
+          "bytes": 40616,
+          "sha256": "38f66322ccf6dc8b4a91b2bee3df294e84fb753c2afd7ef99290df0909fbf0c2"
+        }
+      ]
+    },
+    {
+      "group": "know",
+      "stem": "05_algorithm_rankings_drop",
+      "source": "owner-supplied/SEO_7_Transparent_Illustrations/05_algorithm_rankings_drop.png",
+      "sha256": "d9e98f7a6a2b238b9e54871606959eeb9de7fcafd8caa14d44932d615a971fe0",
+      "width": 444,
+      "height": 405,
+      "outputs": [
+        {
+          "filename": "05_algorithm_rankings_drop-320.webp",
+          "width": 320,
+          "bytes": 29028,
+          "sha256": "9af71861f19ec93d94d6bd347878a717869a8c5fdf6659776e36e21ab910e85f"
+        },
+        {
+          "filename": "05_algorithm_rankings_drop.webp",
+          "width": 444,
+          "bytes": 40382,
+          "sha256": "5c498174d8e6fb3b2f4510364ea8c04623daa664c9ca95a3667954bac2fad20f"
+        }
+      ]
+    },
+    {
+      "group": "know",
+      "stem": "06_ai_search_changes",
+      "source": "owner-supplied/SEO_7_Transparent_Illustrations/06_ai_search_changes.png",
+      "sha256": "15a96e4bde0d2c3b0b46c52e91aea66b874e0a621b7682cf3044e01838ee81f7",
+      "width": 502,
+      "height": 392,
+      "outputs": [
+        {
+          "filename": "06_ai_search_changes-320.webp",
+          "width": 320,
+          "bytes": 33786,
+          "sha256": "38647f1acae02631c8892f8a5f00c8784951649e3161735cad8e96805e90dc3c"
+        },
+        {
+          "filename": "06_ai_search_changes.webp",
+          "width": 502,
+          "bytes": 53192,
+          "sha256": "8d3ac7b5bb91d69c7c8f7f4bd3f22b4b30a88345479db934e1e5739887b15496"
+        }
+      ]
+    },
+    {
+      "group": "know",
+      "stem": "07_high_ppc_cost",
+      "source": "owner-supplied/SEO_7_Transparent_Illustrations/07_high_ppc_cost.png",
+      "sha256": "0f3cfbbfde115cd2c6d7d53cdff2d42edb8ffbff673315cee5acaac53f3f435a",
+      "width": 452,
+      "height": 404,
+      "outputs": [
+        {
+          "filename": "07_high_ppc_cost-320.webp",
+          "width": 320,
+          "bytes": 37828,
+          "sha256": "918913126651cfabfb56e54326497556567c2e85009bf450fb2d86034a9c5c7b"
+        },
+        {
+          "filename": "07_high_ppc_cost.webp",
+          "width": 452,
+          "bytes": 51268,
+          "sha256": "c55dd6b3a7773a9b8e0f6ed211dad4d8052b9aea9aa4b933ff96f8c62419bc7d"
+        }
+      ]
+    },
+    {
+      "group": "audience",
+      "stem": "01_ecommerce",
+      "source": "owner-supplied/01_suitable_for_seo/01_ecommerce.png",
+      "sha256": "3962f79e40c4bec33fcd65099e816cc3d3fcd3d89f392dd0cbb7b8b93861af49",
+      "width": 504,
+      "height": 396,
+      "outputs": [
+        {
+          "filename": "01_ecommerce-320.webp",
+          "width": 320,
+          "bytes": 26054,
+          "sha256": "4336e0612b882db5d7ecd020cd2c6a4b8b77f3cc18d971c228906dec97781a2d"
+        },
+        {
+          "filename": "01_ecommerce.webp",
+          "width": 504,
+          "bytes": 43958,
+          "sha256": "b3ea9417ac9683b748ae1448a08711a1262d7ada63a776f9542e4c1eb504896b"
+        }
+      ]
+    },
+    {
+      "group": "audience",
+      "stem": "02_company_websites",
+      "source": "owner-supplied/01_suitable_for_seo/02_company_websites.png",
+      "sha256": "8158270c3dbeff0ae68bfef8846dbd4ecaf945a8f59d6483f328f1563614399e",
+      "width": 516,
+      "height": 386,
+      "outputs": [
+        {
+          "filename": "02_company_websites-320.webp",
+          "width": 320,
+          "bytes": 22656,
+          "sha256": "4909513c8d8deeffac0191de2eb916026aa31c90142dde6bc92ee402358fdaef"
+        },
+        {
+          "filename": "02_company_websites.webp",
+          "width": 516,
+          "bytes": 39010,
+          "sha256": "f88bbc7853986865c10a5d7b5b01e79f710994943e4f421872b54165801a3eed"
+        }
+      ]
+    },
+    {
+      "group": "audience",
+      "stem": "03_new_websites",
+      "source": "owner-supplied/01_suitable_for_seo/03_new_websites.png",
+      "sha256": "5e3afaf71ee7b6cdfd413fcefd574eec712c2244ff0b03815f56017920d773cd",
+      "width": 482,
+      "height": 413,
+      "outputs": [
+        {
+          "filename": "03_new_websites-320.webp",
+          "width": 320,
+          "bytes": 23866,
+          "sha256": "74a3476e46c9f5233161b33dd6132a56e74415c5d7e1a0052bb99caa9affbc53"
+        },
+        {
+          "filename": "03_new_websites.webp",
+          "width": 482,
+          "bytes": 36762,
+          "sha256": "f6d395fa804a18e8bae604670465c5ebf182d0d871342074ac6009f38a5b0d43"
+        }
+      ]
+    },
+    {
+      "group": "audience",
+      "stem": "04_local_businesses",
+      "source": "owner-supplied/01_suitable_for_seo/04_local_businesses.png",
+      "sha256": "c3cbde8b35daedf1523340a8c9866aa4a417f7065a8019f07d36938e7c7e10f0",
+      "width": 492,
+      "height": 430,
+      "outputs": [
+        {
+          "filename": "04_local_businesses-320.webp",
+          "width": 320,
+          "bytes": 27848,
+          "sha256": "824fc42cb19fdc28949a80f7ba3e4a78588a612ba125983d34a5f4cbb2a42d2d"
+        },
+        {
+          "filename": "04_local_businesses.webp",
+          "width": 492,
+          "bytes": 46788,
+          "sha256": "0d6281d6e84662edc667792f062614a259c236b5cdbd53f1cc690ab405a82a86"
+        }
+      ]
+    },
+    {
+      "group": "audience",
+      "stem": "05_service_websites",
+      "source": "owner-supplied/01_suitable_for_seo/05_service_websites.png",
+      "sha256": "adb616a583a2c8164b12e10f4a128ce030e6e359a146d531beb394c39e2f5e0c",
+      "width": 498,
+      "height": 406,
+      "outputs": [
+        {
+          "filename": "05_service_websites-320.webp",
+          "width": 320,
+          "bytes": 24008,
+          "sha256": "fec56e08a19a4997b6902534713933486e056d815bf540711267fa0d80132339"
+        },
+        {
+          "filename": "05_service_websites.webp",
+          "width": 498,
+          "bytes": 38498,
+          "sha256": "c23cefa71287579f05e6e7b8299fe176115f2367bcfb5ae96ba6fa36da9d3df6"
+        }
+      ]
+    },
+    {
+      "group": "audience",
+      "stem": "06_digital_platforms",
+      "source": "owner-supplied/01_suitable_for_seo/06_digital_platforms.png",
+      "sha256": "5cf2c2f1c6aa21c8dbff2244b9e523bc4d3cd31c069b125e5173d5f8a0ae21b7",
+      "width": 495,
+      "height": 438,
+      "outputs": [
+        {
+          "filename": "06_digital_platforms-320.webp",
+          "width": 320,
+          "bytes": 30986,
+          "sha256": "799a584806b831a4bf19178658cfaa6dc61d5ca3810d237b1a252343cd64a4c5"
+        },
+        {
+          "filename": "06_digital_platforms.webp",
+          "width": 495,
+          "bytes": 48632,
+          "sha256": "58c39c15eb4d09fb3d9d69ff3dda56bb4aa917a9003d7a1fb918acf678dbd668"
+        }
+      ]
+    },
+    {
+      "group": "why",
+      "stem": "01_all_sectors",
+      "source": "owner-supplied/02_why_choose_our_seo/01_all_sectors.png",
+      "sha256": "0aeed41312effc0e073e169071a2a19d411201dad7e4b795771385630c0bac6e",
+      "width": 418,
+      "height": 304,
+      "outputs": [
+        {
+          "filename": "01_all_sectors-320.webp",
+          "width": 320,
+          "bytes": 21128,
+          "sha256": "8a8b8f8a4ff68e0b08e226ce1e313e9f8a8a5dea604980e75b244ce3126a17bc"
+        },
+        {
+          "filename": "01_all_sectors.webp",
+          "width": 418,
+          "bytes": 25932,
+          "sha256": "efea34364453f06eb5e54dba26460f14fbe1eb96e0ef5f160051aadf8c0f1778"
+        }
+      ]
+    },
+    {
+      "group": "why",
+      "stem": "02_customer_retention",
+      "source": "owner-supplied/02_why_choose_our_seo/02_customer_retention.png",
+      "sha256": "dcbbb648efc8789db3c47498775c6b58c6608a60d1d11b3fcdfc73dff6311517",
+      "width": 560,
+      "height": 304,
+      "outputs": [
+        {
+          "filename": "02_customer_retention-320.webp",
+          "width": 320,
+          "bytes": 18990,
+          "sha256": "84bf546662a7903aee0167b6c057ef0ad9a2a32c6da78475fe93c5bb9b1c6135"
+        },
+        {
+          "filename": "02_customer_retention.webp",
+          "width": 560,
+          "bytes": 33850,
+          "sha256": "710ffc50ccb4171667d5d9432e460a3ac602bf2f7f4b4293d1b9314e0559f14f"
+        }
+      ]
+    },
+    {
+      "group": "why",
+      "stem": "03_monthly_reports",
+      "source": "owner-supplied/02_why_choose_our_seo/03_monthly_reports.png",
+      "sha256": "0ec693bf1d34f9bb307c9c5d36bf95aa8c88d6d8d1698cd9b9106c49ab43ee7b",
+      "width": 407,
+      "height": 304,
+      "outputs": [
+        {
+          "filename": "03_monthly_reports-320.webp",
+          "width": 320,
+          "bytes": 21052,
+          "sha256": "0b49da18c3dcf095a13e75ff08201be2a285943c7b0328509c7b4d1c1e13e63d"
+        },
+        {
+          "filename": "03_monthly_reports.webp",
+          "width": 407,
+          "bytes": 24848,
+          "sha256": "c585f6fab28e92b9f800f3a8da7e3270c35456b56ba8f4c87d95755a123d07e2"
+        }
+      ]
+    },
+    {
+      "group": "why",
+      "stem": "04_saudi_market_strategy",
+      "source": "owner-supplied/02_why_choose_our_seo/04_saudi_market_strategy.png",
+      "sha256": "fd425512b6f1ed86f2fbba1b607eedcec07e9c6b2481cf39d73be031a80c732e",
+      "width": 560,
+      "height": 259,
+      "outputs": [
+        {
+          "filename": "04_saudi_market_strategy-320.webp",
+          "width": 320,
+          "bytes": 17564,
+          "sha256": "a0d276630a2fa94288d5554ba499b26049cb49886bc6c874bd5e0c58d7927369"
+        },
+        {
+          "filename": "04_saudi_market_strategy.webp",
+          "width": 560,
+          "bytes": 30086,
+          "sha256": "375104010d58aab38f09d3c68592a7433ddfa7b873a95d1ff8a813a745651f70"
+        }
+      ]
+    },
+    {
+      "group": "why",
+      "stem": "05_safe_tools",
+      "source": "owner-supplied/02_why_choose_our_seo/05_safe_tools.png",
+      "sha256": "d924a40b0d81abe060a5e690727f6ca6bdd2f339313fa566c8fc911353f4e247",
+      "width": 408,
+      "height": 259,
+      "outputs": [
+        {
+          "filename": "05_safe_tools-320.webp",
+          "width": 320,
+          "bytes": 18974,
+          "sha256": "0483b746936d34a852b510c26ef84a8f1b5f7c1d1f8e53789aa4674e2dcd5218"
+        },
+        {
+          "filename": "05_safe_tools.webp",
+          "width": 408,
+          "bytes": 22710,
+          "sha256": "f06db74cb9137cbf5effce60fae7e64100c09a0e2f6c688bdda8c63894069169"
+        }
+      ]
+    },
+    {
+      "group": "why",
+      "stem": "06_research_and_development",
+      "source": "owner-supplied/02_why_choose_our_seo/06_research_and_development.png",
+      "sha256": "bb7381364edff152dca881fde635391fc7954312da15ed76879397b352b04b43",
+      "width": 406,
+      "height": 259,
+      "outputs": [
+        {
+          "filename": "06_research_and_development-320.webp",
+          "width": 320,
+          "bytes": 19710,
+          "sha256": "c618a4b9a4f37bbd0b69598590ec754d3ca2ec1d5f63d0fb1df5b426a3c8dce9"
+        },
+        {
+          "filename": "06_research_and_development.webp",
+          "width": 406,
+          "bytes": 22742,
+          "sha256": "bfe8cd4f343f282454574695b9af006027af656eadb27fd2be863990c122664a"
+        }
+      ]
+    }
+  ]
+}

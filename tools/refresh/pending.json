@@ -1,36 +1,11 @@
 [
   {
-    "id": "6:90",
-    "text": "Web Design Packages Designed to Fit Your Project's Needs",
-    "reason": "No approved package prices or deliverables supplied; consultation link only"
-  },
-  {
-    "id": "6:117",
-    "text": "•        [A third website project from your portfolio]",
-    "reason": "Unresolved editorial placeholder; not public copy"
-  },
-  {
-    "id": "7:92",
-    "text": "باقات تصميم المواقع مصممة لتناسب احتياجات مشروعك",
-    "reason": "No approved package prices or deliverables supplied; consultation link only"
-  },
-  {
-    "id": "8:63",
-    "text": "Brand Identity Packages Designed to Fit Your Project's Needs",
-    "reason": "No approved package prices or deliverables supplied; consultation link only"
-  },
-  {
-    "id": "9:63",
-    "text": "باقات تصميم الهوية البصرية مصممة لتناسب احتياجات مشروعك",
-    "reason": "No approved package prices or deliverables supplied; consultation link only"
-  },
-  {
     "id": "10:63",
     "text": "Social Media Ads Packages Designed to Fit Your Project's Needs",
     "reason": "No approved package prices or deliverables supplied; consultation link only"
   },
   {
-    "id": "11:65",
+    "id": "11:63",
     "text": "باقات إعلانات السوشيال ميديا مصممة لتناسب احتياجات مشروعك",
     "reason": "No approved package prices or deliverables supplied; consultation link only"
   },
@@ -45,7 +20,7 @@
     "reason": "Unresolved editorial placeholder; not public copy"
   },
   {
-    "id": "12:76",
+    "id": "12:77",
     "text": "باقات اعلانات جوجل مصممة لتناسب احتياجات عملك",
     "reason": "No approved package prices or deliverables supplied; consultation link only"
   },
@@ -55,32 +30,37 @@
     "reason": "Unresolved editorial placeholder; not public copy"
   },
   {
-    "id": "14:89",
-    "text": "Social Media Management Packages Designed to Fit Your Project's Needs",
-    "reason": "No approved package prices or deliverables supplied; consultation link only"
-  },
-  {
-    "id": "15:89",
-    "text": "باقات إدارة السوشيال ميديا مصممة لتناسب احتياجات مشروعك",
-    "reason": "No approved package prices or deliverables supplied; consultation link only"
-  },
-  {
-    "id": "16:63",
-    "text": "Online Store Packages Designed to Fit Your Project's Needs",
-    "reason": "No approved package prices or deliverables supplied; consultation link only"
-  },
-  {
-    "id": "16:90",
-    "text": "•        [A third store or system project from your portfolio]",
+    "id": "16:64",
+    "text": "[Packages section]",
     "reason": "Unresolved editorial placeholder; not public copy"
   },
   {
-    "id": "17:63",
-    "text": "باقات المتاجر الإلكترونية مصممة لتناسب احتياجات مشروعك",
+    "id": "16:63",
+    "text": "Online Store Packages: Choose What Fits Your Business",
+    "reason": "No approved package prices or deliverables supplied; consultation link only"
+  },
+  {
+    "id": "16:89",
+    "text": "•        Integrated online store: 100% performance score, connected to an analytics dashboard, with 5,000+ active customers. [Needs management confirmation]",
+    "reason": "Placeholder awaiting a real project or technical decision"
+  },
+  {
+    "id": "16:91",
+    "text": "•        [Third store or system project from your portfolio]",
+    "reason": "Unresolved editorial placeholder; not public copy"
+  },
+  {
+    "id": "17:64",
+    "text": "باقات المتاجر الإلكترونية: اختر ما يناسب حجم تجارتك",
     "reason": "No approved package prices or deliverables supplied; consultation link only"
   },
   {
     "id": "17:90",
+    "text": "•        متجر إلكتروني متكامل: درجة أداء 100%، مربوط بلوحة تحكم تحليلية، مع أكثر من 5000 عميل نشط. [يحتاج تأكيد الإدارة]",
+    "reason": "Placeholder awaiting a real project or technical decision"
+  },
+  {
+    "id": "17:92",
     "text": "•        [مشروع متجر أو نظام ثالث من أعمالكم]",
     "reason": "Unresolved editorial placeholder; not public copy"
   },
@@ -98,16 +78,6 @@
     "id": "18:73",
     "text": "Mobile App Packages Designed to Fit Your Project's Needs",
     "reason": "No approved package prices or deliverables supplied; consultation link only"
-  },
-  {
-    "id": "19:44",
-    "text": "تقنيات تطبيقات الجوال",
-    "reason": "Card awaits approved technical detail"
-  },
-  {
-    "id": "19:45",
-    "text": "[يحددها فريق التطوير، مثل Flutter أو React Native أو Swift أو Kotlin]",
-    "reason": "Explicit unfilled placeholder"
   },
   {
     "id": "19:73",

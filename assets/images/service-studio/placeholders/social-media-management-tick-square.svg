@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" fill="none">
+<desc>Temporary service illustration using free commercial Iconly Essential Light geometry. Replace with final owner artwork.</desc>
+<defs><linearGradient id="warm" x1="110" y1="70" x2="540" y2="350" gradientUnits="userSpaceOnUse"><stop stop-color="#F9460E"/><stop offset="1" stop-color="#FF8000"/></linearGradient><filter id="depth" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dy="12" stdDeviation="14" flood-color="#1C1D20" flood-opacity=".09"/></filter></defs>
+<ellipse cx="321" cy="345" rx="213" ry="24" fill="#1C1D20" opacity=".035"/>
+<path d="M76 226C30 115 158 34 295 83S573 126 548 265" stroke="#FF8000" stroke-opacity=".16" stroke-width="36" stroke-linecap="round"/>
+<g transform="rotate(5 320 210)" filter="url(#depth)"><rect x="100" y="76" width="440" height="254" rx="24" fill="#FFFEF8" stroke="#DCD9CF"/><path d="M100 120H540" stroke="#E6E3D8"/><circle cx="125" cy="99" r="5" fill="#F9460E"/><circle cx="142" cy="99" r="5" fill="#FF8000" opacity=".55"/><circle cx="159" cy="99" r="5" fill="#E8E4D8"/>
+<rect x="128" y="147" width="142" height="10" rx="5" fill="#D6D4CB"/><rect x="128" y="169" width="101" height="7" rx="3.5" fill="#E7E4D9"/><rect x="128" y="268" width="30" height="32" rx="9" fill="#EAE7DC"/><rect x="186" y="246" width="30" height="54" rx="9" fill="#EAE7DC"/><rect x="244" y="228" width="30" height="72" rx="9" fill="#EAE7DC"/><rect x="302" y="200" width="30" height="100" rx="9" fill="#F9460E"/>
+<rect x="363" y="148" width="145" height="150" rx="25" fill="#FFFDED" stroke="#F9460E" stroke-opacity=".15"/><g transform="translate(394 183) scale(3.4)" color="#F9460E"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g transform="translate(2.000000, 2.000000)" stroke="currentColor" stroke-width="1.5">
+            <path d="M14.3344,0.7502 L5.6654,0.7502 C2.6444,0.7502 0.7504,2.8892 0.7504,5.9162 L0.7504,14.0842 C0.7504,17.1112 2.6354,19.2502 5.6654,19.2502 L14.3334,19.2502 C17.3644,19.2502 19.2504,17.1112 19.2504,14.0842 L19.2504,5.9162 C19.2504,2.8892 17.3644,0.7502 14.3344,0.7502 Z"></path>
+            <polyline points="6.4399 10.0002 8.8139 12.3732 13.5599 7.6272"></polyline>
+        </g>
+    </g></g></g>
+<g filter="url(#depth)"><rect x="47" y="260" width="119" height="83" rx="22" fill="url(#warm)"/><path d="M75 309L94 289L111 299L139 277M124 277H139V292" stroke="#FFFDED" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="463" y="41" width="107" height="83" rx="24" fill="#FFFDED" stroke="#DEDACF"/><rect x="484" y="62" width="64" height="8" rx="4" fill="#F9460E"/><rect x="484" y="80" width="46" height="6" rx="3" fill="#D7D3C8"/><rect x="484" y="96" width="55" height="6" rx="3" fill="#E4E0D5"/></g>
+<circle cx="565" cy="284" r="10" fill="#F9460E"/><circle cx="73" cy="139" r="6" fill="#FF8000"/>
+</svg>

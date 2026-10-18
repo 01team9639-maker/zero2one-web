@@ -19,15 +19,16 @@ cat assets/css/normalize.css \
     assets/css/components.css \
     assets/css/style-new.css \
     assets/css/site-refresh.css \
+    assets/css/brand-identity-owner.css \
+    assets/css/brand-identity-followup.css \
+    assets/css/iconly-ui.css \
     assets/css/footer-layout.css \
+    assets/css/service-studio.css \
   | "$ESBUILD" --loader=css --minify --charset=utf8 > assets/css/bundle.min.css
 
-# 2) site JS
-if [ -f assets/css/seo-studio-review.css ]; then
-  "$ESBUILD" assets/css/seo-studio-review.css --minify --charset=utf8 --outfile=assets/css/seo-studio-review.min.css
-  node tools/stamp_seo_studio_style.js
-fi
-
+# 2) SEO-only review stylesheet and site JS
+"$ESBUILD" assets/css/seo-studio-review.css --minify --charset=utf8 --outfile=assets/css/seo-studio-review.min.css
+node tools/stamp_seo_studio_style.js
 "$ESBUILD" assets/js/dom.js       --minify --charset=utf8 --outfile=assets/js/dom.min.js
 "$ESBUILD" assets/js/i18n.js      --minify --charset=utf8 --outfile=assets/js/i18n.min.js
 "$ESBUILD" assets/js/index-new.js --minify --charset=utf8 --outfile=assets/js/index-new.min.js
