@@ -354,7 +354,17 @@ def refine(page, slug, lang):
                     art_kind='technologies'
                 drawing=existing_picture or art(slug,art_kind,i,title.text() if title else card.text(),lang)
                 drawing.add('service-studio-art')
-                if kind in ('why','outcomes'):
+                homepage_result=slug=='brand-identity' and kind=='outcomes'
+                if homepage_result:
+                    # Use the homepage's image/cream-gradient card anatomy,
+                    # retaining this service's exact photograph and source copy.
+                    content=[e for e in list(card.children) if e is not existing_picture]
+                    if title:title.add('service-card-title')
+                    for paragraph in content:
+                        if isinstance(paragraph,Node) and paragraph.tag=='p':paragraph.add('service-card-text')
+                    card.add('service-card','brand-studio-result')
+                    card.set([n('div','service-card-media',[drawing,n('span','service-card-tint',aria_hidden='true')]),n('div','service-card-body',content)])
+                elif kind in ('why','outcomes'):
                     answer_nodes=[e for e in list(card.children) if e is not title and e is not existing_picture]
                     summary=n('summary','service-studio-summary',[drawing,n('span','service-studio-card-head',[n('span','service-studio-index',[f'{i+1:02d}'],aria_hidden='true'),title] if title else []),'<svg class="service-studio-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>'])
                     card.tag='details';card.add('seo-owner-accordion');card.attrs['open']=None
@@ -362,10 +372,10 @@ def refine(page, slug, lang):
                 else:
                     content=[e for e in list(card.children) if e is not existing_picture]
                     card.set([n('div','service-studio-card-top',[n('span','service-studio-index',[f'{i+1:02d}']),icon(ICONS[i%len(ICONS)])],aria_hidden='true'),drawing,n('div','service-studio-card-copy',content)])
-            if kind in ('why','outcomes'):grid.attrs['data-seo-accordion']=None
+            if kind in ('why','outcomes') and not (slug=='brand-identity' and kind=='outcomes'):grid.attrs['data-seo-accordion']=None
             site_types=slug=='web-design-riyadh' and art_kind=='types'
             if site_types:section.attrs['data-web-site-types']='true'
-            if kind in ('benefits','deliverables','audience') or site_types:
+            if kind in ('benefits','deliverables','audience') or site_types or (slug=='brand-identity' and kind=='outcomes'):
                 parent=grid.parent;position=parent.children.index(grid)
                 wrapper=rail(grid,lang,title_text,site_types)
                 if site_types:wrapper.attrs['data-web-site-types']='true'

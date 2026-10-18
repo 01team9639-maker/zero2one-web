@@ -261,6 +261,10 @@ def service_body(slug, lang):
         if p['style']=='HEADING_2': chunks.append([p,[]])
         elif chunks: chunks[-1][1].append(p)
     for n,(h,items) in enumerate(chunks,1):
+        if slug=='brand-identity' and n==9:
+            for p in [h]+items:
+                record(p,'excluded','Owner removed the brand investment callout on 2026-10-18')
+            continue
         if slug=='web-design-riyadh' and clean(h) in ('مواقع نفذناها بأنفسنا','Websites We Have Designed & Developed'):
             for p in [h]+items:
                 record(p,'excluded','Owner removed the website-service portfolio callout on 2026-10-18')
@@ -721,11 +725,8 @@ def refine_brand_owner(page,lang):
         if count[0]!=6: raise ValueError('Expected six illustrated brand outcome cards')
         return block
     section('section-8',outcomes)
-    def investment(block):
-        block=block.replace('rf-cards"','rf-cards brand-owner-investment"',1)
-        block=re.sub(r'<a\b[^>]*class="rf-button magnetic"[\s\S]*?</a>',lambda m:button(m[0],'primary'),block)
-        return block
-    section('section-9',investment)
+    # The investment callout was removed by the owner on 18 October.
+    # It remains in the source archive/coverage, not as a rendered section.
     return page.replace('<section class="section case-top-wrap',marker+'<section class="section case-top-wrap',1)
 
 

@@ -1,5 +1,31 @@
 # Local page review — 8 October 2026
 
+## Brand-service follow-up — 18 October 2026 (local only)
+
+The owner requested consistent deliverable cards, a larger audience CTA,
+alternating process steps and homepage-style result cards. All existing
+deliverables (eight Arabic, nine English) retain their approved illustrations and source text. Their image
+stages, heading rhythm, body padding and row measurements are consistent; the
+existing compact swipe rail remains. The consultation keeps its existing
+WhatsApp destination in a larger cream-on-orange pill. Seven process steps
+alternate around a central spine on desktop and stay sequential in one column
+on compact screens, with the existing progress/reveal lifecycle unchanged.
+
+The six results reuse the homepage's service-card image/tint/cream-gradient-body
+anatomy, rounded corners and shadow, with the exact six existing responsive
+brand photographs and independent bilingual copy. They are always readable,
+not accordions, and have no invented CTA destinations. Compact layouts use the
+existing native swipe/keyboard rail; desktop uses an equal-height grid.
+
+The investment callout (source section 9) is explicitly excluded in coverage,
+not erased from source archives. The footer, hero, other brand sections and all
+other service content remain unchanged. Shared CSS additions are brand-scoped.
+`test_brand_identity_followup.py` compares an independently captured baseline;
+the browser companion covers both languages at six widths plus reduced-motion
+and no-script operation. Publication was subsequently authorized by the owner
+on 18 October. Package only this brand follow-up and its shared CSS dependency;
+retain the latest published blog and unrelated page bodies byte-for-byte.
+
 ## Website-service follow-up — 18 October 2026 (local only)
 
 The owner requested consistent website-service benefit/audience cards, an
