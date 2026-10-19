@@ -1,10 +1,10 @@
-"""Package the approved static-gradient/light-card social-ads follow-up."""
+"""Package the approved social investment snap/shadow and ribbon follow-up."""
 from pathlib import Path
 import hashlib,json,re,subprocess,sys
 from service_studio import Tree
 SOURCE=Path(__file__).resolve().parent.parent
 TARGET=Path(sys.argv[1]).resolve()
-BASE='93272dc43bbfe1edf1083e0e887474c835823b60'
+BASE='25ed2ebd87e224ca29b7e0c8a3089ef47e97db28'
 def git(*args):return subprocess.check_output(['git',*args],cwd=TARGET,text=True).strip()
 def digest(data):return hashlib.sha256(data).hexdigest()
 unstamp=lambda s:re.sub(r'\?v=[a-f0-9]+','?v=HASH',s)
@@ -34,13 +34,13 @@ for rel in git('ls-files','*.html').splitlines():
     if rel in owned:assert protected(source.read_text())==protected(target.read_text()),'Retained source content changed: '+rel
     else:assert unstamp(source.read_text())==unstamp(target.read_text()),'Unrelated page body changed: '+rel
     paths.append(rel)
-paths+=['assets/css/bundle.min.css','assets/css/service-studio.css','tools/service_studio.py','tools/test_refresh_copy.py','tools/refresh/README.md','tools/test_social_horizontal.py','tools/test_catalogue_social_followup_browser.js','tools/prepare_social_horizontal_release.py']
+paths+=['assets/css/bundle.min.css','assets/css/service-studio.css','tools/service_studio.py','tools/test_social_horizontal.py','tools/test_catalogue_social_followup_browser.js','tools/test_social_investment_snap.js','tools/prepare_social_horizontal_release.py']
 runtime=[]
 for rel in paths:
     data=(SOURCE/rel).read_bytes();dest=TARGET/rel
     dest.parent.mkdir(parents=True,exist_ok=True);dest.write_bytes(data)
     if not rel.startswith('tools/'):runtime.append({'file':rel,'sha256':digest(data)})
 assert blog=={str(p.relative_to(TARGET)):digest(p.read_bytes()) for p in (TARGET/'blog').rglob('*') if p.is_file()}
-record={'baseline':BASE,'scope':'Bilingual social-ads hero Ads accent and investment static orange gradient, light cards and fit-or-swipe horizontal row. Existing copy/images/links preserved apart from requested Ads addition. Other main-site pages only receive CSS cache stamps; generated blog untouched.','runtimeFiles':runtime,'blogFilesPreserved':len(blog)}
+record={'baseline':BASE,'scope':'Social investment cards settle on whole cards without card/image shadows; restore the shared light scroll ribbon across the orange section. Original copy/images/links unchanged. Other main-site pages only receive CSS cache stamps; generated blog untouched.','runtimeFiles':runtime,'blogFilesPreserved':len(blog)}
 (TARGET/'tools/social-horizontal-release-2026-10-19.json').write_text(json.dumps(record,ensure_ascii=False,indent=2)+'\n')
 print(f'Prepared {len(paths)} files; {len(runtime)} runtime checks; preserved {len(blog)} published blog files. Not published.')

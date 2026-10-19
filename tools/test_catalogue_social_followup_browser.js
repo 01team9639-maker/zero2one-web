@@ -56,7 +56,8 @@ async function check(browser,origin,kind,lang,width,options={}){
    await jump(page,'.social-investment');
    const investment=page.locator('.social-investment');
    assert.ok(await investment.evaluate(e=>{const bg=getComputedStyle(e).backgroundImage;return bg.includes('linear-gradient')&&bg.includes('249, 70, 14')&&bg.includes('255, 128, 0');}),'Approved static orange gradient');
-   assert.equal(await investment.locator('[data-seo-flow],.social-investment-orbit').count(),0,'No ribbon or animated orbit in this background');
+   assert.equal(await investment.locator('.social-investment-orbit').count(),0,'No decorative orbit');
+   assert.equal(await investment.locator('[data-seo-flow][data-seo-flow-tone="light"]').count(),1,'Shared light scroll ribbon is retained over orange');
    assert.equal(await page.locator('.social-investment-case').count(),3);
    assert.ok(await page.locator('.social-investment-case').evaluateAll(es=>es.every(e=>getComputedStyle(e).backgroundColor==='rgb(255, 253, 237)'&&getComputedStyle(e.querySelector('p')).color==='rgb(28, 29, 32)')),'Light cream investment cards with readable dark text');
    await page.locator('.social-investment-media img').evaluateAll(es=>Promise.all(es.map(e=>{e.loading='eager';return e.decode();})));

@@ -411,11 +411,11 @@ def refine(page, slug, lang):
             section.add('service-studio-package-prompt')
         if slug=='digital-advertising' and section.attrs.get('id')=='section-9':
             section.add('social-investment')
-            # This section alone has a static orange background: omit both
-            # the moving ribbon window and the former orbit decoration.
+            # Keep the shared scroll ribbon connected across the orange section;
+            # use the light stroke, without restoring the former orbit decoration.
             section.attrs['class']=' '.join(c for c in section.attrs['class'].split() if c!='service-studio-ink')
             section.add('service-studio-orange')
-            for trace in [e for e in section.walk() if e.has('seo-flow-trace')]:trace.detach()
+            section.first(lambda e:e.has('seo-flow-trace')).attrs['data-seo-flow-tone']='light'
             heading=section.first(lambda e:e.tag=='h2')
             text=heading.text()
             emphasis=re.search(r'استثمار يُقاس بالريال|Investment Measured in Riyals',text)
