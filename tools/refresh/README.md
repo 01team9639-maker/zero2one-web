@@ -1,5 +1,32 @@
 # Local page review — 8 October 2026
 
+## Social investment horizontal/orange follow-up — 19 October (local only)
+
+The owner requested a static F9460E→FF8000 investment-section background and
+one horizontal row of case cards. This section omits both its ribbon window
+and former orbit decoration; background movement elsewhere is unchanged. All
+three existing cases fit across desktop, with native swipe/keyboard controls
+when narrower, equal card sizing and uncropped evidence images. The existing
+work CTA uses cream on the orange background, with dark readable text.
+
+The social-advertising primary hero adds one isolated LTR `Ads` word with the
+same gradient-clipped treatment used for SEO, in both language layouts. Source
+documents remain intact; the source checker removes only this exact audited
+addition before comparing all original words. `test_social_horizontal.py`
+captures a fresh independent baseline and protects the remainder of the site.
+The updated browser suite verifies the static gradient, absence of decorative
+motion, responsive row/overflow, keyboard rail, Ads styling and existing pages.
+This follow-up has not been published.
+
+Same-day owner correction: investment cards and their small numbered markers
+use brand cream instead of black, with dark titles/descriptions and a subtle
+warm image-stage tint. The orange section gradient, static background, hero Ads
+treatment and horizontal/swipe layouts remain unchanged. Local only.
+
+Publication of this horizontal/orange revision and its light-card correction
+was subsequently authorized by the owner on 19 October. Release from current
+main, retaining all unrelated page bodies and generated blog output.
+
 ## Catalogue/social-ads corrections — 18 October 2026 (local only)
 
 The owner clarified that platform benefit cards must keep their previous design:

@@ -1,7 +1,7 @@
 // Local-only catalogue/social advertising presentation, with external traffic isolated.
 const {chromium}=require('playwright'),{serve,isolate,settled,ROOT}=require('./test_support');
 const assert=require('assert').strict,fs=require('fs'),path=require('path');
-const report=path.join(ROOT,'tools/reports/site-refresh/social-revision-2026-10-18');
+const report=path.join(ROOT,'tools/reports/site-refresh/social-horizontal-2026-10-19');
 async function ready(page,scripts=true){
  if(scripts)await page.waitForFunction(()=>[...document.querySelectorAll('.loading-screen')].every(e=>e.getBoundingClientRect().bottom<=1));
  await page.evaluate(()=>document.fonts.ready);
@@ -29,6 +29,9 @@ async function check(browser,origin,kind,lang,width,options={}){
    assert.ok(await page.locator('.catalogue-home-card a').evaluateAll(es=>es.length===9&&es.every(e=>e.getAttribute('href').includes('/services/')&&e.offsetHeight>=46&&e.offsetWidth<320)),'All original detail controls remain balanced and available');
    if(lang==='ar'&&[440,1440].includes(width)&&!Object.keys(options).length){await capture(page,'catalogue-'+width,'.catalogue-home-card');await capture(page,'catalogue-last-'+width,'.catalogue-home-card:last-child');}
   }else{
+   const accent=page.locator('.service-studio-title-accent');assert.equal(await accent.textContent(),'Ads');
+   assert.equal(await accent.getAttribute('dir'),'ltr');
+   assert.ok(await accent.evaluate(e=>getComputedStyle(e).backgroundImage.includes('linear-gradient')&&getComputedStyle(e).backgroundClip==='text'),'Gradient Ads hero treatment');
    const benefits=page.locator('.service-studio-benefits');await jump(page,'.service-studio-benefits');
    await benefits.locator('img').evaluateAll(es=>Promise.all(es.map(e=>{e.loading='eager';return e.decode();})));
    assert.equal(await benefits.locator('.service-studio-card').count(),3);
@@ -51,13 +54,21 @@ async function check(browser,origin,kind,lang,width,options={}){
    assert.equal(steps.length,7);assert.ok(steps.every((e,i)=>!i||e.y>steps[i-1].y));
    if(width>1100)assert.ok(Math.abs(steps[0].x-steps[1].x)>100&&steps[0].x===steps[2].x,'Alternating process');else assert.ok(steps.every(e=>e.x===steps[0].x));
    await jump(page,'.social-investment');
+   const investment=page.locator('.social-investment');
+   assert.ok(await investment.evaluate(e=>{const bg=getComputedStyle(e).backgroundImage;return bg.includes('linear-gradient')&&bg.includes('249, 70, 14')&&bg.includes('255, 128, 0');}),'Approved static orange gradient');
+   assert.equal(await investment.locator('[data-seo-flow],.social-investment-orbit').count(),0,'No ribbon or animated orbit in this background');
    assert.equal(await page.locator('.social-investment-case').count(),3);
+   assert.ok(await page.locator('.social-investment-case').evaluateAll(es=>es.every(e=>getComputedStyle(e).backgroundColor==='rgb(255, 253, 237)'&&getComputedStyle(e.querySelector('p')).color==='rgb(28, 29, 32)')),'Light cream investment cards with readable dark text');
    await page.locator('.social-investment-media img').evaluateAll(es=>Promise.all(es.map(e=>{e.loading='eager';return e.decode();})));
    assert.ok(await page.locator('.social-investment-case p').evaluateAll(es=>es.length===3&&es.every(e=>e.offsetHeight>20&&e.textContent.includes(':'))),'All original case descriptions remain available');
    assert.ok(await page.locator('.social-investment-media img').evaluateAll(es=>es.every(e=>e.complete&&e.naturalWidth>0&&getComputedStyle(e).objectFit==='contain')),'Original case evidence is shown without cropping');
    assert.equal(await page.locator('.service-studio-clients .logo-marquee-toggle').count(),0,'No pause control in the clients section');
-   if(options.reducedMotion==='reduce')assert.equal(await page.locator('.social-investment-orbit').evaluate(e=>getComputedStyle(e).animationName),'none');
-   if(lang==='ar'&&[440,1440].includes(width)&&!Object.keys(options).length){for(const k of ['benefits','audience','packages','process'])await capture(page,'ads-'+k+'-'+width,'.service-studio-'+k);await capture(page,'ads-investment-'+width,'.social-investment');}
+   const track=investment.locator('[data-home-scroll-track]');
+   const layout=await track.evaluate(e=>({overflow:e.scrollWidth>e.clientWidth+3,rows:new Set([...e.children].map(n=>n.offsetTop)).size,heights:[...e.children].map(n=>n.offsetHeight)}));
+   assert.equal(layout.rows,1,'All three case cards share one horizontal row');assert.ok(Math.max(...layout.heights)-Math.min(...layout.heights)<3,'Consistent card sizes');
+   assert.equal(layout.overflow,width<=1100,'Fit three cards on desktop; scroll when narrower');
+   if(layout.overflow&&options.javaScriptEnabled!==false){await jump(page,'.social-investment-grid');await track.focus();await page.keyboard.press(lang==='ar'?'ArrowLeft':'ArrowRight');await page.waitForTimeout(450);assert.ok(await track.evaluate(e=>Math.abs(e.scrollLeft)>40),'Case rail keyboard control');await track.evaluate(e=>{e.scrollTo({left:0,behavior:'instant'});e.blur();});}
+   if(lang==='ar'&&[440,1440].includes(width)&&!Object.keys(options).length){for(const k of ['benefits','audience','packages','process'])await capture(page,'ads-'+k+'-'+width,'.service-studio-'+k);await capture(page,'ads-investment-'+width,'.social-investment');await capture(page,'ads-hero-'+width,'.service-studio-hero');}
   }
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'No document overflow');assert.deepEqual(errors,[]);
   console.log('PASS catalogue/social follow-up',kind,lang,width,JSON.stringify(options));

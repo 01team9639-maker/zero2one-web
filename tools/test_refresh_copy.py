@@ -47,7 +47,17 @@ def check():
         routes[en]=f'/services/{slug}/';routes[ar]=f'/ar/services/{slug}/'
     results=[]
     for row,route in routes.items():
-        p=Text();p.feed((ROOT/(route.strip('/')+'/index.html' if route!='/' else 'index.html')).read_text())
+        source=(ROOT/(route.strip('/')+'/index.html' if route!='/' else 'index.html')).read_text()
+        if route in ('/services/digital-advertising/','/ar/services/digital-advertising/') and 'service-studio-title-accent' in source:
+            # The owner explicitly added the visible Ads treatment on 19 Oct.
+            # Compare all original source words after removing only that exact
+            # audited addition, not an arbitrary region or hidden duplicate.
+            from service_studio import Tree
+            tree=Tree(source).root
+            accents=[n for n in tree.walk() if n.has('service-studio-title-accent')]
+            assert len(accents)==1 and accents[0].text()=='Ads'
+            accents[0].detach();source=tree.render()
+        p=Text();p.feed(source)
         # Inline typography can split words and punctuation into spans. Preserve
         # their literal adjacency; only semantic block boundaries add spaces.
         page=norm(''.join(p.parts))

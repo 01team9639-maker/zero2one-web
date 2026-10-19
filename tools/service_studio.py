@@ -249,6 +249,10 @@ def refine(page, slug, lang):
         if split<8 or split>len(words)*.65:
             matches = list(re.finditer(r'\S+',words)); split=matches[min(4,max(1,len(matches)//3))-1].end()
         h1.set([n('span','service-studio-title-primary',[html.escape(words[:split])]),' ',n('span','service-studio-title-secondary',[html.escape(words[split:].lstrip())])])
+        if slug=='digital-advertising':
+            primary=h1.first(lambda e:e.has('service-studio-title-primary'))
+            primary.append(' ')
+            primary.append(n('span','service-studio-title-accent',['Ads'],lang='en',dir='ltr'))
         copy = reveal(n('div','service-studio-hero-copy',[h1]+paragraphs+[n('div','service-studio-actions',[button(a,i>0) for i,a in enumerate(actions)])]),'hero')
         visual = reveal(n('figure','service-studio-hero-art',[photo(slug,True)],aria_hidden='true',data_service_image_slot=slug+'/hero'),'hero')
         hero = n('section','service-studio-hero',[flow(0,lang,'orange'),n('div','service-studio-inner service-studio-hero-grid',[copy,visual])],data_scroll_section=None)
@@ -407,6 +411,11 @@ def refine(page, slug, lang):
             section.add('service-studio-package-prompt')
         if slug=='digital-advertising' and section.attrs.get('id')=='section-9':
             section.add('social-investment')
+            # This section alone has a static orange background: omit both
+            # the moving ribbon window and the former orbit decoration.
+            section.attrs['class']=' '.join(c for c in section.attrs['class'].split() if c!='service-studio-ink')
+            section.add('service-studio-orange')
+            for trace in [e for e in section.walk() if e.has('seo-flow-trace')]:trace.detach()
             heading=section.first(lambda e:e.tag=='h2')
             text=heading.text()
             emphasis=re.search(r'استثمار يُقاس بالريال|Investment Measured in Riyals',text)
@@ -426,8 +435,7 @@ def refine(page, slug, lang):
                     n('span','social-investment-marker',[f'{i+1:02d}',icon(['chart','chat','activity'][i])]),
                 ],aria_hidden='true')
                 cases.append(reveal(n('article','social-investment-case',[visual,paragraph])))
-            prose.set([paragraphs[0],cases,n('div','social-investment-actions service-studio-actions',actions)])
-            section.append(n('div','social-investment-orbit',aria_hidden='true'))
+            prose.set([paragraphs[0],rail(cases,lang,title_text,True),n('div','social-investment-actions service-studio-actions',actions)])
         if kind=='technologies':
             prose=section.first(lambda e:e.has('rf-prose'))
             if prose:
