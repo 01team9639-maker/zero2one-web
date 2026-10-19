@@ -950,6 +950,12 @@ html[lang="ar"] .rf-seo-studio .seo-package-english { text-align:right; }
 }
 @keyframes seo-studio-orbit-breathe { from { transform:scale(1); } to { transform:scale(1.18); } }
 @keyframes seo-studio-ring-breathe { from { transform:scale(1); } to { transform:scale(1.08); } }
+@media (min-width:1101px) {
+  .rf-seo-studio :is(.seo-hero-cta,.seo-plan-cta).btn .btn-click { min-height:62px; }
+  .rf-seo-studio :is(.seo-hero-cta,.seo-plan-cta).btn .btn-text { min-height:62px; padding:17px 28px; }
+  .rf-seo-studio :is(.seo-hero-cta,.seo-plan-cta).btn .btn-text-inner { font-size:16px; }
+  .rf-seo-studio :is(.seo-hero-cta,.seo-plan-cta).btn .service-card-arrow { width:21px; height:21px; }
+}
 @media (prefers-reduced-motion:reduce) {
   .rf-seo-studio *,
   .rf-seo-studio *::before,

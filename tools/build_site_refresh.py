@@ -276,6 +276,9 @@ def service_body(slug, lang):
                 record(p,'excluded','Owner removed this brand service section on 2026-10-10')
             continue
         body += render_block(h,items,n,lang,slug)
+        if slug=='manage-google-adwords-campaigns' and n==10:
+            for p in [h]+items:
+                record(p,'excluded','Owner commented out the Google Ads investment section on 2026-10-19; original content retained in HTML comment')
     return body, meta_value(ps[1]['text']), meta_value(ps[2]['text'])
 
 

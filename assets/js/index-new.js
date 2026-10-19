@@ -1036,7 +1036,7 @@ function initEditorialRefresh() {
 // SEO-only studio motion. Content has no hidden CSS/inline state: a failed
 // observer, disabled scripts, reduced motion or teardown always leaves it usable.
 // BEGIN SEO STUDIO STYLESHEET
-var seoStudioStylesheet='/assets/css/seo-studio-review.min.css?v=cc0f09cc';
+var seoStudioStylesheet='/assets/css/seo-studio-review.min.css?v=8ea54bb9';
 // END SEO STUDIO STYLESHEET
 function ensureSeoStudioStyles(root) {
   var link=document.querySelector('link[data-seo-studio-review]');

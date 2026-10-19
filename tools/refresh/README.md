@@ -682,6 +682,24 @@ swiping and no-script/reduced-motion disclosure operation.
 
 ## Publication gate — important for page-by-page approval
 
+The 19 October Google Ads review remains local until publication is requested.
+Its original investment section (`section-10`) is retained in one
+`GOOGLE ADS INVESTMENT DISABLED:2026-10-19` HTML comment, not live hidden DOM.
+Coverage labels only those source paragraphs as owner-excluded; the independent
+Google Ads scope test unwraps that exact comment to protect the original copy,
+links and images. The hero has the explicitly requested `Google Ads` accent.
+Deliverables use a keyboard/touch rail at all widths; complementary cards have
+balanced desktop rows, and process points alternate on desktop. Client marquee
+controls are removed here without disabling reduced-motion behavior.
+
+The service CTA enlargement applies only from 1101px, including the independently
+loaded SEO stylesheet. The catalogue and footer are outside that scope. Compact
+CTA measurements for the other eight services are compared with an immutable
+pre-edit browser baseline. Google Ads audience/package CTAs have their separately
+requested alignment/size fix at compact widths too. Regression checks:
+`tools/test_google_ads_followup.py` and
+`tools/test_google_ads_followup_browser.js`.
+
 The local branch contains **all** proposed pages for review. Never push/merge the
 whole branch merely because the owner approves one page. `main` may auto-deploy.
 

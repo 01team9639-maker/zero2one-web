@@ -249,10 +249,10 @@ def refine(page, slug, lang):
         if split<8 or split>len(words)*.65:
             matches = list(re.finditer(r'\S+',words)); split=matches[min(4,max(1,len(matches)//3))-1].end()
         h1.set([n('span','service-studio-title-primary',[html.escape(words[:split])]),' ',n('span','service-studio-title-secondary',[html.escape(words[split:].lstrip())])])
-        if slug=='digital-advertising':
+        if slug in ('digital-advertising','manage-google-adwords-campaigns'):
             primary=h1.first(lambda e:e.has('service-studio-title-primary'))
             primary.append(' ')
-            primary.append(n('span','service-studio-title-accent',['Ads'],lang='en',dir='ltr'))
+            primary.append(n('span','service-studio-title-accent',['Google Ads' if slug=='manage-google-adwords-campaigns' else 'Ads'],lang='en',dir='ltr'))
         copy = reveal(n('div','service-studio-hero-copy',[h1]+paragraphs+[n('div','service-studio-actions',[button(a,i>0) for i,a in enumerate(actions)])]),'hero')
         visual = reveal(n('figure','service-studio-hero-art',[photo(slug,True)],aria_hidden='true',data_service_image_slot=slug+'/hero'),'hero')
         hero = n('section','service-studio-hero',[flow(0,lang,'orange'),n('div','service-studio-inner service-studio-hero-grid',[copy,visual])],data_scroll_section=None)
@@ -384,11 +384,13 @@ def refine(page, slug, lang):
                     card.set([n('div','service-studio-card-top',[n('span','service-studio-index',[f'{i+1:02d}']),icon(ICONS[i%len(ICONS)])],aria_hidden='true'),drawing,n('div','service-studio-card-copy',content)])
             if kind in ('why','outcomes') and not (slug=='brand-identity' and kind=='outcomes'):grid.attrs['data-seo-accordion']=None
             site_types=slug=='web-design-riyadh' and art_kind=='types'
+            google_deliverables=slug=='manage-google-adwords-campaigns' and kind=='deliverables'
             if site_types:section.attrs['data-web-site-types']='true'
             if kind in ('benefits','deliverables','audience') or site_types or (slug=='brand-identity' and kind=='outcomes'):
                 parent=grid.parent;position=parent.children.index(grid)
-                wrapper=rail(grid,lang,title_text,site_types)
+                wrapper=rail(grid,lang,title_text,site_types or google_deliverables)
                 if site_types:wrapper.attrs['data-web-site-types']='true'
+                if google_deliverables:wrapper.attrs['data-google-deliverables']='true'
                 parent.children.insert(position,wrapper);wrapper.parent=parent
         if kind=='process':
             timeline=section.first(lambda e:e.has('rf-timeline'))
@@ -403,7 +405,7 @@ def refine(page, slug, lang):
         if kind=='team':
             for card in [e for e in section.walk() if e.has('team-card')]:
                 card.add('service-studio-person');reveal(card)
-        if kind=='clients' and slug in ('web-design-riyadh','digital-advertising'):
+        if kind=='clients' and slug in ('web-design-riyadh','digital-advertising','manage-google-adwords-campaigns'):
             for toggle in [e for e in section.walk() if e.has('logo-marquee-toggle')]:toggle.detach()
         if kind=='faq':
             for card in [e for e in section.walk() if e.has('rf-faq-item')]:reveal(card)
@@ -461,6 +463,11 @@ def refine(page, slug, lang):
                 position=parent.children.index(anchor);replacement=button(anchor)
                 parent.children.insert(position,replacement);replacement.parent=parent
         for group in [e for e in section.walk() if e.has('rf-actions') or e.has('brand-owner-actions')]:group.add('service-studio-actions')
+        if slug=='manage-google-adwords-campaigns' and section.attrs.get('id')=='section-10':
+            # Keep the entire normalized section restorable, not hidden live DOM.
+            original=section.render()
+            assert '<!--' not in original,'Investment section must not contain nested comments'
+            section.replace(Node('',children=['<!-- GOOGLE ADS INVESTMENT DISABLED:2026-10-19\n'+original+'\n-->']))
     return page[:start.start()]+main.render()+page[end:]
 
 
