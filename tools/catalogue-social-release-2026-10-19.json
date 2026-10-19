@@ -1,0 +1,223 @@
+{
+  "baseline": "928f8cd2f646e47c2bb65463002318c38ba33b19",
+  "scope": "Bilingual homepage-style catalogue with current SEO photo; social-ads original benefit design with full-width distribution, CTA styling, white packages, alternating process, three-case investment bento and removed client pause control. Other main-site pages only receive CSS dependency stamps. Blog unchanged.",
+  "runtimeFiles": [
+    {
+      "file": "about/index.html",
+      "sha256": "3a01c75709384d33f7789fca01bf93a656086987ca47eb3714590c502b053c42"
+    },
+    {
+      "file": "ar/about/index.html",
+      "sha256": "ae286263043a9b4cdce2c75794e9c73e8c4197bb56179254d569da1dd3f7d92f"
+    },
+    {
+      "file": "ar/contact/index.html",
+      "sha256": "a92b3461af08363d6a53941086be4141aacd00949f49e916faa8d2edba459fc6"
+    },
+    {
+      "file": "ar/faqs/index.html",
+      "sha256": "4da1b3939edd0fe6431641bca3650ce2f37bb8021a75f081087134c35f52855d"
+    },
+    {
+      "file": "ar/index.html",
+      "sha256": "ee776488ff926391f3d62facac76d52fc6169977b173a287308fe79bfe1cf064"
+    },
+    {
+      "file": "ar/services/brand-identity/index.html",
+      "sha256": "602bfa8ef677198d78f0a6ae20dfbd14a9fbcd89e1a5ed6c85caa2c7a774bc51"
+    },
+    {
+      "file": "ar/services/digital-advertising/index.html",
+      "sha256": "90b9932e6f8f3647842195153e56e89b940efb0b4514f7d31aff312a189fb686"
+    },
+    {
+      "file": "ar/services/ecommerce-development/index.html",
+      "sha256": "8d1937de3146ec4d4349a88b16ddabdd32a36d8f47a26abaf3a9c97c37e84cbb"
+    },
+    {
+      "file": "ar/services/index.html",
+      "sha256": "9c2b67b1677ef57909f3a14fd1cc57a1c834b8a9ad989bd3c96d433f571ff24b"
+    },
+    {
+      "file": "ar/services/manage-google-adwords-campaigns/index.html",
+      "sha256": "0b8d19e8fae0def00500fc76560208249709e6d7afe11ec407fe4dd150cc2a90"
+    },
+    {
+      "file": "ar/services/marketing-consulting/index.html",
+      "sha256": "2e2fd4bb6c07d0911cf5598bcaa5a6b68e164e5eba8f8c4e8629e9c68efb8f08"
+    },
+    {
+      "file": "ar/services/mobile-application/index.html",
+      "sha256": "df3c59ad8a43d14670a10ddfb16c7fd82f1e0ccd0502903b16a2deadfdedafab"
+    },
+    {
+      "file": "ar/services/seo-riyadh/index.html",
+      "sha256": "1c85109619b9bb5e0abae7c894563f4899a7712d332b1ea936ffbee54def3ac9"
+    },
+    {
+      "file": "ar/services/social-media-management/index.html",
+      "sha256": "f6bd170883bdc873b68d643cca3277fc9a6a4d3730d806f76ae8c187a58bf658"
+    },
+    {
+      "file": "ar/services/web-design-riyadh/index.html",
+      "sha256": "4e5aacd0c3b0a95c7e4b4bfbd2e14b860ae30b6951cf8b310146f41693157032"
+    },
+    {
+      "file": "ar/team/index.html",
+      "sha256": "f3971ebacfeed1eeb9e63f4349b6c0701d260265ac97e65aeaf0aa65eaf38c1d"
+    },
+    {
+      "file": "ar/work/alhokail-seo/index.html",
+      "sha256": "40e426e8c347f9e503ff6142bb15b45b22aa1c51b74e49bd93778da2786b9e23"
+    },
+    {
+      "file": "ar/work/alostaz-seo/index.html",
+      "sha256": "5a30de3c34359967c050ed706ed30e6b93c4e48339f3cd80695a39f76fb10dc2"
+    },
+    {
+      "file": "ar/work/alrahwanji-paints/index.html",
+      "sha256": "70ca47304dc5f0bc4cb27ddb17b830360111126f5352906468336926aeb78c2d"
+    },
+    {
+      "file": "ar/work/cosmetic-surgery-egypt-seo/index.html",
+      "sha256": "9f841f88a5998c937bb11319ced5f3b28681f41924c7a7c8c39d0b1f1b19744c"
+    },
+    {
+      "file": "ar/work/google-ads-conversion-value/index.html",
+      "sha256": "82f5e9172e9d17378aa18e5db240605272530ac652d9a66e79c30a2d2dd6ab6d"
+    },
+    {
+      "file": "ar/work/habba/index.html",
+      "sha256": "8322909d9c9e8f74ddf5d0c62cb03565600241b4dc16036387c8eeada3449812"
+    },
+    {
+      "file": "ar/work/index.html",
+      "sha256": "0084a4727881f66033a2ea1cb5c94fdba0a9f9c5f65040fa3519e9629b9561e2"
+    },
+    {
+      "file": "ar/work/kuwait-tutoring-instagram-ads/index.html",
+      "sha256": "7f37470d3e8c3a6801841432ee19d1fd503f10456d441cb7293d2864b4546d93"
+    },
+    {
+      "file": "ar/work/orthopedic-clinic-egypt-seo/index.html",
+      "sha256": "c22146881570557b1e9b7c46322b338c96ad653051706c48700c71ceb3e002cc"
+    },
+    {
+      "file": "contact/index.html",
+      "sha256": "a1ff23e2b11034970a0ff1155c1023525814364227a2700016aeff16bbd0cdfc"
+    },
+    {
+      "file": "faqs/index.html",
+      "sha256": "c1f3220f7eb517986988cb9b3c71cd40a2c04d95f45ea97bda7419fcbab8f208"
+    },
+    {
+      "file": "index.html",
+      "sha256": "04f1318d277c988055aaab1a9de624aea7e35d15fb09c4731643c6b3cdc790a4"
+    },
+    {
+      "file": "services/brand-identity/index.html",
+      "sha256": "1601886a5c9c824d98ca70354b810e2f981ae40eff5411d690cdd18c26c0cb4f"
+    },
+    {
+      "file": "services/digital-advertising/index.html",
+      "sha256": "77c3e36f0e7607dd1ba3d8aa132602b35327a88b8593f5aba5caa462a00b5f81"
+    },
+    {
+      "file": "services/ecommerce-development/index.html",
+      "sha256": "95989eb7bd69155c501af3516f80ecd4858aeec250573444eae5449be926e428"
+    },
+    {
+      "file": "services/index.html",
+      "sha256": "adda57089148cef26c909b25faf35e4593d0606940db761b6c7b7592b8bfe62c"
+    },
+    {
+      "file": "services/manage-google-adwords-campaigns/index.html",
+      "sha256": "3a5940c8e7ae51c3f122aee61389723470822f980efb57870b4a66c62a2fb78b"
+    },
+    {
+      "file": "services/marketing-consulting/index.html",
+      "sha256": "d845c32b90ce1a71e01114ab69f9dd2d158ca2bdcc0dcb9f937ff4d75264805c"
+    },
+    {
+      "file": "services/mobile-application/index.html",
+      "sha256": "b3eeb04aa9db6aeca66f0a8f564319f8562d4ce9f45b5a8b6bc04488131be50e"
+    },
+    {
+      "file": "services/seo-riyadh/index.html",
+      "sha256": "c4e820835287994c421fc39bc1717e903909d28fc19fa165f92d467e427a2814"
+    },
+    {
+      "file": "services/social-media-management/index.html",
+      "sha256": "0a0b0c293d45d3aba75c3c23dd84b09e4874d4c98a8d2d34b0527cdbb5c86ac6"
+    },
+    {
+      "file": "services/web-design-riyadh/index.html",
+      "sha256": "800cec1be264d10ed294410c75dc5c03ca9da8216fd47d826640014700ad0bc3"
+    },
+    {
+      "file": "team/index.html",
+      "sha256": "f99b57580c783ff0af96940c6bf9a417393e17ee95daa8496129136301ab0e7f"
+    },
+    {
+      "file": "work/alhokail-seo/index.html",
+      "sha256": "b10f8d514887d354a81c9dc4a3034592c4a77077941ce7f8250cc0c4e5130fcf"
+    },
+    {
+      "file": "work/alostaz-seo/index.html",
+      "sha256": "4adb43c8d325d972a1fd74a991f0575a14cf93f0848b766c421beb8b506d6d0d"
+    },
+    {
+      "file": "work/alrahwanji-paints/index.html",
+      "sha256": "09ba0926103bfe4a82ddbfc32c27e4679548a3127b38b2eb24572ef9b315ff18"
+    },
+    {
+      "file": "work/cosmetic-surgery-egypt-seo/index.html",
+      "sha256": "cadd6a77976a197fcea9a7755650f3bb5c6bfc570a651e9e98e2f7837e5d86c0"
+    },
+    {
+      "file": "work/google-ads-conversion-value/index.html",
+      "sha256": "e156cf0e6abdc1001148956fa5b93cbd75cfe8efc196d913d0e1229320e728df"
+    },
+    {
+      "file": "work/habba/index.html",
+      "sha256": "a89d8dc66eb281265e8d17993e5003bb8d18a124d44e14ecefe6b5ed84a32d1c"
+    },
+    {
+      "file": "work/index.html",
+      "sha256": "80dc9675a6e99c9e776019bd1c5c89e2f94b677f01c8afb36948e6b94f201256"
+    },
+    {
+      "file": "work/kuwait-tutoring-instagram-ads/index.html",
+      "sha256": "d92fed30d71ad22ea691c8eadb95ac35f952f1f8a7c2a9bb9156ad12aa5e6b01"
+    },
+    {
+      "file": "work/orthopedic-clinic-egypt-seo/index.html",
+      "sha256": "f4925175f1ca0c715d559eefab1009742edde9b3f93d93bef06251fcca091d30"
+    },
+    {
+      "file": "assets/css/bundle.min.css",
+      "sha256": "cedc223aff62400f797bc565850bcb09f0467f83230cfc458c9755dbef58bf56"
+    },
+    {
+      "file": "assets/css/service-studio.css",
+      "sha256": "edce3826ea1d46b8a519d8acf6bb14d6ae949128e173cef364f700a22e2ca428"
+    },
+    {
+      "file": "assets/images/owner-services-2026-10/seo.webp",
+      "sha256": "38515417e50bb3ecd7cf4b0cfcf52c6a398c5ddcf679eb6d3df678fc22a9cb91"
+    },
+    {
+      "file": "assets/images/alrahwanji-05-placement-results.webp",
+      "sha256": "b02f91b8891b4c6ce7bdea614ee781d98f6d6558a7db5043c144356da07bf5c9"
+    },
+    {
+      "file": "assets/images/work/kuwait-tutoring-campaign-results.webp",
+      "sha256": "9d1322ad89564e2f9b944aa6ea0452df322b11970f4f62d1a1a1eb3cdcd3f133"
+    },
+    {
+      "file": "assets/images/work/barbarees-post-pregnancy-ad.webp",
+      "sha256": "b2767c24afb24ddba0a7fc39b3213964a19c38bf737a2f4eb75fab7f8aa30165"
+    }
+  ],
+  "blogFilesPreserved": 180
+}

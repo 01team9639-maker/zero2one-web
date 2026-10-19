@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parent.parent
 VOID = {'area','base','br','col','embed','hr','img','input','link','meta','param','source','track','wbr'}
 SLUGS = ['web-design-riyadh','brand-identity','digital-advertising','manage-google-adwords-campaigns','social-media-management','ecommerce-development','mobile-application','marketing-consulting']
 ICONS = ['discovery','search','category','chart','setting','chat','work','tick-square','activity']
-PHOTOS = {'web-design-riyadh':'web','digital-advertising':'ads'}
+PHOTOS = {'web-design-riyadh':'web','digital-advertising':'ads','seo-riyadh':'seo'}
 SLOTS = {}
 WEB_ART = json.loads((ROOT/'tools/refresh/web-design-illustrations.json').read_text())['entries']
 OWNER_ART = json.loads((ROOT/'tools/refresh/owner-service-illustrations.json').read_text())
@@ -265,10 +265,16 @@ def refine(page, slug, lang):
             title = section.first(lambda e:e.tag=='h1'); reveal(title,'heading')
             grid = section.first(lambda e:e.has('rf-services-grid')); grid.add('service-studio-catalogue-grid')
             for card in [e for e in grid.children if isinstance(e,Node) and e.has('rf-service-card')]:
-                card.add('service-studio-card'); reveal(card)
+                card.add('service-studio-card','service-card','catalogue-home-card'); reveal(card)
                 link = card.first(lambda e:e.tag=='a'); key=link.attrs['href'].rstrip('/').split('/')[-1]
                 image=card.first(lambda e:e.tag=='img')
-                if key in SLUGS: image.replace(photo(key))
+                if key in SLUGS or key=='seo-riyadh': image.replace(photo(key))
+                media=card.first(lambda e:e.has('rf-service-image'))
+                media.add('service-card-media');media.append(n('span','service-card-tint',aria_hidden='true'))
+                content=card.first(lambda e:e.has('rf-service-content'));content.add('service-card-body')
+                card.first(lambda e:e.tag=='h2').add('service-card-title')
+                for paragraph in content.children:
+                    if isinstance(paragraph,Node) and paragraph.tag=='p':paragraph.add('service-card-text')
                 parent=link.parent;position=parent.children.index(link)
                 replacement=n('div','service-studio-actions',[button(link)])
                 parent.children.insert(position,replacement);replacement.parent=parent
@@ -393,12 +399,35 @@ def refine(page, slug, lang):
         if kind=='team':
             for card in [e for e in section.walk() if e.has('team-card')]:
                 card.add('service-studio-person');reveal(card)
-        if kind=='clients' and slug=='web-design-riyadh':
+        if kind=='clients' and slug in ('web-design-riyadh','digital-advertising'):
             for toggle in [e for e in section.walk() if e.has('logo-marquee-toggle')]:toggle.detach()
         if kind=='faq':
             for card in [e for e in section.walk() if e.has('rf-faq-item')]:reveal(card)
         if kind=='packages':
             section.add('service-studio-package-prompt')
+        if slug=='digital-advertising' and section.attrs.get('id')=='section-9':
+            section.add('social-investment')
+            heading=section.first(lambda e:e.tag=='h2')
+            text=heading.text()
+            emphasis=re.search(r'استثمار يُقاس بالريال|Investment Measured in Riyals',text)
+            if emphasis:
+                heading.set([html.escape(text[:emphasis.start()]),n('span','social-investment-highlight',[html.escape(emphasis[0])]),html.escape(text[emphasis.end():])])
+            prose=section.first(lambda e:e.has('rf-prose'));prose.add('social-investment-copy')
+            paragraphs=[e for e in prose.children if isinstance(e,Node) and e.tag=='p']
+            assert len(paragraphs)==4,'Expected original investment intro and three approved cases'
+            actions=[e for e in prose.children if isinstance(e,Node) and e not in paragraphs]
+            cases=n('div','social-investment-grid')
+            evidence=[('/assets/images/alrahwanji-05-placement-results.webp',1138,709),('/assets/images/work/kuwait-tutoring-campaign-results.webp',762,108),('/assets/images/work/barbarees-post-pregnancy-ad.webp',318,398)]
+            for i,(paragraph,(image,width,height)) in enumerate(zip(paragraphs[1:],evidence)):
+                name,separator,body=paragraph.text().partition(':')
+                if separator:paragraph.set([n('strong','social-investment-name',[html.escape(name+separator)]),' '+html.escape(body.lstrip())])
+                visual=n('figure','social-investment-media',[
+                    Node('img',{'src':image,'width':str(width),'height':str(height),'alt':'','loading':'lazy','decoding':'async'}),
+                    n('span','social-investment-marker',[f'{i+1:02d}',icon(['chart','chat','activity'][i])]),
+                ],aria_hidden='true')
+                cases.append(reveal(n('article','social-investment-case',[visual,paragraph])))
+            prose.set([paragraphs[0],cases,n('div','social-investment-actions service-studio-actions',actions)])
+            section.append(n('div','social-investment-orbit',aria_hidden='true'))
         if kind=='technologies':
             prose=section.first(lambda e:e.has('rf-prose'))
             if prose:

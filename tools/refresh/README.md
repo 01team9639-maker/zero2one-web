@@ -1,5 +1,57 @@
 # Local page review — 8 October 2026
 
+## Catalogue/social-ads corrections — 18 October 2026 (local only)
+
+The owner clarified that platform benefit cards must keep their previous design:
+only full-width distribution and matched grid row sizing remain from that edit.
+The original card markup, 25px rounding, image treatment, padding and unsegmented
+body are retained; the new cream panel/radial treatment is removed. Package
+section background is explicitly pure white. The catalogue's SEO card now uses
+the approved homepage photo `/assets/images/owner-services-2026-10/seo.webp`.
+
+The investment section is an asymmetric case-study bento with all four original
+paragraphs, the exact three supplied case descriptions, existing public case
+screenshots/creative and its original work CTA. No case outcomes, metrics,
+prices or destinations are invented. Decorative orbit rings are aria-hidden,
+pointer-independent and disabled by the existing reduced-motion stylesheet.
+The clients marquee has no visible pause control; existing hover/focus pause
+and reduced-motion static layout remain in the controller.
+
+`test_social_revision.py` protects exact copy, links, retained image attributes,
+head/footer and unchanged platform-card markup against a new independent
+pre-correction snapshot. The browser suite was updated to these clarified
+expectations. Browser execution in this restricted session was blocked by the
+macOS MachPort sandbox even after local-network access was granted; no visual
+or responsive browser pass is claimed for this correction. Static scope/copy,
+generator stability and CSS checks are run separately. No publication performed.
+
+## Catalogue/social-ads follow-up — 18 October 2026 (local only)
+
+The catalogue's nine cards in each language use the homepage's photo/tint,
+cream-gradient body, 48px rounding, shadow and outlined Details control. Their
+existing independent copy, image sources and destinations remain exact. Mobile
+keeps every description visible rather than inheriting the legacy homepage's
+small-screen hidden-description rule; language direction remains inherited.
+
+Social-advertising benefits fill the full section with three equal illustrated
+platform cards. Its audience and package consultation controls use matching
+large cream-on-orange pills, with original WhatsApp links. The seven existing
+process steps alternate around a central spine on desktop and retain a compact
+single-column order. No package prices/features are invented or added.
+
+All styles are scoped to catalogue or digital-advertising. The four-page scope
+test protects every original copy ID, image attribute, link, head and footer;
+other page bodies are unchanged apart from CSS cache stamps. Browser checks
+cover both languages at six widths, visible descriptions, button focus, compact
+rails, desktop alternation, no-script/reduced-motion modes and warm navigation.
+No publication is performed for this follow-up.
+
+Publication follow-up — 19 October: the owner authorized publishing the current
+catalogue/social-ads changes including the corrections below. Browser access is
+available again; the updated responsive, reduced-motion/no-script and navigation
+suite is rerun before release. The former sandbox limitation above is historical,
+not a claim that this release was visually verified while access was blocked.
+
 ## Brand-service follow-up — 18 October 2026 (local only)
 
 The owner requested consistent deliverable cards, a larger audience CTA,
