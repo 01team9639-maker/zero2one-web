@@ -367,6 +367,43 @@ html[lang="ar"] .rf-service-studio [data-home-scroll-prev] svg { transform:none;
   .rf-service-studio *,.rf-service-studio *::before,.rf-service-studio *::after { animation:none!important; transition:none!important; scroll-behavior:auto!important; }
 }
 
+/* Social media management: retain the supplied imagery and original copy. */
+.rf-service-studio[data-studio-service="social-media-management"] .service-studio-title-accent { display:block; width:fit-content; margin-top:4px; direction:ltr; unicode-bidi:isolate; background:var(--studio-gradient); -webkit-background-clip:text; background-clip:text; color:transparent; font-weight:inherit; }
+.rf-service-studio[data-studio-service="social-media-management"] :is(.service-studio-benefits,[data-social-content-section]) .rf-prose { max-width:none; }
+.rf-service-studio[data-studio-service="social-media-management"] .service-studio-benefits .service-studio-grid { grid-auto-rows:1fr; }
+.rf-service-studio[data-studio-service="social-media-management"] :is(.service-studio-benefits,[data-social-content-section]) .service-studio-card { display:flex; flex-direction:column; }
+.rf-service-studio[data-studio-service="social-media-management"] .service-studio-benefits .service-studio-card-copy { margin-top:auto; }
+.rf-service-studio[data-studio-service="social-media-management"] [data-social-content-rail] .service-studio-track { display:flex; flex-wrap:nowrap; align-items:stretch; gap:22px; width:100%; min-width:0; padding:8px 3px 24px; overflow-x:auto; overflow-y:hidden; scroll-snap-type:x mandatory; scroll-padding-inline:3px; overscroll-behavior-x:contain; touch-action:pan-x pan-y; scrollbar-width:thin; scrollbar-color:var(--studio-orange) var(--studio-soft); }
+.rf-service-studio[data-studio-service="social-media-management"] [data-social-content-rail] .service-studio-track > .service-studio-card { flex:0 0 100%; scroll-snap-align:start; scroll-snap-stop:always; }
+.rf-service-studio[data-studio-service="social-media-management"] [data-social-content-rail] .service-studio-card:hover { transform:none; }
+.rf-service-studio[data-studio-service="social-media-management"] [data-social-content-rail] .service-studio-track:focus-visible { outline:2px solid var(--studio-orange); outline-offset:4px; border-radius:25px; }
+.rf-service-studio[data-studio-service="social-media-management"] .service-studio-audience .service-studio-actions { justify-content:center; margin-top:34px; }
+.rf-service-studio[data-studio-service="social-media-management"] .service-studio-audience .service-studio-action { display:flex; width:100%; max-width:380px; }
+.rf-service-studio[data-studio-service="social-media-management"] .service-studio-audience .service-studio-action .btn-click { min-height:64px; color:var(--studio-cream); }
+.rf-service-studio[data-studio-service="social-media-management"] .service-studio-audience .service-studio-action .btn-text { padding:17px 28px; font-size:17px; }
+.rf-service-studio[data-studio-service="social-media-management"] .service-studio-outcomes .service-studio-grid { grid-auto-rows:auto; align-items:stretch; }
+.rf-service-studio[data-studio-service="social-media-management"] .service-studio-outcomes .service-studio-summary { row-gap:16px; padding:22px; }
+.rf-service-studio[data-studio-service="social-media-management"] .service-studio-outcomes .service-studio-card-head { grid-template-columns:24px minmax(0,1fr); gap:10px; align-items:baseline; }
+.rf-service-studio[data-studio-service="social-media-management"] .service-studio-outcomes .service-studio-art { height:210px; }
+.rf-service-studio[data-studio-service="social-media-management"] .service-studio-outcomes .service-studio-answer { padding:0 22px 26px; }
+@media (min-width:761px) {
+  .rf-service-studio[data-studio-service="social-media-management"] [data-social-content-rail] .service-studio-track > .service-studio-card { flex-basis:calc((100% - 22px) / 2); }
+  .rf-service-studio[data-studio-service="social-media-management"] .service-studio-outcomes .service-studio-grid { grid-template-columns:repeat(2,minmax(0,1fr)); grid-auto-rows:1fr; gap:24px; }
+}
+@media (min-width:1101px) {
+  .rf-service-studio[data-studio-service="social-media-management"] [data-social-content-rail] .service-studio-track > .service-studio-card { flex-basis:calc((100% - 44px) / 3); }
+  .rf-service-studio[data-studio-service="social-media-management"] .service-studio-timeline { display:block; max-width:1240px; padding:0; }
+  .rf-service-studio[data-studio-service="social-media-management"] .service-studio-timeline::before { left:50%; inset-inline-start:auto; top:47px; bottom:47px; margin-left:-1px; }
+  .rf-service-studio[data-studio-service="social-media-management"] .service-studio-timeline > .service-studio-step { width:calc(50% - 40px); margin:0 0 24px; }
+  .rf-service-studio[data-studio-service="social-media-management"] .service-studio-timeline > .service-studio-step:nth-child(even) { margin-inline-start:calc(50% + 40px); }
+  .rf-service-studio[data-studio-service="social-media-management"] .service-studio-step:nth-child(odd) .rf-step-no { inset-inline-start:auto; inset-inline-end:-62px; }
+  .rf-service-studio[data-studio-service="social-media-management"] .service-studio-step:nth-child(even) .rf-step-no { inset-inline-start:-62px; inset-inline-end:auto; }
+  .rf-service-studio[data-studio-service="social-media-management"] .service-studio-step .rf-step-card::before { content:""; position:absolute; top:46px; height:2px; width:40px; background:rgba(255,253,237,.55); }
+  .rf-service-studio[data-studio-service="social-media-management"] .service-studio-step:nth-child(odd) .rf-step-card::before { inset-inline-end:-40px; }
+  .rf-service-studio[data-studio-service="social-media-management"] .service-studio-step:nth-child(even) .rf-step-card::before { inset-inline-start:-40px; }
+  .rf-service-studio[data-studio-service="social-media-management"] .service-studio-progress { inset-inline-start:auto; inset-inline-end:-41px; top:47px; }
+}
+
 /* Google Ads: original card anatomy, balanced distribution and a full-width rail. */
 .rf-service-studio[data-studio-service="manage-google-adwords-campaigns"] .service-studio-title-accent { display:inline-block; direction:ltr; unicode-bidi:isolate; background:var(--studio-gradient); -webkit-background-clip:text; background-clip:text; color:transparent; font-weight:inherit; }
 .rf-service-studio[data-studio-service="manage-google-adwords-campaigns"] :is(.service-studio-benefits,#section-4,.service-studio-deliverables) .rf-prose { max-width:none; }

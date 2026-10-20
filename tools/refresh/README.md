@@ -682,6 +682,22 @@ swiping and no-script/reduced-motion disclosure operation.
 
 ## Publication gate — important for page-by-page approval
 
+The 20 October social-media-management review is local-only pending approval.
+The bilingual hero has a separate gradient `Social Media` line. Original
+benefit card anatomy is retained with full-width, consistent distribution.
+The eight supplied deliverable cards and four complementary cards use two
+all-width native swipe rails; the independently authored English introduction
+remains intact before its eight-card deliverables section. Process points
+alternate on desktop. Outcomes use two balanced columns on desktop, retaining
+native compact disclosures. The audience CTA is centered and enlarged.
+Only this service's portfolio section and visible clients pause control are
+removed; portfolio source paragraphs have explicit owner-excluded coverage.
+All other source copy, pictures, links, metadata and footers remain protected.
+Tests: `test_social_management_followup.py` and
+`test_social_management_followup_browser.js`. The immutable recovered scope
+baseline is verified against exact pre-edit HTML hashes from the independently
+published `a760dbc` commit; the original baseline is preserved too.
+
 The 19 October Google Ads review remains local until publication is requested.
 Its original investment section (`section-10`) is retained in one
 `GOOGLE ADS INVESTMENT DISABLED:2026-10-19` HTML comment, not live hidden DOM.

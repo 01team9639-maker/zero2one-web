@@ -261,6 +261,10 @@ def service_body(slug, lang):
         if p['style']=='HEADING_2': chunks.append([p,[]])
         elif chunks: chunks[-1][1].append(p)
     for n,(h,items) in enumerate(chunks,1):
+        if slug=='social-media-management' and clean(h) in ('بعض من أعمالنا في حسابات التواصل الاجتماعي','Some of Our Social Media Work'):
+            for p in [h]+items:
+                record(p,'excluded','Owner removed the social management portfolio section on 2026-10-20')
+            continue
         if slug=='brand-identity' and n==9:
             for p in [h]+items:
                 record(p,'excluded','Owner removed the brand investment callout on 2026-10-18')

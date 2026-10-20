@@ -48,14 +48,14 @@ def check():
     results=[]
     for row,route in routes.items():
         source=(ROOT/(route.strip('/')+'/index.html' if route!='/' else 'index.html')).read_text()
-        if route in ('/services/digital-advertising/','/ar/services/digital-advertising/','/services/manage-google-adwords-campaigns/','/ar/services/manage-google-adwords-campaigns/') and 'service-studio-title-accent' in source:
+        if route in ('/services/digital-advertising/','/ar/services/digital-advertising/','/services/manage-google-adwords-campaigns/','/ar/services/manage-google-adwords-campaigns/','/services/social-media-management/','/ar/services/social-media-management/') and 'service-studio-title-accent' in source:
             # The owner explicitly added Ads / Google Ads treatments on 19 Oct.
             # Compare all original source words after removing only that exact
             # audited addition, not an arbitrary region or hidden duplicate.
             from service_studio import Tree
             tree=Tree(source).root
             accents=[n for n in tree.walk() if n.has('service-studio-title-accent')]
-            expected='Google Ads' if 'manage-google-adwords-campaigns' in route else 'Ads'
+            expected='Social Media' if 'social-media-management' in route else 'Google Ads' if 'manage-google-adwords-campaigns' in route else 'Ads'
             assert len(accents)==1 and accents[0].text()==expected
             accents[0].detach();source=tree.render()
         p=Text();p.feed(source)
