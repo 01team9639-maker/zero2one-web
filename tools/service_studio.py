@@ -249,10 +249,10 @@ def refine(page, slug, lang):
         if split<8 or split>len(words)*.65:
             matches = list(re.finditer(r'\S+',words)); split=matches[min(4,max(1,len(matches)//3))-1].end()
         h1.set([n('span','service-studio-title-primary',[html.escape(words[:split])]),' ',n('span','service-studio-title-secondary',[html.escape(words[split:].lstrip())])])
-        if slug in ('digital-advertising','manage-google-adwords-campaigns','social-media-management'):
+        if slug in ('digital-advertising','manage-google-adwords-campaigns','social-media-management','ecommerce-development'):
             primary=h1.first(lambda e:e.has('service-studio-title-primary'))
             primary.append(' ')
-            accent={'digital-advertising':'Ads','manage-google-adwords-campaigns':'Google Ads','social-media-management':'Social Media'}[slug]
+            accent={'digital-advertising':'Ads','manage-google-adwords-campaigns':'Google Ads','social-media-management':'Social Media','ecommerce-development':'E-commerce'}[slug]
             primary.append(n('span','service-studio-title-accent',[accent],lang='en',dir='ltr'))
         copy = reveal(n('div','service-studio-hero-copy',[h1]+paragraphs+[n('div','service-studio-actions',[button(a,i>0) for i,a in enumerate(actions)])]),'hero')
         visual = reveal(n('figure','service-studio-hero-art',[photo(slug,True)],aria_hidden='true',data_service_image_slot=slug+'/hero'),'hero')
@@ -386,13 +386,15 @@ def refine(page, slug, lang):
             if kind in ('why','outcomes') and not (slug=='brand-identity' and kind=='outcomes'):grid.attrs['data-seo-accordion']=None
             site_types=slug=='web-design-riyadh' and art_kind=='types'
             google_deliverables=slug=='manage-google-adwords-campaigns' and kind=='deliverables'
+            ecommerce_deliverables=slug=='ecommerce-development' and kind=='deliverables'
             social_content_rail=slug=='social-media-management' and (kind=='deliverables' or art_kind=='complementary')
             if site_types:section.attrs['data-web-site-types']='true'
             if kind in ('benefits','deliverables','audience') or site_types or social_content_rail or (slug=='brand-identity' and kind=='outcomes'):
                 parent=grid.parent;position=parent.children.index(grid)
-                wrapper=rail(grid,lang,title_text,site_types or google_deliverables or social_content_rail)
+                wrapper=rail(grid,lang,title_text,site_types or google_deliverables or ecommerce_deliverables or social_content_rail)
                 if site_types:wrapper.attrs['data-web-site-types']='true'
                 if google_deliverables:wrapper.attrs['data-google-deliverables']='true'
+                if ecommerce_deliverables:wrapper.attrs['data-ecommerce-deliverables']='true'
                 if social_content_rail:
                     role='deliverables' if kind=='deliverables' else 'complementary'
                     wrapper.attrs['data-social-content-rail']=role
@@ -411,7 +413,7 @@ def refine(page, slug, lang):
         if kind=='team':
             for card in [e for e in section.walk() if e.has('team-card')]:
                 card.add('service-studio-person');reveal(card)
-        if kind=='clients' and slug in ('web-design-riyadh','digital-advertising','manage-google-adwords-campaigns','social-media-management'):
+        if kind=='clients' and slug in ('web-design-riyadh','digital-advertising','manage-google-adwords-campaigns','social-media-management','ecommerce-development'):
             for toggle in [e for e in section.walk() if e.has('logo-marquee-toggle')]:toggle.detach()
         if kind=='faq':
             for card in [e for e in section.walk() if e.has('rf-faq-item')]:reveal(card)

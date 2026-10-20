@@ -682,6 +682,17 @@ swiping and no-script/reduced-motion disclosure operation.
 
 ## Publication gate — important for page-by-page approval
 
+The 20 October ecommerce review remains local-only until the owner requests
+publication. It adds a standalone gradient `E-commerce` hero line, balances the
+three original benefit cards, and presents all nine deliverable cards in an
+all-width native swipe rail. Audience and package CTAs retain their destinations
+with consistent centered sizing; the package section is pure white. Process
+points alternate on desktop. The investment callout is owner-excluded in source
+coverage; only Mohammed Karabala's card is removed from this service's team,
+preserving the other four complete profiles. The clients' visible pause control
+is removed, not its existing reduced-motion support. Tests:
+`test_ecommerce_followup.py` and `test_ecommerce_followup_browser.js`.
+
 The 20 October social-media-management review is local-only pending approval.
 The bilingual hero has a separate gradient `Social Media` line. Original
 benefit card anatomy is retained with full-width, consistent distribution.

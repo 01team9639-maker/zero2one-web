@@ -367,6 +367,39 @@ html[lang="ar"] .rf-service-studio [data-home-scroll-prev] svg { transform:none;
   .rf-service-studio *,.rf-service-studio *::before,.rf-service-studio *::after { animation:none!important; transition:none!important; scroll-behavior:auto!important; }
 }
 
+/* Ecommerce review: balance existing cards and keep the entire service row swipeable. */
+.rf-service-studio[data-studio-service="ecommerce-development"] .service-studio-title-accent { display:block; width:fit-content; margin-top:4px; direction:ltr; unicode-bidi:isolate; background:var(--studio-gradient); -webkit-background-clip:text; background-clip:text; color:transparent; font-weight:inherit; }
+.rf-service-studio[data-studio-service="ecommerce-development"] :is(.service-studio-benefits,.service-studio-deliverables) .rf-prose { max-width:none; }
+.rf-service-studio[data-studio-service="ecommerce-development"] .service-studio-benefits .service-studio-grid { grid-auto-rows:1fr; }
+.rf-service-studio[data-studio-service="ecommerce-development"] :is(.service-studio-benefits,.service-studio-deliverables) .service-studio-card { display:flex; flex-direction:column; }
+.rf-service-studio[data-studio-service="ecommerce-development"] .service-studio-benefits .service-studio-card-copy { margin-top:auto; }
+.rf-service-studio[data-studio-service="ecommerce-development"] [data-ecommerce-deliverables] .service-studio-track { display:flex; flex-wrap:nowrap; align-items:stretch; gap:22px; width:100%; min-width:0; padding:8px 3px 24px; overflow-x:auto; overflow-y:hidden; scroll-snap-type:x mandatory; scroll-padding-inline:3px; overscroll-behavior-x:contain; touch-action:pan-x pan-y; scrollbar-width:thin; scrollbar-color:var(--studio-orange) var(--studio-soft); }
+.rf-service-studio[data-studio-service="ecommerce-development"] [data-ecommerce-deliverables] .service-studio-track > .service-studio-card { flex:0 0 100%; scroll-snap-align:start; scroll-snap-stop:always; }
+.rf-service-studio[data-studio-service="ecommerce-development"] [data-ecommerce-deliverables] .service-studio-card:hover { transform:none; }
+.rf-service-studio[data-studio-service="ecommerce-development"] [data-ecommerce-deliverables] .service-studio-track:focus-visible { outline:2px solid var(--studio-orange); outline-offset:4px; border-radius:25px; }
+.rf-service-studio[data-studio-service="ecommerce-development"] :is(.service-studio-audience,.service-studio-packages) .service-studio-actions { justify-content:center; margin-top:34px; }
+.rf-service-studio[data-studio-service="ecommerce-development"] :is(.service-studio-audience,.service-studio-packages) .service-studio-action { display:flex; width:100%; max-width:380px; }
+.rf-service-studio[data-studio-service="ecommerce-development"] .service-studio-packages .service-studio-action { margin:28px auto 0; }
+.rf-service-studio[data-studio-service="ecommerce-development"] :is(.service-studio-audience,.service-studio-packages) .service-studio-action .btn-click { min-height:64px; color:var(--studio-cream); }
+.rf-service-studio[data-studio-service="ecommerce-development"] :is(.service-studio-audience,.service-studio-packages) .service-studio-action .btn-text { padding:17px 28px; font-size:17px; }
+.rf-service-studio[data-studio-service="ecommerce-development"] .service-studio-packages { background:#fff; }
+@media (min-width:761px) {
+  .rf-service-studio[data-studio-service="ecommerce-development"] [data-ecommerce-deliverables] .service-studio-track > .service-studio-card { flex-basis:calc((100% - 22px) / 2); }
+}
+@media (min-width:1101px) {
+  .rf-service-studio[data-studio-service="ecommerce-development"] [data-ecommerce-deliverables] .service-studio-track > .service-studio-card { flex-basis:calc((100% - 44px) / 3); }
+  .rf-service-studio[data-studio-service="ecommerce-development"] .service-studio-timeline { display:block; max-width:1240px; padding:0; }
+  .rf-service-studio[data-studio-service="ecommerce-development"] .service-studio-timeline::before { left:50%; inset-inline-start:auto; top:47px; bottom:47px; margin-left:-1px; }
+  .rf-service-studio[data-studio-service="ecommerce-development"] .service-studio-timeline > .service-studio-step { width:calc(50% - 40px); margin:0 0 24px; }
+  .rf-service-studio[data-studio-service="ecommerce-development"] .service-studio-timeline > .service-studio-step:nth-child(even) { margin-inline-start:calc(50% + 40px); }
+  .rf-service-studio[data-studio-service="ecommerce-development"] .service-studio-step:nth-child(odd) .rf-step-no { inset-inline-start:auto; inset-inline-end:-62px; }
+  .rf-service-studio[data-studio-service="ecommerce-development"] .service-studio-step:nth-child(even) .rf-step-no { inset-inline-start:-62px; inset-inline-end:auto; }
+  .rf-service-studio[data-studio-service="ecommerce-development"] .service-studio-step .rf-step-card::before { content:""; position:absolute; top:46px; height:2px; width:40px; background:rgba(255,253,237,.55); }
+  .rf-service-studio[data-studio-service="ecommerce-development"] .service-studio-step:nth-child(odd) .rf-step-card::before { inset-inline-end:-40px; }
+  .rf-service-studio[data-studio-service="ecommerce-development"] .service-studio-step:nth-child(even) .rf-step-card::before { inset-inline-start:-40px; }
+  .rf-service-studio[data-studio-service="ecommerce-development"] .service-studio-progress { inset-inline-start:auto; inset-inline-end:-41px; top:47px; }
+}
+
 /* Social media management: retain the supplied imagery and original copy. */
 .rf-service-studio[data-studio-service="social-media-management"] .service-studio-title-accent { display:block; width:fit-content; margin-top:4px; direction:ltr; unicode-bidi:isolate; background:var(--studio-gradient); -webkit-background-clip:text; background-clip:text; color:transparent; font-weight:inherit; }
 .rf-service-studio[data-studio-service="social-media-management"] :is(.service-studio-benefits,[data-social-content-section]) .rf-prose { max-width:none; }
