@@ -682,6 +682,22 @@ swiping and no-script/reduced-motion disclosure operation.
 
 ## Publication gate — important for page-by-page approval
 
+The owner approved publication of the 21 October mobile-app and marketing-consulting review.
+Mobile hero wording is unchanged: only the existing Arabic `تطبيق` and English
+`App` words receive inline gradient spans (no appended keyword). Both services
+retain their original benefit cards, use all-width nine-card deliverable rails,
+have centered audience CTAs and alternating desktop process points, and omit
+only their visible client pause controls. Marketing packages have a white
+background and balanced CTA; only mobile packages are owner-excluded.
+Mobile technology cards preserve the independent four-Arabic/three-English
+entries with balanced layouts. Results preserve five-Arabic/six-English cards.
+The mobile daily-relationship section is a light panel containing its three
+original benefit paragraphs, existing licensed icons and the unchanged CTA;
+the separate English introductory paragraph remains intact. No images, claims,
+destinations, profiles, metadata or footer text are added or rewritten.
+Tests: `test_apps_consulting_followup.py` and
+`test_apps_consulting_followup_browser.js`.
+
 The 20 October ecommerce review remains local-only until the owner requests
 publication. It adds a standalone gradient `E-commerce` hero line, balances the
 three original benefit cards, and presents all nine deliverable cards in an

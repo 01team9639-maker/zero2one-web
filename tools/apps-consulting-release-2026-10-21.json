@@ -1,0 +1,215 @@
+{
+  "baseline": "7e95bd7ed752d424acf0b5a4d90c7ac5991beaaf",
+  "scope": "Bilingual apps and consulting: balanced benefits, nine-card deliverables rails, audience CTA, alternating desktop process, no clients pause controls; consulting white packages/CTA; apps gradient existing title words, technology/outcome layout, light daily relationship panel and package removal. Other HTML only CSS stamps; published blog untouched.",
+  "runtimeFiles": [
+    {
+      "file": "404.html",
+      "sha256": "2fc31b75e8c112ad37694cdcfb930d450270807f5f10ccf6dfbcfcd9465ecd65"
+    },
+    {
+      "file": "about/index.html",
+      "sha256": "50aa5c0fd1a749930b8bc7b9c70b8342b478e2b9787f7f511cf10d1ae911ab25"
+    },
+    {
+      "file": "ar/404.html",
+      "sha256": "ca8d857c2a593c91370e388111095afac69f5c35747f98684a2d92ddd1735050"
+    },
+    {
+      "file": "ar/about/index.html",
+      "sha256": "a21dbd555daea17d11e21f5bbec85f7d96344ab5390fec3e5578114a35c256a2"
+    },
+    {
+      "file": "ar/contact/index.html",
+      "sha256": "bdb8350f10eea2fff7079c4121f13111240728e75348f7e2be9fe53d1d46c925"
+    },
+    {
+      "file": "ar/faqs/index.html",
+      "sha256": "eea850c76a998fa9e42283e3ec77ff3953ae1cd3e1bd79ed984ffcf54761c29c"
+    },
+    {
+      "file": "ar/index.html",
+      "sha256": "96fa58e39c71f8abba8fdee60c27df06063c8e97f061f12ed41a94d00e542111"
+    },
+    {
+      "file": "ar/services/brand-identity/index.html",
+      "sha256": "147cd2464a3410cee0b69d8ea8ab9a55418927eba8a9d900ce010fedd797176f"
+    },
+    {
+      "file": "ar/services/digital-advertising/index.html",
+      "sha256": "0eeffea78bb21bdcf3b99beb34fa3a58a90579db0714ce3bbc748e167e6e67ef"
+    },
+    {
+      "file": "ar/services/ecommerce-development/index.html",
+      "sha256": "0cf455c7a6fe3dd701c9fc2ddf0b5a22960fe8581985ed876d0b448e259788e2"
+    },
+    {
+      "file": "ar/services/index.html",
+      "sha256": "0cb8fbe9adeb5b15c4906f6cde9f19fdf42a6090bfe7501970b2e0cbf7c88223"
+    },
+    {
+      "file": "ar/services/manage-google-adwords-campaigns/index.html",
+      "sha256": "77960215bdca58c5fe052f8cc39539275728d9834a9dc9e002798266ea9f3b3a"
+    },
+    {
+      "file": "ar/services/marketing-consulting/index.html",
+      "sha256": "9e227c707557e98dad76f25eed37ea6620a43d436cbe1d02956932f22861c051"
+    },
+    {
+      "file": "ar/services/mobile-application/index.html",
+      "sha256": "626a9aaece301473abf7484c0efe5e7096654ec12e695bef4bb079eb976c65fa"
+    },
+    {
+      "file": "ar/services/seo-riyadh/index.html",
+      "sha256": "1cda54d7164866f65aef57c3f3b56c1e92e25e69d3fd2fe0d0e0680b54d90344"
+    },
+    {
+      "file": "ar/services/social-media-management/index.html",
+      "sha256": "a4331eaa2402af3829eea9daac09a43dda5c9feee48fcacc0e43128fabd78e8d"
+    },
+    {
+      "file": "ar/services/web-design-riyadh/index.html",
+      "sha256": "d9eed700da42534c0dcf9bd95196ed3fac3203217db490ad612bd074e4b4fb8b"
+    },
+    {
+      "file": "ar/team/index.html",
+      "sha256": "58b025bcff8434c000777877d571920f6231a364242738a4de0344a48415f2e0"
+    },
+    {
+      "file": "ar/work/alhokail-seo/index.html",
+      "sha256": "2a4ee70e389fa4299367a2a1a2ebf6330b5a3c0569f0a5bcf47eab93c0f10d45"
+    },
+    {
+      "file": "ar/work/alostaz-seo/index.html",
+      "sha256": "825ce4eb5485dbf218818769060dd2c36425ffaca1ad42c236e36e435e35f3c4"
+    },
+    {
+      "file": "ar/work/alrahwanji-paints/index.html",
+      "sha256": "8196ca75243a176eb28530848cc3efef34d761fc3d3fcddc15e25f64ce21c384"
+    },
+    {
+      "file": "ar/work/cosmetic-surgery-egypt-seo/index.html",
+      "sha256": "09755ae29fa1d8cc08d54aae6c2783438bbb356c5d8fb6b0600483fbb8a27e32"
+    },
+    {
+      "file": "ar/work/google-ads-conversion-value/index.html",
+      "sha256": "1523f7f817e4819931a2d66238c03e63fa32ec73afd8aa159b96bb5e06d3ce58"
+    },
+    {
+      "file": "ar/work/habba/index.html",
+      "sha256": "eef7e8a20508efab6c8b99777afe484c1a68cba0a540806e9029f13ac59f50d7"
+    },
+    {
+      "file": "ar/work/index.html",
+      "sha256": "671232800d5eb78b8f934d6e3b8a6bbfad5af2ec6fe2dc905e0a1f51c12b6dd9"
+    },
+    {
+      "file": "ar/work/kuwait-tutoring-instagram-ads/index.html",
+      "sha256": "f0f5f872e88e5b9933ea59d5a232c233ac6ab612b659074a2916f5614a8f2f81"
+    },
+    {
+      "file": "ar/work/orthopedic-clinic-egypt-seo/index.html",
+      "sha256": "33e9aaab4e61a0b1cf2985c133c0a9705a82f5ffdca3d44aa1daa48452a6a8b0"
+    },
+    {
+      "file": "assets/css/bundle.min.css",
+      "sha256": "e3e270a6bb58981576c090204ec5b5f3adffced82d8dd9ce001fa07c2c274210"
+    },
+    {
+      "file": "assets/css/service-studio.css",
+      "sha256": "8545f262781cab130ed9b6710e4d32913457f381a3eb954298fec36b745471f9"
+    },
+    {
+      "file": "contact/index.html",
+      "sha256": "1043641f5b1ebe524ec7e10ac27b3773772b41c753af53271ff9e6e75c8b8178"
+    },
+    {
+      "file": "faqs/index.html",
+      "sha256": "52c24c27fd2e03ab70dd70e7aefc2abee9b9f805ca33de23cd0dea5531805fdc"
+    },
+    {
+      "file": "index.html",
+      "sha256": "a45f10da711b4d16a69030556747737af82f002f6fd630c30c41b91f1b5dde2d"
+    },
+    {
+      "file": "services/brand-identity/index.html",
+      "sha256": "8fa286218c8c7b528076128016132cba69bd603976c2db8c9ffc03af15c1bb5e"
+    },
+    {
+      "file": "services/digital-advertising/index.html",
+      "sha256": "e8d39d220f2e7bb1d9eb428c0605a0f5946074b961c6f9d35f0521b925a6e5ee"
+    },
+    {
+      "file": "services/ecommerce-development/index.html",
+      "sha256": "1af0e1f15e2836fef71a0a4684d604d0f4be90deb8dce84e00da02c7ec6e81d1"
+    },
+    {
+      "file": "services/index.html",
+      "sha256": "5afa0eb846f8c5406ae0f0b7455acfda28b098ce71cbb264d4b68efed5305cb8"
+    },
+    {
+      "file": "services/manage-google-adwords-campaigns/index.html",
+      "sha256": "2b1bd865e1532dc3361ea1a8c107a077a3fc5f98718a919e066a1194563dcd81"
+    },
+    {
+      "file": "services/marketing-consulting/index.html",
+      "sha256": "563915c2da4628eec79f0734ed199ef94ac643ef09321b74ae92a10d133d8161"
+    },
+    {
+      "file": "services/mobile-application/index.html",
+      "sha256": "8a7b1e4e9f2964e55bb96595aeed9f8de026ea68c23e11d1e67db5f1be87546f"
+    },
+    {
+      "file": "services/seo-riyadh/index.html",
+      "sha256": "e96856fbceb9ab4f44b65fa90a1f72ae933f10c7021ed5f803a6c873ac82aead"
+    },
+    {
+      "file": "services/social-media-management/index.html",
+      "sha256": "a5f1d537db2c3a3643554d8e8f607cef8899880ee3d2b22bab96c575e3184098"
+    },
+    {
+      "file": "services/web-design-riyadh/index.html",
+      "sha256": "7fe04f6da3295e02e2c4b96b953c6b11d2b073affce30a35a98bd0fd8d47012f"
+    },
+    {
+      "file": "team/index.html",
+      "sha256": "71532c79d0314c4af8b6d4fed3d030177a5235aad703a121fd4315db2e8d94d0"
+    },
+    {
+      "file": "work/alhokail-seo/index.html",
+      "sha256": "8778fe87f1ce30aac1cbee0fbf8eee6cc6fe21527e622c6c59f415a15be215ef"
+    },
+    {
+      "file": "work/alostaz-seo/index.html",
+      "sha256": "15ebb6bf6c9904c5cb63bcc1c01f3bae42a9422e9c9562334dcdfc07e230b34d"
+    },
+    {
+      "file": "work/alrahwanji-paints/index.html",
+      "sha256": "4c534f89af973369d18d5fdc0d427a813cc04c9dfe322f2f24fd9ec973a271e2"
+    },
+    {
+      "file": "work/cosmetic-surgery-egypt-seo/index.html",
+      "sha256": "7d242885d5a027276f0ab9a102d445172676fe7c6886c24e6234400659ed7125"
+    },
+    {
+      "file": "work/google-ads-conversion-value/index.html",
+      "sha256": "af290b31bf5f1fc03044f3396777247973da6df6fa4552483f0874e88cac7c2e"
+    },
+    {
+      "file": "work/habba/index.html",
+      "sha256": "b58407e3acb57d4fb4e75fba28cda25be43c02ac32c8390936dbcaa4bbf84931"
+    },
+    {
+      "file": "work/index.html",
+      "sha256": "cf4c880cfcd1c77114bf06e144f793da363557af8cb1d314fde1bd2751ceb503"
+    },
+    {
+      "file": "work/kuwait-tutoring-instagram-ads/index.html",
+      "sha256": "c2ecd214cd3f43c74d069c10989b3167a11bad9ce5a74f70624c702d3034d3c8"
+    },
+    {
+      "file": "work/orthopedic-clinic-egypt-seo/index.html",
+      "sha256": "6dab144de21c3708ae48e182e8bfd6a91b04098dd207ea872bdd710ea6c1ab5b"
+    }
+  ],
+  "blogFilesPreserved": 180
+}

@@ -249,6 +249,15 @@ def refine(page, slug, lang):
         if split<8 or split>len(words)*.65:
             matches = list(re.finditer(r'\S+',words)); split=matches[min(4,max(1,len(matches)//3))-1].end()
         h1.set([n('span','service-studio-title-primary',[html.escape(words[:split])]),' ',n('span','service-studio-title-secondary',[html.escape(words[split:].lstrip())])])
+        if slug=='mobile-application':
+            # Color only existing words; do not append or remove hero copy.
+            keyword=re.compile(r'\bتطبيق\b' if lang=='ar' else r'\bApp\b')
+            for block in list(h1.walk()):
+                if not (block.has('service-studio-title-primary') or block.has('service-studio-title-secondary')):continue
+                text=block.text();pieces=[];last=0
+                for match in keyword.finditer(text):
+                    pieces.extend([html.escape(text[last:match.start()]),n('span','service-studio-title-keyword',[html.escape(match[0])])]);last=match.end()
+                if pieces:block.set(pieces+[html.escape(text[last:])])
         if slug in ('digital-advertising','manage-google-adwords-campaigns','social-media-management','ecommerce-development'):
             primary=h1.first(lambda e:e.has('service-studio-title-primary'))
             primary.append(' ')
@@ -345,6 +354,10 @@ def refine(page, slug, lang):
             if grid: cards=[e for e in grid.children if isinstance(e,Node) and e.tag in ('article','details')]
         if grid and cards:
             grid.add('service-studio-grid')
+            if slug=='mobile-application' and title_text in ('التقنيات المستخدمة لإنتاج تطبيقات جوال احترافية','The Tools We Use to Build Professional Mobile Apps'):
+                section.attrs['data-mobile-technologies']=str(len(cards))
+            if slug=='mobile-application' and kind=='outcomes':
+                section.attrs['data-mobile-outcomes']=str(len(cards))
             for i,card in enumerate(cards):
                 # Flatten the old brand disclosure into the same source title
                 # and answer nodes before choosing the new native presentation.
@@ -393,14 +406,16 @@ def refine(page, slug, lang):
             site_types=slug=='web-design-riyadh' and art_kind=='types'
             google_deliverables=slug=='manage-google-adwords-campaigns' and kind=='deliverables'
             ecommerce_deliverables=slug=='ecommerce-development' and kind=='deliverables'
+            followup_deliverables=slug in ('mobile-application','marketing-consulting') and kind=='deliverables'
             social_content_rail=slug=='social-media-management' and (kind=='deliverables' or art_kind=='complementary')
             if site_types:section.attrs['data-web-site-types']='true'
             if kind in ('benefits','deliverables','audience') or site_types or social_content_rail or (slug=='brand-identity' and kind=='outcomes'):
                 parent=grid.parent;position=parent.children.index(grid)
-                wrapper=rail(grid,lang,title_text,site_types or google_deliverables or ecommerce_deliverables or social_content_rail)
+                wrapper=rail(grid,lang,title_text,site_types or google_deliverables or ecommerce_deliverables or followup_deliverables or social_content_rail)
                 if site_types:wrapper.attrs['data-web-site-types']='true'
                 if google_deliverables:wrapper.attrs['data-google-deliverables']='true'
                 if ecommerce_deliverables:wrapper.attrs['data-ecommerce-deliverables']='true'
+                if followup_deliverables:wrapper.attrs['data-followup-deliverables']='true'
                 if social_content_rail:
                     role='deliverables' if kind=='deliverables' else 'complementary'
                     wrapper.attrs['data-social-content-rail']=role
@@ -419,7 +434,7 @@ def refine(page, slug, lang):
         if kind=='team':
             for card in [e for e in section.walk() if e.has('team-card')]:
                 card.add('service-studio-person');reveal(card)
-        if kind=='clients' and slug in ('web-design-riyadh','digital-advertising','manage-google-adwords-campaigns','social-media-management','ecommerce-development'):
+        if kind=='clients' and slug in ('web-design-riyadh','digital-advertising','manage-google-adwords-campaigns','social-media-management','ecommerce-development','mobile-application','marketing-consulting'):
             for toggle in [e for e in section.walk() if e.has('logo-marquee-toggle')]:toggle.detach()
         if kind=='faq':
             for card in [e for e in section.walk() if e.has('rf-faq-item')]:reveal(card)
@@ -477,6 +492,23 @@ def refine(page, slug, lang):
                 position=parent.children.index(anchor);replacement=button(anchor)
                 parent.children.insert(position,replacement);replacement.parent=parent
         for group in [e for e in section.walk() if e.has('rf-actions') or e.has('brand-owner-actions')]:group.add('service-studio-actions')
+        if slug=='mobile-application' and section.attrs.get('id')=='section-10':
+            section.attrs['class']=' '.join(c for c in section.attrs['class'].split() if c!='service-studio-ink')
+            section.add('service-studio-paper','mobile-daily-relationship')
+            section.first(lambda e:e.has('seo-flow-trace')).attrs['data-seo-flow-tone']='orange'
+            prose=section.first(lambda e:e.has('rf-prose'))
+            paragraphs=[e for e in prose.children if isinstance(e,Node) and e.tag=='p']
+            assert len(paragraphs)==(3 if lang=='ar' else 4),'Expected original daily relationship copy'
+            values=paragraphs[-3:];intro=paragraphs[:-3]
+            for paragraph in intro:paragraph.add('mobile-daily-intro')
+            tail=[e for e in list(prose.children) if e not in paragraphs]
+            cards=n('div','mobile-daily-benefits')
+            for i,paragraph in enumerate(values):
+                cards.append(reveal(n('article','mobile-daily-benefit',[
+                    n('div','mobile-daily-benefit-top',[icon(['home','chat','work'][i]),n('span','service-studio-index',[f'{i+1:02d}'])],aria_hidden='true'),paragraph
+                ])))
+            prose.set(intro+[cards,n('div','mobile-daily-actions service-studio-actions',tail)])
+            for group in [e for e in section.walk() if e.has('rf-actions') and not e.children]:group.detach()
         if slug=='manage-google-adwords-campaigns' and section.attrs.get('id')=='section-10':
             # Keep the entire normalized section restorable, not hidden live DOM.
             original=section.render()

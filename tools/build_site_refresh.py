@@ -261,6 +261,10 @@ def service_body(slug, lang):
         if p['style']=='HEADING_2': chunks.append([p,[]])
         elif chunks: chunks[-1][1].append(p)
     for n,(h,items) in enumerate(chunks,1):
+        if slug=='mobile-application' and clean(h) in ('باقات تطوير تطبيقات الجوال مصممة لتناسب احتياجات مشروعك',"Mobile App Packages Designed to Fit Your Project's Needs"):
+            for p in [h]+items:
+                record(p,'excluded','Owner removed the mobile app packages section on 2026-10-21')
+            continue
         if slug=='ecommerce-development' and clean(h) in ('المتجر ليس مصروفاً، بل فرع جديد لا يغلق',"A Store Isn't an Expense. It's a Branch That Never Closes"):
             for p in [h]+items:
                 record(p,'excluded','Owner removed the ecommerce investment callout on 2026-10-20')
