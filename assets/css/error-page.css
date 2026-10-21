@@ -1,0 +1,26 @@
+/* =========================================================================
+   Error pages — /404.html and /ar/404.html (tools/build_404.py)
+   The FAQ page's simple hero, plus the error code, one line of help and four
+   ways back into the site. Everything else is the site's own chrome.
+   ========================================================================= */
+
+.z2o-404 .z2o-404-code {
+   margin: 0 0 .12em;
+   font-size: clamp(4.5em, 16vw, 11em);
+   font-weight: 900;
+   line-height: .9;
+   letter-spacing: -.02em;
+   color: var(--color-brand-orange);
+}
+
+.z2o-404 .z2o-404-lead {
+   max-width: 36em;
+   margin-top: 1.25em;
+}
+
+.z2o-404 .z2o-404-links {
+   display: flex;
+   flex-wrap: wrap;
+   gap: .75em 1em;
+   margin-top: 2.25em;
+}

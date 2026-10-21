@@ -9,8 +9,38 @@ const selectAll = (e) => document.querySelectorAll(e);
 
 initPageTransitions();
 
+/**
+* Loading curtain failsafe
+* ------------------------
+* style-new.css lifts the curtain by itself 2 s after first render
+* (`z2o-loader-failsafe`), because before that only the timelines below did:
+* slow scripts kept the page orange for seconds, failed scripts for good.
+* Whoever comes first owns the curtain, and this is called first thing by both
+* first-load timelines:
+* - scripts first: stop the CSS lift, and the intro plays exactly as designed;
+* - CSS first: skip the intro (replaying it would cover a page that is already
+*   being read, then slide its content in a second time) and take the curtain
+*   over at rest, so barba's page transitions keep animating it.
+*/
+function loaderFailsafeTookOver() {
+  var screen = document.querySelector('.loading-screen');
+  if (!screen) return false;
+  var lift = screen.getAnimations ? screen.getAnimations().filter(function (a) {
+    return a.animationName === 'z2o-loader-failsafe';
+  })[0] : null;
+  var started = lift ? lift.currentTime >= lift.effect.getTiming().delay : performance.now() >= 2000;
+  screen.style.animation = 'none';
+  if (!started) return false;
+  gsap.set('.loading-screen', { yPercent: -100 });
+  gsap.set('.loading-screen .rounded-div-wrap.bottom', { height: '0vh' });
+  gsap.set('.loading-words', { opacity: 0 });
+  return true;
+}
+
 // Animation - First Page Load
 function initLoaderHome() {
+
+  if (loaderFailsafeTookOver()) return;
 
   var tl = gsap.timeline();
 
@@ -150,6 +180,8 @@ function initLoaderHome() {
 
 // Animation - First Page Load
 function initLoader() {
+
+  if (loaderFailsafeTookOver()) return;
 
   var tl = gsap.timeline();
 

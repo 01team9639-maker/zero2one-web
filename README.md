@@ -208,6 +208,15 @@ npm run build
 `esbuild`, Playwright, and Sharp are pinned in `package-lock.json`; the build
 does not download an unversioned compiler at runtime.
 
+The build also regenerates the two error pages, `/404.html` and `/ar/404.html`,
+from the FAQ page's shell (`tools/build_404.py`; served by `ErrorDocument` in
+`.htaccess` and `ar/.htaccess`), and drops from `bundle.min.css` every rule
+whose classes or ids appear in no committed HTML or script
+(`tools/prune_css.py`; the sources are never edited). A class that only a
+future page will use comes back the moment that page is committed and the
+build runs again; one that is only ever built from strings in a script goes in
+`tools/css-keep.txt`.
+
 ---
 
 ## Bilingual — English at `/`, Arabic at `/ar/`

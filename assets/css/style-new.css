@@ -151,6 +151,23 @@ main.touch .main-wrap {
    will-change: transform;
 }
 
+/* Failsafe lift. The curtain is in the HTML and only the loader timelines in
+   index-new.js lifted it, so a page whose scripts came late stayed orange
+   (throttled phone: content painted at 3.2 s behind a curtain still down at
+   ~5 s) and a page whose scripts never ran stayed orange for good. If the
+   scripts have not taken the curtain over within 2 s, CSS lifts it.
+   loaderFailsafeTookOver() cancels this the moment the scripts start. */
+@keyframes z2o-loader-failsafe {
+   to {
+      transform: translateY(-100%);
+      visibility: hidden;
+   }
+}
+
+.loading-container .loading-screen {
+   animation: z2o-loader-failsafe .8s cubic-bezier(.76, 0, .24, 1) 2s forwards;
+}
+
 .loading-screen,
 .loading-container .rounded-div-wrap.top .rounded-div,
 .loading-container .rounded-div-wrap.bottom .rounded-div {

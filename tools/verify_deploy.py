@@ -274,6 +274,24 @@ def check_not_public(base):
             report(FAIL, f"{path} IS PUBLIC", f"HTTP {status} — check the deny rules in .htaccess")
 
 
+def check_error_pages(base):
+    """A mistyped URL must answer a real 404 with our own page, in its language.
+    Until 2026-10 it got Hostinger's generic English page with no way back;
+    ErrorDocument in .htaccess and ar/.htaccess now serves /404.html and
+    /ar/404.html (tools/build_404.py)."""
+    print("\n── error pages ───────────────────────────────────────────────")
+    for path, lang in (("/no-such-page-verify-deploy/", "en"), ("/ar/no-such-page-verify-deploy/", "ar")):
+        status, _, body = fetch(base + path)
+        ours = "z2o-404" in body and f'<html lang="{lang}"' in body
+        if status == 404 and ours:
+            report(PASS, f"{path} → our {lang.upper()} 404 page", "HTTP 404")
+        elif status == 404:
+            report(FAIL, f"{path} → host's generic 404, not ours",
+                   "check ErrorDocument in " + (".htaccess" if lang == "en" else "ar/.htaccess"))
+        else:
+            report(FAIL, f"{path} answered HTTP {status}", "a missing page must stay a real 404")
+
+
 def check_form(base):
     """Prove send.php is alive without sending mail: a deliberately invalid
     payload must come back 422 from our own validation. A 5xx here means PHP is
@@ -320,6 +338,7 @@ def main():
         check_pages(base, urls)
     check_essentials(base)
     check_not_public(base)
+    check_error_pages(base)
     check_form(base)
 
     print("\n" + "=" * 62)

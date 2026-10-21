@@ -12,6 +12,9 @@ if [ ! -x "$ESBUILD" ]; then
   exit 1
 fi
 
+# 0) error pages from the FAQ page's shell — before step 1, which reads every page
+python3 tools/build_404.py
+
 # 1) CSS bundle (order matters)
 cat assets/css/normalize.css \
     assets/css/locomotive-scroll.css \
@@ -24,7 +27,11 @@ cat assets/css/normalize.css \
     assets/css/iconly-ui.css \
     assets/css/footer-layout.css \
     assets/css/service-studio.css \
+    assets/css/error-page.css \
   | "$ESBUILD" --loader=css --minify --charset=utf8 > assets/css/bundle.min.css
+# 1b) drop the rules no page or script can ever match (template leftovers);
+#     sources stay untouched — see the header of tools/prune_css.py
+python3 tools/prune_css.py assets/css/bundle.min.css
 
 # 2) SEO-only review stylesheet and site JS
 "$ESBUILD" assets/css/seo-studio-review.css --minify --charset=utf8 --outfile=assets/css/seo-studio-review.min.css
