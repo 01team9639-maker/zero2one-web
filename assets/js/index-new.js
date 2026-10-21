@@ -2370,10 +2370,18 @@ function initContactForm() {
 * channel in `method`, so GA4 → Admin → Events can mark it as a key event and
 * Google Ads can optimise against it. Bound once on `document`, because
 * initScript() re-runs after every barba page transition.
+*
+* `send_to` is required, not decorative. The page configures G-801242QR6K
+* inline and GTM-MKHHFMFH carries a Google tag for the same ID; whichever copy
+* initialises first decides where an event with no destination goes, and in
+* that race GA4 lost 7 of 12 real WhatsApp clicks (Google Ads got all 12). With
+* the destination named, GA4 received 12 of 12 and Ads still 12 of 12 —
+* GTM's conversion trigger reads the event name, which is unchanged.
 */
 function trackLead(method, extra) {
   if (typeof gtag !== 'function') return;
   gtag('event', method === 'directions' ? 'view_directions' : 'generate_lead', Object.assign({
+    send_to: 'G-801242QR6K',
     method: method,
     page_path: window.location.pathname,
     page_language: document.documentElement.getAttribute('lang') || 'en'

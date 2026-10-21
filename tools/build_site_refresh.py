@@ -1376,7 +1376,11 @@ def polish_chrome(page,lang):
         pattern=r'<li class="btn btn-link">\s*<a href="'+re.escape(local('/services/',lang))+r'"[\s\S]*?</a>\s*</li>'
         block=re.sub(pattern,lambda _:'<li class="rf-nav-services"><details><summary>'+label+'</summary>'+menu(lang)+'</details></li>',block)
         def contact(a):
-            if re.search(r'تواصل معنا|Contact',a[0],re.I):
+            # Judge the visible label, never the attributes: the English switch
+            # on /ar/contact/ is href="/contact/", and matching the whole tag
+            # rewrote it to /ar/contact/ — a language switch pointing at itself.
+            label=re.sub(r'<[^>]+>','',a[0])
+            if 'hreflang=' not in a[0].split('>',1)[0] and re.search(r'تواصل معنا|Contact',label,re.I):
                 return re.sub(r'href="[^"]*"','href="'+local('/contact/',lang)+'"',a[0],count=1).replace(' target="_blank"','')
             return a[0]
         block=re.sub(r'<a\b[^>]*>[\s\S]*?</a>',contact,block)

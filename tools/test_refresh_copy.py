@@ -40,6 +40,12 @@ class Text(HTMLParser):
 
 def norm(s): return re.sub(r'\s+',' ',html.unescape(s)).strip()
 
+# Arabic wording fixes the owner approved on 2026-10-21 for the SEO page. The
+# source snapshot keeps the document as written; the page shows the correction.
+SEO_APPROVED_CORRECTIONS=(('التجارية على في جوجل','التجارية في جوجل'),
+                          ('بحث دقيقة للكلمات','بحث دقيق للكلمات'),
+                          ('نقوم بدمج للبيانات','نقوم بدمج البيانات'))
+
 def check():
     coverage={v['id']:v for v in json.loads((ROOT/'tools/refresh/coverage.json').read_text())}
     routes={2:'/',3:'/ar/'}
@@ -57,11 +63,16 @@ def check():
             accents=[n for n in tree.walk() if n.has('service-studio-title-accent')]
             expected='E-commerce' if 'ecommerce-development' in route else 'Social Media' if 'social-media-management' in route else 'Google Ads' if 'manage-google-adwords-campaigns' in route else 'Ads'
             assert len(accents)==1 and accents[0].text()==expected
+            with_accent=Text();with_accent.feed(source)
             accents[0].detach();source=tree.render()
+        else: with_accent=None
         p=Text();p.feed(source)
         # Inline typography can split words and punctuation into spans. Preserve
         # their literal adjacency; only semantic block boundaries add spaces.
         page=norm(''.join(p.parts))
+        # Where the highlighted word is the owner's own ("…Advertising: Ads That
+        # Stop…" renders "Ads" once, as the accent), the copy reads in place.
+        if with_accent: page+=' \0 '+norm(''.join(with_accent.parts))
         for i,para in enumerate(DOCS[str(row)]['paragraphs']):
             key=f'{row}:{i}';t=clean(para)
             if not t: continue
@@ -84,6 +95,7 @@ def check():
             else:
                 t=re.sub(r'^(Title|Description|العنوان|الوصف):\s*','',t)
                 t=re.sub(r'^\[[^]]+\]\s*','',t)
+                for a,b in SEO_APPROVED_CORRECTIONS: t=t.replace(a,b)
                 status='PASS' if norm(t) in page else 'FAIL'
             results.append(dict(id=f'4:{i}',route=route,status=status,text=t))
     out=ROOT/'tools/reports/site-refresh/copy-completeness.json'

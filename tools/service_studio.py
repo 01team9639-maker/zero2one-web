@@ -254,6 +254,12 @@ def refine(page, slug, lang):
             primary.append(' ')
             accent={'digital-advertising':'Ads','manage-google-adwords-campaigns':'Google Ads','social-media-management':'Social Media','ecommerce-development':'E-commerce'}[slug]
             primary.append(n('span','service-studio-title-accent',[accent],lang='en',dir='ltr'))
+            # The accent is read as part of the H1. Where the owner's own copy
+            # continues with that same word ("…Advertising: Ads That Stop…"),
+            # the highlighted word is the owner's: drop the repeat, not the copy.
+            secondary=h1.first(lambda e:e.has('service-studio-title-secondary'))
+            rest=secondary.text()
+            if rest.startswith(accent+' '): secondary.set([html.escape(rest[len(accent)+1:])])
         copy = reveal(n('div','service-studio-hero-copy',[h1]+paragraphs+[n('div','service-studio-actions',[button(a,i>0) for i,a in enumerate(actions)])]),'hero')
         visual = reveal(n('figure','service-studio-hero-art',[photo(slug,True)],aria_hidden='true',data_service_image_slot=slug+'/hero'),'hero')
         hero = n('section','service-studio-hero',[flow(0,lang,'orange'),n('div','service-studio-inner service-studio-hero-grid',[copy,visual])],data_scroll_section=None)
