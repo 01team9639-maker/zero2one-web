@@ -119,9 +119,11 @@ def button(anchor, secondary=False):
 def photo(slug, hero=False):
     stem = PHOTOS.get(slug,slug)
     base = '/assets/images/owner-services-2026-10/'+stem
-    attrs = {'src':base+('.webp' if slug in PHOTOS else '-800.webp'),'width':'1440','height':'1024','alt':'','decoding':'async'}
-    if slug not in PHOTOS:
-        attrs.update({'srcset':', '.join(base+'-'+str(w)+'.webp '+str(w)+'w' for w in (480,800,1440)),'sizes':'(max-width:760px) 92vw, 46vw'})
+    attrs = {'src':base+'-800.webp','width':'1440','height':'1024','alt':'','decoding':'async'}
+    # The owner's photos (PHOTOS) are the 1440 px originals themselves; their
+    # -480/-800/-1000 copies were added 2026-10-21 so phones stop loading 1440 px.
+    widths = [(480,'-480'),(800,'-800')]+([(1000,'-1000'),(1440,'')] if slug in PHOTOS else [(1440,'-1440')])
+    attrs.update({'srcset':', '.join(base+suffix+'.webp '+str(w)+'w' for w,suffix in widths),'sizes':'(max-width:760px) 92vw, 46vw'})
     attrs.update({'fetchpriority':'high'} if hero else {'loading':'lazy'})
     return Node('img',attrs)
 

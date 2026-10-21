@@ -2669,6 +2669,8 @@ function initEmailLinks() {
     if (!isMobile) {
       link.setAttribute('href', 'https://mail.google.com/mail/?view=cm&fs=1&to=info@zero2one.sa');
       link.setAttribute('target', '_blank');
+      // every other new-tab link on the site carries it; audits flag the one that did not
+      link.setAttribute('rel', 'noopener');
     }
   });
 }

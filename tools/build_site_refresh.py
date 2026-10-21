@@ -336,9 +336,12 @@ def original_home_layout(body,lang,ps):
     cards=[]
     slugs=['web-design-riyadh','seo-riyadh','digital-advertising','brand-identity','social-media-management','ecommerce-development','marketing-consulting',None,None,'mobile-application']
     remaining_images={'brand-identity','social-media-management','ecommerce-development','marketing-consulting','mobile-application','manage-google-adwords-campaigns'}
+    # Measured 2026-10-21: a card image is 54.6vw wide up to 520 px and 390 px up
+    # to 900 px. The old 78vw made 3x phones pick the 1440 px copy.
+    card_sizes='(max-width:500px) 55vw, 390px'
     def remaining_image(slug):
         base='/assets/images/owner-services-2026-10/'+slug
-        return f'<img src="{base}-800.webp" srcset="{base}-480.webp 480w, {base}-800.webp 800w, {base}-1440.webp 1440w" sizes="(max-width:500px) 78vw, 390px" width="1440" height="1024" loading="lazy" decoding="async" alt="">'
+        return f'<img src="{base}-800.webp" srcset="{base}-480.webp 480w, {base}-800.webp 800w, {base}-1440.webp 1440w" sizes="{card_sizes}" width="1440" height="1024" loading="lazy" decoding="async" alt="">'
     for j,slug in enumerate(slugs):
         if slug is None: continue
         i=start+j*3;pic=2 if slug=='seo-riyadh' else SERVICES[slug][2]
@@ -350,7 +353,10 @@ def original_home_layout(body,lang,ps):
         card=re.sub(r'alt="[^"]*"','alt=""',card,count=1)
         image={'web-design-riyadh':'web','seo-riyadh':'seo','digital-advertising':'ads'}.get(slug)
         if image:
-            card=re.sub(r'<img\b[^>]*>',lambda _:f'<img src="/assets/images/owner-services-2026-10/{image}.webp" width="1440" height="1024" loading="lazy" decoding="async" alt="">',card,count=1)
+            # The owner's 1440 px originals (web.webp was 123 KB) went to every
+            # phone; -480/-800/-1000 copies exist now, the original stays the 1440w.
+            base='/assets/images/owner-services-2026-10/'+image
+            card=re.sub(r'<img\b[^>]*>',lambda _:f'<img src="{base}-800.webp" srcset="{base}-480.webp 480w, {base}-800.webp 800w, {base}-1000.webp 1000w, {base}.webp 1440w" sizes="{card_sizes}" width="1440" height="1024" loading="lazy" decoding="async" alt="">',card,count=1)
         elif slug in remaining_images:
             card=re.sub(r'<img\b[^>]*>',lambda _:remaining_image(slug),card,count=1)
         card=re.sub(r'<span class="btn-text-inner">[\s\S]*?</span>',lambda _:label(i+2),card,count=1)
@@ -422,7 +428,11 @@ def original_home_layout(body,lang,ps):
         track=m[0]
         kind='services' if 'services-cards' in track.split('>')[0] else 'blog'
         title=('خدماتنا' if kind=='services' else 'من مدونتنا') if ar else ('Our services' if kind=='services' else 'From our blog')
-        track=track.replace('>',f' data-home-scroll-track tabindex="0" role="region" aria-label="{title}">',1)
+        # A list keeps its list role: role="region" on the <ul> itself left
+        # every card a list item with no list (Lighthouse accessibility 96 on
+        # both homes, 2026-10-19). It stays focusable and named for scrolling.
+        role='' if track.startswith('<ul') else ' role="region"'
+        track=track.replace('>',f' data-home-scroll-track tabindex="0"{role} aria-label="{title}">',1)
         prev='السابق' if ar else 'Previous'; next_='التالي' if ar else 'Next'
         def control(direction,title):
             return f'<button type="button" data-home-scroll-{direction} aria-label="{title}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg></button>'
@@ -504,7 +514,7 @@ def home_body(lang,restore=True):
     return original_home_layout(body,lang,ps) if restore else body
 
 
-def menu(lang):
+def service_titles(lang):
     ar=lang=='ar'
     titles={s:clean(paras(spec[1 if ar else 0])[3]) for s,spec in SERVICES.items()}
     # Use existing concise service labels in the supplied home document.
@@ -512,8 +522,20 @@ def menu(lang):
     for i,s in enumerate(['web-design-riyadh','seo-riyadh','digital-advertising','brand-identity','social-media-management','ecommerce-development','marketing-consulting',None,None,'mobile-application']):
         if s: titles[s]=clean(home[start+i*3])
     titles['manage-google-adwords-campaigns']='إدارة إعلانات جوجل' if ar else 'Google Ads Management'
+    return titles
+
+
+def menu(lang):
+    titles=service_titles(lang)
     links=''.join(f'<a href="{local("/services/"+s+"/",lang)}">{esc(titles[s])}</a>' for s in titles)
     return '<div class="rf-services-menu">'+links+'</div>'
+
+
+def loader_label(route,lang):
+    """The name the orange loader shows while a page built here opens."""
+    fixed={'/services/':('Our Services','خدماتنا'),'/team/':('Our Team','فريقنا'),'/faqs/':('FAQs','الأسئلة الشائعة')}
+    if route in fixed: return fixed[route][lang=='ar']
+    return service_titles(lang)[route.strip('/').split('/')[-1]]
 
 
 def metadata(page, route, lang, title=None, description=None):
@@ -590,6 +612,12 @@ def render_page(route,lang,unused_src=None):
     footer=LEGACY[lang]['footer']
     if route=='/': footer=footer.removeprefix('</section>\n')
     page=prefix+body+footer
+    if route!='/':
+        # The shell is the SEO page's, so its loader said "Search Engine
+        # Optimization (SEO)" on all 22 pages built here (found 2026-10-21).
+        name=esc(loader_label(route,lang))
+        page=re.sub(r'(<div class="loading-word active">)[^<]*',lambda m:m[1]+name,page,count=1)
+        page=re.sub(r'(<span class="loading-brand-name">)[^<]*',lambda m:m[1]+name,page,count=1)
     page=page.replace('class="main seo-service-page"','class="main rf-page"')
     if route=='/': page=page.replace('class="main home"','class="main home rf-home-page"').replace('class="main"','class="main home rf-home-page"')
     # Stable namespace avoids the old home-only loader's split-letter dependency.

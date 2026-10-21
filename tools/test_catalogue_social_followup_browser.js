@@ -20,7 +20,7 @@ async function check(browser,origin,kind,lang,width,options={}){
    await page.locator('.catalogue-home-card img').evaluateAll(es=>Promise.all(es.map(e=>{e.loading='eager';return e.decode();})));
    assert.equal(await page.locator('.catalogue-home-card').count(),9);assert.equal(await page.locator('h1').count(),1);
    const seoCard=page.locator('.catalogue-home-card').filter({has:page.locator('a[href*="/services/seo-riyadh/"]')});
-   assert.equal(await seoCard.locator('img').getAttribute('src'),'/assets/images/owner-services-2026-10/seo.webp','Catalogue SEO uses the current homepage photo');
+   assert.ok(/(^|, )\/assets\/images\/owner-services-2026-10\/seo\.webp 1440w/.test(await seoCard.locator('img').getAttribute('srcset')),'Catalogue SEO uses the current homepage photo (its 1440w original)');
    const heights=await page.locator('.catalogue-home-card').evaluateAll(es=>es.map(e=>e.offsetHeight));assert.ok(Math.max(...heights)-Math.min(...heights)<3,'All nine catalogue cards match in height');
    assert.ok(await page.locator('.catalogue-home-card').evaluateAll(es=>es.every(e=>getComputedStyle(e).borderRadius==='48px'&&getComputedStyle(e.querySelector('.service-card-body')).backgroundImage.includes('linear-gradient')&&getComputedStyle(e.querySelector('.service-card-media')).position==='relative')),'Homepage photo/gradient/rounding anatomy');
    assert.ok(await page.locator('.catalogue-home-card .service-card-media').evaluateAll(es=>es.every(e=>Math.abs(e.offsetWidth-e.offsetHeight)<2&&getComputedStyle(e).minHeight==='0px')),'Square edge-to-edge image stage');

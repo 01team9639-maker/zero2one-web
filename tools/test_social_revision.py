@@ -45,7 +45,7 @@ if __name__=='__main__':
         for rel in TARGETS[:2]:
             root=Tree((ROOT/rel).read_text()).root
             seo=next(n for n in root.walk() if n.tag=='article' and n.first(lambda e:e.tag=='a' and '/services/seo-riyadh/' in e.attrs.get('href','')))
-            assert seo.first(lambda n:n.tag=='img').attrs['src']=='/assets/images/owner-services-2026-10/seo.webp'
+            assert '/assets/images/owner-services-2026-10/seo.webp 1440w' in seo.first(lambda n:n.tag=='img').attrs['srcset']
         for rel in TARGETS[2:]:
             root=Tree((ROOT/rel).read_text()).root
             investment=root.first(lambda n:n.has('social-investment'))
