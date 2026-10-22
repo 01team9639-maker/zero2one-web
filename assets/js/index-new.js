@@ -1628,6 +1628,27 @@ function initHamburgerNav() {
       : { offset: 0, duration: 900, easing: [0.7, 0, 0.35, 1] });
   });
 
+  // مراسي مقال المدونة: «محتويات المقالة» وأي رابط داخلي في نصّه.
+  //
+  // السبب نفسه: قِسنا على المقال الحي (2026-10-22) أن href="#..." لا يحرّك
+  // الصفحة على الكمبيوتر. المعرّفات من عناوين عربية وقد تبدأ برقم
+  // («1-الاستشارات...»)، وquerySelector يرفض ذلك، فالبحث بـgetElementById.
+  // والمسافة فوق العنوان هي scroll-margin-top نفسها في blog.css.
+  $('.post a[href^="#"]').on('click', function (e) {
+    var hash = $(this).attr('href');
+    if (!hash || hash.length < 2) return;
+    var target = document.getElementById(decodeURIComponent(hash.slice(1)));
+    if (!target) return;
+    e.preventDefault();
+    var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var offset = -(parseFloat(getComputedStyle(target).scrollMarginTop) || 0);
+    scroll.start();
+    scroll.scrollTo(target, still
+      ? { offset: offset, duration: 0 }
+      : { offset: offset, duration: 900, easing: [0.7, 0, 0.35, 1] });
+    focusQuietly(target);
+  });
+
 }
 
 /**
@@ -2458,7 +2479,8 @@ function initDetailsScrollSync() {
   var queued = false;
   document.addEventListener('toggle', function (e) {
     var d = e.target;
-    if (!d || !d.matches || !d.matches('details.svc-faq-item, details.seo-plan-more')) return;
+    // details.post-toc: «محتويات المقالة» في المدونة، 41 عنوانًا في أطولها
+    if (!d || !d.matches || !d.matches('details.svc-faq-item, details.seo-plan-more, details.post-toc')) return;
     if (queued) return;
     queued = true;
     requestAnimationFrame(function () {
