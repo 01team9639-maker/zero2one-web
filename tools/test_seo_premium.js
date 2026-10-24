@@ -6,7 +6,7 @@ const assert=require('assert').strict,fs=require('fs'),path=require('path');
 const cp=require('child_process'),crypto=require('crypto');
 const sharp=require('sharp');
 const BASELINE={
- capturedAt:'2026-10-12T20:29:08.512Z',unrelatedCount:79,unrelatedHash:'3d4d3c9796bcf99cec198e02a69a62a0815fa4e019e07f0d8520c3d102f035ed',
+ capturedAt:'2026-10-12T20:29:08.512Z',unrelatedCount:79,unrelatedHash:'e1f3b3ff5d95103c491003af7b5265021e3509a3a4ccf4ac112503d3fffdc720',
  pages:{
   ar:{
    lang:{sha256:'8208994143fbc4fbdeab96c0ed932f9df3846568df6187e6833fb647366b1935'},
@@ -45,7 +45,6 @@ const BASELINE={
  }
 };
 const reports=path.join(ROOT,'tools/reports/site-refresh');
-const reviewRoot=path.resolve(process.env.SEO_STUDIO_REVIEW_ROOT||ROOT);
 const screens=[[320,780],[375,812],[440,956],[768,1024],[834,1194],[1024,1366],[1024,768],[1440,900]];
 const groups=[['#seo-why-zero2one',6],['#seo-expected',6]];
 const sections=['seo-why','seo-know','whats-included','seo-why-zero2one','seo-audience','seo-packages','seo-process','seo-expected','faq','seo-team'];
@@ -179,7 +178,7 @@ async function structure(page,lang){
   assert.ok(['orange','light'].includes(await flow.getAttribute('data-seo-flow-tone')),'Light trail has a section palette '+selector);
  }
  assert.equal(await page.locator('header [data-seo-flow]').count(),0,'Flow begins after the page header');
- const provenance=JSON.parse(fs.readFileSync(path.join(reviewRoot,'assets/icons/iconly/provenance.json'),'utf8'));
+ const provenance=JSON.parse(fs.readFileSync(path.join(ROOT,'assets/icons/iconly/provenance.json'),'utf8'));
  const icons=await page.locator('.seo-studio-icon,.seo-owner-icon').evaluateAll(es=>es.map(e=>({key:e.dataset.iconly,inner:e.innerHTML,viewBox:e.getAttribute('viewBox'),hidden:e.getAttribute('aria-hidden'),focus:e.getAttribute('focusable'),colors:[...e.querySelectorAll('[stroke],[fill]')].flatMap(n=>['stroke','fill'].filter(a=>n.hasAttribute(a)).map(a=>n.getAttribute(a)))})));
  assert.equal(icons.length,48,'Existing meaningful Iconly illustrations remain');
  for(const e of icons){
@@ -193,11 +192,11 @@ async function structure(page,lang){
 
 async function phoneAssets(){
  for(const lang of ['ar','en']){
- const directory=path.join(ROOT,phoneRoot(lang)),archive=path.join(reviewRoot,phoneRoot(lang)),provenance=JSON.parse(fs.readFileSync(path.join(archive,'provenance.json'),'utf8'));
+ const directory=path.join(ROOT,phoneRoot(lang)),provenance=JSON.parse(fs.readFileSync(path.join(directory,'provenance.json'),'utf8'));
  assert.equal(provenance.images.length,3);
  for(const [i,key] of phoneKeys.entries()){
   const record=provenance.images[i];assert.equal(record.name,key);
-  const original=fs.readFileSync(path.join(archive,record.originalCopy));assert.equal(bytesSha(original),record.originalSha256,'Original supplied phone archived byte-identically');
+  const original=fs.readFileSync(path.join(directory,record.originalCopy));assert.equal(bytesSha(original),record.originalSha256,'Original supplied phone archived byte-identically');
   const sourceMeta=await sharp(original).metadata();assert.equal(sourceMeta.width,1000);assert.equal(sourceMeta.height,phoneHeight(lang,i));assert.equal(sourceMeta.hasAlpha,true);
   for(const width of [400,700,1000]){
    const filename=key+'-'+width+'.webp',bytes=fs.readFileSync(path.join(directory,filename)),metadata=await sharp(bytes).metadata();

@@ -1,0 +1,1769 @@
+{
+  "baseline": "468d1326ccd4aaf8a89380995fc8a51a2a1193c1",
+  "authorized": "Owner requested all approved changes on 2026-10-24.",
+  "scope": "Updated 14-person bilingual team and portraits; CRO and Email Marketing pages/navigation/home/catalogue/FAQ/sitemap, 76 supplied illustrations and two main photos; balanced CRO layout/CTAs; redesigned bilingual work listing with green results and light closing CTA; brand-only loader site-wide. Existing service refinements retained.",
+  "retained": "Newer main production fixes: optimized images, 404/error pages, CSS pruning, loader failsafe, GA4 destination, Arabic language switch, Ads wording, SEO copy corrections and blog anchors. No generated blog or contact-handler edits.",
+  "blogFilesPreserved": 205,
+  "runtimeFiles": [
+    {
+      "file": "404.html",
+      "sha256": "13c9f204df912d984365dd3335a93cf1abeededd933bb1e7796824ca80d77fa4",
+      "bytes": 38832
+    },
+    {
+      "file": "about/index.html",
+      "sha256": "339e1c10ee9836c9656f51cc1812ccfc60ca71ed7a5c2c7e2b8278c2e5850fe1",
+      "bytes": 60684
+    },
+    {
+      "file": "ar/404.html",
+      "sha256": "36acea05d4babf39c8a60e8a0731d3cfc59eab4033159c364afda1ea901fa232",
+      "bytes": 40258
+    },
+    {
+      "file": "ar/about/index.html",
+      "sha256": "3d3a43fc1c5c84cf7516dd4deb5c0ee1c9cb86d36dd394140c630fdba772a404",
+      "bytes": 63179
+    },
+    {
+      "file": "ar/contact/index.html",
+      "sha256": "a042227ae507ade96f0a914c2e67a4125ee035a53753e99443c8d7dc43649ff9",
+      "bytes": 54722
+    },
+    {
+      "file": "ar/faqs/index.html",
+      "sha256": "9a15e594fc8d14d07bbf8b2856a94a6e7f05c45a4a58c8f7d219d1d0a21c4989",
+      "bytes": 100286
+    },
+    {
+      "file": "ar/index.html",
+      "sha256": "0b334c0750215e83239ded61c127bdf37964683ec810aa92ed0ea4f7743adc0d",
+      "bytes": 141072
+    },
+    {
+      "file": "ar/services/brand-identity/index.html",
+      "sha256": "ed57b7bdbf6526ca11b65294a020849490e2c31b99707095e28e258a0740c6a9",
+      "bytes": 149244
+    },
+    {
+      "file": "ar/services/conversion-rate-optimization/index.html",
+      "sha256": "607656e54899efbb685a1a8370df35e415fd6d0057f586ac1eab287fbd03bf68",
+      "bytes": 165867
+    },
+    {
+      "file": "ar/services/digital-advertising/index.html",
+      "sha256": "9126258b656d55c55e2f74d35d50502331fc104adc2b4a9f8765abd1c0fd0f17",
+      "bytes": 178492
+    },
+    {
+      "file": "ar/services/ecommerce-development/index.html",
+      "sha256": "f01984167284deaf2f0bdc3441be0ac7fd1a010ef0de1cced0b80e7b350cb7ba",
+      "bytes": 171013
+    },
+    {
+      "file": "ar/services/email-marketing/index.html",
+      "sha256": "8df499ac7276b9dea0783707aeaf640453f61a4fc84465b0748bdcb8253d3811",
+      "bytes": 162614
+    },
+    {
+      "file": "ar/services/index.html",
+      "sha256": "f92bb0601088adc072d799f9a81b7682d852c4db6189effde92b53589d4c3af5",
+      "bytes": 57698
+    },
+    {
+      "file": "ar/services/manage-google-adwords-campaigns/index.html",
+      "sha256": "d28f4dc5421010afd4612773d8a294011a766e7a40694cbc11eb6f9e218fbe13",
+      "bytes": 191482
+    },
+    {
+      "file": "ar/services/marketing-consulting/index.html",
+      "sha256": "19cf407c177528c1f393935dd4aa912e555cd96a5e1af3780faaf6eb78d614d5",
+      "bytes": 171287
+    },
+    {
+      "file": "ar/services/mobile-application/index.html",
+      "sha256": "14b5582d16661f794e28c39b2f1383fd78ee8a868bafcccc9dd27f89483a8a10",
+      "bytes": 181635
+    },
+    {
+      "file": "ar/services/seo-riyadh/index.html",
+      "sha256": "889a86bbb828c9176bd95e3441dcd449568e755d5d6bc8a9fe0f9b8a44e81d75",
+      "bytes": 192935
+    },
+    {
+      "file": "ar/services/social-media-management/index.html",
+      "sha256": "c8c7803390959feebd5f9e13e39bc5392bcbf048ae068187b45067b9247a3e1a",
+      "bytes": 178073
+    },
+    {
+      "file": "ar/services/web-design-riyadh/index.html",
+      "sha256": "cea2a632cd6d3e8da36f408c9afa5db6129ed46cffa5fc2a6685c0e9f3060fcd",
+      "bytes": 170051
+    },
+    {
+      "file": "ar/team/index.html",
+      "sha256": "32f86b4ad0e6755fabacc20a555cbd9e301c5a4c1c94a02d01ea868ea4f666aa",
+      "bytes": 65176
+    },
+    {
+      "file": "ar/work/alhokail-seo/index.html",
+      "sha256": "0b652751f10ee0837430da417d1fd7b5d5d99cd0261fb32d28b74b0d30a21d5f",
+      "bytes": 52830
+    },
+    {
+      "file": "ar/work/alostaz-seo/index.html",
+      "sha256": "7bebda377b1ac2813d642765492be52b1d1abef399e23623cea7e2c2f3afecbf",
+      "bytes": 53553
+    },
+    {
+      "file": "ar/work/alrahwanji-paints/index.html",
+      "sha256": "0c3a92109707a052e981db33371959df3e6a1c7e13186d023677f841b3a4919c",
+      "bytes": 61707
+    },
+    {
+      "file": "ar/work/cosmetic-surgery-egypt-seo/index.html",
+      "sha256": "09beab452c9b487432fe9f10c305c7d0c4ab042f8c5e2b4aeaaa134b8a43b405",
+      "bytes": 52672
+    },
+    {
+      "file": "ar/work/google-ads-conversion-value/index.html",
+      "sha256": "0932e6f499b0a43eabff9cc645acc71e8caa32365161125c32a0d3ab764cb139",
+      "bytes": 55396
+    },
+    {
+      "file": "ar/work/habba/index.html",
+      "sha256": "a5460ab35f5875225bdc4ce8fcd4936854f742700df90cadbe23e123abe452dd",
+      "bytes": 60211
+    },
+    {
+      "file": "ar/work/index.html",
+      "sha256": "1b0891e5b0ccae1e4ebcbe3afc11f64ea99c553cd49b9b1f9d2b50ff2224e6bf",
+      "bytes": 83209
+    },
+    {
+      "file": "ar/work/kuwait-tutoring-instagram-ads/index.html",
+      "sha256": "8d72fa95e1284620eaebf551283b89cec4a234a94098166eb3814b6b87e4413f",
+      "bytes": 53916
+    },
+    {
+      "file": "ar/work/orthopedic-clinic-egypt-seo/index.html",
+      "sha256": "6be7bccb39360b4a2be0d735625b582f2545c96c00123526dd11d2fda277979e",
+      "bytes": 52517
+    },
+    {
+      "file": "assets/css/bundle.min.css",
+      "sha256": "e0dc5c224eff6f3d2abbf4edb3995744b625a59336874b41a659c3d1d3386c5b",
+      "bytes": 268322
+    },
+    {
+      "file": "assets/css/portfolio-refresh.css",
+      "sha256": "35c9a0f14ff78027cb35085c1bfb50e859814218c5f23f677afe417ba48301e5",
+      "bytes": 8219
+    },
+    {
+      "file": "assets/css/service-studio.css",
+      "sha256": "8f1320504f145ca8dd4335282c3329da84ed4795a35c2f62a0f6d9b6c3c4d9b1",
+      "bytes": 86664
+    },
+    {
+      "file": "assets/css/site-refresh.css",
+      "sha256": "4cc822392630df6505fcbee63563c08bcbb35b38867247fa549c686933cad7a0",
+      "bytes": 63462
+    },
+    {
+      "file": "assets/css/style-new.css",
+      "sha256": "1a3a32bc5f97530dfe43c8c279a1f63033704e63523facb2cd625b752917451b",
+      "bytes": 264178
+    },
+    {
+      "file": "assets/images/brand-benefits/provenance.json",
+      "sha256": "5986b1083282f75d74cf896a6795aaf8b3908dd6c774f02881f44d0c35d7a5f7",
+      "bytes": 10832
+    },
+    {
+      "file": "assets/images/owner-services-2026-10/cro-hero-2026-10-24-1440.webp",
+      "sha256": "bfe79a2a04e3b5f0592cab3b3a1c9a1585e1363a0e1f681e03e3062dc173d4b7",
+      "bytes": 155348
+    },
+    {
+      "file": "assets/images/owner-services-2026-10/cro-hero-2026-10-24-480.webp",
+      "sha256": "84437f338a3f24abe8f2b361288b32420d4abf9c487067b9100232a73b524bd7",
+      "bytes": 34908
+    },
+    {
+      "file": "assets/images/owner-services-2026-10/cro-hero-2026-10-24-800.webp",
+      "sha256": "d539ed731c9a8ffb5931c458f1c87df4140cd985468917b7c147871fff1e35b8",
+      "bytes": 71420
+    },
+    {
+      "file": "assets/images/owner-services-2026-10/email-hero-2026-10-24-1440.webp",
+      "sha256": "b0fc87ec3ad7c9a21449c0b3027c94d3546fbe2a2dc56b3c620c772ed4f69e1c",
+      "bytes": 119428
+    },
+    {
+      "file": "assets/images/owner-services-2026-10/email-hero-2026-10-24-480.webp",
+      "sha256": "8de35bc46411b8278737d5ef1046cdd353c88eb73ca71abf7ed43fb339b9ee78",
+      "bytes": 26704
+    },
+    {
+      "file": "assets/images/owner-services-2026-10/email-hero-2026-10-24-800.webp",
+      "sha256": "6cf316fac00ac3c3bb3f08f879c6e02bd9d93495c421dd3ee2f8b9343e23e559",
+      "bytes": 53404
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/audience/originals/01_ecommerce.png",
+      "sha256": "3962f79e40c4bec33fcd65099e816cc3d3fcd3d89f392dd0cbb7b8b93861af49",
+      "bytes": 179619
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/audience/originals/02_company_websites.png",
+      "sha256": "8158270c3dbeff0ae68bfef8846dbd4ecaf945a8f59d6483f328f1563614399e",
+      "bytes": 182763
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/audience/originals/03_new_websites.png",
+      "sha256": "5e3afaf71ee7b6cdfd413fcefd574eec712c2244ff0b03815f56017920d773cd",
+      "bytes": 163142
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/audience/originals/04_local_businesses.png",
+      "sha256": "c3cbde8b35daedf1523340a8c9866aa4a417f7065a8019f07d36938e7c7e10f0",
+      "bytes": 206589
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/audience/originals/05_service_websites.png",
+      "sha256": "adb616a583a2c8164b12e10f4a128ce030e6e359a146d531beb394c39e2f5e0c",
+      "bytes": 177607
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/audience/originals/06_digital_platforms.png",
+      "sha256": "5cf2c2f1c6aa21c8dbff2244b9e523bc4d3cd31c069b125e5173d5f8a0ae21b7",
+      "bytes": 194572
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/know/originals/01_new_website_visibility.png",
+      "sha256": "959fc2f6c5294e12b6e8c40c5176e9a77bb98c92150e8a3be16af4db8f3c8f07",
+      "bytes": 166494
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/know/originals/02_no_traffic_or_leads.png",
+      "sha256": "d2dad5186fa61e33639eb5bb3908c52e949aed7c2873321c196b29128d4c8d46",
+      "bytes": 178201
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/know/originals/03_missing_google_maps.png",
+      "sha256": "ecd01edd9ea82697b23ca1d3b9ce94545cc39fb55697de931e6282674f586878",
+      "bytes": 218050
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/know/originals/04_competitors_dominating.png",
+      "sha256": "235b2cdd7e29ea0f721e0cef83a7fefdfc0c65ec8f930d272972e7f3fb2c4b20",
+      "bytes": 212750
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/know/originals/05_algorithm_rankings_drop.png",
+      "sha256": "d9e98f7a6a2b238b9e54871606959eeb9de7fcafd8caa14d44932d615a971fe0",
+      "bytes": 222409
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/know/originals/06_ai_search_changes.png",
+      "sha256": "15a96e4bde0d2c3b0b46c52e91aea66b874e0a621b7682cf3044e01838ee81f7",
+      "bytes": 263965
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/know/originals/07_high_ppc_cost.png",
+      "sha256": "0f3cfbbfde115cd2c6d7d53cdff2d42edb8ffbff673315cee5acaac53f3f435a",
+      "bytes": 247889
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/provenance.json",
+      "sha256": "074a87b57ffa29ae9fae73c8f52d08018e8a04cc9f420f7241c83c3e90f5eb7f",
+      "bytes": 14246
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/why/originals/01_all_sectors.png",
+      "sha256": "0aeed41312effc0e073e169071a2a19d411201dad7e4b795771385630c0bac6e",
+      "bytes": 115708
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/why/originals/02_customer_retention.png",
+      "sha256": "dcbbb648efc8789db3c47498775c6b58c6608a60d1d11b3fcdfc73dff6311517",
+      "bytes": 144271
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/why/originals/03_monthly_reports.png",
+      "sha256": "0ec693bf1d34f9bb307c9c5d36bf95aa8c88d6d8d1698cd9b9106c49ab43ee7b",
+      "bytes": 112783
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/why/originals/04_saudi_market_strategy.png",
+      "sha256": "fd425512b6f1ed86f2fbba1b607eedcec07e9c6b2481cf39d73be031a80c732e",
+      "bytes": 133524
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/why/originals/05_safe_tools.png",
+      "sha256": "d924a40b0d81abe060a5e690727f6ca6bdd2f339313fa566c8fc911353f4e247",
+      "bytes": 100096
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/why/originals/06_research_and_development.png",
+      "sha256": "bb7381364edff152dca881fde635391fc7954312da15ed76879397b352b04b43",
+      "bytes": 99663
+    },
+    {
+      "file": "assets/images/seo/phone-mockups-2026-10-12/originals/chatgpt-search.png",
+      "sha256": "9d4c9069cdf9574426831629987b3fb51f59565084e7830266ad7287a9a863a0",
+      "bytes": 1028893
+    },
+    {
+      "file": "assets/images/seo/phone-mockups-2026-10-12/originals/google-maps.png",
+      "sha256": "92dcef19bd162ae63f97a819e9c1204fd64d6df0a9b5007a8e87202cd2b86880",
+      "bytes": 1174920
+    },
+    {
+      "file": "assets/images/seo/phone-mockups-2026-10-12/originals/google-search.png",
+      "sha256": "2460a9f2845ed0c9b6d111ff6d6dc2e4fce892348bc571d0bf5f32d429c99ec2",
+      "bytes": 970794
+    },
+    {
+      "file": "assets/images/seo/phone-mockups-2026-10-12/provenance.json",
+      "sha256": "12ec0fb1fbbe4886ca8bbf46aca1bf22b86bdd609c17d5971a76c041945f6c1f",
+      "bytes": 8956
+    },
+    {
+      "file": "assets/images/seo/phone-mockups-ar-2026-10-14/originals/chatgpt-search.png",
+      "sha256": "3fd93ecd45c5595630e968ba28b3227017a8b3e9af8839a5f74f3bcb6134c7c0",
+      "bytes": 1260618
+    },
+    {
+      "file": "assets/images/seo/phone-mockups-ar-2026-10-14/originals/google-maps.png",
+      "sha256": "59ac41d489f54466d08aab4fd418058978f64e44a2a4b1f935c61b4fad138a0a",
+      "bytes": 1335515
+    },
+    {
+      "file": "assets/images/seo/phone-mockups-ar-2026-10-14/originals/google-search.png",
+      "sha256": "01c495d4c9ad71f3e68820a5cb80111f723d4b954885d2fdc8a4d7bfbdeb6f6f",
+      "bytes": 1139187
+    },
+    {
+      "file": "assets/images/seo/phone-mockups-ar-2026-10-14/provenance.json",
+      "sha256": "1f24f2414d589ded75c29c34950ceb55d266481e9d22c86f595bad9402d949a5",
+      "bytes": 9181
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/audience-01-320.webp",
+      "sha256": "1a362ed84186bb30383bb146300b6148a5c993d474c6134abbffd9ab7a2bb41c",
+      "bytes": 19832
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/audience-01-640.webp",
+      "sha256": "890808ff33d0dcefc38f4e0e2c4625cf2fdd68cbea787b21437b9845979831aa",
+      "bytes": 47288
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/audience-01-960.webp",
+      "sha256": "8673a6fdc16b50bcb69e8b3bbfd80789ef9e8423a1eb31dca8e45e4b9a802894",
+      "bytes": 79542
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/audience-02-320.webp",
+      "sha256": "6a4fc29ef5fddd677ee3bc6d892e332ba9433e19f1d4446909c8fb7dd9f079e5",
+      "bytes": 21528
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/audience-02-640.webp",
+      "sha256": "f2055bb27bb433626a1c18680441e44f6e952d38141d558c6a9de53b88d55dbc",
+      "bytes": 49802
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/audience-02-960.webp",
+      "sha256": "210f6b5ed3ea8cd4ec3d1fe486f3a1433ff0b9150ee21a751e06b932b832504a",
+      "bytes": 82606
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/audience-03-320.webp",
+      "sha256": "13b46d33575a64a0be725b9bc960867f776e8970ff82319ba78acdfcb796489a",
+      "bytes": 26894
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/audience-03-640.webp",
+      "sha256": "2430cc9b7cbefd82cc00df6cab9ceddd411c3ad82ec4fd10f3fac4bd8aa345f3",
+      "bytes": 64340
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/audience-03-960.webp",
+      "sha256": "6c5b1b15798089d8545e73be40f11599b70d2147c96f38e5dcabdde9e8f52d75",
+      "bytes": 109620
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/audience-04-320.webp",
+      "sha256": "082bd2e23a644b82252b73a0b7f62b91bad860b4048e228e4f7202a56e6ea13d",
+      "bytes": 18278
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/audience-04-640.webp",
+      "sha256": "9df0700852bc205f9b5f23e8d51433ab5807301792009626a18c0eab979db681",
+      "bytes": 41972
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/audience-04-960.webp",
+      "sha256": "cf22874ae11c685c57921aa535aeb700c79ec7970497ae5d491a836b15f32170",
+      "bytes": 70190
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/audience-05-320.webp",
+      "sha256": "ab2d8f6c77173adbc96deb55632e3f59c745f3dee62eae876100ca3e56a313bc",
+      "bytes": 25642
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/audience-05-640.webp",
+      "sha256": "ed521207e3e2e231513fb13fecd768af21684146ca43890b699f1477d10c86f2",
+      "bytes": 60722
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/audience-05-960.webp",
+      "sha256": "e222a973d02ee8488f17ad89210a6814a206eef322bd42007c671b3d5a68a381",
+      "bytes": 101704
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/audience-06-320.webp",
+      "sha256": "60bd38c92b9e1f4acf392953d7a9cc8cdbc98c133f186e10f5af59a14876ad53",
+      "bytes": 22314
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/audience-06-640.webp",
+      "sha256": "c43bc0c69607f13475004b52dffe528e30ed8842b1374c881495301a4d0d752e",
+      "bytes": 53046
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/audience-06-960.webp",
+      "sha256": "03b6648e6fc2e39b80528a0bd6fd5f41ceed4369e5b46bf0de4470daef302dc0",
+      "bytes": 89118
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/benefits-01-320.webp",
+      "sha256": "15c6fdaa721b667c06e9236c653727e7e570499388e679e99216c257ab7063b4",
+      "bytes": 28054
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/benefits-01-640.webp",
+      "sha256": "da85e3037c39e7251784b803d61083e09e4a774ba6e38f4de79940caef312b4c",
+      "bytes": 66122
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/benefits-01-960.webp",
+      "sha256": "a34754cc705b8f1979d7b517b359cbcd1ce96347e4b0376df92495c7aa5d8f75",
+      "bytes": 109638
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/benefits-02-320.webp",
+      "sha256": "314e1c4d1789d03f5b7d15ffbc361fa266042f55695b2365d0d8eef4fea6012a",
+      "bytes": 27576
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/benefits-02-640.webp",
+      "sha256": "83f2888f6aaa7a00ae98f5124b48b42a244c7f8fa47eb159e766c1dc664f598b",
+      "bytes": 64526
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/benefits-02-960.webp",
+      "sha256": "a35fd9eadf87237960a11c049499f6109b5b3851a41ede2231ff21304cfa5a60",
+      "bytes": 105922
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/benefits-03-320.webp",
+      "sha256": "02e62c8100207a8addba2c927d8f37474de8fb7d699b33aee1dc38580fbdb98f",
+      "bytes": 25430
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/benefits-03-640.webp",
+      "sha256": "332fe4b743176fb21972f85b5c8906256d619c5c517a674ce605f0c32496ad39",
+      "bytes": 64028
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/benefits-03-960.webp",
+      "sha256": "bcb1837ac280116698d5ecf0171d30b684001f856aed3e01453b2a1b533e885c",
+      "bytes": 106120
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-01-320.webp",
+      "sha256": "2b8ad0bef613fa24d1870921680c4c09e8377a47d69a869b5e998354634ad595",
+      "bytes": 21026
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-01-640.webp",
+      "sha256": "ed38fa2cb510d806d987ec9ab5b581fb3e9092ab220653f4ce2f6ebba02bc9e4",
+      "bytes": 49698
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-01-960.webp",
+      "sha256": "2cd7786b30c2c2ee5f11546efddec21f913faa0350d2abf48e9a72ed6ce126ed",
+      "bytes": 82880
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-02-320.webp",
+      "sha256": "95bf59f5091df430ccfcd60b81032737c64bb240fa7b442a7aa536f440c3942e",
+      "bytes": 23854
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-02-640.webp",
+      "sha256": "999ad1c2d5320a73bc84c52103b0709c1fd9136ef770dca67d8dfa80d0ae1a81",
+      "bytes": 55220
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-02-960.webp",
+      "sha256": "03f0845c55254ce148c5ba3e155491780d728336b814ba655fc25d0ac98688ac",
+      "bytes": 91104
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-03-320.webp",
+      "sha256": "4332dbd3c26c87ff29e52f83ed333459f993f3d7c59fccc9c8ac54e825fb984f",
+      "bytes": 18144
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-03-640.webp",
+      "sha256": "1a01315316ade08d50852cb14cc7a5ef6bf0da51450b290c2e8c3f83ef824d73",
+      "bytes": 41482
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-03-960.webp",
+      "sha256": "66d21a8badb61ac53455cbddbb73cd1287b671f3b29802be4954c5d64360c7f9",
+      "bytes": 68162
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-04-320.webp",
+      "sha256": "b610f6dee7bc056c906883c80aa798cbf105fcaaf3cfadaf0aa0583382f95920",
+      "bytes": 24320
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-04-640.webp",
+      "sha256": "2ee0150fa1df18c2f83cd15a0c83687488c03d3d1092ae7ad9ba3bf42d3c0011",
+      "bytes": 55698
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-04-960.webp",
+      "sha256": "f3ab24af25c0777dcfd64d113eaa32ddff0915b564982aada0b789e6985bcc34",
+      "bytes": 91698
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-05-320.webp",
+      "sha256": "369c37b8509ccb9676fe1ffaf001f0635e531bc7f8ee1fcc5b0e92f62119cf46",
+      "bytes": 19366
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-05-640.webp",
+      "sha256": "efee3ec4e120b25023f1c9a1902e47b4720870f484097dea4cccb7c594bb5e73",
+      "bytes": 44698
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-05-960.webp",
+      "sha256": "bee99751ee77c0140dcd940de47300cd47dd517eb9ee53e40617a0c55ebbf1fa",
+      "bytes": 73644
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-06-320.webp",
+      "sha256": "c953c0579aecd642476e47f6bbcc36e37cf1039ba37b84f4b223ff998d9c480e",
+      "bytes": 27660
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-06-640.webp",
+      "sha256": "d3511ca7a3aef0fcfc873dcbfd5a8241ec9270879f8d1e838f4f74109741d8bb",
+      "bytes": 63776
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-06-960.webp",
+      "sha256": "a6d1f620f8898ae8981cdd0b37b6659180c5a6e75aeff974c2048c70960e7074",
+      "bytes": 103700
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-07-320.webp",
+      "sha256": "772e64ce7118f32b0347810794b02813752866cd2ada8bba83c4e08bb79ddde9",
+      "bytes": 22234
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-07-640.webp",
+      "sha256": "79201b3d12a9803bab41114cd01e031180589679d91a4a122c801ddc9c95cf96",
+      "bytes": 52416
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-07-960.webp",
+      "sha256": "0919c0eab7da4476ccf0c2554766db1f03f997f93ce08e76c4e78058913232e3",
+      "bytes": 86444
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-08-320.webp",
+      "sha256": "c538b75529a9b13278b86c0fdef8844f82119f864c20c18a21ac0853ce9cd1de",
+      "bytes": 21350
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-08-640.webp",
+      "sha256": "31892e55d170fa03c1e90d1c223e3d63662a7eed8c45ae10fb926fd9088a0ce9",
+      "bytes": 50180
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-08-960.webp",
+      "sha256": "100e21063e72396dd727b7827d109890c41a64085c5c813d6d3adf510f7a7de1",
+      "bytes": 83454
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-09-320.webp",
+      "sha256": "a510e88d9fe6f0fa1ead22a4c2845a41fe15e8b77944a9b4c4af4e109c1765cd",
+      "bytes": 22928
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-09-640.webp",
+      "sha256": "54963fafcc886d7eb6721e8a0a259572e3adec3661cf0d5ac06f3940412e421f",
+      "bytes": 53970
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-09-960.webp",
+      "sha256": "fc04f7c88e18eb3287c03805c5bdf8c93344fcce13ff2a8bee18703b0bb0e66d",
+      "bytes": 90264
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/hero-01-1440.webp",
+      "sha256": "6fb903978e051cd1b8af8b1f1ab1b7020858673a0066978d39490f48b4b56c43",
+      "bytes": 134556
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/hero-01-480.webp",
+      "sha256": "1b5d7e18fa80f0317e70a7b40a83558e4583c78e630cbb7ad96ea4416560ec11",
+      "bytes": 31712
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/hero-01-800.webp",
+      "sha256": "d80c7094a45c7c94d11d3388977881765ed3954a5abcfa73ae4f2e17dd594f2c",
+      "bytes": 60794
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-01-320.webp",
+      "sha256": "82b6363727f49e873be30adc4fee6275d03be9f83fa61632074d411390cecb12",
+      "bytes": 20854
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-01-640.webp",
+      "sha256": "43a5dd3790213bf4a113e00d8a9fc45fe54a73b9b24598b2fb3c0893c98a2cdc",
+      "bytes": 48686
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-01-960.webp",
+      "sha256": "ae31754e92420bfe6b025c5e091d4d682bf2b1d2d861e6d7e155141253a75d3e",
+      "bytes": 80518
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-02-320.webp",
+      "sha256": "3e90af12a8b3dae26a92749b7591dc1a48ab17d9e917fa5ae9384b4beac92f2e",
+      "bytes": 21940
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-02-640.webp",
+      "sha256": "142be85054c0c24f1b3e59a940055ff5982c6dcf4ae3ea46b2c2a8cc2771879c",
+      "bytes": 51844
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-02-960.webp",
+      "sha256": "4afdec5aaa45d8215632e4379d5ad90e4459960b642bc2c36fd2a03dba9b84b5",
+      "bytes": 86528
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-03-320.webp",
+      "sha256": "102220944fc4fdbb5150a087df7c8175e1274c162a900598e68ecb00f6cec802",
+      "bytes": 20958
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-03-640.webp",
+      "sha256": "89e3df51cce29a9af6c2209f05c9495239e122cea4899c8c26ccaa63122026c8",
+      "bytes": 50470
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-03-960.webp",
+      "sha256": "2a4172900b9f137d30dd810b22ba209ac3cb1418aaa27541550e5a48294e79f7",
+      "bytes": 83600
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-04-320.webp",
+      "sha256": "4b4272239ae3c53027ae110b786d650a572b872f1aa130e550de293656e95bc1",
+      "bytes": 24350
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-04-640.webp",
+      "sha256": "37c3274bc498831670929cfa8c0c759a0f32c8272694d946bd3aebe4bb06fc0e",
+      "bytes": 57234
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-04-960.webp",
+      "sha256": "9ffb43fd11d13df8ed424f1a16500ae548dd1b1f1db69d552989ef2814ec411c",
+      "bytes": 94246
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-05-320.webp",
+      "sha256": "7782cce9276868f7e26fb331526115285327fb879aab7b1e3b1e169d4dcf0b22",
+      "bytes": 20982
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-05-640.webp",
+      "sha256": "1b78303f6ddb134f46abd32974f1d660bef785d7a0ee1691d4949c1d5bd53166",
+      "bytes": 48236
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-05-960.webp",
+      "sha256": "fea7fb752298617be4b53041101e3e5ce6711ad7645a68e7c990ae656db2ccb7",
+      "bytes": 79434
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-06-320.webp",
+      "sha256": "b405147cdeb72dd5ed5e4775f5e2b19d533b01c41ec7160727b8c8f8b85393d7",
+      "bytes": 21614
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-06-640.webp",
+      "sha256": "f7e0f26ee96f92b95b59ad23091a25c99c10e1bbdba35cecb5eabc8b75229e7c",
+      "bytes": 50400
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-06-960.webp",
+      "sha256": "996f30ffb23de70af490678b66ae5030677c2488601a333898df693eb0dbb6b9",
+      "bytes": 83678
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-07-320.webp",
+      "sha256": "b56d1be1f2443c742ac32049238dd235242d8fe1c631c3ceee26fa09a5c804e5",
+      "bytes": 27120
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-07-640.webp",
+      "sha256": "8af04e37ef06918d6a3fd2290cc3d2c95d2bf18aae4d5e12879792e21fbcaba3",
+      "bytes": 64914
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-07-960.webp",
+      "sha256": "494dccfea8f6702aa02a21bfc96a3df8a88226262290fb3d8b9855a5da2e3151",
+      "bytes": 110052
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/outcomes-01-320.webp",
+      "sha256": "c3e369eb47b5f03819c218fde0d959c686864eb17ac04c2e1be3853404d09b3a",
+      "bytes": 26686
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/outcomes-01-640.webp",
+      "sha256": "77130b43f0ab29493b3f878653b587daa7dd74f464bfa9bf47cb83d40a412848",
+      "bytes": 63614
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/outcomes-01-960.webp",
+      "sha256": "a473e94d6748d732aaa1b44d3715a989805fea2d39a7d4709b29a512e97c3305",
+      "bytes": 106242
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/outcomes-02-320.webp",
+      "sha256": "696f376bfdb83ad9996af57bf22a97974e033c19d5aeae3e1c11cdfe3aa4f4b2",
+      "bytes": 22560
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/outcomes-02-640.webp",
+      "sha256": "83eaaeb20303091ae02a62415bc2e0129ec9dbe98cac6edd5cdc91614d3f061c",
+      "bytes": 53020
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/outcomes-02-960.webp",
+      "sha256": "d8e81bde7788ed4994524165cf28f2ce3fe488587c3a4c024b0a9662604aca8d",
+      "bytes": 88322
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/outcomes-03-320.webp",
+      "sha256": "f7a2fe36ac3f71f4c428259602e98d495ec45831b29da2932c0007e41cbd062d",
+      "bytes": 22296
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/outcomes-03-640.webp",
+      "sha256": "5793edb0a4cb2dc24fcd417d422ffb242658d4242ab502321a87e25e9a7f1d72",
+      "bytes": 54918
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/outcomes-03-960.webp",
+      "sha256": "4ba7551ef03ccf0adebc98e013ec607a880a6020239d8b60290bfd9dca7193c3",
+      "bytes": 92742
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/outcomes-04-320.webp",
+      "sha256": "a8cd83657388b823cbeeb912ed9a20cfc7352f4cd8055b48bcb0e3299aaced26",
+      "bytes": 19932
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/outcomes-04-640.webp",
+      "sha256": "8f5c5613a51d4539c303379275d9d4480d744fc70c3e6995cc8f677e3099538e",
+      "bytes": 45472
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/outcomes-04-960.webp",
+      "sha256": "2708e7594a53df85d914801da53623f01fe35c9717f412ceff6cb40351c21517",
+      "bytes": 74928
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/outcomes-05-320.webp",
+      "sha256": "b053bd0261cb9acd3ed01f623f7eb9fca36d396c3ca4ac872885907d27ccafd7",
+      "bytes": 21526
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/outcomes-05-640.webp",
+      "sha256": "4752d48873d35b6eb107f3aad15cdabd9473161455fbd2b9111de52a5d1f2de3",
+      "bytes": 49234
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/outcomes-05-960.webp",
+      "sha256": "c4100d1e0600044493aadc17d75e3785471b9759be847086883feacc914a6f99",
+      "bytes": 81778
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/outcomes-06-320.webp",
+      "sha256": "db680eac1509cb24e01a84c3072c374bd3b0c1bc950f323e9d9e1e0c7e1e5684",
+      "bytes": 27070
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/outcomes-06-640.webp",
+      "sha256": "e6b557fd66f763f633306c4943f92a718b31edf7c533362083ce75a7c10356c8",
+      "bytes": 64664
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/outcomes-06-960.webp",
+      "sha256": "7e600bb11e64e667d533bc622ae259b076f677a1f02163bc462633f66f000126",
+      "bytes": 108356
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/why-01-320.webp",
+      "sha256": "18cba8afa83f3a587883cce39e48c198a1a9b55c6b2690fb4ec6a27f0e290053",
+      "bytes": 20980
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/why-01-640.webp",
+      "sha256": "b45f4e3f8636acdde41e7709724ae67070cd337454e61ad93aa5808bc8acfb34",
+      "bytes": 49634
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/why-01-960.webp",
+      "sha256": "1a61830438b942f761ccf5f0fff5a6171749ef0c887f04409604f8fcd14f833d",
+      "bytes": 82638
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/why-02-320.webp",
+      "sha256": "ad35eb4a4d25e80c3bbf2180e94c1171ed5e30aa5f2eedc952681d7b293294fb",
+      "bytes": 20976
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/why-02-640.webp",
+      "sha256": "b248c9551d05bde9ceb9f7252781785fd84e5c1079a5a4dd9e805908c3d85d94",
+      "bytes": 49058
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/why-02-960.webp",
+      "sha256": "7b4748a6942f473e4b6add7d3e42364be3508e8cb8bc912523e04c41e4ec83f1",
+      "bytes": 81360
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/why-03-320.webp",
+      "sha256": "bb06a43df27ca17417d2a40baef0fc86924c9052ff2519b8195b7a9b9502f157",
+      "bytes": 28042
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/why-03-640.webp",
+      "sha256": "1e48d2b807c31933a52ccf7ee4ebb93438683c0f71f2f21b220d075c4f82b3e6",
+      "bytes": 66094
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/why-03-960.webp",
+      "sha256": "101448aaf9b5279b0d17820a4d0135c8a533989d53c7f3361c3780a270676930",
+      "bytes": 111838
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/why-04-320.webp",
+      "sha256": "e7235a548076aa503b2f37b9826e69ab498e786dc013e22afc5732dc9495fde1",
+      "bytes": 25284
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/why-04-640.webp",
+      "sha256": "76816be5506e9f627e96ee7bb7c74fc143cfa0448186295820b222a8901d7993",
+      "bytes": 60570
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/why-04-960.webp",
+      "sha256": "0fac73781e32ee7268692deb28c5dbe1eec4c8699b18d28870bf6bd8ccef6df1",
+      "bytes": 101312
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/why-05-320.webp",
+      "sha256": "696a049aa99631dc398f54bd96bc6a4f8d554754ffc8be2cfa1393e31be15df0",
+      "bytes": 21288
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/why-05-640.webp",
+      "sha256": "f422859af377d992ad75f530cb2210d4f9da3eaa1a95dcbb20bba314cf746fea",
+      "bytes": 49656
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/why-05-960.webp",
+      "sha256": "5dc210f5b16be8e8d7757159417bd3f566bb4dde595118327cdc19445368a85f",
+      "bytes": 82122
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/why-06-320.webp",
+      "sha256": "b53034078ef0206cf8ff122f567b30e2aa1fd2367c38680626062e95f1fa64b0",
+      "bytes": 27740
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/why-06-640.webp",
+      "sha256": "3048c8498dd2e36f7b0e1a1e8b3b9002e7e11425ba420fa1489b578132992a7a",
+      "bytes": 64882
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/why-06-960.webp",
+      "sha256": "12187b5343730bdd2ca2f5ea153c3c80b7bbf97ab9c735ccf037f21555720c7b",
+      "bytes": 109524
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/audience-01-320.webp",
+      "sha256": "2bd91921b8ae728330aa7c0ae021ec55dea03e2b5d8b1379cca867a5baa35987",
+      "bytes": 23174
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/audience-01-640.webp",
+      "sha256": "79b4f4d3fac3669702b6e58dcd037f89bb4a5ec992053963dc9461b8048b5794",
+      "bytes": 55194
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/audience-01-960.webp",
+      "sha256": "093e4d9f909e57dd4433f6e2a755d3713f038ae916f05283bac2032880f5e19d",
+      "bytes": 92336
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/audience-02-320.webp",
+      "sha256": "b7035c6bbf9e5ecbdb43808b951339ad534030d1b35b85f9ca0e6aee509b6f3a",
+      "bytes": 23374
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/audience-02-640.webp",
+      "sha256": "08ebe975598758393b06b0ff218ad47d037b6bb0bae42cb67f054db3499149e0",
+      "bytes": 56290
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/audience-02-960.webp",
+      "sha256": "ec1cb9ae84d2eff20926c2154879f2a586920a128e6dc8af4f0adf97b04189b4",
+      "bytes": 91906
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/audience-03-320.webp",
+      "sha256": "c1eccccc905ded3e55ad268a2550e4b37e86d4735d0937ea461d776e6baae7fc",
+      "bytes": 21694
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/audience-03-640.webp",
+      "sha256": "6b2157559085c67d2d81390aa2badc3f58230e918a245d8283c3c3eccd7d47b7",
+      "bytes": 50752
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/audience-03-960.webp",
+      "sha256": "8142e76b507d03fb8d48a5503d20b52c9448837eae36c828980c5d6150401a95",
+      "bytes": 85146
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/audience-04-320.webp",
+      "sha256": "de54a7364f16fd374912a7ac39b654f1016a833600269b9782f0608b3ff27698",
+      "bytes": 24300
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/audience-04-640.webp",
+      "sha256": "965b551c609184012a8d48b9ce5962b7c8c3ce1c2e392c525ee232d61077ab16",
+      "bytes": 57362
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/audience-04-960.webp",
+      "sha256": "8ae8cbf6f32b6ae97248e4672d6107417f1f8763ea6451c821ac08d4e2d05850",
+      "bytes": 95244
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/audience-05-320.webp",
+      "sha256": "0ac04473618b23877cd06f5875d324d768d1d62a9b8e84c476bad65de0462b39",
+      "bytes": 23364
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/audience-05-640.webp",
+      "sha256": "6722179fb7cdf1d1f64a50cc4eae2edc1c74772faaaae0578972676b1e6383b6",
+      "bytes": 55596
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/audience-05-960.webp",
+      "sha256": "5827261b0e3d7aa1fd0ac39496afab35c9df3331376d7d0e2a9b4cc56dfb5aff",
+      "bytes": 93060
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/audience-06-320.webp",
+      "sha256": "e97aaa2a100c4df92eab2bd027d6f496e4382c2d4ca48f5d1fb4ad0a14369421",
+      "bytes": 21144
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/audience-06-640.webp",
+      "sha256": "2bcfe644b9bb0c47967df0d6f90bd3d068dde81477dabc89129347084c916860",
+      "bytes": 48712
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/audience-06-960.webp",
+      "sha256": "395aadcac339ff05d57dadc4a8f04bf4b63dfdc3d64f79a608c2e00436dddc1e",
+      "bytes": 81218
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/benefits-01-320.webp",
+      "sha256": "7ef55796c091ee5159160063d0bee195b59a2554352d857fb99b0ea27d8855f7",
+      "bytes": 21772
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/benefits-01-640.webp",
+      "sha256": "49dd77975f327bbd6e86d30f0d975056c4317820ba3ff32442cfe8abeb81265a",
+      "bytes": 52870
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/benefits-01-960.webp",
+      "sha256": "0cfe5f2a64213b8f531e8e7eb3dcedc113ed66f21fc51ac25f24f80045865552",
+      "bytes": 90064
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/benefits-02-320.webp",
+      "sha256": "dc52e5032dbd769cfde0c709ed4c3305e7ef6e2424c1021d2c3705413e3bb9af",
+      "bytes": 25668
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/benefits-02-640.webp",
+      "sha256": "6cb0ea3f3c5b646593b42883fc0271be145ebe67070f7635bbb8a40068e193ae",
+      "bytes": 60994
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/benefits-02-960.webp",
+      "sha256": "876c9783fca9ef89daf00ee8061830eb48b210f042dd7a71b41e05b036a65286",
+      "bytes": 102092
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/benefits-03-320.webp",
+      "sha256": "2edbcdde8871db7775aa0d9942cb6288e49c8e834afe8fd8829d3f51003abe66",
+      "bytes": 23748
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/benefits-03-640.webp",
+      "sha256": "dcde0a6373ef32fe7d53686aa3751e3576adbc882db9a9b8d073c65ef6a858f3",
+      "bytes": 55278
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/benefits-03-960.webp",
+      "sha256": "017fa9563c02b47723d9a3c99b0bc8da2a7f3d0dc8603010c7ad45d3b7e0899e",
+      "bytes": 92082
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-01-320.webp",
+      "sha256": "de10cd741eb5efa29ac667d57d99530e806081a2ab5fb090fdee5b67c38a205f",
+      "bytes": 22366
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-01-640.webp",
+      "sha256": "651e638161b553ee34093d3cc15f282c28825aa1a52a15e749f07877ca2012b2",
+      "bytes": 50788
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-01-960.webp",
+      "sha256": "11c74110b63b4f766a1912b6649f9af9f6d5a06862ac9b31fcdebdbe0977538b",
+      "bytes": 83810
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-02-320.webp",
+      "sha256": "709ab6639243d3bca3450654a349963f959ef9ed4f4754a94ac847cfaf2c5247",
+      "bytes": 21734
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-02-640.webp",
+      "sha256": "167f2011e14433b231277011c22bc5ce8b21e4be202d50457434fbb5e4f58e35",
+      "bytes": 48948
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-02-960.webp",
+      "sha256": "92edd6aaeb82d8339ddb9bfe40512a8e51a37f525e07b548162c5e6e4605c9f9",
+      "bytes": 80596
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-03-320.webp",
+      "sha256": "f91e9bfd38f2ce52a4a78956ea9497ce2c2cc5667c522db3f62feb25ec95ad58",
+      "bytes": 23414
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-03-640.webp",
+      "sha256": "38d755dad6f7bcc963346c2a46455c710bea014817aa281ef1c6ff9a8aa62636",
+      "bytes": 55866
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-03-960.webp",
+      "sha256": "99d5081abcea21c7d6e94d27fb0a2862c82c952f74f2df950f22c6f6106b88d6",
+      "bytes": 94172
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-04-320.webp",
+      "sha256": "fb299477680e2b2e7671b3f29b5a4f889cd8fc7bf6d0c39a35e1c73e11a80d56",
+      "bytes": 18548
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-04-640.webp",
+      "sha256": "a52e50f60edde753bb611b2718e6a278677ed0324ff3a98c35fd86f910afabc3",
+      "bytes": 42008
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-04-960.webp",
+      "sha256": "4a87e1bc8745a543c3c49df512ce9ca8b942d08479d72a247922ac6486a31137",
+      "bytes": 69810
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-05-320.webp",
+      "sha256": "5ec178cef8dc65640fab6e94f8a80dbb681f72c40ded632b22334a7995fcfe30",
+      "bytes": 23736
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-05-640.webp",
+      "sha256": "2a6b65783f127074c0a846666bff669b4bce7857b28c3ad043e3f99d78480cd4",
+      "bytes": 56368
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-05-960.webp",
+      "sha256": "965c339a9ce90c7d38e46eac0179f3612bf8c7e5b54d4099fbd2dfc8247ab69a",
+      "bytes": 95140
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-06-320.webp",
+      "sha256": "890cc2cf57e9f5f69ee1760864cb362b15c53303d96b5bfa9ac50b8cc9e06412",
+      "bytes": 25318
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-06-640.webp",
+      "sha256": "40039cc3131cd617a8b34921a24657bc19a8464807ff8f8ed3f2f88b50a7fef8",
+      "bytes": 59862
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-06-960.webp",
+      "sha256": "5e6290d17a8ed8e840a851109b4cf036ed0f206e43a463d0a7a25cc10b041fe5",
+      "bytes": 100490
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-07-320.webp",
+      "sha256": "5b0b68e8f4341f1388b9d12badf749a78bf128794ca2ce8c8950ae05593a0048",
+      "bytes": 23520
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-07-640.webp",
+      "sha256": "9ac6f13892ed8e6d100d6eb5c2c035ce4eda3b2b717fb4ee9e18e03692591b68",
+      "bytes": 55014
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-07-960.webp",
+      "sha256": "8fe01f568bfabf24beb2fef6297044c1cebd6f6f7ccfd7ca2729920b7171f59c",
+      "bytes": 90750
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-08-320.webp",
+      "sha256": "b3dbaaabbfcc2eb703a6a9eaa51406b5dcc28ddf82ea97246f839e7cdff361fe",
+      "bytes": 22236
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-08-640.webp",
+      "sha256": "315e0be6610dc23f34016d9cd3297d417442e35f553d4b77bd71d35b63a1dc6a",
+      "bytes": 51756
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-08-960.webp",
+      "sha256": "55d97b8abf4d79c0a9b210c42713a62d994219d7bbec3d47f1b8878a7c298a26",
+      "bytes": 86506
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-09-320.webp",
+      "sha256": "d79c23a9cf1f353c5d0819cf4a7b859395436a5dbe8055257fabdef739d2efce",
+      "bytes": 22044
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-09-640.webp",
+      "sha256": "8cf4985eede77f2910e22a1c897d2d01c3832395cc253620b7c82ba911c2d516",
+      "bytes": 50168
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-09-960.webp",
+      "sha256": "74ecfe8dbfced15a1152fdf14aa8d4a5af8d4d3f979d3fc97b401fae29201e6c",
+      "bytes": 84356
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/hero-01-1440.webp",
+      "sha256": "4015b6658464fe220b8dc72397a6ead748ac015bc229299c9b03190c1e427f27",
+      "bytes": 134700
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/hero-01-480.webp",
+      "sha256": "8e20049066244ee44dc2dd93431b2ff7f028bb111cfac1baabbd227f73a78e3c",
+      "bytes": 32636
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/hero-01-800.webp",
+      "sha256": "e5afff07f58888c96733950f3c42f061e7741bda9a0c641a2f3a1ba03cb0c94d",
+      "bytes": 60790
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-01-320.webp",
+      "sha256": "88e1963ded16e13263fcbb9146b535f8742d9453abc1d96ecbf4631cefa051eb",
+      "bytes": 23056
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-01-640.webp",
+      "sha256": "f2985e4e1506d78bf70f81e3197ebac955837573c6df249ef7ea81281d84cefe",
+      "bytes": 54620
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-01-960.webp",
+      "sha256": "33b34153cb3bd4052a6d098588e189474e4150c1ee0d799d032b45fb7d145bce",
+      "bytes": 91340
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-02-320.webp",
+      "sha256": "f35a457e65771ed31bbc72f8767219efabb7586935eaccb8791156f32b17770e",
+      "bytes": 19940
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-02-640.webp",
+      "sha256": "d9188a34c1be449925c7d1afc0d7e303909e80b8243d789449328e833c4fa509",
+      "bytes": 47718
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-02-960.webp",
+      "sha256": "74b9371edddea88a32a8e3d66c649d16b1642a3deb6d05d213cef07bb94a6e0f",
+      "bytes": 79166
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-03-320.webp",
+      "sha256": "7fe0e75f6465e769183a6fe502c437c23b153264b3a76d7b93401e5034737cf7",
+      "bytes": 22440
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-03-640.webp",
+      "sha256": "b4735f7d7d3be17fd50c3604d5b0c727e96424c385626047e0dd382a99a01d69",
+      "bytes": 53742
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-03-960.webp",
+      "sha256": "6ca8e5c9f0dad4b2a94051f93fa74a554bc33fbc11dce5d2836c97ce60e1ff4f",
+      "bytes": 91000
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-04-320.webp",
+      "sha256": "e8f23532f1ecc91c08ab9652c113a130056031fd3c5cad8df030cfd7a4da915c",
+      "bytes": 19056
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-04-640.webp",
+      "sha256": "aa08938201acd71a7349a765ca6adcd5d3f6d4269bcbc132e972dda96ec76f41",
+      "bytes": 41888
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-04-960.webp",
+      "sha256": "08c1e8f02f7a6426e29240d078bebb7fb6dce04e0de006c21c6a9dffd713024d",
+      "bytes": 69398
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-05-320.webp",
+      "sha256": "e1d6c614d3c6d5033a78ef52dc40d2dc46e07ae38138f1175d42cfe7ebb90d59",
+      "bytes": 22774
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-05-640.webp",
+      "sha256": "65ae1700640e154602640cad596a4e82838a96759282069105272eb57b7f1339",
+      "bytes": 54246
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-05-960.webp",
+      "sha256": "e5b33996d4c99ed67861fc91cba327f53ac17ea930c2a7e4e051bb66a741468e",
+      "bytes": 91144
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-06-320.webp",
+      "sha256": "4635ce6a23ed19031a55c174eabfdd1e0ba7756a1cb11beac3753dd0c1e94990",
+      "bytes": 18756
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-06-640.webp",
+      "sha256": "8ba75d4ef90d8c6e6a589b0b6bd0513458481a36ade1690d765e086ba6ebe1e0",
+      "bytes": 44502
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-06-960.webp",
+      "sha256": "275ee3609ac336b0b3f23427539affae30528fc5abae017941beaf9bef0535be",
+      "bytes": 75194
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-07-320.webp",
+      "sha256": "eb7bf71be27b3edd0c690d719c1d35629c719d0d44560e559635f2730fa116e2",
+      "bytes": 27254
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-07-640.webp",
+      "sha256": "fae0ce2307fa3e9f947f4d051810b9b1e66eba71fe87a235b34b3b148dfb6f53",
+      "bytes": 65926
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-07-960.webp",
+      "sha256": "00e61b26082a2c8c7b59e78a43dbd8450f3b41fb1d66e91a2607622341334b9e",
+      "bytes": 112434
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/outcomes-01-320.webp",
+      "sha256": "32baf50ff7d6d85ab86bd914110134c885e084ff078864329d03a4d8b5d6e0c8",
+      "bytes": 21238
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/outcomes-01-640.webp",
+      "sha256": "b8fc70ea7bab74e0ec4c37c42ab324bec024e6de0fcd2769d31c6620e1cbaa91",
+      "bytes": 49574
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/outcomes-01-960.webp",
+      "sha256": "c4d524c9be25f30ddb147ab140db66ca94700910828c73e11d078134e1d66ba5",
+      "bytes": 82768
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/outcomes-02-320.webp",
+      "sha256": "4c26c128e772ad074919c4ac3e8f4f9fc154dee7ccbb736c5dd15fbb3def70d4",
+      "bytes": 20092
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/outcomes-02-640.webp",
+      "sha256": "84f1e71d95e603d988eb7a225d9923e8580162b8e4176739f3776fa7d0867a41",
+      "bytes": 46146
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/outcomes-02-960.webp",
+      "sha256": "e11c5046f42dc1105dd17353bff7a32f5fcc5230844ca12106d257639bfd1744",
+      "bytes": 76012
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/outcomes-03-320.webp",
+      "sha256": "dcb52ada2c2f30bb9e18a503d075a55eeff8f0f98c1e688d23ecac0941773df3",
+      "bytes": 22660
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/outcomes-03-640.webp",
+      "sha256": "ede0b2b3c1746bf03fc720a45a18170342ed414ee26c2114abc7f04a95168f00",
+      "bytes": 53906
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/outcomes-03-960.webp",
+      "sha256": "7702b1028bc2d48d1ad245f2964e814eb9d6cdd15d41453d9c891e054211ae2d",
+      "bytes": 91090
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/outcomes-04-320.webp",
+      "sha256": "79bed3605d637967105c7b80048ede25c25a2db8f11769b7d24948455814cba4",
+      "bytes": 24584
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/outcomes-04-640.webp",
+      "sha256": "3306aa8f5a96aba8b90cc3fcf1eceeb60b19bf98adb76a268d01d92d5e6a61e4",
+      "bytes": 56640
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/outcomes-04-960.webp",
+      "sha256": "cda6140d86a337f5ae9fcc6f3f11a79f737095b9840cab1dd57eb8b964245f1b",
+      "bytes": 93676
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/outcomes-05-320.webp",
+      "sha256": "e6d467625ef984143a3f7e39b9c080ec92ea6ad35b2efb8e54264aeb393271e4",
+      "bytes": 27650
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/outcomes-05-640.webp",
+      "sha256": "75be104c80851606c63eb6de64d21c17f6ea9eee4d1713f3eb4631e4a62e6ae4",
+      "bytes": 66924
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/outcomes-05-960.webp",
+      "sha256": "6e10f7361903cf2a361c84a4131df458bc4e647a37f2daabce53e33ebbedb320",
+      "bytes": 113216
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/outcomes-06-320.webp",
+      "sha256": "74e37621a5ca9bc6d8d737344620e7c591ad88a641bcfe0af93b59f8cad7d7c3",
+      "bytes": 20216
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/outcomes-06-640.webp",
+      "sha256": "24aa6b6e51cde5c2c40f09acfa45c479554093fafceb7f4296d33b3ac3f9c3c0",
+      "bytes": 44614
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/outcomes-06-960.webp",
+      "sha256": "033f43ba3e81f0802dae6db738e1d874d67dedba09d9266a602a26b0eba3e8ba",
+      "bytes": 73804
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/why-01-320.webp",
+      "sha256": "4b46d3acada4f7f4fcf969df8f6e98e1ba1ae94e1335276e63af2eff99272c0c",
+      "bytes": 24936
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/why-01-640.webp",
+      "sha256": "5d38059bf50a164a9a02de856c2b4f1f005ce62dc0adc53020a9f7780f7d3ab6",
+      "bytes": 58796
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/why-01-960.webp",
+      "sha256": "9880ec108a36bfed917d9bde6713074e3f623ca40e6d56c13f3f02b378e2ff30",
+      "bytes": 99412
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/why-02-320.webp",
+      "sha256": "db9f38c63e29687177ba67a8b2533fe841b1ae5a5d0aa7765d14ef604c4cc60f",
+      "bytes": 29978
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/why-02-640.webp",
+      "sha256": "6df42e784dc806230dff8a1d6603a317e569eb62edc0ef24f32cbc5a6a63b04c",
+      "bytes": 71730
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/why-02-960.webp",
+      "sha256": "7aad7da754454e4b44a12f79dbbd81ced93680896f5e20b32c492d5ff925c9b0",
+      "bytes": 120286
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/why-03-320.webp",
+      "sha256": "0c775e8d38e43b43aaefa2152d39f4571a8be2ab27ee2297a297a3c0a4df55db",
+      "bytes": 24834
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/why-03-640.webp",
+      "sha256": "fb186bb3bb241f2da8e00c8467c9c1734e64ac5bde70df61000c6b244235e3a7",
+      "bytes": 58532
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/why-03-960.webp",
+      "sha256": "ce737eb91c10783c6d2aca7498cb55454ca8ae93203aa5b205f4c335c2cc5131",
+      "bytes": 98380
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/why-04-320.webp",
+      "sha256": "cf877cbbd305fde4006102cacd4876de89e9069d2398a16689555bfaa6f606c8",
+      "bytes": 19234
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/why-04-640.webp",
+      "sha256": "6aef874d127600b4798484da160f0bc1e905e9d7ff8688e04795252f3cbdb186",
+      "bytes": 44222
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/why-04-960.webp",
+      "sha256": "8a98cd90a5ee5b56c66b8034ed400e891f2816e66dd77f930c3405a0dd62e14c",
+      "bytes": 72562
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/why-05-320.webp",
+      "sha256": "71e1f7eee479eddb173218ac3e16f0208e9dddb79d4a77804799b263e214ff68",
+      "bytes": 25888
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/why-05-640.webp",
+      "sha256": "0f9440df216f1df70955eff5244ac3cd6a913359684cd225fe486aef1fd963b2",
+      "bytes": 62190
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/why-05-960.webp",
+      "sha256": "ad6099fa5ac5b8c2c86385c06356368aca3fefcf456226aa0ff00dbcc2e90c53",
+      "bytes": 105148
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/why-06-320.webp",
+      "sha256": "9d83304f6382b194c9c2a3b9000b9a27c59ec6e71e134cd1a7126f495dcfefb4",
+      "bytes": 23836
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/why-06-640.webp",
+      "sha256": "fb07288e6b6f7d4dd6af601228951f74e5f75ffd80536257d0470117766d905b",
+      "bytes": 54152
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/why-06-960.webp",
+      "sha256": "b84aeb328a2ae95d8475f2c69f14b7741d427354a0acbc26fbdc30cab6390a82",
+      "bytes": 89584
+    },
+    {
+      "file": "assets/images/service-studio/placeholders/conversion-rate-optimization-activity.svg",
+      "sha256": "c983d14c7a52894c96bbf8f1e93a379fb7ad339537e6b69510c41d23e3292a96",
+      "bytes": 3108
+    },
+    {
+      "file": "assets/images/service-studio/placeholders/conversion-rate-optimization-category.svg",
+      "sha256": "f740bcb9ccfcd0af9f09e234c0ecad28fc10f9cabe7397149bbb98a6857dd186",
+      "bytes": 3607
+    },
+    {
+      "file": "assets/images/service-studio/placeholders/conversion-rate-optimization-chart.svg",
+      "sha256": "6067364d23fcf9e4dc4df34e75b72ae1edcbdf330d84f92e6d8f47301267d55b",
+      "bytes": 3092
+    },
+    {
+      "file": "assets/images/service-studio/placeholders/conversion-rate-optimization-chat.svg",
+      "sha256": "1405704cef028b29004045be3f81891644e9cdcfd0131c5539161eecc43658ef",
+      "bytes": 3424
+    },
+    {
+      "file": "assets/images/service-studio/placeholders/conversion-rate-optimization-discovery.svg",
+      "sha256": "8cf1242c458f58893872ac14da5c8c6b5f29d401193632c51c50749c2b6bd91b",
+      "bytes": 2761
+    },
+    {
+      "file": "assets/images/service-studio/placeholders/conversion-rate-optimization-search.svg",
+      "sha256": "fd76a6db5f77e8052c218fd02fc07ef345a983187ade00b2c18c9cc6d8a8b564",
+      "bytes": 2720
+    },
+    {
+      "file": "assets/images/service-studio/placeholders/conversion-rate-optimization-setting.svg",
+      "sha256": "4d0e8487d7c25368abccbc51539c4139d1ccc7c352c3d84b367c4bf4b78b5f1e",
+      "bytes": 5331
+    },
+    {
+      "file": "assets/images/service-studio/placeholders/conversion-rate-optimization-tick-square.svg",
+      "sha256": "c9b8102a2aaa51a854fd21a4a1985916f0b5de05f1c354ea2ad1ccc61855c126",
+      "bytes": 2938
+    },
+    {
+      "file": "assets/images/service-studio/placeholders/conversion-rate-optimization-work.svg",
+      "sha256": "bce077fc7e641fc6354bf34a9694df32f975e156f19611ae765171a532a81361",
+      "bytes": 3367
+    },
+    {
+      "file": "assets/images/service-studio/placeholders/email-marketing-activity.svg",
+      "sha256": "3e5f18c9a86fdbc313ed8882e32ec82fdf94d5f9f2a2e37fc061198b1bf7e4a3",
+      "bytes": 3107
+    },
+    {
+      "file": "assets/images/service-studio/placeholders/email-marketing-category.svg",
+      "sha256": "ad0c7115b8b2b9c135542d149826233ac299bba2f7cfb9d2ac80ce95144a49f4",
+      "bytes": 3606
+    },
+    {
+      "file": "assets/images/service-studio/placeholders/email-marketing-chart.svg",
+      "sha256": "7bcf02efc2f23e0e5f4a2bec1f7d5852b120e104c33966941f75a4786112a4d4",
+      "bytes": 3093
+    },
+    {
+      "file": "assets/images/service-studio/placeholders/email-marketing-chat.svg",
+      "sha256": "2b22d782f7ea7a366e4d1d9565aea0b289de80eedd1293eca8916e1eabe99a57",
+      "bytes": 3425
+    },
+    {
+      "file": "assets/images/service-studio/placeholders/email-marketing-discovery.svg",
+      "sha256": "0f963b6466e6480d0a91937f9deef6073760d216ec79e028ca30165af52975f5",
+      "bytes": 2760
+    },
+    {
+      "file": "assets/images/service-studio/placeholders/email-marketing-search.svg",
+      "sha256": "c882bdcff53d4a64dfa151f28a6cae12df8a5e0d6b39139d545213f8dbfe732c",
+      "bytes": 2721
+    },
+    {
+      "file": "assets/images/service-studio/placeholders/email-marketing-setting.svg",
+      "sha256": "b13e93d55c2133c98969986a0c872308c5dd6c27082a9b9f8c8021b4e6aceacc",
+      "bytes": 5330
+    },
+    {
+      "file": "assets/images/service-studio/placeholders/email-marketing-tick-square.svg",
+      "sha256": "851aa07031b48003c579d7232626fe840c4b3a2df00486782bdcfddd32394ac9",
+      "bytes": 2939
+    },
+    {
+      "file": "assets/images/service-studio/placeholders/email-marketing-work.svg",
+      "sha256": "53a46ef616c36e2562eebb2ef74b051e191b50ce9637c9f8e667f61207cb36ba",
+      "bytes": 3366
+    },
+    {
+      "file": "assets/images/team/team-moayad-480.webp",
+      "sha256": "98aedc3b482758d0c5b624359bb2a8e5fb2592427d375aba862b984f86ea3793",
+      "bytes": 16138
+    },
+    {
+      "file": "assets/images/team/team-moayad.webp",
+      "sha256": "1dd86fe76609fc0d1d28dcb09991f0b4941b75e298651f3f075b0ba5c86a6f95",
+      "bytes": 36198
+    },
+    {
+      "file": "assets/images/team/team-mohammed-480.webp",
+      "sha256": "40f6a12d25245f65ee25201b424c3f5b667f8c16dc34d7f39867109ec7fd19b7",
+      "bytes": 12210
+    },
+    {
+      "file": "assets/images/team/team-mohammed.webp",
+      "sha256": "eeea5484fa96b27f3aaed1a84d7699c96bf2b39cd790982cf4d599c552603f20",
+      "bytes": 21560
+    },
+    {
+      "file": "assets/images/team/team-nadine-othman-480.webp",
+      "sha256": "323ac1422b02a92cf82011427ec6e98efe95391d67490e177ae8994d3f02b62c",
+      "bytes": 27436
+    },
+    {
+      "file": "assets/images/team/team-nadine-othman.webp",
+      "sha256": "f47f984c429d88fbd754608635b55e66d94bf5efeb5f79639da6dd35d177303d",
+      "bytes": 54412
+    },
+    {
+      "file": "assets/images/team/team-omar-mansour-480.webp",
+      "sha256": "5a359ec3b7c393cdbf5afef37edb9db223daae52c197e6ac7f0da8aec0832eea",
+      "bytes": 21024
+    },
+    {
+      "file": "assets/images/team/team-omar-mansour.webp",
+      "sha256": "68a15356ffe3832343a0c69661ef152f4d02286392e98db943a102c87abd9368",
+      "bytes": 41752
+    },
+    {
+      "file": "assets/js/index-new.js",
+      "sha256": "0e9f0f3b2bdfb83edeeabd394761efe098134a5a5b4279cceb9b93e3ad5bdcd3",
+      "bytes": 134836
+    },
+    {
+      "file": "assets/js/index-new.min.js",
+      "sha256": "6aa1cb452b81cf8198bdfa03df220f2c9a57c2373c163315cb1593d742b469df",
+      "bytes": 69058
+    },
+    {
+      "file": "contact/index.html",
+      "sha256": "9eb2f61c0f07834b97423fb0bd253fff65fd1bd32a7e7a567491457cecb13b6c",
+      "bytes": 52274
+    },
+    {
+      "file": "faqs/index.html",
+      "sha256": "4d165cd0df70f49bb80d0c7737b5d475d3c2d401fa7553e1eb9823d194c426f6",
+      "bytes": 88881
+    },
+    {
+      "file": "index.html",
+      "sha256": "c57a64a1513561b1da6a7978d29501956a4a0b8bd9f5a4d256e49126d7ad8e80",
+      "bytes": 129166
+    },
+    {
+      "file": "llms.txt",
+      "sha256": "362d72b2ccc654797b9d88d8543309f58ad88527da6a37e4e4991daa9b8f0d0e",
+      "bytes": 2819
+    },
+    {
+      "file": "services/brand-identity/index.html",
+      "sha256": "8607f8aad343e2c1ff817c556dbd47ed6f64cad8619459f3a826ca058d6ed92a",
+      "bytes": 146940
+    },
+    {
+      "file": "services/conversion-rate-optimization/index.html",
+      "sha256": "0c7f25dabb2584f7aee1ff9cd018b56a5ed95ec52172193b6741919b184ba983",
+      "bytes": 160847
+    },
+    {
+      "file": "services/digital-advertising/index.html",
+      "sha256": "8448fd3dcada166650738aca88bfbecdac58fcb737d5357816968689b90e1ac3",
+      "bytes": 171549
+    },
+    {
+      "file": "services/ecommerce-development/index.html",
+      "sha256": "c48106c77cfea1ad7aecfbc975f1aa0dfdcc6860b15c0c33ad444ff5ad91bd68",
+      "bytes": 165425
+    },
+    {
+      "file": "services/email-marketing/index.html",
+      "sha256": "1cde25420229f2c90306ee73cfbef56653111683c11592236b0a0e504816275c",
+      "bytes": 157464
+    },
+    {
+      "file": "services/index.html",
+      "sha256": "6ca2ccbfe9b2905029f3760b057ade4f1d63c554a61408ebbfb570cc1d427f87",
+      "bytes": 55486
+    },
+    {
+      "file": "services/manage-google-adwords-campaigns/index.html",
+      "sha256": "b9b11968c9a98cfc1f81d56d1e8df6b2dac7de748f0be50b7118142ca013c574",
+      "bytes": 182518
+    },
+    {
+      "file": "services/marketing-consulting/index.html",
+      "sha256": "054373e210067ed463d3f1a9f244ffb4a9a63b3af2bfb26064560ebfabd5833c",
+      "bytes": 166254
+    },
+    {
+      "file": "services/mobile-application/index.html",
+      "sha256": "cfb29b8142e66ca3ebb4ca6c3ea2cbb3f1c75770cf9f5ed717086318ace70a7d",
+      "bytes": 176078
+    },
+    {
+      "file": "services/seo-riyadh/index.html",
+      "sha256": "46bae4b6691eddb19534f7eb9633daaa481e4545398e657e47c320a77a80171c",
+      "bytes": 183739
+    },
+    {
+      "file": "services/social-media-management/index.html",
+      "sha256": "bf5e13882a25e8ec6ab1290b830a0930ab62aac4962e2563f9221193e8b1b7aa",
+      "bytes": 175525
+    },
+    {
+      "file": "services/web-design-riyadh/index.html",
+      "sha256": "a81f469467d0b214173fa7c7d47bf43001350ef0aa2417aae5b78535db4484f6",
+      "bytes": 165803
+    },
+    {
+      "file": "sitemap.xml",
+      "sha256": "0156519933e4016685f584d56e424e01f21feaca1335cd9d2ee9947e6808b477",
+      "bytes": 25253
+    },
+    {
+      "file": "team/index.html",
+      "sha256": "b3591ba14ba7d31f762815bb9854553090b18b3cc232874974393c742058dae9",
+      "bytes": 61991
+    },
+    {
+      "file": "work/alhokail-seo/index.html",
+      "sha256": "992c82859ababc3c3921b6e5e45b3e964bacf84842041cb9b2215a3746e15795",
+      "bytes": 50650
+    },
+    {
+      "file": "work/alostaz-seo/index.html",
+      "sha256": "cbc85784132ab4aaa79d6716749df81db8302bd875418b0d329932fe8884e7f2",
+      "bytes": 51301
+    },
+    {
+      "file": "work/alrahwanji-paints/index.html",
+      "sha256": "798a9a3a80dd0182966e2b30bf8aa8f7851588590cfaee8dcbda477749df6e14",
+      "bytes": 58126
+    },
+    {
+      "file": "work/cosmetic-surgery-egypt-seo/index.html",
+      "sha256": "fd78ddd50948b1f35aa0852cc32e4eb2a4537c6ae98ec85589d923425d1b5e4a",
+      "bytes": 50603
+    },
+    {
+      "file": "work/google-ads-conversion-value/index.html",
+      "sha256": "c409b3dfd18485f5254b7c46fc8331ab8808d8106791a1694e9226e391c4b041",
+      "bytes": 52811
+    },
+    {
+      "file": "work/habba/index.html",
+      "sha256": "f6001f9857b9ac1d1345bea32ee58d435892dbbd6ed1a9f93cb9d6145d7d161d",
+      "bytes": 57218
+    },
+    {
+      "file": "work/index.html",
+      "sha256": "585b1508422566911651556e89cb48d4dab71214a971e6e7eed027e14a5eb50b",
+      "bytes": 79073
+    },
+    {
+      "file": "work/kuwait-tutoring-instagram-ads/index.html",
+      "sha256": "d2f7e9cd609a7c5c5dbc8189d055d50130902a8a7770fcaab85dcb4dacd7ca8b",
+      "bytes": 51445
+    },
+    {
+      "file": "work/orthopedic-clinic-egypt-seo/index.html",
+      "sha256": "0608ebcd17719aaf2f7433902fd9ba770d77da249a75cbb04f46f1e6cc5e1146",
+      "bytes": 50524
+    }
+  ]
+}

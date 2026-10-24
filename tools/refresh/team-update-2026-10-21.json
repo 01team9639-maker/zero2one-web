@@ -1,0 +1,67 @@
+{
+  "retired_image": "team-rona",
+  "members": [
+    {
+      "id": "nadine-othman",
+      "image_source": "team-member-01.png",
+      "services": [],
+      "ar": {
+        "name": "نادين عثمان",
+        "role": "كاتبة مقالات",
+        "bio": "حاصلة على ماجستير في الإدارة العامة، متخصصة في كتابة المقالات المتوافقة مع SEO وتحويل الأفكار والمتطلبات إلى نصوص مؤثرة.",
+        "experience": "الخبرة: أكثر من 5 سنوات"
+      },
+      "en": {
+        "name": "Nadine Othman",
+        "role": "Article Writer",
+        "bio": "Holds a master's degree in Public Administration. Specialises in writing SEO-friendly articles and turning ideas and requirements into engaging writing.",
+        "experience": "Experience: over 5 years"
+      }
+    },
+    {
+      "id": "omar-mansour",
+      "image_source": "team-member-02.png",
+      "services": ["digital-advertising", "manage-google-adwords-campaigns", "social-media-management", "marketing-consulting"],
+      "ar": {
+        "name": "عمر منصور",
+        "role": "مدير قسم المبيعات",
+        "bio": "يقود عمليات واستراتيجيات المبيعات في «من الصفر إلى الواحد»، ويعمل على تعزيز حضور الوكالة في السوق وتوسيع قاعدة العملاء عبر قنوات متعددة. يركز على إبراز خبرات الفريق وحلوله في التسويق الرقمي والتصميم والتطوير، وتحويل الفرص إلى شراكات ناجحة ومستدامة."
+      },
+      "en": {
+        "name": "Omar Mansour",
+        "role": "Head of Sales",
+        "bio": "Leads sales operations and strategy at Zero2One, strengthening the agency's market presence and expanding its client base across multiple channels. Highlights the team's expertise and solutions in digital marketing, design and development, turning opportunities into successful, lasting partnerships."
+      }
+    },
+    {
+      "id": "walaa-al-qarni",
+      "image_id": "ruba",
+      "services": [],
+      "ar": {
+        "name": "ولاء القرني",
+        "role": "المدير الإداري للتسويق والمشاريع",
+        "bio": "تتولى قيادة وتخطيط المشاريع وتنظيم الاستراتيجيات التسويقية للعملاء باحترافية، مع التركيز على متابعة الأداء، والتحسين المستمر، وتقييم النتائج لضمان تحقيق أعلى معايير النجاح والكفاءة."
+      },
+      "en": {
+        "name": "Walaa Al-Qarni",
+        "role": "Administrative Director of Marketing & Projects",
+        "bio": "Leads project planning and delivery and organises clients' marketing strategies, focusing on performance monitoring, continuous improvement and evaluating results to achieve high standards of success and efficiency."
+      }
+    },
+    {
+      "id": "hadeel-al-qahtani",
+      "image_id": "ruba",
+      "services": [],
+      "ar": {
+        "name": "هديل القحطاني",
+        "role": "أخصائية المبيعات وعلاقات العملاء",
+        "bio": "بكالوريوس إدارة أعمال | متخصصة في المبيعات وعلاقات العملاء، خبيرة في تقديم الحلول وتطوير تجربة العميل."
+      },
+      "en": {
+        "name": "Hadeel Al-Qahtani",
+        "role": "Sales & Client Relations Specialist",
+        "bio": "Holds a bachelor's degree in Business Administration. Specialises in sales and client relations, with expertise in providing solutions and developing the client experience."
+      }
+    }
+  ]
+}

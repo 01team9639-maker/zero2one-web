@@ -54,6 +54,13 @@ def check():
     results=[]
     for row,route in routes.items():
         source=(ROOT/(route.strip('/')+'/index.html' if route!='/' else 'index.html')).read_text()
+        if row in (22,23,24,25):
+            from service_studio import Tree
+            tree=Tree(source).root
+            for accent in [n for n in tree.walk() if n.has('service-studio-title-accent')]:
+                assert accent.text()==('CRO' if row in (24,25) else 'Email Marketing')
+                accent.detach()
+            source=tree.render()
         if route in ('/services/digital-advertising/','/ar/services/digital-advertising/','/services/manage-google-adwords-campaigns/','/ar/services/manage-google-adwords-campaigns/','/services/social-media-management/','/ar/services/social-media-management/','/services/ecommerce-development/','/ar/services/ecommerce-development/') and 'service-studio-title-accent' in source:
             # The owner explicitly added Ads / Google Ads treatments on 19 Oct.
             # Compare all original source words after removing only that exact

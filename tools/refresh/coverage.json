@@ -188,38 +188,38 @@
   {
     "id": "2:34",
     "text": "Conversion Rate Optimization (CRO)",
-    "status": "excluded",
-    "reason": "Owner explicitly excluded Email Marketing and CRO on 2026-10-07"
+    "status": "rendered",
+    "reason": ""
   },
   {
     "id": "2:35",
     "text": "We analyse how visitors use your website and refine its pages so more of them become customers.",
-    "status": "excluded",
-    "reason": "Owner explicitly excluded Email Marketing and CRO on 2026-10-07"
+    "status": "rendered",
+    "reason": ""
   },
   {
     "id": "2:36",
-    "text": "[Button] Details",
-    "status": "excluded",
-    "reason": "Owner explicitly excluded Email Marketing and CRO on 2026-10-07"
+    "text": "Details",
+    "status": "rendered",
+    "reason": ""
   },
   {
     "id": "2:37",
     "text": "Email Marketing",
-    "status": "excluded",
-    "reason": "Owner explicitly excluded Email Marketing and CRO on 2026-10-07"
+    "status": "rendered",
+    "reason": ""
   },
   {
     "id": "2:38",
     "text": "Automated emails and newsletters that reach your customers directly and bring them back to buy again.",
-    "status": "excluded",
-    "reason": "Owner explicitly excluded Email Marketing and CRO on 2026-10-07"
+    "status": "rendered",
+    "reason": ""
   },
   {
     "id": "2:39",
-    "text": "[Button] Details",
-    "status": "excluded",
-    "reason": "Owner explicitly excluded Email Marketing and CRO on 2026-10-07"
+    "text": "Details",
+    "status": "rendered",
+    "reason": ""
   },
   {
     "id": "2:40",
@@ -740,38 +740,38 @@
   {
     "id": "3:37",
     "text": "تحسين معدل التحويل (CRO)",
-    "status": "excluded",
-    "reason": "Owner explicitly excluded Email Marketing and CRO on 2026-10-07"
+    "status": "rendered",
+    "reason": ""
   },
   {
     "id": "3:38",
     "text": "نحلل طريقة استخدام الزوار لموقعك، ونحسّن صفحاته ليتحول عدد أكبر منهم إلى عملاء.",
-    "status": "excluded",
-    "reason": "Owner explicitly excluded Email Marketing and CRO on 2026-10-07"
+    "status": "rendered",
+    "reason": ""
   },
   {
     "id": "3:39",
-    "text": "[زر] التفاصيل",
-    "status": "excluded",
-    "reason": "Owner explicitly excluded Email Marketing and CRO on 2026-10-07"
+    "text": "التفاصيل",
+    "status": "rendered",
+    "reason": ""
   },
   {
     "id": "3:40",
     "text": "التسويق بالبريد الإلكتروني",
-    "status": "excluded",
-    "reason": "Owner explicitly excluded Email Marketing and CRO on 2026-10-07"
+    "status": "rendered",
+    "reason": ""
   },
   {
     "id": "3:41",
     "text": "رسائل تلقائية ونشرات دورية تصل إلى عملائك مباشرة، وتعيدهم للشراء منك مرة بعد مرة.",
-    "status": "excluded",
-    "reason": "Owner explicitly excluded Email Marketing and CRO on 2026-10-07"
+    "status": "rendered",
+    "reason": ""
   },
   {
     "id": "3:42",
-    "text": "[زر] التفاصيل",
-    "status": "excluded",
-    "reason": "Owner explicitly excluded Email Marketing and CRO on 2026-10-07"
+    "text": "التفاصيل",
+    "status": "rendered",
+    "reason": ""
   },
   {
     "id": "3:43",
@@ -2106,6 +2106,162 @@
     "reason": ""
   },
   {
+    "id": "24:94",
+    "text": "Common Questions About Conversion Rate Optimization",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:95",
+    "text": "When will I see results?",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:96",
+    "text": "Clear fixes, like shortening a form or repairing a checkout step, show impact within weeks of going live. Tests run until they give a result you can rely on.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:97",
+    "text": "Will my whole website design change?",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:98",
+    "text": "No. We make specific, measured changes to key pages such as the homepage, service pages and checkout.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:99",
+    "text": "Do you implement the changes yourselves?",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:100",
+    "text": "Yes, our team designs, builds and writes the changes. If you have a tech team, we hand them the changes ready and fully detailed.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:101",
+    "text": "How do I track what's been achieved?",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:102",
+    "text": "A monthly report on what we changed and its effect on your conversion rate, plus a regular meeting to review results and the next test.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:103",
+    "text": "Does this work for a site with low traffic?",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:104",
+    "text": "Yes. A review and fixing clear problems help any site. We use A/B tests when traffic allows.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:105",
+    "text": "Which package is right for me?",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:106",
+    "text": "A one-time review with a ready list of improvements, or ongoing monthly optimization where we implement and test. We start with the free review, then recommend the best fit.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:94",
+    "text": "Common Questions About Email Marketing",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:95",
+    "text": "When do results start?",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:96",
+    "text": "Automated emails like cart reminders and welcome emails start working as soon as they're switched on in the first weeks, and the numbers improve month after month with testing.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:97",
+    "text": "I don't have an email list. Can I still start?",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:98",
+    "text": "Yes. We build your list from website visitors and existing customers, and switch on automated emails as it grows.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:99",
+    "text": "Can you move us from another email platform?",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:100",
+    "text": "Yes. We move your list, emails and templates to the new platform without your emails stopping.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:101",
+    "text": "Do you write the content and design?",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:102",
+    "text": "Yes. We write and design every email in your brand style, in Arabic and English, and send it for your approval before it goes out.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:103",
+    "text": "How do I know email is bringing in sales?",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:104",
+    "text": "We connect the platform to your website or store, so you see how many orders came from each email, with the numbers in your monthly report.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:105",
+    "text": "Which package is right for me?",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:106",
+    "text": "A one-time review, a full platform and automation setup, or comprehensive monthly management. We start with the free review, then recommend the best fit.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
     "id": "4:230",
     "text": "SEO FAQs",
     "status": "rendered",
@@ -3068,6 +3224,162 @@
   {
     "id": "20:109",
     "text": "اختر شركة تبني خطتها على بيانات سوقك لا على قوالب عامة، ولديها خبرة تنفيذ فعلية، وتسلّمك خطة مكتوبة بمؤشرات قياس، ولا تلزمك بالتنفيذ معها. اسأل عن هذه النقاط الأربع قبل التعاقد.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:93",
+    "text": "أسئلة شائعة عملائنا عن تحسين معدل التحويل",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:94",
+    "text": "متى أرى النتائج؟",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:95",
+    "text": "التحسينات الواضحة، مثل اختصار نموذج أو إصلاح خطوة دفع، يظهر أثرها خلال أسابيع من تطبيقها. أما الاختبارات فنتركها حتى تعطي نتيجة يمكن الاعتماد عليها.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:96",
+    "text": "هل يتغير تصميم موقعي بالكامل؟",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:97",
+    "text": "لا. نعمل على تعديلات محددة ومقيسة في الصفحات المهمة، مثل الصفحة الرئيسية وصفحات الخدمات وخطوات الدفع.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:98",
+    "text": "هل تنفذون التعديلات بأنفسكم؟",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:99",
+    "text": "نعم، فريقنا يصمم ويبرمج ويكتب التعديلات. وإذا كان عندك فريق تقني، نسلّمه التعديلات جاهزة بالتفصيل.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:100",
+    "text": "كيف أتابع ما تحقق؟",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:101",
+    "text": "تقرير شهري بما غيّرناه وأثره على معدل التحويل، واجتماع دوري نراجع فيه النتائج والتجربة التالية.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:102",
+    "text": "هل تناسب الخدمة موقعاً زياراته قليلة؟",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:103",
+    "text": "نعم، فالمراجعة وإصلاح المشكلات الواضحة يفيدان أي موقع. أما اختبارات A/B فنستخدمها عندما يسمح حجم الزيارات.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:104",
+    "text": "ما الباقة المناسبة لي؟",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:105",
+    "text": "مراجعة لمرة واحدة بقائمة تحسينات جاهزة، أو تحسين شهري مستمر ننفذ فيه ونختبر. نبدأ بالمراجعة المجانية ثم نرشّح لك الأنسب.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:94",
+    "text": "أسئلة شائعة عن التسويق بالبريد الإلكتروني",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:95",
+    "text": "متى تبدأ النتائج؟",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:96",
+    "text": "تبدأ الرسائل التلقائية، مثل تذكير السلة والترحيب، العمل بمجرد تفعيلها في الأسابيع الأولى، وتتحسن الأرقام شهراً بعد شهر مع الاختبار.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:97",
+    "text": "ليس لدي قائمة بريدية، هل يمكنني البدء؟",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:98",
+    "text": "نعم. نبني قائمتك من زوار الموقع والعملاء الحاليين، ونفعّل الرسائل التلقائية مع نموها.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:99",
+    "text": "هل يمكنكم نقلنا من منصة بريد أخرى؟",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:100",
+    "text": "نعم. ننقل قائمتك ورسائلك وقوالبك إلى المنصة الجديدة دون توقف رسائلك.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:101",
+    "text": "هل تكتبون المحتوى وتصممونه؟",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:102",
+    "text": "نعم. نكتب ونصمم كل رسالة بأسلوب علامتك بالعربية والإنكليزية، ونرسلها لموافقتك قبل الإرسال.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:103",
+    "text": "كيف أعرف أن البريد يحقق مبيعات؟",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:104",
+    "text": "نربط المنصة بموقعك أو متجرك لترى عدد الطلبات القادمة من كل رسالة، مع الأرقام في تقريرك الشهري.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:105",
+    "text": "ما الباقة المناسبة لي؟",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:106",
+    "text": "مراجعة لمرة واحدة، أو إعداد كامل للمنصة والأتمتة، أو إدارة شهرية شاملة. نبدأ بالمراجعة المجانية ثم نرشح لك الأنسب.",
     "status": "rendered",
     "reason": ""
   },
@@ -13318,6 +13630,2394 @@
     "text": "شعارات العملاء",
     "status": "authoring",
     "reason": "Layout instruction or structural marker"
+  },
+  {
+    "id": "24:0",
+    "text": "Conversion Rate Optimization (CRO) Service Page",
+    "status": "authoring",
+    "reason": "Document title / supplied metadata"
+  },
+  {
+    "id": "24:1",
+    "text": "Meta Title: Conversion Rate Optimization Services in Riyadh | CRO",
+    "status": "metadata",
+    "reason": "Document title / supplied metadata"
+  },
+  {
+    "id": "24:2",
+    "text": "Meta Description: We turn your existing traffic into more orders and sales: a full site review, visitor behavior analysis, better pages, forms and checkout, A/B tests and a monthly report.",
+    "status": "metadata",
+    "reason": "Document title / supplied metadata"
+  },
+  {
+    "id": "24:4",
+    "text": "Before you raise your ad budget, let us get you more from the traffic you already have. We find the page and the step where visitors leave without buying or reaching out, fix it, and measure the impact of every change in numbers.We start with a free review of your site, giving you a list of the biggest things stopping visitors from ordering.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:5",
+    "text": "Get Your Free Consultation",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:6",
+    "text": "Browse Our Results",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:3",
+    "text": "Conversion Rate Optimization Services: More Clients From the Traffic You Already Pay For",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:7",
+    "text": "Why Improve Conversions Before Spending More on Ads?",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "draft-conversion-rate-optimization-en:benefit-0",
+    "text": "Visitor behaviour analysis",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "draft-conversion-rate-optimization-en:benefit-1",
+    "text": "Better pages and checkout",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "draft-conversion-rate-optimization-en:benefit-2",
+    "text": "Testing and measurement",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:8",
+    "text": "We Know Why You're Here",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:9",
+    "text": "Your site gets good traffic, but orders and calls are few.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:10",
+    "text": "Customers leave their carts before paying.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:11",
+    "text": "Your cost per client from ads keeps rising.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:12",
+    "text": "Visitors don't understand your offer in the first seconds and leave.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:13",
+    "text": "Forms are long and buttons are unclear.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:14",
+    "text": "Browsing on mobile is a struggle, even though most visitors use their phones.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:15",
+    "text": "You don't know exactly at which step you're losing clients.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:16",
+    "text": "What Our CRO Services Include",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:18",
+    "text": "We go through your site page by page, the way your client would, and note everything that confuses them or holds them back.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:17",
+    "text": "A Full Site Review",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:20",
+    "text": "We make sure your site tracks every step accurately from landing to order, using GA4 and Google Tag Manager.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:19",
+    "text": "Tracking Setup",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:22",
+    "text": "Heatmaps and session recordings show where visitors click, how far they get and where they leave.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:21",
+    "text": "Visitor Behavior Analysis",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:24",
+    "text": "Short on-site and post-purchase surveys, to hear what nearly stopped your clients from ordering.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:23",
+    "text": "Your Clients' Feedback",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:26",
+    "text": "Pages that explain your offer quickly and lead visitors to one clear step.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:25",
+    "text": "Landing Page Improvements",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:28",
+    "text": "We cut fields, clarify buttons and reorder steps, so more visitors complete their orders.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:27",
+    "text": "Shorter Forms and Checkout",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:30",
+    "text": "Reviews, past work, payment methods and return policy, placed where clients need them.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:29",
+    "text": "Elements That Reassure",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:32",
+    "text": "We show two versions of a page to real visitors and keep the winner based on numbers.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:31",
+    "text": "A/B Testing",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:34",
+    "text": "What we changed, how the conversion rate moved, and the next test, in a regular meeting with our team.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:33",
+    "text": "Monthly Report and Review Meeting",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:35",
+    "text": "Why Choose Zero2One for Conversion Rate Optimization?",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:37",
+    "text": "We don't change things because they look nicer. Every change starts from a number or behavior we've seen and is measured afterwards.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:36",
+    "text": "Every Change Has a Reason",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:39",
+    "text": "Our clients stay because results are measured every month and reports are clear.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:38",
+    "text": "95% Client Retention",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:41",
+    "text": "UX designers, developers and copywriters together, so recommendations don't sit in a file waiting for someone to implement them.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:40",
+    "text": "We Recommend and Build in One Team",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:43",
+    "text": "We rank improvements by expected impact and ease, so you start with what moves the numbers fastest.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:42",
+    "text": "Biggest Wins First",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:45",
+    "text": "What reassures them before paying: mada and Apple Pay, installments, clear delivery and WhatsApp contact.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:44",
+    "text": "We Know Saudi Shoppers",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:47",
+    "text": "Optimization lifts SEO, ads and email results together, because all visitors land on the same site.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:46",
+    "text": "Traffic From Every Channel Benefits",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:48",
+    "text": "Is Our CRO Service Right for You?",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:50",
+    "text": "Good traffic, few inquiries.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:49",
+    "text": "Sites With Traffic but No Orders",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:52",
+    "text": "You want fewer abandoned carts and more sales.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:51",
+    "text": "Online Stores",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:54",
+    "text": "You pay too much for every client from ads.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:53",
+    "text": "Costly Campaigns",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:56",
+    "text": "Offer pages that aren't delivering.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:55",
+    "text": "Landing Pages",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:58",
+    "text": "You want more calls, forms and WhatsApp messages.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:57",
+    "text": "Service Websites",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:60",
+    "text": "You want more from current traffic before paying for more.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:61",
+    "text": "Get Your Free Consultation",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:59",
+    "text": "Before Raising the Budget",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:62",
+    "text": "CRO Packages: One-Time Review or Monthly Optimization",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:63",
+    "text": "How We Work",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:64",
+    "text": "Free Review: We review your site and identify the biggest blockers to ordering.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:65",
+    "text": "Tracking: We set up tracking so the numbers are right from the start.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:66",
+    "text": "Research: We analyze data, visitor behavior and client feedback.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:67",
+    "text": "Priorities: A list of improvements ranked by impact and ease, approved with you.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:68",
+    "text": "Implementation: We apply changes to copy, design and forms, or hand them to your tech team.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:69",
+    "text": "Testing: We measure every change and run A/B tests.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:70",
+    "text": "Repeat: We build on what worked and start the next test.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:71",
+    "text": "What You Get From Conversion Rate Optimization",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:73",
+    "text": "A larger share of visitors become orders.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:72",
+    "text": "More Clients From the Same Traffic",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:75",
+    "text": "The same ad budget brings in more clients.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:74",
+    "text": "Lower Cost Per Client",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:77",
+    "text": "Shorter checkout reduces last-minute hesitation.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:76",
+    "text": "More Completed Checkouts",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:79",
+    "text": "Visitors order easily from their phones.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:78",
+    "text": "Easier on Mobile",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:81",
+    "text": "You know what works on your site instead of guessing.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:80",
+    "text": "Decisions Based on Numbers",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:83",
+    "text": "SEO, ads and email all benefit from a site that convinces.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:84",
+    "text": "Side card:",
+    "status": "authoring",
+    "reason": "Layout instruction or structural marker"
+  },
+  {
+    "id": "24:82",
+    "text": "Every Channel Delivers More",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:85",
+    "text": "Don't Pay for More Traffic Before Making the Most of What You Have",
+    "status": "held",
+    "reason": "Deferred-service portfolio examples are unfilled placeholders; no invented results displayed"
+  },
+  {
+    "id": "24:86",
+    "text": "Real results from our work:",
+    "status": "held",
+    "reason": "Deferred-service portfolio examples are unfilled placeholders; no invented results displayed"
+  },
+  {
+    "id": "24:87",
+    "text": "[CRO project from your portfolio: conversion rate before and after + period]",
+    "status": "held",
+    "reason": "Deferred-service portfolio examples are unfilled placeholders; no invented results displayed"
+  },
+  {
+    "id": "24:88",
+    "text": "[Second project]",
+    "status": "held",
+    "reason": "Deferred-service portfolio examples are unfilled placeholders; no invented results displayed"
+  },
+  {
+    "id": "24:89",
+    "text": "[Third project]",
+    "status": "held",
+    "reason": "Deferred-service portfolio examples are unfilled placeholders; no invented results displayed"
+  },
+  {
+    "id": "24:90",
+    "text": "[Button → Our Work page] View Our Work",
+    "status": "held",
+    "reason": "Deferred-service portfolio examples are unfilled placeholders; no invented results displayed"
+  },
+  {
+    "id": "24:91",
+    "text": "Meet the Conversion Optimization Team",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:93",
+    "text": "Client logos",
+    "status": "authoring",
+    "reason": "Layout instruction or structural marker"
+  },
+  {
+    "id": "24:92",
+    "text": "Our Clients in Success",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:107",
+    "text": "Let's Get Started",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:108",
+    "text": "Send us your website or store link, and we'll run a free review that gives you a list of the biggest things stopping visitors from ordering.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "24:109",
+    "text": "Get Your Free Consultation",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:0",
+    "text": "صفحة خدمة تحسين معدل التحويل (CRO)",
+    "status": "authoring",
+    "reason": "Document title / supplied metadata"
+  },
+  {
+    "id": "25:1",
+    "text": "العنوان (Meta Title):خدمة تحسين معدل التحويل CRO في الرياض | عملاء أكثر",
+    "status": "metadata",
+    "reason": "Document title / supplied metadata"
+  },
+  {
+    "id": "25:2",
+    "text": "الوصف (Meta Description): نحول زيارات موقعك الحالية إلى طلبات ومبيعات أكثر: مراجعة كاملة، وتحليل سلوك الزوار، وتحسين الصفحات والنماذج وخطوات الدفع، واختبارات A/B، وتقرير شهري.",
+    "status": "metadata",
+    "reason": "Document title / supplied metadata"
+  },
+  {
+    "id": "25:4",
+    "text": "قبل أن ترفع ميزانية الإعلانات، دعنا نحصل لك على نتيجة أكبر من زياراتك الحالية. نكتشف في أي صفحة وأي خطوة يغادر زائرك دون أن يشتري أو يتواصل، ثم نصلحها ونقيس أثر كل تعديل بالأرقام.ونبدأ بمراجعة مجانية لموقعك، تخرج منها بقائمة أهم ما يمنع زوارك من الطلب.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:5",
+    "text": "استشارتك المجانية",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:6",
+    "text": "تصفح نتائجنا",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:3",
+    "text": "طلبات أعلى، وسلات مكتملة، بنفس معدل الزيارات",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:7",
+    "text": "لماذا تبدأ بتحسين معدل التحويل CRO قبل زيادة الإعلانات؟",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "draft-conversion-rate-optimization-ar:benefit-0",
+    "text": "تحليل سلوك الزوار",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "draft-conversion-rate-optimization-ar:benefit-1",
+    "text": "تحسين الصفحات وخطوات الطلب",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "draft-conversion-rate-optimization-ar:benefit-2",
+    "text": "اختبار وقياس مستمر",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:8",
+    "text": "نعلم لماذا أنت هنا",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:9",
+    "text": "موقعك يجلب زيارات جيدة، لكن الطلبات والاتصالات قليلة.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:10",
+    "text": "عملاء متجرك يتركون السلة قبل الدفع.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:11",
+    "text": "تكلفة العميل من الإعلانات ترتفع شهراً بعد شهر.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:12",
+    "text": "الزائر لا يفهم عرضك في الثواني الأولى فيغادر.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:13",
+    "text": "النماذج طويلة، والأزرار غير واضحة.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:14",
+    "text": "التصفح على الجوال متعب، مع أن أغلب زوارك منه.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:15",
+    "text": "لا تعرف في أي خطوة بالضبط تخسر العميل.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:16",
+    "text": "ماذا تشمل خدمات CRO معنا؟",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:18",
+    "text": "نمر على موقعك صفحة بصفحة كما يمر عميلك، ونسجّل كل ما يربكه أو يؤخره عن الطلب.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:17",
+    "text": "مراجعة كاملة للموقع",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:20",
+    "text": "نتأكد أن موقعك يقيس كل خطوة بدقة من دخول الزائر حتى الطلب، عبر GA4 وGoogle Tag Manager.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:19",
+    "text": "التحليل والقياس",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:22",
+    "text": "خرائط حرارية وتسجيلات جلسات توضح أين يضغط زوارك، وإلى أين يصلون، وأين يغادرون.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:21",
+    "text": "تحليل سلوك الزوار",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:24",
+    "text": "استبيانات قصيرة داخل الموقع وبعد الشراء، لنسمع من عملائك ما الذي كاد يمنعهم من الطلب.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:23",
+    "text": "آراء عملائك",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:26",
+    "text": "صفحات توضح عرضك بسرعة، وتقود الزائر إلى خطوة واحدة واضحة.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:25",
+    "text": "تحسين صفحات الهبوط",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:28",
+    "text": "نختصر الحقول، ونوضح الأزرار، ونرتب الخطوات، فيكمل عدد أكبر من الزوار طلباتهم.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:27",
+    "text": "نماذج وخطوات دفع أقصر",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:30",
+    "text": "آراء العملاء، والأعمال السابقة، وطرق الدفع، وسياسة الاسترجاع، في المكان الذي يحتاجها فيه العميل.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:29",
+    "text": "عناصر تطمئن العميل",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:32",
+    "text": "نعرض نسختين من الصفحة على زوار حقيقيين، ونعتمد الأفضل بالأرقام.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:31",
+    "text": "اختبارات A/B",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:34",
+    "text": "ما غيّرناه، وكيف تحرك معدل التحويل، وما التجربة التالية، في اجتماع دوري مع فريقنا.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:33",
+    "text": "تقرير شهري واجتماع متابعة",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:35",
+    "text": "السبب الذي دفع عملائنا للوثوق بنا لتحسين معدل التحويل؟",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:37",
+    "text": "نرتّب التحسينات حسب أثرها المتوقع وسهولة تنفيذها، فتبدأ بما يحرك الأرقام بسرعة.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:36",
+    "text": "الأهم أولاً",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:39",
+    "text": "لا نغيّر شيئاً لأنه يبدو أجمل. كل تعديل يبدأ من رقم أو سلوك رأيناه، ويُقاس بعد تطبيقه.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:38",
+    "text": "كل تعديل له سبب",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:41",
+    "text": "عملاؤنا يبقون لأن النتائج تقاس كل شهر، والتقارير واضحة.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:40",
+    "text": "عملاء سعداء",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:43",
+    "text": "مصممو تجربة المستخدم والمطورون وكتّاب المحتوى معاً، فلا تبقى التوصيات في ملف ينتظر من ينفذه.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:42",
+    "text": "نقترح وننفذ في نفس الفريق",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:45",
+    "text": "نعرف ما الذي يطمئنه قبل الدفع: مدى وApple Pay، والتقسيط، والتوصيل الواضح، والتواصل عبر واتساب.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:44",
+    "text": "نعرف العميل السعودي",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:47",
+    "text": "التحسين يرفع نتائج السيو والإعلانات والبريد معاً، لأن الزوار كلهم يصلون إلى نفس الموقع.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:46",
+    "text": "زياراتك من كل قناة تسويق",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:48",
+    "text": "هل تناسبك خدمة تحسين معدل التحويل؟",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:50",
+    "text": "زيارات جيدة، وتواصل قليل.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:49",
+    "text": "مواقع بزيارات بلا طلبات",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:52",
+    "text": "تريد تقليل السلات المتروكة ورفع المبيعات.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:51",
+    "text": "المتاجر الإلكترونية",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:54",
+    "text": "تدفع كثيراً مقابل كل عميل من الإعلانات.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:53",
+    "text": "الحملات المكلفة",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:56",
+    "text": "صفحات عروض لا تحقق النتيجة المطلوبة.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:55",
+    "text": "صفحات الاعلانات",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:58",
+    "text": "تريد اتصالات ونماذج ورسائل واتساب أكثر.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:57",
+    "text": "مواقع الخدمات",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:60",
+    "text": "تريد أن تستفيد من زياراتك الحالية قبل أن تدفع على المزيد.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:61",
+    "text": "استشارتك المجانية",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:59",
+    "text": "قبل رفع الميزانية",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:62",
+    "text": "باقات تحسين معدل التحويل",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:63",
+    "text": "آلية عملنا",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:64",
+    "text": "المراجعة المجانية: نراجع موقعك ونحدد أهم ما يمنع زوارك من الطلب.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:65",
+    "text": "القياس: نضبط التتبع حتى تكون الأرقام صحيحة من البداية.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:66",
+    "text": "البحث: نحلل البيانات وسلوك الزوار وآراء العملاء.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:67",
+    "text": "الأولويات: قائمة تحسينات مرتبة حسب الأثر والسهولة، نعتمدها معك.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:68",
+    "text": "التنفيذ: نطبق التعديلات على النصوص والتصميم والنماذج، أو نسلّمها لفريقك التقني.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:69",
+    "text": "الاختبار: نقيس أثر كل تعديل، ونشغّل اختبارات A/B.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:70",
+    "text": "التكرار: نبني على ما نجح، ونبدأ التجربة التالية.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:71",
+    "text": "ماذا تحصل عليه بعد تحسين معدل التحويل؟",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:73",
+    "text": "نسبة أكبر من زوارك تتحول إلى طلبات.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:72",
+    "text": "عملاء أكثر بنفس الزيارات",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:75",
+    "text": "نفس ميزانية الإعلانات تجلب عملاء أكثر.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:74",
+    "text": "تكلفة أقل لكل عميل",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:77",
+    "text": "خطوات دفع أقصر تقلل التردد في آخر لحظة.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:76",
+    "text": "سلات مكتملة أكثر",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:79",
+    "text": "الزائر يطلب بسهولة من جواله.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:78",
+    "text": "تجربة أسهل على الجوال",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:81",
+    "text": "تعرف ما ينجح في موقعك بدل التخمين.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:80",
+    "text": "قرارات بالأرقام",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:83",
+    "text": "السيو والإعلانات والبريد كلها تستفيد من موقع يقنع.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:82",
+    "text": "كل قناة تعطي أكثر",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:84",
+    "text": "لا تدفع على زيارات أكثر قبل أن تستفيد من زياراتك الحالية",
+    "status": "held",
+    "reason": "Deferred-service portfolio examples are unfilled placeholders; no invented results displayed"
+  },
+  {
+    "id": "25:85",
+    "text": "نتائج حقيقية من أعمالنا:",
+    "status": "held",
+    "reason": "Deferred-service portfolio examples are unfilled placeholders; no invented results displayed"
+  },
+  {
+    "id": "25:86",
+    "text": "[مشروع تحسين تحويل من أعمالكم: معدل التحويل قبل وبعد + الفترة]",
+    "status": "held",
+    "reason": "Deferred-service portfolio examples are unfilled placeholders; no invented results displayed"
+  },
+  {
+    "id": "25:87",
+    "text": "[مشروع ثانٍ]",
+    "status": "held",
+    "reason": "Deferred-service portfolio examples are unfilled placeholders; no invented results displayed"
+  },
+  {
+    "id": "25:88",
+    "text": "[مشروع ثالث]",
+    "status": "held",
+    "reason": "Deferred-service portfolio examples are unfilled placeholders; no invented results displayed"
+  },
+  {
+    "id": "25:89",
+    "text": "[زر ← صفحة أعمالنا] شاهد أعمالنا",
+    "status": "held",
+    "reason": "Deferred-service portfolio examples are unfilled placeholders; no invented results displayed"
+  },
+  {
+    "id": "25:90",
+    "text": "تعرّف على فريق تحسين معدل التحويل",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:92",
+    "text": "شعارات العملاء",
+    "status": "authoring",
+    "reason": "Layout instruction or structural marker"
+  },
+  {
+    "id": "25:91",
+    "text": "عملائنا في النجاح",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:106",
+    "text": "لنبدأ رحلتك",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "25:107",
+    "text": "أرسل لنا رابط موقعك أو متجرك، ونجري لك مراجعة مجانية تخرج منها بقائمة أهم ما يمنع زوارك من الطلب.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:0",
+    "text": "Email Marketing Service Page",
+    "status": "authoring",
+    "reason": "Document title / supplied metadata"
+  },
+  {
+    "id": "22:1",
+    "text": "Meta Title: Email Marketing Services in Riyadh | Automated Emails That Sell | Zero2One",
+    "status": "metadata",
+    "reason": "Document title / supplied metadata"
+  },
+  {
+    "id": "22:2",
+    "text": "Meta Description: We run your email marketing end to end: welcome, abandoned cart and post-purchase emails, Arabic newsletters that reach the inbox, and a monthly sales report.",
+    "status": "metadata",
+    "reason": "Document title / supplied metadata"
+  },
+  {
+    "id": "22:4",
+    "text": "We handle your email marketing from start to finish: we set up the platform and connect it to your website or store, build automated emails that reach each customer at the right moment, write and design your newsletters every month, and send you a report on the sales they bring in.We start with a free review of your current email, showing you where sales are slipping away today.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:5",
+    "text": "Get Your Free Consultation",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:6",
+    "text": "Browse Our Results",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:3",
+    "text": "Email Marketing Services: Emails That Bring Customers Back, and Run Themselves",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:7",
+    "text": "Why Does Email Deserve a Place in Your Marketing Plan?",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "draft-email-marketing-en:benefit-0",
+    "text": "Automated emails",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "draft-email-marketing-en:benefit-1",
+    "text": "Relevant customer messages",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "draft-email-marketing-en:benefit-2",
+    "text": "Email sales measurement",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:8",
+    "text": "We Know Why You're Here",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:9",
+    "text": "You have a customer list but don't contact them after the first purchase.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:10",
+    "text": "Your emails land in spam instead of the inbox.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:11",
+    "text": "You send the same message to everyone, and no one opens it.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:12",
+    "text": "No automated emails: no welcome, no cart reminder, no post-purchase follow-up.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:13",
+    "text": "You pay for ads to reach customers who already bought from you.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:14",
+    "text": "Your website collects visitor details, and no one uses them.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:15",
+    "text": "You don't know how many sales came from email.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:16",
+    "text": "What Our Email Campaign Service Includes",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:18",
+    "text": "We review your platform, list, emails and delivery rates, and give you a list of what to fix first.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:17",
+    "text": "Free Review of Your Current Email",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:20",
+    "text": "We set up the right email platform for your list size and connect it to your website or store, or move you from your current platform with all your data.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:19",
+    "text": "Platform Setup and Integration",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:22",
+    "text": "We configure your domain settings (SPF, DKIM and DMARC) and monitor your sender reputation every month.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:21",
+    "text": "Inbox Delivery Setup",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:24",
+    "text": "Sign-up forms and welcome offers on your site that attract genuinely interested visitors.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:23",
+    "text": "List Building",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:26",
+    "text": "We segment your list by interest, purchase history and city, so every email reaches the people it matters to.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:25",
+    "text": "Customer Segmentation",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:28",
+    "text": "Welcome emails, abandoned cart reminders, thank-you and follow-up after purchase, and win-back emails.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:27",
+    "text": "Automated Emails",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:30",
+    "text": "We write and design your campaigns in your brand style, in Arabic and English, looking great on mobile.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:29",
+    "text": "Newsletter Writing and Design",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:32",
+    "text": "We test subject lines and send times, and keep what lifts opens, clicks and sales.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:31",
+    "text": "Ongoing Testing",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:34",
+    "text": "Open and click rates, sales from email, and what we'll change next month.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:33",
+    "text": "Monthly Report in Numbers",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:35",
+    "text": "Why Choose Zero2One to Run Your Email Marketing?",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:37",
+    "text": "One person responsible for your email, who knows your business and sends you the month's plan before it starts.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:36",
+    "text": "One Campaign Manager for You",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:39",
+    "text": "Our clients stay because reports are clear and results improve month after month.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:38",
+    "text": "95% Client Retention",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:41",
+    "text": "The platform, list and all data are in your name, and stay with you if you ever move.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:40",
+    "text": "Your List Is Yours",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:43",
+    "text": "No purchased lists. They damage your sender reputation and waste your budget.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:42",
+    "text": "Only People Who Opted In",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:45",
+    "text": "We prepare Ramadan, National Day and White Friday campaigns early.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:44",
+    "text": "Ready for the Big Seasons",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:47",
+    "text": "We connect email with your website, ads and content in one team, so every channel supports the others.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:46",
+    "text": "Email as Part of the Bigger Picture",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:48",
+    "text": "Is Our Email Marketing Service Right for You?",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:50",
+    "text": "You want repeat purchases and recovered carts.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:49",
+    "text": "Online Stores",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:52",
+    "text": "You need to follow up with leads until they decide.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:51",
+    "text": "B2B Companies",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:54",
+    "text": "You announce new courses and registration dates.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:53",
+    "text": "Education Centers",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:56",
+    "text": "You want to remind clients about appointments and offers.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:55",
+    "text": "Service Businesses",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:58",
+    "text": "You have email addresses you're not using.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:57",
+    "text": "Sites Collecting Data",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:60",
+    "text": "You have no list and want to build one the right way.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:61",
+    "text": "Get Your Free Consultation",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:59",
+    "text": "Starting From Zero",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:62",
+    "text": "Email Marketing Packages: Review, Setup or Monthly Management",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:63",
+    "text": "How We Work",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:64",
+    "text": "Review: We review your current email for free and set priorities.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:65",
+    "text": "Plan: We agree on automated emails, newsletters, segmentation and the numbers we'll track.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:66",
+    "text": "Setup: We configure the platform, delivery settings and sign-up forms.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:67",
+    "text": "Activation: We switch on automated emails so they start working in the first weeks.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:68",
+    "text": "Sending: We write, design and send campaigns on schedule.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:69",
+    "text": "Measurement: We track opens, clicks and sales for every email.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:70",
+    "text": "Improvement: A monthly report and an updated plan for the next month.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:71",
+    "text": "What You Get Once Your Email Marketing Is Running",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:73",
+    "text": "Well-timed emails remind customers of you.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:72",
+    "text": "Customers Who Buy Again",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:75",
+    "text": "Automatic reminders win back part of the lost sales.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:74",
+    "text": "Fewer Abandoned Carts",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:77",
+    "text": "Reach existing customers without paying for every impression.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:76",
+    "text": "Lower Ad Spend",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:79",
+    "text": "Automated emails work day and night.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:78",
+    "text": "Sales While You're Busy",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:81",
+    "text": "Content they care about keeps your brand on their mind.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:80",
+    "text": "Stronger Relationships",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:83",
+    "text": "You know exactly what every campaign achieved.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:84",
+    "text": "Side card:",
+    "status": "authoring",
+    "reason": "Layout instruction or structural marker"
+  },
+  {
+    "id": "22:82",
+    "text": "Clear Numbers",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:85",
+    "text": "Your Email List Isn't Addresses. It's Customers Waiting to Hear From You",
+    "status": "held",
+    "reason": "Deferred-service portfolio examples are unfilled placeholders; no invented results displayed"
+  },
+  {
+    "id": "22:86",
+    "text": "Real results from our work:",
+    "status": "held",
+    "reason": "Deferred-service portfolio examples are unfilled placeholders; no invented results displayed"
+  },
+  {
+    "id": "22:87",
+    "text": "[Email marketing project from your portfolio: result + period]",
+    "status": "held",
+    "reason": "Deferred-service portfolio examples are unfilled placeholders; no invented results displayed"
+  },
+  {
+    "id": "22:88",
+    "text": "[Second project]",
+    "status": "held",
+    "reason": "Deferred-service portfolio examples are unfilled placeholders; no invented results displayed"
+  },
+  {
+    "id": "22:89",
+    "text": "[Third project]",
+    "status": "held",
+    "reason": "Deferred-service portfolio examples are unfilled placeholders; no invented results displayed"
+  },
+  {
+    "id": "22:90",
+    "text": "[Button → Our Work page] View Our Work",
+    "status": "held",
+    "reason": "Deferred-service portfolio examples are unfilled placeholders; no invented results displayed"
+  },
+  {
+    "id": "22:91",
+    "text": "Meet the Email Marketing Team",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:93",
+    "text": "Client logos",
+    "status": "authoring",
+    "reason": "Layout instruction or structural marker"
+  },
+  {
+    "id": "22:92",
+    "text": "Our Clients in Success",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:107",
+    "text": "Let's Get Started",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:108",
+    "text": "Send us your website or store link, and we'll run a free review of your email marketing and show you where sales are slipping away and how to win them back.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "22:109",
+    "text": "Get Your Free Consultation",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:0",
+    "text": "صفحة خدمة التسويق بالبريد الإلكتروني",
+    "status": "authoring",
+    "reason": "Document title / supplied metadata"
+  },
+  {
+    "id": "23:1",
+    "text": "العنوان: خدمات التسويق بالبريد الإلكتروني في الرياض | من الصفر إلى الواحد",
+    "status": "metadata",
+    "reason": "Document title / supplied metadata"
+  },
+  {
+    "id": "23:2",
+    "text": "الوصف: ندير التسويق بالبريد الإلكتروني من إعداد المنصة وربطها بموقعك، إلى رسائل الترحيب والسلات المتروكة والنشرات البريدية، مع تقرير شهري عن المبيعات.",
+    "status": "metadata",
+    "reason": "Document title / supplied metadata"
+  },
+  {
+    "id": "23:4",
+    "text": "نتولى التسويق بالبريد الإلكتروني من البداية إلى النهاية: نجهز المنصة ونربطها بموقعك أو متجرك، ونبني رسائل تلقائية تصل إلى كل عميل في الوقت المناسب، ونكتب ونصمم نشراتك كل شهر، ونرسل لك تقريراً بالمبيعات التي تحققها. نبدأ بمراجعة مجانية لبريدك الحالي، نوضح فيها أين تفقد فرص البيع اليوم.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:5",
+    "text": "استشارتك المجانية",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:6",
+    "text": "تصفح نتائجنا",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:3",
+    "text": "التسويق بالبريد الإلكتروني: رسائل تعيد عملاءك وتعمل تلقائياً",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:7",
+    "text": "لماذا يستحق البريد الإلكتروني مكاناً في خطتك التسويقية؟",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "draft-email-marketing-ar:benefit-0",
+    "text": "رسائل تلقائية",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "draft-email-marketing-ar:benefit-1",
+    "text": "محتوى مناسب لكل عميل",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "draft-email-marketing-ar:benefit-2",
+    "text": "قياس المبيعات من البريد",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:8",
+    "text": "نعلم لماذا أنت هنا",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:9",
+    "text": "لديك قائمة عملاء، لكنك لا تتواصل معهم بعد أول عملية شراء.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:10",
+    "text": "رسائلك تصل إلى البريد المزعج بدلاً من صندوق الوارد.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:11",
+    "text": "ترسل الرسالة نفسها للجميع، ولا يفتحها أحد.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:12",
+    "text": "لا توجد رسائل تلقائية للترحيب أو التذكير بالسلة أو المتابعة بعد الشراء.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:13",
+    "text": "تدفع للإعلانات كي تصل إلى عملاء سبق أن اشتروا منك.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:14",
+    "text": "موقعك يجمع بيانات الزوار، ولا يستفيد منها أحد.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:15",
+    "text": "لا تعرف كم عملية بيع جاءت من البريد الإلكتروني.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:16",
+    "text": "ماذا تشمل خدمات إدارة حملات البريد الإلكتروني لدينا؟",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:18",
+    "text": "نراجع المنصة والقائمة والرسائل ومعدلات الوصول، ونعطيك قائمة بما يجب إصلاحه أولاً.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:17",
+    "text": "مراجعة مجانية لبريدك الحالي",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:20",
+    "text": "نجهز منصة البريد المناسبة لحجم قائمتك ونربطها بموقعك أو متجرك، أو ننقلك من منصتك الحالية مع بياناتك.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:19",
+    "text": "إعداد المنصة وربطها",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:22",
+    "text": "نضبط إعدادات نطاقك SPF وDKIM وDMARC، ونتابع سمعة الإرسال كل شهر.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:21",
+    "text": "تهيئة الوصول إلى صندوق الوارد",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:24",
+    "text": "نماذج اشتراك وعروض ترحيبية في موقعك تجذب الزوار المهتمين فعلاً.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:23",
+    "text": "بناء القائمة البريدية",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:26",
+    "text": "نقسم قائمتك حسب الاهتمامات وسجل الشراء والمدينة، حتى تصل كل رسالة لمن تهمه.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:25",
+    "text": "تقسيم العملاء",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:28",
+    "text": "رسائل ترحيب، وتذكير بالسلات المتروكة، وشكر ومتابعة بعد الشراء، ورسائل لاستعادة العملاء.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:27",
+    "text": "الرسائل التلقائية",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:30",
+    "text": "نكتب ونصمم حملاتك بأسلوب علامتك التجارية، بالعربية والإنكليزية، وبعرض مناسب للجوال.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:29",
+    "text": "كتابة النشرات وتصميمها",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:32",
+    "text": "نختبر عناوين الرسائل وأوقات الإرسال، ونعتمد ما يحسن الفتح والنقرات والمبيعات.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:31",
+    "text": "اختبارات مستمرة",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:34",
+    "text": "معدلات الفتح والنقر، والمبيعات من البريد، وما سنغيره في الشهر القادم.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:33",
+    "text": "تقرير شهري بالأرقام",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:35",
+    "text": "لماذا تختار من الصفر إلى الواحد لإدارة التسويق بالبريد الإلكتروني؟",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:37",
+    "text": "شخص مسؤول عن بريدك، يعرف نشاطك ويرسل لك خطة الشهر قبل بدايته.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:36",
+    "text": "مدير واحد لحملتك",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:39",
+    "text": "يستمر عملاؤنا معنا لأن التقارير واضحة والنتائج تتحسن شهراً بعد شهر.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:38",
+    "text": "احتفاظ بنسبة 95% من العملاء",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:41",
+    "text": "المنصة والقائمة والبيانات كلها باسمك، وتبقى معك إذا انتقلت إلى جهة أخرى.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:40",
+    "text": "قائمتك ملك لك",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:43",
+    "text": "لا قوائم مشتراة، لأنها تضر بسمعة الإرسال وتهدر ميزانيتك.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:42",
+    "text": "لمن وافقوا على الاشتراك فقط",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:45",
+    "text": "نجهز حملات رمضان واليوم الوطني والجمعة البيضاء مسبقاً.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:44",
+    "text": "استعداد مبكر للمواسم",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:47",
+    "text": "نربط البريد بموقعك وإعلاناتك ومحتواك ضمن فريق واحد، حتى تدعم القنوات بعضها.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:46",
+    "text": "البريد جزء من الصورة الكاملة",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:48",
+    "text": "هل تناسبك خدمات التسويق بالبريد الإلكتروني لدينا؟",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:50",
+    "text": "تريد عمليات شراء متكررة واستعادة السلات المتروكة.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:49",
+    "text": "المتاجر الإلكترونية",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:52",
+    "text": "تحتاج إلى متابعة العملاء المحتملين حتى يتخذوا قرارهم.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:51",
+    "text": "شركات الأعمال B2B",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:54",
+    "text": "تعلن عن دورات جديدة ومواعيد التسجيل.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:53",
+    "text": "المراكز التعليمية",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:56",
+    "text": "تريد تذكير العملاء بالمواعيد والعروض.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:55",
+    "text": "الأنشطة الخدمية",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:58",
+    "text": "لديك عناوين بريد إلكتروني لا تستفيد منها.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:57",
+    "text": "المواقع التي تجمع البيانات",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:60",
+    "text": "لا تملك قائمة وتريد بناءها بطريقة صحيحة.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:61",
+    "text": "استشارتك المجانية",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:59",
+    "text": "البداية من الصفر",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:62",
+    "text": "باقات التسويق بالبريد الإلكتروني: مراجعة أو إعداد أو إدارة شهرية",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:63",
+    "text": "آلية عملنا",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:64",
+    "text": "المراجعة: نراجع بريدك الحالي مجاناً ونحدد الأولويات.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:65",
+    "text": "الخطة: نتفق على الرسائل التلقائية والنشرات وتقسيم القائمة والأرقام التي سنتابعها.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:66",
+    "text": "الإعداد: نجهز المنصة وإعدادات الوصول ونماذج الاشتراك.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:67",
+    "text": "التفعيل: نشغل الرسائل التلقائية لتبدأ العمل في الأسابيع الأولى.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:68",
+    "text": "الإرسال: نكتب ونصمم ونرسل الحملات في مواعيدها.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:69",
+    "text": "القياس: نتابع الفتح والنقرات والمبيعات لكل رسالة.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:70",
+    "text": "التحسين: تقرير شهري وخطة محدثة للشهر التالي.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:71",
+    "text": "ما يمكنك توقعه من خدمات التسويق بالبريد الإلكتروني",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:73",
+    "text": "رسائل في الوقت المناسب تذكر العملاء بعلامتك.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:72",
+    "text": "عملاء يشترون مجدداً",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:75",
+    "text": "تستعيد التذكيرات التلقائية جزءاً من المبيعات المفقودة.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:74",
+    "text": "سلات متروكة أقل",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:77",
+    "text": "تواصل مع العملاء الحاليين دون الدفع مقابل كل ظهور.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:76",
+    "text": "إنفاق إعلاني أقل",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:79",
+    "text": "الرسائل التلقائية تعمل ليلاً ونهاراً.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:78",
+    "text": "مبيعات وأنت منشغل",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:81",
+    "text": "محتوى يهم عملاءك يبقي علامتك في أذهانهم.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:80",
+    "text": "علاقات أقوى",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:83",
+    "text": "تعرف ما حققته كل حملة بالضبط.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:84",
+    "text": "البطاقة الجانبية:",
+    "status": "authoring",
+    "reason": "Layout instruction or structural marker"
+  },
+  {
+    "id": "23:82",
+    "text": "أرقام واضحة",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:85",
+    "text": "قائمتك البريدية ليست عناوين، بل عملاء ينتظرون أن يسمعوا منك",
+    "status": "held",
+    "reason": "Deferred-service portfolio examples are unfilled placeholders; no invented results displayed"
+  },
+  {
+    "id": "23:86",
+    "text": "نتائج حقيقية من أعمالنا:",
+    "status": "held",
+    "reason": "Deferred-service portfolio examples are unfilled placeholders; no invented results displayed"
+  },
+  {
+    "id": "23:87",
+    "text": "[مشروع بريد إلكتروني من أعمالكم: النتيجة والفترة]",
+    "status": "held",
+    "reason": "Deferred-service portfolio examples are unfilled placeholders; no invented results displayed"
+  },
+  {
+    "id": "23:88",
+    "text": "[مشروع ثانٍ]",
+    "status": "held",
+    "reason": "Deferred-service portfolio examples are unfilled placeholders; no invented results displayed"
+  },
+  {
+    "id": "23:89",
+    "text": "[مشروع ثالث]",
+    "status": "held",
+    "reason": "Deferred-service portfolio examples are unfilled placeholders; no invented results displayed"
+  },
+  {
+    "id": "23:90",
+    "text": "[زر ← صفحة أعمالنا] شاهد أعمالنا",
+    "status": "held",
+    "reason": "Deferred-service portfolio examples are unfilled placeholders; no invented results displayed"
+  },
+  {
+    "id": "23:91",
+    "text": "تعرّف على فريق التسويق بالبريد الإلكتروني",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:93",
+    "text": "شعارات العملاء",
+    "status": "authoring",
+    "reason": "Layout instruction or structural marker"
+  },
+  {
+    "id": "23:92",
+    "text": "عملاؤنا في النجاح",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:107",
+    "text": "لنبدأ رحلتك",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:108",
+    "text": "أرسل لنا رابط موقعك أو متجرك لنراجع التسويق بالبريد الإلكتروني مجاناً، ونوضح أين تفقد فرص البيع وكيف تستعيدها.",
+    "status": "rendered",
+    "reason": ""
+  },
+  {
+    "id": "23:109",
+    "text": "استشارتك المجانية",
+    "status": "rendered",
+    "reason": ""
   },
   {
     "id": "4:227",

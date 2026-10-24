@@ -27,6 +27,7 @@ cat assets/css/normalize.css \
     assets/css/iconly-ui.css \
     assets/css/footer-layout.css \
     assets/css/service-studio.css \
+    assets/css/portfolio-refresh.css \
     assets/css/error-page.css \
   | "$ESBUILD" --loader=css --minify --charset=utf8 > assets/css/bundle.min.css
 # 1b) drop the rules no page or script can ever match (template leftovers);

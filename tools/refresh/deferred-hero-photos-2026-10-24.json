@@ -1,0 +1,62 @@
+{
+  "email-marketing": {
+    "source": "/Users/mohammad/Desktop/zero2one_aa1/tools/refresh/image-archives/deferred-hero-2026-10-24/email.png",
+    "originalSource": "/var/folders/8_/5_y4wspx02q2c931shz3ywkc0000gn/T/codex-clipboard-5c6e5126-4229-4dc7-90e3-82c9d3b57a45.png",
+    "sourceSha256": "7e9df8a212c0b45ccb32fd560596955ecd5decfbb8e58a94dd0e10b86e5f655d",
+    "width": 1536,
+    "height": 1024,
+    "outputs": [
+      {
+        "url": "/assets/images/owner-services-2026-10/email-hero-2026-10-24-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 26704,
+        "sha256": "8de35bc46411b8278737d5ef1046cdd353c88eb73ca71abf7ed43fb339b9ee78"
+      },
+      {
+        "url": "/assets/images/owner-services-2026-10/email-hero-2026-10-24-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 53404,
+        "sha256": "6cf316fac00ac3c3bb3f08f879c6e02bd9d93495c421dd3ee2f8b9343e23e559"
+      },
+      {
+        "url": "/assets/images/owner-services-2026-10/email-hero-2026-10-24-1440.webp",
+        "width": 1440,
+        "height": 960,
+        "bytes": 119428,
+        "sha256": "b0fc87ec3ad7c9a21449c0b3027c94d3546fbe2a2dc56b3c620c772ed4f69e1c"
+      }
+    ]
+  },
+  "conversion-rate-optimization": {
+    "source": "/Users/mohammad/Desktop/zero2one_aa1/tools/refresh/image-archives/deferred-hero-2026-10-24/cro.png",
+    "originalSource": "/var/folders/8_/5_y4wspx02q2c931shz3ywkc0000gn/T/codex-clipboard-a3c45cf7-29cd-4bf3-a218-88ed14367adc.png",
+    "sourceSha256": "7b49c2290873294a93ddc6a23191fc309f37d8e53d24429a18d0520dee89a0e3",
+    "width": 1536,
+    "height": 1024,
+    "outputs": [
+      {
+        "url": "/assets/images/owner-services-2026-10/cro-hero-2026-10-24-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 34908,
+        "sha256": "84437f338a3f24abe8f2b361288b32420d4abf9c487067b9100232a73b524bd7"
+      },
+      {
+        "url": "/assets/images/owner-services-2026-10/cro-hero-2026-10-24-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 71420,
+        "sha256": "d539ed731c9a8ffb5931c458f1c87df4140cd985468917b7c147871fff1e35b8"
+      },
+      {
+        "url": "/assets/images/owner-services-2026-10/cro-hero-2026-10-24-1440.webp",
+        "width": 1440,
+        "height": 960,
+        "bytes": 155348,
+        "sha256": "bfe79a2a04e3b5f0592cab3b3a1c9a1585e1363a0e1f681e03e3062dc173d4b7"
+      }
+    ]
+  }
+}

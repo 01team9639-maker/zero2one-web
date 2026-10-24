@@ -11,11 +11,13 @@ import html, json, re, sys
 from html.parser import HTMLParser
 from iconly_icons import iconly_svg
 from service_content_update import apply as apply_content_update, meta_value, is_faq
+from team_update import update_cards, home_team, remove_retired
+from deferred_service_content import apply as apply_deferred_content, SLUGS as DEFERRED, BENEFITS as DEFERRED_BENEFITS
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / 'tools/refresh'
 ORIGINAL_DOCS = json.loads((DATA / 'content-sources.json').read_text())['documents']
-DOCS = apply_content_update(ORIGINAL_DOCS)
+DOCS = apply_deferred_content(apply_content_update(ORIGINAL_DOCS))
 LEGACY = json.loads((DATA / 'legacy-blocks.json').read_text())
 PROTECTED = json.loads((DATA / 'protected-design.json').read_text())
 HOME_ORIGINAL = json.loads((DATA / 'home-original-sections.json').read_text())
@@ -30,6 +32,8 @@ SERVICES = {
     'ecommerce-development': (16, 17, 6),
     'mobile-application': (18, 19, 1),
     'marketing-consulting': (21, 20, 3),
+    'conversion-rate-optimization': (24, 25, 3),
+    'email-marketing': (22, 23, 5),
 }
 ROUTES = ['/', '/services/', '/team/', '/faqs/'] + [f'/services/{s}/' for s in SERVICES]
 REPORT = []
@@ -157,8 +161,11 @@ def team_cards(lang, slug=None):
         'digital-advertising':[4,6], 'manage-google-adwords-campaigns':[4,6],
         'social-media-management':[4,6], 'marketing-consulting':[0,3,4],
         'seo-riyadh':[5],
+        'conversion-rate-optimization':[3,5,9,10],
+        'email-marketing':[3,4],
     }.get(slug, list(range(len(cards))))
-    return '<ul class="rf-team-grid">' + ''.join(cards[i] for i in indices if i < len(cards)) + '</ul>'
+    selected=update_cards([cards[i] for i in indices if i < len(cards)],lang,slug)
+    return '<ul class="rf-team-grid">' + ''.join(selected) + '</ul>'
 
 
 def groups(items):
@@ -261,6 +268,19 @@ def service_body(slug, lang):
         if p['style']=='HEADING_2': chunks.append([p,[]])
         elif chunks: chunks[-1][1].append(p)
     for n,(h,items) in enumerate(chunks,1):
+        if slug in DEFERRED and n==9:
+            for p in [h]+items:record(p,'held','Deferred-service portfolio examples are unfilled placeholders; no invented results displayed')
+            continue
+        if slug in DEFERRED and n==1 and not items:
+            # Empty source benefit section: labels summarise supplied deliverables,
+            # not new numerical promises. Keep the export itself immutable.
+            items=[{'text':text,'style':'HEADING_3','id':f'draft-{slug}-{lang}:benefit-{i}'} for i,text in enumerate(DEFERRED_BENEFITS[slug][lang])]
+        if slug in DEFERRED and n==11:
+            for p in items:authoring(p)
+            body+=clients(textnode(h,'h2'),lang,n)
+            continue
+        if slug in DEFERRED and n==13 and not any(clean(p).startswith('[') for p in items):
+            items=items+[dict(primary_action(ps))]
         if slug=='mobile-application' and clean(h) in ('باقات تطوير تطبيقات الجوال مصممة لتناسب احتياجات مشروعك',"Mobile App Packages Designed to Fit Your Project's Needs"):
             for p in [h]+items:
                 record(p,'excluded','Owner removed the mobile app packages section on 2026-10-21')
@@ -334,7 +354,7 @@ def original_home_layout(body,lang,ps):
     template=re.search(r'<article class="service-card">[\s\S]*?</article>',services)[0]
     start=16 if ar else 13
     cards=[]
-    slugs=['web-design-riyadh','seo-riyadh','digital-advertising','brand-identity','social-media-management','ecommerce-development','marketing-consulting',None,None,'mobile-application']
+    slugs=['web-design-riyadh','seo-riyadh','digital-advertising','brand-identity','social-media-management','ecommerce-development','marketing-consulting','conversion-rate-optimization','email-marketing','mobile-application']
     remaining_images={'brand-identity','social-media-management','ecommerce-development','marketing-consulting','mobile-application','manage-google-adwords-campaigns'}
     # Measured 2026-10-21: a card image is 54.6vw wide up to 520 px and 390 px up
     # to 900 px. The old 78vw made 3x phones pick the 1440 px copy.
@@ -359,6 +379,9 @@ def original_home_layout(body,lang,ps):
             card=re.sub(r'<img\b[^>]*>',lambda _:f'<img src="{base}-800.webp" srcset="{base}-480.webp 480w, {base}-800.webp 800w, {base}-1000.webp 1000w, {base}.webp 1440w" sizes="{card_sizes}" width="1440" height="1024" loading="lazy" decoding="async" alt="">',card,count=1)
         elif slug in remaining_images:
             card=re.sub(r'<img\b[^>]*>',lambda _:remaining_image(slug),card,count=1)
+        elif slug in DEFERRED:
+            from service_studio import photo
+            card=re.sub(r'<img\b[^>]*>',lambda _:photo(slug).render(),card,count=1)
         card=re.sub(r'<span class="btn-text-inner">[\s\S]*?</span>',lambda _:label(i+2),card,count=1)
         cards.append(card)
     # Homepage copy is outside this content update. Retain its approved card,
@@ -454,7 +477,7 @@ def home_body(lang,restore=True):
     aboutbody=''.join(paragraph(ps[i],lang) for i in range(about+1,(13 if ar else 11)))
     body+=section(p(about,'h2'),'<div class="rf-about-grid"><div>'+aboutbody+'</div><img src="/assets/images/about-us-zero2one.webp" width="900" height="900" loading="lazy" alt=""></div>',1,'about')
     start=16 if ar else 13
-    slugs=['web-design-riyadh','seo-riyadh','digital-advertising','brand-identity','social-media-management','ecommerce-development','marketing-consulting',None,None,'mobile-application']
+    slugs=['web-design-riyadh','seo-riyadh','digital-advertising','brand-identity','social-media-management','ecommerce-development','marketing-consulting','conversion-rate-optimization','email-marketing','mobile-application']
     cards=[]
     for i,slug in enumerate(slugs):
         index=start+i*3
@@ -490,7 +513,7 @@ def home_body(lang,restore=True):
     body+=section(p(work,'h2'),'<div class="rf-work-slider" data-rf-slider><div class="rf-work-track" tabindex="0" role="region" aria-label="'+('أعمالنا' if ar else 'Our work')+'">'+''.join(workcards)+
                   f'</div><div class="rf-slider-controls"><button type="button" data-rf-prev aria-label="{prev}">←</button><button type="button" data-rf-next aria-label="{next_}">→</button></div></div>'+p(work+1)+a(79 if ar else 74),4,'work','selected-work')
     th=p(75,'h2') if not ar else '<h2>'+re.search(r'<h2 class="team-title">([\s\S]*?)</h2>',LEGACY['ar']['team']).group(1)+'</h2>'
-    team=LEGACY[lang]['team']
+    team=home_team(LEGACY[lang]['team'],lang)
     if not ar:
         team=re.sub(r'<h2 class="team-title">[\s\S]*?</h2>',lambda _:p(75,'h2','team-title'),team,count=1)
     team=re.sub(r'<p class="team-sub">[\s\S]*?</p>',lambda _:p(81 if ar else 76,'p','team-sub'),team,count=1)
@@ -519,7 +542,7 @@ def service_titles(lang):
     titles={s:clean(paras(spec[1 if ar else 0])[3]) for s,spec in SERVICES.items()}
     # Use existing concise service labels in the supplied home document.
     home=paras(3 if ar else 2); start=16 if ar else 13
-    for i,s in enumerate(['web-design-riyadh','seo-riyadh','digital-advertising','brand-identity','social-media-management','ecommerce-development','marketing-consulting',None,None,'mobile-application']):
+    for i,s in enumerate(['web-design-riyadh','seo-riyadh','digital-advertising','brand-identity','social-media-management','ecommerce-development','marketing-consulting','conversion-rate-optimization','email-marketing','mobile-application']):
         if s: titles[s]=clean(home[start+i*3])
     titles['manage-google-adwords-campaigns']='إدارة إعلانات جوجل' if ar else 'Google Ads Management'
     return titles
@@ -529,13 +552,6 @@ def menu(lang):
     titles=service_titles(lang)
     links=''.join(f'<a href="{local("/services/"+s+"/",lang)}">{esc(titles[s])}</a>' for s in titles)
     return '<div class="rf-services-menu">'+links+'</div>'
-
-
-def loader_label(route,lang):
-    """The name the orange loader shows while a page built here opens."""
-    fixed={'/services/':('Our Services','خدماتنا'),'/team/':('Our Team','فريقنا'),'/faqs/':('FAQs','الأسئلة الشائعة')}
-    if route in fixed: return fixed[route][lang=='ar']
-    return service_titles(lang)[route.strip('/').split('/')[-1]]
 
 
 def metadata(page, route, lang, title=None, description=None):
@@ -586,8 +602,9 @@ def render_page(route,lang,unused_src=None):
         body=body.replace('<h3 ', '<h2 ').replace('</h3>', '</h2>')
     elif route=='/team/':
         title= 'تعرّف على فريقنا' if lang=='ar' else 'Meet Our Team'
-        body='<section class="rf-hero rf-simple-hero" data-scroll-section><div class="rf-inner"><h1 id="main-content" tabindex="-1">'+title+'</h1></div></section>'
-        body+=section('',team_cards(lang),1,'team'); description=clean(paras(3 if lang=='ar' else 2)[81 if lang=='ar' else 76])
+        description=clean(paras(3 if lang=='ar' else 2)[81 if lang=='ar' else 76])
+        from team_directory import render as render_team_directory
+        body=render_team_directory(team_cards(lang),lang,description)
     elif route=='/faqs/':
         title='الأسئلة الشائعة' if lang=='ar' else 'Frequently asked questions'
         body='<section class="rf-hero rf-simple-hero" data-scroll-section><div class="rf-inner"><h1 id="main-content" tabindex="-1">'+title+'</h1></div></section>'+home_faq(lang)
@@ -612,13 +629,8 @@ def render_page(route,lang,unused_src=None):
     footer=LEGACY[lang]['footer']
     if route=='/': footer=footer.removeprefix('</section>\n')
     page=prefix+body+footer
-    if route!='/':
-        # The shell is the SEO page's, so its loader said "Search Engine
-        # Optimization (SEO)" on all 22 pages built here (found 2026-10-21).
-        name=esc(loader_label(route,lang))
-        page=re.sub(r'(<div class="loading-word active">)[^<]*',lambda m:m[1]+name,page,count=1)
-        page=re.sub(r'(<span class="loading-brand-name">)[^<]*',lambda m:m[1]+name,page,count=1)
     page=page.replace('class="main seo-service-page"','class="main rf-page"')
+    if route=='/team/':page=page.replace('class="main rf-page"','class="main rf-page rf-team-directory"',1)
     if route=='/': page=page.replace('class="main home"','class="main home rf-home-page"').replace('class="main"','class="main home rf-home-page"')
     # Stable namespace avoids the old home-only loader's split-letter dependency.
     page=page.replace('data-barba-namespace="work-single"','data-barba-namespace="refresh"')
@@ -1401,9 +1413,16 @@ def polish_iconly(page):
 
 
 def polish_chrome(page,lang):
+    from brand_loader import normalize_loader
+    page=normalize_loader(page,lang)
+    page=remove_retired(page)
+    versions=json.loads((DATA/'team-photo-versions-2026-10-24.json').read_text())
+    for src,version in versions.items():
+        page=re.sub(re.escape(src)+r'(?:\?v=[a-f0-9]+)?',lambda _:src+'?v='+version,page)
     faq_label='كل الأسئلة الشائعة' if lang=='ar' else 'All FAQs'
     def navlist(m):
         block=m[0]
+        block=re.sub(r'<div class="rf-services-menu">[\s\S]*?</div>',lambda _:menu(lang),block)
         label='خدماتنا' if lang=='ar' else 'Our Services'
         pattern=r'<li class="btn btn-link">\s*<a href="'+re.escape(local('/services/',lang))+r'"[\s\S]*?</a>\s*</li>'
         block=re.sub(pattern,lambda _:'<li class="rf-nav-services"><details><summary>'+label+'</summary>'+menu(lang)+'</details></li>',block)
@@ -1416,6 +1435,12 @@ def polish_chrome(page,lang):
                 return re.sub(r'href="[^"]*"','href="'+local('/contact/',lang)+'"',a[0],count=1).replace(' target="_blank"','')
             return a[0]
         block=re.sub(r'<a\b[^>]*>[\s\S]*?</a>',contact,block)
+        if 'rf-nav-team' not in block:
+            team_label='فريقنا' if lang=='ar' else 'Our Team'
+            current=' aria-current="page"' if '<link rel="canonical" href="'+BASE+local('/team/',lang)+'"' in page else ''
+            team_link='<li class="btn btn-link rf-nav-team"><a href="'+local('/team/',lang)+'" class="btn-click magnetic" data-team-nav="true" data-strength="20" data-strength-text="10"'+current+'><span class="btn-text"><span class="btn-text-inner">'+team_label+'</span></span></a></li>'
+            if '<li class="btn btn-link rf-nav-faq">' in block:block=block.replace('<li class="btn btn-link rf-nav-faq">',team_link+'<li class="btn btn-link rf-nav-faq">',1)
+            else:block=block.replace('</ul>',team_link+'</ul>',1)
         if local('/faqs/',lang) not in block:
             link='<li class="btn btn-link rf-nav-faq"><a href="'+local('/faqs/',lang)+'" class="btn-click magnetic" data-strength="20" data-strength-text="10"><span class="btn-text"><span class="btn-text-inner">'+faq_label+'</span></span></a></li>'
             block=block.replace('</ul>',link+'</ul>')

@@ -543,3 +543,56 @@ html[lang="ar"] .rf-service-studio [data-home-scroll-prev] svg { transform:none;
   .rf-service-studio[data-studio-service="manage-google-adwords-campaigns"] .service-studio-step:nth-child(even) .rf-step-card::before { inset-inline-start:-40px; }
   .rf-service-studio[data-studio-service="manage-google-adwords-campaigns"] .service-studio-progress { inset-inline-start:auto; inset-inline-end:-41px; top:47px; }
 }
+
+/* Owner reactivated CRO/email: supplied artwork in the shared studio. */
+.rf-service-studio.service-studio-deferred .service-studio-hero-art { width:100%; }
+.rf-service-studio.service-studio-deferred .service-studio-hero-art img { aspect-ratio:3 / 2; background:var(--studio-ivory); }
+.rf-service-studio.service-studio-deferred :is(.service-studio-title-accent,.service-studio-title-keyword) { direction:ltr; unicode-bidi:isolate; background:var(--studio-gradient); -webkit-background-clip:text; background-clip:text; color:transparent; font:inherit; }
+.rf-service-studio.service-studio-deferred .service-studio-title-accent { display:block; width:fit-content; margin-top:4px; }
+.rf-service-studio.service-studio-deferred :is(.service-studio-title-accent,.service-studio-title-keyword) .seo-title-word { background:var(--studio-gradient); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.rf-service-studio.service-studio-deferred .rf-step-card strong { display:block; margin-bottom:8px; color:var(--studio-ink); font-size:21px; font-weight:650; }
+.service-studio-deferred :is(.service-studio-benefits,.service-studio-deliverables,.service-studio-audience) .service-studio-card { display:flex; flex-direction:column; }
+.service-studio-deferred .service-studio-card-copy { flex:1; }
+.rf-service-studio[data-studio-service="email-marketing"] .service-studio-know .service-studio-grid { grid-auto-rows:1fr; }
+.service-studio-deferred .service-studio-packages { background:#fff; }
+.service-studio-deferred :is(.service-studio-audience,.service-studio-packages,.service-studio-closing) .service-studio-actions { margin-top:28px; }
+.service-studio-deferred :is(.service-studio-audience,.service-studio-packages,.service-studio-closing) .service-studio-action { width:100%; max-width:380px; }
+.service-studio-deferred .service-studio-deliverables .service-studio-track { display:flex; flex-wrap:nowrap; gap:22px; width:100%; min-width:0; padding:8px 3px 24px; overflow-x:auto; overflow-y:hidden; scroll-snap-type:x mandatory; scroll-padding-inline:3px; overscroll-behavior-x:contain; touch-action:pan-x pan-y; scrollbar-width:thin; scrollbar-color:var(--studio-orange) var(--studio-soft); }
+.service-studio-deferred .service-studio-deliverables .service-studio-track > .service-studio-card { flex:0 0 100%; scroll-snap-align:start; scroll-snap-stop:always; }
+.service-studio-deferred .service-studio-deliverables .service-studio-card:hover { transform:none; }
+.service-studio-deferred .service-studio-deliverables .service-studio-track:focus-visible { outline:2px solid var(--studio-orange); outline-offset:4px; border-radius:25px; }
+@media (min-width:761px) {
+  .service-studio-deferred .service-studio-deliverables .service-studio-track > .service-studio-card { flex-basis:calc((100% - 22px) / 2); }
+  .rf-service-studio[data-studio-service="email-marketing"] .service-studio-know .service-studio-card:first-child { grid-column:auto; }
+  .rf-service-studio[data-studio-service="email-marketing"] .service-studio-know .service-studio-grid > .service-studio-card:last-child:nth-child(odd) { grid-column:1 / -1; width:calc((100% - 22px) / 2); justify-self:center; }
+  /* Seven CRO cards: fill the tablet row before the final wide card. */
+  .rf-service-studio[data-studio-service="conversion-rate-optimization"] .service-studio-know .service-studio-card:nth-child(6) { grid-column:1 / -1; }
+}
+@media (min-width:1101px) {
+  .service-studio-deferred .service-studio-deliverables .service-studio-track > .service-studio-card { flex-basis:calc((100% - 44px) / 3); }
+  .rf-service-studio[data-studio-service="email-marketing"] .service-studio-know .service-studio-grid > .service-studio-card:last-child { grid-column:auto; width:auto; justify-self:stretch; }
+  .rf-service-studio[data-studio-service="email-marketing"] .service-studio-know .service-studio-grid > .service-studio-card:last-child:nth-child(3n + 1) { grid-column:2; }
+  .rf-service-studio[data-studio-service="conversion-rate-optimization"] .service-studio-know .service-studio-card:nth-child(6) { grid-column:auto; }
+  .service-studio-deferred .service-studio-timeline { display:block; max-width:1240px; padding:0; }
+  .service-studio-deferred .service-studio-timeline::before { left:50%; inset-inline-start:auto; top:47px; bottom:47px; margin-left:-1px; }
+  .service-studio-deferred .service-studio-timeline > .service-studio-step { width:calc(50% - 40px); margin:0 0 24px; }
+  .service-studio-deferred .service-studio-timeline > .service-studio-step:nth-child(even) { margin-inline-start:calc(50% + 40px); }
+  .service-studio-deferred .service-studio-step:nth-child(odd) .rf-step-no { inset-inline-start:auto; inset-inline-end:-62px; }
+  .service-studio-deferred .service-studio-step:nth-child(even) .rf-step-no { inset-inline-start:-62px; inset-inline-end:auto; }
+  .service-studio-deferred .service-studio-step .rf-step-card::before { content:""; position:absolute; top:46px; height:2px; width:40px; background:rgba(255,253,237,.55); }
+  .service-studio-deferred .service-studio-step:nth-child(odd) .rf-step-card::before { inset-inline-end:-40px; }
+  .service-studio-deferred .service-studio-step:nth-child(even) .rf-step-card::before { inset-inline-start:-40px; }
+  .service-studio-deferred .service-studio-progress { inset-inline-start:auto; inset-inline-end:-41px; top:47px; }
+}
+
+/* CRO consultation actions: one consistent pill, label and opposite-edge arrow. */
+.rf-service-studio[data-studio-service="conversion-rate-optimization"] .service-studio-closing .rf-prose { max-width:none; }
+.rf-service-studio[data-studio-service="conversion-rate-optimization"] :is(.service-studio-audience,.service-studio-packages,.service-studio-closing) .service-studio-actions { justify-content:center; margin-top:30px; }
+.rf-service-studio[data-studio-service="conversion-rate-optimization"] :is(.service-studio-audience,.service-studio-packages,.service-studio-closing) .service-studio-action { display:flex; width:100%; max-width:380px; margin-inline:auto; }
+.rf-service-studio[data-studio-service="conversion-rate-optimization"] :is(.service-studio-packages,.service-studio-closing) .service-studio-action { margin-top:28px; }
+.rf-service-studio[data-studio-service="conversion-rate-optimization"] :is(.service-studio-audience,.service-studio-packages,.service-studio-closing) .service-studio-action .btn-click { min-height:56px; color:var(--studio-cream); }
+.rf-service-studio[data-studio-service="conversion-rate-optimization"] :is(.service-studio-audience,.service-studio-packages,.service-studio-closing) .service-studio-action .btn-text { padding:15px 23px; font-size:15px; }
+@media (min-width:761px) {
+  .rf-service-studio[data-studio-service="conversion-rate-optimization"] :is(.service-studio-audience,.service-studio-packages,.service-studio-closing) .service-studio-action .btn-click { min-height:64px; }
+  .rf-service-studio[data-studio-service="conversion-rate-optimization"] :is(.service-studio-audience,.service-studio-packages,.service-studio-closing) .service-studio-action .btn-text { padding:17px 28px; font-size:17px; }
+}

@@ -1,5 +1,131 @@
 # Local page review — 8 October 2026
 
+## Shared brand loader and service hero photos — 24 October 2026 (local only)
+
+The two supplied clipboard photos explicitly replace only the CRO and Email
+Marketing hero/home/catalogue images in both languages (12 placements). The
+envelope/phone photo maps to Email, the tablet/heatmap/A-B photo maps to CRO.
+`prepare_deferred_hero_photos.js` archives both unchanged PNGs before temporary
+clipboard paths expire, creates three full-frame WebPs each and records hashes
+in `deferred-hero-photos-2026-10-24.json`. Hero frames use the real 3:2 ratio;
+all 74 bilingual vector-card bindings per service remain unchanged.
+
+`brand_loader.py` normalizes all 52 main-page loader shells to the existing
+homepage vocabulary, never page/service/section names. English: Web, SEO, Ads,
+Branding, Content, Commerce, Social Media. Arabic: ويب، سيو، إعلانات، علامة،
+محتوى، متاجر، التواصل. Company names retain their existing language variants.
+Shared JS normalizes older shells too, plays the same brand intro on direct
+entry and cycles only these words on warm navigation. Destination HTML supplies
+language only, no title or loader markup. Removed service-specific typography
+and hidden-keyword overrides; no infinite keyword tween was introduced.
+
+`test_brand_loader_hero.py` uses a fresh immutable baseline, excluding only the
+loader and two hero-image slots, protecting all other public HTML including
+card art, copy, prices, metadata and destinations. Browser tests cover AR/EN,
+home/catalogue/service/SEO/team/work/case pages, 320/440/834/1440, observed keyword
+rotation, no clipped company name, real photo decoding and 3:2 display,
+warm transitions/reduced motion and no-JS content. Generated blog output stays
+owned by its separate repository; its loader-free shells are checked against
+the shared bundle without injecting a new overlay. Scroll/animation lifecycle
+regression: eight checks passed, including no listener/endless-tween growth.
+No deployment performed.
+
+## Email artwork and CRO layout follow-up — 24 October 2026 (local only)
+
+The supplied `10_email_marketing` folder contains 38 transparent PNGs. The
+existing full-frame encoder now supports `--email`, retaining the original CRO
+defaults. It produces 114 responsive WebPs with verified lossless alpha and
+untouched source hashes. Exact bilingual title/position bindings cover all 37
+cards; the landscape hero is reused on home and catalogue in both languages.
+`email-owner-illustrations-2026-10-24.json` records the complete mapping.
+
+CRO's know section now uses the shared wide-first/wide-last studio bento rather
+than the deferred-service uniform grid. Its seven-card tablet layout fills the
+extra row. Audience, package and closing CTAs are centered responsive pills with
+opposite-edge arrows, cream labels and visible keyboard focus; content and
+destinations are unchanged. Other service layout rules remain unchanged.
+
+`test_email_owner_images.py` captures an independent current-change baseline and
+protects every public HTML page outside Email image slots (including all CRO
+copy/markup). Browser QA in `test_email_cro_followup_browser.js` covers both
+languages at 320/440/834/1440, image decoding/contain/srcset, exact semantic
+bindings, deliverable scrolling, CRO bento geometry, the three CTA sizes,
+centering/focus, home/catalogue reuse and reduced-motion warm navigation.
+Original copy and deferred-service source gates also pass. Historical earlier
+snapshot gates are not recaptured: they intentionally describe their earlier
+page inventories. No deployment performed.
+
+## Supplied CRO artwork — 24 October 2026 (local only)
+
+The folders `09_cro` and `09_cro 2` are byte-identical (42 files each); the
+single canonical folder provides 38 transparent PNG originals: 37 cards and
+one landscape hero. No Downloads original is edited. `prepare_cro_illustrations.js`
+checks real alpha, makes 114 full-frame responsive WebP files, and verifies
+lossless alpha against resized originals. The new dedicated manifest preserves
+source hashes, image dimensions, and 74 exact bilingual card bindings. CRO's
+different AR/EN why-card orders are matched semantically, not by list position.
+
+The main CRO hero also replaces the temporary image on the home and service
+catalogue cards in both languages. Its transparent illustration sits on ivory
+inside the existing orange frame for contrast. All card text, CTAs, team,
+metadata, layouts and other service imagery stay intact. Email Marketing was
+still temporary at that point; its subsequent delivery is documented above.
+
+Fresh independent gate: `test_cro_owner_images.py` protects all public pages
+outside these image slots; source copy checks and browser AR/EN tests cover
+320/440/834/1440, image decoding/contain/srcset, semantic why mappings, slider,
+hero reuse, and reduced-motion warm navigation. Local review only, not deployed.
+
+## Work listing redesign — 24 October 2026 (local only)
+
+The owner requested a full listing/card layout refresh and green result values.
+`portfolio-refresh.css` is scoped strictly to `.rf-work-page`, shared by the
+Arabic and English listings. It adds a warm editorial opening, grouped category
+filters, a two-column desktop/one-column phone gallery, contained evidence art,
+clear category labels and consistent card spacing. Rows no longer inherit the
+tallest height from every other row. Result values use dark green #176b43 on a
+light green panel; previous values and context remain neutral, never rewritten
+as percentage gains. The contact action is a compact pill, not a circular CTA.
+
+No portfolio value, date, image, source evidence, category, title, destination or
+case-study content changed. `test_work_refresh.py` protects all public HTML and
+the original portfolio data against an independent pre-change baseline (bundle
+query stamps excepted). Browser QA covers AR/EN at 320/440/834/1440, all filters,
+image viewer/Escape, green metrics, clipping, CTA, reduced-motion warm routes
+and a no-JS gallery. The source evidence consistency gate remains green.
+No deployment performed.
+
+Same-day owner correction: the work closing section ("مشروعك القادم يبدأ بخطوة.")
+uses a light cream background with ink heading/muted body and retains its orange
+gradient pill action. Both language layouts share this scoped change; footer,
+evidence cards and copy remain untouched. Local review only.
+
+## CRO/email reactivation and owner portraits — 24 October 2026 (local only)
+
+The owner reactivated the two previously deferred services. New bilingual routes
+are `/services/conversion-rate-optimization/` and `/services/email-marketing/`,
+with matching `/ar/` pages, home/catalogue cards, navigation, FAQ index and sitemap.
+`deferred-services-2026-10-24.json` preserves the three public source exports
+linked from workbook rows 22, 24 and 25. No source document/workbook was edited.
+The workbook supplied no Arabic email brief: `deferred_service_content.py` keeps
+its clearly attributed local Arabic review translation separate from exports.
+The otherwise empty benefits section summarises supplied service deliverables.
+Unfilled portfolio placeholders are held, not presented as real case studies;
+no package prices have been invented. CRO's missing final CTA reuses the supplied
+hero consultation action. Temporary hero/card artwork is explicitly marked in
+the image-slot manifest for later replacement.
+
+The two portraits from `team-2026-10-23 2` are explicitly mapped: white-shirt
+Mohammed to `team-mohammed`, dark-sweater Moayad to `team-moayad`. Sharp produces
+480/720 WebP versions without creative changes. Prior files remain recoverable
+under `image-archives/team-2026-10-24`; Downloads originals stay untouched.
+Content-hash query stamps update images across all main pages without touching
+the other people's identities/roles, shared fade or fixed photo-stage sizing.
+
+QA: fresh independent pre-change gate `test_deferred_services.py`, full original
+copy check, responsive slider/FAQ/alternating timeline/ribbon tests in AR/EN,
+owner-photo decoding and reduced-motion warm navigation. No publication yet.
+
 ## Social investment horizontal/orange follow-up — 19 October (local only)
 
 The owner requested a static F9460E→FF8000 investment-section background and
@@ -681,6 +807,67 @@ full content availability after opening, unchanged CTA destinations, native touc
 swiping and no-script/reduced-motion disclosure operation.
 
 ## Publication gate — important for page-by-page approval
+
+The 23 October roster follow-up remains local-only. Walaa Al-Qarni and Hadeel
+Al-Qahtani are added to the general roster in both languages, each explicitly
+reusing Ruba's placeholder portrait (no new or misleading photo assets).
+Profile IDs, not image filenames, identify people, so the three shared-image
+profiles remain independent. Omar's role is now Head of Sales; the owner
+approved adapting the supplied unrelated company/data-recovery wording to
+Zero2One's sales, digital marketing, design and development services. Existing
+service placements are retained with his new role/bio everywhere.
+The directory count is fourteen, with groups of 4 leadership, 3 sales/client
+relations, 3 marketing/content and 4 design/development profiles. Three-card
+groups fill a desktop row and center the final tablet card. Kerolos and Moayad
+remain the hero portraits. `test_team_roster_followup.py` protects all other
+people/content, metadata, footer and routes against an independent baseline;
+the responsive directory/browser suite checks both languages and the shared
+portraits, role updates and navigation.
+
+The latest 22 October team-directory review remains local-only. Both language
+team pages now have an editorial hero featuring Kerolos (SEO) and Moayad,
+a count derived from the roster, anchor navigation, and three groups of four
+original profiles: leadership, marketing/content, and design/development.
+All original profile nodes, metadata and footer copy remain unchanged.
+Direct `Our Team` / `فريقنا` links are present once in each desktop navbar and
+sidebar across the 48 main-site pages; the generated blog is not edited here.
+General team portraits and client testimonials share the exact same
+`--portrait-panel-fade` gradient token (angle, stops and cream color), rather
+than the earlier approximate gradient. The team overlay is clipped to its
+bounded portrait stage, keeping all text on a solid panel without stretching.
+`test_team_directory.py` protects every other page body after stripping only
+the new navigation entries/cache stamps. Browser QA covers fourteen bilingual
+responsive cases, actual desktop/sidebar navigation, exact computed-gradient
+comparison, and reduced-motion warm navigation.
+
+The 22 October team-layout follow-up supersedes the initial two-profile inline
+layout. All general team cards, old and new, now share a bounded 240–360px
+portrait stage, absolutely fitted images and full-width text below the image.
+Names and roles lead the content panel; no negative overlap or auto-pushed
+author spacing remains. The general team grid has a single column on phones.
+Only general homepage/team cards are styled; service-team horizontal cards and
+client testimonials are excluded. The owner also restored the cream fade at the
+bottom of every general portrait: 88px desktop / 72px phone, inside the image
+stage so text stays on a solid panel and card heights never change.
+`test_team_layout.py` captures the existing
+roster independently and protects every profile and all page content, allowing
+only removal of the two inline layouts and generated cache stamps. The browser
+suite checks all twelve old/new cards across twenty bilingual responsive cases
+plus warm navigation and service-team isolation. This update is local-only.
+
+The 21 October roster update is local-only until separately approved for
+publication. The roster overlay in `team_update.py` preserves the immutable
+legacy snapshots and original slot indices, removes Rona from all generated
+pages, and adds Nadine Othman and Omar Mansour to both general team views.
+Nadine's role is article writing only; her supplied biography confirms a Public
+Administration master's degree and more than five years of experience. She is
+not presented as a social-post writer, account manager or ads specialist.
+Omar is included on the four marketing, ads and social-management service teams
+without an invented experience figure or the reference image's incorrect
+surname/company. The SEO team remains commented out as previously requested.
+The supplied portraits are resized/compressed to 480/720px WebP without changing
+appearance. `test_team_update.py` protects every other person and all non-team
+page content; `test_team_update_browser.js` checks both languages and sizes.
 
 The owner approved publication of the 21 October mobile-app and marketing-consulting review.
 Mobile hero wording is unchanged: only the existing Arabic `تطبيق` and English

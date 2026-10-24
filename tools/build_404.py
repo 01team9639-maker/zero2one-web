@@ -87,8 +87,11 @@ def render(lang):
         head = re.sub(pattern, "", head)
 
     label = html.escape(c["label"])
-    body = sub1(r'(<div class="loading-word active">)[^<]*', r"\g<1>" + label, body, "the active loading word")
-    body = sub1(r'(<span class="loading-brand-name">)[^<]*', r"\g<1>" + label, body, "the loader page name")
+    # The shared brand loader is intentionally independent of page/error titles.
+    # Older FAQ shells still need their legacy active word adapted.
+    if 'data-brand-keywords=' not in body:
+        body = sub1(r'(<div class="loading-word active">)[^<]*', r"\g<1>" + label, body, "the active loading word")
+        body = sub1(r'(<span class="loading-brand-name">)[^<]*', r"\g<1>" + label, body, "the loader page name")
     body = body.replace('<li class="btn btn-link active"', '<li class="btn btn-link"')
     body, n = re.subn(r'(<li class="btn btn-link btn-lang">\s*<a href=")[^"]*(")',
                       r"\g<1>" + c["switch"] + r"\g<2>", body)

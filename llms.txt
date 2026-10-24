@@ -11,7 +11,7 @@ two are paired with hreflang; either may be cited.
 
 ## Main pages
 - [Home](https://zero2one.sa/) · [Arabic](https://zero2one.sa/ar/)
-- [Services](https://zero2one.sa/services/) · [Arabic](https://zero2one.sa/ar/services/): All six services, how an engagement runs, and pricing model.
+- [Services](https://zero2one.sa/services/) · [Arabic](https://zero2one.sa/ar/services/): Services, how an engagement runs, and consultation options.
 - [About](https://zero2one.sa/about/) · [Arabic](https://zero2one.sa/ar/about/): How the agency works, what makes it different, who it works with.
 - [Contact](https://zero2one.sa/contact/) · [Arabic](https://zero2one.sa/ar/contact/): Enquiry form, address, phone, opening hours.
 
@@ -22,6 +22,8 @@ two are paired with hreflang; either may be cited.
 - [Brand Identity Development](https://zero2one.sa/services/brand-identity/): Logo design, visual identity and brand strategy.
 - [Social Media Management & Content Creation](https://zero2one.sa/services/social-media-management/): Strategy, content and community management for Saudi audiences.
 - [E-Commerce Development & Custom Systems](https://zero2one.sa/services/ecommerce-development/): Online stores and custom systems built to convert.
+- [Conversion Rate Optimization (CRO)](https://zero2one.sa/services/conversion-rate-optimization/): Visitor behaviour analysis, page and checkout improvements, and testing.
+- [Email Marketing](https://zero2one.sa/services/email-marketing/): Email platform setup, automated messages, newsletters and campaign reporting.
 
 Arabic versions of every service page live at the same path under `/ar/`, e.g.
 https://zero2one.sa/ar/services/seo-riyadh/

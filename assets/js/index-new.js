@@ -7,6 +7,45 @@ const select = (e) => document.querySelector(e);
 const selectAll = (e) => document.querySelectorAll(e);
 //const container = select('.site-main');
 
+// Brand-only loader vocabulary, shared by every route (including older shells).
+// Never read a service, section or project title into the overlay.
+var brandKeywordTween = null;
+var brandLoaderLabels = {
+  en: { brand: 'ZERO 2 ONE', words: ['Web', 'SEO', 'Ads', 'Branding', 'Content', 'Commerce', 'Social Media'] },
+  ar: { brand: 'من الصفر إلى الواحد', words: ['ويب', 'سيو', 'إعلانات', 'علامة', 'محتوى', 'متاجر', 'التواصل'] }
+};
+function initBrandLoader(lang) {
+  lang = /^ar/.test(lang || document.documentElement.lang) ? 'ar' : 'en';
+  var loader = select('.loading-container');
+  if (!loader) return;
+  if (brandKeywordTween) { brandKeywordTween.kill(); brandKeywordTween = null; }
+  gsap.killTweensOf('.loading-words .loading-word');
+  loader.classList.remove('loading-service');
+  var labels = brandLoaderLabels[lang], words = loader.querySelector('.loading-words');
+  var brand = loader.querySelector('.loading-brand');
+  if (brand) { brand.className = 'loading-brand'; brand.textContent = labels.brand; brand.lang = lang; }
+  if (!words) return;
+  words.dataset.brandKeywords = lang;
+  words.lang = lang;
+  words.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  words.innerHTML = labels.words.map(function (word, i) {
+    var state = i === labels.words.length - 1 ? 'home-active-last' : 'home-active' + (i === 0 ? ' home-active-first' : '');
+    return '<div class="loading-word ' + state + '">' + word + '<div class="dot"></div></div>';
+  }).join('');
+}
+function animateBrandKeywords(duration) {
+  if (brandKeywordTween) brandKeywordTween.kill();
+  var words = selectAll('.loading-words .loading-word');
+  if (!words.length) return;
+  gsap.set(words, { display: 'block', opacity: 0 });
+  var step = duration / words.length;
+  brandKeywordTween = gsap.timeline();
+  words.forEach(function (word, i) {
+    brandKeywordTween.set(word, { opacity: 1 }, i * step);
+    if (i < words.length - 1) brandKeywordTween.set(word, { opacity: 0 }, (i + 1) * step);
+  });
+}
+initBrandLoader();
 initPageTransitions();
 
 /**
@@ -180,86 +219,8 @@ function initLoaderHome() {
 
 // Animation - First Page Load
 function initLoader() {
-
-  if (loaderFailsafeTookOver()) return;
-
-  var tl = gsap.timeline();
-
-  // Phones: slightly faster intro on service pages too (still readable)
-  tl.timeScale($(window).width() <= 540 ? 1.75 : 1);
-
-  tl.set(".loading-screen", {
-    yPercent: 0,
-  });
-
-  if ($(window).width() > 540) {
-    tl.set("main .once-in", {
-      y: "50vh"
-    });
-  } else {
-    tl.set("main .once-in", {
-      y: "10vh"
-    });
-  }
-
-  tl.set(".loading-words", {
-    opacity: 1,
-    y: -50
-  });
-
-  if ($(window).width() > 540) {
-    tl.set(".loading-screen .rounded-div-wrap.bottom", {
-      height: "10vh",
-    });
-  } else {
-    tl.set(".loading-screen .rounded-div-wrap.bottom", {
-      height: "5vh",
-    });
-  }
-
-  tl.set("html", {
-    cursor: "wait"
-  });
-
-  tl.to(".loading-screen", {
-    duration: .8,
-    yPercent: -100,
-    ease: "Power4.easeInOut",
-    delay: .5
-  });
-
-  tl.to(".loading-screen .rounded-div-wrap.bottom", {
-    duration: 1,
-    height: "0vh",
-    ease: "Power4.easeInOut"
-  }, "=-.8");
-
-  tl.to(".loading-words", {
-    duration: .3,
-    opacity: 0,
-    ease: "linear",
-  }, "=-.8");
-
-  tl.set(".loading-screen", {
-    yPercent: -100
-  });
-
-  tl.set(".loading-screen .rounded-div-wrap.bottom", {
-    height: "0vh"
-  });
-
-  tl.to("main .once-in", {
-    duration: 1,
-    y: "0vh",
-    stagger: .05,
-    ease: "Expo.easeOut",
-    clearProps: "true"
-  }, "=-.8");
-
-  tl.set("html", {
-    cursor: "auto",
-  }, "=-.8");
-
+  // The same approved brand and keyword intro on home, services and inner pages.
+  return initLoaderHome();
 }
 
 
@@ -366,6 +327,8 @@ function pageTransitionIn() {
     opacity: 0,
   });
 
+  // Explicit position after the curtain covers the old page; no perpetual tween.
+  tl.call(function () { animateBrandKeywords(.9); }, null, .55);
 }
 
 
@@ -605,6 +568,7 @@ function initPageTransitions() {
       },
       async leave(data) {
         // animate loading screen in
+        initNextWord(data);
         pageTransitionIn(data.current);
         await delay(495);
         data.current.container.remove();
@@ -612,7 +576,6 @@ function initPageTransitions() {
       async enter(data) {
         // animate loading screen away
         pageTransitionOut(data.next);
-        initNextWord(data);
       },
       async beforeEnter(data) {
         ScrollTrigger.getAll().forEach(t => t.kill());
@@ -687,11 +650,10 @@ function initPageTransitions() {
 }
 
 function initNextWord(data) {
-  // update Text Loading https://github.com/barbajs/barba/issues/507
+  // Destination language may change; the vocabulary must never follow its title.
   let parser = new DOMParser();
-  let dom = parser.parseFromString(data.next.html, 'text/html');
-  let nextProjects = dom.querySelector('.loading-words');
-  document.querySelector('.loading-words').innerHTML = nextProjects.innerHTML;
+  let dom = parser.parseFromString(data.next.html || '', 'text/html');
+  initBrandLoader(dom.documentElement.lang || document.documentElement.lang);
 }
 
 function delay(n) {

@@ -14,12 +14,19 @@ from iconly_icons import iconly_svg
 ROOT = Path(__file__).resolve().parent.parent
 VOID = {'area','base','br','col','embed','hr','img','input','link','meta','param','source','track','wbr'}
 SLUGS = ['web-design-riyadh','brand-identity','digital-advertising','manage-google-adwords-campaigns','social-media-management','ecommerce-development','mobile-application','marketing-consulting']
+DEFERRED=('conversion-rate-optimization','email-marketing')
+SLUGS+=list(DEFERRED)
 ICONS = ['discovery','search','category','chart','setting','chat','work','tick-square','activity']
 PHOTOS = {'web-design-riyadh':'web','digital-advertising':'ads','seo-riyadh':'seo'}
 SLOTS = {}
 WEB_ART = json.loads((ROOT/'tools/refresh/web-design-illustrations.json').read_text())['entries']
 OWNER_ART = json.loads((ROOT/'tools/refresh/owner-service-illustrations.json').read_text())
 OWNER_ENTRIES = {entry['id']:entry for entry in OWNER_ART['entries']}
+CRO_ART=json.loads((ROOT/'tools/refresh/cro-owner-illustrations-2026-10-24.json').read_text())
+CRO_ENTRIES={entry['id']:entry for entry in CRO_ART['entries']}
+EMAIL_ART=json.loads((ROOT/'tools/refresh/email-owner-illustrations-2026-10-24.json').read_text())
+EMAIL_ENTRIES={entry['id']:entry for entry in EMAIL_ART['entries']}
+DEFERRED_HERO_PHOTOS=json.loads((ROOT/'tools/refresh/deferred-hero-photos-2026-10-24.json').read_text())
 
 
 def image_title(text):
@@ -28,6 +35,8 @@ def image_title(text):
 
 OWNER_BINDINGS = {(b['service'],b['lang'],b['kind'],image_title(b['title'])):b for b in OWNER_ART['bindings']}
 OWNER_SERVICES = {b['service'] for b in OWNER_ART['bindings']}
+CRO_BINDINGS={(b['lang'],b['kind'],image_title(b['title'])):b for b in CRO_ART['bindings']}
+EMAIL_BINDINGS={(b['lang'],b['kind'],image_title(b['title'])):b for b in EMAIL_ART['bindings']}
 
 
 class Node:
@@ -117,6 +126,14 @@ def button(anchor, secondary=False):
 
 
 def photo(slug, hero=False):
+    if slug in DEFERRED:
+        key='cro' if slug=='conversion-rate-optimization' else 'email'
+        entry=DEFERRED_HERO_PHOTOS[slug]
+        attrs={'src':entry['outputs'][1]['url'],'srcset':', '.join(o['url']+' '+str(o['width'])+'w' for o in entry['outputs']),
+               'sizes':'(max-width:760px) 92vw, 46vw' if hero else '(max-width:500px) 78vw, 600px',
+               'width':str(entry['width']),'height':str(entry['height']),'alt':'','decoding':'async','data-owner-'+key+'-hero':'true'}
+        attrs.update({'fetchpriority':'high'} if hero else {'loading':'lazy'})
+        return Node('img',attrs)
     stem = PHOTOS.get(slug,slug)
     base = '/assets/images/owner-services-2026-10/'+stem
     attrs = {'src':base+'-800.webp','width':'1440','height':'1024','alt':'','decoding':'async'}
@@ -129,6 +146,19 @@ def photo(slug, hero=False):
 
 
 def art(slug, kind, index, title, lang):
+    if slug in DEFERRED:
+        key='cro' if slug=='conversion-rate-optimization' else 'email'
+        binding=(CRO_BINDINGS if key=='cro' else EMAIL_BINDINGS)[(lang,kind,image_title(title))]
+        if binding['position']!=index+1:raise ValueError(slug+' illustration binding moved: '+lang+' '+title)
+        entry=(CRO_ENTRIES if key=='cro' else EMAIL_ENTRIES)[binding['image']]
+        slot=slug+'/'+kind+'/'+str(index+1).zfill(2)
+        record=SLOTS.setdefault(slot,{'owner_supplied':True,'images':{},'titles':{},'owner_image_ids':{}})
+        record['titles'][lang]=title.strip();record['images'][lang]=entry['outputs'][1]['url'];record['owner_image_ids'][lang]=entry['id']
+        return n('figure','service-studio-art seo-owner-illustration',[
+            Node('img',{'src':entry['outputs'][1]['url'],'srcset':', '.join(o['url']+' '+str(o['width'])+'w' for o in entry['outputs']),
+                        'sizes':'(min-width:761px) 215px, 195px','width':str(entry['width']),'height':str(entry['height']),
+                        'alt':'','loading':'lazy','decoding':'async'})
+        ],aria_hidden='true',data_service_image_slot=slot,**{'data_owner_'+key+'_image':entry['id']})
     if slug=='web-design-riyadh' and kind in ('benefits','know','deliverables','types','why','audience'):
         # Independent English copy puts language support before the CRM card.
         # Keep the supplied artwork (and its slot) tied to its meaning.
@@ -231,6 +261,7 @@ def refine(page, slug, lang):
     main = Tree(page[start.start():end]).root.first(lambda e:e.tag=='main')
     main.attrs['class'] = ' '.join(c for c in main.attrs.get('class','').split() if c!='rf-brand-owner')
     main.add('rf-service-studio'); main.attrs['data-studio-service'] = slug
+    if slug in DEFERRED:main.add('service-studio-deferred')
     catalogue = slug=='catalogue'
     for node in main.walk():
         for attr in ('data-rf-reveal','data-about-step','data-reveal-scope','data-brand-disclosures','data-brand-compact'):
@@ -251,6 +282,13 @@ def refine(page, slug, lang):
         if split<8 or split>len(words)*.65:
             matches = list(re.finditer(r'\S+',words)); split=matches[min(4,max(1,len(matches)//3))-1].end()
         h1.set([n('span','service-studio-title-primary',[html.escape(words[:split])]),' ',n('span','service-studio-title-secondary',[html.escape(words[split:].lstrip())])])
+        if slug in DEFERRED:
+            accent='CRO' if slug=='conversion-rate-optimization' else 'Email Marketing'
+            primary=h1.first(lambda e:e.has('service-studio-title-primary'))
+            if accent in primary.text():
+                before,_,after=primary.text().partition(accent)
+                primary.set([html.escape(before),n('span','service-studio-title-keyword',[accent],lang='en',dir='ltr'),html.escape(after)])
+            else:primary.append(n('span','service-studio-title-accent',[accent],lang='en',dir='ltr'))
         if slug=='mobile-application':
             # Color only existing words; do not append or remove hero copy.
             keyword=re.compile(r'\bتطبيق\b' if lang=='ar' else r'\bApp\b')
@@ -301,7 +339,7 @@ def refine(page, slug, lang):
                 replacement=n('div','service-studio-actions',[button(link)])
                 parent.children.insert(position,replacement);replacement.parent=parent
             continue
-        kind = section_kind(section,index)
+        kind = ({1:'benefits',2:'know',3:'deliverables',4:'why',5:'audience',6:'packages',7:'process',8:'outcomes',10:'team',11:'clients',12:'faq',13:'closing'}[int(section.attrs['id'].split('-')[-1])] if slug in DEFERRED and section.attrs.get('id','').startswith('section-') else section_kind(section,index))
         section.add('service-studio-section','service-studio-'+kind)
         section.attrs['data-service-stage']=kind
         # Supersede old brand-only decoration while keeping its content/photos.
@@ -328,6 +366,7 @@ def refine(page, slug, lang):
         cards=[]; grid=None
         if kind=='benefits':
             grid=section.first(lambda e:e.has('brand-owner-pillar-grid'))
+            if slug in DEFERRED:grid=section.first(lambda e:e.has('rf-card-grid'))
             if grid: cards=[e for e in grid.children if isinstance(e,Node) and e.tag=='article']
             else:
                 prose=section.first(lambda e:e.has('rf-prose'))
@@ -413,7 +452,7 @@ def refine(page, slug, lang):
             if site_types:section.attrs['data-web-site-types']='true'
             if kind in ('benefits','deliverables','audience') or site_types or social_content_rail or (slug=='brand-identity' and kind=='outcomes'):
                 parent=grid.parent;position=parent.children.index(grid)
-                wrapper=rail(grid,lang,title_text,site_types or google_deliverables or ecommerce_deliverables or followup_deliverables or social_content_rail)
+                wrapper=rail(grid,lang,title_text,site_types or google_deliverables or ecommerce_deliverables or followup_deliverables or social_content_rail or slug in DEFERRED and kind=='deliverables')
                 if site_types:wrapper.attrs['data-web-site-types']='true'
                 if google_deliverables:wrapper.attrs['data-google-deliverables']='true'
                 if ecommerce_deliverables:wrapper.attrs['data-ecommerce-deliverables']='true'
@@ -431,12 +470,17 @@ def refine(page, slug, lang):
                 for i,step in enumerate(steps):
                     reveal(step);step.add('service-studio-step')
                     body=step.first(lambda e:e.has('rf-step-card'))
+                    if slug in DEFERRED:
+                        paragraph=body.first(lambda e:e.tag=='p')
+                        if paragraph and ':' in paragraph.text():
+                            label,_,answer=paragraph.text().partition(':')
+                            paragraph.set([n('strong','',[html.escape(label+':')]),' '+html.escape(answer.lstrip())])
                     body.children.insert(0,icon(ICONS[i%len(ICONS)]))
                     if i==0:step.append(n('span','service-studio-progress',['<i></i>'],aria_hidden='true'))
         if kind=='team':
             for card in [e for e in section.walk() if e.has('team-card')]:
                 card.add('service-studio-person');reveal(card)
-        if kind=='clients' and slug in ('web-design-riyadh','digital-advertising','manage-google-adwords-campaigns','social-media-management','ecommerce-development','mobile-application','marketing-consulting'):
+        if kind=='clients' and slug in ('web-design-riyadh','digital-advertising','manage-google-adwords-campaigns','social-media-management','ecommerce-development','mobile-application','marketing-consulting')+DEFERRED:
             for toggle in [e for e in section.walk() if e.has('logo-marquee-toggle')]:toggle.detach()
         if kind=='faq':
             for card in [e for e in section.walk() if e.has('rf-faq-item')]:reveal(card)
@@ -521,4 +565,4 @@ def refine(page, slug, lang):
 
 def write_manifest():
     dest=ROOT/'tools/refresh/service-studio-image-slots.json'
-    dest.write_text(json.dumps({'note':'Card image slots: owner-supplied illustrations matched to independent bilingual copy across all eight non-SEO services; existing brand outcome photos are preserved. Any remaining temporary images are explicitly marked.','slots':SLOTS},ensure_ascii=False,indent=2)+'\n')
+    dest.write_text(json.dumps({'note':'Owner illustrations remain matched to the original eight non-SEO services and the 38 CRO plus 38 Email Marketing images supplied on 2026-10-24. All deferred service art now uses supplied images. Existing brand outcome photos are preserved.','slots':SLOTS},ensure_ascii=False,indent=2)+'\n')

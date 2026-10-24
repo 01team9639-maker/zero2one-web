@@ -1,0 +1,2045 @@
+{
+  "note": "38 supplied Email Marketing illustrations. Full-frame WebP with lossless alpha, no source edits. Exact bilingual semantic bindings. Hero reused in home and catalogue.",
+  "entries": [
+    {
+      "id": "email-marketing/hero/01",
+      "briefId": "10-00-01",
+      "kind": "hero",
+      "number": 1,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/00_hero/01_hero.png",
+      "sourceSha256": "5014534ef5748a682db7f9be4cd430aab2fbaf7e2e72ed959595bea9a3e168d8",
+      "width": 1800,
+      "height": 1280,
+      "sourceBytes": 954992,
+      "arPosition": null,
+      "enPosition": null,
+      "titles": {
+        "ar": "الصورة الرئيسية للخدمة",
+        "en": "Main email marketing illustration"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/hero-01-480.webp",
+          "width": 480,
+          "height": 341,
+          "bytes": 32636,
+          "sha256": "8e20049066244ee44dc2dd93431b2ff7f028bb111cfac1baabbd227f73a78e3c"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/hero-01-800.webp",
+          "width": 800,
+          "height": 569,
+          "bytes": 60790,
+          "sha256": "e5afff07f58888c96733950f3c42f061e7741bda9a0c641a2f3a1ba03cb0c94d"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/hero-01-1440.webp",
+          "width": 1440,
+          "height": 1024,
+          "bytes": 134700,
+          "sha256": "4015b6658464fe220b8dc72397a6ead748ac015bc229299c9b03190c1e427f27"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/benefits/01",
+      "briefId": "10-01-01",
+      "kind": "benefits",
+      "number": 1,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/01_benefits/01_automated_emails.png",
+      "sourceSha256": "53ed64c5e556f2b6dce794c6b15cce5bdc4ea7d834bf18ddb48d420b28fc47bb",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1436916,
+      "arPosition": 1,
+      "enPosition": 1,
+      "titles": {
+        "ar": "رسائل تلقائية",
+        "en": "Automated emails"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/benefits-01-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 21772,
+          "sha256": "7ef55796c091ee5159160063d0bee195b59a2554352d857fb99b0ea27d8855f7"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/benefits-01-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 52870,
+          "sha256": "49dd77975f327bbd6e86d30f0d975056c4317820ba3ff32442cfe8abeb81265a"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/benefits-01-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 90064,
+          "sha256": "0cfe5f2a64213b8f531e8e7eb3dcedc113ed66f21fc51ac25f24f80045865552"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/benefits/02",
+      "briefId": "10-01-02",
+      "kind": "benefits",
+      "number": 2,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/01_benefits/02_relevant_customer_messages.png",
+      "sourceSha256": "a8e90fa21c79ac1bb58acd24480d9f9a46f840888af42842de1fe5754981a2da",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1690468,
+      "arPosition": 2,
+      "enPosition": 2,
+      "titles": {
+        "ar": "محتوى مناسب لكل عميل",
+        "en": "Relevant customer messages"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/benefits-02-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 25668,
+          "sha256": "dc52e5032dbd769cfde0c709ed4c3305e7ef6e2424c1021d2c3705413e3bb9af"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/benefits-02-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 60994,
+          "sha256": "6cb0ea3f3c5b646593b42883fc0271be145ebe67070f7635bbb8a40068e193ae"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/benefits-02-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 102092,
+          "sha256": "876c9783fca9ef89daf00ee8061830eb48b210f042dd7a71b41e05b036a65286"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/benefits/03",
+      "briefId": "10-01-03",
+      "kind": "benefits",
+      "number": 3,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/01_benefits/03_email_sales_measurement.png",
+      "sourceSha256": "b75f774149d81afb2246c9394cf580629a69af1a99e3dc08da9c51aef3a91886",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1684752,
+      "arPosition": 3,
+      "enPosition": 3,
+      "titles": {
+        "ar": "قياس المبيعات من البريد",
+        "en": "Email sales measurement"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/benefits-03-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 23748,
+          "sha256": "2edbcdde8871db7775aa0d9942cb6288e49c8e834afe8fd8829d3f51003abe66"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/benefits-03-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 55278,
+          "sha256": "dcde0a6373ef32fe7d53686aa3751e3576adbc882db9a9b8d073c65ef6a858f3"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/benefits-03-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 92082,
+          "sha256": "017fa9563c02b47723d9a3c99b0bc8da2a7f3d0dc8603010c7ad45d3b7e0899e"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/know/01",
+      "briefId": "10-02-01",
+      "kind": "know",
+      "number": 1,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/02_know/01_you_have_a_customer_list_but_don_t_contact_them_after_the_first_purchase.png",
+      "sourceSha256": "02fb71a7cc9cfe69bf42fed4e1c9f3a63d2ff659ab539e926d00857c0bbf2df7",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1698666,
+      "arPosition": 1,
+      "enPosition": 1,
+      "titles": {
+        "ar": "لديك قائمة عملاء، لكنك لا تتواصل معهم بعد أول عملية شراء.",
+        "en": "You have a customer list but don't contact them after the first purchase."
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/know-01-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 23056,
+          "sha256": "88e1963ded16e13263fcbb9146b535f8742d9453abc1d96ecbf4631cefa051eb"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/know-01-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 54620,
+          "sha256": "f2985e4e1506d78bf70f81e3197ebac955837573c6df249ef7ea81281d84cefe"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/know-01-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 91340,
+          "sha256": "33b34153cb3bd4052a6d098588e189474e4150c1ee0d799d032b45fb7d145bce"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/know/02",
+      "briefId": "10-02-02",
+      "kind": "know",
+      "number": 2,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/02_know/02_your_emails_land_in_spam_instead_of_the_inbox.png",
+      "sourceSha256": "979783109ae4a5474b0985877d2ace9b98033d35451b67bc75a7b674294c5f71",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1287192,
+      "arPosition": 2,
+      "enPosition": 2,
+      "titles": {
+        "ar": "رسائلك تصل إلى البريد المزعج بدلاً من صندوق الوارد.",
+        "en": "Your emails land in spam instead of the inbox."
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/know-02-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 19940,
+          "sha256": "f35a457e65771ed31bbc72f8767219efabb7586935eaccb8791156f32b17770e"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/know-02-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 47718,
+          "sha256": "d9188a34c1be449925c7d1afc0d7e303909e80b8243d789449328e833c4fa509"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/know-02-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 79166,
+          "sha256": "74b9371edddea88a32a8e3d66c649d16b1642a3deb6d05d213cef07bb94a6e0f"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/know/03",
+      "briefId": "10-02-03",
+      "kind": "know",
+      "number": 3,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/02_know/03_you_send_the_same_message_to_everyone_and_no_one_opens_it.png",
+      "sourceSha256": "83a99263eee49b98aca39868258bb3c14b2a44d77f05d90b3e7cd6ac36ac8343",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1461753,
+      "arPosition": 3,
+      "enPosition": 3,
+      "titles": {
+        "ar": "ترسل الرسالة نفسها للجميع، ولا يفتحها أحد.",
+        "en": "You send the same message to everyone, and no one opens it."
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/know-03-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 22440,
+          "sha256": "7fe0e75f6465e769183a6fe502c437c23b153264b3a76d7b93401e5034737cf7"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/know-03-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 53742,
+          "sha256": "b4735f7d7d3be17fd50c3604d5b0c727e96424c385626047e0dd382a99a01d69"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/know-03-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 91000,
+          "sha256": "6ca8e5c9f0dad4b2a94051f93fa74a554bc33fbc11dce5d2836c97ce60e1ff4f"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/know/04",
+      "briefId": "10-02-04",
+      "kind": "know",
+      "number": 4,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/02_know/04_no_automated_emails_no_welcome_no_cart_reminder_no_post_purchase_follow_up.png",
+      "sourceSha256": "ecbd9a933b890c99a4729549ec16bcb33861204a792927ca5c42c88438dcbb6a",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1646753,
+      "arPosition": 4,
+      "enPosition": 4,
+      "titles": {
+        "ar": "لا توجد رسائل تلقائية للترحيب أو التذكير بالسلة أو المتابعة بعد الشراء.",
+        "en": "No automated emails: no welcome, no cart reminder, no post-purchase follow-up."
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/know-04-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 19056,
+          "sha256": "e8f23532f1ecc91c08ab9652c113a130056031fd3c5cad8df030cfd7a4da915c"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/know-04-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 41888,
+          "sha256": "aa08938201acd71a7349a765ca6adcd5d3f6d4269bcbc132e972dda96ec76f41"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/know-04-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 69398,
+          "sha256": "08c1e8f02f7a6426e29240d078bebb7fb6dce04e0de006c21c6a9dffd713024d"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/know/05",
+      "briefId": "10-02-05",
+      "kind": "know",
+      "number": 5,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/02_know/05_you_pay_for_ads_to_reach_customers_who_already_bought_from_you.png",
+      "sourceSha256": "275a350012131c2cf555c5845e8a3f475dbe9b1968dae3056f8da5313f6e748a",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1757591,
+      "arPosition": 5,
+      "enPosition": 5,
+      "titles": {
+        "ar": "تدفع للإعلانات كي تصل إلى عملاء سبق أن اشتروا منك.",
+        "en": "You pay for ads to reach customers who already bought from you."
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/know-05-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 22774,
+          "sha256": "e1d6c614d3c6d5033a78ef52dc40d2dc46e07ae38138f1175d42cfe7ebb90d59"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/know-05-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 54246,
+          "sha256": "65ae1700640e154602640cad596a4e82838a96759282069105272eb57b7f1339"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/know-05-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 91144,
+          "sha256": "e5b33996d4c99ed67861fc91cba327f53ac17ea930c2a7e4e051bb66a741468e"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/know/06",
+      "briefId": "10-02-06",
+      "kind": "know",
+      "number": 6,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/02_know/06_your_website_collects_visitor_details_and_no_one_uses_them.png",
+      "sourceSha256": "cc121205500b31df140b1561b9a059d6a10e219dda13a65f471e365fc86984a6",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1366776,
+      "arPosition": 6,
+      "enPosition": 6,
+      "titles": {
+        "ar": "موقعك يجمع بيانات الزوار، ولا يستفيد منها أحد.",
+        "en": "Your website collects visitor details, and no one uses them."
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/know-06-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 18756,
+          "sha256": "4635ce6a23ed19031a55c174eabfdd1e0ba7756a1cb11beac3753dd0c1e94990"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/know-06-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 44502,
+          "sha256": "8ba75d4ef90d8c6e6a589b0b6bd0513458481a36ade1690d765e086ba6ebe1e0"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/know-06-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 75194,
+          "sha256": "275ee3609ac336b0b3f23427539affae30528fc5abae017941beaf9bef0535be"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/know/07",
+      "briefId": "10-02-07",
+      "kind": "know",
+      "number": 7,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/02_know/07_you_don_t_know_how_many_sales_came_from_email.png",
+      "sourceSha256": "133892317824120f51b4a88fde7b0388ac7db6f44d2f68a839a0e06523570e81",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1696674,
+      "arPosition": 7,
+      "enPosition": 7,
+      "titles": {
+        "ar": "لا تعرف كم عملية بيع جاءت من البريد الإلكتروني.",
+        "en": "You don't know how many sales came from email."
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/know-07-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 27254,
+          "sha256": "eb7bf71be27b3edd0c690d719c1d35629c719d0d44560e559635f2730fa116e2"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/know-07-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 65926,
+          "sha256": "fae0ce2307fa3e9f947f4d051810b9b1e66eba71fe87a235b34b3b148dfb6f53"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/know-07-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 112434,
+          "sha256": "00e61b26082a2c8c7b59e78a43dbd8450f3b41fb1d66e91a2607622341334b9e"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/deliverables/01",
+      "briefId": "10-03-01",
+      "kind": "deliverables",
+      "number": 1,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/03_deliverables/01_free_review_of_your_current_email.png",
+      "sourceSha256": "901decf151fe28b0ed96b484cb5e08c63b8feccc94b86f0699bda4b20947a205",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1742604,
+      "arPosition": 1,
+      "enPosition": 1,
+      "titles": {
+        "ar": "مراجعة مجانية لبريدك الحالي",
+        "en": "Free Review of Your Current Email"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/deliverables-01-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 22366,
+          "sha256": "de10cd741eb5efa29ac667d57d99530e806081a2ab5fb090fdee5b67c38a205f"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/deliverables-01-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 50788,
+          "sha256": "651e638161b553ee34093d3cc15f282c28825aa1a52a15e749f07877ca2012b2"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/deliverables-01-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 83810,
+          "sha256": "11c74110b63b4f766a1912b6649f9af9f6d5a06862ac9b31fcdebdbe0977538b"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/deliverables/02",
+      "briefId": "10-03-02",
+      "kind": "deliverables",
+      "number": 2,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/03_deliverables/02_platform_setup_and_integration.png",
+      "sourceSha256": "da0cde2119d7e0abbe62ee7cfc003c719defcc3dbb12bb939bd7c42da8be3030",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1642459,
+      "arPosition": 2,
+      "enPosition": 2,
+      "titles": {
+        "ar": "إعداد المنصة وربطها",
+        "en": "Platform Setup and Integration"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/deliverables-02-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 21734,
+          "sha256": "709ab6639243d3bca3450654a349963f959ef9ed4f4754a94ac847cfaf2c5247"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/deliverables-02-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 48948,
+          "sha256": "167f2011e14433b231277011c22bc5ce8b21e4be202d50457434fbb5e4f58e35"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/deliverables-02-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 80596,
+          "sha256": "92edd6aaeb82d8339ddb9bfe40512a8e51a37f525e07b548162c5e6e4605c9f9"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/deliverables/03",
+      "briefId": "10-03-03",
+      "kind": "deliverables",
+      "number": 3,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/03_deliverables/03_inbox_delivery_setup.png",
+      "sourceSha256": "56be6a82913b817f0eb9f965e1fcdeb9b14b4dd5de7dc09e0f10da617c03a864",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1575347,
+      "arPosition": 3,
+      "enPosition": 3,
+      "titles": {
+        "ar": "تهيئة الوصول إلى صندوق الوارد",
+        "en": "Inbox Delivery Setup"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/deliverables-03-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 23414,
+          "sha256": "f91e9bfd38f2ce52a4a78956ea9497ce2c2cc5667c522db3f62feb25ec95ad58"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/deliverables-03-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 55866,
+          "sha256": "38d755dad6f7bcc963346c2a46455c710bea014817aa281ef1c6ff9a8aa62636"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/deliverables-03-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 94172,
+          "sha256": "99d5081abcea21c7d6e94d27fb0a2862c82c952f74f2df950f22c6f6106b88d6"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/deliverables/04",
+      "briefId": "10-03-04",
+      "kind": "deliverables",
+      "number": 4,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/03_deliverables/04_list_building.png",
+      "sourceSha256": "0a9a4a65fb8006cb13c0b439827b67b8bd3a52f91bd4beb68d0ac44a4ea33a4c",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1496019,
+      "arPosition": 4,
+      "enPosition": 4,
+      "titles": {
+        "ar": "بناء القائمة البريدية",
+        "en": "List Building"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/deliverables-04-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 18548,
+          "sha256": "fb299477680e2b2e7671b3f29b5a4f889cd8fc7bf6d0c39a35e1c73e11a80d56"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/deliverables-04-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 42008,
+          "sha256": "a52e50f60edde753bb611b2718e6a278677ed0324ff3a98c35fd86f910afabc3"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/deliverables-04-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 69810,
+          "sha256": "4a87e1bc8745a543c3c49df512ce9ca8b942d08479d72a247922ac6486a31137"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/deliverables/05",
+      "briefId": "10-03-05",
+      "kind": "deliverables",
+      "number": 5,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/03_deliverables/05_customer_segmentation.png",
+      "sourceSha256": "35147a475b80ed8b35784d130e905bfa2da0ab8e149347bcd65b06fdb00ecf11",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1687232,
+      "arPosition": 5,
+      "enPosition": 5,
+      "titles": {
+        "ar": "تقسيم العملاء",
+        "en": "Customer Segmentation"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/deliverables-05-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 23736,
+          "sha256": "5ec178cef8dc65640fab6e94f8a80dbb681f72c40ded632b22334a7995fcfe30"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/deliverables-05-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 56368,
+          "sha256": "2a6b65783f127074c0a846666bff669b4bce7857b28c3ad043e3f99d78480cd4"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/deliverables-05-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 95140,
+          "sha256": "965c339a9ce90c7d38e46eac0179f3612bf8c7e5b54d4099fbd2dfc8247ab69a"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/deliverables/06",
+      "briefId": "10-03-06",
+      "kind": "deliverables",
+      "number": 6,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/03_deliverables/06_automated_emails.png",
+      "sourceSha256": "cf8ea54ae711e4deb637c899e3ca808bd5b5bfe6217436a3fb006756f8df1368",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1696019,
+      "arPosition": 6,
+      "enPosition": 6,
+      "titles": {
+        "ar": "الرسائل التلقائية",
+        "en": "Automated Emails"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/deliverables-06-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 25318,
+          "sha256": "890cc2cf57e9f5f69ee1760864cb362b15c53303d96b5bfa9ac50b8cc9e06412"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/deliverables-06-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 59862,
+          "sha256": "40039cc3131cd617a8b34921a24657bc19a8464807ff8f8ed3f2f88b50a7fef8"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/deliverables-06-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 100490,
+          "sha256": "5e6290d17a8ed8e840a851109b4cf036ed0f206e43a463d0a7a25cc10b041fe5"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/deliverables/07",
+      "briefId": "10-03-07",
+      "kind": "deliverables",
+      "number": 7,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/03_deliverables/07_newsletter_writing_and_design.png",
+      "sourceSha256": "beb30ddb6dfbe82f7652865f2ce52b7c17f93f93aceb60b0d8c7a034973665c2",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1744494,
+      "arPosition": 7,
+      "enPosition": 7,
+      "titles": {
+        "ar": "كتابة النشرات وتصميمها",
+        "en": "Newsletter Writing and Design"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/deliverables-07-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 23520,
+          "sha256": "5b0b68e8f4341f1388b9d12badf749a78bf128794ca2ce8c8950ae05593a0048"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/deliverables-07-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 55014,
+          "sha256": "9ac6f13892ed8e6d100d6eb5c2c035ce4eda3b2b717fb4ee9e18e03692591b68"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/deliverables-07-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 90750,
+          "sha256": "8fe01f568bfabf24beb2fef6297044c1cebd6f6f7ccfd7ca2729920b7171f59c"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/deliverables/08",
+      "briefId": "10-03-08",
+      "kind": "deliverables",
+      "number": 8,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/03_deliverables/08_ongoing_testing.png",
+      "sourceSha256": "d63c9f16b2ad5d93476047572d0939393c68f51c520ea5fcaeaacba1ae7b8808",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1678996,
+      "arPosition": 8,
+      "enPosition": 8,
+      "titles": {
+        "ar": "اختبارات مستمرة",
+        "en": "Ongoing Testing"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/deliverables-08-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 22236,
+          "sha256": "b3dbaaabbfcc2eb703a6a9eaa51406b5dcc28ddf82ea97246f839e7cdff361fe"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/deliverables-08-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 51756,
+          "sha256": "315e0be6610dc23f34016d9cd3297d417442e35f553d4b77bd71d35b63a1dc6a"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/deliverables-08-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 86506,
+          "sha256": "55d97b8abf4d79c0a9b210c42713a62d994219d7bbec3d47f1b8878a7c298a26"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/deliverables/09",
+      "briefId": "10-03-09",
+      "kind": "deliverables",
+      "number": 9,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/03_deliverables/09_monthly_report_in_numbers.png",
+      "sourceSha256": "739734daaebccfafa92073214273da8288d23fddbea63220c65501434d9ab01e",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1919097,
+      "arPosition": 9,
+      "enPosition": 9,
+      "titles": {
+        "ar": "تقرير شهري بالأرقام",
+        "en": "Monthly Report in Numbers"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/deliverables-09-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 22044,
+          "sha256": "d79c23a9cf1f353c5d0819cf4a7b859395436a5dbe8055257fabdef739d2efce"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/deliverables-09-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 50168,
+          "sha256": "8cf4985eede77f2910e22a1c897d2d01c3832395cc253620b7c82ba911c2d516"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/deliverables-09-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 84356,
+          "sha256": "74ecfe8dbfced15a1152fdf14aa8d4a5af8d4d3f979d3fc97b401fae29201e6c"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/why/01",
+      "briefId": "10-04-01",
+      "kind": "why",
+      "number": 1,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/04_why/01_one_campaign_manager_for_you.png",
+      "sourceSha256": "8c681c54fb1d961d7bf2bce846c582ffbcffa2addcdd64385e014cc7a09f8f65",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1945424,
+      "arPosition": 1,
+      "enPosition": 1,
+      "titles": {
+        "ar": "مدير واحد لحملتك",
+        "en": "One Campaign Manager for You"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/why-01-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 24936,
+          "sha256": "4b46d3acada4f7f4fcf969df8f6e98e1ba1ae94e1335276e63af2eff99272c0c"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/why-01-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 58796,
+          "sha256": "5d38059bf50a164a9a02de856c2b4f1f005ce62dc0adc53020a9f7780f7d3ab6"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/why-01-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 99412,
+          "sha256": "9880ec108a36bfed917d9bde6713074e3f623ca40e6d56c13f3f02b378e2ff30"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/why/02",
+      "briefId": "10-04-02",
+      "kind": "why",
+      "number": 2,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/04_why/02_95_client_retention.png",
+      "sourceSha256": "ffeba70b86465a3d49bdcfe2908a82d9bae586e188cd14e943061bde297aaf64",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1813409,
+      "arPosition": 2,
+      "enPosition": 2,
+      "titles": {
+        "ar": "احتفاظ بنسبة 95% من العملاء",
+        "en": "95% Client Retention"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/why-02-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 29978,
+          "sha256": "db9f38c63e29687177ba67a8b2533fe841b1ae5a5d0aa7765d14ef604c4cc60f"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/why-02-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 71730,
+          "sha256": "6df42e784dc806230dff8a1d6603a317e569eb62edc0ef24f32cbc5a6a63b04c"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/why-02-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 120286,
+          "sha256": "7aad7da754454e4b44a12f79dbbd81ced93680896f5e20b32c492d5ff925c9b0"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/why/03",
+      "briefId": "10-04-03",
+      "kind": "why",
+      "number": 3,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/04_why/03_your_list_is_yours.png",
+      "sourceSha256": "80da7d444876dd1a2a423150d2736689c1d6987bfa6100400194e629467d65b4",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1615948,
+      "arPosition": 3,
+      "enPosition": 3,
+      "titles": {
+        "ar": "قائمتك ملك لك",
+        "en": "Your List Is Yours"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/why-03-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 24834,
+          "sha256": "0c775e8d38e43b43aaefa2152d39f4571a8be2ab27ee2297a297a3c0a4df55db"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/why-03-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 58532,
+          "sha256": "fb186bb3bb241f2da8e00c8467c9c1734e64ac5bde70df61000c6b244235e3a7"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/why-03-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 98380,
+          "sha256": "ce737eb91c10783c6d2aca7498cb55454ca8ae93203aa5b205f4c335c2cc5131"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/why/04",
+      "briefId": "10-04-04",
+      "kind": "why",
+      "number": 4,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/04_why/04_only_people_who_opted_in.png",
+      "sourceSha256": "597b417a5946bbd72d5664adffba0f248bfcaa083d9fcec29f83f615d0489530",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1390696,
+      "arPosition": 4,
+      "enPosition": 4,
+      "titles": {
+        "ar": "لمن وافقوا على الاشتراك فقط",
+        "en": "Only People Who Opted In"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/why-04-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 19234,
+          "sha256": "cf877cbbd305fde4006102cacd4876de89e9069d2398a16689555bfaa6f606c8"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/why-04-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 44222,
+          "sha256": "6aef874d127600b4798484da160f0bc1e905e9d7ff8688e04795252f3cbdb186"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/why-04-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 72562,
+          "sha256": "8a98cd90a5ee5b56c66b8034ed400e891f2816e66dd77f930c3405a0dd62e14c"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/why/05",
+      "briefId": "10-04-05",
+      "kind": "why",
+      "number": 5,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/04_why/05_ready_for_the_big_seasons.png",
+      "sourceSha256": "5d6a334e98f3d01903ea100fd62cedf858dbc7571239c6757738748174d46ce9",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1953536,
+      "arPosition": 5,
+      "enPosition": 5,
+      "titles": {
+        "ar": "استعداد مبكر للمواسم",
+        "en": "Ready for the Big Seasons"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/why-05-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 25888,
+          "sha256": "71e1f7eee479eddb173218ac3e16f0208e9dddb79d4a77804799b263e214ff68"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/why-05-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 62190,
+          "sha256": "0f9440df216f1df70955eff5244ac3cd6a913359684cd225fe486aef1fd963b2"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/why-05-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 105148,
+          "sha256": "ad6099fa5ac5b8c2c86385c06356368aca3fefcf456226aa0ff00dbcc2e90c53"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/why/06",
+      "briefId": "10-04-06",
+      "kind": "why",
+      "number": 6,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/04_why/06_email_as_part_of_the_bigger_picture.png",
+      "sourceSha256": "4c3ed7143f3193de0f6d261e6ecdc939ca36558236535033a29b45eb269e2ad8",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1640042,
+      "arPosition": 6,
+      "enPosition": 6,
+      "titles": {
+        "ar": "البريد جزء من الصورة الكاملة",
+        "en": "Email as Part of the Bigger Picture"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/why-06-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 23836,
+          "sha256": "9d83304f6382b194c9c2a3b9000b9a27c59ec6e71e134cd1a7126f495dcfefb4"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/why-06-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 54152,
+          "sha256": "fb07288e6b6f7d4dd6af601228951f74e5f75ffd80536257d0470117766d905b"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/why-06-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 89584,
+          "sha256": "b84aeb328a2ae95d8475f2c69f14b7741d427354a0acbc26fbdc30cab6390a82"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/audience/01",
+      "briefId": "10-05-01",
+      "kind": "audience",
+      "number": 1,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/05_audience/01_online_stores.png",
+      "sourceSha256": "83c5086ae994e85cdea27c0cf880f97a7481928d0a10294060215bf301b80aa3",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1837350,
+      "arPosition": 1,
+      "enPosition": 1,
+      "titles": {
+        "ar": "المتاجر الإلكترونية",
+        "en": "Online Stores"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/audience-01-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 23174,
+          "sha256": "2bd91921b8ae728330aa7c0ae021ec55dea03e2b5d8b1379cca867a5baa35987"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/audience-01-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 55194,
+          "sha256": "79b4f4d3fac3669702b6e58dcd037f89bb4a5ec992053963dc9461b8048b5794"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/audience-01-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 92336,
+          "sha256": "093e4d9f909e57dd4433f6e2a755d3713f038ae916f05283bac2032880f5e19d"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/audience/02",
+      "briefId": "10-05-02",
+      "kind": "audience",
+      "number": 2,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/05_audience/02_b2b_companies.png",
+      "sourceSha256": "1bace2439d72cc085345d78313606bcf2709827d00d93e4680babe23fe7c76f6",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1611027,
+      "arPosition": 2,
+      "enPosition": 2,
+      "titles": {
+        "ar": "شركات الأعمال B2B",
+        "en": "B2B Companies"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/audience-02-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 23374,
+          "sha256": "b7035c6bbf9e5ecbdb43808b951339ad534030d1b35b85f9ca0e6aee509b6f3a"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/audience-02-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 56290,
+          "sha256": "08ebe975598758393b06b0ff218ad47d037b6bb0bae42cb67f054db3499149e0"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/audience-02-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 91906,
+          "sha256": "ec1cb9ae84d2eff20926c2154879f2a586920a128e6dc8af4f0adf97b04189b4"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/audience/03",
+      "briefId": "10-05-03",
+      "kind": "audience",
+      "number": 3,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/05_audience/03_education_centers.png",
+      "sourceSha256": "ddd3c8dd2f5892e2f0e3b4f5e101986f80ff73acc0bdafa62b30b09fc5daedfa",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1691726,
+      "arPosition": 3,
+      "enPosition": 3,
+      "titles": {
+        "ar": "المراكز التعليمية",
+        "en": "Education Centers"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/audience-03-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 21694,
+          "sha256": "c1eccccc905ded3e55ad268a2550e4b37e86d4735d0937ea461d776e6baae7fc"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/audience-03-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 50752,
+          "sha256": "6b2157559085c67d2d81390aa2badc3f58230e918a245d8283c3c3eccd7d47b7"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/audience-03-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 85146,
+          "sha256": "8142e76b507d03fb8d48a5503d20b52c9448837eae36c828980c5d6150401a95"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/audience/04",
+      "briefId": "10-05-04",
+      "kind": "audience",
+      "number": 4,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/05_audience/04_service_businesses.png",
+      "sourceSha256": "190dd1d48622d5fb287690d2825d4f8a0144de96f4e82e1908112bb4fbf4aa22",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1624248,
+      "arPosition": 4,
+      "enPosition": 4,
+      "titles": {
+        "ar": "الأنشطة الخدمية",
+        "en": "Service Businesses"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/audience-04-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 24300,
+          "sha256": "de54a7364f16fd374912a7ac39b654f1016a833600269b9782f0608b3ff27698"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/audience-04-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 57362,
+          "sha256": "965b551c609184012a8d48b9ce5962b7c8c3ce1c2e392c525ee232d61077ab16"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/audience-04-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 95244,
+          "sha256": "8ae8cbf6f32b6ae97248e4672d6107417f1f8763ea6451c821ac08d4e2d05850"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/audience/05",
+      "briefId": "10-05-05",
+      "kind": "audience",
+      "number": 5,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/05_audience/05_sites_collecting_data.png",
+      "sourceSha256": "44692db1b0e7448276c4e8930869653e9a873384c7fbfdea6886d6b0e578e2e9",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1631898,
+      "arPosition": 5,
+      "enPosition": 5,
+      "titles": {
+        "ar": "المواقع التي تجمع البيانات",
+        "en": "Sites Collecting Data"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/audience-05-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 23364,
+          "sha256": "0ac04473618b23877cd06f5875d324d768d1d62a9b8e84c476bad65de0462b39"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/audience-05-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 55596,
+          "sha256": "6722179fb7cdf1d1f64a50cc4eae2edc1c74772faaaae0578972676b1e6383b6"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/audience-05-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 93060,
+          "sha256": "5827261b0e3d7aa1fd0ac39496afab35c9df3331376d7d0e2a9b4cc56dfb5aff"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/audience/06",
+      "briefId": "10-05-06",
+      "kind": "audience",
+      "number": 6,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/05_audience/06_starting_from_zero.png",
+      "sourceSha256": "8b669031dfc267acd3ce45c06dbcff6f163d153cdd769cd3dba5ae63a3972104",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1684118,
+      "arPosition": 6,
+      "enPosition": 6,
+      "titles": {
+        "ar": "البداية من الصفر",
+        "en": "Starting From Zero"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/audience-06-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 21144,
+          "sha256": "e97aaa2a100c4df92eab2bd027d6f496e4382c2d4ca48f5d1fb4ad0a14369421"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/audience-06-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 48712,
+          "sha256": "2bcfe644b9bb0c47967df0d6f90bd3d068dde81477dabc89129347084c916860"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/audience-06-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 81218,
+          "sha256": "395aadcac339ff05d57dadc4a8f04bf4b63dfdc3d64f79a608c2e00436dddc1e"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/outcomes/01",
+      "briefId": "10-06-01",
+      "kind": "outcomes",
+      "number": 1,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/06_outcomes/01_customers_who_buy_again.png",
+      "sourceSha256": "40631d4339f53dd5993d26ebde20364e7c376e8d3800ef3a70dfee3eef819b02",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1576299,
+      "arPosition": 1,
+      "enPosition": 1,
+      "titles": {
+        "ar": "عملاء يشترون مجدداً",
+        "en": "Customers Who Buy Again"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/outcomes-01-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 21238,
+          "sha256": "32baf50ff7d6d85ab86bd914110134c885e084ff078864329d03a4d8b5d6e0c8"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/outcomes-01-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 49574,
+          "sha256": "b8fc70ea7bab74e0ec4c37c42ab324bec024e6de0fcd2769d31c6620e1cbaa91"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/outcomes-01-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 82768,
+          "sha256": "c4d524c9be25f30ddb147ab140db66ca94700910828c73e11d078134e1d66ba5"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/outcomes/02",
+      "briefId": "10-06-02",
+      "kind": "outcomes",
+      "number": 2,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/06_outcomes/02_fewer_abandoned_carts.png",
+      "sourceSha256": "febee6c0f672e1435ca1d1ca84815f0aab62e1f8243ad517a7addbd930a17ae1",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1463189,
+      "arPosition": 2,
+      "enPosition": 2,
+      "titles": {
+        "ar": "سلات متروكة أقل",
+        "en": "Fewer Abandoned Carts"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/outcomes-02-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 20092,
+          "sha256": "4c26c128e772ad074919c4ac3e8f4f9fc154dee7ccbb736c5dd15fbb3def70d4"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/outcomes-02-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 46146,
+          "sha256": "84f1e71d95e603d988eb7a225d9923e8580162b8e4176739f3776fa7d0867a41"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/outcomes-02-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 76012,
+          "sha256": "e11c5046f42dc1105dd17353bff7a32f5fcc5230844ca12106d257639bfd1744"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/outcomes/03",
+      "briefId": "10-06-03",
+      "kind": "outcomes",
+      "number": 3,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/06_outcomes/03_lower_ad_spend.png",
+      "sourceSha256": "38747cef1f568c2fd9ed7c4b1560e57a0654066b6171c30f8f19db91c2be432b",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1514128,
+      "arPosition": 3,
+      "enPosition": 3,
+      "titles": {
+        "ar": "إنفاق إعلاني أقل",
+        "en": "Lower Ad Spend"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/outcomes-03-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 22660,
+          "sha256": "dcb52ada2c2f30bb9e18a503d075a55eeff8f0f98c1e688d23ecac0941773df3"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/outcomes-03-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 53906,
+          "sha256": "ede0b2b3c1746bf03fc720a45a18170342ed414ee26c2114abc7f04a95168f00"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/outcomes-03-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 91090,
+          "sha256": "7702b1028bc2d48d1ad245f2964e814eb9d6cdd15d41453d9c891e054211ae2d"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/outcomes/04",
+      "briefId": "10-06-04",
+      "kind": "outcomes",
+      "number": 4,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/06_outcomes/04_sales_while_you_re_busy.png",
+      "sourceSha256": "83aa14a1e6b2a0b7ab9ea30fdf6674a1dd5e35d5ce924c498600bbd680aaeff9",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1497584,
+      "arPosition": 4,
+      "enPosition": 4,
+      "titles": {
+        "ar": "مبيعات وأنت منشغل",
+        "en": "Sales While You're Busy"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/outcomes-04-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 24584,
+          "sha256": "79bed3605d637967105c7b80048ede25c25a2db8f11769b7d24948455814cba4"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/outcomes-04-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 56640,
+          "sha256": "3306aa8f5a96aba8b90cc3fcf1eceeb60b19bf98adb76a268d01d92d5e6a61e4"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/outcomes-04-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 93676,
+          "sha256": "cda6140d86a337f5ae9fcc6f3f11a79f737095b9840cab1dd57eb8b964245f1b"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/outcomes/05",
+      "briefId": "10-06-05",
+      "kind": "outcomes",
+      "number": 5,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/06_outcomes/05_stronger_relationships.png",
+      "sourceSha256": "2648451f40fc615a8aa20c0a3b31dceddc9bda4237af77e9cb1e5660be1f0d3c",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1778688,
+      "arPosition": 5,
+      "enPosition": 5,
+      "titles": {
+        "ar": "علاقات أقوى",
+        "en": "Stronger Relationships"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/outcomes-05-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 27650,
+          "sha256": "e6d467625ef984143a3f7e39b9c080ec92ea6ad35b2efb8e54264aeb393271e4"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/outcomes-05-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 66924,
+          "sha256": "75be104c80851606c63eb6de64d21c17f6ea9eee4d1713f3eb4631e4a62e6ae4"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/outcomes-05-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 113216,
+          "sha256": "6e10f7361903cf2a361c84a4131df458bc4e647a37f2daabce53e33ebbedb320"
+        }
+      ]
+    },
+    {
+      "id": "email-marketing/outcomes/06",
+      "briefId": "10-06-06",
+      "kind": "outcomes",
+      "number": 6,
+      "source": "/Users/mohammad/Downloads/10_email_marketing/06_outcomes/06_clear_numbers.png",
+      "sourceSha256": "9a166c74e73e812cd13598547451783837e7c55d291239cb2dcb2ca3a6a30b09",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1483087,
+      "arPosition": 6,
+      "enPosition": 6,
+      "titles": {
+        "ar": "أرقام واضحة",
+        "en": "Clear Numbers"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/outcomes-06-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 20216,
+          "sha256": "74e37621a5ca9bc6d8d737344620e7c591ad88a641bcfe0af93b59f8cad7d7c3"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/outcomes-06-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 44614,
+          "sha256": "24aa6b6e51cde5c2c40f09acfa45c479554093fafceb7f4296d33b3ac3f9c3c0"
+        },
+        {
+          "url": "/assets/images/service-studio/email-owner-2026-10/outcomes-06-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 73804,
+          "sha256": "033f43ba3e81f0802dae6db738e1d874d67dedba09d9266a602a26b0eba3e8ba"
+        }
+      ]
+    }
+  ],
+  "bindings": [
+    {
+      "lang": "ar",
+      "kind": "benefits",
+      "position": 1,
+      "title": "رسائل تلقائية",
+      "image": "email-marketing/benefits/01"
+    },
+    {
+      "lang": "en",
+      "kind": "benefits",
+      "position": 1,
+      "title": "Automated emails",
+      "image": "email-marketing/benefits/01"
+    },
+    {
+      "lang": "ar",
+      "kind": "benefits",
+      "position": 2,
+      "title": "محتوى مناسب لكل عميل",
+      "image": "email-marketing/benefits/02"
+    },
+    {
+      "lang": "en",
+      "kind": "benefits",
+      "position": 2,
+      "title": "Relevant customer messages",
+      "image": "email-marketing/benefits/02"
+    },
+    {
+      "lang": "ar",
+      "kind": "benefits",
+      "position": 3,
+      "title": "قياس المبيعات من البريد",
+      "image": "email-marketing/benefits/03"
+    },
+    {
+      "lang": "en",
+      "kind": "benefits",
+      "position": 3,
+      "title": "Email sales measurement",
+      "image": "email-marketing/benefits/03"
+    },
+    {
+      "lang": "ar",
+      "kind": "know",
+      "position": 1,
+      "title": "لديك قائمة عملاء، لكنك لا تتواصل معهم بعد أول عملية شراء.",
+      "image": "email-marketing/know/01"
+    },
+    {
+      "lang": "en",
+      "kind": "know",
+      "position": 1,
+      "title": "You have a customer list but don't contact them after the first purchase.",
+      "image": "email-marketing/know/01"
+    },
+    {
+      "lang": "ar",
+      "kind": "know",
+      "position": 2,
+      "title": "رسائلك تصل إلى البريد المزعج بدلاً من صندوق الوارد.",
+      "image": "email-marketing/know/02"
+    },
+    {
+      "lang": "en",
+      "kind": "know",
+      "position": 2,
+      "title": "Your emails land in spam instead of the inbox.",
+      "image": "email-marketing/know/02"
+    },
+    {
+      "lang": "ar",
+      "kind": "know",
+      "position": 3,
+      "title": "ترسل الرسالة نفسها للجميع، ولا يفتحها أحد.",
+      "image": "email-marketing/know/03"
+    },
+    {
+      "lang": "en",
+      "kind": "know",
+      "position": 3,
+      "title": "You send the same message to everyone, and no one opens it.",
+      "image": "email-marketing/know/03"
+    },
+    {
+      "lang": "ar",
+      "kind": "know",
+      "position": 4,
+      "title": "لا توجد رسائل تلقائية للترحيب أو التذكير بالسلة أو المتابعة بعد الشراء.",
+      "image": "email-marketing/know/04"
+    },
+    {
+      "lang": "en",
+      "kind": "know",
+      "position": 4,
+      "title": "No automated emails: no welcome, no cart reminder, no post-purchase follow-up.",
+      "image": "email-marketing/know/04"
+    },
+    {
+      "lang": "ar",
+      "kind": "know",
+      "position": 5,
+      "title": "تدفع للإعلانات كي تصل إلى عملاء سبق أن اشتروا منك.",
+      "image": "email-marketing/know/05"
+    },
+    {
+      "lang": "en",
+      "kind": "know",
+      "position": 5,
+      "title": "You pay for ads to reach customers who already bought from you.",
+      "image": "email-marketing/know/05"
+    },
+    {
+      "lang": "ar",
+      "kind": "know",
+      "position": 6,
+      "title": "موقعك يجمع بيانات الزوار، ولا يستفيد منها أحد.",
+      "image": "email-marketing/know/06"
+    },
+    {
+      "lang": "en",
+      "kind": "know",
+      "position": 6,
+      "title": "Your website collects visitor details, and no one uses them.",
+      "image": "email-marketing/know/06"
+    },
+    {
+      "lang": "ar",
+      "kind": "know",
+      "position": 7,
+      "title": "لا تعرف كم عملية بيع جاءت من البريد الإلكتروني.",
+      "image": "email-marketing/know/07"
+    },
+    {
+      "lang": "en",
+      "kind": "know",
+      "position": 7,
+      "title": "You don't know how many sales came from email.",
+      "image": "email-marketing/know/07"
+    },
+    {
+      "lang": "ar",
+      "kind": "deliverables",
+      "position": 1,
+      "title": "مراجعة مجانية لبريدك الحالي",
+      "image": "email-marketing/deliverables/01"
+    },
+    {
+      "lang": "en",
+      "kind": "deliverables",
+      "position": 1,
+      "title": "Free Review of Your Current Email",
+      "image": "email-marketing/deliverables/01"
+    },
+    {
+      "lang": "ar",
+      "kind": "deliverables",
+      "position": 2,
+      "title": "إعداد المنصة وربطها",
+      "image": "email-marketing/deliverables/02"
+    },
+    {
+      "lang": "en",
+      "kind": "deliverables",
+      "position": 2,
+      "title": "Platform Setup and Integration",
+      "image": "email-marketing/deliverables/02"
+    },
+    {
+      "lang": "ar",
+      "kind": "deliverables",
+      "position": 3,
+      "title": "تهيئة الوصول إلى صندوق الوارد",
+      "image": "email-marketing/deliverables/03"
+    },
+    {
+      "lang": "en",
+      "kind": "deliverables",
+      "position": 3,
+      "title": "Inbox Delivery Setup",
+      "image": "email-marketing/deliverables/03"
+    },
+    {
+      "lang": "ar",
+      "kind": "deliverables",
+      "position": 4,
+      "title": "بناء القائمة البريدية",
+      "image": "email-marketing/deliverables/04"
+    },
+    {
+      "lang": "en",
+      "kind": "deliverables",
+      "position": 4,
+      "title": "List Building",
+      "image": "email-marketing/deliverables/04"
+    },
+    {
+      "lang": "ar",
+      "kind": "deliverables",
+      "position": 5,
+      "title": "تقسيم العملاء",
+      "image": "email-marketing/deliverables/05"
+    },
+    {
+      "lang": "en",
+      "kind": "deliverables",
+      "position": 5,
+      "title": "Customer Segmentation",
+      "image": "email-marketing/deliverables/05"
+    },
+    {
+      "lang": "ar",
+      "kind": "deliverables",
+      "position": 6,
+      "title": "الرسائل التلقائية",
+      "image": "email-marketing/deliverables/06"
+    },
+    {
+      "lang": "en",
+      "kind": "deliverables",
+      "position": 6,
+      "title": "Automated Emails",
+      "image": "email-marketing/deliverables/06"
+    },
+    {
+      "lang": "ar",
+      "kind": "deliverables",
+      "position": 7,
+      "title": "كتابة النشرات وتصميمها",
+      "image": "email-marketing/deliverables/07"
+    },
+    {
+      "lang": "en",
+      "kind": "deliverables",
+      "position": 7,
+      "title": "Newsletter Writing and Design",
+      "image": "email-marketing/deliverables/07"
+    },
+    {
+      "lang": "ar",
+      "kind": "deliverables",
+      "position": 8,
+      "title": "اختبارات مستمرة",
+      "image": "email-marketing/deliverables/08"
+    },
+    {
+      "lang": "en",
+      "kind": "deliverables",
+      "position": 8,
+      "title": "Ongoing Testing",
+      "image": "email-marketing/deliverables/08"
+    },
+    {
+      "lang": "ar",
+      "kind": "deliverables",
+      "position": 9,
+      "title": "تقرير شهري بالأرقام",
+      "image": "email-marketing/deliverables/09"
+    },
+    {
+      "lang": "en",
+      "kind": "deliverables",
+      "position": 9,
+      "title": "Monthly Report in Numbers",
+      "image": "email-marketing/deliverables/09"
+    },
+    {
+      "lang": "ar",
+      "kind": "why",
+      "position": 1,
+      "title": "مدير واحد لحملتك",
+      "image": "email-marketing/why/01"
+    },
+    {
+      "lang": "en",
+      "kind": "why",
+      "position": 1,
+      "title": "One Campaign Manager for You",
+      "image": "email-marketing/why/01"
+    },
+    {
+      "lang": "ar",
+      "kind": "why",
+      "position": 2,
+      "title": "احتفاظ بنسبة 95% من العملاء",
+      "image": "email-marketing/why/02"
+    },
+    {
+      "lang": "en",
+      "kind": "why",
+      "position": 2,
+      "title": "95% Client Retention",
+      "image": "email-marketing/why/02"
+    },
+    {
+      "lang": "ar",
+      "kind": "why",
+      "position": 3,
+      "title": "قائمتك ملك لك",
+      "image": "email-marketing/why/03"
+    },
+    {
+      "lang": "en",
+      "kind": "why",
+      "position": 3,
+      "title": "Your List Is Yours",
+      "image": "email-marketing/why/03"
+    },
+    {
+      "lang": "ar",
+      "kind": "why",
+      "position": 4,
+      "title": "لمن وافقوا على الاشتراك فقط",
+      "image": "email-marketing/why/04"
+    },
+    {
+      "lang": "en",
+      "kind": "why",
+      "position": 4,
+      "title": "Only People Who Opted In",
+      "image": "email-marketing/why/04"
+    },
+    {
+      "lang": "ar",
+      "kind": "why",
+      "position": 5,
+      "title": "استعداد مبكر للمواسم",
+      "image": "email-marketing/why/05"
+    },
+    {
+      "lang": "en",
+      "kind": "why",
+      "position": 5,
+      "title": "Ready for the Big Seasons",
+      "image": "email-marketing/why/05"
+    },
+    {
+      "lang": "ar",
+      "kind": "why",
+      "position": 6,
+      "title": "البريد جزء من الصورة الكاملة",
+      "image": "email-marketing/why/06"
+    },
+    {
+      "lang": "en",
+      "kind": "why",
+      "position": 6,
+      "title": "Email as Part of the Bigger Picture",
+      "image": "email-marketing/why/06"
+    },
+    {
+      "lang": "ar",
+      "kind": "audience",
+      "position": 1,
+      "title": "المتاجر الإلكترونية",
+      "image": "email-marketing/audience/01"
+    },
+    {
+      "lang": "en",
+      "kind": "audience",
+      "position": 1,
+      "title": "Online Stores",
+      "image": "email-marketing/audience/01"
+    },
+    {
+      "lang": "ar",
+      "kind": "audience",
+      "position": 2,
+      "title": "شركات الأعمال B2B",
+      "image": "email-marketing/audience/02"
+    },
+    {
+      "lang": "en",
+      "kind": "audience",
+      "position": 2,
+      "title": "B2B Companies",
+      "image": "email-marketing/audience/02"
+    },
+    {
+      "lang": "ar",
+      "kind": "audience",
+      "position": 3,
+      "title": "المراكز التعليمية",
+      "image": "email-marketing/audience/03"
+    },
+    {
+      "lang": "en",
+      "kind": "audience",
+      "position": 3,
+      "title": "Education Centers",
+      "image": "email-marketing/audience/03"
+    },
+    {
+      "lang": "ar",
+      "kind": "audience",
+      "position": 4,
+      "title": "الأنشطة الخدمية",
+      "image": "email-marketing/audience/04"
+    },
+    {
+      "lang": "en",
+      "kind": "audience",
+      "position": 4,
+      "title": "Service Businesses",
+      "image": "email-marketing/audience/04"
+    },
+    {
+      "lang": "ar",
+      "kind": "audience",
+      "position": 5,
+      "title": "المواقع التي تجمع البيانات",
+      "image": "email-marketing/audience/05"
+    },
+    {
+      "lang": "en",
+      "kind": "audience",
+      "position": 5,
+      "title": "Sites Collecting Data",
+      "image": "email-marketing/audience/05"
+    },
+    {
+      "lang": "ar",
+      "kind": "audience",
+      "position": 6,
+      "title": "البداية من الصفر",
+      "image": "email-marketing/audience/06"
+    },
+    {
+      "lang": "en",
+      "kind": "audience",
+      "position": 6,
+      "title": "Starting From Zero",
+      "image": "email-marketing/audience/06"
+    },
+    {
+      "lang": "ar",
+      "kind": "outcomes",
+      "position": 1,
+      "title": "عملاء يشترون مجدداً",
+      "image": "email-marketing/outcomes/01"
+    },
+    {
+      "lang": "en",
+      "kind": "outcomes",
+      "position": 1,
+      "title": "Customers Who Buy Again",
+      "image": "email-marketing/outcomes/01"
+    },
+    {
+      "lang": "ar",
+      "kind": "outcomes",
+      "position": 2,
+      "title": "سلات متروكة أقل",
+      "image": "email-marketing/outcomes/02"
+    },
+    {
+      "lang": "en",
+      "kind": "outcomes",
+      "position": 2,
+      "title": "Fewer Abandoned Carts",
+      "image": "email-marketing/outcomes/02"
+    },
+    {
+      "lang": "ar",
+      "kind": "outcomes",
+      "position": 3,
+      "title": "إنفاق إعلاني أقل",
+      "image": "email-marketing/outcomes/03"
+    },
+    {
+      "lang": "en",
+      "kind": "outcomes",
+      "position": 3,
+      "title": "Lower Ad Spend",
+      "image": "email-marketing/outcomes/03"
+    },
+    {
+      "lang": "ar",
+      "kind": "outcomes",
+      "position": 4,
+      "title": "مبيعات وأنت منشغل",
+      "image": "email-marketing/outcomes/04"
+    },
+    {
+      "lang": "en",
+      "kind": "outcomes",
+      "position": 4,
+      "title": "Sales While You're Busy",
+      "image": "email-marketing/outcomes/04"
+    },
+    {
+      "lang": "ar",
+      "kind": "outcomes",
+      "position": 5,
+      "title": "علاقات أقوى",
+      "image": "email-marketing/outcomes/05"
+    },
+    {
+      "lang": "en",
+      "kind": "outcomes",
+      "position": 5,
+      "title": "Stronger Relationships",
+      "image": "email-marketing/outcomes/05"
+    },
+    {
+      "lang": "ar",
+      "kind": "outcomes",
+      "position": 6,
+      "title": "أرقام واضحة",
+      "image": "email-marketing/outcomes/06"
+    },
+    {
+      "lang": "en",
+      "kind": "outcomes",
+      "position": 6,
+      "title": "Clear Numbers",
+      "image": "email-marketing/outcomes/06"
+    }
+  ]
+}

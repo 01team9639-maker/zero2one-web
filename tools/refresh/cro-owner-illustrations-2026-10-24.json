@@ -1,0 +1,2045 @@
+{
+  "note": "38 supplied CRO illustrations; folders 09_cro and 09_cro 2 were byte-identical. Full-frame WebP with lossless alpha, no source edits. Semantic bilingual bindings preserve the different why-card order. Hero reused in home and catalogue.",
+  "entries": [
+    {
+      "id": "conversion-rate-optimization/hero/01",
+      "briefId": "09-00-01",
+      "kind": "hero",
+      "number": 1,
+      "source": "/Users/mohammad/Downloads/09_cro/00_hero/01_hero.png",
+      "sourceSha256": "987245db6905a3fafe8a6faa1d7912adaa8859df8b9c7086b7c4a36e2de0e4db",
+      "width": 1800,
+      "height": 1280,
+      "sourceBytes": 1000102,
+      "arPosition": null,
+      "enPosition": null,
+      "titles": {
+        "ar": "الصورة الرئيسية للخدمة",
+        "en": "Main CRO illustration"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/hero-01-480.webp",
+          "width": 480,
+          "height": 341,
+          "bytes": 31712,
+          "sha256": "1b5d7e18fa80f0317e70a7b40a83558e4583c78e630cbb7ad96ea4416560ec11"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/hero-01-800.webp",
+          "width": 800,
+          "height": 569,
+          "bytes": 60794,
+          "sha256": "d80c7094a45c7c94d11d3388977881765ed3954a5abcfa73ae4f2e17dd594f2c"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/hero-01-1440.webp",
+          "width": 1440,
+          "height": 1024,
+          "bytes": 134556,
+          "sha256": "6fb903978e051cd1b8af8b1f1ab1b7020858673a0066978d39490f48b4b56c43"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/benefits/01",
+      "briefId": "09-01-01",
+      "kind": "benefits",
+      "number": 1,
+      "source": "/Users/mohammad/Downloads/09_cro/01_benefits/01_visitor_behaviour_analysis.png",
+      "sourceSha256": "f60959a1334b1daa03aadf0333a72b372851e848c8656967bfa31d0d226dfab3",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 2345235,
+      "arPosition": 1,
+      "enPosition": 1,
+      "titles": {
+        "ar": "تحليل سلوك الزوار",
+        "en": "Visitor behaviour analysis"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/benefits-01-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 28054,
+          "sha256": "15c6fdaa721b667c06e9236c653727e7e570499388e679e99216c257ab7063b4"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/benefits-01-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 66122,
+          "sha256": "da85e3037c39e7251784b803d61083e09e4a774ba6e38f4de79940caef312b4c"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/benefits-01-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 109638,
+          "sha256": "a34754cc705b8f1979d7b517b359cbcd1ce96347e4b0376df92495c7aa5d8f75"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/benefits/02",
+      "briefId": "09-01-02",
+      "kind": "benefits",
+      "number": 2,
+      "source": "/Users/mohammad/Downloads/09_cro/01_benefits/02_better_pages_and_checkout.png",
+      "sourceSha256": "b6847792d676e568b63f7c923472b622a1827ff43e19dbbac760d2efef639ada",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1936471,
+      "arPosition": 2,
+      "enPosition": 2,
+      "titles": {
+        "ar": "تحسين الصفحات وخطوات الطلب",
+        "en": "Better pages and checkout"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/benefits-02-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 27576,
+          "sha256": "314e1c4d1789d03f5b7d15ffbc361fa266042f55695b2365d0d8eef4fea6012a"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/benefits-02-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 64526,
+          "sha256": "83f2888f6aaa7a00ae98f5124b48b42a244c7f8fa47eb159e766c1dc664f598b"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/benefits-02-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 105922,
+          "sha256": "a35fd9eadf87237960a11c049499f6109b5b3851a41ede2231ff21304cfa5a60"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/benefits/03",
+      "briefId": "09-01-03",
+      "kind": "benefits",
+      "number": 3,
+      "source": "/Users/mohammad/Downloads/09_cro/01_benefits/03_testing_and_measurement.png",
+      "sourceSha256": "ac30ba636c2e32ad37929aa10df1bd38ad8a6bfc50962d1de08e1d4c68bf6827",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 2236566,
+      "arPosition": 3,
+      "enPosition": 3,
+      "titles": {
+        "ar": "اختبار وقياس مستمر",
+        "en": "Testing and measurement"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/benefits-03-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 25430,
+          "sha256": "02e62c8100207a8addba2c927d8f37474de8fb7d699b33aee1dc38580fbdb98f"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/benefits-03-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 64028,
+          "sha256": "332fe4b743176fb21972f85b5c8906256d619c5c517a674ce605f0c32496ad39"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/benefits-03-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 106120,
+          "sha256": "bcb1837ac280116698d5ecf0171d30b684001f856aed3e01453b2a1b533e885c"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/know/01",
+      "briefId": "09-02-01",
+      "kind": "know",
+      "number": 1,
+      "source": "/Users/mohammad/Downloads/09_cro/02_know/01_your_site_gets_good_traffic_but_orders_and_calls_are_few.png",
+      "sourceSha256": "7c68998cca4d9344f654ac8497566ade49f78d8bd74abaedc6ce3a1e67d03039",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1621472,
+      "arPosition": 1,
+      "enPosition": 1,
+      "titles": {
+        "ar": "موقعك يجلب زيارات جيدة، لكن الطلبات والاتصالات قليلة.",
+        "en": "Your site gets good traffic, but orders and calls are few."
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/know-01-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 20854,
+          "sha256": "82b6363727f49e873be30adc4fee6275d03be9f83fa61632074d411390cecb12"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/know-01-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 48686,
+          "sha256": "43a5dd3790213bf4a113e00d8a9fc45fe54a73b9b24598b2fb3c0893c98a2cdc"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/know-01-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 80518,
+          "sha256": "ae31754e92420bfe6b025c5e091d4d682bf2b1d2d861e6d7e155141253a75d3e"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/know/02",
+      "briefId": "09-02-02",
+      "kind": "know",
+      "number": 2,
+      "source": "/Users/mohammad/Downloads/09_cro/02_know/02_customers_leave_their_carts_before_paying.png",
+      "sourceSha256": "f735b3e11fe7227c35412263249a398a1d679c6a2bb7b73b57df1e5730d99657",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1648445,
+      "arPosition": 2,
+      "enPosition": 2,
+      "titles": {
+        "ar": "عملاء متجرك يتركون السلة قبل الدفع.",
+        "en": "Customers leave their carts before paying."
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/know-02-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 21940,
+          "sha256": "3e90af12a8b3dae26a92749b7591dc1a48ab17d9e917fa5ae9384b4beac92f2e"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/know-02-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 51844,
+          "sha256": "142be85054c0c24f1b3e59a940055ff5982c6dcf4ae3ea46b2c2a8cc2771879c"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/know-02-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 86528,
+          "sha256": "4afdec5aaa45d8215632e4379d5ad90e4459960b642bc2c36fd2a03dba9b84b5"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/know/03",
+      "briefId": "09-02-03",
+      "kind": "know",
+      "number": 3,
+      "source": "/Users/mohammad/Downloads/09_cro/02_know/03_your_cost_per_client_from_ads_keeps_rising.png",
+      "sourceSha256": "ef7cba9dfe28c31b35426f6472dc3b123dc7c7657397b243bdc26a62e3129148",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1636160,
+      "arPosition": 3,
+      "enPosition": 3,
+      "titles": {
+        "ar": "تكلفة العميل من الإعلانات ترتفع شهراً بعد شهر.",
+        "en": "Your cost per client from ads keeps rising."
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/know-03-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 20958,
+          "sha256": "102220944fc4fdbb5150a087df7c8175e1274c162a900598e68ecb00f6cec802"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/know-03-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 50470,
+          "sha256": "89e3df51cce29a9af6c2209f05c9495239e122cea4899c8c26ccaa63122026c8"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/know-03-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 83600,
+          "sha256": "2a4172900b9f137d30dd810b22ba209ac3cb1418aaa27541550e5a48294e79f7"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/know/04",
+      "briefId": "09-02-04",
+      "kind": "know",
+      "number": 4,
+      "source": "/Users/mohammad/Downloads/09_cro/02_know/04_visitors_don_t_understand_your_offer_in_the_first_seconds_and_leave.png",
+      "sourceSha256": "e2ef11af3d0794a8aa6d1c80789b7a5a78d9e8561777579cc88432a995e4812b",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1836006,
+      "arPosition": 4,
+      "enPosition": 4,
+      "titles": {
+        "ar": "الزائر لا يفهم عرضك في الثواني الأولى فيغادر.",
+        "en": "Visitors don't understand your offer in the first seconds and leave."
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/know-04-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 24350,
+          "sha256": "4b4272239ae3c53027ae110b786d650a572b872f1aa130e550de293656e95bc1"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/know-04-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 57234,
+          "sha256": "37c3274bc498831670929cfa8c0c759a0f32c8272694d946bd3aebe4bb06fc0e"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/know-04-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 94246,
+          "sha256": "9ffb43fd11d13df8ed424f1a16500ae548dd1b1f1db69d552989ef2814ec411c"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/know/05",
+      "briefId": "09-02-05",
+      "kind": "know",
+      "number": 5,
+      "source": "/Users/mohammad/Downloads/09_cro/02_know/05_forms_are_long_and_buttons_are_unclear.png",
+      "sourceSha256": "fc5ce1758de696c6820b2cadbc1df82747a0a034eb52398fc81dd29ecfc87e1f",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1615045,
+      "arPosition": 5,
+      "enPosition": 5,
+      "titles": {
+        "ar": "النماذج طويلة، والأزرار غير واضحة.",
+        "en": "Forms are long and buttons are unclear."
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/know-05-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 20982,
+          "sha256": "7782cce9276868f7e26fb331526115285327fb879aab7b1e3b1e169d4dcf0b22"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/know-05-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 48236,
+          "sha256": "1b78303f6ddb134f46abd32974f1d660bef785d7a0ee1691d4949c1d5bd53166"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/know-05-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 79434,
+          "sha256": "fea7fb752298617be4b53041101e3e5ce6711ad7645a68e7c990ae656db2ccb7"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/know/06",
+      "briefId": "09-02-06",
+      "kind": "know",
+      "number": 6,
+      "source": "/Users/mohammad/Downloads/09_cro/02_know/06_browsing_on_mobile_is_a_struggle_even_though_most_visitors_use_their_phones.png",
+      "sourceSha256": "baee8ad2be729a77a31491f8ed02d5126736dbe62ed065af7d03d2f59b3cf964",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1729055,
+      "arPosition": 6,
+      "enPosition": 6,
+      "titles": {
+        "ar": "التصفح على الجوال متعب، مع أن أغلب زوارك منه.",
+        "en": "Browsing on mobile is a struggle, even though most visitors use their phones."
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/know-06-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 21614,
+          "sha256": "b405147cdeb72dd5ed5e4775f5e2b19d533b01c41ec7160727b8c8f8b85393d7"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/know-06-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 50400,
+          "sha256": "f7e0f26ee96f92b95b59ad23091a25c99c10e1bbdba35cecb5eabc8b75229e7c"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/know-06-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 83678,
+          "sha256": "996f30ffb23de70af490678b66ae5030677c2488601a333898df693eb0dbb6b9"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/know/07",
+      "briefId": "09-02-07",
+      "kind": "know",
+      "number": 7,
+      "source": "/Users/mohammad/Downloads/09_cro/02_know/07_you_don_t_know_exactly_at_which_step_you_re_losing_clients.png",
+      "sourceSha256": "73adc8166f114461c7b5d8e993c7007fc75b77fdb73f54d7b06c0fd4798bf496",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1723243,
+      "arPosition": 7,
+      "enPosition": 7,
+      "titles": {
+        "ar": "لا تعرف في أي خطوة بالضبط تخسر العميل.",
+        "en": "You don't know exactly at which step you're losing clients."
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/know-07-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 27120,
+          "sha256": "b56d1be1f2443c742ac32049238dd235242d8fe1c631c3ceee26fa09a5c804e5"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/know-07-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 64914,
+          "sha256": "8af04e37ef06918d6a3fd2290cc3d2c95d2bf18aae4d5e12879792e21fbcaba3"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/know-07-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 110052,
+          "sha256": "494dccfea8f6702aa02a21bfc96a3df8a88226262290fb3d8b9855a5da2e3151"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/deliverables/01",
+      "briefId": "09-03-01",
+      "kind": "deliverables",
+      "number": 1,
+      "source": "/Users/mohammad/Downloads/09_cro/03_deliverables/01_a_full_site_review.png",
+      "sourceSha256": "3f66fd3890b73d805fa7f88cc02506e726c6772c1b18eb7ff7e68acaff297f86",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1755278,
+      "arPosition": 1,
+      "enPosition": 1,
+      "titles": {
+        "ar": "مراجعة كاملة للموقع",
+        "en": "A Full Site Review"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/deliverables-01-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 21026,
+          "sha256": "2b8ad0bef613fa24d1870921680c4c09e8377a47d69a869b5e998354634ad595"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/deliverables-01-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 49698,
+          "sha256": "ed38fa2cb510d806d987ec9ab5b581fb3e9092ab220653f4ce2f6ebba02bc9e4"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/deliverables-01-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 82880,
+          "sha256": "2cd7786b30c2c2ee5f11546efddec21f913faa0350d2abf48e9a72ed6ce126ed"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/deliverables/02",
+      "briefId": "09-03-02",
+      "kind": "deliverables",
+      "number": 2,
+      "source": "/Users/mohammad/Downloads/09_cro/03_deliverables/02_tracking_setup.png",
+      "sourceSha256": "dddc83ed8058eb8e150f517f57a52ca4da3b1ea244d35344f236e418a6278749",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1774839,
+      "arPosition": 2,
+      "enPosition": 2,
+      "titles": {
+        "ar": "التحليل والقياس",
+        "en": "Tracking Setup"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/deliverables-02-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 23854,
+          "sha256": "95bf59f5091df430ccfcd60b81032737c64bb240fa7b442a7aa536f440c3942e"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/deliverables-02-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 55220,
+          "sha256": "999ad1c2d5320a73bc84c52103b0709c1fd9136ef770dca67d8dfa80d0ae1a81"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/deliverables-02-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 91104,
+          "sha256": "03f0845c55254ce148c5ba3e155491780d728336b814ba655fc25d0ac98688ac"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/deliverables/03",
+      "briefId": "09-03-03",
+      "kind": "deliverables",
+      "number": 3,
+      "source": "/Users/mohammad/Downloads/09_cro/03_deliverables/03_visitor_behavior_analysis.png",
+      "sourceSha256": "d3a89618dadd731ec1d824c4f3e9f73cc6a0a80cf6d9b023ca75b8a1b3c0eb31",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1545661,
+      "arPosition": 3,
+      "enPosition": 3,
+      "titles": {
+        "ar": "تحليل سلوك الزوار",
+        "en": "Visitor Behavior Analysis"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/deliverables-03-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 18144,
+          "sha256": "4332dbd3c26c87ff29e52f83ed333459f993f3d7c59fccc9c8ac54e825fb984f"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/deliverables-03-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 41482,
+          "sha256": "1a01315316ade08d50852cb14cc7a5ef6bf0da51450b290c2e8c3f83ef824d73"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/deliverables-03-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 68162,
+          "sha256": "66d21a8badb61ac53455cbddbb73cd1287b671f3b29802be4954c5d64360c7f9"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/deliverables/04",
+      "briefId": "09-03-04",
+      "kind": "deliverables",
+      "number": 4,
+      "source": "/Users/mohammad/Downloads/09_cro/03_deliverables/04_your_clients_feedback.png",
+      "sourceSha256": "f2253fba7b41c4d6d1e0336c1c126a0aafc5db3bb503c2fab196d557b897fedd",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1654849,
+      "arPosition": 4,
+      "enPosition": 4,
+      "titles": {
+        "ar": "آراء عملائك",
+        "en": "Your Clients' Feedback"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/deliverables-04-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 24320,
+          "sha256": "b610f6dee7bc056c906883c80aa798cbf105fcaaf3cfadaf0aa0583382f95920"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/deliverables-04-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 55698,
+          "sha256": "2ee0150fa1df18c2f83cd15a0c83687488c03d3d1092ae7ad9ba3bf42d3c0011"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/deliverables-04-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 91698,
+          "sha256": "f3ab24af25c0777dcfd64d113eaa32ddff0915b564982aada0b789e6985bcc34"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/deliverables/05",
+      "briefId": "09-03-05",
+      "kind": "deliverables",
+      "number": 5,
+      "source": "/Users/mohammad/Downloads/09_cro/03_deliverables/05_landing_page_improvements.png",
+      "sourceSha256": "c62ee87b0a34a8921a3c397ff8c1d6c3423029f6a1018cdd52b5cd37cba8ad4b",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1535040,
+      "arPosition": 5,
+      "enPosition": 5,
+      "titles": {
+        "ar": "تحسين صفحات الهبوط",
+        "en": "Landing Page Improvements"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/deliverables-05-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 19366,
+          "sha256": "369c37b8509ccb9676fe1ffaf001f0635e531bc7f8ee1fcc5b0e92f62119cf46"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/deliverables-05-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 44698,
+          "sha256": "efee3ec4e120b25023f1c9a1902e47b4720870f484097dea4cccb7c594bb5e73"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/deliverables-05-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 73644,
+          "sha256": "bee99751ee77c0140dcd940de47300cd47dd517eb9ee53e40617a0c55ebbf1fa"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/deliverables/06",
+      "briefId": "09-03-06",
+      "kind": "deliverables",
+      "number": 6,
+      "source": "/Users/mohammad/Downloads/09_cro/03_deliverables/06_shorter_forms_and_checkout.png",
+      "sourceSha256": "3cecf4d4741884f2a22acaa961b8a463c5ac0bfa7922e23b66a21a9ed9bcfc39",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1827812,
+      "arPosition": 6,
+      "enPosition": 6,
+      "titles": {
+        "ar": "نماذج وخطوات دفع أقصر",
+        "en": "Shorter Forms and Checkout"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/deliverables-06-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 27660,
+          "sha256": "c953c0579aecd642476e47f6bbcc36e37cf1039ba37b84f4b223ff998d9c480e"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/deliverables-06-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 63776,
+          "sha256": "d3511ca7a3aef0fcfc873dcbfd5a8241ec9270879f8d1e838f4f74109741d8bb"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/deliverables-06-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 103700,
+          "sha256": "a6d1f620f8898ae8981cdd0b37b6659180c5a6e75aeff974c2048c70960e7074"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/deliverables/07",
+      "briefId": "09-03-07",
+      "kind": "deliverables",
+      "number": 7,
+      "source": "/Users/mohammad/Downloads/09_cro/03_deliverables/07_elements_that_reassure.png",
+      "sourceSha256": "334216d21abcbe4db396e2c47f82c46972b11ea21a36cd790995e5a5218971c5",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1722829,
+      "arPosition": 7,
+      "enPosition": 7,
+      "titles": {
+        "ar": "عناصر تطمئن العميل",
+        "en": "Elements That Reassure"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/deliverables-07-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 22234,
+          "sha256": "772e64ce7118f32b0347810794b02813752866cd2ada8bba83c4e08bb79ddde9"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/deliverables-07-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 52416,
+          "sha256": "79201b3d12a9803bab41114cd01e031180589679d91a4a122c801ddc9c95cf96"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/deliverables-07-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 86444,
+          "sha256": "0919c0eab7da4476ccf0c2554766db1f03f997f93ce08e76c4e78058913232e3"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/deliverables/08",
+      "briefId": "09-03-08",
+      "kind": "deliverables",
+      "number": 8,
+      "source": "/Users/mohammad/Downloads/09_cro/03_deliverables/08_a_b_testing.png",
+      "sourceSha256": "c825c1874954ac5ea91c64e5d7a3353de38ad913d728049f35f89c2722e1fa4c",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1578318,
+      "arPosition": 8,
+      "enPosition": 8,
+      "titles": {
+        "ar": "اختبارات A/B",
+        "en": "A/B Testing"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/deliverables-08-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 21350,
+          "sha256": "c538b75529a9b13278b86c0fdef8844f82119f864c20c18a21ac0853ce9cd1de"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/deliverables-08-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 50180,
+          "sha256": "31892e55d170fa03c1e90d1c223e3d63662a7eed8c45ae10fb926fd9088a0ce9"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/deliverables-08-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 83454,
+          "sha256": "100e21063e72396dd727b7827d109890c41a64085c5c813d6d3adf510f7a7de1"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/deliverables/09",
+      "briefId": "09-03-09",
+      "kind": "deliverables",
+      "number": 9,
+      "source": "/Users/mohammad/Downloads/09_cro/03_deliverables/09_monthly_report_and_review_meeting.png",
+      "sourceSha256": "8386634da9c475f60bc866c3cfc142e8ae51516db0b8b9aa7fc8deb5290856d6",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1812076,
+      "arPosition": 9,
+      "enPosition": 9,
+      "titles": {
+        "ar": "تقرير شهري واجتماع متابعة",
+        "en": "Monthly Report and Review Meeting"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/deliverables-09-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 22928,
+          "sha256": "a510e88d9fe6f0fa1ead22a4c2845a41fe15e8b77944a9b4c4af4e109c1765cd"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/deliverables-09-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 53970,
+          "sha256": "54963fafcc886d7eb6721e8a0a259572e3adec3661cf0d5ac06f3940412e421f"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/deliverables-09-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 90264,
+          "sha256": "fc04f7c88e18eb3287c03805c5bdf8c93344fcce13ff2a8bee18703b0bb0e66d"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/why/01",
+      "briefId": "09-04-01",
+      "kind": "why",
+      "number": 1,
+      "source": "/Users/mohammad/Downloads/09_cro/04_why/01_biggest_wins_first.png",
+      "sourceSha256": "0b48cdadeae97a4ec858fcbbca63b669515971c39c774b95a6c88c0b581916c2",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1459753,
+      "arPosition": 1,
+      "enPosition": 4,
+      "titles": {
+        "ar": "الأهم أولاً",
+        "en": "Biggest Wins First"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/why-01-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 20980,
+          "sha256": "18cba8afa83f3a587883cce39e48c198a1a9b55c6b2690fb4ec6a27f0e290053"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/why-01-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 49634,
+          "sha256": "b45f4e3f8636acdde41e7709724ae67070cd337454e61ad93aa5808bc8acfb34"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/why-01-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 82638,
+          "sha256": "1a61830438b942f761ccf5f0fff5a6171749ef0c887f04409604f8fcd14f833d"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/why/02",
+      "briefId": "09-04-02",
+      "kind": "why",
+      "number": 2,
+      "source": "/Users/mohammad/Downloads/09_cro/04_why/02_every_change_has_a_reason.png",
+      "sourceSha256": "cec83f47195d54394eb9ceb6dde2afae45ba90ef5dea9bc0a03b16fd0ac58bb3",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1553994,
+      "arPosition": 2,
+      "enPosition": 1,
+      "titles": {
+        "ar": "كل تعديل له سبب",
+        "en": "Every Change Has a Reason"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/why-02-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 20976,
+          "sha256": "ad35eb4a4d25e80c3bbf2180e94c1171ed5e30aa5f2eedc952681d7b293294fb"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/why-02-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 49058,
+          "sha256": "b248c9551d05bde9ceb9f7252781785fd84e5c1079a5a4dd9e805908c3d85d94"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/why-02-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 81360,
+          "sha256": "7b4748a6942f473e4b6add7d3e42364be3508e8cb8bc912523e04c41e4ec83f1"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/why/03",
+      "briefId": "09-04-03",
+      "kind": "why",
+      "number": 3,
+      "source": "/Users/mohammad/Downloads/09_cro/04_why/03_95_client_retention.png",
+      "sourceSha256": "67e5b637fa6d1e20b7335663e6e238b593cb4003b760b01ce77a0fad733e6dfa",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 2030375,
+      "arPosition": 3,
+      "enPosition": 2,
+      "titles": {
+        "ar": "عملاء سعداء",
+        "en": "95% Client Retention"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/why-03-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 28042,
+          "sha256": "bb06a43df27ca17417d2a40baef0fc86924c9052ff2519b8195b7a9b9502f157"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/why-03-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 66094,
+          "sha256": "1e48d2b807c31933a52ccf7ee4ebb93438683c0f71f2f21b220d075c4f82b3e6"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/why-03-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 111838,
+          "sha256": "101448aaf9b5279b0d17820a4d0135c8a533989d53c7f3361c3780a270676930"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/why/04",
+      "briefId": "09-04-04",
+      "kind": "why",
+      "number": 4,
+      "source": "/Users/mohammad/Downloads/09_cro/04_why/04_we_recommend_and_build_in_one_team.png",
+      "sourceSha256": "36a34bdcb79f692861228f7d9e74a53c0b63424fc371af4e15e5b1b9f1efd37a",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1863647,
+      "arPosition": 4,
+      "enPosition": 3,
+      "titles": {
+        "ar": "نقترح وننفذ في نفس الفريق",
+        "en": "We Recommend and Build in One Team"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/why-04-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 25284,
+          "sha256": "e7235a548076aa503b2f37b9826e69ab498e786dc013e22afc5732dc9495fde1"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/why-04-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 60570,
+          "sha256": "76816be5506e9f627e96ee7bb7c74fc143cfa0448186295820b222a8901d7993"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/why-04-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 101312,
+          "sha256": "0fac73781e32ee7268692deb28c5dbe1eec4c8699b18d28870bf6bd8ccef6df1"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/why/05",
+      "briefId": "09-04-05",
+      "kind": "why",
+      "number": 5,
+      "source": "/Users/mohammad/Downloads/09_cro/04_why/05_we_know_saudi_shoppers.png",
+      "sourceSha256": "d581cacd1a5edad0727ee3a5b14ea2ad468ec010f602242d4d1288f556514442",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1896563,
+      "arPosition": 5,
+      "enPosition": 5,
+      "titles": {
+        "ar": "نعرف العميل السعودي",
+        "en": "We Know Saudi Shoppers"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/why-05-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 21288,
+          "sha256": "696a049aa99631dc398f54bd96bc6a4f8d554754ffc8be2cfa1393e31be15df0"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/why-05-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 49656,
+          "sha256": "f422859af377d992ad75f530cb2210d4f9da3eaa1a95dcbb20bba314cf746fea"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/why-05-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 82122,
+          "sha256": "5dc210f5b16be8e8d7757159417bd3f566bb4dde595118327cdc19445368a85f"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/why/06",
+      "briefId": "09-04-06",
+      "kind": "why",
+      "number": 6,
+      "source": "/Users/mohammad/Downloads/09_cro/04_why/06_traffic_from_every_channel_benefits.png",
+      "sourceSha256": "1d4d02eb1bbd0aa97299b0ca5653e4a555ff54470bbfe40399d508a95dffce48",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1841643,
+      "arPosition": 6,
+      "enPosition": 6,
+      "titles": {
+        "ar": "زياراتك من كل قناة تسويق",
+        "en": "Traffic From Every Channel Benefits"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/why-06-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 27740,
+          "sha256": "b53034078ef0206cf8ff122f567b30e2aa1fd2367c38680626062e95f1fa64b0"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/why-06-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 64882,
+          "sha256": "3048c8498dd2e36f7b0e1a1e8b3b9002e7e11425ba420fa1489b578132992a7a"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/why-06-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 109524,
+          "sha256": "12187b5343730bdd2ca2f5ea153c3c80b7bbf97ab9c735ccf037f21555720c7b"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/audience/01",
+      "briefId": "09-05-01",
+      "kind": "audience",
+      "number": 1,
+      "source": "/Users/mohammad/Downloads/09_cro/05_audience/01_sites_with_traffic_but_no_orders.png",
+      "sourceSha256": "a5187853b049fd1af830cd1240e04c41f4ac4d2d575232f5c961e424b248eb35",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1480728,
+      "arPosition": 1,
+      "enPosition": 1,
+      "titles": {
+        "ar": "مواقع بزيارات بلا طلبات",
+        "en": "Sites With Traffic but No Orders"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/audience-01-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 19832,
+          "sha256": "1a362ed84186bb30383bb146300b6148a5c993d474c6134abbffd9ab7a2bb41c"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/audience-01-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 47288,
+          "sha256": "890808ff33d0dcefc38f4e0e2c4625cf2fdd68cbea787b21437b9845979831aa"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/audience-01-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 79542,
+          "sha256": "8673a6fdc16b50bcb69e8b3bbfd80789ef9e8423a1eb31dca8e45e4b9a802894"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/audience/02",
+      "briefId": "09-05-02",
+      "kind": "audience",
+      "number": 2,
+      "source": "/Users/mohammad/Downloads/09_cro/05_audience/02_online_stores.png",
+      "sourceSha256": "2e6e2336c6dd82be048befd3315f2b201c4795427a32f5342e29d13ae33698ac",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1849364,
+      "arPosition": 2,
+      "enPosition": 2,
+      "titles": {
+        "ar": "المتاجر الإلكترونية",
+        "en": "Online Stores"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/audience-02-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 21528,
+          "sha256": "6a4fc29ef5fddd677ee3bc6d892e332ba9433e19f1d4446909c8fb7dd9f079e5"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/audience-02-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 49802,
+          "sha256": "f2055bb27bb433626a1c18680441e44f6e952d38141d558c6a9de53b88d55dbc"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/audience-02-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 82606,
+          "sha256": "210f6b5ed3ea8cd4ec3d1fe486f3a1433ff0b9150ee21a751e06b932b832504a"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/audience/03",
+      "briefId": "09-05-03",
+      "kind": "audience",
+      "number": 3,
+      "source": "/Users/mohammad/Downloads/09_cro/05_audience/03_costly_campaigns.png",
+      "sourceSha256": "b77d81050096d2a8e67690f34b9201a2c8d6252adbafe49323df5364af349dbe",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1714308,
+      "arPosition": 3,
+      "enPosition": 3,
+      "titles": {
+        "ar": "الحملات المكلفة",
+        "en": "Costly Campaigns"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/audience-03-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 26894,
+          "sha256": "13b46d33575a64a0be725b9bc960867f776e8970ff82319ba78acdfcb796489a"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/audience-03-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 64340,
+          "sha256": "2430cc9b7cbefd82cc00df6cab9ceddd411c3ad82ec4fd10f3fac4bd8aa345f3"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/audience-03-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 109620,
+          "sha256": "6c5b1b15798089d8545e73be40f11599b70d2147c96f38e5dcabdde9e8f52d75"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/audience/04",
+      "briefId": "09-05-04",
+      "kind": "audience",
+      "number": 4,
+      "source": "/Users/mohammad/Downloads/09_cro/05_audience/04_landing_pages.png",
+      "sourceSha256": "74551916d4635b17ca3164906fa8ad46ed871192e9e604395b1a1a3e44885651",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1606123,
+      "arPosition": 4,
+      "enPosition": 4,
+      "titles": {
+        "ar": "صفحات الاعلانات",
+        "en": "Landing Pages"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/audience-04-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 18278,
+          "sha256": "082bd2e23a644b82252b73a0b7f62b91bad860b4048e228e4f7202a56e6ea13d"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/audience-04-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 41972,
+          "sha256": "9df0700852bc205f9b5f23e8d51433ab5807301792009626a18c0eab979db681"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/audience-04-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 70190,
+          "sha256": "cf22874ae11c685c57921aa535aeb700c79ec7970497ae5d491a836b15f32170"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/audience/05",
+      "briefId": "09-05-05",
+      "kind": "audience",
+      "number": 5,
+      "source": "/Users/mohammad/Downloads/09_cro/05_audience/05_service_websites.png",
+      "sourceSha256": "fe4466c86832dcacd71d90e8d108c16cf81b8a7bbc47851c2ee80fbd7d5d7509",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1779452,
+      "arPosition": 5,
+      "enPosition": 5,
+      "titles": {
+        "ar": "مواقع الخدمات",
+        "en": "Service Websites"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/audience-05-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 25642,
+          "sha256": "ab2d8f6c77173adbc96deb55632e3f59c745f3dee62eae876100ca3e56a313bc"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/audience-05-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 60722,
+          "sha256": "ed521207e3e2e231513fb13fecd768af21684146ca43890b699f1477d10c86f2"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/audience-05-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 101704,
+          "sha256": "e222a973d02ee8488f17ad89210a6814a206eef322bd42007c671b3d5a68a381"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/audience/06",
+      "briefId": "09-05-06",
+      "kind": "audience",
+      "number": 6,
+      "source": "/Users/mohammad/Downloads/09_cro/05_audience/06_before_raising_the_budget.png",
+      "sourceSha256": "ff112fabd1cc6caf497b8e2b3f16e3b5d1fb2232a92b15f6bf0e7d88aad44d81",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1743429,
+      "arPosition": 6,
+      "enPosition": 6,
+      "titles": {
+        "ar": "قبل رفع الميزانية",
+        "en": "Before Raising the Budget"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/audience-06-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 22314,
+          "sha256": "60bd38c92b9e1f4acf392953d7a9cc8cdbc98c133f186e10f5af59a14876ad53"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/audience-06-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 53046,
+          "sha256": "c43bc0c69607f13475004b52dffe528e30ed8842b1374c881495301a4d0d752e"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/audience-06-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 89118,
+          "sha256": "03b6648e6fc2e39b80528a0bd6fd5f41ceed4369e5b46bf0de4470daef302dc0"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/outcomes/01",
+      "briefId": "09-06-01",
+      "kind": "outcomes",
+      "number": 1,
+      "source": "/Users/mohammad/Downloads/09_cro/06_outcomes/01_more_clients_from_the_same_traffic.png",
+      "sourceSha256": "80ec825c566891c94c9b3304d13cd10df00a8f2de0b23332fdd17e3f011144d8",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1799717,
+      "arPosition": 1,
+      "enPosition": 1,
+      "titles": {
+        "ar": "عملاء أكثر بنفس الزيارات",
+        "en": "More Clients From the Same Traffic"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/outcomes-01-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 26686,
+          "sha256": "c3e369eb47b5f03819c218fde0d959c686864eb17ac04c2e1be3853404d09b3a"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/outcomes-01-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 63614,
+          "sha256": "77130b43f0ab29493b3f878653b587daa7dd74f464bfa9bf47cb83d40a412848"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/outcomes-01-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 106242,
+          "sha256": "a473e94d6748d732aaa1b44d3715a989805fea2d39a7d4709b29a512e97c3305"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/outcomes/02",
+      "briefId": "09-06-02",
+      "kind": "outcomes",
+      "number": 2,
+      "source": "/Users/mohammad/Downloads/09_cro/06_outcomes/02_lower_cost_per_client.png",
+      "sourceSha256": "0b3d87e0e1fe8b540f2e311cb57c872d159c2145454ab0cc52fc3188b58f9561",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1773077,
+      "arPosition": 2,
+      "enPosition": 2,
+      "titles": {
+        "ar": "تكلفة أقل لكل عميل",
+        "en": "Lower Cost Per Client"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/outcomes-02-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 22560,
+          "sha256": "696f376bfdb83ad9996af57bf22a97974e033c19d5aeae3e1c11cdfe3aa4f4b2"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/outcomes-02-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 53020,
+          "sha256": "83eaaeb20303091ae02a62415bc2e0129ec9dbe98cac6edd5cdc91614d3f061c"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/outcomes-02-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 88322,
+          "sha256": "d8e81bde7788ed4994524165cf28f2ce3fe488587c3a4c024b0a9662604aca8d"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/outcomes/03",
+      "briefId": "09-06-03",
+      "kind": "outcomes",
+      "number": 3,
+      "source": "/Users/mohammad/Downloads/09_cro/06_outcomes/03_more_completed_checkouts.png",
+      "sourceSha256": "ab1c28eec94c5b64984c423dd5f43bfffcecc41cd4c06b199d18b3d79c44c813",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1550243,
+      "arPosition": 3,
+      "enPosition": 3,
+      "titles": {
+        "ar": "سلات مكتملة أكثر",
+        "en": "More Completed Checkouts"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/outcomes-03-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 22296,
+          "sha256": "f7a2fe36ac3f71f4c428259602e98d495ec45831b29da2932c0007e41cbd062d"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/outcomes-03-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 54918,
+          "sha256": "5793edb0a4cb2dc24fcd417d422ffb242658d4242ab502321a87e25e9a7f1d72"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/outcomes-03-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 92742,
+          "sha256": "4ba7551ef03ccf0adebc98e013ec607a880a6020239d8b60290bfd9dca7193c3"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/outcomes/04",
+      "briefId": "09-06-04",
+      "kind": "outcomes",
+      "number": 4,
+      "source": "/Users/mohammad/Downloads/09_cro/06_outcomes/04_easier_on_mobile.png",
+      "sourceSha256": "f5a7b152ae8eda6d6de4d4516c9607a07413d6f8b0bb628d9f07c704ddc6a6ac",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1565211,
+      "arPosition": 4,
+      "enPosition": 4,
+      "titles": {
+        "ar": "تجربة أسهل على الجوال",
+        "en": "Easier on Mobile"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/outcomes-04-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 19932,
+          "sha256": "a8cd83657388b823cbeeb912ed9a20cfc7352f4cd8055b48bcb0e3299aaced26"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/outcomes-04-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 45472,
+          "sha256": "8f5c5613a51d4539c303379275d9d4480d744fc70c3e6995cc8f677e3099538e"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/outcomes-04-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 74928,
+          "sha256": "2708e7594a53df85d914801da53623f01fe35c9717f412ceff6cb40351c21517"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/outcomes/05",
+      "briefId": "09-06-05",
+      "kind": "outcomes",
+      "number": 5,
+      "source": "/Users/mohammad/Downloads/09_cro/06_outcomes/05_decisions_based_on_numbers.png",
+      "sourceSha256": "64228bd2ff0ae93cc03c277350e0d1d59b946d27031dabd1a944c4d6941213ac",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1717235,
+      "arPosition": 5,
+      "enPosition": 5,
+      "titles": {
+        "ar": "قرارات بالأرقام",
+        "en": "Decisions Based on Numbers"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/outcomes-05-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 21526,
+          "sha256": "b053bd0261cb9acd3ed01f623f7eb9fca36d396c3ca4ac872885907d27ccafd7"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/outcomes-05-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 49234,
+          "sha256": "4752d48873d35b6eb107f3aad15cdabd9473161455fbd2b9111de52a5d1f2de3"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/outcomes-05-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 81778,
+          "sha256": "c4100d1e0600044493aadc17d75e3785471b9759be847086883feacc914a6f99"
+        }
+      ]
+    },
+    {
+      "id": "conversion-rate-optimization/outcomes/06",
+      "briefId": "09-06-06",
+      "kind": "outcomes",
+      "number": 6,
+      "source": "/Users/mohammad/Downloads/09_cro/06_outcomes/06_every_channel_delivers_more.png",
+      "sourceSha256": "296c2c81aa08baf29d6bdbd6d3e956df883443fb65c90ef1b0c1760d9c41c6fa",
+      "width": 2048,
+      "height": 2048,
+      "sourceBytes": 1842883,
+      "arPosition": 6,
+      "enPosition": 6,
+      "titles": {
+        "ar": "كل قناة تعطي أكثر",
+        "en": "Every Channel Delivers More"
+      },
+      "outputs": [
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/outcomes-06-320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 27070,
+          "sha256": "db680eac1509cb24e01a84c3072c374bd3b0c1bc950f323e9d9e1e0c7e1e5684"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/outcomes-06-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 64664,
+          "sha256": "e6b557fd66f763f633306c4943f92a718b31edf7c533362083ce75a7c10356c8"
+        },
+        {
+          "url": "/assets/images/service-studio/cro-owner-2026-10/outcomes-06-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 108356,
+          "sha256": "7e600bb11e64e667d533bc622ae259b076f677a1f02163bc462633f66f000126"
+        }
+      ]
+    }
+  ],
+  "bindings": [
+    {
+      "lang": "ar",
+      "kind": "benefits",
+      "position": 1,
+      "title": "تحليل سلوك الزوار",
+      "image": "conversion-rate-optimization/benefits/01"
+    },
+    {
+      "lang": "en",
+      "kind": "benefits",
+      "position": 1,
+      "title": "Visitor behaviour analysis",
+      "image": "conversion-rate-optimization/benefits/01"
+    },
+    {
+      "lang": "ar",
+      "kind": "benefits",
+      "position": 2,
+      "title": "تحسين الصفحات وخطوات الطلب",
+      "image": "conversion-rate-optimization/benefits/02"
+    },
+    {
+      "lang": "en",
+      "kind": "benefits",
+      "position": 2,
+      "title": "Better pages and checkout",
+      "image": "conversion-rate-optimization/benefits/02"
+    },
+    {
+      "lang": "ar",
+      "kind": "benefits",
+      "position": 3,
+      "title": "اختبار وقياس مستمر",
+      "image": "conversion-rate-optimization/benefits/03"
+    },
+    {
+      "lang": "en",
+      "kind": "benefits",
+      "position": 3,
+      "title": "Testing and measurement",
+      "image": "conversion-rate-optimization/benefits/03"
+    },
+    {
+      "lang": "ar",
+      "kind": "know",
+      "position": 1,
+      "title": "موقعك يجلب زيارات جيدة، لكن الطلبات والاتصالات قليلة.",
+      "image": "conversion-rate-optimization/know/01"
+    },
+    {
+      "lang": "en",
+      "kind": "know",
+      "position": 1,
+      "title": "Your site gets good traffic, but orders and calls are few.",
+      "image": "conversion-rate-optimization/know/01"
+    },
+    {
+      "lang": "ar",
+      "kind": "know",
+      "position": 2,
+      "title": "عملاء متجرك يتركون السلة قبل الدفع.",
+      "image": "conversion-rate-optimization/know/02"
+    },
+    {
+      "lang": "en",
+      "kind": "know",
+      "position": 2,
+      "title": "Customers leave their carts before paying.",
+      "image": "conversion-rate-optimization/know/02"
+    },
+    {
+      "lang": "ar",
+      "kind": "know",
+      "position": 3,
+      "title": "تكلفة العميل من الإعلانات ترتفع شهراً بعد شهر.",
+      "image": "conversion-rate-optimization/know/03"
+    },
+    {
+      "lang": "en",
+      "kind": "know",
+      "position": 3,
+      "title": "Your cost per client from ads keeps rising.",
+      "image": "conversion-rate-optimization/know/03"
+    },
+    {
+      "lang": "ar",
+      "kind": "know",
+      "position": 4,
+      "title": "الزائر لا يفهم عرضك في الثواني الأولى فيغادر.",
+      "image": "conversion-rate-optimization/know/04"
+    },
+    {
+      "lang": "en",
+      "kind": "know",
+      "position": 4,
+      "title": "Visitors don't understand your offer in the first seconds and leave.",
+      "image": "conversion-rate-optimization/know/04"
+    },
+    {
+      "lang": "ar",
+      "kind": "know",
+      "position": 5,
+      "title": "النماذج طويلة، والأزرار غير واضحة.",
+      "image": "conversion-rate-optimization/know/05"
+    },
+    {
+      "lang": "en",
+      "kind": "know",
+      "position": 5,
+      "title": "Forms are long and buttons are unclear.",
+      "image": "conversion-rate-optimization/know/05"
+    },
+    {
+      "lang": "ar",
+      "kind": "know",
+      "position": 6,
+      "title": "التصفح على الجوال متعب، مع أن أغلب زوارك منه.",
+      "image": "conversion-rate-optimization/know/06"
+    },
+    {
+      "lang": "en",
+      "kind": "know",
+      "position": 6,
+      "title": "Browsing on mobile is a struggle, even though most visitors use their phones.",
+      "image": "conversion-rate-optimization/know/06"
+    },
+    {
+      "lang": "ar",
+      "kind": "know",
+      "position": 7,
+      "title": "لا تعرف في أي خطوة بالضبط تخسر العميل.",
+      "image": "conversion-rate-optimization/know/07"
+    },
+    {
+      "lang": "en",
+      "kind": "know",
+      "position": 7,
+      "title": "You don't know exactly at which step you're losing clients.",
+      "image": "conversion-rate-optimization/know/07"
+    },
+    {
+      "lang": "ar",
+      "kind": "deliverables",
+      "position": 1,
+      "title": "مراجعة كاملة للموقع",
+      "image": "conversion-rate-optimization/deliverables/01"
+    },
+    {
+      "lang": "en",
+      "kind": "deliverables",
+      "position": 1,
+      "title": "A Full Site Review",
+      "image": "conversion-rate-optimization/deliverables/01"
+    },
+    {
+      "lang": "ar",
+      "kind": "deliverables",
+      "position": 2,
+      "title": "التحليل والقياس",
+      "image": "conversion-rate-optimization/deliverables/02"
+    },
+    {
+      "lang": "en",
+      "kind": "deliverables",
+      "position": 2,
+      "title": "Tracking Setup",
+      "image": "conversion-rate-optimization/deliverables/02"
+    },
+    {
+      "lang": "ar",
+      "kind": "deliverables",
+      "position": 3,
+      "title": "تحليل سلوك الزوار",
+      "image": "conversion-rate-optimization/deliverables/03"
+    },
+    {
+      "lang": "en",
+      "kind": "deliverables",
+      "position": 3,
+      "title": "Visitor Behavior Analysis",
+      "image": "conversion-rate-optimization/deliverables/03"
+    },
+    {
+      "lang": "ar",
+      "kind": "deliverables",
+      "position": 4,
+      "title": "آراء عملائك",
+      "image": "conversion-rate-optimization/deliverables/04"
+    },
+    {
+      "lang": "en",
+      "kind": "deliverables",
+      "position": 4,
+      "title": "Your Clients' Feedback",
+      "image": "conversion-rate-optimization/deliverables/04"
+    },
+    {
+      "lang": "ar",
+      "kind": "deliverables",
+      "position": 5,
+      "title": "تحسين صفحات الهبوط",
+      "image": "conversion-rate-optimization/deliverables/05"
+    },
+    {
+      "lang": "en",
+      "kind": "deliverables",
+      "position": 5,
+      "title": "Landing Page Improvements",
+      "image": "conversion-rate-optimization/deliverables/05"
+    },
+    {
+      "lang": "ar",
+      "kind": "deliverables",
+      "position": 6,
+      "title": "نماذج وخطوات دفع أقصر",
+      "image": "conversion-rate-optimization/deliverables/06"
+    },
+    {
+      "lang": "en",
+      "kind": "deliverables",
+      "position": 6,
+      "title": "Shorter Forms and Checkout",
+      "image": "conversion-rate-optimization/deliverables/06"
+    },
+    {
+      "lang": "ar",
+      "kind": "deliverables",
+      "position": 7,
+      "title": "عناصر تطمئن العميل",
+      "image": "conversion-rate-optimization/deliverables/07"
+    },
+    {
+      "lang": "en",
+      "kind": "deliverables",
+      "position": 7,
+      "title": "Elements That Reassure",
+      "image": "conversion-rate-optimization/deliverables/07"
+    },
+    {
+      "lang": "ar",
+      "kind": "deliverables",
+      "position": 8,
+      "title": "اختبارات A/B",
+      "image": "conversion-rate-optimization/deliverables/08"
+    },
+    {
+      "lang": "en",
+      "kind": "deliverables",
+      "position": 8,
+      "title": "A/B Testing",
+      "image": "conversion-rate-optimization/deliverables/08"
+    },
+    {
+      "lang": "ar",
+      "kind": "deliverables",
+      "position": 9,
+      "title": "تقرير شهري واجتماع متابعة",
+      "image": "conversion-rate-optimization/deliverables/09"
+    },
+    {
+      "lang": "en",
+      "kind": "deliverables",
+      "position": 9,
+      "title": "Monthly Report and Review Meeting",
+      "image": "conversion-rate-optimization/deliverables/09"
+    },
+    {
+      "lang": "ar",
+      "kind": "why",
+      "position": 1,
+      "title": "الأهم أولاً",
+      "image": "conversion-rate-optimization/why/01"
+    },
+    {
+      "lang": "en",
+      "kind": "why",
+      "position": 4,
+      "title": "Biggest Wins First",
+      "image": "conversion-rate-optimization/why/01"
+    },
+    {
+      "lang": "ar",
+      "kind": "why",
+      "position": 2,
+      "title": "كل تعديل له سبب",
+      "image": "conversion-rate-optimization/why/02"
+    },
+    {
+      "lang": "en",
+      "kind": "why",
+      "position": 1,
+      "title": "Every Change Has a Reason",
+      "image": "conversion-rate-optimization/why/02"
+    },
+    {
+      "lang": "ar",
+      "kind": "why",
+      "position": 3,
+      "title": "عملاء سعداء",
+      "image": "conversion-rate-optimization/why/03"
+    },
+    {
+      "lang": "en",
+      "kind": "why",
+      "position": 2,
+      "title": "95% Client Retention",
+      "image": "conversion-rate-optimization/why/03"
+    },
+    {
+      "lang": "ar",
+      "kind": "why",
+      "position": 4,
+      "title": "نقترح وننفذ في نفس الفريق",
+      "image": "conversion-rate-optimization/why/04"
+    },
+    {
+      "lang": "en",
+      "kind": "why",
+      "position": 3,
+      "title": "We Recommend and Build in One Team",
+      "image": "conversion-rate-optimization/why/04"
+    },
+    {
+      "lang": "ar",
+      "kind": "why",
+      "position": 5,
+      "title": "نعرف العميل السعودي",
+      "image": "conversion-rate-optimization/why/05"
+    },
+    {
+      "lang": "en",
+      "kind": "why",
+      "position": 5,
+      "title": "We Know Saudi Shoppers",
+      "image": "conversion-rate-optimization/why/05"
+    },
+    {
+      "lang": "ar",
+      "kind": "why",
+      "position": 6,
+      "title": "زياراتك من كل قناة تسويق",
+      "image": "conversion-rate-optimization/why/06"
+    },
+    {
+      "lang": "en",
+      "kind": "why",
+      "position": 6,
+      "title": "Traffic From Every Channel Benefits",
+      "image": "conversion-rate-optimization/why/06"
+    },
+    {
+      "lang": "ar",
+      "kind": "audience",
+      "position": 1,
+      "title": "مواقع بزيارات بلا طلبات",
+      "image": "conversion-rate-optimization/audience/01"
+    },
+    {
+      "lang": "en",
+      "kind": "audience",
+      "position": 1,
+      "title": "Sites With Traffic but No Orders",
+      "image": "conversion-rate-optimization/audience/01"
+    },
+    {
+      "lang": "ar",
+      "kind": "audience",
+      "position": 2,
+      "title": "المتاجر الإلكترونية",
+      "image": "conversion-rate-optimization/audience/02"
+    },
+    {
+      "lang": "en",
+      "kind": "audience",
+      "position": 2,
+      "title": "Online Stores",
+      "image": "conversion-rate-optimization/audience/02"
+    },
+    {
+      "lang": "ar",
+      "kind": "audience",
+      "position": 3,
+      "title": "الحملات المكلفة",
+      "image": "conversion-rate-optimization/audience/03"
+    },
+    {
+      "lang": "en",
+      "kind": "audience",
+      "position": 3,
+      "title": "Costly Campaigns",
+      "image": "conversion-rate-optimization/audience/03"
+    },
+    {
+      "lang": "ar",
+      "kind": "audience",
+      "position": 4,
+      "title": "صفحات الاعلانات",
+      "image": "conversion-rate-optimization/audience/04"
+    },
+    {
+      "lang": "en",
+      "kind": "audience",
+      "position": 4,
+      "title": "Landing Pages",
+      "image": "conversion-rate-optimization/audience/04"
+    },
+    {
+      "lang": "ar",
+      "kind": "audience",
+      "position": 5,
+      "title": "مواقع الخدمات",
+      "image": "conversion-rate-optimization/audience/05"
+    },
+    {
+      "lang": "en",
+      "kind": "audience",
+      "position": 5,
+      "title": "Service Websites",
+      "image": "conversion-rate-optimization/audience/05"
+    },
+    {
+      "lang": "ar",
+      "kind": "audience",
+      "position": 6,
+      "title": "قبل رفع الميزانية",
+      "image": "conversion-rate-optimization/audience/06"
+    },
+    {
+      "lang": "en",
+      "kind": "audience",
+      "position": 6,
+      "title": "Before Raising the Budget",
+      "image": "conversion-rate-optimization/audience/06"
+    },
+    {
+      "lang": "ar",
+      "kind": "outcomes",
+      "position": 1,
+      "title": "عملاء أكثر بنفس الزيارات",
+      "image": "conversion-rate-optimization/outcomes/01"
+    },
+    {
+      "lang": "en",
+      "kind": "outcomes",
+      "position": 1,
+      "title": "More Clients From the Same Traffic",
+      "image": "conversion-rate-optimization/outcomes/01"
+    },
+    {
+      "lang": "ar",
+      "kind": "outcomes",
+      "position": 2,
+      "title": "تكلفة أقل لكل عميل",
+      "image": "conversion-rate-optimization/outcomes/02"
+    },
+    {
+      "lang": "en",
+      "kind": "outcomes",
+      "position": 2,
+      "title": "Lower Cost Per Client",
+      "image": "conversion-rate-optimization/outcomes/02"
+    },
+    {
+      "lang": "ar",
+      "kind": "outcomes",
+      "position": 3,
+      "title": "سلات مكتملة أكثر",
+      "image": "conversion-rate-optimization/outcomes/03"
+    },
+    {
+      "lang": "en",
+      "kind": "outcomes",
+      "position": 3,
+      "title": "More Completed Checkouts",
+      "image": "conversion-rate-optimization/outcomes/03"
+    },
+    {
+      "lang": "ar",
+      "kind": "outcomes",
+      "position": 4,
+      "title": "تجربة أسهل على الجوال",
+      "image": "conversion-rate-optimization/outcomes/04"
+    },
+    {
+      "lang": "en",
+      "kind": "outcomes",
+      "position": 4,
+      "title": "Easier on Mobile",
+      "image": "conversion-rate-optimization/outcomes/04"
+    },
+    {
+      "lang": "ar",
+      "kind": "outcomes",
+      "position": 5,
+      "title": "قرارات بالأرقام",
+      "image": "conversion-rate-optimization/outcomes/05"
+    },
+    {
+      "lang": "en",
+      "kind": "outcomes",
+      "position": 5,
+      "title": "Decisions Based on Numbers",
+      "image": "conversion-rate-optimization/outcomes/05"
+    },
+    {
+      "lang": "ar",
+      "kind": "outcomes",
+      "position": 6,
+      "title": "كل قناة تعطي أكثر",
+      "image": "conversion-rate-optimization/outcomes/06"
+    },
+    {
+      "lang": "en",
+      "kind": "outcomes",
+      "position": 6,
+      "title": "Every Channel Delivers More",
+      "image": "conversion-rate-optimization/outcomes/06"
+    }
+  ]
+}

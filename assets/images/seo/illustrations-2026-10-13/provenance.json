@@ -5,7 +5,7 @@
     {
       "group": "know",
       "stem": "01_new_website_visibility",
-      "source": "owner-supplied/SEO_7_Transparent_Illustrations/01_new_website_visibility.png",
+      "source": "/Users/mohammad/Downloads/SEO_7_Transparent_Illustrations/01_new_website_visibility.png",
       "sha256": "959fc2f6c5294e12b6e8c40c5176e9a77bb98c92150e8a3be16af4db8f3c8f07",
       "width": 377,
       "height": 375,
@@ -27,7 +27,7 @@
     {
       "group": "know",
       "stem": "02_no_traffic_or_leads",
-      "source": "owner-supplied/SEO_7_Transparent_Illustrations/02_no_traffic_or_leads.png",
+      "source": "/Users/mohammad/Downloads/SEO_7_Transparent_Illustrations/02_no_traffic_or_leads.png",
       "sha256": "d2dad5186fa61e33639eb5bb3908c52e949aed7c2873321c196b29128d4c8d46",
       "width": 390,
       "height": 361,
@@ -49,7 +49,7 @@
     {
       "group": "know",
       "stem": "03_missing_google_maps",
-      "source": "owner-supplied/SEO_7_Transparent_Illustrations/03_missing_google_maps.png",
+      "source": "/Users/mohammad/Downloads/SEO_7_Transparent_Illustrations/03_missing_google_maps.png",
       "sha256": "ecd01edd9ea82697b23ca1d3b9ce94545cc39fb55697de931e6282674f586878",
       "width": 395,
       "height": 415,
@@ -71,7 +71,7 @@
     {
       "group": "know",
       "stem": "04_competitors_dominating",
-      "source": "owner-supplied/SEO_7_Transparent_Illustrations/04_competitors_dominating.png",
+      "source": "/Users/mohammad/Downloads/SEO_7_Transparent_Illustrations/04_competitors_dominating.png",
       "sha256": "235b2cdd7e29ea0f721e0cef83a7fefdfc0c65ec8f930d272972e7f3fb2c4b20",
       "width": 370,
       "height": 453,
@@ -93,7 +93,7 @@
     {
       "group": "know",
       "stem": "05_algorithm_rankings_drop",
-      "source": "owner-supplied/SEO_7_Transparent_Illustrations/05_algorithm_rankings_drop.png",
+      "source": "/Users/mohammad/Downloads/SEO_7_Transparent_Illustrations/05_algorithm_rankings_drop.png",
       "sha256": "d9e98f7a6a2b238b9e54871606959eeb9de7fcafd8caa14d44932d615a971fe0",
       "width": 444,
       "height": 405,
@@ -115,7 +115,7 @@
     {
       "group": "know",
       "stem": "06_ai_search_changes",
-      "source": "owner-supplied/SEO_7_Transparent_Illustrations/06_ai_search_changes.png",
+      "source": "/Users/mohammad/Downloads/SEO_7_Transparent_Illustrations/06_ai_search_changes.png",
       "sha256": "15a96e4bde0d2c3b0b46c52e91aea66b874e0a621b7682cf3044e01838ee81f7",
       "width": 502,
       "height": 392,
@@ -137,7 +137,7 @@
     {
       "group": "know",
       "stem": "07_high_ppc_cost",
-      "source": "owner-supplied/SEO_7_Transparent_Illustrations/07_high_ppc_cost.png",
+      "source": "/Users/mohammad/Downloads/SEO_7_Transparent_Illustrations/07_high_ppc_cost.png",
       "sha256": "0f3cfbbfde115cd2c6d7d53cdff2d42edb8ffbff673315cee5acaac53f3f435a",
       "width": 452,
       "height": 404,
@@ -159,7 +159,7 @@
     {
       "group": "audience",
       "stem": "01_ecommerce",
-      "source": "owner-supplied/01_suitable_for_seo/01_ecommerce.png",
+      "source": "/Users/mohammad/Downloads/01_suitable_for_seo/01_ecommerce.png",
       "sha256": "3962f79e40c4bec33fcd65099e816cc3d3fcd3d89f392dd0cbb7b8b93861af49",
       "width": 504,
       "height": 396,
@@ -181,7 +181,7 @@
     {
       "group": "audience",
       "stem": "02_company_websites",
-      "source": "owner-supplied/01_suitable_for_seo/02_company_websites.png",
+      "source": "/Users/mohammad/Downloads/01_suitable_for_seo/02_company_websites.png",
       "sha256": "8158270c3dbeff0ae68bfef8846dbd4ecaf945a8f59d6483f328f1563614399e",
       "width": 516,
       "height": 386,
@@ -203,7 +203,7 @@
     {
       "group": "audience",
       "stem": "03_new_websites",
-      "source": "owner-supplied/01_suitable_for_seo/03_new_websites.png",
+      "source": "/Users/mohammad/Downloads/01_suitable_for_seo/03_new_websites.png",
       "sha256": "5e3afaf71ee7b6cdfd413fcefd574eec712c2244ff0b03815f56017920d773cd",
       "width": 482,
       "height": 413,
@@ -225,7 +225,7 @@
     {
       "group": "audience",
       "stem": "04_local_businesses",
-      "source": "owner-supplied/01_suitable_for_seo/04_local_businesses.png",
+      "source": "/Users/mohammad/Downloads/01_suitable_for_seo/04_local_businesses.png",
       "sha256": "c3cbde8b35daedf1523340a8c9866aa4a417f7065a8019f07d36938e7c7e10f0",
       "width": 492,
       "height": 430,
@@ -247,7 +247,7 @@
     {
       "group": "audience",
       "stem": "05_service_websites",
-      "source": "owner-supplied/01_suitable_for_seo/05_service_websites.png",
+      "source": "/Users/mohammad/Downloads/01_suitable_for_seo/05_service_websites.png",
       "sha256": "adb616a583a2c8164b12e10f4a128ce030e6e359a146d531beb394c39e2f5e0c",
       "width": 498,
       "height": 406,
@@ -269,7 +269,7 @@
     {
       "group": "audience",
       "stem": "06_digital_platforms",
-      "source": "owner-supplied/01_suitable_for_seo/06_digital_platforms.png",
+      "source": "/Users/mohammad/Downloads/01_suitable_for_seo/06_digital_platforms.png",
       "sha256": "5cf2c2f1c6aa21c8dbff2244b9e523bc4d3cd31c069b125e5173d5f8a0ae21b7",
       "width": 495,
       "height": 438,
@@ -291,7 +291,7 @@
     {
       "group": "why",
       "stem": "01_all_sectors",
-      "source": "owner-supplied/02_why_choose_our_seo/01_all_sectors.png",
+      "source": "/Users/mohammad/Downloads/02_why_choose_our_seo/01_all_sectors.png",
       "sha256": "0aeed41312effc0e073e169071a2a19d411201dad7e4b795771385630c0bac6e",
       "width": 418,
       "height": 304,
@@ -313,7 +313,7 @@
     {
       "group": "why",
       "stem": "02_customer_retention",
-      "source": "owner-supplied/02_why_choose_our_seo/02_customer_retention.png",
+      "source": "/Users/mohammad/Downloads/02_why_choose_our_seo/02_customer_retention.png",
       "sha256": "dcbbb648efc8789db3c47498775c6b58c6608a60d1d11b3fcdfc73dff6311517",
       "width": 560,
       "height": 304,
@@ -335,7 +335,7 @@
     {
       "group": "why",
       "stem": "03_monthly_reports",
-      "source": "owner-supplied/02_why_choose_our_seo/03_monthly_reports.png",
+      "source": "/Users/mohammad/Downloads/02_why_choose_our_seo/03_monthly_reports.png",
       "sha256": "0ec693bf1d34f9bb307c9c5d36bf95aa8c88d6d8d1698cd9b9106c49ab43ee7b",
       "width": 407,
       "height": 304,
@@ -357,7 +357,7 @@
     {
       "group": "why",
       "stem": "04_saudi_market_strategy",
-      "source": "owner-supplied/02_why_choose_our_seo/04_saudi_market_strategy.png",
+      "source": "/Users/mohammad/Downloads/02_why_choose_our_seo/04_saudi_market_strategy.png",
       "sha256": "fd425512b6f1ed86f2fbba1b607eedcec07e9c6b2481cf39d73be031a80c732e",
       "width": 560,
       "height": 259,
@@ -379,7 +379,7 @@
     {
       "group": "why",
       "stem": "05_safe_tools",
-      "source": "owner-supplied/02_why_choose_our_seo/05_safe_tools.png",
+      "source": "/Users/mohammad/Downloads/02_why_choose_our_seo/05_safe_tools.png",
       "sha256": "d924a40b0d81abe060a5e690727f6ca6bdd2f339313fa566c8fc911353f4e247",
       "width": 408,
       "height": 259,
@@ -401,7 +401,7 @@
     {
       "group": "why",
       "stem": "06_research_and_development",
-      "source": "owner-supplied/02_why_choose_our_seo/06_research_and_development.png",
+      "source": "/Users/mohammad/Downloads/02_why_choose_our_seo/06_research_and_development.png",
       "sha256": "bb7381364edff152dca881fde635391fc7954312da15ed76879397b352b04b43",
       "width": 406,
       "height": 259,

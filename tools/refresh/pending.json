@@ -40,29 +40,9 @@
     "reason": "No approved package prices or deliverables supplied; consultation link only"
   },
   {
-    "id": "16:89",
-    "text": "•        Integrated online store: 100% performance score, connected to an analytics dashboard, with 5,000+ active customers. [Needs management confirmation]",
-    "reason": "Placeholder awaiting a real project or technical decision"
-  },
-  {
-    "id": "16:91",
-    "text": "•        [Third store or system project from your portfolio]",
-    "reason": "Unresolved editorial placeholder; not public copy"
-  },
-  {
     "id": "17:64",
     "text": "باقات المتاجر الإلكترونية: اختر ما يناسب حجم تجارتك",
     "reason": "No approved package prices or deliverables supplied; consultation link only"
-  },
-  {
-    "id": "17:90",
-    "text": "•        متجر إلكتروني متكامل: درجة أداء 100%، مربوط بلوحة تحكم تحليلية، مع أكثر من 5000 عميل نشط. [يحتاج تأكيد الإدارة]",
-    "reason": "Placeholder awaiting a real project or technical decision"
-  },
-  {
-    "id": "17:92",
-    "text": "•        [مشروع متجر أو نظام ثالث من أعمالكم]",
-    "reason": "Unresolved editorial placeholder; not public copy"
   },
   {
     "id": "18:44",
@@ -73,16 +53,6 @@
     "id": "18:45",
     "text": "[To be set by the development team, e.g. Flutter, React Native, Swift, or Kotlin]",
     "reason": "Explicit unfilled placeholder"
-  },
-  {
-    "id": "18:73",
-    "text": "Mobile App Packages Designed to Fit Your Project's Needs",
-    "reason": "No approved package prices or deliverables supplied; consultation link only"
-  },
-  {
-    "id": "19:73",
-    "text": "باقات تطوير تطبيقات الجوال مصممة لتناسب احتياجات مشروعك",
-    "reason": "No approved package prices or deliverables supplied; consultation link only"
   },
   {
     "id": "21:63",
@@ -97,6 +67,26 @@
   {
     "id": "20:63",
     "text": "باقات الاستشارات التسويقية مصممة لتناسب احتياجات مشروعك",
+    "reason": "No approved package prices or deliverables supplied; consultation link only"
+  },
+  {
+    "id": "24:62",
+    "text": "CRO Packages: One-Time Review or Monthly Optimization",
+    "reason": "No approved package prices or deliverables supplied; consultation link only"
+  },
+  {
+    "id": "25:62",
+    "text": "باقات تحسين معدل التحويل",
+    "reason": "No approved package prices or deliverables supplied; consultation link only"
+  },
+  {
+    "id": "22:62",
+    "text": "Email Marketing Packages: Review, Setup or Monthly Management",
+    "reason": "No approved package prices or deliverables supplied; consultation link only"
+  },
+  {
+    "id": "23:62",
+    "text": "باقات التسويق بالبريد الإلكتروني: مراجعة أو إعداد أو إدارة شهرية",
     "reason": "No approved package prices or deliverables supplied; consultation link only"
   }
 ]

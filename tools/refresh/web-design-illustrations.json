@@ -4,7 +4,7 @@
     {
       "kind": "benefits",
       "number": 1,
-      "source": "owner-supplied/website_design_34_illustrations/01_لماذا_تحتاج_موقعا_احترافيا/01_fast_loading.png",
+      "source": "/Users/mohammad/Downloads/website_design_34_illustrations/01_لماذا_تحتاج_موقعا_احترافيا/01_fast_loading.png",
       "sourceSha256": "15c9964f42186821d9bbd8f31065f79cd301a6416d2255e5afd1b11dd8e065ed",
       "width": 1254,
       "height": 1254,
@@ -36,7 +36,7 @@
     {
       "kind": "benefits",
       "number": 2,
-      "source": "owner-supplied/website_design_34_illustrations/01_لماذا_تحتاج_موقعا_احترافيا/02_mobile_first_design.png",
+      "source": "/Users/mohammad/Downloads/website_design_34_illustrations/01_لماذا_تحتاج_موقعا_احترافيا/02_mobile_first_design.png",
       "sourceSha256": "2ea2f8e53bf2ab3ce12882182d12154687528b0bbd6d94af0286ee1ede227361",
       "width": 1254,
       "height": 1254,
@@ -68,7 +68,7 @@
     {
       "kind": "benefits",
       "number": 3,
-      "source": "owner-supplied/website_design_34_illustrations/01_لماذا_تحتاج_موقعا_احترافيا/03_seo_ai_ready.png",
+      "source": "/Users/mohammad/Downloads/website_design_34_illustrations/01_لماذا_تحتاج_موقعا_احترافيا/03_seo_ai_ready.png",
       "sourceSha256": "a089ee8a79138c0a89bf5d0914d1846b928413789b5a7914533fdd372489c8fa",
       "width": 1254,
       "height": 1254,
@@ -100,7 +100,7 @@
     {
       "kind": "know",
       "number": 1,
-      "source": "owner-supplied/website_design_34_illustrations/02_لماذا_أنت_هنا/01_no_website_lost_customers.png",
+      "source": "/Users/mohammad/Downloads/website_design_34_illustrations/02_لماذا_أنت_هنا/01_no_website_lost_customers.png",
       "sourceSha256": "f2ef5b33bb9c62bfb6e5a4513386c47e76b8a6ada5e6d2ee87e779e13e8c26ef",
       "width": 1254,
       "height": 1254,
@@ -132,7 +132,7 @@
     {
       "kind": "know",
       "number": 2,
-      "source": "owner-supplied/website_design_34_illustrations/02_لماذا_أنت_هنا/02_outdated_website.png",
+      "source": "/Users/mohammad/Downloads/website_design_34_illustrations/02_لماذا_أنت_هنا/02_outdated_website.png",
       "sourceSha256": "79c1c285cb469c3a437a9c9736ebb6fd887272ab9344a8c7306e0c05b0b2e051",
       "width": 1254,
       "height": 1254,
@@ -164,7 +164,7 @@
     {
       "kind": "know",
       "number": 3,
-      "source": "owner-supplied/website_design_34_illustrations/02_لماذا_أنت_هنا/03_slow_loading_visitors_leave.png",
+      "source": "/Users/mohammad/Downloads/website_design_34_illustrations/02_لماذا_أنت_هنا/03_slow_loading_visitors_leave.png",
       "sourceSha256": "7e0fd7d6d9a14d8ac45c9056d305d5bd982afae07f39bb7e5d68e98fcda57f72",
       "width": 1254,
       "height": 1254,
@@ -196,7 +196,7 @@
     {
       "kind": "know",
       "number": 4,
-      "source": "owner-supplied/website_design_34_illustrations/02_لماذا_أنت_هنا/04_poor_mobile_experience.png",
+      "source": "/Users/mohammad/Downloads/website_design_34_illustrations/02_لماذا_أنت_هنا/04_poor_mobile_experience.png",
       "sourceSha256": "c9b8eefaa6881cca3ef55e5bdb255e50b2b4905297775ac8569ac159296bc908",
       "width": 1254,
       "height": 1254,
@@ -228,7 +228,7 @@
     {
       "kind": "know",
       "number": 5,
-      "source": "owner-supplied/website_design_34_illustrations/02_لماذا_أنت_هنا/05_visits_without_conversions.png",
+      "source": "/Users/mohammad/Downloads/website_design_34_illustrations/02_لماذا_أنت_هنا/05_visits_without_conversions.png",
       "sourceSha256": "69a2ed1577649024f16f6b815b3a513359a901ff8f6b183ab759b0fcca5bdc9c",
       "width": 1254,
       "height": 1254,
@@ -260,7 +260,7 @@
     {
       "kind": "know",
       "number": 6,
-      "source": "owner-supplied/website_design_34_illustrations/02_لماذا_أنت_هنا/06_edits_need_developer.png",
+      "source": "/Users/mohammad/Downloads/website_design_34_illustrations/02_لماذا_أنت_هنا/06_edits_need_developer.png",
       "sourceSha256": "523301672ff2877f6cc5ae6bb08152e8cc1686190144d63aee6ef40f82c09b9a",
       "width": 1254,
       "height": 1254,
@@ -292,7 +292,7 @@
     {
       "kind": "know",
       "number": 7,
-      "source": "owner-supplied/website_design_34_illustrations/02_لماذا_أنت_هنا/07_invisible_search_ai_competitors.png",
+      "source": "/Users/mohammad/Downloads/website_design_34_illustrations/02_لماذا_أنت_هنا/07_invisible_search_ai_competitors.png",
       "sourceSha256": "145cdcc105a45671d61b178e3c35c829cff67e835556d0362f07ad7bd0971249",
       "width": 1254,
       "height": 1254,
@@ -324,7 +324,7 @@
     {
       "kind": "deliverables",
       "number": 1,
-      "source": "owner-supplied/website_design_34_illustrations/03_كل_ما_يحتاجه_موقعك_في_مكان_واحد/01_business_website.png",
+      "source": "/Users/mohammad/Downloads/website_design_34_illustrations/03_كل_ما_يحتاجه_موقعك_في_مكان_واحد/01_business_website.png",
       "sourceSha256": "49813ea4223ede0e2314dd77f4c0d9f3bcaf807b2ce4286530f6c1e63b8486de",
       "width": 1254,
       "height": 1254,
@@ -356,7 +356,7 @@
     {
       "kind": "deliverables",
       "number": 2,
-      "source": "owner-supplied/website_design_34_illustrations/03_كل_ما_يحتاجه_موقعك_في_مكان_واحد/02_ui_ux_design.png",
+      "source": "/Users/mohammad/Downloads/website_design_34_illustrations/03_كل_ما_يحتاجه_موقعك_في_مكان_واحد/02_ui_ux_design.png",
       "sourceSha256": "ae6a313578b87cff050f2052b54c330624fc7e7d5c21f58ff6447ff0ff210f70",
       "width": 1254,
       "height": 1254,
@@ -388,7 +388,7 @@
     {
       "kind": "deliverables",
       "number": 3,
-      "source": "owner-supplied/website_design_34_illustrations/03_كل_ما_يحتاجه_موقعك_في_مكان_واحد/03_responsive_all_devices.png",
+      "source": "/Users/mohammad/Downloads/website_design_34_illustrations/03_كل_ما_يحتاجه_موقعك_في_مكان_واحد/03_responsive_all_devices.png",
       "sourceSha256": "f5f7a68027777321a63313ed4e3eec02838352291255a04b19c452bb1645b8dd",
       "width": 1254,
       "height": 1254,
@@ -420,7 +420,7 @@
     {
       "kind": "deliverables",
       "number": 4,
-      "source": "owner-supplied/website_design_34_illustrations/03_كل_ما_يحتاجه_موقعك_في_مكان_واحد/04_web_development.png",
+      "source": "/Users/mohammad/Downloads/website_design_34_illustrations/03_كل_ما_يحتاجه_موقعك_في_مكان_واحد/04_web_development.png",
       "sourceSha256": "1283aa91ffe8a78c25901e260d81322d26725dc31783fb485b3191fdc0923996",
       "width": 1254,
       "height": 1254,
@@ -452,7 +452,7 @@
     {
       "kind": "deliverables",
       "number": 5,
-      "source": "owner-supplied/website_design_34_illustrations/03_كل_ما_يحتاجه_موقعك_في_مكان_واحد/05_seo_ai_optimization.png",
+      "source": "/Users/mohammad/Downloads/website_design_34_illustrations/03_كل_ما_يحتاجه_موقعك_في_مكان_واحد/05_seo_ai_optimization.png",
       "sourceSha256": "60873f15c2c683f35406ef042be69574bcfc7f2f257725ed0a037148d1b1b358",
       "width": 1254,
       "height": 1254,
@@ -484,7 +484,7 @@
     {
       "kind": "deliverables",
       "number": 6,
-      "source": "owner-supplied/website_design_34_illustrations/03_كل_ما_يحتاجه_موقعك_في_مكان_واحد/06_high_performance.png",
+      "source": "/Users/mohammad/Downloads/website_design_34_illustrations/03_كل_ما_يحتاجه_موقعك_في_مكان_واحد/06_high_performance.png",
       "sourceSha256": "ec1aa72a113516c8be45d8886648a521382c71ff5f0e9276442d1136761d7828",
       "width": 1254,
       "height": 1254,
@@ -516,7 +516,7 @@
     {
       "kind": "deliverables",
       "number": 7,
-      "source": "owner-supplied/website_design_34_illustrations/03_كل_ما_يحتاجه_موقعك_في_مكان_واحد/07_crm_full_handover.png",
+      "source": "/Users/mohammad/Downloads/website_design_34_illustrations/03_كل_ما_يحتاجه_موقعك_في_مكان_واحد/07_crm_full_handover.png",
       "sourceSha256": "b92f5c52b85298d28e67442f5d3f48a444c816795cd965a1d155a8934f09464f",
       "width": 1254,
       "height": 1254,
@@ -548,7 +548,7 @@
     {
       "kind": "deliverables",
       "number": 8,
-      "source": "owner-supplied/website_design_34_illustrations/03_كل_ما_يحتاجه_موقعك_في_مكان_واحد/08_arabic_english_support.png",
+      "source": "/Users/mohammad/Downloads/website_design_34_illustrations/03_كل_ما_يحتاجه_موقعك_في_مكان_واحد/08_arabic_english_support.png",
       "sourceSha256": "cfa7a4cac027c4a68c20570f8e9950302345d88a7b18c119207269db7a8c6227",
       "width": 1254,
       "height": 1254,
@@ -580,7 +580,7 @@
     {
       "kind": "deliverables",
       "number": 9,
-      "source": "owner-supplied/website_design_34_illustrations/03_كل_ما_يحتاجه_موقعك_في_مكان_واحد/09_post_launch_support.png",
+      "source": "/Users/mohammad/Downloads/website_design_34_illustrations/03_كل_ما_يحتاجه_موقعك_في_مكان_واحد/09_post_launch_support.png",
       "sourceSha256": "154d2a8cd044bd84acdbb85512f68743a862e7ae06a989c4a356d4bf8795eb27",
       "width": 1254,
       "height": 1254,
@@ -612,7 +612,7 @@
     {
       "kind": "types",
       "number": 1,
-      "source": "owner-supplied/website_design_34_illustrations/04_خدمات_تصميم_المواقع_الإلكترونية/01_websites_and_blogs.png",
+      "source": "/Users/mohammad/Downloads/website_design_34_illustrations/04_خدمات_تصميم_المواقع_الإلكترونية/01_websites_and_blogs.png",
       "sourceSha256": "f9ff0a988c967c24c56d33d9047ae107b989d67e7564c7d6cb19ba5ead6a4083",
       "width": 1254,
       "height": 1254,
@@ -644,7 +644,7 @@
     {
       "kind": "types",
       "number": 2,
-      "source": "owner-supplied/website_design_34_illustrations/04_خدمات_تصميم_المواقع_الإلكترونية/02_ecommerce_store_design.png",
+      "source": "/Users/mohammad/Downloads/website_design_34_illustrations/04_خدمات_تصميم_المواقع_الإلكترونية/02_ecommerce_store_design.png",
       "sourceSha256": "0cb45e5b6fa007a41a7a6002b206a71f8e0b31af6c6c7c8abd7896533352403b",
       "width": 1254,
       "height": 1254,
@@ -676,7 +676,7 @@
     {
       "kind": "types",
       "number": 3,
-      "source": "owner-supplied/website_design_34_illustrations/04_خدمات_تصميم_المواقع_الإلكترونية/03_corporate_websites.png",
+      "source": "/Users/mohammad/Downloads/website_design_34_illustrations/04_خدمات_تصميم_المواقع_الإلكترونية/03_corporate_websites.png",
       "sourceSha256": "27f2a2b4e01fec5f7136856453fa35ff9aaa8a0c2cee98766a256a5876e06308",
       "width": 1254,
       "height": 1254,
@@ -708,7 +708,7 @@
     {
       "kind": "types",
       "number": 4,
-      "source": "owner-supplied/website_design_34_illustrations/04_خدمات_تصميم_المواقع_الإلكترونية/04_campaign_landing_pages.png",
+      "source": "/Users/mohammad/Downloads/website_design_34_illustrations/04_خدمات_تصميم_المواقع_الإلكترونية/04_campaign_landing_pages.png",
       "sourceSha256": "d43a5d294e95d44943ecfcbaa49a09c03f8cc75bb5734042d3a1bd351da0ae36",
       "width": 1254,
       "height": 1254,
@@ -740,7 +740,7 @@
     {
       "kind": "why",
       "number": 1,
-      "source": "owner-supplied/website_design_34_illustrations/05_ليش_تختار_من_الصفر_إلى_الواحد/01_technical_expertise.png",
+      "source": "/Users/mohammad/Downloads/website_design_34_illustrations/05_ليش_تختار_من_الصفر_إلى_الواحد/01_technical_expertise.png",
       "sourceSha256": "8fd8e0ea8573f42457e68f204e8b9e2ad04a810213a30b64d97fb995bd4e874d",
       "width": 1254,
       "height": 1254,
@@ -772,7 +772,7 @@
     {
       "kind": "why",
       "number": 2,
-      "source": "owner-supplied/website_design_34_illustrations/05_ليش_تختار_من_الصفر_إلى_الواحد/02_ongoing_support_maintenance.png",
+      "source": "/Users/mohammad/Downloads/website_design_34_illustrations/05_ليش_تختار_من_الصفر_إلى_الواحد/02_ongoing_support_maintenance.png",
       "sourceSha256": "3a23e56ca7e92a9a1b117922164d3a507b7ad1f0b593902f3cec4709974e1ce9",
       "width": 1254,
       "height": 1254,
@@ -804,7 +804,7 @@
     {
       "kind": "why",
       "number": 3,
-      "source": "owner-supplied/website_design_34_illustrations/05_ليش_تختار_من_الصفر_إلى_الواحد/03_future_scalability.png",
+      "source": "/Users/mohammad/Downloads/website_design_34_illustrations/05_ليش_تختار_من_الصفر_إلى_الواحد/03_future_scalability.png",
       "sourceSha256": "1fda79aa33e0fe500d90bd268301ed9778f8ca0d5bd1c7c86b4d1f7ccfc45f3c",
       "width": 1254,
       "height": 1254,
@@ -836,7 +836,7 @@
     {
       "kind": "why",
       "number": 4,
-      "source": "owner-supplied/website_design_34_illustrations/05_ليش_تختار_من_الصفر_إلى_الواحد/04_custom_business_design.png",
+      "source": "/Users/mohammad/Downloads/website_design_34_illustrations/05_ليش_تختار_من_الصفر_إلى_الواحد/04_custom_business_design.png",
       "sourceSha256": "0e71c2b7bc1b28830d466e14da7ad15b9a3fd751e180f958dfaf898a382528be",
       "width": 1254,
       "height": 1254,
@@ -868,7 +868,7 @@
     {
       "kind": "why",
       "number": 5,
-      "source": "owner-supplied/website_design_34_illustrations/05_ليش_تختار_من_الصفر_إلى_الواحد/05_search_engine_optimization.png",
+      "source": "/Users/mohammad/Downloads/website_design_34_illustrations/05_ليش_تختار_من_الصفر_إلى_الواحد/05_search_engine_optimization.png",
       "sourceSha256": "e1dfa1f687b7940c34ff81df20ad3c5dc8090469493b7773fa7376259b19ab70",
       "width": 1254,
       "height": 1254,
@@ -900,7 +900,7 @@
     {
       "kind": "why",
       "number": 6,
-      "source": "owner-supplied/website_design_34_illustrations/05_ليش_تختار_من_الصفر_إلى_الواحد/06_diverse_technical_solutions.png",
+      "source": "/Users/mohammad/Downloads/website_design_34_illustrations/05_ليش_تختار_من_الصفر_إلى_الواحد/06_diverse_technical_solutions.png",
       "sourceSha256": "d509170ad6a357ec1ebf8a2158cdffd563909d718809f8676f400189b45a2894",
       "width": 1254,
       "height": 1254,
@@ -932,7 +932,7 @@
     {
       "kind": "audience",
       "number": 1,
-      "source": "owner-supplied/website_design_34_illustrations/06_هل_تناسبك_خدماتنا/01_service_websites.png",
+      "source": "/Users/mohammad/Downloads/website_design_34_illustrations/06_هل_تناسبك_خدماتنا/01_service_websites.png",
       "sourceSha256": "92ff5b1f03b83eedc15010918ee7cbead1eece9d829227f4712ef27276989837",
       "width": 1254,
       "height": 1254,
@@ -964,7 +964,7 @@
     {
       "kind": "audience",
       "number": 2,
-      "source": "owner-supplied/website_design_34_illustrations/06_هل_تناسبك_خدماتنا/02_ecommerce_websites.png",
+      "source": "/Users/mohammad/Downloads/website_design_34_illustrations/06_هل_تناسبك_خدماتنا/02_ecommerce_websites.png",
       "sourceSha256": "af0aa59aa57d71d270f60f3a1508ce62ed6dbfcb9aebb0153a0c3bb72be9773e",
       "width": 1254,
       "height": 1254,
@@ -996,7 +996,7 @@
     {
       "kind": "audience",
       "number": 3,
-      "source": "owner-supplied/website_design_34_illustrations/06_هل_تناسبك_خدماتنا/03_company_websites.png",
+      "source": "/Users/mohammad/Downloads/website_design_34_illustrations/06_هل_تناسبك_خدماتنا/03_company_websites.png",
       "sourceSha256": "53b5d73a938d27c5d4c680abab84e5b0a5a8ec3157246844d8c91c3b55abeae9",
       "width": 1254,
       "height": 1254,
@@ -1028,7 +1028,7 @@
     {
       "kind": "audience",
       "number": 4,
-      "source": "owner-supplied/website_design_34_illustrations/06_هل_تناسبك_خدماتنا/04_old_website_redesign.png",
+      "source": "/Users/mohammad/Downloads/website_design_34_illustrations/06_هل_تناسبك_خدماتنا/04_old_website_redesign.png",
       "sourceSha256": "fc5860b65aaffb1c1ffc5634034b4968f186eedb0df6ed136f2a9c9d7ef2e5ba",
       "width": 1254,
       "height": 1254,
@@ -1060,7 +1060,7 @@
     {
       "kind": "audience",
       "number": 5,
-      "source": "owner-supplied/website_design_34_illustrations/06_هل_تناسبك_خدماتنا/05_advertising_pages.png",
+      "source": "/Users/mohammad/Downloads/website_design_34_illustrations/06_هل_تناسبك_خدماتنا/05_advertising_pages.png",
       "sourceSha256": "59ae9e104537a98cb8e2d38d39bcce20a4016e80b6de1302d223b65e60bfe98a",
       "width": 1254,
       "height": 1254,

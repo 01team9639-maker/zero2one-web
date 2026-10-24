@@ -1,5 +1,5 @@
 {
-  "note": "Card image slots: owner-supplied illustrations matched to independent bilingual copy across all eight non-SEO services; existing brand outcome photos are preserved. Any remaining temporary images are explicitly marked.",
+  "note": "Owner illustrations remain matched to the original eight non-SEO services and the 38 CRO plus 38 Email Marketing images supplied on 2026-10-24. All deferred service art now uses supplied images. Existing brand outcome photos are preserved.",
   "slots": {
     "web-design-riyadh/benefits/01": {
       "owner_supplied": true,
@@ -3269,6 +3269,1116 @@
       "titles": {
         "en": "Measurable Progress",
         "ar": "تقدم قابل للقياس"
+      }
+    },
+    "conversion-rate-optimization/benefits/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/benefits-01-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/benefits-01-640.webp"
+      },
+      "titles": {
+        "en": "Visitor behaviour analysis",
+        "ar": "تحليل سلوك الزوار"
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/benefits/01",
+        "ar": "conversion-rate-optimization/benefits/01"
+      }
+    },
+    "conversion-rate-optimization/benefits/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/benefits-02-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/benefits-02-640.webp"
+      },
+      "titles": {
+        "en": "Better pages and checkout",
+        "ar": "تحسين الصفحات وخطوات الطلب"
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/benefits/02",
+        "ar": "conversion-rate-optimization/benefits/02"
+      }
+    },
+    "conversion-rate-optimization/benefits/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/benefits-03-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/benefits-03-640.webp"
+      },
+      "titles": {
+        "en": "Testing and measurement",
+        "ar": "اختبار وقياس مستمر"
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/benefits/03",
+        "ar": "conversion-rate-optimization/benefits/03"
+      }
+    },
+    "conversion-rate-optimization/know/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/know-01-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/know-01-640.webp"
+      },
+      "titles": {
+        "en": "Your site gets good traffic, but orders and calls are few.",
+        "ar": "موقعك يجلب زيارات جيدة، لكن الطلبات والاتصالات قليلة."
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/know/01",
+        "ar": "conversion-rate-optimization/know/01"
+      }
+    },
+    "conversion-rate-optimization/know/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/know-02-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/know-02-640.webp"
+      },
+      "titles": {
+        "en": "Customers leave their carts before paying.",
+        "ar": "عملاء متجرك يتركون السلة قبل الدفع."
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/know/02",
+        "ar": "conversion-rate-optimization/know/02"
+      }
+    },
+    "conversion-rate-optimization/know/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/know-03-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/know-03-640.webp"
+      },
+      "titles": {
+        "en": "Your cost per client from ads keeps rising.",
+        "ar": "تكلفة العميل من الإعلانات ترتفع شهراً بعد شهر."
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/know/03",
+        "ar": "conversion-rate-optimization/know/03"
+      }
+    },
+    "conversion-rate-optimization/know/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/know-04-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/know-04-640.webp"
+      },
+      "titles": {
+        "en": "Visitors don't understand your offer in the first seconds and leave.",
+        "ar": "الزائر لا يفهم عرضك في الثواني الأولى فيغادر."
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/know/04",
+        "ar": "conversion-rate-optimization/know/04"
+      }
+    },
+    "conversion-rate-optimization/know/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/know-05-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/know-05-640.webp"
+      },
+      "titles": {
+        "en": "Forms are long and buttons are unclear.",
+        "ar": "النماذج طويلة، والأزرار غير واضحة."
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/know/05",
+        "ar": "conversion-rate-optimization/know/05"
+      }
+    },
+    "conversion-rate-optimization/know/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/know-06-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/know-06-640.webp"
+      },
+      "titles": {
+        "en": "Browsing on mobile is a struggle, even though most visitors use their phones.",
+        "ar": "التصفح على الجوال متعب، مع أن أغلب زوارك منه."
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/know/06",
+        "ar": "conversion-rate-optimization/know/06"
+      }
+    },
+    "conversion-rate-optimization/know/07": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/know-07-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/know-07-640.webp"
+      },
+      "titles": {
+        "en": "You don't know exactly at which step you're losing clients.",
+        "ar": "لا تعرف في أي خطوة بالضبط تخسر العميل."
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/know/07",
+        "ar": "conversion-rate-optimization/know/07"
+      }
+    },
+    "conversion-rate-optimization/deliverables/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/deliverables-01-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/deliverables-01-640.webp"
+      },
+      "titles": {
+        "en": "A Full Site Review",
+        "ar": "مراجعة كاملة للموقع"
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/deliverables/01",
+        "ar": "conversion-rate-optimization/deliverables/01"
+      }
+    },
+    "conversion-rate-optimization/deliverables/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/deliverables-02-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/deliverables-02-640.webp"
+      },
+      "titles": {
+        "en": "Tracking Setup",
+        "ar": "التحليل والقياس"
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/deliverables/02",
+        "ar": "conversion-rate-optimization/deliverables/02"
+      }
+    },
+    "conversion-rate-optimization/deliverables/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/deliverables-03-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/deliverables-03-640.webp"
+      },
+      "titles": {
+        "en": "Visitor Behavior Analysis",
+        "ar": "تحليل سلوك الزوار"
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/deliverables/03",
+        "ar": "conversion-rate-optimization/deliverables/03"
+      }
+    },
+    "conversion-rate-optimization/deliverables/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/deliverables-04-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/deliverables-04-640.webp"
+      },
+      "titles": {
+        "en": "Your Clients' Feedback",
+        "ar": "آراء عملائك"
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/deliverables/04",
+        "ar": "conversion-rate-optimization/deliverables/04"
+      }
+    },
+    "conversion-rate-optimization/deliverables/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/deliverables-05-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/deliverables-05-640.webp"
+      },
+      "titles": {
+        "en": "Landing Page Improvements",
+        "ar": "تحسين صفحات الهبوط"
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/deliverables/05",
+        "ar": "conversion-rate-optimization/deliverables/05"
+      }
+    },
+    "conversion-rate-optimization/deliverables/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/deliverables-06-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/deliverables-06-640.webp"
+      },
+      "titles": {
+        "en": "Shorter Forms and Checkout",
+        "ar": "نماذج وخطوات دفع أقصر"
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/deliverables/06",
+        "ar": "conversion-rate-optimization/deliverables/06"
+      }
+    },
+    "conversion-rate-optimization/deliverables/07": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/deliverables-07-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/deliverables-07-640.webp"
+      },
+      "titles": {
+        "en": "Elements That Reassure",
+        "ar": "عناصر تطمئن العميل"
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/deliverables/07",
+        "ar": "conversion-rate-optimization/deliverables/07"
+      }
+    },
+    "conversion-rate-optimization/deliverables/08": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/deliverables-08-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/deliverables-08-640.webp"
+      },
+      "titles": {
+        "en": "A/B Testing",
+        "ar": "اختبارات A/B"
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/deliverables/08",
+        "ar": "conversion-rate-optimization/deliverables/08"
+      }
+    },
+    "conversion-rate-optimization/deliverables/09": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/deliverables-09-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/deliverables-09-640.webp"
+      },
+      "titles": {
+        "en": "Monthly Report and Review Meeting",
+        "ar": "تقرير شهري واجتماع متابعة"
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/deliverables/09",
+        "ar": "conversion-rate-optimization/deliverables/09"
+      }
+    },
+    "conversion-rate-optimization/why/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/why-02-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/why-01-640.webp"
+      },
+      "titles": {
+        "en": "Every Change Has a Reason",
+        "ar": "الأهم أولاً"
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/why/02",
+        "ar": "conversion-rate-optimization/why/01"
+      }
+    },
+    "conversion-rate-optimization/why/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/why-03-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/why-02-640.webp"
+      },
+      "titles": {
+        "en": "95% Client Retention",
+        "ar": "كل تعديل له سبب"
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/why/03",
+        "ar": "conversion-rate-optimization/why/02"
+      }
+    },
+    "conversion-rate-optimization/why/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/why-04-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/why-03-640.webp"
+      },
+      "titles": {
+        "en": "We Recommend and Build in One Team",
+        "ar": "عملاء سعداء"
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/why/04",
+        "ar": "conversion-rate-optimization/why/03"
+      }
+    },
+    "conversion-rate-optimization/why/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/why-01-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/why-04-640.webp"
+      },
+      "titles": {
+        "en": "Biggest Wins First",
+        "ar": "نقترح وننفذ في نفس الفريق"
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/why/01",
+        "ar": "conversion-rate-optimization/why/04"
+      }
+    },
+    "conversion-rate-optimization/why/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/why-05-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/why-05-640.webp"
+      },
+      "titles": {
+        "en": "We Know Saudi Shoppers",
+        "ar": "نعرف العميل السعودي"
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/why/05",
+        "ar": "conversion-rate-optimization/why/05"
+      }
+    },
+    "conversion-rate-optimization/why/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/why-06-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/why-06-640.webp"
+      },
+      "titles": {
+        "en": "Traffic From Every Channel Benefits",
+        "ar": "زياراتك من كل قناة تسويق"
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/why/06",
+        "ar": "conversion-rate-optimization/why/06"
+      }
+    },
+    "conversion-rate-optimization/audience/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/audience-01-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/audience-01-640.webp"
+      },
+      "titles": {
+        "en": "Sites With Traffic but No Orders",
+        "ar": "مواقع بزيارات بلا طلبات"
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/audience/01",
+        "ar": "conversion-rate-optimization/audience/01"
+      }
+    },
+    "conversion-rate-optimization/audience/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/audience-02-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/audience-02-640.webp"
+      },
+      "titles": {
+        "en": "Online Stores",
+        "ar": "المتاجر الإلكترونية"
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/audience/02",
+        "ar": "conversion-rate-optimization/audience/02"
+      }
+    },
+    "conversion-rate-optimization/audience/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/audience-03-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/audience-03-640.webp"
+      },
+      "titles": {
+        "en": "Costly Campaigns",
+        "ar": "الحملات المكلفة"
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/audience/03",
+        "ar": "conversion-rate-optimization/audience/03"
+      }
+    },
+    "conversion-rate-optimization/audience/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/audience-04-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/audience-04-640.webp"
+      },
+      "titles": {
+        "en": "Landing Pages",
+        "ar": "صفحات الاعلانات"
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/audience/04",
+        "ar": "conversion-rate-optimization/audience/04"
+      }
+    },
+    "conversion-rate-optimization/audience/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/audience-05-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/audience-05-640.webp"
+      },
+      "titles": {
+        "en": "Service Websites",
+        "ar": "مواقع الخدمات"
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/audience/05",
+        "ar": "conversion-rate-optimization/audience/05"
+      }
+    },
+    "conversion-rate-optimization/audience/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/audience-06-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/audience-06-640.webp"
+      },
+      "titles": {
+        "en": "Before Raising the Budget",
+        "ar": "قبل رفع الميزانية"
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/audience/06",
+        "ar": "conversion-rate-optimization/audience/06"
+      }
+    },
+    "conversion-rate-optimization/outcomes/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/outcomes-01-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/outcomes-01-640.webp"
+      },
+      "titles": {
+        "en": "More Clients From the Same Traffic",
+        "ar": "عملاء أكثر بنفس الزيارات"
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/outcomes/01",
+        "ar": "conversion-rate-optimization/outcomes/01"
+      }
+    },
+    "conversion-rate-optimization/outcomes/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/outcomes-02-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/outcomes-02-640.webp"
+      },
+      "titles": {
+        "en": "Lower Cost Per Client",
+        "ar": "تكلفة أقل لكل عميل"
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/outcomes/02",
+        "ar": "conversion-rate-optimization/outcomes/02"
+      }
+    },
+    "conversion-rate-optimization/outcomes/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/outcomes-03-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/outcomes-03-640.webp"
+      },
+      "titles": {
+        "en": "More Completed Checkouts",
+        "ar": "سلات مكتملة أكثر"
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/outcomes/03",
+        "ar": "conversion-rate-optimization/outcomes/03"
+      }
+    },
+    "conversion-rate-optimization/outcomes/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/outcomes-04-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/outcomes-04-640.webp"
+      },
+      "titles": {
+        "en": "Easier on Mobile",
+        "ar": "تجربة أسهل على الجوال"
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/outcomes/04",
+        "ar": "conversion-rate-optimization/outcomes/04"
+      }
+    },
+    "conversion-rate-optimization/outcomes/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/outcomes-05-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/outcomes-05-640.webp"
+      },
+      "titles": {
+        "en": "Decisions Based on Numbers",
+        "ar": "قرارات بالأرقام"
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/outcomes/05",
+        "ar": "conversion-rate-optimization/outcomes/05"
+      }
+    },
+    "conversion-rate-optimization/outcomes/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/cro-owner-2026-10/outcomes-06-640.webp",
+        "ar": "/assets/images/service-studio/cro-owner-2026-10/outcomes-06-640.webp"
+      },
+      "titles": {
+        "en": "Every Channel Delivers More",
+        "ar": "كل قناة تعطي أكثر"
+      },
+      "owner_image_ids": {
+        "en": "conversion-rate-optimization/outcomes/06",
+        "ar": "conversion-rate-optimization/outcomes/06"
+      }
+    },
+    "email-marketing/benefits/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/benefits-01-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/benefits-01-640.webp"
+      },
+      "titles": {
+        "en": "Automated emails",
+        "ar": "رسائل تلقائية"
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/benefits/01",
+        "ar": "email-marketing/benefits/01"
+      }
+    },
+    "email-marketing/benefits/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/benefits-02-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/benefits-02-640.webp"
+      },
+      "titles": {
+        "en": "Relevant customer messages",
+        "ar": "محتوى مناسب لكل عميل"
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/benefits/02",
+        "ar": "email-marketing/benefits/02"
+      }
+    },
+    "email-marketing/benefits/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/benefits-03-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/benefits-03-640.webp"
+      },
+      "titles": {
+        "en": "Email sales measurement",
+        "ar": "قياس المبيعات من البريد"
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/benefits/03",
+        "ar": "email-marketing/benefits/03"
+      }
+    },
+    "email-marketing/know/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/know-01-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/know-01-640.webp"
+      },
+      "titles": {
+        "en": "You have a customer list but don't contact them after the first purchase.",
+        "ar": "لديك قائمة عملاء، لكنك لا تتواصل معهم بعد أول عملية شراء."
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/know/01",
+        "ar": "email-marketing/know/01"
+      }
+    },
+    "email-marketing/know/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/know-02-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/know-02-640.webp"
+      },
+      "titles": {
+        "en": "Your emails land in spam instead of the inbox.",
+        "ar": "رسائلك تصل إلى البريد المزعج بدلاً من صندوق الوارد."
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/know/02",
+        "ar": "email-marketing/know/02"
+      }
+    },
+    "email-marketing/know/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/know-03-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/know-03-640.webp"
+      },
+      "titles": {
+        "en": "You send the same message to everyone, and no one opens it.",
+        "ar": "ترسل الرسالة نفسها للجميع، ولا يفتحها أحد."
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/know/03",
+        "ar": "email-marketing/know/03"
+      }
+    },
+    "email-marketing/know/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/know-04-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/know-04-640.webp"
+      },
+      "titles": {
+        "en": "No automated emails: no welcome, no cart reminder, no post-purchase follow-up.",
+        "ar": "لا توجد رسائل تلقائية للترحيب أو التذكير بالسلة أو المتابعة بعد الشراء."
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/know/04",
+        "ar": "email-marketing/know/04"
+      }
+    },
+    "email-marketing/know/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/know-05-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/know-05-640.webp"
+      },
+      "titles": {
+        "en": "You pay for ads to reach customers who already bought from you.",
+        "ar": "تدفع للإعلانات كي تصل إلى عملاء سبق أن اشتروا منك."
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/know/05",
+        "ar": "email-marketing/know/05"
+      }
+    },
+    "email-marketing/know/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/know-06-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/know-06-640.webp"
+      },
+      "titles": {
+        "en": "Your website collects visitor details, and no one uses them.",
+        "ar": "موقعك يجمع بيانات الزوار، ولا يستفيد منها أحد."
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/know/06",
+        "ar": "email-marketing/know/06"
+      }
+    },
+    "email-marketing/know/07": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/know-07-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/know-07-640.webp"
+      },
+      "titles": {
+        "en": "You don't know how many sales came from email.",
+        "ar": "لا تعرف كم عملية بيع جاءت من البريد الإلكتروني."
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/know/07",
+        "ar": "email-marketing/know/07"
+      }
+    },
+    "email-marketing/deliverables/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/deliverables-01-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/deliverables-01-640.webp"
+      },
+      "titles": {
+        "en": "Free Review of Your Current Email",
+        "ar": "مراجعة مجانية لبريدك الحالي"
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/deliverables/01",
+        "ar": "email-marketing/deliverables/01"
+      }
+    },
+    "email-marketing/deliverables/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/deliverables-02-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/deliverables-02-640.webp"
+      },
+      "titles": {
+        "en": "Platform Setup and Integration",
+        "ar": "إعداد المنصة وربطها"
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/deliverables/02",
+        "ar": "email-marketing/deliverables/02"
+      }
+    },
+    "email-marketing/deliverables/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/deliverables-03-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/deliverables-03-640.webp"
+      },
+      "titles": {
+        "en": "Inbox Delivery Setup",
+        "ar": "تهيئة الوصول إلى صندوق الوارد"
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/deliverables/03",
+        "ar": "email-marketing/deliverables/03"
+      }
+    },
+    "email-marketing/deliverables/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/deliverables-04-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/deliverables-04-640.webp"
+      },
+      "titles": {
+        "en": "List Building",
+        "ar": "بناء القائمة البريدية"
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/deliverables/04",
+        "ar": "email-marketing/deliverables/04"
+      }
+    },
+    "email-marketing/deliverables/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/deliverables-05-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/deliverables-05-640.webp"
+      },
+      "titles": {
+        "en": "Customer Segmentation",
+        "ar": "تقسيم العملاء"
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/deliverables/05",
+        "ar": "email-marketing/deliverables/05"
+      }
+    },
+    "email-marketing/deliverables/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/deliverables-06-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/deliverables-06-640.webp"
+      },
+      "titles": {
+        "en": "Automated Emails",
+        "ar": "الرسائل التلقائية"
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/deliverables/06",
+        "ar": "email-marketing/deliverables/06"
+      }
+    },
+    "email-marketing/deliverables/07": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/deliverables-07-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/deliverables-07-640.webp"
+      },
+      "titles": {
+        "en": "Newsletter Writing and Design",
+        "ar": "كتابة النشرات وتصميمها"
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/deliverables/07",
+        "ar": "email-marketing/deliverables/07"
+      }
+    },
+    "email-marketing/deliverables/08": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/deliverables-08-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/deliverables-08-640.webp"
+      },
+      "titles": {
+        "en": "Ongoing Testing",
+        "ar": "اختبارات مستمرة"
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/deliverables/08",
+        "ar": "email-marketing/deliverables/08"
+      }
+    },
+    "email-marketing/deliverables/09": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/deliverables-09-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/deliverables-09-640.webp"
+      },
+      "titles": {
+        "en": "Monthly Report in Numbers",
+        "ar": "تقرير شهري بالأرقام"
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/deliverables/09",
+        "ar": "email-marketing/deliverables/09"
+      }
+    },
+    "email-marketing/why/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/why-01-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/why-01-640.webp"
+      },
+      "titles": {
+        "en": "One Campaign Manager for You",
+        "ar": "مدير واحد لحملتك"
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/why/01",
+        "ar": "email-marketing/why/01"
+      }
+    },
+    "email-marketing/why/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/why-02-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/why-02-640.webp"
+      },
+      "titles": {
+        "en": "95% Client Retention",
+        "ar": "احتفاظ بنسبة 95% من العملاء"
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/why/02",
+        "ar": "email-marketing/why/02"
+      }
+    },
+    "email-marketing/why/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/why-03-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/why-03-640.webp"
+      },
+      "titles": {
+        "en": "Your List Is Yours",
+        "ar": "قائمتك ملك لك"
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/why/03",
+        "ar": "email-marketing/why/03"
+      }
+    },
+    "email-marketing/why/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/why-04-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/why-04-640.webp"
+      },
+      "titles": {
+        "en": "Only People Who Opted In",
+        "ar": "لمن وافقوا على الاشتراك فقط"
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/why/04",
+        "ar": "email-marketing/why/04"
+      }
+    },
+    "email-marketing/why/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/why-05-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/why-05-640.webp"
+      },
+      "titles": {
+        "en": "Ready for the Big Seasons",
+        "ar": "استعداد مبكر للمواسم"
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/why/05",
+        "ar": "email-marketing/why/05"
+      }
+    },
+    "email-marketing/why/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/why-06-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/why-06-640.webp"
+      },
+      "titles": {
+        "en": "Email as Part of the Bigger Picture",
+        "ar": "البريد جزء من الصورة الكاملة"
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/why/06",
+        "ar": "email-marketing/why/06"
+      }
+    },
+    "email-marketing/audience/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/audience-01-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/audience-01-640.webp"
+      },
+      "titles": {
+        "en": "Online Stores",
+        "ar": "المتاجر الإلكترونية"
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/audience/01",
+        "ar": "email-marketing/audience/01"
+      }
+    },
+    "email-marketing/audience/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/audience-02-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/audience-02-640.webp"
+      },
+      "titles": {
+        "en": "B2B Companies",
+        "ar": "شركات الأعمال B2B"
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/audience/02",
+        "ar": "email-marketing/audience/02"
+      }
+    },
+    "email-marketing/audience/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/audience-03-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/audience-03-640.webp"
+      },
+      "titles": {
+        "en": "Education Centers",
+        "ar": "المراكز التعليمية"
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/audience/03",
+        "ar": "email-marketing/audience/03"
+      }
+    },
+    "email-marketing/audience/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/audience-04-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/audience-04-640.webp"
+      },
+      "titles": {
+        "en": "Service Businesses",
+        "ar": "الأنشطة الخدمية"
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/audience/04",
+        "ar": "email-marketing/audience/04"
+      }
+    },
+    "email-marketing/audience/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/audience-05-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/audience-05-640.webp"
+      },
+      "titles": {
+        "en": "Sites Collecting Data",
+        "ar": "المواقع التي تجمع البيانات"
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/audience/05",
+        "ar": "email-marketing/audience/05"
+      }
+    },
+    "email-marketing/audience/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/audience-06-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/audience-06-640.webp"
+      },
+      "titles": {
+        "en": "Starting From Zero",
+        "ar": "البداية من الصفر"
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/audience/06",
+        "ar": "email-marketing/audience/06"
+      }
+    },
+    "email-marketing/outcomes/01": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/outcomes-01-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/outcomes-01-640.webp"
+      },
+      "titles": {
+        "en": "Customers Who Buy Again",
+        "ar": "عملاء يشترون مجدداً"
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/outcomes/01",
+        "ar": "email-marketing/outcomes/01"
+      }
+    },
+    "email-marketing/outcomes/02": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/outcomes-02-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/outcomes-02-640.webp"
+      },
+      "titles": {
+        "en": "Fewer Abandoned Carts",
+        "ar": "سلات متروكة أقل"
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/outcomes/02",
+        "ar": "email-marketing/outcomes/02"
+      }
+    },
+    "email-marketing/outcomes/03": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/outcomes-03-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/outcomes-03-640.webp"
+      },
+      "titles": {
+        "en": "Lower Ad Spend",
+        "ar": "إنفاق إعلاني أقل"
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/outcomes/03",
+        "ar": "email-marketing/outcomes/03"
+      }
+    },
+    "email-marketing/outcomes/04": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/outcomes-04-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/outcomes-04-640.webp"
+      },
+      "titles": {
+        "en": "Sales While You're Busy",
+        "ar": "مبيعات وأنت منشغل"
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/outcomes/04",
+        "ar": "email-marketing/outcomes/04"
+      }
+    },
+    "email-marketing/outcomes/05": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/outcomes-05-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/outcomes-05-640.webp"
+      },
+      "titles": {
+        "en": "Stronger Relationships",
+        "ar": "علاقات أقوى"
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/outcomes/05",
+        "ar": "email-marketing/outcomes/05"
+      }
+    },
+    "email-marketing/outcomes/06": {
+      "owner_supplied": true,
+      "images": {
+        "en": "/assets/images/service-studio/email-owner-2026-10/outcomes-06-640.webp",
+        "ar": "/assets/images/service-studio/email-owner-2026-10/outcomes-06-640.webp"
+      },
+      "titles": {
+        "en": "Clear Numbers",
+        "ar": "أرقام واضحة"
+      },
+      "owner_image_ids": {
+        "en": "email-marketing/outcomes/06",
+        "ar": "email-marketing/outcomes/06"
       }
     }
   }

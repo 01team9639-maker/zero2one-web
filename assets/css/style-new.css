@@ -224,36 +224,6 @@ main.touch .main-wrap {
    will-change: opacity;
 }
 
-/* Service pages: loading shows the service name with the site name smaller above it */
-.loading-container.loading-service .loading-words {
-   display: none;
-}
-
-.loading-container.loading-service .loading-brand {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   gap: .35em;
-   width: min(90vw, 11em);
-   white-space: normal;
-   text-align: center;
-   font-size: clamp(2em, 7vw, 5.5em);
-}
-
-.loading-container.loading-service .loading-brand-site {
-   font-size: .26em;
-   font-weight: 700;
-   letter-spacing: .3em;
-   text-indent: .3em;
-   opacity: .9;
-}
-
-.loading-container.loading-service .loading-brand-name {
-   font-size: 1em;
-   font-weight: 900;
-   line-height: 1.05;
-}
-
 /* Animated intro words. Plain divs, not headings — they sit outside <main> and
    would otherwise inject "Hello / Bonjour / Ciao …" into the document's heading
    outline ahead of the real page heading. Typography below is what the <h2>
@@ -2917,6 +2887,7 @@ html[dir="rtl"] .slider-nav svg {
 }
 
 .testi-card {
+   --portrait-panel-fade: linear-gradient(0.135deg, rgb(255, 253, 238) 55.11%, rgba(153, 152, 142, 0) 99.86%);
    position: relative;
    display: flex;
    flex-direction: column;
@@ -2950,7 +2921,7 @@ html[dir="rtl"] .slider-nav svg {
    align-items: center;
    gap: 19px;
    text-align: center;
-   background: linear-gradient(0.135deg, rgb(255, 253, 238) 55.11%, rgba(153, 152, 142, 0) 99.86%);
+   background: var(--portrait-panel-fade);
 }
 
 .testi-quote {
@@ -7740,16 +7711,13 @@ body.lang-ar .home-header .big-name .brand-wordmark {
    font-size: clamp(3em, 12vw, 8em);
 }
 
-body.lang-ar .loading-container .loading-brand {
+body.lang-ar .loading-container .loading-brand,
+.loading-container .loading-brand[lang="ar"] {
    font-size: clamp(2em, 7.5vw, 6em);
    white-space: normal;
    max-width: 92vw;
    line-height: 1.08;
    text-align: center;
-}
-
-body.lang-ar .loading-container.loading-service .loading-brand {
-   font-size: clamp(1.6em, 6vw, 4.5em);
 }
 
 /* "Our Process" bullet list flips to the right side */

@@ -1,0 +1,2429 @@
+{
+  "baseline": "468d1326ccd4aaf8a89380995fc8a51a2a1193c1",
+  "reviewBase": "10fae91c5f5c3ba95c15b31abbb4cc99be38cbba",
+  "scratch": "/var/folders/8_/5_y4wspx02q2c931shz3ywkc0000gn/T/zero2one-oct24-release-xa_2y_h7",
+  "changes": [
+    {
+      "file": "assets/css/portfolio-refresh.css",
+      "mode": "new",
+      "before": null,
+      "sha256": "35c9a0f14ff78027cb35085c1bfb50e859814218c5f23f677afe417ba48301e5"
+    },
+    {
+      "file": "assets/css/service-studio.css",
+      "mode": "merged",
+      "before": "8545f262781cab130ed9b6710e4d32913457f381a3eb954298fec36b745471f9",
+      "sha256": "8f1320504f145ca8dd4335282c3329da84ed4795a35c2f62a0f6d9b6c3c4d9b1"
+    },
+    {
+      "file": "assets/css/site-refresh.css",
+      "mode": "review",
+      "before": "0de9c784f8d53a8b97710455e9c49287ccffbbddc606ac0c6368e6351b62ffb6",
+      "sha256": "4cc822392630df6505fcbee63563c08bcbb35b38867247fa549c686933cad7a0"
+    },
+    {
+      "file": "assets/css/style-new.css",
+      "mode": "merged",
+      "before": "30f912397b61d3e78257379dec63277ca95b00bd63a74432732603925f51945c",
+      "sha256": "1a3a32bc5f97530dfe43c8c279a1f63033704e63523facb2cd625b752917451b"
+    },
+    {
+      "file": "assets/icons/iconly/original/activity.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "5f53bae1010bd7f77ae9bf97730b6f9dfea0d5906585610593469556ff1cd470"
+    },
+    {
+      "file": "assets/icons/iconly/original/bag.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "ef10fc444a220d5d0255c656472f222e13825eb214ab5feb1ae711176494b5ed"
+    },
+    {
+      "file": "assets/icons/iconly/original/buy.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "0fe9a6b11aefd69a4da8c0db3b8f3c7f451a9155bcccf68cd449f22a69c585f9"
+    },
+    {
+      "file": "assets/icons/iconly/original/call.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "66f97bda5aac2616ca0c205c25639909765cb01ed4f684bf220f9223684b0cf9"
+    },
+    {
+      "file": "assets/icons/iconly/original/category.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "21412fd97d01f88734da3774f01b5895e503c0c7b08f27968aa5e01203d1eac5"
+    },
+    {
+      "file": "assets/icons/iconly/original/chart.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "df7f116c5628099612f1024bdd321ee8f28ce64e22c09cdf7f39fd4be5bf1bcf"
+    },
+    {
+      "file": "assets/icons/iconly/original/chat.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "f48c1aeeb7887cad957ae478f5d94e147871b4360d6b43716ac1a01f75ba0172"
+    },
+    {
+      "file": "assets/icons/iconly/original/close-square.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "95c290c07cb9e0fd8e3442657342641425092c292b2c4ec22b6a1725f80fc29b"
+    },
+    {
+      "file": "assets/icons/iconly/original/discovery.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "0db587e115c5159a1ced1de448d6f3932786a56127118f22e0939b9ef4cb9215"
+    },
+    {
+      "file": "assets/icons/iconly/original/edit-square.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "e2a747036c03d8cb221d713ad36c80870608b225855af2747c819bd64a29e392"
+    },
+    {
+      "file": "assets/icons/iconly/original/folder.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "d56ee92fdd5d3896be5d2f2932b658860199bc5bcfe3c80dde9c144984ea68a3"
+    },
+    {
+      "file": "assets/icons/iconly/original/home.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "081d299233ba12c0b584220d02318c00b5bbc980e767b91a2af76ef40cf06108"
+    },
+    {
+      "file": "assets/icons/iconly/original/image.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "af754eca64dfc241e5f16082922a277c6a999ed8f9ba0e9bf76477648d6fda72"
+    },
+    {
+      "file": "assets/icons/iconly/original/location.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "48ad308b1e5def4998ad45aec1fc0a064060433b3c1a16a726289ece23a8e737"
+    },
+    {
+      "file": "assets/icons/iconly/original/message.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "e41f6051865db3fe0a7e4f8be6b6974c6d5ae2ddd6daa5d9da99d15daeac5c23"
+    },
+    {
+      "file": "assets/icons/iconly/original/paper-plus.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "a975bd80dc6f740f3d40f1660d36fc75eed566af05615aaa692745cc7f82c765"
+    },
+    {
+      "file": "assets/icons/iconly/original/plus.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "1f663591d96ec5d3b2b6dcac18cdcd7e6c095d246d77cd044d1cbcb916c3d21a"
+    },
+    {
+      "file": "assets/icons/iconly/original/search.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "9df88e4a2e565f60cb22feeebbcca1bd04f2adaaf5f77a45bd3da83b5cf29524"
+    },
+    {
+      "file": "assets/icons/iconly/original/setting.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "8e8636a7482ad0226b4fde80b8dcd45c8e108d03fdac3dd7f226cefcbafcb1f1"
+    },
+    {
+      "file": "assets/icons/iconly/original/star.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "b39b2b0f5c5ad929ef35b95e0c21fd65036bf246d12418d4cfc6d93b78ff4f11"
+    },
+    {
+      "file": "assets/icons/iconly/original/swap.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "ca1a61a26a23e3593cdb273c29a7bed083a13338020073278b6fd97fc98f2750"
+    },
+    {
+      "file": "assets/icons/iconly/original/tick-square.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "088b576c1959fed28b631b83e4cc315cc5f8da6d7b1806c26e0b6ba45a153c8b"
+    },
+    {
+      "file": "assets/icons/iconly/original/work.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "472a4c0faf2180bddd5f69f210e3eb439092075dbc29e9aa1729ccdc4e783df9"
+    },
+    {
+      "file": "assets/images/brand-benefits/provenance.json",
+      "mode": "review",
+      "before": "655ee9c8d5eefd522388454d30d5dfb07c1ebfa746ca033851efaca5fd5c8dc5",
+      "sha256": "5986b1083282f75d74cf896a6795aaf8b3908dd6c774f02881f44d0c35d7a5f7"
+    },
+    {
+      "file": "assets/images/owner-services-2026-10/cro-hero-2026-10-24-1440.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "bfe79a2a04e3b5f0592cab3b3a1c9a1585e1363a0e1f681e03e3062dc173d4b7"
+    },
+    {
+      "file": "assets/images/owner-services-2026-10/cro-hero-2026-10-24-480.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "84437f338a3f24abe8f2b361288b32420d4abf9c487067b9100232a73b524bd7"
+    },
+    {
+      "file": "assets/images/owner-services-2026-10/cro-hero-2026-10-24-800.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "d539ed731c9a8ffb5931c458f1c87df4140cd985468917b7c147871fff1e35b8"
+    },
+    {
+      "file": "assets/images/owner-services-2026-10/email-hero-2026-10-24-1440.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "b0fc87ec3ad7c9a21449c0b3027c94d3546fbe2a2dc56b3c620c772ed4f69e1c"
+    },
+    {
+      "file": "assets/images/owner-services-2026-10/email-hero-2026-10-24-480.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "8de35bc46411b8278737d5ef1046cdd353c88eb73ca71abf7ed43fb339b9ee78"
+    },
+    {
+      "file": "assets/images/owner-services-2026-10/email-hero-2026-10-24-800.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "6cf316fac00ac3c3bb3f08f879c6e02bd9d93495c421dd3ee2f8b9343e23e559"
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/audience/originals/01_ecommerce.png",
+      "mode": "new",
+      "before": null,
+      "sha256": "3962f79e40c4bec33fcd65099e816cc3d3fcd3d89f392dd0cbb7b8b93861af49"
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/audience/originals/02_company_websites.png",
+      "mode": "new",
+      "before": null,
+      "sha256": "8158270c3dbeff0ae68bfef8846dbd4ecaf945a8f59d6483f328f1563614399e"
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/audience/originals/03_new_websites.png",
+      "mode": "new",
+      "before": null,
+      "sha256": "5e3afaf71ee7b6cdfd413fcefd574eec712c2244ff0b03815f56017920d773cd"
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/audience/originals/04_local_businesses.png",
+      "mode": "new",
+      "before": null,
+      "sha256": "c3cbde8b35daedf1523340a8c9866aa4a417f7065a8019f07d36938e7c7e10f0"
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/audience/originals/05_service_websites.png",
+      "mode": "new",
+      "before": null,
+      "sha256": "adb616a583a2c8164b12e10f4a128ce030e6e359a146d531beb394c39e2f5e0c"
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/audience/originals/06_digital_platforms.png",
+      "mode": "new",
+      "before": null,
+      "sha256": "5cf2c2f1c6aa21c8dbff2244b9e523bc4d3cd31c069b125e5173d5f8a0ae21b7"
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/know/originals/01_new_website_visibility.png",
+      "mode": "new",
+      "before": null,
+      "sha256": "959fc2f6c5294e12b6e8c40c5176e9a77bb98c92150e8a3be16af4db8f3c8f07"
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/know/originals/02_no_traffic_or_leads.png",
+      "mode": "new",
+      "before": null,
+      "sha256": "d2dad5186fa61e33639eb5bb3908c52e949aed7c2873321c196b29128d4c8d46"
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/know/originals/03_missing_google_maps.png",
+      "mode": "new",
+      "before": null,
+      "sha256": "ecd01edd9ea82697b23ca1d3b9ce94545cc39fb55697de931e6282674f586878"
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/know/originals/04_competitors_dominating.png",
+      "mode": "new",
+      "before": null,
+      "sha256": "235b2cdd7e29ea0f721e0cef83a7fefdfc0c65ec8f930d272972e7f3fb2c4b20"
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/know/originals/05_algorithm_rankings_drop.png",
+      "mode": "new",
+      "before": null,
+      "sha256": "d9e98f7a6a2b238b9e54871606959eeb9de7fcafd8caa14d44932d615a971fe0"
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/know/originals/06_ai_search_changes.png",
+      "mode": "new",
+      "before": null,
+      "sha256": "15a96e4bde0d2c3b0b46c52e91aea66b874e0a621b7682cf3044e01838ee81f7"
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/know/originals/07_high_ppc_cost.png",
+      "mode": "new",
+      "before": null,
+      "sha256": "0f3cfbbfde115cd2c6d7d53cdff2d42edb8ffbff673315cee5acaac53f3f435a"
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/provenance.json",
+      "mode": "review",
+      "before": "3e34ebc3aaf332f3cfa69cc757fb2004837ada90741ebde6d4f98ac6bf072851",
+      "sha256": "074a87b57ffa29ae9fae73c8f52d08018e8a04cc9f420f7241c83c3e90f5eb7f"
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/why/originals/01_all_sectors.png",
+      "mode": "new",
+      "before": null,
+      "sha256": "0aeed41312effc0e073e169071a2a19d411201dad7e4b795771385630c0bac6e"
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/why/originals/02_customer_retention.png",
+      "mode": "new",
+      "before": null,
+      "sha256": "dcbbb648efc8789db3c47498775c6b58c6608a60d1d11b3fcdfc73dff6311517"
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/why/originals/03_monthly_reports.png",
+      "mode": "new",
+      "before": null,
+      "sha256": "0ec693bf1d34f9bb307c9c5d36bf95aa8c88d6d8d1698cd9b9106c49ab43ee7b"
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/why/originals/04_saudi_market_strategy.png",
+      "mode": "new",
+      "before": null,
+      "sha256": "fd425512b6f1ed86f2fbba1b607eedcec07e9c6b2481cf39d73be031a80c732e"
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/why/originals/05_safe_tools.png",
+      "mode": "new",
+      "before": null,
+      "sha256": "d924a40b0d81abe060a5e690727f6ca6bdd2f339313fa566c8fc911353f4e247"
+    },
+    {
+      "file": "assets/images/seo/illustrations-2026-10-13/why/originals/06_research_and_development.png",
+      "mode": "new",
+      "before": null,
+      "sha256": "bb7381364edff152dca881fde635391fc7954312da15ed76879397b352b04b43"
+    },
+    {
+      "file": "assets/images/seo/phone-mockups-2026-10-12/originals/chatgpt-search.png",
+      "mode": "new",
+      "before": null,
+      "sha256": "9d4c9069cdf9574426831629987b3fb51f59565084e7830266ad7287a9a863a0"
+    },
+    {
+      "file": "assets/images/seo/phone-mockups-2026-10-12/originals/google-maps.png",
+      "mode": "new",
+      "before": null,
+      "sha256": "92dcef19bd162ae63f97a819e9c1204fd64d6df0a9b5007a8e87202cd2b86880"
+    },
+    {
+      "file": "assets/images/seo/phone-mockups-2026-10-12/originals/google-search.png",
+      "mode": "new",
+      "before": null,
+      "sha256": "2460a9f2845ed0c9b6d111ff6d6dc2e4fce892348bc571d0bf5f32d429c99ec2"
+    },
+    {
+      "file": "assets/images/seo/phone-mockups-2026-10-12/provenance.json",
+      "mode": "review",
+      "before": "a3a1d6bd35781b22b368e302e19c0d07eae9a30fd6ef8281411d608ad592e9d5",
+      "sha256": "12ec0fb1fbbe4886ca8bbf46aca1bf22b86bdd609c17d5971a76c041945f6c1f"
+    },
+    {
+      "file": "assets/images/seo/phone-mockups-ar-2026-10-14/originals/chatgpt-search.png",
+      "mode": "new",
+      "before": null,
+      "sha256": "3fd93ecd45c5595630e968ba28b3227017a8b3e9af8839a5f74f3bcb6134c7c0"
+    },
+    {
+      "file": "assets/images/seo/phone-mockups-ar-2026-10-14/originals/google-maps.png",
+      "mode": "new",
+      "before": null,
+      "sha256": "59ac41d489f54466d08aab4fd418058978f64e44a2a4b1f935c61b4fad138a0a"
+    },
+    {
+      "file": "assets/images/seo/phone-mockups-ar-2026-10-14/originals/google-search.png",
+      "mode": "new",
+      "before": null,
+      "sha256": "01c495d4c9ad71f3e68820a5cb80111f723d4b954885d2fdc8a4d7bfbdeb6f6f"
+    },
+    {
+      "file": "assets/images/seo/phone-mockups-ar-2026-10-14/provenance.json",
+      "mode": "review",
+      "before": "8843b01b8f010f16bf9ef377d3cf5e2a9f024aa91e4b09f46e20a4d2319481ff",
+      "sha256": "1f24f2414d589ded75c29c34950ceb55d266481e9d22c86f595bad9402d949a5"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/audience-01-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "1a362ed84186bb30383bb146300b6148a5c993d474c6134abbffd9ab7a2bb41c"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/audience-01-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "890808ff33d0dcefc38f4e0e2c4625cf2fdd68cbea787b21437b9845979831aa"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/audience-01-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "8673a6fdc16b50bcb69e8b3bbfd80789ef9e8423a1eb31dca8e45e4b9a802894"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/audience-02-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "6a4fc29ef5fddd677ee3bc6d892e332ba9433e19f1d4446909c8fb7dd9f079e5"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/audience-02-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "f2055bb27bb433626a1c18680441e44f6e952d38141d558c6a9de53b88d55dbc"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/audience-02-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "210f6b5ed3ea8cd4ec3d1fe486f3a1433ff0b9150ee21a751e06b932b832504a"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/audience-03-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "13b46d33575a64a0be725b9bc960867f776e8970ff82319ba78acdfcb796489a"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/audience-03-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "2430cc9b7cbefd82cc00df6cab9ceddd411c3ad82ec4fd10f3fac4bd8aa345f3"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/audience-03-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "6c5b1b15798089d8545e73be40f11599b70d2147c96f38e5dcabdde9e8f52d75"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/audience-04-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "082bd2e23a644b82252b73a0b7f62b91bad860b4048e228e4f7202a56e6ea13d"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/audience-04-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "9df0700852bc205f9b5f23e8d51433ab5807301792009626a18c0eab979db681"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/audience-04-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "cf22874ae11c685c57921aa535aeb700c79ec7970497ae5d491a836b15f32170"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/audience-05-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "ab2d8f6c77173adbc96deb55632e3f59c745f3dee62eae876100ca3e56a313bc"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/audience-05-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "ed521207e3e2e231513fb13fecd768af21684146ca43890b699f1477d10c86f2"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/audience-05-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "e222a973d02ee8488f17ad89210a6814a206eef322bd42007c671b3d5a68a381"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/audience-06-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "60bd38c92b9e1f4acf392953d7a9cc8cdbc98c133f186e10f5af59a14876ad53"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/audience-06-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "c43bc0c69607f13475004b52dffe528e30ed8842b1374c881495301a4d0d752e"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/audience-06-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "03b6648e6fc2e39b80528a0bd6fd5f41ceed4369e5b46bf0de4470daef302dc0"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/benefits-01-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "15c6fdaa721b667c06e9236c653727e7e570499388e679e99216c257ab7063b4"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/benefits-01-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "da85e3037c39e7251784b803d61083e09e4a774ba6e38f4de79940caef312b4c"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/benefits-01-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "a34754cc705b8f1979d7b517b359cbcd1ce96347e4b0376df92495c7aa5d8f75"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/benefits-02-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "314e1c4d1789d03f5b7d15ffbc361fa266042f55695b2365d0d8eef4fea6012a"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/benefits-02-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "83f2888f6aaa7a00ae98f5124b48b42a244c7f8fa47eb159e766c1dc664f598b"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/benefits-02-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "a35fd9eadf87237960a11c049499f6109b5b3851a41ede2231ff21304cfa5a60"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/benefits-03-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "02e62c8100207a8addba2c927d8f37474de8fb7d699b33aee1dc38580fbdb98f"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/benefits-03-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "332fe4b743176fb21972f85b5c8906256d619c5c517a674ce605f0c32496ad39"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/benefits-03-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "bcb1837ac280116698d5ecf0171d30b684001f856aed3e01453b2a1b533e885c"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-01-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "2b8ad0bef613fa24d1870921680c4c09e8377a47d69a869b5e998354634ad595"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-01-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "ed38fa2cb510d806d987ec9ab5b581fb3e9092ab220653f4ce2f6ebba02bc9e4"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-01-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "2cd7786b30c2c2ee5f11546efddec21f913faa0350d2abf48e9a72ed6ce126ed"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-02-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "95bf59f5091df430ccfcd60b81032737c64bb240fa7b442a7aa536f440c3942e"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-02-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "999ad1c2d5320a73bc84c52103b0709c1fd9136ef770dca67d8dfa80d0ae1a81"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-02-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "03f0845c55254ce148c5ba3e155491780d728336b814ba655fc25d0ac98688ac"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-03-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "4332dbd3c26c87ff29e52f83ed333459f993f3d7c59fccc9c8ac54e825fb984f"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-03-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "1a01315316ade08d50852cb14cc7a5ef6bf0da51450b290c2e8c3f83ef824d73"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-03-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "66d21a8badb61ac53455cbddbb73cd1287b671f3b29802be4954c5d64360c7f9"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-04-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "b610f6dee7bc056c906883c80aa798cbf105fcaaf3cfadaf0aa0583382f95920"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-04-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "2ee0150fa1df18c2f83cd15a0c83687488c03d3d1092ae7ad9ba3bf42d3c0011"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-04-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "f3ab24af25c0777dcfd64d113eaa32ddff0915b564982aada0b789e6985bcc34"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-05-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "369c37b8509ccb9676fe1ffaf001f0635e531bc7f8ee1fcc5b0e92f62119cf46"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-05-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "efee3ec4e120b25023f1c9a1902e47b4720870f484097dea4cccb7c594bb5e73"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-05-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "bee99751ee77c0140dcd940de47300cd47dd517eb9ee53e40617a0c55ebbf1fa"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-06-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "c953c0579aecd642476e47f6bbcc36e37cf1039ba37b84f4b223ff998d9c480e"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-06-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "d3511ca7a3aef0fcfc873dcbfd5a8241ec9270879f8d1e838f4f74109741d8bb"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-06-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "a6d1f620f8898ae8981cdd0b37b6659180c5a6e75aeff974c2048c70960e7074"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-07-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "772e64ce7118f32b0347810794b02813752866cd2ada8bba83c4e08bb79ddde9"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-07-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "79201b3d12a9803bab41114cd01e031180589679d91a4a122c801ddc9c95cf96"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-07-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "0919c0eab7da4476ccf0c2554766db1f03f997f93ce08e76c4e78058913232e3"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-08-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "c538b75529a9b13278b86c0fdef8844f82119f864c20c18a21ac0853ce9cd1de"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-08-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "31892e55d170fa03c1e90d1c223e3d63662a7eed8c45ae10fb926fd9088a0ce9"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-08-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "100e21063e72396dd727b7827d109890c41a64085c5c813d6d3adf510f7a7de1"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-09-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "a510e88d9fe6f0fa1ead22a4c2845a41fe15e8b77944a9b4c4af4e109c1765cd"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-09-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "54963fafcc886d7eb6721e8a0a259572e3adec3661cf0d5ac06f3940412e421f"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/deliverables-09-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "fc04f7c88e18eb3287c03805c5bdf8c93344fcce13ff2a8bee18703b0bb0e66d"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/hero-01-1440.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "6fb903978e051cd1b8af8b1f1ab1b7020858673a0066978d39490f48b4b56c43"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/hero-01-480.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "1b5d7e18fa80f0317e70a7b40a83558e4583c78e630cbb7ad96ea4416560ec11"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/hero-01-800.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "d80c7094a45c7c94d11d3388977881765ed3954a5abcfa73ae4f2e17dd594f2c"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-01-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "82b6363727f49e873be30adc4fee6275d03be9f83fa61632074d411390cecb12"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-01-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "43a5dd3790213bf4a113e00d8a9fc45fe54a73b9b24598b2fb3c0893c98a2cdc"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-01-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "ae31754e92420bfe6b025c5e091d4d682bf2b1d2d861e6d7e155141253a75d3e"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-02-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "3e90af12a8b3dae26a92749b7591dc1a48ab17d9e917fa5ae9384b4beac92f2e"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-02-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "142be85054c0c24f1b3e59a940055ff5982c6dcf4ae3ea46b2c2a8cc2771879c"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-02-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "4afdec5aaa45d8215632e4379d5ad90e4459960b642bc2c36fd2a03dba9b84b5"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-03-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "102220944fc4fdbb5150a087df7c8175e1274c162a900598e68ecb00f6cec802"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-03-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "89e3df51cce29a9af6c2209f05c9495239e122cea4899c8c26ccaa63122026c8"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-03-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "2a4172900b9f137d30dd810b22ba209ac3cb1418aaa27541550e5a48294e79f7"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-04-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "4b4272239ae3c53027ae110b786d650a572b872f1aa130e550de293656e95bc1"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-04-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "37c3274bc498831670929cfa8c0c759a0f32c8272694d946bd3aebe4bb06fc0e"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-04-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "9ffb43fd11d13df8ed424f1a16500ae548dd1b1f1db69d552989ef2814ec411c"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-05-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "7782cce9276868f7e26fb331526115285327fb879aab7b1e3b1e169d4dcf0b22"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-05-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "1b78303f6ddb134f46abd32974f1d660bef785d7a0ee1691d4949c1d5bd53166"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-05-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "fea7fb752298617be4b53041101e3e5ce6711ad7645a68e7c990ae656db2ccb7"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-06-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "b405147cdeb72dd5ed5e4775f5e2b19d533b01c41ec7160727b8c8f8b85393d7"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-06-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "f7e0f26ee96f92b95b59ad23091a25c99c10e1bbdba35cecb5eabc8b75229e7c"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-06-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "996f30ffb23de70af490678b66ae5030677c2488601a333898df693eb0dbb6b9"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-07-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "b56d1be1f2443c742ac32049238dd235242d8fe1c631c3ceee26fa09a5c804e5"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-07-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "8af04e37ef06918d6a3fd2290cc3d2c95d2bf18aae4d5e12879792e21fbcaba3"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/know-07-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "494dccfea8f6702aa02a21bfc96a3df8a88226262290fb3d8b9855a5da2e3151"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/outcomes-01-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "c3e369eb47b5f03819c218fde0d959c686864eb17ac04c2e1be3853404d09b3a"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/outcomes-01-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "77130b43f0ab29493b3f878653b587daa7dd74f464bfa9bf47cb83d40a412848"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/outcomes-01-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "a473e94d6748d732aaa1b44d3715a989805fea2d39a7d4709b29a512e97c3305"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/outcomes-02-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "696f376bfdb83ad9996af57bf22a97974e033c19d5aeae3e1c11cdfe3aa4f4b2"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/outcomes-02-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "83eaaeb20303091ae02a62415bc2e0129ec9dbe98cac6edd5cdc91614d3f061c"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/outcomes-02-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "d8e81bde7788ed4994524165cf28f2ce3fe488587c3a4c024b0a9662604aca8d"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/outcomes-03-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "f7a2fe36ac3f71f4c428259602e98d495ec45831b29da2932c0007e41cbd062d"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/outcomes-03-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "5793edb0a4cb2dc24fcd417d422ffb242658d4242ab502321a87e25e9a7f1d72"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/outcomes-03-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "4ba7551ef03ccf0adebc98e013ec607a880a6020239d8b60290bfd9dca7193c3"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/outcomes-04-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "a8cd83657388b823cbeeb912ed9a20cfc7352f4cd8055b48bcb0e3299aaced26"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/outcomes-04-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "8f5c5613a51d4539c303379275d9d4480d744fc70c3e6995cc8f677e3099538e"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/outcomes-04-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "2708e7594a53df85d914801da53623f01fe35c9717f412ceff6cb40351c21517"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/outcomes-05-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "b053bd0261cb9acd3ed01f623f7eb9fca36d396c3ca4ac872885907d27ccafd7"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/outcomes-05-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "4752d48873d35b6eb107f3aad15cdabd9473161455fbd2b9111de52a5d1f2de3"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/outcomes-05-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "c4100d1e0600044493aadc17d75e3785471b9759be847086883feacc914a6f99"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/outcomes-06-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "db680eac1509cb24e01a84c3072c374bd3b0c1bc950f323e9d9e1e0c7e1e5684"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/outcomes-06-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "e6b557fd66f763f633306c4943f92a718b31edf7c533362083ce75a7c10356c8"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/outcomes-06-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "7e600bb11e64e667d533bc622ae259b076f677a1f02163bc462633f66f000126"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/why-01-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "18cba8afa83f3a587883cce39e48c198a1a9b55c6b2690fb4ec6a27f0e290053"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/why-01-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "b45f4e3f8636acdde41e7709724ae67070cd337454e61ad93aa5808bc8acfb34"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/why-01-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "1a61830438b942f761ccf5f0fff5a6171749ef0c887f04409604f8fcd14f833d"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/why-02-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "ad35eb4a4d25e80c3bbf2180e94c1171ed5e30aa5f2eedc952681d7b293294fb"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/why-02-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "b248c9551d05bde9ceb9f7252781785fd84e5c1079a5a4dd9e805908c3d85d94"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/why-02-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "7b4748a6942f473e4b6add7d3e42364be3508e8cb8bc912523e04c41e4ec83f1"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/why-03-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "bb06a43df27ca17417d2a40baef0fc86924c9052ff2519b8195b7a9b9502f157"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/why-03-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "1e48d2b807c31933a52ccf7ee4ebb93438683c0f71f2f21b220d075c4f82b3e6"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/why-03-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "101448aaf9b5279b0d17820a4d0135c8a533989d53c7f3361c3780a270676930"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/why-04-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "e7235a548076aa503b2f37b9826e69ab498e786dc013e22afc5732dc9495fde1"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/why-04-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "76816be5506e9f627e96ee7bb7c74fc143cfa0448186295820b222a8901d7993"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/why-04-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "0fac73781e32ee7268692deb28c5dbe1eec4c8699b18d28870bf6bd8ccef6df1"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/why-05-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "696a049aa99631dc398f54bd96bc6a4f8d554754ffc8be2cfa1393e31be15df0"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/why-05-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "f422859af377d992ad75f530cb2210d4f9da3eaa1a95dcbb20bba314cf746fea"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/why-05-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "5dc210f5b16be8e8d7757159417bd3f566bb4dde595118327cdc19445368a85f"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/why-06-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "b53034078ef0206cf8ff122f567b30e2aa1fd2367c38680626062e95f1fa64b0"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/why-06-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "3048c8498dd2e36f7b0e1a1e8b3b9002e7e11425ba420fa1489b578132992a7a"
+    },
+    {
+      "file": "assets/images/service-studio/cro-owner-2026-10/why-06-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "12187b5343730bdd2ca2f5ea153c3c80b7bbf97ab9c735ccf037f21555720c7b"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/audience-01-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "2bd91921b8ae728330aa7c0ae021ec55dea03e2b5d8b1379cca867a5baa35987"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/audience-01-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "79b4f4d3fac3669702b6e58dcd037f89bb4a5ec992053963dc9461b8048b5794"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/audience-01-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "093e4d9f909e57dd4433f6e2a755d3713f038ae916f05283bac2032880f5e19d"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/audience-02-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "b7035c6bbf9e5ecbdb43808b951339ad534030d1b35b85f9ca0e6aee509b6f3a"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/audience-02-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "08ebe975598758393b06b0ff218ad47d037b6bb0bae42cb67f054db3499149e0"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/audience-02-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "ec1cb9ae84d2eff20926c2154879f2a586920a128e6dc8af4f0adf97b04189b4"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/audience-03-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "c1eccccc905ded3e55ad268a2550e4b37e86d4735d0937ea461d776e6baae7fc"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/audience-03-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "6b2157559085c67d2d81390aa2badc3f58230e918a245d8283c3c3eccd7d47b7"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/audience-03-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "8142e76b507d03fb8d48a5503d20b52c9448837eae36c828980c5d6150401a95"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/audience-04-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "de54a7364f16fd374912a7ac39b654f1016a833600269b9782f0608b3ff27698"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/audience-04-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "965b551c609184012a8d48b9ce5962b7c8c3ce1c2e392c525ee232d61077ab16"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/audience-04-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "8ae8cbf6f32b6ae97248e4672d6107417f1f8763ea6451c821ac08d4e2d05850"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/audience-05-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "0ac04473618b23877cd06f5875d324d768d1d62a9b8e84c476bad65de0462b39"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/audience-05-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "6722179fb7cdf1d1f64a50cc4eae2edc1c74772faaaae0578972676b1e6383b6"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/audience-05-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "5827261b0e3d7aa1fd0ac39496afab35c9df3331376d7d0e2a9b4cc56dfb5aff"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/audience-06-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "e97aaa2a100c4df92eab2bd027d6f496e4382c2d4ca48f5d1fb4ad0a14369421"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/audience-06-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "2bcfe644b9bb0c47967df0d6f90bd3d068dde81477dabc89129347084c916860"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/audience-06-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "395aadcac339ff05d57dadc4a8f04bf4b63dfdc3d64f79a608c2e00436dddc1e"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/benefits-01-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "7ef55796c091ee5159160063d0bee195b59a2554352d857fb99b0ea27d8855f7"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/benefits-01-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "49dd77975f327bbd6e86d30f0d975056c4317820ba3ff32442cfe8abeb81265a"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/benefits-01-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "0cfe5f2a64213b8f531e8e7eb3dcedc113ed66f21fc51ac25f24f80045865552"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/benefits-02-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "dc52e5032dbd769cfde0c709ed4c3305e7ef6e2424c1021d2c3705413e3bb9af"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/benefits-02-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "6cb0ea3f3c5b646593b42883fc0271be145ebe67070f7635bbb8a40068e193ae"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/benefits-02-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "876c9783fca9ef89daf00ee8061830eb48b210f042dd7a71b41e05b036a65286"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/benefits-03-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "2edbcdde8871db7775aa0d9942cb6288e49c8e834afe8fd8829d3f51003abe66"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/benefits-03-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "dcde0a6373ef32fe7d53686aa3751e3576adbc882db9a9b8d073c65ef6a858f3"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/benefits-03-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "017fa9563c02b47723d9a3c99b0bc8da2a7f3d0dc8603010c7ad45d3b7e0899e"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-01-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "de10cd741eb5efa29ac667d57d99530e806081a2ab5fb090fdee5b67c38a205f"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-01-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "651e638161b553ee34093d3cc15f282c28825aa1a52a15e749f07877ca2012b2"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-01-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "11c74110b63b4f766a1912b6649f9af9f6d5a06862ac9b31fcdebdbe0977538b"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-02-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "709ab6639243d3bca3450654a349963f959ef9ed4f4754a94ac847cfaf2c5247"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-02-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "167f2011e14433b231277011c22bc5ce8b21e4be202d50457434fbb5e4f58e35"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-02-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "92edd6aaeb82d8339ddb9bfe40512a8e51a37f525e07b548162c5e6e4605c9f9"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-03-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "f91e9bfd38f2ce52a4a78956ea9497ce2c2cc5667c522db3f62feb25ec95ad58"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-03-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "38d755dad6f7bcc963346c2a46455c710bea014817aa281ef1c6ff9a8aa62636"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-03-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "99d5081abcea21c7d6e94d27fb0a2862c82c952f74f2df950f22c6f6106b88d6"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-04-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "fb299477680e2b2e7671b3f29b5a4f889cd8fc7bf6d0c39a35e1c73e11a80d56"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-04-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "a52e50f60edde753bb611b2718e6a278677ed0324ff3a98c35fd86f910afabc3"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-04-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "4a87e1bc8745a543c3c49df512ce9ca8b942d08479d72a247922ac6486a31137"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-05-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "5ec178cef8dc65640fab6e94f8a80dbb681f72c40ded632b22334a7995fcfe30"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-05-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "2a6b65783f127074c0a846666bff669b4bce7857b28c3ad043e3f99d78480cd4"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-05-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "965c339a9ce90c7d38e46eac0179f3612bf8c7e5b54d4099fbd2dfc8247ab69a"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-06-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "890cc2cf57e9f5f69ee1760864cb362b15c53303d96b5bfa9ac50b8cc9e06412"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-06-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "40039cc3131cd617a8b34921a24657bc19a8464807ff8f8ed3f2f88b50a7fef8"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-06-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "5e6290d17a8ed8e840a851109b4cf036ed0f206e43a463d0a7a25cc10b041fe5"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-07-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "5b0b68e8f4341f1388b9d12badf749a78bf128794ca2ce8c8950ae05593a0048"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-07-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "9ac6f13892ed8e6d100d6eb5c2c035ce4eda3b2b717fb4ee9e18e03692591b68"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-07-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "8fe01f568bfabf24beb2fef6297044c1cebd6f6f7ccfd7ca2729920b7171f59c"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-08-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "b3dbaaabbfcc2eb703a6a9eaa51406b5dcc28ddf82ea97246f839e7cdff361fe"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-08-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "315e0be6610dc23f34016d9cd3297d417442e35f553d4b77bd71d35b63a1dc6a"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-08-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "55d97b8abf4d79c0a9b210c42713a62d994219d7bbec3d47f1b8878a7c298a26"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-09-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "d79c23a9cf1f353c5d0819cf4a7b859395436a5dbe8055257fabdef739d2efce"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-09-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "8cf4985eede77f2910e22a1c897d2d01c3832395cc253620b7c82ba911c2d516"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/deliverables-09-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "74ecfe8dbfced15a1152fdf14aa8d4a5af8d4d3f979d3fc97b401fae29201e6c"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/hero-01-1440.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "4015b6658464fe220b8dc72397a6ead748ac015bc229299c9b03190c1e427f27"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/hero-01-480.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "8e20049066244ee44dc2dd93431b2ff7f028bb111cfac1baabbd227f73a78e3c"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/hero-01-800.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "e5afff07f58888c96733950f3c42f061e7741bda9a0c641a2f3a1ba03cb0c94d"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-01-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "88e1963ded16e13263fcbb9146b535f8742d9453abc1d96ecbf4631cefa051eb"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-01-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "f2985e4e1506d78bf70f81e3197ebac955837573c6df249ef7ea81281d84cefe"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-01-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "33b34153cb3bd4052a6d098588e189474e4150c1ee0d799d032b45fb7d145bce"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-02-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "f35a457e65771ed31bbc72f8767219efabb7586935eaccb8791156f32b17770e"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-02-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "d9188a34c1be449925c7d1afc0d7e303909e80b8243d789449328e833c4fa509"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-02-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "74b9371edddea88a32a8e3d66c649d16b1642a3deb6d05d213cef07bb94a6e0f"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-03-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "7fe0e75f6465e769183a6fe502c437c23b153264b3a76d7b93401e5034737cf7"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-03-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "b4735f7d7d3be17fd50c3604d5b0c727e96424c385626047e0dd382a99a01d69"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-03-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "6ca8e5c9f0dad4b2a94051f93fa74a554bc33fbc11dce5d2836c97ce60e1ff4f"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-04-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "e8f23532f1ecc91c08ab9652c113a130056031fd3c5cad8df030cfd7a4da915c"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-04-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "aa08938201acd71a7349a765ca6adcd5d3f6d4269bcbc132e972dda96ec76f41"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-04-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "08c1e8f02f7a6426e29240d078bebb7fb6dce04e0de006c21c6a9dffd713024d"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-05-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "e1d6c614d3c6d5033a78ef52dc40d2dc46e07ae38138f1175d42cfe7ebb90d59"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-05-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "65ae1700640e154602640cad596a4e82838a96759282069105272eb57b7f1339"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-05-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "e5b33996d4c99ed67861fc91cba327f53ac17ea930c2a7e4e051bb66a741468e"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-06-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "4635ce6a23ed19031a55c174eabfdd1e0ba7756a1cb11beac3753dd0c1e94990"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-06-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "8ba75d4ef90d8c6e6a589b0b6bd0513458481a36ade1690d765e086ba6ebe1e0"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-06-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "275ee3609ac336b0b3f23427539affae30528fc5abae017941beaf9bef0535be"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-07-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "eb7bf71be27b3edd0c690d719c1d35629c719d0d44560e559635f2730fa116e2"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-07-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "fae0ce2307fa3e9f947f4d051810b9b1e66eba71fe87a235b34b3b148dfb6f53"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/know-07-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "00e61b26082a2c8c7b59e78a43dbd8450f3b41fb1d66e91a2607622341334b9e"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/outcomes-01-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "32baf50ff7d6d85ab86bd914110134c885e084ff078864329d03a4d8b5d6e0c8"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/outcomes-01-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "b8fc70ea7bab74e0ec4c37c42ab324bec024e6de0fcd2769d31c6620e1cbaa91"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/outcomes-01-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "c4d524c9be25f30ddb147ab140db66ca94700910828c73e11d078134e1d66ba5"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/outcomes-02-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "4c26c128e772ad074919c4ac3e8f4f9fc154dee7ccbb736c5dd15fbb3def70d4"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/outcomes-02-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "84f1e71d95e603d988eb7a225d9923e8580162b8e4176739f3776fa7d0867a41"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/outcomes-02-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "e11c5046f42dc1105dd17353bff7a32f5fcc5230844ca12106d257639bfd1744"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/outcomes-03-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "dcb52ada2c2f30bb9e18a503d075a55eeff8f0f98c1e688d23ecac0941773df3"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/outcomes-03-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "ede0b2b3c1746bf03fc720a45a18170342ed414ee26c2114abc7f04a95168f00"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/outcomes-03-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "7702b1028bc2d48d1ad245f2964e814eb9d6cdd15d41453d9c891e054211ae2d"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/outcomes-04-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "79bed3605d637967105c7b80048ede25c25a2db8f11769b7d24948455814cba4"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/outcomes-04-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "3306aa8f5a96aba8b90cc3fcf1eceeb60b19bf98adb76a268d01d92d5e6a61e4"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/outcomes-04-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "cda6140d86a337f5ae9fcc6f3f11a79f737095b9840cab1dd57eb8b964245f1b"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/outcomes-05-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "e6d467625ef984143a3f7e39b9c080ec92ea6ad35b2efb8e54264aeb393271e4"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/outcomes-05-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "75be104c80851606c63eb6de64d21c17f6ea9eee4d1713f3eb4631e4a62e6ae4"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/outcomes-05-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "6e10f7361903cf2a361c84a4131df458bc4e647a37f2daabce53e33ebbedb320"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/outcomes-06-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "74e37621a5ca9bc6d8d737344620e7c591ad88a641bcfe0af93b59f8cad7d7c3"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/outcomes-06-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "24aa6b6e51cde5c2c40f09acfa45c479554093fafceb7f4296d33b3ac3f9c3c0"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/outcomes-06-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "033f43ba3e81f0802dae6db738e1d874d67dedba09d9266a602a26b0eba3e8ba"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/why-01-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "4b46d3acada4f7f4fcf969df8f6e98e1ba1ae94e1335276e63af2eff99272c0c"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/why-01-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "5d38059bf50a164a9a02de856c2b4f1f005ce62dc0adc53020a9f7780f7d3ab6"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/why-01-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "9880ec108a36bfed917d9bde6713074e3f623ca40e6d56c13f3f02b378e2ff30"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/why-02-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "db9f38c63e29687177ba67a8b2533fe841b1ae5a5d0aa7765d14ef604c4cc60f"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/why-02-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "6df42e784dc806230dff8a1d6603a317e569eb62edc0ef24f32cbc5a6a63b04c"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/why-02-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "7aad7da754454e4b44a12f79dbbd81ced93680896f5e20b32c492d5ff925c9b0"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/why-03-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "0c775e8d38e43b43aaefa2152d39f4571a8be2ab27ee2297a297a3c0a4df55db"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/why-03-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "fb186bb3bb241f2da8e00c8467c9c1734e64ac5bde70df61000c6b244235e3a7"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/why-03-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "ce737eb91c10783c6d2aca7498cb55454ca8ae93203aa5b205f4c335c2cc5131"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/why-04-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "cf877cbbd305fde4006102cacd4876de89e9069d2398a16689555bfaa6f606c8"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/why-04-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "6aef874d127600b4798484da160f0bc1e905e9d7ff8688e04795252f3cbdb186"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/why-04-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "8a98cd90a5ee5b56c66b8034ed400e891f2816e66dd77f930c3405a0dd62e14c"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/why-05-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "71e1f7eee479eddb173218ac3e16f0208e9dddb79d4a77804799b263e214ff68"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/why-05-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "0f9440df216f1df70955eff5244ac3cd6a913359684cd225fe486aef1fd963b2"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/why-05-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "ad6099fa5ac5b8c2c86385c06356368aca3fefcf456226aa0ff00dbcc2e90c53"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/why-06-320.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "9d83304f6382b194c9c2a3b9000b9a27c59ec6e71e134cd1a7126f495dcfefb4"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/why-06-640.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "fb07288e6b6f7d4dd6af601228951f74e5f75ffd80536257d0470117766d905b"
+    },
+    {
+      "file": "assets/images/service-studio/email-owner-2026-10/why-06-960.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "b84aeb328a2ae95d8475f2c69f14b7741d427354a0acbc26fbdc30cab6390a82"
+    },
+    {
+      "file": "assets/images/service-studio/placeholders/conversion-rate-optimization-activity.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "c983d14c7a52894c96bbf8f1e93a379fb7ad339537e6b69510c41d23e3292a96"
+    },
+    {
+      "file": "assets/images/service-studio/placeholders/conversion-rate-optimization-category.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "f740bcb9ccfcd0af9f09e234c0ecad28fc10f9cabe7397149bbb98a6857dd186"
+    },
+    {
+      "file": "assets/images/service-studio/placeholders/conversion-rate-optimization-chart.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "6067364d23fcf9e4dc4df34e75b72ae1edcbdf330d84f92e6d8f47301267d55b"
+    },
+    {
+      "file": "assets/images/service-studio/placeholders/conversion-rate-optimization-chat.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "1405704cef028b29004045be3f81891644e9cdcfd0131c5539161eecc43658ef"
+    },
+    {
+      "file": "assets/images/service-studio/placeholders/conversion-rate-optimization-discovery.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "8cf1242c458f58893872ac14da5c8c6b5f29d401193632c51c50749c2b6bd91b"
+    },
+    {
+      "file": "assets/images/service-studio/placeholders/conversion-rate-optimization-search.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "fd76a6db5f77e8052c218fd02fc07ef345a983187ade00b2c18c9cc6d8a8b564"
+    },
+    {
+      "file": "assets/images/service-studio/placeholders/conversion-rate-optimization-setting.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "4d0e8487d7c25368abccbc51539c4139d1ccc7c352c3d84b367c4bf4b78b5f1e"
+    },
+    {
+      "file": "assets/images/service-studio/placeholders/conversion-rate-optimization-tick-square.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "c9b8102a2aaa51a854fd21a4a1985916f0b5de05f1c354ea2ad1ccc61855c126"
+    },
+    {
+      "file": "assets/images/service-studio/placeholders/conversion-rate-optimization-work.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "bce077fc7e641fc6354bf34a9694df32f975e156f19611ae765171a532a81361"
+    },
+    {
+      "file": "assets/images/service-studio/placeholders/email-marketing-activity.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "3e5f18c9a86fdbc313ed8882e32ec82fdf94d5f9f2a2e37fc061198b1bf7e4a3"
+    },
+    {
+      "file": "assets/images/service-studio/placeholders/email-marketing-category.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "ad0c7115b8b2b9c135542d149826233ac299bba2f7cfb9d2ac80ce95144a49f4"
+    },
+    {
+      "file": "assets/images/service-studio/placeholders/email-marketing-chart.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "7bcf02efc2f23e0e5f4a2bec1f7d5852b120e104c33966941f75a4786112a4d4"
+    },
+    {
+      "file": "assets/images/service-studio/placeholders/email-marketing-chat.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "2b22d782f7ea7a366e4d1d9565aea0b289de80eedd1293eca8916e1eabe99a57"
+    },
+    {
+      "file": "assets/images/service-studio/placeholders/email-marketing-discovery.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "0f963b6466e6480d0a91937f9deef6073760d216ec79e028ca30165af52975f5"
+    },
+    {
+      "file": "assets/images/service-studio/placeholders/email-marketing-search.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "c882bdcff53d4a64dfa151f28a6cae12df8a5e0d6b39139d545213f8dbfe732c"
+    },
+    {
+      "file": "assets/images/service-studio/placeholders/email-marketing-setting.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "b13e93d55c2133c98969986a0c872308c5dd6c27082a9b9f8c8021b4e6aceacc"
+    },
+    {
+      "file": "assets/images/service-studio/placeholders/email-marketing-tick-square.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "851aa07031b48003c579d7232626fe840c4b3a2df00486782bdcfddd32394ac9"
+    },
+    {
+      "file": "assets/images/service-studio/placeholders/email-marketing-work.svg",
+      "mode": "new",
+      "before": null,
+      "sha256": "53a46ef616c36e2562eebb2ef74b051e191b50ce9637c9f8e667f61207cb36ba"
+    },
+    {
+      "file": "assets/images/team/team-moayad-480.webp",
+      "mode": "review",
+      "before": "7cf5c64ceccfffda5493eeb750061b91610b861cffb96226f817d3c2e9952346",
+      "sha256": "98aedc3b482758d0c5b624359bb2a8e5fb2592427d375aba862b984f86ea3793"
+    },
+    {
+      "file": "assets/images/team/team-moayad.webp",
+      "mode": "review",
+      "before": "808226e82b0c259419dcaa7904a7769b318d321972c567c33d3cd830a1cbc985",
+      "sha256": "1dd86fe76609fc0d1d28dcb09991f0b4941b75e298651f3f075b0ba5c86a6f95"
+    },
+    {
+      "file": "assets/images/team/team-mohammed-480.webp",
+      "mode": "review",
+      "before": "0743831899f1fe727d72405f0e5b08ce9ce536902ffc45da739af13aac1fec55",
+      "sha256": "40f6a12d25245f65ee25201b424c3f5b667f8c16dc34d7f39867109ec7fd19b7"
+    },
+    {
+      "file": "assets/images/team/team-mohammed.webp",
+      "mode": "review",
+      "before": "2b21e016c59314f0ca9963f485e4b8407b15e57c39953373252a81e578dfa2b8",
+      "sha256": "eeea5484fa96b27f3aaed1a84d7699c96bf2b39cd790982cf4d599c552603f20"
+    },
+    {
+      "file": "assets/images/team/team-nadine-othman-480.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "323ac1422b02a92cf82011427ec6e98efe95391d67490e177ae8994d3f02b62c"
+    },
+    {
+      "file": "assets/images/team/team-nadine-othman.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "f47f984c429d88fbd754608635b55e66d94bf5efeb5f79639da6dd35d177303d"
+    },
+    {
+      "file": "assets/images/team/team-omar-mansour-480.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "5a359ec3b7c393cdbf5afef37edb9db223daae52c197e6ac7f0da8aec0832eea"
+    },
+    {
+      "file": "assets/images/team/team-omar-mansour.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "68a15356ffe3832343a0c69661ef152f4d02286392e98db943a102c87abd9368"
+    },
+    {
+      "file": "llms.txt",
+      "mode": "review",
+      "before": "23b4fc76029dce8466bf47807f7215bb2e3522e811cdcbf8d85773dfec36c634",
+      "sha256": "362d72b2ccc654797b9d88d8543309f58ad88527da6a37e4e4991daa9b8f0d0e"
+    },
+    {
+      "file": "sitemap.xml",
+      "mode": "review",
+      "before": "2913f76b6ab3186ab926c3447a7d5c5e3e25d16a3316207a2f596ee54e59f76b",
+      "sha256": "0156519933e4016685f584d56e424e01f21feaca1335cd9d2ee9947e6808b477"
+    },
+    {
+      "file": "tools/brand_loader.py",
+      "mode": "new",
+      "before": null,
+      "sha256": "ed062da785a181a73f7d0b05b513b54213c892506a5451e4388c3a9a0179853e"
+    },
+    {
+      "file": "tools/build_new_team_images.js",
+      "mode": "new",
+      "before": null,
+      "sha256": "d1b41108b1692e5c9ee71641b7c5135bfb7a3df2479cbf0f92a73cc7d9f294f4"
+    },
+    {
+      "file": "tools/deferred_service_content.py",
+      "mode": "new",
+      "before": null,
+      "sha256": "362c6e0400fab032ff9e85e1f8661a9454e8bb4715e6ee8766a4b736b5d9e787"
+    },
+    {
+      "file": "tools/import_deferred_services.py",
+      "mode": "new",
+      "before": null,
+      "sha256": "7d0adb2a70955a09823c04d17952587a4f15ccbf6973f6d340a6a8ce4a4b4994"
+    },
+    {
+      "file": "tools/prepare_all_oct24_release.py",
+      "mode": "new",
+      "before": null,
+      "sha256": "b355a00001d5a5082b48baf1d83483dfbdb7b29912e7a1a3e7e9533bbe904de6"
+    },
+    {
+      "file": "tools/prepare_cro_illustrations.js",
+      "mode": "new",
+      "before": null,
+      "sha256": "9815295eed511057316e6a0003a1ae58b0dd0d318015c4ffb0080aa300c5e012"
+    },
+    {
+      "file": "tools/prepare_deferred_hero_photos.js",
+      "mode": "new",
+      "before": null,
+      "sha256": "af962f168a0b8f7e716c114dc3d255bec38c2500f0205bf2789445f0801485ee"
+    },
+    {
+      "file": "tools/prepare_team_photo_refresh.js",
+      "mode": "new",
+      "before": null,
+      "sha256": "536262d4fd0db9d4225641142f756c6f814eae0e8ae2ab4c593f08610583ce47"
+    },
+    {
+      "file": "tools/refresh/cro-owner-illustrations-2026-10-24.json",
+      "mode": "new",
+      "before": null,
+      "sha256": "a2f60aeae4d43bf2c2c015f5eb465fa48cf7cda2073523107c45331809b213b7"
+    },
+    {
+      "file": "tools/refresh/deferred-hero-photos-2026-10-24.json",
+      "mode": "new",
+      "before": null,
+      "sha256": "08e17d70648d106b698d15ac9acd8b702f6b5470bdfd0187702f6a378d13bd81"
+    },
+    {
+      "file": "tools/refresh/deferred-services-2026-10-24.json",
+      "mode": "new",
+      "before": null,
+      "sha256": "840a94b82193b109668e01bf8475a10582f6b90d28db158301281cd114d37efd"
+    },
+    {
+      "file": "tools/refresh/email-owner-illustrations-2026-10-24.json",
+      "mode": "new",
+      "before": null,
+      "sha256": "6364456861486d3518853274ff7bf7850e629fb99212ca549de93ce97850facd"
+    },
+    {
+      "file": "tools/refresh/image-archives/deferred-hero-2026-10-24/cro.png",
+      "mode": "new",
+      "before": null,
+      "sha256": "7b49c2290873294a93ddc6a23191fc309f37d8e53d24429a18d0520dee89a0e3"
+    },
+    {
+      "file": "tools/refresh/image-archives/deferred-hero-2026-10-24/email.png",
+      "mode": "new",
+      "before": null,
+      "sha256": "7e9df8a212c0b45ccb32fd560596955ecd5decfbb8e58a94dd0e10b86e5f655d"
+    },
+    {
+      "file": "tools/refresh/image-archives/team-2026-10-24/team-moayad-480.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "7cf5c64ceccfffda5493eeb750061b91610b861cffb96226f817d3c2e9952346"
+    },
+    {
+      "file": "tools/refresh/image-archives/team-2026-10-24/team-moayad.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "808226e82b0c259419dcaa7904a7769b318d321972c567c33d3cd830a1cbc985"
+    },
+    {
+      "file": "tools/refresh/image-archives/team-2026-10-24/team-mohammed-480.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "0743831899f1fe727d72405f0e5b08ce9ce536902ffc45da739af13aac1fec55"
+    },
+    {
+      "file": "tools/refresh/image-archives/team-2026-10-24/team-mohammed.webp",
+      "mode": "new",
+      "before": null,
+      "sha256": "2b21e016c59314f0ca9963f485e4b8407b15e57c39953373252a81e578dfa2b8"
+    },
+    {
+      "file": "tools/refresh/owner-service-illustration-plan.json",
+      "mode": "review",
+      "before": "022206183b37dda0b6df1741f7e55473ac5d41323bc3c333da8709b932eb208e",
+      "sha256": "171886df72aefabc768fdadc6f26c0be4c83c54744cbbbe7d78e4a235190e88d"
+    },
+    {
+      "file": "tools/refresh/owner-service-illustrations.json",
+      "mode": "review",
+      "before": "bff5d982f767f4764bbbdf012a9004b83b8f4a90a1d11c19225b49f8a1b3ce3c",
+      "sha256": "b5ecc48a4b07eb82696de4acc9336e74c77e988fe147523cd6782ddfb3a3a7e3"
+    },
+    {
+      "file": "tools/refresh/team-photo-versions-2026-10-24.json",
+      "mode": "new",
+      "before": null,
+      "sha256": "378f4c33151c3b469f98ba50645dc3f6d1afd46f0488adb436ccea9abb19ea7b"
+    },
+    {
+      "file": "tools/refresh/team-update-2026-10-21.json",
+      "mode": "new",
+      "before": null,
+      "sha256": "ac8c86057f5136ab4d6156a0c8c6e12dd43cd9a343cae0e507cb468909c49f5d"
+    },
+    {
+      "file": "tools/refresh/web-design-illustrations.json",
+      "mode": "review",
+      "before": "a3cdd2bd72930904142bdb9963868ce7a4a3ec0c8952d9b7725b89c05c7daaf8",
+      "sha256": "2cc4f6098a5f86c166aafe8553215c229d794be1dbb9d0eac0335c4f450b3bd6"
+    },
+    {
+      "file": "tools/team_directory.py",
+      "mode": "new",
+      "before": null,
+      "sha256": "f573df6d016238b935c36fb665541c2cf50b870f22431368612f0fc067d82b75"
+    },
+    {
+      "file": "tools/team_update.py",
+      "mode": "new",
+      "before": null,
+      "sha256": "4cd5029815a5e2be048952efc7f751e17e590122e87001504a5827d93d20401c"
+    },
+    {
+      "file": "tools/test_brand_loader_hero.py",
+      "mode": "new",
+      "before": null,
+      "sha256": "b6a86330f64dfda015cf4236fab103bfa67068497c88a6c53f32c9dc6e0a5be9"
+    },
+    {
+      "file": "tools/test_brand_loader_hero_browser.js",
+      "mode": "new",
+      "before": null,
+      "sha256": "eed67f9036dbf770cfa431063e5c11ead6550de5582638e59e3b3913133ec935"
+    },
+    {
+      "file": "tools/test_catalogue_social_followup.py",
+      "mode": "new",
+      "before": null,
+      "sha256": "92b57bdc4c84d5956ca210e84657bbb47c8958f24be5864989c9ec11d7312fed"
+    },
+    {
+      "file": "tools/test_cro_owner_images.py",
+      "mode": "new",
+      "before": null,
+      "sha256": "7e0698b43825c9b91c2b21f7b3eac7e06391f53fb444e5e78c9e9bf999dac42c"
+    },
+    {
+      "file": "tools/test_cro_owner_images_browser.js",
+      "mode": "new",
+      "before": null,
+      "sha256": "afb5c05f1142178006d9c52c315b70b8e717fc9658eea318bcd0fcbef36a551e"
+    },
+    {
+      "file": "tools/test_deferred_services.py",
+      "mode": "new",
+      "before": null,
+      "sha256": "0c80d58202d18b11f54a30d4de0022bb8b17d4dc4530be9f9d9e61a514610576"
+    },
+    {
+      "file": "tools/test_deferred_services_browser.js",
+      "mode": "new",
+      "before": null,
+      "sha256": "143689a29ad46520a7df84a4743284bdd7380a35da427780ae34c7416e46e82a"
+    },
+    {
+      "file": "tools/test_email_cro_followup_browser.js",
+      "mode": "new",
+      "before": null,
+      "sha256": "a2756c5e837dc35a6ab509e8d6b07feca2450c32b0de2d9669bd36b96ed2e45a"
+    },
+    {
+      "file": "tools/test_email_owner_images.py",
+      "mode": "new",
+      "before": null,
+      "sha256": "2524064cefec6c8f10e1a06704254d29b263a5aa4dc8cd6d52ffff46727581f0"
+    },
+    {
+      "file": "tools/test_refresh_copy.py",
+      "mode": "merged",
+      "before": "62386ffe4eee7fb757edfe89ec9ce7500985d624d1868fa99bd7524d1948739b",
+      "sha256": "2a5e580129df754f30dc27b1cbb91cdcee50994d5f1c5508750af936ade91c77"
+    },
+    {
+      "file": "tools/test_seo_premium.js",
+      "mode": "review",
+      "before": "d1787ebdf34d300d143d3dc2bb362018cb0b1eed72731cab1c8cc7da28a3cd27",
+      "sha256": "692f18efc8320e56a14a90781d268080ae48946a3be9759a6119a583f9ad6e02"
+    },
+    {
+      "file": "tools/test_team_directory.py",
+      "mode": "new",
+      "before": null,
+      "sha256": "79e7f89b57ca66856cac95363f864347d1e7c113ce04533c3a34e78e66336bbc"
+    },
+    {
+      "file": "tools/test_team_directory_browser.js",
+      "mode": "new",
+      "before": null,
+      "sha256": "31fbdcb7503e46e92e5b1748967fffd4dc9715c215cdad60cd2378954dd3c572"
+    },
+    {
+      "file": "tools/test_team_layout.py",
+      "mode": "new",
+      "before": null,
+      "sha256": "834f02da21895e821804ce041553bb9ca53c3f42e0acb1d5f901e2c8d23760b6"
+    },
+    {
+      "file": "tools/test_team_layout_browser.js",
+      "mode": "new",
+      "before": null,
+      "sha256": "a0221f6c08e0aa66b04750d84901d3d226808b1f4fed97f35f31993b0316047b"
+    },
+    {
+      "file": "tools/test_team_roster_followup.py",
+      "mode": "new",
+      "before": null,
+      "sha256": "766d945dc236b2deeea57a2d9f294c46a3a7937759c645363460e821573c9e27"
+    },
+    {
+      "file": "tools/test_team_update.py",
+      "mode": "new",
+      "before": null,
+      "sha256": "1f16dbe33e2a54ad31a05fa7d97949800523420f6cd06f295f273e5995568248"
+    },
+    {
+      "file": "tools/test_team_update_browser.js",
+      "mode": "new",
+      "before": null,
+      "sha256": "67d397dd08cca2a46642439c925c08bdfa8c8b5d249891f107fb201fec150715"
+    },
+    {
+      "file": "tools/test_work_refresh.py",
+      "mode": "new",
+      "before": null,
+      "sha256": "d6684e87e7b6716ab26b5754201f8844873a75d8de9f33a0922b611be78a8def"
+    },
+    {
+      "file": "tools/test_work_refresh_browser.js",
+      "mode": "new",
+      "before": null,
+      "sha256": "2b66ced8a1d2c37b6ccb0a4f3693da783c2540b8003978381aa0fa5b777ad6cb"
+    },
+    {
+      "file": "assets/js/index-new.js",
+      "mode": "reviewed-merge",
+      "before": "08f5316d9cd5ffc7a0a16db9ef8427892d8e428081b5165f0ecbefaa3cba00c7",
+      "sha256": "0e9f0f3b2bdfb83edeeabd394761efe098134a5a5b4279cceb9b93e3ad5bdcd3"
+    },
+    {
+      "file": "tools/build.sh",
+      "mode": "reviewed-merge",
+      "before": "c329f95d5bae97a77a4c373d8766f69ca6d018a3c91a59913673706446909278",
+      "sha256": "193e5d2a1033ef7f5ccccd901fc6bb9bedb9277484de13a7c62d7ec7e1457ee7"
+    },
+    {
+      "file": "tools/build_site_refresh.py",
+      "mode": "reviewed-merge",
+      "before": "b25b6abfa949a5e3f61c165c0acd90f82983b70172f181a13440f78bcf39444c",
+      "sha256": "f17acdadfa1fed136f0c54ffe85eebf71056799998fcecdd484f754d7931e07c"
+    },
+    {
+      "file": "tools/refresh/README.md",
+      "mode": "reviewed-merge",
+      "before": "f8270f7cfc7e2d8acd736bf8de16f6101b7ce839ac01900007f5fd42183060a2",
+      "sha256": "6d453ba3565826ccf464e403c09147be242b9f7e6b04f9bfbe0594c7a43f3511"
+    },
+    {
+      "file": "tools/service_studio.py",
+      "mode": "reviewed-merge",
+      "before": "6c88c76e286e9b540cb4aae11e1e80e2fd20791bc7e16773997cadb5a1aee8d5",
+      "sha256": "d66d398c1bc39868a1e9296bbe930d88d9cb4c580892f855ccf53d167bf4df3b"
+    }
+  ],
+  "resolvedConflicts": [
+    "assets/js/index-new.js",
+    "tools/build.sh",
+    "tools/build_site_refresh.py",
+    "tools/refresh/README.md",
+    "tools/service_studio.py"
+  ],
+  "blogBefore": {
+    "blog/index.html": "56edae3265e5ae4779f806d4d36063031a0068405ca12e2f1bc52d406ae0475f",
+    "blog/index.xml": "8aebb510eb77304a0bc9ee3b83562a393a7167e1af7cba565b001f135054979c",
+    "blog/indexnow-deploy.txt": "0f86ed0a7138b057231b88ba86f37ca223c4b5ea4f3e1a3bcebab3b922c3fe10",
+    "blog/404.html": "7cfb8eee2c74ef9ca07556d1da4f8cc17acb9de9f2900ebea6bc52cedac91359",
+    "blog/sitemap-en.xml": "d608bbc02ac94139305fe307d549259a5e233a23d91f0d2e5b7fa45e189f77ba",
+    "blog/sitemap.xml": "745cb53ba05d81f3ff25e8f3af9a023f2820d29ce13734fd1a11b51b497c535f",
+    "blog/sitemap-ar.xml": "17993dd1a332d0df89dc54433ce4ce25b47fbb0f1d7a04fc708ca4a8e16fbf0e",
+    "blog/f5cfe00e-7ebd-45f8-92d8-ea342cc22a4c.txt": "c12dac75c3f3c338c36aa97a7fac1baa7d7aa7e463b6f1b5b2230c40c8a3ce28",
+    "blog/.htaccess": "9583db28bf0c1bcd401c9554da89a22cf1db6a14f2ffe326ffa7ca96c896d05e",
+    "blog/css/blog.min.e2bcbc3e60b0d623b6d097badd62e7ef430e72c1d7f873ee7ffb589010caf438.css": "e2bcbc3e60b0d623b6d097badd62e7ef430e72c1d7f873ee7ffb589010caf438",
+    "blog/ar/index.html": "1375623cfea77de9812001672533799296e6984049d7f993c0777306f5242bc1",
+    "blog/ar/index.xml": "4f6853e205636464041cffd35bd6705e01118ec9cc3554672d211dc3787e46b1",
+    "blog/ar/404.html": "ae26dd2667581bcfe18b66387873620f35f8f4c5fc21baf89a92e11355539683",
+    "blog/ar/.htaccess": "7ddcca180efebe05d07b5129fec008f210189c8846c0997a92aead199712e9a9",
+    "blog/ar/social-media-campaign-management/photo_2026-09-13_10-05-45.ar_hu_86b7e7041c9d6c26.avif": "94777107b540e46e2ed8bf97a3d091948f0e104de1e1c07b9438cb23bf3f57ff",
+    "blog/ar/social-media-campaign-management/index.html": "5e5380603614b5061c8a0bf26f66bc64bfe940eeacf284892b02f815e50693e3",
+    "blog/ar/social-media-campaign-management/photo_2026-09-13_10-05-45.ar.webp": "5c04aff5987a786ac668d5fd7886217d0d14de6e4b207cfa649e18eb00fc8555",
+    "blog/ar/social-media-campaign-management/photo_2026-09-13_10-04-51.ar_hu_55e11ae3d7a45a2c.webp": "6441b4921d8fe9bea2a994f59097cf6fb9a2134aedae863e5d1425e1f95e3dcf",
+    "blog/ar/social-media-campaign-management/photo_2026-09-13_10-05-45.ar_hu_c2698eaf6cc3eba4.avif": "07e6a77c09c58fc40ffc16fc1e274b0db347573cbf8c7a2a4217be0cc734dbd7",
+    "blog/ar/social-media-campaign-management/photo_2026-09-13_10-04-51.ar.webp": "8b88c8a7d2e1564859398a00321965cadaf9713fbfefb6bd5ca0e30e350bf6b8",
+    "blog/ar/social-media-campaign-management/photo_2026-09-13_10-05-45.ar_hu_e5b631a16b00a27b.webp": "68271956f05c5f7dcf8ea6e476b1da7e6844b2c90c052155fa22c60047f3d790",
+    "blog/ar/social-media-campaign-management/photo_2026-09-13_10-04-51.ar_hu_7d491cc88e02c409.avif": "1d7d86baea7ce4364f3deefb744b2d50dd62b3706f816211b33c3127d576be96",
+    "blog/ar/social-media-campaign-management/photo_2026-09-13_10-04-51.ar_hu_5d6fdbfe335ea04f.avif": "ad1e4950ec051652486e540ed71b4b24c5198df341ee7a6689aeb5d00fec47ed",
+    "blog/ar/social-media-campaign-management/photo_2026-09-13_10-04-51.ar_hu_c26314e8cf6a90d8.avif": "456f73aa1a2b1695fe9d20c95e02bc0e9d19b52579e1f629d45709e1d53aa3e2",
+    "blog/ar/social-media-campaign-management/photo_2026-09-13_10-05-40.ar_hu_5491fc33d6c026e4.avif": "e24064442e698a72f4aeb6c0d84373c9937bad5d7b6ac03459b881dda5fa8798",
+    "blog/ar/social-media-campaign-management/photo_2026-09-12_09-30-05.ar.webp": "7d6ca1703febbf1a5dd22e2b517b06391b94988bdf1b410f138fbb8292ed4391",
+    "blog/ar/social-media-campaign-management/photo_2026-09-13_10-05-40.ar_hu_bd4749ff209a8621.avif": "4d231a2de2a5684d8f015f64cb36f3ff8c3a7d525d5c06c13f48d19b3ece0458",
+    "blog/ar/social-media-campaign-management/photo_2026-09-13_10-05-45.ar_hu_76e5bf1a9ffd622c.webp": "0b699f249aa01633f50eb630148e5211ecd4f86acb258e144f9458a670d9bf74",
+    "blog/ar/social-media-campaign-management/photo_2026-09-13_10-05-40.ar_hu_972e9a3bd6235118.avif": "ca50eee7062ff412c905ebe741170fc3e60a921e46d0878dff22b5c03e8bfaaf",
+    "blog/ar/social-media-campaign-management/photo_2026-09-13_10-05-45.ar_hu_b6b9610d8dfdc0f4.webp": "2ce95be0a1accea948005ea4a24dc43f64e4331bc575f23c9d072c30842fae95",
+    "blog/ar/social-media-campaign-management/photo_2026-09-13_10-04-51.ar_hu_dde01463c041a60c.avif": "67f95a045d4a89f80315ef0ea8f5c42f46498e040c17a27f24f816f759c2f750",
+    "blog/ar/social-media-campaign-management/photo_2026-09-13_10-05-40.ar_hu_4e31ee7d0630a128.webp": "caf6a964afb105adddb78bfbf132637996e8412ba6342ea74bbc732a6ac68668",
+    "blog/ar/social-media-campaign-management/photo_2026-09-13_10-04-51.ar_hu_bb081a301c188ec8.webp": "6e0640bd6633fd53841d7a89746707035e583e9232b43e74ed60a46e501394bf",
+    "blog/ar/social-media-campaign-management/photo_2026-09-13_10-05-40.ar_hu_8bbcea6aa3252ac4.webp": "8cf4dcc0b5cd25b349d8afeee4af501b785b759ea376ce6fc0ad5be2e4a8f596",
+    "blog/ar/social-media-campaign-management/photo_2026-09-13_10-04-51.ar_hu_2affece711fffccb.avif": "8d283c7de6c00d22abd2b80bdff6632ff65f2f2360df6611579a3439a664c921",
+    "blog/ar/social-media-campaign-management/photo_2026-09-13_10-04-51.ar_hu_3e899604ae54f698.webp": "70c36fed7b88d57bb287edcb2533f027f68d7269c752added85792842f942060",
+    "blog/ar/social-media-campaign-management/photo_2026-09-13_10-05-40.ar_hu_f03f9ebbdc72126d.webp": "4040a953f1bfa2eadf19aad1cf5312f5f55082a90be9fd1620a0f708d76afaf3",
+    "blog/ar/social-media-campaign-management/photo_2026-09-13_10-05-40.ar.webp": "2585153d91013dd70b131090b92e17e7cd759147a8253849309bcd55b7ce6df4",
+    "blog/ar/social-media-campaign-management/photo_2026-09-13_10-04-51.ar_hu_6b0316544af55231.webp": "4eb417becbd3244f08bfb8ca922999cee2bebf52e038c1d3035823f563ab5872",
+    "blog/ar/social-media-campaign-management/photo_2026-09-13_10-05-45.ar_hu_5258c96e46b8b6c3.avif": "e4b5f4487d89754ab2a5e5e3db15f7c2fd6d416f5cc5f88191ba1f7e4789e998",
+    "blog/ar/social-media-campaign-management/photo_2026-09-13_10-04-51.ar_hu_925acdc3a61049e2.webp": "3d138e3a236c495ab56c462a3e81c5e94f57cf49dba6dc893541a0dff0f78b81",
+    "blog/ar/social-media-campaign-management/photo_2026-09-13_10-04-51.ar_hu_52c2d7cbdfe8171f.webp": "ee76cab1e7fd73403c0389916813449175881d99d1e94a1e9b3c12cc32b3b7fc",
+    "blog/ar/seo-strategies-competitor-analysis/photo_2026-09-16_09-57-12.ar_hu_378ef60942aed48f.webp": "e06ac65f104b6cba329f2aafd753bb54bd772cc25881d456b9ec58c95b3119cf",
+    "blog/ar/seo-strategies-competitor-analysis/photo_2026-09-16_09-57-17.ar_hu_6fb1162275d938cf.webp": "f30c13470b541d91b5ff46801404480e2b502645f2f860639fce12ef0ecceca6",
+    "blog/ar/seo-strategies-competitor-analysis/photo_2026-09-16_09-57-12.ar.webp": "34855ae054df7e026a8d3b2ff5910661a96e814d9857f0dd3dfa72dcb196361c",
+    "blog/ar/seo-strategies-competitor-analysis/photo_2026-09-16_09-57-06.ar_hu_bb3f419e5e02ad75.avif": "a0fcc9b5dd0587ad31ecd68147a5ba22f5b61d8101f270966fec85d84caf9e14",
+    "blog/ar/seo-strategies-competitor-analysis/index.html": "a379c03f249649fa5040ae2d8c5a9722d516d85ce4e9699047888752cc931c1c",
+    "blog/ar/seo-strategies-competitor-analysis/photo_2026-09-16_09-57-17.ar_hu_1c234a5674e04597.avif": "bf2a28a9e0bc7de5bc9af6260a2f6411b79098aad6c6a8fb6ac4c400e47d9167",
+    "blog/ar/seo-strategies-competitor-analysis/photo_2026-09-16_09-57-12.ar_hu_4bf68858deced912.avif": "7c0041b9bb7450feddbb304f15986554d53006a3379371859a80a4fc1e894650",
+    "blog/ar/seo-strategies-competitor-analysis/photo_2026-09-16_09-57-17.ar_hu_5d9c6c618c26eab6.webp": "b649b35b931b431313b0dfd108589f98be13d242f1b1bee2f879ec3a9532524c",
+    "blog/ar/seo-strategies-competitor-analysis/photo_2026-09-16_09-57-12.ar_hu_d87407cf07b73b22.webp": "cdabfe23de18f12fbd7c5d198d1d1ea1a6dc2918e7229138f29a6348b1c417c4",
+    "blog/ar/seo-strategies-competitor-analysis/photo_2026-09-16_09-57-12.ar_hu_8998e70fa43c196d.avif": "b80c3e407f2d226da8c567b69afbe1d90a42b6290b8f61a5450137cd5826f7c8",
+    "blog/ar/seo-strategies-competitor-analysis/photo_2026-09-16_09-57-17.ar_hu_d7b4a0fb6c23e335.webp": "12df140c767b6c65a12d4dadacc842d7ef0978a501e11c61169af95e41434f01",
+    "blog/ar/seo-strategies-competitor-analysis/photo_2026-09-16_09-57-06.ar_hu_4dcd6ba799a1f27c.avif": "91dc05a7aeda47fedce05aee508412291f4fdb9d08faa996b99a3204deb81f0b",
+    "blog/ar/seo-strategies-competitor-analysis/photo_2026-09-16_09-57-12.ar_hu_afce9fe035283d79.webp": "63d904a54cda42a9bf3303840630ccb42351d93710b6fc2c524de2a459dd690b",
+    "blog/ar/seo-strategies-competitor-analysis/photo_2026-09-16_09-57-12.ar_hu_4c5ec0a441770892.avif": "849284dcceb04461b641d5e0e26437245713e4fdeb725f1f419bf25305dd5f19",
+    "blog/ar/seo-strategies-competitor-analysis/photo_2026-09-16_09-57-06.ar_hu_307ca0251edce6a3.avif": "7f24ab96abe964f75182ac9b65bc2a3462f1558de252d00547613920e93efe19",
+    "blog/ar/seo-strategies-competitor-analysis/photo_2026-09-16_09-57-17.ar_hu_1c69c3d90c9ba62b.avif": "6fd1d861566272df8f721d4d9b9c20632aba1371172b8e0193b75aff6942a48e",
+    "blog/ar/seo-strategies-competitor-analysis/photo_2026-09-16_09-57-06.ar_hu_84f0bcc1e46024f5.webp": "cfef79dff40f51213d7e17a30bad5a257e6dc9a43b5393df0f2a3c65c885c1eb",
+    "blog/ar/seo-strategies-competitor-analysis/photo_2026-09-16_09-57-12.ar_hu_63f3e2b3f92bfbaf.avif": "e8d8059f4860bb779f9929061e7a9908a36dbd1dce5262fa306f3c5b8a924847",
+    "blog/ar/seo-strategies-competitor-analysis/photo_2026-09-16_09-57-06.ar_hu_fca8846e8011d9b6.webp": "71e9c7d3d536267f90e98ab69b569d5ae02cd02d9b6434985d23a90706524b7c",
+    "blog/ar/seo-strategies-competitor-analysis/photo_2026-09-16_09-57-06.ar.webp": "c924f27ebfa7655841e5ebedff85e9a2cd2504b922fd1b42e0583ef1d732c8ae",
+    "blog/ar/seo-strategies-competitor-analysis/photo_2026-09-16_09-57-12.ar_hu_e6c848953b1183ce.webp": "6ccca619900bcefcda0cee26ce3df355ab2cd2b34a3ccefe9f168527a69fc9fb",
+    "blog/ar/seo-strategies-competitor-analysis/photo_2026-09-16_09-57-17.ar.webp": "5586857d0df8f0a625119cb704eab9cd9dff6759cabef933c7540810f5f08d5c",
+    "blog/ar/seo-strategies-competitor-analysis/photo_2026-09-16_09-57-12.ar_hu_8fab0081e8519f8f.avif": "5c7c5e8c61976cbc4d9eca255e5443668cca1685ebea328c525653ebe32c4291",
+    "blog/ar/seo-strategies-competitor-analysis/photo_2026-09-16_09-57-12.ar_hu_a149c68bcd4a7704.webp": "554ea7d79e534882db3c2fdbba6d5661fe02221700d1067635d50e14a3a8cd11",
+    "blog/ar/seo-strategies-competitor-analysis/photo_2026-09-16_09-57-12.ar_hu_4cf8fc9b7bc30405.webp": "7e5ff29ab5c6e3ce43c69ec15b1ceb0ae00fa2e40097602499e970a88ccb17e6",
+    "blog/ar/seo-strategies-competitor-analysis/photo_2026-09-16_09-57-17.ar_hu_a23faf8f0ea5e9ea.avif": "a5a7b829d3d3cb0f9437ccdda777b4ab9e76ef0637dcbce295bca9bf4349c8ee",
+    "blog/ar/seo-strategies-competitor-analysis/photo_2026-09-16_09-57-06.ar_hu_d07884bf968cf970.webp": "501bd9e85694eb8766d44b3acc428e075f4ca0d94a149baa9a75c863f04de08f",
+    "blog/ar/specialized-digital-marketing-strategies/138d5e3abf6e.ar.webp": "4032eb8a6de2b14b4707885501236c17983aea9324af47c50e667efcf3e65da2",
+    "blog/ar/specialized-digital-marketing-strategies/df26bf250f60.ar_hu_3c2b596044da4b79.webp": "314b3efe2ea8032c1bb43b50a82079a83cc9ec289559698be1a34fcd0cab1ff3",
+    "blog/ar/specialized-digital-marketing-strategies/df26bf250f60.ar_hu_7fc8b43c03d0c608.webp": "0aeddb1b0c2151912cb95e938920fe154adb8d0c7379c128b245b61beb161bdf",
+    "blog/ar/specialized-digital-marketing-strategies/4b0934c146a9.ar_hu_e36467dd65caa736.avif": "a68b082c43bd8c61916c60dc1a4306e68b29589be1722625c43266eb6b30569c",
+    "blog/ar/specialized-digital-marketing-strategies/df26bf250f60.ar_hu_aff3fb02dd1f6387.webp": "19c39e59ba7d201f99a7d5f8934f14a534941ccf22fef4391d589cc938bf0cfe",
+    "blog/ar/specialized-digital-marketing-strategies/df26bf250f60.ar_hu_ef31539410c5fe72.avif": "ea9a2fdcec30afaf7d6caa060a332a29168edaded070122f799c71f112a9b79c",
+    "blog/ar/specialized-digital-marketing-strategies/138d5e3abf6e.ar_hu_55f20fd8917557cd.webp": "e4edf177f2a052ea8ac954174ea8f7deb563816fe871f7010e56432525b46a72",
+    "blog/ar/specialized-digital-marketing-strategies/index.html": "21c1b043fd044612b8826f369dd5042c79f2a28b957bdf8d6c97ed16867219ac",
+    "blog/ar/specialized-digital-marketing-strategies/af2c5ea20db8.ar_hu_3666bb155a7fb077.webp": "b1c53a77566b3d4c0ff6fd664cd5c9286972d5d4c436ac60778e40529f8f349a",
+    "blog/ar/specialized-digital-marketing-strategies/df26bf250f60.ar_hu_33259b60e3fe0d20.avif": "65eda873c0b360c4fc0ee08649ab20ed41123a9effb6ef3449b0998f107ca844",
+    "blog/ar/specialized-digital-marketing-strategies/af2c5ea20db8.ar_hu_764a0fdaf73f1525.avif": "60af2bcdc209a3dccc5e77d2ceae36d9ca17bc41d9c1a38402d9bf666af80444",
+    "blog/ar/specialized-digital-marketing-strategies/df26bf250f60.ar_hu_be9a22a094cb4715.avif": "7525988ed7976738872979dc50fe37c2c7e63634911738cc3143508cb9272d96",
+    "blog/ar/specialized-digital-marketing-strategies/df26bf250f60.ar_hu_236c0809baac8ee6.webp": "a716c47e09496ce1c517b4aad0e3e2b24af64168521796ae9fec55048d7ae7e2",
+    "blog/ar/specialized-digital-marketing-strategies/af2c5ea20db8.ar_hu_2799f77c7467c7a6.webp": "521f62eb2ec2fe82027c75226277dc2c7c226c8346a111171fc6c9cad707ade5",
+    "blog/ar/specialized-digital-marketing-strategies/138d5e3abf6e.ar_hu_20f9da118479dd5b.webp": "056facff4887cff795c339b9daac81473542a560b4188ccf2823b4667f2f5198",
+    "blog/ar/specialized-digital-marketing-strategies/4b0934c146a9.ar_hu_c006461269b83a4e.avif": "0a3b72d40d8091b98e57fa5c90777462b094bc674bc3cbb96c721cdb35c8493d",
+    "blog/ar/specialized-digital-marketing-strategies/df26bf250f60.ar_hu_e3fc40f29bb6db6.webp": "d080a72446ea20401832d30d9ad09fccc61f8db59892079d3da974fecdf7b1c9",
+    "blog/ar/specialized-digital-marketing-strategies/df26bf250f60.ar_hu_ff9d6f0edd33ff47.webp": "e26e8f8ddcbeef460c6f6ddec5aaaa5e7f6d3b56a0ac7e4979ac1558dddad402",
+    "blog/ar/specialized-digital-marketing-strategies/138d5e3abf6e.ar_hu_3a0d755fc5129ed.avif": "f09ad417ad06a9a1c68162b0f57b830d4beb212da82be1b5d755bf5f14aaeca9",
+    "blog/ar/specialized-digital-marketing-strategies/df26bf250f60.ar.webp": "4ead3ac32fa475cd8223528d1e1f5b68f7a33daff1bf62a09c2bdae866168126",
+    "blog/ar/specialized-digital-marketing-strategies/af2c5ea20db8.ar.webp": "c5d8d71a2a8f4da95d60f91a89ddcf8aa70319b9dd3b1dfb2cc4e72603ad4409",
+    "blog/ar/specialized-digital-marketing-strategies/af2c5ea20db8.ar_hu_3b6db147e8382306.avif": "ffc7aae12257ff0579eca5497917ebf6640aff9cd2eb1437e6dae4f2c1a2d9cd",
+    "blog/ar/specialized-digital-marketing-strategies/138d5e3abf6e.ar_hu_8abad6b6b249ba01.avif": "9d0c2f05d173e2ffbbe7ccfa69b049e131457c682032eeee9ad36135be4ada45",
+    "blog/ar/specialized-digital-marketing-strategies/4b0934c146a9.ar_hu_13fe31bf0ff7ee8a.webp": "c13de05804c2193a947a81b4939dde278b2768ee1731fc581431cb3b4061f438",
+    "blog/ar/specialized-digital-marketing-strategies/df26bf250f60.ar_hu_9c5e22c1e01c90d8.avif": "ff8b839bc3d187811d315cd1e7293e3f8cb742a0b3f1769a2fd037f3dee57190",
+    "blog/ar/specialized-digital-marketing-strategies/af2c5ea20db8.ar_hu_e901e817fdbcd2ef.avif": "da758739292860e65b6c8518e42589f9013b4b0d443ad88fbf40653d05af347f",
+    "blog/ar/specialized-digital-marketing-strategies/138d5e3abf6e.ar_hu_dd349460b58d0843.webp": "2f29926ff0377baededc5dd02258b7980382d65c7da4e397d25d6bd1dea6d2e2",
+    "blog/ar/specialized-digital-marketing-strategies/4b0934c146a9.ar_hu_c22c6d7fc65c4b14.webp": "3dbcd1a8c53e8eb9c966bc6195f3bd8d43327e5d95e2510ee96c58d723823906",
+    "blog/ar/specialized-digital-marketing-strategies/af2c5ea20db8.ar_hu_6e4141327fb94c88.webp": "205ae9554b8c3eaeb4c5445051e430e7877c7b83975b95fcaf3ceb010d97c085",
+    "blog/ar/specialized-digital-marketing-strategies/df26bf250f60.ar_hu_5cdb10709a7e9f12.avif": "35d4d0ffbf085baa456e7d651afdc2852c1bf59785302e341f32f837a906d54b",
+    "blog/ar/specialized-digital-marketing-strategies/4b0934c146a9.ar.webp": "a9b9fff67440011837a169d92989ed5620a4dd756ac44d4e7dd12b937d8da024",
+    "blog/ar/specialized-digital-marketing-strategies/4b0934c146a9.ar_hu_81716411f11a38e7.webp": "d373d32a9b96b7f15bd72eead30a005f2299340493d6f17234be3eb009ff22e6",
+    "blog/ar/specialized-digital-marketing-strategies/4b0934c146a9.ar_hu_63ce0b28b451089d.avif": "c417fbd2f1ba502a7fa8a76daf578b6890da597ceeb92f8c0aece8babc012a1c",
+    "blog/ar/specialized-digital-marketing-strategies/138d5e3abf6e.ar_hu_de7931b48c45f3cf.avif": "8db736b0f68945287bb808e0310ad4b358fca372c7305cd1d1aca77e4efd9a97",
+    "blog/ar/best-digital-marketing-agency-in-saudi-arabia/gemini_generated_image_o3dityo3dityo3di.ar.webp": "9856d294c3b00ecdbf59581299720ebc8eb6a018f7799904be8928dbe6ba7b41",
+    "blog/ar/best-digital-marketing-agency-in-saudi-arabia/whatsapp-image-2026-10-17-at-19-33-05.ar_hu_1abfaa2af8c6186b.avif": "4a6f84c526295b2362527710c2e515256c8b3a2dde61965530f364dbc4c2d1e2",
+    "blog/ar/best-digital-marketing-agency-in-saudi-arabia/seo.ar_hu_2b5231c23431e0d5.avif": "0444fc351db5da9c737f7f258fd8413da82b4efb13c513f2fe6106a2887821c3",
+    "blog/ar/best-digital-marketing-agency-in-saudi-arabia/gemini_generated_image_o3dityo3dityo3di.ar_hu_80cc95fe68dbfc18.avif": "341e2408f62357ae30f1681cd047a4010e3e07dbff5f50bf1cda861a4ff3bf3c",
+    "blog/ar/best-digital-marketing-agency-in-saudi-arabia/index.html": "5e59b6f7de91fefeaecae2093cf0f2181b0a1ddaae1ac386edc5f02bc16db469",
+    "blog/ar/best-digital-marketing-agency-in-saudi-arabia/gemini_generated_image_o3dityo3dityo3di.ar_hu_9d53d7b6bde92df4.webp": "8b4444da1de68a0417415e0de087e43f128a5940a60101dd3659f8eb25aaa560",
+    "blog/ar/best-digital-marketing-agency-in-saudi-arabia/whatsapp-image-2026-10-17-at-19-33-05.ar_hu_c05a2a95aa383100.webp": "fb56438aea108d9d434f12f73621470cee636232a529244ffe521d37a116bce7",
+    "blog/ar/best-digital-marketing-agency-in-saudi-arabia/whatsapp-image-2026-10-17-at-19-33-05.ar_hu_a53d61b3e6763e2a.webp": "442a8eae3c23cc435ee715453da38e287de4d9c70e77490305141d0c1bc0220d",
+    "blog/ar/best-digital-marketing-agency-in-saudi-arabia/gemini_generated_image_o3dityo3dityo3di.ar_hu_e75dd7c5bed7966a.webp": "a78df50d1102c478f1accd74b0527a4ecaab9c92163408c9dc5f5f7a35f51bed",
+    "blog/ar/best-digital-marketing-agency-in-saudi-arabia/whatsapp-image-2026-10-17-at-19-33-05.ar_hu_9525eb6d4a5227c7.webp": "372c6c8f9206b63711a8e637ebe5c7e384e758cdf91e91b6fb53d4f11b40107d",
+    "blog/ar/best-digital-marketing-agency-in-saudi-arabia/whatsapp-image-2026-10-17-at-19-33-05.ar_hu_9e6213af51125f72.webp": "db9ee944cfed0502b229e1421d1b48e1f266e657762d7361bde70c5db0d52bfc",
+    "blog/ar/best-digital-marketing-agency-in-saudi-arabia/whatsapp-image-2026-10-17-at-19-33-05.ar.webp": "750c750365698d57f7a18748b1d27b6e8671e0d9260e13febfb7d640284b620d",
+    "blog/ar/best-digital-marketing-agency-in-saudi-arabia/whatsapp-image-2026-10-17-at-19-33-05.ar_hu_e6262d6ff9acbe6b.webp": "efb95973c38d393481fcc2eda36472b457cf198675f9088f33ff25a7d464ba4c",
+    "blog/ar/best-digital-marketing-agency-in-saudi-arabia/seo.ar.webp": "c8210d6116a1b1aabc216943f775ec33149b0d20ec3d22ff787d507946ac977e",
+    "blog/ar/best-digital-marketing-agency-in-saudi-arabia/whatsapp-image-2026-10-17-at-19-33-05.ar_hu_31bf22292fca5e0e.webp": "9b63c0517b46bed3c4e526a0ce3d2093c9225577ce8e5c3ba050595e6fb64ab2",
+    "blog/ar/best-digital-marketing-agency-in-saudi-arabia/whatsapp-image-2026-10-17-at-19-33-05.ar_hu_a2d072bf82900279.avif": "9adb5a4681b3437912961cb238c03a9bbf9f6360ca5073e020d8a4fbeeeadf70",
+    "blog/ar/best-digital-marketing-agency-in-saudi-arabia/seo.ar_hu_b17c67c97a37d8f2.webp": "e10c25e30e089e7993bb0b4e3725921743a0bdc34ec56ffef925885ca9e90f9d",
+    "blog/ar/best-digital-marketing-agency-in-saudi-arabia/seo.ar_hu_1a864ffe2b38acd7.webp": "b45b866a1cc80cbbe75436e926cd50d3b8a7311275886b972d59b49435289b96",
+    "blog/ar/best-digital-marketing-agency-in-saudi-arabia/whatsapp-image-2026-10-17-at-19-33-05.ar_hu_1da6bc58deb1a01.avif": "145b3ff9c0c36218ee6924b23094cfa012856b8f1ab83e5203e08c40d56141d4",
+    "blog/ar/best-digital-marketing-agency-in-saudi-arabia/gemini_generated_image_o3dityo3dityo3di.ar_hu_764fad78407a55cc.avif": "8b1d3e834f4f0bf402e3a3a793e61502569e0f6117f9b2fe86405edd9a1f72eb",
+    "blog/ar/best-digital-marketing-agency-in-saudi-arabia/whatsapp-image-2026-10-17-at-19-33-05.ar_hu_28cc47ceda695c4b.avif": "d5331ed5d54151cf3fdbf489ad994d49ea591b2ff14b75ba29856a8a6084f0de",
+    "blog/ar/best-digital-marketing-agency-in-saudi-arabia/gemini_generated_image_o3dityo3dityo3di.ar_hu_b75cae2d426f0848.avif": "fb0458f19ac3039024132bad95098816c2732767c4371a5ff7c1e817880b9903",
+    "blog/ar/best-digital-marketing-agency-in-saudi-arabia/seo.ar_hu_5576a0806b3c8d29.avif": "484fc7359e2411b48334937bef7c272d23c84c9001110936334881e8b9db4113",
+    "blog/ar/best-digital-marketing-agency-in-saudi-arabia/whatsapp-image-2026-10-17-at-19-33-05.ar_hu_62340abc518b790d.avif": "65765a86a08dc1236c3017d908c8354d8605dc8c6bd77ef36d9f25ab69bf90c7",
+    "blog/ar/best-digital-marketing-agency-in-saudi-arabia/whatsapp-image-2026-10-17-at-19-33-05.ar_hu_fa68b3b46f236784.webp": "2aabc7d63bd4f2dd883fa637a5375720e91ce4a57881a7d6005cc7422ba42102",
+    "blog/ar/best-digital-marketing-agency-in-saudi-arabia/gemini_generated_image_o3dityo3dityo3di.ar_hu_4bc255f4ffb83d5.webp": "329cdf312c586551e7231131873497d46d23be8de3ef7f48d265d2cb4b89738c",
+    "blog/ar/best-digital-marketing-agency-in-saudi-arabia/seo.ar_hu_cade3c9fd8e17a8c.avif": "241c38f9ef220ebc26854ba5b2395f674bf1822b94e731b1e5a5ff9051e1afb7",
+    "blog/ar/best-digital-marketing-agency-in-saudi-arabia/seo.ar_hu_3f8d04c0b20a26e8.webp": "450127a890e69d700a55f8222c1797817e24d586cf4af393b59c36bbd6499613",
+    "blog/ar/best-digital-marketing-agency-in-saudi-arabia/seo.ar_hu_160f24fd2eee1c38.webp": "69d2ffd2327bc34735ef5008760d7c8f64934b3d23761c521aaad966af12888f",
+    "blog/ar/build-marketing-strategy/cover.ar_hu_66fb2428c4e4e552.avif": "153bfbf579ecc26e599978cb92a6e252048c9066b6e39f16f43282eb76882cde",
+    "blog/ar/build-marketing-strategy/cover.ar_hu_acbf1240ebea5fff.avif": "2ea2d294a599bc99c6e12a168aec60e3f1ddca10e130c73268a655ab07a855aa",
+    "blog/ar/build-marketing-strategy/index.html": "c87b88dfdaee96334482781de4c9f08341ea9aa485bfe4667dc1a194d54f5d25",
+    "blog/ar/build-marketing-strategy/cover.ar_hu_5a09f465546c1157.webp": "0164176dd47734ddf42e06267d92fa4f53c1281995f74e4b3faf356e967d583b",
+    "blog/ar/build-marketing-strategy/cover.ar_hu_aaa4b53b665c4139.webp": "9c375edc0b01e5ce9222e9d5ebfa879bd2595f516baa6dc99a966d1300d2fff1",
+    "blog/ar/build-marketing-strategy/cover.ar.webp": "028c19a50ac8f827afee0e4d4f289373de3cda2b48dadf030bd5d8abefff1371",
+    "blog/ar/build-marketing-strategy/cover.ar_hu_96a33bd7f6f94ed3.avif": "228b52ddd88977badd74988946530f280fef6b949e75c963bd503ac9b16221e0",
+    "blog/ar/build-marketing-strategy/cover.ar_hu_de68e75bb2f1d61.webp": "c600430a8cd671a34c295b68b71d572a90dea60d43ac65aebdcdd3dc1297c609",
+    "blog/ar/web-design-services-in-riyadh/photo_2026-09-13_10-19-42.ar_hu_2526b30a8f20d5a2.avif": "b1c71b8dc27c10b9287c097662ec2d07fc9564cb16df3fce43b0bd6b1282b8e1",
+    "blog/ar/web-design-services-in-riyadh/photo_2026-09-13_10-19-46.ar_hu_dc55e886e1621236.webp": "627be9b7b129d3a1d2924e8027d6872309082cc5edb2bec071bc2c52e4768dbe",
+    "blog/ar/web-design-services-in-riyadh/photo_2026-09-13_10-19-42.ar_hu_b1fd6ed2c46095f9.webp": "95b1e4b6cc891021dd7c62fbd004c1de3731625b5427731e1cd551fdb9ecdf9c",
+    "blog/ar/web-design-services-in-riyadh/photo_2026-09-13_10-19-42.ar_hu_fc9d5a3a360f5db5.avif": "e470ae5077153dad570c780d4445fce13928d0c150f823e16f04513d0ba5fd6b",
+    "blog/ar/web-design-services-in-riyadh/photo_2026-09-13_10-19-42.ar_hu_2caebbc0db52b77a.avif": "1b3689a21d38b252520441dbf684d41eed7fa1dbf815267a823fc427397214f6",
+    "blog/ar/web-design-services-in-riyadh/index.html": "865e043b14269d2249b069087a65bfeae7c862b5a7e5813a31bbe6d19da9e6bf",
+    "blog/ar/web-design-services-in-riyadh/photo_2026-09-13_10-19-46.ar_hu_4c1f10dc462a368e.avif": "d8757d3a1aacedfc4441e1e42f79b442652b0f087e45c0d8e26760a0535b77c4",
+    "blog/ar/web-design-services-in-riyadh/photo_2026-09-13_10-19-42.ar_hu_f9809ad0115837a3.webp": "a94167eaa83f5d3ee2793ad86b25666abaef526e346bbfcf323ce709345567de",
+    "blog/ar/web-design-services-in-riyadh/photo_2026-09-13_10-19-42.ar_hu_5cdab974488f7885.webp": "cf29eb67d64a3454815f86683bb8540394393452dabfbe56b36e988da4600b65",
+    "blog/ar/web-design-services-in-riyadh/photo_2026-09-13_10-19-46.ar_hu_41e584701f3b97a4.avif": "17e118e8fa53a529271b70eb41249b03303e188de886373e7b95a240fc6e7999",
+    "blog/ar/web-design-services-in-riyadh/photo_2026-09-13_10-19-42.ar_hu_937b3ea25835f478.avif": "5ce18acd8c340d542a562eec4ee89510eb1e2d6e051739b13564f4af8e2e0cc4",
+    "blog/ar/web-design-services-in-riyadh/photo_2026-09-13_10-19-42.ar_hu_71b1647381c3a3c5.webp": "48903b1e376d8c4203500102fdceb87358aada4233a2b5978c448cdd2cf41953",
+    "blog/ar/web-design-services-in-riyadh/photo_2026-09-13_10-19-42.ar_hu_915a33e0d562d316.webp": "f0a092f4b8ed25c83f1730ccefadf352906d3961b3e4c4afe6a10dcddbda3f77",
+    "blog/ar/web-design-services-in-riyadh/photo_2026-09-13_10-19-46.ar.webp": "89f5c90788540e6db5b022cd386b20730a4df9c101cdc80269249c3511206892",
+    "blog/ar/web-design-services-in-riyadh/photo_2026-09-13_10-19-46.ar_hu_f78a38f81fe92840.webp": "741e3897ea9e6ac70d4551147055679c7982f85993b77c5cd73ef8014ad75d70",
+    "blog/ar/web-design-services-in-riyadh/photo_2026-09-13_10-19-42.ar_hu_3e36c8105811d807.avif": "5d8307a63baed224f8c8528aa431b4a44592ba4e437d590d508740b429aab241",
+    "blog/ar/web-design-services-in-riyadh/photo_2026-09-13_10-19-42.ar.webp": "b6b1d21ad7fa4dcc39119fa314e5eb034442b49ff6465ccc8f5d259dbc820cd3",
+    "blog/ar/web-design-services-in-riyadh/photo_2026-09-13_10-19-46.ar_hu_13e096249ab2fb79.webp": "402238e5e8ac50c13185fbf68362a27dc079baf3ff3ea1e13e3ca547f2345b6a",
+    "blog/ar/web-design-services-in-riyadh/photo_2026-09-13_10-19-46.ar_hu_cb0c9e823250ca36.avif": "943730d3ca65578abef784a46ca929233cc09172043deffdc0654c091ff23015",
+    "blog/ar/web-design-services-in-riyadh/photo_2026-09-13_10-19-42.ar_hu_a5e7af5a720364e5.webp": "e2d4b161a0c59f505332d9a7ce3017537d77e19b8417e0bff32f18ac17afff82",
+    "blog/ar/how-to-choose-web-development-company/index.html": "d9d4289324940914fac93725a835bf193a60c51a5ccec4457d61e822720cd45c",
+    "blog/ar/categories/index.html": "934803c0d30ccc54339064db201c09a4b6598ae4b13d67fd8ac512eba81a232a",
+    "blog/ar/categories/index.xml": "6c868eb220d5e26c0019358aa6f31f05cc2421ecf0546c879b2aa64112d9959f",
+    "blog/ar/categories/social-media/index.html": "bb830d8cc1ce89350b1a8cde5b5dcb5ddb36dd1de12ccff174164fd00eddbfae",
+    "blog/ar/categories/social-media/index.xml": "fa2b2299e62b48596a4869db671f49a4aac9bd51fb2ce280fbd9e0ea25d4cea6",
+    "blog/ar/categories/web-design/index.html": "6beb27bdabbabd04aa5ff0dcad0d932fb2d0dcfe5513031fd6913ab83e1ed954",
+    "blog/ar/categories/web-design/index.xml": "a34888d96732ab8607b62984146397d749a086b5743471e4cb94a8a98f60c350",
+    "blog/ar/categories/ecommerce/index.html": "6b588f2dcc6b9ee737435841e43f09973bf5fc6239ef4fac21050d2767bb8338",
+    "blog/ar/categories/ecommerce/index.xml": "33e23c23c9d300e8345158d2823eac738b8fff80fd6102fbbe879a5622707e98",
+    "blog/ar/categories/advertising/index.html": "db9f193cdd0d79ba36d3df9d8ba2a803421438aadeff36bae7dea0af7068e958",
+    "blog/ar/categories/advertising/index.xml": "42c43253c21727f933404e21309c3a3fb55ffb3a56287f3bb8c7546e247bb1ba",
+    "blog/ar/categories/brand-identity/index.html": "3c1558abc492e974bceb19f9e4c3a2a61c820127c051ba2e66538bcb7636ba70",
+    "blog/ar/categories/brand-identity/index.xml": "1fa1466376e565aaa92b3c158dce6545869a1f08ee608d17f9437ed4352995d4",
+    "blog/ar/categories/seo/index.html": "22399109825446d52839aa684c1c3d9841dda2184e826131827115eb2fab1788",
+    "blog/ar/categories/seo/index.xml": "fb70ae7ba3a03cce108ed73fe71d15776672436d53bd6849af965f06f9d687e3",
+    "blog/how-to-choose-web-development-company/8e4cc113-6062-4273-9905-395fd13d3a76_hu_4c3da81d86edea6b.webp": "8949329026bb086ba9bc30f55ec6d2fd44ebc212c7f0c658917ebae251db0e58",
+    "blog/how-to-choose-web-development-company/index.html": "5482f2b6a0a9247ffb755b0f4e747cc112bae3c8c0d999e1c6e487e7dec5a926",
+    "blog/how-to-choose-web-development-company/8e4cc113-6062-4273-9905-395fd13d3a76_hu_a8624949174667aa.webp": "07c28545d1514364d1662e13a797cd328b8845cc9f01c47360f27fe9b14e6436",
+    "blog/how-to-choose-web-development-company/8e4cc113-6062-4273-9905-395fd13d3a76_hu_28c0184cbd0b1d6d.webp": "ac2d95210b0d9bf047b930a9c241edb4f857957ff4d8e3264866f38396249275",
+    "blog/how-to-choose-web-development-company/8e4cc113-6062-4273-9905-395fd13d3a76_hu_1ab2f997b85fd5ab.avif": "1c10e97ad59fa341d0934cf5a7080f1f9a02478acdd7edaf47751e47b9f6de49",
+    "blog/how-to-choose-web-development-company/8e4cc113-6062-4273-9905-395fd13d3a76_hu_7704b59bfe7ce57.avif": "ee9f6ddcc10fc273e17c4c6c6a270c29eb4ee0bb0d426f7d00cbbdac96efd50b",
+    "blog/how-to-choose-web-development-company/8e4cc113-6062-4273-9905-395fd13d3a76_hu_82e97f550a4caea5.webp": "13733730f6a7eaf2f0c1b21269317b8e3d52913b9d80446c9c4b3d97b5927a0e",
+    "blog/how-to-choose-web-development-company/8e4cc113-6062-4273-9905-395fd13d3a76_hu_93bc708d7a9d7ab.avif": "7071f736f089ab58b34269e62f03f3312fc4b736ca66854cd9847aa5fc5b8302",
+    "blog/how-to-choose-web-development-company/8e4cc113-6062-4273-9905-395fd13d3a76.webp": "0692b9a72d59ede0aff79870824cab780812926067a20b87981172200afe336c",
+    "blog/fonts/fonts.min.9d51b0435ef50ccdd1c71ce620d31f9e235e42d02c4bbeb98237cc0cfeebd4c1.css": "9d51b0435ef50ccdd1c71ce620d31f9e235e42d02c4bbeb98237cc0cfeebd4c1",
+    "blog/fonts/nm-700.woff2": "1b42758ca135f8e340d60e83d8ce9cc7318c6983ec6418038ab50ca507b62ccd",
+    "blog/fonts/nm-400.woff2": "da492a86f01c0184183d84c5578cb525a2d06604f3842d76ca4584bd5fee6d27",
+    "blog/fonts/cairo-latin-400.woff2": "6f87ce2b51c58f92c27549a27a22339ac2dd0dd9f617983fd6a07787be593a8d",
+    "blog/fonts/cairo-arabic-700.woff2": "b09783cfa49260cf75b6b6c40dcf84abe7a42aa7dc52d8826c5ec623b6d970dd",
+    "blog/fonts/cairo-latin-700.woff2": "de34c6c08a56cbaa64f50fec3adfb3022ae0df632b3e04a9505a622e040fee36",
+    "blog/fonts/cairo-arabic-400.woff2": "f0fba671d9894c36528346140f213ccd159c237b3681b19494a01b4e2fb8c642",
+    "blog/categories/index.html": "e208268562dfc62acd368e62bda7f4e301fdd9a5b1c1951dc6d0ee5b4f7686ac",
+    "blog/categories/index.xml": "768e8063c138ff4727da899370589a0b514ec8f3db38fc522a47a17bedae7921",
+    "blog/categories/social-media/index.html": "f10a23e882dfbc29eee38aa7b9dd1cdbb0d4a9f0012cb91a3483892982cd3028",
+    "blog/categories/social-media/index.xml": "a526ec44e1ce66f50820f06c1585755f9f952232337305db815b42d8f66ff1e2",
+    "blog/categories/web-design/index.html": "b1e1be46bb168479d23263f608b8914d1651c3661d4793247d823e6166e33cb4",
+    "blog/categories/web-design/index.xml": "3839dd0a8f3ee95aa3173f02460ac6d4289f89c9ea14a1e322bc9862f2437424",
+    "blog/categories/ecommerce/index.html": "0933009e38659a546049e9c9fc35427cc5a3ebb3ca315390c5a4bfbc723b9123",
+    "blog/categories/ecommerce/index.xml": "3a729d0d611850d461ca74d20d3ca5c0b372c86b1155838ca86deee51325147d",
+    "blog/categories/advertising/index.html": "7d8e13199b97ddaf5c16583c7a91a919fb1fcfe7226ed2c03db4e2e826ef9fea",
+    "blog/categories/advertising/index.xml": "0c7e93031644a2423f052bdd623794a98819bda398dc271b5f087db794dbab33",
+    "blog/categories/brand-identity/index.html": "499f0df7bf8c0e1cd5336ed644e57be2e65faa6cde199235dfe5626c3548b711",
+    "blog/categories/brand-identity/index.xml": "bb3d40335d3da7aefc9ecfe7e4d7c509807326102768201f96a051edc905de9e",
+    "blog/categories/seo/index.html": "06f15eb94ebd2e1f08120d95a168b7ebb5506c083965b1c5eedde7a9bd8ab397",
+    "blog/categories/seo/index.xml": "514f1a45943596718e39ffc131e6b037eac6be10d9b51eb335fcd503bc788d4f"
+  }
+}
