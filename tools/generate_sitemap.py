@@ -35,6 +35,9 @@ import os
 import sys
 from xml.dom import minidom
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import noindex_sections  # noqa: E402
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEFAULT_BASE = "https://zero2one.sa"
 OUT = os.path.join(ROOT, "sitemap.xml")
@@ -63,6 +66,10 @@ def discover():
         if rel.split("/")[0] in (
             "_archive", "ar", "blog", "node_modules", "pages"
         ):
+            continue
+        # الخريطة تقول «افهرس» والصفحة تقول noindex: تناقض يبلّغ عنه
+        # Search Console. الصفحة نفسها هي المرجع — tools/noindex_sections.py
+        if noindex_sections.says_noindex(open(f, encoding="utf-8").read()):
             continue
         paths.append("/" if rel == "index.html" else "/" + rel[: -len("index.html")])
     return sorted(set(paths), key=lambda p: (p.count("/"), p))

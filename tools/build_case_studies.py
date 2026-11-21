@@ -28,6 +28,9 @@ import os
 import re
 import sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import noindex_sections  # noqa: E402
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SHELL = os.path.join(ROOT, "services", "brand-identity", "index.html")
 # ⚠️ الفوتر يُؤخذ من صفحة عادية لا من صفحة الخدمة.
@@ -362,6 +365,10 @@ def build(slug, c, shell):
                lambda m: m.group(1) + c["title"] + m.group(2), h, count=1)
     h = re.sub(r'(<meta name="twitter:description" content=")[^"]*(")',
                lambda m: m.group(1) + c["description"] + m.group(2), h, count=1)
+
+    # القالب صفحة خدمة مفهرسة؛ صفحات المشاريع خارج الفهرسة بقرار المالك
+    # (tools/noindex_sections.py)، فلا تُرجعها إعادة البناء إلى index.
+    h = noindex_sections.apply(h)
 
     # كل JSON-LD في القالب يخصّ صفحة خدمة — يُستبدل بكيان العمل
     h = re.sub(r'\s*<script type="application/ld\+json">.*?</script>\n', "\n", h, flags=re.S)
