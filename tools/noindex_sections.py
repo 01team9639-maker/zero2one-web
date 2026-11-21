@@ -3,8 +3,9 @@
 ZERO 2 ONE — sections kept out of Google's index
 =================================================
 
-Decision (owner, 2026-11-21): every page under /work/, /team/ and /project(s)/
-— English and Arabic — carries `noindex, follow`.
+Decision (owner, 2026-11-21): every page under /work/ and /team/ — English and
+Arabic — carries `noindex, follow`. /project(s)/ was asked for, then dropped by
+the owner the same day; it is deliberately not in SECTIONS.
 
 * `noindex`  — the page stays reachable for visitors but leaves search results.
 * `follow`   — links on it still pass to the service pages, so nothing is lost.
@@ -28,13 +29,13 @@ import sys
 import glob
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SECTIONS = ("work", "team", "project", "projects")
+SECTIONS = ("work", "team")
 ROBOTS = '<meta name="robots" content="noindex, follow" />'
 ROBOTS_RE = re.compile(r'<meta\s+name="robots"\s+content="[^"]*"\s*/?>')
 
 
 def is_noindex_path(rel):
-    """True for 'work/…', 'ar/team/…', '/projects/x/' and the like."""
+    """True for 'work/…', 'ar/team/…', '/work/x/' and the like."""
     parts = [p for p in rel.replace(os.sep, "/").split("/") if p]
     if parts and parts[0] == "ar":
         parts = parts[1:]
